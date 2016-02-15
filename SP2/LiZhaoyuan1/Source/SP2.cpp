@@ -146,6 +146,8 @@ void SP2::Init()
 	
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
 
+	meshList[GEO_CUBE] = MeshBuilder::GenerateCube("reference", Color(0,0,0));
+
 	meshList[GEO_QUAD] = MeshBuilder::GenerateQuad("quad", Color(1, 1, 1));
 	meshList[GEO_QUAD]->textureID = LoadTGA("Image//Pikachu2.tga");
 
@@ -444,6 +446,10 @@ void SP2::Render()
 	RenderSkybox();
 	modelStack.PopMatrix();
 
+	modelStack.PushMatrix();
+	modelStack.Translate(camera.position.x , camera.position.y , camera.position.z-4);
+	renderMesh(meshList[GEO_CUBE], false);
+	modelStack.PopMatrix();
 
 	
 

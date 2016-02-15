@@ -17,6 +17,7 @@ class SP2 : public Scene
 	{
 		GEO_AXES,
 		GEO_QUAD,
+		GEO_CUBE,
 		GEO_SPHERE,
 		GEO_LIGHTBALL,
 		GEO_LEFT,
