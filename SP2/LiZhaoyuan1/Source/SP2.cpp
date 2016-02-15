@@ -184,7 +184,7 @@ void SP2::Init()
 
 void SP2::Update(double dt)
 {
-	camera.Update(dt, 15);
+	camera.Update(dt,50);
 	fps = 1 / dt;
 
 	if (Application::IsKeyPressed('5'))
