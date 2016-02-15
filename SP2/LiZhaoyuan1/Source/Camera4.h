@@ -26,6 +26,8 @@ public:
 	float rotateChar;
 	float translateChar;
 
+	
 };
+
 
 #endif

@@ -40,8 +40,8 @@ void Camera4::Update(double dt, float bounds)
 		Vector3 view = (position-target).Normalized();
 		Mtx44 rotation;
 		rotation.SetToRotation(yaw, 0, 1, 0);
-		view = rotation*view;
-		position = target + view;
+		view = target-view;
+		position = rotation * position;
 		up = rotation * up;
 	}
 	if (Application::IsKeyPressed(VK_RIGHT))
@@ -50,8 +50,8 @@ void Camera4::Update(double dt, float bounds)
 		Vector3 view = (position-target).Normalized();
 		Mtx44 rotation;
 		rotation.SetToRotation(yaw, 0, 1, 0);
-		view = rotation*view;
-		position = target+view ;
+		view = target - view;
+		position = rotation * position;
 		up = rotation * up;
 	}
 	if (Application::IsKeyPressed(VK_UP))
