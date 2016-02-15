@@ -1,10 +1,10 @@
-﻿Build started 15/2/2016 10:49:18 AM.
-     1>Project "C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
+﻿Build started 2/15/2016 10:59:03 AM.
+     1>Project "C:\Users\n1507\Desktop\SP2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\\Common\Source /IC:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\\glfw\include /IC:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\\glew\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\Application.cpp Source\Camera.cpp Source\Camera2.cpp Source\Camera3.cpp Source\LoadOBJ.cpp Source\LoadTGA.cpp Source\main.cpp Source\Mesh.cpp Source\MeshBuilder.cpp Source\shader.cpp Source\SP2.cpp Source\Utility.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\n1507\Desktop\SP2\SP2\\Common\Source /IC:\Users\n1507\Desktop\SP2\SP2\\glfw\include /IC:\Users\n1507\Desktop\SP2\SP2\\glew\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\Application.cpp Source\Camera.cpp Source\Camera2.cpp Source\Camera3.cpp Source\LoadOBJ.cpp Source\LoadTGA.cpp Source\main.cpp Source\Mesh.cpp Source\MeshBuilder.cpp Source\shader.cpp Source\SP2.cpp Source\Utility.cpp
          Utility.cpp
          SP2.cpp
-     1>c:\users\mingj\onedrive\documents\studioproject2\sp2\lizhaoyuan1\source\sp2.cpp(443): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\n1507\desktop\sp2\sp2\lizhaoyuan1\source\sp2.cpp(443): warning C4305: 'argument' : truncation from 'double' to 'float'
          shader.cpp
          MeshBuilder.cpp
          Mesh.cpp
@@ -17,7 +17,7 @@
          Application.cpp
          Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\Debug\LiZhaoyuan1.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\\glew\lib /LIBPATH:C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\Debug /LIBPATH:"C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\\glfw\lib-msvc120" glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\Debug\LiZhaoyuan1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\Debug\LiZhaoyuan1.lib" /MACHINE:X86 Debug\Application.obj
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\n1507\Desktop\SP2\SP2\Debug\LiZhaoyuan1.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\n1507\Desktop\SP2\SP2\\glew\lib /LIBPATH:C:\Users\n1507\Desktop\SP2\SP2\Debug /LIBPATH:"C:\Users\n1507\Desktop\SP2\SP2\\glfw\lib-msvc120" glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\n1507\Desktop\SP2\SP2\Debug\LiZhaoyuan1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\n1507\Desktop\SP2\SP2\Debug\LiZhaoyuan1.lib" /MACHINE:X86 Debug\Application.obj
          Debug\Camera.obj
          Debug\Camera2.obj
          Debug\Camera3.obj
@@ -30,9 +30,9 @@
          Debug\SP2.obj
          Debug\Utility.obj
      1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-         LiZhaoyuan1.vcxproj -> C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\Debug\LiZhaoyuan1.exe
-     1>Done Building Project "C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
+         LiZhaoyuan1.vcxproj -> C:\Users\n1507\Desktop\SP2\SP2\Debug\LiZhaoyuan1.exe
+     1>Done Building Project "C:\Users\n1507\Desktop\SP2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:24.93
+Time Elapsed 00:00:04.71
