@@ -14,6 +14,7 @@
 #include "Utility.h"
 
 #include "LoadTGA.h"
+//#include "RenderMun.h"
 //#include "LoadOBJ.h"
 SP2::SP2()
 {
@@ -163,12 +164,12 @@ void SP2::Init()
 	meshList[GEO_LEFT]->textureID = LoadTGA("Image//NebulaBack.tga");
 	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1));
 	meshList[GEO_RIGHT]->textureID = LoadTGA("Image//NebulaRight.tga");
-
+	
 	
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//TimesNewRoman.tga");
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("lightball", Color(1, 1, 1), 18, 36);
-
+	
 	Mtx44 projection;
 	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 10000.f);
 	projectionStack.LoadMatrix(projection);
@@ -427,7 +428,7 @@ void SP2::Render()
 	renderMesh(meshList[GEO_LIGHTBALL], false);
 	modelStack.PopMatrix();
 
-
+	
 	modelStack.PushMatrix();
 	renderMesh(meshList[GEO_AXES], false);
 	modelStack.PopMatrix();

@@ -9,7 +9,7 @@
 #include "Camera3.h"
 #include "Camera4.h"
 #include "MatrixStack.h"
-
+#include "RenderMun.h"
 class SP2 : public Scene
 {
 
@@ -120,8 +120,14 @@ private:
 	float camPosY = 0;
 	float camPosz = 0;
 	
+	void MunInit();
+	void MunRender();
 
+	void GalaxyInit();
+	void GalaxyRender();
 	
+	void SoraJewelInit();
+	void SoraJewelRender();
 
 	
 
