@@ -2,6 +2,7 @@
 #define CAMERA_4_H
 
 #include "Camera.h"
+#include "Application.h"
 
 class Camera4 : public Camera
 {
@@ -19,6 +20,12 @@ public:
 	virtual void Init(const Vector3& pos, const Vector3& target, const Vector3& up);
 	virtual void Update(double dt, float bounds);
 	virtual void Reset();
+
+	void UpdateCollision(float bounds, double dt);
+
+	float rotateChar;
+	float translateChar;
+
 };
 
 #endif
