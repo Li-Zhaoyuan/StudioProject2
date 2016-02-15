@@ -21,7 +21,7 @@ void Camera4::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 	this->up = defaultUp = right.Cross(view).Normalized();
 }
 
-void Camera4::Update(double dt)
+void Camera4::Update(double dt, float bounds)
 {
 	static const float CAMERA_SPEED = 50.f;
 	if (Application::IsKeyPressed(VK_LEFT))
@@ -64,6 +64,8 @@ void Camera4::Update(double dt)
 		rotation.SetToRotation(pitch, right.x, right.y, right.z);
 		position = rotation * position;
 	}
+
+
 	if (Application::IsKeyPressed('N'))
 	{
 		Vector3 direction = target - position;
@@ -78,6 +80,85 @@ void Camera4::Update(double dt)
 		Vector3 view = (target - position).Normalized();
 		position -= view * (float)(100.f * dt);
 	}
+
+	if (Application::IsKeyPressed('A'))
+	{
+		Vector3 view = (target - position).Normalized();
+		Vector3 right = view.Cross(up);
+		right.y = 0;
+		right.Normalize();
+		up = right.Cross(view).Normalized();
+		if (position.x - (right.x * (float)(CAMERA_SPEED * dt)) > -bounds
+			&& position.x - (right.x * (float)(CAMERA_SPEED * dt)) < bounds)
+		{
+			position.x -= right.x * (float)(CAMERA_SPEED * dt);
+			target.x -= right.x * (float)(CAMERA_SPEED * dt);
+		}
+		if (position.z - (right.z * (float)(CAMERA_SPEED * dt)) > -bounds
+			&& position.z - (right.z * (float)(CAMERA_SPEED * dt)) < bounds)
+		{
+			position.z -= right.z * (float)(CAMERA_SPEED * dt);
+			target.z -= right.z * (float)(CAMERA_SPEED * dt);
+		}
+
+	}
+
+	if (Application::IsKeyPressed('D'))
+	{
+		Vector3 view = (target - position).Normalized();
+		Vector3 right = view.Cross(up);
+		right.y = 0;
+		right.Normalize();
+		up = right.Cross(view).Normalized();
+		if (position.x + (right.x * (float)(CAMERA_SPEED * dt)) > -bounds
+			&& position.x + (right.x * (float)(CAMERA_SPEED * dt)) < bounds)
+		{
+			position.x += right.x * (float)(CAMERA_SPEED * dt);
+			target.x += right.x * (float)(CAMERA_SPEED * dt);
+		}
+		if (position.z + (right.z * (float)(CAMERA_SPEED * dt)) > -bounds
+			&& position.z + (right.z * (float)(CAMERA_SPEED * dt)) < bounds)
+		{
+			position.z += right.z * (float)(CAMERA_SPEED * dt);
+			target.z += right.z * (float)(CAMERA_SPEED * dt);
+		}
+	}
+
+	if (Application::IsKeyPressed('W'))
+	{
+		Vector3 view = (target - position).Normalized();
+		if (position.x + (view.x * (float)(CAMERA_SPEED * dt)) > -bounds
+			&& position.x + (view.x * (float)(CAMERA_SPEED * dt)) < bounds)
+		{
+			position.x += view.x * (float)(CAMERA_SPEED * dt);
+			target.x += view.x * (float)(CAMERA_SPEED * dt);
+		}
+		if (position.z + (view.z * (float)(CAMERA_SPEED * dt)) > -bounds
+			&& position.z + (view.z * (float)(CAMERA_SPEED * dt)) < bounds)
+		{
+			position.z += view.z * (float)(CAMERA_SPEED * dt);
+			target.z += view.z * (float)(CAMERA_SPEED * dt);
+		}
+	}
+
+	if (Application::IsKeyPressed('S'))
+	{
+		Vector3 view = (target - position).Normalized();
+		if (position.x - (view.x * (float)(CAMERA_SPEED * dt)) > -bounds
+			&& position.x - (view.x * (float)(CAMERA_SPEED * dt)) < bounds)
+		{
+			position.x -= view.x * (float)(CAMERA_SPEED * dt);
+			target.x -= view.x * (float)(CAMERA_SPEED * dt);
+		}
+		if (position.z - (view.z * (float)(CAMERA_SPEED * dt)) > -bounds
+			&& position.z - (view.z * (float)(CAMERA_SPEED * dt)) < bounds)
+		{
+			position.z -= view.z * (float)(CAMERA_SPEED * dt);
+			target.z -= view.z * (float)(CAMERA_SPEED * dt);
+		}
+	}
+
+
 	if (Application::IsKeyPressed('R'))
 	{
 		Reset();
