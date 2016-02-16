@@ -96,8 +96,8 @@ void SceneMun::Init()
 
 	glUniform1i(m_parameters[U_NUMLIGHTS], 2);
 
-	light[0].type = Light::LIGHT_SPOT;
-	light[0].position.Set(-5, 2, -10);
+	light[0].type = Light::LIGHT_POINT;
+	light[0].position.Set(-5, 1, -10);
 	light[0].color.Set(1, 1, 1);
 	light[0].power = 1;
 	light[0].kC = 1.f;

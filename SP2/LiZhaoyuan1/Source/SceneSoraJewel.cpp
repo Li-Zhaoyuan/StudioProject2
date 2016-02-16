@@ -96,7 +96,7 @@ void SceneSoraJewel::Init()
 
 	glUniform1i(m_parameters[U_NUMLIGHTS], 2);
 
-	light[0].type = Light::LIGHT_POINT;
+	light[0].type = Light::LIGHT_SPOT;
 	light[0].position.Set(-5, 2, -10);
 	light[0].color.Set(1, 1, 1);
 	light[0].power = 1;
@@ -140,7 +140,7 @@ void SceneSoraJewel::Init()
 	glUniform1f(m_parameters[U_LIGHT1_COSINNER], light[1].cosInner);
 	glUniform1f(m_parameters[U_LIGHT1_EXPONENT], light[1].exponent);
 
-
+	
 	//Initialize camera settings
 	camera.Init(Vector3(0, 0, 1), Vector3(0, 0, 0), Vector3(0, 1, 0));
 
@@ -422,6 +422,7 @@ void SceneSoraJewel::Render()
 	//Set projection matrix to perspective mode
 	projection.SetToPerspective(45.0f, 4.0f / 3.0f, 0.1f, 10000.0f); //FOV, Aspect Ratio, Near plane, Far plane
 	lighting();
+	lighting2();
 	modelStack.PushMatrix();
 	modelStack.Translate(light[0].position.x, light[0].position.y, light[0].position.z);
 	modelStack.Scale(0.1f, 0.1f, 0.1f);
