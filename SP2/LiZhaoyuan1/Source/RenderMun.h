@@ -2,6 +2,7 @@
 #define RENDERMUN_H_
 
 #include "SP2.h"
+#include "OBJBoundary.h"
 
 
 

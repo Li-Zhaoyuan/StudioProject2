@@ -16,7 +16,6 @@
 
 #include "LoadTGA.h"
 #include "RenderMun.h"
-
 void SP2::MunInit()
 {
 	meshList[GEO_MUNFRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));

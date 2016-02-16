@@ -101,6 +101,7 @@
     <ClCompile Include="Source\main.cpp" />
     <ClCompile Include="Source\Mesh.cpp" />
     <ClCompile Include="Source\MeshBuilder.cpp" />
+    <ClCompile Include="Source\OBJBoundary.cpp" />
     <ClCompile Include="Source\RenderGalaxy.cpp" />
     <ClCompile Include="Source\RenderMun.cpp" />
     <ClCompile Include="Source\RenderSoraJewel.cpp" />
@@ -123,6 +124,7 @@
     <ClInclude Include="Source\Material.h" />
     <ClInclude Include="Source\Mesh.h" />
     <ClInclude Include="Source\MeshBuilder.h" />
+    <ClInclude Include="Source\OBJBoundary.h" />
     <ClInclude Include="Source\RenderGalaxy.h" />
     <ClInclude Include="Source\RenderMun.h" />
     <ClInclude Include="Source\RenderSoraJewel.h" />

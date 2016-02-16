@@ -219,9 +219,23 @@ void SceneMun::Init()
 	projectionStack.LoadMatrix(projection);
 }
 
+void SceneMun::AABB(float xS, float xL, float zS, float zL)
+{
+	if ((camera.position.x > xS) && (camera.position.x < xL) && (camera.position.z > zS) && (camera.position.z < zS + 2)) { camera.position.z = zS; }
+	if ((camera.position.x > xS) && (camera.position.x < xL) && (camera.position.z < zL) && (camera.position.z > zL - 2)) { camera.position.z = zL; }
+	if ((camera.position.z > zS) && (camera.position.z < zL) && (camera.position.x > xS) && (camera.position.x < xS + 2)) { camera.position.x = xS; }
+	if ((camera.position.z > zS) && (camera.position.z < zL) && (camera.position.x > xL) && (camera.position.x < xL - 2)) { camera.position.x = xL; }
+
+}
+void SceneMun::OBJobjectvalues()
+{
+	AABB(2, 50, -48, -26);
+}
 
 void SceneMun::Update(double dt)
 {
+	//AABB(-50.f, 50.f, -50.f, 50.f);
+	OBJobjectvalues();
 	camera.Update(dt, 49);
 	fps = 1 / dt;
 

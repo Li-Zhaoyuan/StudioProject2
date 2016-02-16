@@ -10,6 +10,7 @@
 #include "Camera4.h"
 #include "MatrixStack.h"
 #include "RenderMun.h"
+#include "OBJBoundary.h"
 class SceneMun : public Scene
 {
 
@@ -116,7 +117,8 @@ public:
 	virtual void Update(double dt);
 	virtual void Render();
 	virtual void Exit();
-
+	virtual void AABB(float xS, float xL, float zS, float zL);
+	void OBJobjectvalues();
 private:
 	Light light[2];
 	bool enableLight = false;
