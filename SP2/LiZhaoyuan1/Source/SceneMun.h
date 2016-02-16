@@ -148,19 +148,16 @@ private:
 	float camPosX = 0;
 	float camPosY = 0;
 	float camPosz = 0;
-
-	void MunInit();
-	void MunRender();
-
-	void GalaxyInit();
-	void GalaxyRender();
-
-	void SoraJewelInit();
-	void SoraJewelRender();
-
-	void renderMunSkybox();
-	void renderGalaxySkybox();
-	void renderSoraJewelSkybox();
+	
+	Vector3 crashedplaneCoord = Vector3(-36,4.9,-34);
+	Vector3 questdudehouseCoord = Vector3(33, -5, 20);
+	Vector3 worriedladyhouseCoord = Vector3(20, -5, -38);
+	Vector3 worriedladyCoord = Vector3(2, -4, -38);
+	Vector3 questdudeCoord = Vector3(33, -4, 3);
+	Vector3 minerandplusCoord = Vector3(-19, 0, 25);
+	Vector3 caveCoord = Vector3(-35, -5, 35);
+	Vector3 oreCoord = Vector3(-42, -2.75, 35);
+	
 
 	MS modelStack, viewStack, projectionStack;
 };

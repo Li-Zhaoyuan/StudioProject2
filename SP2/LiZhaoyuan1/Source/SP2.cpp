@@ -142,27 +142,30 @@ void SP2::Init()
 
 
 	//Initialize camera settings
-	camera.Init(Vector3(0, 500, 1), Vector3(0, 500, 0), Vector3(0, 1, 0));
+	camera.position.x = camera.playerposition.x + cos(30)*(10);
+	camera.position.y = camera.playerposition.y + cos(30)*(10);
+	camera.position.z = camera.playerposition.z + cos(30)*(10);
+	camera.Init(Vector3(camera.position.x, camera.position.y, camera.position.z), Vector3(camera.target.x, camera.playerposition.y, camera.playerposition.z), Vector3(0, 1, 0));
 
 	
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
 
 	meshList[GEO_CUBE] = MeshBuilder::GenerateCube("reference", Color(0,0,0));
 
-	meshList[GEO_QUAD] = MeshBuilder::GenerateQuad("quad", Color(1, 1, 1));
+	meshList[GEO_QUAD] = MeshBuilder::GenerateQuad("quad", Color(0, 0, 0));
 	meshList[GEO_QUAD]->textureID = LoadTGA("Image//Pikachu2.tga");
 
-	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
+	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("front", Color(0,0,0));
 	meshList[GEO_FRONT]->textureID = LoadTGA("Image//NebulaFront.tga");
-	meshList[GEO_BACK] = MeshBuilder::GenerateQuad("back", Color(1, 1, 1));
+	meshList[GEO_BACK] = MeshBuilder::GenerateQuad("back", Color(0,0,0));
 	meshList[GEO_BACK]->textureID = LoadTGA("Image//NebulaLeft.tga");
-	meshList[GEO_TOP] = MeshBuilder::GenerateQuad("top", Color(1, 1, 1));
+	meshList[GEO_TOP] = MeshBuilder::GenerateQuad("top", Color(0,0,0));
 	meshList[GEO_TOP]->textureID = LoadTGA("Image//NebulaTop.tga");
-	meshList[GEO_BOTTOM] = MeshBuilder::GenerateQuad("bottom", Color(1, 1, 1));
+	meshList[GEO_BOTTOM] = MeshBuilder::GenerateQuad("bottom", Color(0,0,0));
 	meshList[GEO_BOTTOM]->textureID = LoadTGA("Image//NebulaBottom_Kai.tga");
-	meshList[GEO_LEFT] = MeshBuilder::GenerateQuad("left", Color(1, 1, 1));
+	meshList[GEO_LEFT] = MeshBuilder::GenerateQuad("left", Color(0,0,0));
 	meshList[GEO_LEFT]->textureID = LoadTGA("Image//NebulaBack.tga");
-	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1));
+	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("right", Color(0,0,0));
 	meshList[GEO_RIGHT]->textureID = LoadTGA("Image//NebulaRight.tga");
 	
 	
@@ -227,6 +230,7 @@ void SP2::Update(double dt)
 	camPosY = camera.position.y;
 	camPosz = camera.position.z;
 
+	
 	
 }
 void SP2::lighting()
@@ -433,16 +437,16 @@ void SP2::Render()
 	renderMesh(meshList[GEO_AXES], false);
 	modelStack.PopMatrix();
 
-	/*modelStack.PushMatrix();
+	modelStack.PushMatrix();
 	modelStack.Translate(0, 496.9, 0);
 	RenderSkybox();
-	modelStack.PopMatrix();*/
+	modelStack.PopMatrix();
 
-	/*modelStack.PushMatrix();
-	modelStack.Translate(0.0f, 0.0f, -camera.Charradius);
-	modelStack.Rotate(camera.xrot, 1.0f, 0.f, 0.f);
+	modelStack.PushMatrix();
+	modelStack.Translate(camera.playerposition.x, camera.playerposition.y, camera.playerposition.z);
+	//modelStack.Rotate(camera., 1.0f, 0.f, 0.f);
 	renderMesh(meshList[GEO_CUBE], false);
-	modelStack.PopMatrix();*/
+	modelStack.PopMatrix();
 
 	
 

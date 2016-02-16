@@ -96,8 +96,8 @@ void SceneMun::Init()
 
 	glUniform1i(m_parameters[U_NUMLIGHTS], 2);
 
-	light[0].type = Light::LIGHT_SPOT;
-	light[0].position.Set(-5, 2, -10);
+	light[0].type = Light::LIGHT_POINT;
+	light[0].position.Set(-5, 1, -10);
 	light[0].color.Set(1, 1, 1);
 	light[0].power = 1;
 	light[0].kC = 1.f;
@@ -177,23 +177,42 @@ void SceneMun::Init()
 	meshList[GEO_HOUSE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_HOUSE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_HOUSE]->material.kShininess = 5.f;
-	meshList[GEO_MALE] = MeshBuilder::GenerateOBJ("Guy", "OBJ//CharacterModel.obj");
-	meshList[GEO_MALE]->textureID = LoadTGA("Image//HumanCharacter.tga");
-	meshList[GEO_MALE]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
-	meshList[GEO_MALE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
-	meshList[GEO_MALE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
-	meshList[GEO_MALE]->material.kShininess = 5.f;
-	meshList[GEO_CAVE] = MeshBuilder::GenerateOBJ("Guy", "OBJ//Cave.obj");
+	meshList[GEO_ALIEN] = MeshBuilder::GenerateOBJ("Guy", "OBJ//CharacterModel.obj");
+	meshList[GEO_ALIEN]->textureID = LoadTGA("Image//CatAlien.tga");
+	meshList[GEO_ALIEN]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_ALIEN]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_ALIEN]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_ALIEN]->material.kShininess = 5.f;
+	meshList[GEO_CAVE] = MeshBuilder::GenerateOBJ("cave", "OBJ//Cave.obj");
 	meshList[GEO_CAVE]->textureID = LoadTGA("Image//Cave.tga");
 	meshList[GEO_CAVE]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_CAVE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_CAVE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_CAVE]->material.kShininess = 5.f;
-
+	meshList[GEO_PICKAXE] = MeshBuilder::GenerateOBJ("pickaxe", "OBJ//Pickaxe.obj");
+	meshList[GEO_PICKAXE]->textureID = LoadTGA("Image//Pickaxe.tga");
+	meshList[GEO_PICKAXE]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_PICKAXE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_PICKAXE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_PICKAXE]->material.kShininess = 5.f;
+	meshList[GEO_FEMALEA] = MeshBuilder::GenerateOBJ("femaleA", "OBJ//CharacterModel.obj");
+	meshList[GEO_FEMALEA]->textureID = LoadTGA("Image//FemaleCharacter2.tga");
+	meshList[GEO_FEMALEA]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_FEMALEA]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_FEMALEA]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_FEMALEA]->material.kShininess = 5.f;
+	meshList[GEO_ORE] = MeshBuilder::GenerateOBJ("ore", "OBJ//oreCube.obj");
+	meshList[GEO_ORE]->textureID = LoadTGA("Image//diamondOre.tga");
+	meshList[GEO_ORE]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_ORE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_ORE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_ORE]->material.kShininess = 5.f;
 	
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//TimesNewRoman.tga");
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("lightball", Color(1, 1, 1), 18, 36);
+
+
 
 	Mtx44 projection;
 	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 10000.f);
@@ -203,7 +222,7 @@ void SceneMun::Init()
 
 void SceneMun::Update(double dt)
 {
-	camera.Update(dt, 100);
+	camera.Update(dt, 49);
 	fps = 1 / dt;
 
 	if (Application::IsKeyPressed('5'))
@@ -472,36 +491,63 @@ void SceneMun::Render()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-36, 4.9, -34);
+	modelStack.Translate(crashedplaneCoord.x, crashedplaneCoord.y, crashedplaneCoord.z);
 	modelStack.Scale(2.2, 2.2, 2.2);
 	renderMesh(meshList[GEO_CRASHEDPLANE], true);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(15, -5, 20);
+	modelStack.Translate(questdudehouseCoord.x, questdudehouseCoord.y, questdudehouseCoord.z);
 	renderMesh(meshList[GEO_HOUSE], true);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(34, -4, 3);
+	modelStack.Translate(worriedladyhouseCoord.x, worriedladyhouseCoord.y, worriedladyhouseCoord.z);
 	modelStack.Rotate(90, 0, 1, 0);
-	renderMesh(meshList[GEO_MALE], true);
+	renderMesh(meshList[GEO_HOUSE], true);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-35, -5, 35);
+	modelStack.Translate(worriedladyCoord.x, worriedladyCoord.y, worriedladyCoord.z);
+	modelStack.Rotate(180, 0, 1, 0);
+	renderMesh(meshList[GEO_FEMALEA], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(questdudeCoord.x, questdudeCoord.y, questdudeCoord.z);
+	modelStack.Rotate(90, 0, 1, 0);
+	renderMesh(meshList[GEO_ALIEN], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(caveCoord.x, caveCoord.y, caveCoord.z);
 	modelStack.Scale(5, 5, 5);
 	//modelStack.Rotate(90, 0, 1, 0);
 	renderMesh(meshList[GEO_CAVE], true);
 	modelStack.PopMatrix();
-	/*modelStack.PushMatrix();
-	modelStack.Translate(0.0f, 0.0f, -camera.Charradius);
-	modelStack.Rotate(camera.xrot, 1.0f, 0.f, 0.f);
-	renderMesh(meshList[GEO_CUBE], false);
-	modelStack.PopMatrix();*/
+	
+	modelStack.PushMatrix();
+	modelStack.Translate(minerandplusCoord.x, minerandplusCoord.y, minerandplusCoord.z);
+	modelStack.PushMatrix();
+	modelStack.Translate(0, -5.5, 0);
+	renderMesh(meshList[GEO_ALIEN], true);
+	modelStack.PopMatrix();
 
+	modelStack.PushMatrix();
+	//modelStack.Rotate(-90, 0, 1, 0);
+	modelStack.Translate(0.5, -2.75, 1.25);
+	modelStack.Rotate(-90, 0, 0, 1);
+	modelStack.Rotate(90, 0, 1, 0);
+	modelStack.Scale(0.5, 0.5, 0.5);
+	renderMesh(meshList[GEO_PICKAXE], true);
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
 
-
+	modelStack.PushMatrix();
+	modelStack.Translate(oreCoord.x, oreCoord.y, oreCoord.z);
+	modelStack.Scale(2, 2, 2);
+	renderMesh(meshList[GEO_ORE], true);
+	modelStack.PopMatrix();
 
 	std::stringstream playerPos;
 	playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosz;

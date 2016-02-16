@@ -30,26 +30,22 @@ void Camera4::Update(double dt, float bounds)
 {
 	POINT mousecursor;
 	static const float CAMERA_SPEED = 25.f;
-
+	playerposition = target;
 	GetCursorPos(&mousecursor);
 	
 	if (Application::IsKeyPressed(VK_LEFT))
 	{
 		float yaw = (float)(-CAMERA_SPEED * dt);
-		Vector3 view = (position-target).Normalized();
 		Mtx44 rotation;
 		rotation.SetToRotation(yaw, 0, 1, 0);
-		view = target-view;
 		position = rotation * position;
 		up = rotation * up;
 	}
 	if (Application::IsKeyPressed(VK_RIGHT))
 	{
 		float yaw = (float)(CAMERA_SPEED * dt);
-		Vector3 view = (position-target).Normalized();
 		Mtx44 rotation;
 		rotation.SetToRotation(yaw, 0, 1, 0);
-		view = target - view;
 		position = rotation * position;
 		up = rotation * up;
 	}
@@ -121,7 +117,7 @@ void Camera4::Update(double dt, float bounds)
 		}
 
 	}
-	/*if (Application::IsKeyPressed('A'))
+	if (Application::IsKeyPressed('A'))
 	{
 		Vector3 view = (target - position).Normalized();
 		Vector3 right = view.Cross(up);
@@ -193,7 +189,7 @@ void Camera4::Update(double dt, float bounds)
 			position.z -= view.z * (float)(CAMERA_SPEED * dt);
 			target.z -= view.z * (float)(CAMERA_SPEED * dt);
 		}
-	}*/
+	}
 	if (mousecursor.y>600 / 2)
 	{
 		if (target.y > -0.8)
@@ -242,132 +238,81 @@ void Camera4::Reset()
 	up = defaultUp;
 }
 
-//void Camera4::UpdateCollision(float bounds, double dt)
-//{
-//	static const float CAMERA_SPEED = 25.f;
-//	if (Application::IsKeyPressed('A'))
-//	{
-//		Vector3 view = (target - position).Normalized();
-//		Vector3 right = view.Cross(up);
-//		right.y = 0;
-//		right.Normalize();
-//		up = right.Cross(view).Normalized();
-//		if (position.x - (right.x * (float)(CAMERA_SPEED * dt)) > -bounds
-//			&& position.x - (right.x * (float)(CAMERA_SPEED * dt)) < bounds)
-//		{
-//			position.x += right.x * (float)(CAMERA_SPEED * dt);
-//			target.x += right.x * (float)(CAMERA_SPEED * dt);
-//		}
-//		if (position.z - (right.z * (float)(CAMERA_SPEED * dt)) > -bounds
-//			&& position.z - (right.z * (float)(CAMERA_SPEED * dt)) < bounds)
-//		{
-//			position.z += right.z * (float)(CAMERA_SPEED * dt);
-//			target.z += right.z * (float)(CAMERA_SPEED * dt);
-//		}
-//
-//	}
-//	if (Application::IsKeyPressed('D'))
-//	{
-//		Vector3 view = (target - position).Normalized();
-//		Vector3 right = view.Cross(up);
-//		right.y = 0;
-//		right.Normalize();
-//		up = right.Cross(view).Normalized();
-//		if (position.x + (right.x * (float)(CAMERA_SPEED * dt)) > -bounds
-//			&& position.x + (right.x * (float)(CAMERA_SPEED * dt)) < bounds)
-//		{
-//			position.x -= right.x * (float)(CAMERA_SPEED * dt);
-//			target.x -= right.x * (float)(CAMERA_SPEED * dt);
-//		}
-//		if (position.z + (right.z * (float)(CAMERA_SPEED * dt)) > -bounds
-//			&& position.z + (right.z * (float)(CAMERA_SPEED * dt)) < bounds)
-//		{
-//			position.z -= right.z * (float)(CAMERA_SPEED * dt);
-//			target.z -= right.z * (float)(CAMERA_SPEED * dt);
-//		}
-//	}
-//	if (Application::IsKeyPressed('W'))
-//	{
-//		Vector3 view = (target - position).Normalized();
-//		if (position.x + (view.x * (float)(CAMERA_SPEED * dt)) > -bounds
-//			&& position.x + (view.x * (float)(CAMERA_SPEED * dt)) < bounds)
-//		{
-//			position.x -= view.x * (float)(CAMERA_SPEED * dt);
-//			target.x -= view.x * (float)(CAMERA_SPEED * dt);
-//		}
-//		if (position.z + (view.z * (float)(CAMERA_SPEED * dt)) > -bounds
-//			&& position.z + (view.z * (float)(CAMERA_SPEED * dt)) < bounds)
-//		{
-//			position.z -= view.z * (float)(CAMERA_SPEED * dt);
-//			target.z -= view.z * (float)(CAMERA_SPEED * dt);
-//		}
-//	}
-//	if (Application::IsKeyPressed('S'))
-//	{
-//		Vector3 view = (target - position).Normalized();
-//		if (position.x - (view.x * (float)(CAMERA_SPEED * dt)) > -bounds
-//			&& position.x - (view.x * (float)(CAMERA_SPEED * dt)) < bounds)
-//		{
-//			position.x += view.x * (float)(CAMERA_SPEED * dt);
-//			target.x += view.x * (float)(CAMERA_SPEED * dt);
-//		}
-//		if (position.z - (view.z * (float)(CAMERA_SPEED * dt)) > -bounds
-//			&& position.z - (view.z * (float)(CAMERA_SPEED * dt)) < bounds)
-//		{
-//			position.z += view.z * (float)(CAMERA_SPEED * dt);
-//			target.z += view.z * (float)(CAMERA_SPEED * dt);
-//		}
-//	}
-//
-//}
-
-void Camera4::keyboard(int x, int y)
+void Camera4::UpdateCollision(float bounds, double dt)
 {
-	if (Application::IsKeyPressed('Q'))
-	{
-		xrot += 1;
-		if (xrot >360) xrot -= 360;
-	}
-
-	if (Application::IsKeyPressed('Z'))
-	{
-		xrot -= 1;
-		if (xrot < -360) xrot += 360;
-	}
-
-	if (Application::IsKeyPressed('W'))
-	{
-		float xrotrad, yrotrad;
-		yrotrad = (yrot / 180 * 3.141592654f);
-		xrotrad = (xrot / 180 * 3.141592654f);
-		xpos += float(sin(yrotrad));
-		zpos -= float(cos(yrotrad));
-		ypos -= float(sin(xrotrad));
-	}
-
-	if (Application::IsKeyPressed ('S'))
-	{
-		float xrotrad, yrotrad;
-		yrotrad = (yrot / 180 * 3.141592654f);
-		xrotrad = (xrot / 180 * 3.141592654f);
-		xpos -= float(sin(yrotrad));
-		zpos += float(cos(yrotrad));
-		ypos += float(sin(xrotrad));
-	}
-
-	if (Application::IsKeyPressed('D'))
-	{
-		float yrotrad;
-		yrotrad = (yrot / 180 * 3.141592654f);
-		xpos += float(cos(yrotrad)) * 0.2;
-		zpos += float(sin(yrotrad)) * 0.2;
-	}
-
+	static const float CAMERA_SPEED = 25.f;
 	if (Application::IsKeyPressed('A'))
 	{
-		float yrotrad;
-		yrotrad = (yrot / 180 * 3.141592654f);
-		xpos -= float(cos(yrotrad)) * 0.2;
-		zpos -= float(sin(yrotrad)) * 0.2;
+		Vector3 view = (target - position).Normalized();
+		Vector3 right = view.Cross(up);
+		right.y = 0;
+		right.Normalize();
+		up = right.Cross(view).Normalized();
+		if (position.x - (right.x * (float)(CAMERA_SPEED * dt)) > -bounds
+			&& position.x - (right.x * (float)(CAMERA_SPEED * dt)) < bounds)
+		{
+			position.x += right.x * (float)(CAMERA_SPEED * dt);
+			target.x += right.x * (float)(CAMERA_SPEED * dt);
+		}
+		if (position.z - (right.z * (float)(CAMERA_SPEED * dt)) > -bounds
+			&& position.z - (right.z * (float)(CAMERA_SPEED * dt)) < bounds)
+		{
+			position.z += right.z * (float)(CAMERA_SPEED * dt);
+			target.z += right.z * (float)(CAMERA_SPEED * dt);
+		}
+
 	}
+	if (Application::IsKeyPressed('D'))
+	{
+		Vector3 view = (target - position).Normalized();
+		Vector3 right = view.Cross(up);
+		right.y = 0;
+		right.Normalize();
+		up = right.Cross(view).Normalized();
+		if (position.x + (right.x * (float)(CAMERA_SPEED * dt)) > -bounds
+			&& position.x + (right.x * (float)(CAMERA_SPEED * dt)) < bounds)
+		{
+			position.x -= right.x * (float)(CAMERA_SPEED * dt);
+			target.x -= right.x * (float)(CAMERA_SPEED * dt);
+		}
+		if (position.z + (right.z * (float)(CAMERA_SPEED * dt)) > -bounds
+			&& position.z + (right.z * (float)(CAMERA_SPEED * dt)) < bounds)
+		{
+			position.z -= right.z * (float)(CAMERA_SPEED * dt);
+			target.z -= right.z * (float)(CAMERA_SPEED * dt);
+		}
+	}
+	if (Application::IsKeyPressed('W'))
+	{
+		Vector3 view = (target - position).Normalized();
+		if (position.x + (view.x * (float)(CAMERA_SPEED * dt)) > -bounds
+			&& position.x + (view.x * (float)(CAMERA_SPEED * dt)) < bounds)
+		{
+			position.x -= view.x * (float)(CAMERA_SPEED * dt);
+			target.x -= view.x * (float)(CAMERA_SPEED * dt);
+		}
+		if (position.z + (view.z * (float)(CAMERA_SPEED * dt)) > -bounds
+			&& position.z + (view.z * (float)(CAMERA_SPEED * dt)) < bounds)
+		{
+			position.z -= view.z * (float)(CAMERA_SPEED * dt);
+			target.z -= view.z * (float)(CAMERA_SPEED * dt);
+		}
+	}
+	if (Application::IsKeyPressed('S'))
+	{
+		Vector3 view = (target - position).Normalized();
+		if (position.x - (view.x * (float)(CAMERA_SPEED * dt)) > -bounds
+			&& position.x - (view.x * (float)(CAMERA_SPEED * dt)) < bounds)
+		{
+			position.x += view.x * (float)(CAMERA_SPEED * dt);
+			target.x += view.x * (float)(CAMERA_SPEED * dt);
+		}
+		if (position.z - (view.z * (float)(CAMERA_SPEED * dt)) > -bounds
+			&& position.z - (view.z * (float)(CAMERA_SPEED * dt)) < bounds)
+		{
+			position.z += view.z * (float)(CAMERA_SPEED * dt);
+			target.z += view.z * (float)(CAMERA_SPEED * dt);
+		}
+	}
+
 }
