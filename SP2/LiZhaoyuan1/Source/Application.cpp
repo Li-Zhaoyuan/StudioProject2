@@ -114,24 +114,27 @@ void Application::Run()
 	Scene *scene2 = new SceneGalaxy();
 	Scene *scene3 = new SceneMun();
 	currscene->Init();
-	scene1->Init();
+	/*scene1->Init();
 	scene2->Init();
-	scene3->Init();
-
+	scene3->Init();*/
+	
 	m_timer.startTimer();    // Start timer to calculate how long it takes to render this frame
 	while (!glfwWindowShouldClose(m_window) && !IsKeyPressed(VK_ESCAPE))
 	{
 		if (IsKeyPressed('Z'))
 		{
 			currscene = scene1;
+			currscene->Init();
 		}
 		else if (IsKeyPressed('X'))
 		{
 			currscene = scene2;
+			currscene->Init();
 		}
 		else if (IsKeyPressed('C'))
 		{
 			currscene = scene3;
+			currscene->Init();
 		}
 		currscene->Update(m_timer.getElapsedTime());
 		currscene->Render();
@@ -144,6 +147,7 @@ void Application::Run()
 	} //Check if the ESC key had been pressed or if the window had been closed
 	currscene->Exit();
 	delete currscene;
+	
 }
 
 void Application::Exit()
