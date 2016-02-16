@@ -117,6 +117,7 @@ public:
 	virtual void Update(double dt);
 	virtual void Render();
 	virtual void RenderXwing();
+	virtual void RenderAsteroid();
 	virtual void Exit();
 
 private:

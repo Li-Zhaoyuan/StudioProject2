@@ -167,7 +167,9 @@ void SceneGalaxy::Init()
 	meshList[GEO_XWING] = MeshBuilder::GenerateOBJ("xwing", "OBJ//XWing.obj");
 	meshList[GEO_XWING]->textureID = LoadTGA("Image//XWing_Texture.tga");
 
-	
+	meshList[GEO_ASTEROID] = MeshBuilder::GenerateOBJ("asteroid", "OBJ//asteroid.obj");
+	meshList[GEO_ASTEROID]->textureID = LoadTGA("Image//asteroid.tga");
+
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//TimesNewRoman.tga");
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("lightball", Color(1, 1, 1), 18, 36);
@@ -441,6 +443,7 @@ void SceneGalaxy::Render()
 	modelStack.PopMatrix();
 
 	RenderXwing();
+	RenderAsteroid();
 
 	/*modelStack.PushMatrix();
 	modelStack.Translate(0.0f, 0.0f, -camera.Charradius);
@@ -465,11 +468,20 @@ void SceneGalaxy::Render()
 void SceneGalaxy::RenderXwing()
 {
 	modelStack.PushMatrix();
-	modelStack.Translate(0, 500, 0);
+	modelStack.Translate(camera.target.x, camera.target.y, camera.target.z);
 	modelStack.Scale(2.2, 2.2, 2.2);
 	renderMesh(meshList[GEO_XWING], false);
 	modelStack.PopMatrix();
 
+}
+
+void SceneGalaxy::RenderAsteroid()
+{
+	modelStack.PushMatrix();
+	modelStack.Translate(0, 500, 50);
+	modelStack.Scale(2.2, 2.2, 2.2);
+	renderMesh(meshList[GEO_ASTEROID], false);
+	modelStack.PopMatrix();
 }
 
 void SceneGalaxy::RenderSkybox()
