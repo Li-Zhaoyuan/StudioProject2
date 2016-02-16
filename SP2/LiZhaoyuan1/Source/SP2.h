@@ -9,7 +9,7 @@
 #include "Camera3.h"
 #include "Camera4.h"
 #include "MatrixStack.h"
-
+#include "RenderMun.h"
 class SP2 : public Scene
 {
 
@@ -26,14 +26,40 @@ class SP2 : public Scene
 		GEO_BOTTOM,
 		GEO_FRONT,
 		GEO_BACK,
-		GEO_MODEL1,
-		GEO_MODEL2,
 		GEO_TEXT,
-		GEO_SNOWBALLPILE,
-		GEO_ROBBY,
-		GEO_SNOWWALL,
-		GEO_SNOWBARRICADE,
-		GEO_SNOWFORT,
+		GEO_MUNLEFT,
+		GEO_MUNRIGHT,
+		GEO_MUNTOP,
+		GEO_MUNBOTTOM,
+		GEO_MUNFRONT,
+		GEO_MUNBACK,
+		GEO_GALAXYLEFT,
+		GEO_GALAXYRIGHT,
+		GEO_GALAXYTOP,
+		GEO_GALAXYBOTTOM,
+		GEO_GALAXYFRONT,
+		GEO_GALAXYBACK,
+		GEO_SORAJEWELLEFT,
+		GEO_SORAJEWELRIGHT,
+		GEO_SORAJEWELTOP,
+		GEO_SORAJEWELBOTTOM,
+		GEO_SORAJEWELFRONT,
+		GEO_SORAJEWELBACK,
+		GEO_ASTEROID,
+		GEO_GLOBE,
+		GEO_PROJECTOR,
+		GEO_SOFA,
+		GEO_HOUSE,
+		GEO_ORE,
+		GEO_PICKAXE,
+		GEO_CRASHEDPLANE,
+		GEO_MUN,
+		GEO_FEMALEA,
+		GEO_FEMALEB,
+		GEO_ALIEN,
+		GEO_MALE,
+		GEO_PROTAGANIST,
+		GEO_CAVE,
 		NUM_GEOMETRY,
 	};
 
@@ -120,8 +146,14 @@ private:
 	float camPosY = 0;
 	float camPosz = 0;
 	
+	void MunInit();
+	void MunRender();
 
+	void GalaxyInit();
+	void GalaxyRender();
 	
+	void SoraJewelInit();
+	void SoraJewelRender();
 
 	
 
