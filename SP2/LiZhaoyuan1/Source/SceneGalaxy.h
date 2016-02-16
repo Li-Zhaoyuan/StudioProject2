@@ -10,7 +10,7 @@
 #include "Camera4.h"
 #include "MatrixStack.h"
 #include "RenderMun.h"
-#include "OBJBoundary.h"
+//#include "OBJBoundary.h"
 
 class SceneGalaxy : public Scene
 {
@@ -145,7 +145,7 @@ private:
 	float planet1RevAngle, planet1RotAngle, moon1RotAngle;*/
 
 	Camera3 camera;
-	OBJBoundary obj;
+	//OBJBoundary obj;
 
 	float boxX = 0;
 	float boxZ = 0;

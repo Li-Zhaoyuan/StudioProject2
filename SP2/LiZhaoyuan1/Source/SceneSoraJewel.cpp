@@ -169,6 +169,13 @@ void SceneSoraJewel::Init()
 	meshList[GEO_SORAJEWEL]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
 	meshList[GEO_SORAJEWEL]->material.kShininess = 1.f;
 
+	meshList[GEO_XWING] = MeshBuilder::GenerateOBJ("BASE", "OBJ//XWingLand.obj");
+	meshList[GEO_XWING]->textureID = LoadTGA("Image//XWing_Texture.tga");
+	meshList[GEO_XWING]->material.kSpecular.Set(0.6f, 0.6f, 0.6f);
+	meshList[GEO_XWING]->material.kDiffuse.Set(0.3f, 0.3f, 0.3f);
+	meshList[GEO_XWING]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_XWING]->material.kShininess = 1.f;
+
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//TimesNewRoman.tga");
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("lightball", Color(1, 1, 1), 18, 36);
@@ -448,8 +455,15 @@ void SceneSoraJewel::Render()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Scale(10, 10, 10);
+	modelStack.Scale(20, 20, 20);
 	renderMesh(meshList[GEO_SORAJEWEL], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-61, 7, 60);
+	modelStack.Rotate(90, 0, 1, 0);
+	modelStack.Scale(2.2f, 2.2f, 2.2f);
+	renderMesh(meshList[GEO_XWING], false);
 	modelStack.PopMatrix();
 
 	std::stringstream playerPos;
@@ -519,5 +533,3 @@ void SceneSoraJewel::Exit()
 	glDeleteVertexArrays(1, &m_vertexArrayID);
 	glDeleteProgram(m_programID);
 }
-
-
