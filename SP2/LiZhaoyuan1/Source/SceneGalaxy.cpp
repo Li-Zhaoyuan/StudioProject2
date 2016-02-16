@@ -150,22 +150,26 @@ void SceneGalaxy::Init()
 	meshList[GEO_CUBE] = MeshBuilder::GenerateCube("reference", Color(0, 0, 0));
 
 	meshList[GEO_QUAD] = MeshBuilder::GenerateQuad("quad", Color(1, 1, 1));
-	meshList[GEO_QUAD]->textureID = LoadTGA("Image//Pikachu2.tga");
 
-	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
-	meshList[GEO_FRONT]->textureID = LoadTGA("Image//NebulaFront.tga");
-	meshList[GEO_BACK] = MeshBuilder::GenerateQuad("back", Color(1, 1, 1));
-	meshList[GEO_BACK]->textureID = LoadTGA("Image//NebulaLeft.tga");
-	meshList[GEO_TOP] = MeshBuilder::GenerateQuad("top", Color(1, 1, 1));
-	meshList[GEO_TOP]->textureID = LoadTGA("Image//NebulaTop.tga");
-	meshList[GEO_BOTTOM] = MeshBuilder::GenerateQuad("bottom", Color(1, 1, 1));
-	meshList[GEO_BOTTOM]->textureID = LoadTGA("Image//NebulaBottom_Kai.tga");
-	meshList[GEO_LEFT] = MeshBuilder::GenerateQuad("left", Color(1, 1, 1));
-	meshList[GEO_LEFT]->textureID = LoadTGA("Image//NebulaBack.tga");
-	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1));
-	meshList[GEO_RIGHT]->textureID = LoadTGA("Image//NebulaRight.tga");
+	meshList[GEO_GALAXYFRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
+	meshList[GEO_GALAXYFRONT]->textureID = LoadTGA("Image//NebulaFront.tga");
+	meshList[GEO_GALAXYBACK] = MeshBuilder::GenerateQuad("back", Color(1, 1, 1));
+	meshList[GEO_GALAXYBACK]->textureID = LoadTGA("Image//NebulaLeft.tga");
+	meshList[GEO_GALAXYTOP] = MeshBuilder::GenerateQuad("top", Color(1, 1, 1));
+	meshList[GEO_GALAXYTOP]->textureID = LoadTGA("Image//NebulaTop_Kai.tga");
+	meshList[GEO_GALAXYBOTTOM] = MeshBuilder::GenerateQuad("bottom", Color(1, 1, 1));
+	meshList[GEO_GALAXYBOTTOM]->textureID = LoadTGA("Image//NebulaBottom_Kai.tga");
+	meshList[GEO_GALAXYLEFT] = MeshBuilder::GenerateQuad("left", Color(1, 1, 1));
+	meshList[GEO_GALAXYLEFT]->textureID = LoadTGA("Image//NebulaBack_Kai.tga");
+	meshList[GEO_GALAXYRIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1));
+	meshList[GEO_GALAXYRIGHT]->textureID = LoadTGA("Image//NebulaRight.tga");
 
-	
+	meshList[GEO_XWING] = MeshBuilder::GenerateOBJ("xwing", "OBJ//XWing.obj");
+	meshList[GEO_XWING]->textureID = LoadTGA("Image//XWing_Texture.tga");
+
+	meshList[GEO_ASTEROID] = MeshBuilder::GenerateOBJ("asteroid", "OBJ//asteroid.obj");
+	meshList[GEO_ASTEROID]->textureID = LoadTGA("Image//asteroid.tga");
+
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//TimesNewRoman.tga");
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("lightball", Color(1, 1, 1), 18, 36);
@@ -433,10 +437,13 @@ void SceneGalaxy::Render()
 	renderMesh(meshList[GEO_AXES], false);
 	modelStack.PopMatrix();
 
-	/*modelStack.PushMatrix();
+	modelStack.PushMatrix();
 	modelStack.Translate(0, 496.9, 0);
 	RenderSkybox();
-	modelStack.PopMatrix();*/
+	modelStack.PopMatrix();
+
+	RenderXwing();
+	RenderAsteroid();
 
 	/*modelStack.PushMatrix();
 	modelStack.Translate(0.0f, 0.0f, -camera.Charradius);
@@ -458,6 +465,25 @@ void SceneGalaxy::Render()
 
 }
 
+void SceneGalaxy::RenderXwing()
+{
+	modelStack.PushMatrix();
+	modelStack.Translate(camera.target.x, camera.target.y, camera.target.z);
+	modelStack.Scale(2.2, 2.2, 2.2);
+	renderMesh(meshList[GEO_XWING], false);
+	modelStack.PopMatrix();
+
+}
+
+void SceneGalaxy::RenderAsteroid()
+{
+	modelStack.PushMatrix();
+	modelStack.Translate(0, 500, 50);
+	modelStack.Scale(2.2, 2.2, 2.2);
+	renderMesh(meshList[GEO_ASTEROID], false);
+	modelStack.PopMatrix();
+}
+
 void SceneGalaxy::RenderSkybox()
 {
 	modelStack.PushMatrix();
@@ -465,7 +491,7 @@ void SceneGalaxy::RenderSkybox()
 	modelStack.Rotate(90, 1, 0, 0);
 	modelStack.Rotate(180, 0, 1, 0);
 	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_BACK], false);
+	renderMesh(meshList[GEO_GALAXYBACK], false);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
@@ -473,7 +499,7 @@ void SceneGalaxy::RenderSkybox()
 	modelStack.Rotate(-90, 0, 1, 0);
 	modelStack.Rotate(180, 1, 0, 0);
 	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_TOP], false);
+	renderMesh(meshList[GEO_GALAXYTOP], false);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
@@ -482,7 +508,7 @@ void SceneGalaxy::RenderSkybox()
 	modelStack.Rotate(90, 0, 1, 0);
 	modelStack.Rotate(180, 0, 1, 0);
 	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_LEFT], false);
+	renderMesh(meshList[GEO_GALAXYLEFT], false);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
@@ -490,14 +516,14 @@ void SceneGalaxy::RenderSkybox()
 	modelStack.Rotate(90, 0, 0, 1);
 	modelStack.Rotate(90, 0, 1, 0);
 	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_FRONT], false);
+	renderMesh(meshList[GEO_GALAXYFRONT], false);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(0, -498, 0);
 	modelStack.Rotate(-90, 0, 1, 0);
 	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_BOTTOM], false);
+	renderMesh(meshList[GEO_GALAXYBOTTOM], false);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
@@ -506,7 +532,7 @@ void SceneGalaxy::RenderSkybox()
 	modelStack.Rotate(90, 1, 0, 0);
 	modelStack.Rotate(180, 0, 1, 0);
 	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_RIGHT], false);
+	renderMesh(meshList[GEO_GALAXYRIGHT], false);
 	modelStack.PopMatrix();
 }
 

@@ -1,2 +1,6 @@
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v120:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit
+<<<<<<< HEAD
 Debug|Win32|C:\Users\n1507\Desktop\Computer Graphics project\SP2\|
+=======
+Debug|Win32|C:\Users\n1507\Desktop\StudioProjectYO\SP2\|
+>>>>>>> 255d557a736bd72f38e5cadcd69fad39631e4f85
