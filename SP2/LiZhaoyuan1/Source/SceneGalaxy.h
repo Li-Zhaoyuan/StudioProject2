@@ -55,6 +55,7 @@ class SceneGalaxy : public Scene
 		GEO_HOUSE,
 		GEO_ORE,
 		GEO_PICKAXE,
+		GEO_XWING,
 		GEO_CRASHEDPLANE,
 		GEO_MUN,
 		GEO_FEMALEA,
@@ -115,6 +116,7 @@ public:
 	virtual void Init();
 	virtual void Update(double dt);
 	virtual void Render();
+	virtual void RenderXwing();
 	virtual void Exit();
 
 private:
