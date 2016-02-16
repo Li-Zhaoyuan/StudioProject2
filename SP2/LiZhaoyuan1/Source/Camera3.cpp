@@ -64,17 +64,29 @@ void Camera3::Update(double dt, float bounds)
 		right.y = 0;
 		right.Normalize();
 		up = right.Cross(view).Normalized();
+
+		Vector3 Testvalue;
+		Testvalue = (position + view * dt * CAMERA_SPEED);
+
 		if (position.x - (right.x * (float)(CAMERA_SPEED * dt)) > -bounds
-			&& position.x - (right.x * (float)(CAMERA_SPEED * dt)) < bounds)
+			&& position.x - (right.x * (float)(CAMERA_SPEED * dt)) < bounds
+			&& OBJboundaryX(Testvalue) == true)
 		{
-			position.x -= right.x * (float)(CAMERA_SPEED * dt);
-			target.x -= right.x * (float)(CAMERA_SPEED * dt);
+			if (OBJboundaryY(Testvalue, 1) == true)
+			{
+				position.x -= right.x * (float)(CAMERA_SPEED * dt);
+				target.x -= right.x * (float)(CAMERA_SPEED * dt);
+			}
 		}
 		if (position.z - (right.z * (float)(CAMERA_SPEED * dt)) > -bounds
-			&& position.z - (right.z * (float)(CAMERA_SPEED * dt)) < bounds)
+			&& position.z - (right.z * (float)(CAMERA_SPEED * dt)) < bounds
+			&& OBJboundaryZ(Testvalue) == true)
 		{
-			position.z -= right.z * (float)(CAMERA_SPEED * dt);
-			target.z -= right.z * (float)(CAMERA_SPEED * dt);
+			if (OBJboundaryY(Testvalue, 2) == true)
+			{
+				position.z -= right.z * (float)(CAMERA_SPEED * dt);
+				target.z -= right.z * (float)(CAMERA_SPEED * dt);
+			}
 		}
 
 	}
@@ -111,17 +123,29 @@ void Camera3::Update(double dt, float bounds)
 		right.y = 0;
 		right.Normalize();
 		up = right.Cross(view).Normalized();
+
+		Vector3 Testvalue;
+		Testvalue = (position + view * dt * CAMERA_SPEED);
+
 		if (position.x + (right.x * (float)(CAMERA_SPEED * dt)) > -bounds
-			&& position.x + (right.x * (float)(CAMERA_SPEED * dt)) < bounds)
+			&& position.x + (right.x * (float)(CAMERA_SPEED * dt)) < bounds
+			&& OBJboundaryX(Testvalue) == true)
 		{
-			position.x += right.x * (float)(CAMERA_SPEED * dt);
-			target.x += right.x * (float)(CAMERA_SPEED * dt);
+			if (OBJboundaryY(Testvalue, 1) == true)
+			{
+				position.x += right.x * (float)(CAMERA_SPEED * dt);
+				target.x += right.x * (float)(CAMERA_SPEED * dt);
+			}
 		}
 		if (position.z + (right.z * (float)(CAMERA_SPEED * dt)) > -bounds
-			&& position.z + (right.z * (float)(CAMERA_SPEED * dt)) < bounds)
+			&& position.z + (right.z * (float)(CAMERA_SPEED * dt)) < bounds
+			&& OBJboundaryZ(Testvalue) == true)
 		{
-			position.z += right.z * (float)(CAMERA_SPEED * dt);
-			target.z += right.z * (float)(CAMERA_SPEED * dt);
+			if (OBJboundaryY(Testvalue, 2) == true)
+			{
+				position.z += right.z * (float)(CAMERA_SPEED * dt);
+				target.z += right.z * (float)(CAMERA_SPEED * dt);
+			}
 		}
 	}
 	if (Application::IsKeyPressed(VK_UP))
@@ -163,17 +187,29 @@ void Camera3::Update(double dt, float bounds)
 	if (Application::IsKeyPressed('W'))
 	{
 		Vector3 view = (target - position).Normalized();
+
+		Vector3 Testvalue;
+		Testvalue = (position + view * dt * CAMERA_SPEED);
+
 		if (position.x + (view.x * (float)(CAMERA_SPEED * dt)) > -bounds
-			&& position.x + (view.x * (float)(CAMERA_SPEED * dt)) < bounds)
+			&& position.x + (view.x * (float)(CAMERA_SPEED * dt)) < bounds
+			&& OBJboundaryX(Testvalue) == true)
 		{
-			position.x += view.x * (float)(CAMERA_SPEED * dt);
-			target.x += view.x * (float)(CAMERA_SPEED * dt);
+			if (OBJboundaryY(Testvalue, 1) == true)
+			{
+				position.x += view.x * (float)(CAMERA_SPEED * dt);
+				target.x += view.x * (float)(CAMERA_SPEED * dt);
+			}
 		}
 		if (position.z + (view.z * (float)(CAMERA_SPEED * dt)) > -bounds
-			&& position.z + (view.z * (float)(CAMERA_SPEED * dt)) < bounds)
+			&& position.z + (view.z * (float)(CAMERA_SPEED * dt)) < bounds
+			&& OBJboundaryZ(Testvalue) == true)
 		{
-			position.z += view.z * (float)(CAMERA_SPEED * dt);
-			target.z += view.z * (float)(CAMERA_SPEED * dt);
+			if (OBJboundaryY(Testvalue, 2) == true)
+			{
+				position.z += view.z * (float)(CAMERA_SPEED * dt);
+				target.z += view.z * (float)(CAMERA_SPEED * dt);
+			}
 		}
 	}
 	if (Application::IsKeyPressed(VK_DOWN))
@@ -213,17 +249,29 @@ void Camera3::Update(double dt, float bounds)
 	if (Application::IsKeyPressed('S'))
 	{
 		Vector3 view = (target - position).Normalized();
+
+		Vector3 Testvalue;
+		Testvalue = (position + view * dt * CAMERA_SPEED);
+
 		if (position.x - (view.x * (float)(CAMERA_SPEED * dt)) > -bounds
-			&& position.x - (view.x * (float)(CAMERA_SPEED * dt)) < bounds)
+			&& position.x - (view.x * (float)(CAMERA_SPEED * dt)) < bounds
+			&& OBJboundaryX(Testvalue) == true)
 		{
-			position.x -= view.x * (float)(CAMERA_SPEED * dt);
-			target.x -= view.x * (float)(CAMERA_SPEED * dt);
+			if (OBJboundaryY(Testvalue, 1) == true)
+			{
+				position.x -= view.x * (float)(CAMERA_SPEED * dt);
+				target.x -= view.x * (float)(CAMERA_SPEED * dt);
+			}
 		}
 		if (position.z - (view.z * (float)(CAMERA_SPEED * dt)) > -bounds
-			&& position.z - (view.z * (float)(CAMERA_SPEED * dt)) < bounds)
+			&& position.z - (view.z * (float)(CAMERA_SPEED * dt)) < bounds
+			&& OBJboundaryZ(Testvalue) == true)
 		{
-			position.z -= view.z * (float)(CAMERA_SPEED * dt);
-			target.z -= view.z * (float)(CAMERA_SPEED * dt);
+			if (OBJboundaryY(Testvalue, 2) == true)
+			{
+				position.z -= view.z * (float)(CAMERA_SPEED * dt);
+				target.z -= view.z * (float)(CAMERA_SPEED * dt);
+			}
 		}
 	}
 	
@@ -319,4 +367,89 @@ void Camera3::UpdateCollision(float bounds, double dt)
 		}
 	}
 
+}
+
+bool Camera3::boundaryCheckerX(float smallx, float largex, float smallz, float largez, Vector3 value)
+{
+	if ((value.z > smallz) && (value.z<largez) && (value.x > smallx) && (value.x<smallx + 2)){ return false; }
+	if ((value.z > smallz) && (value.z<largez) && (value.x < largex) && (value.x>largex - 2)){ return false; }
+	return true;
+}
+
+bool Camera3::boundaryCheckerZ(float smallx, float largex, float smallz, float largez, Vector3 value)
+{
+	if ((value.x > smallx) && (value.x<largex) && (value.z > smallz) && (value.z<smallz + 2)){ return false; }
+	if ((value.x > smallx) && (value.x<largex) && (value.z < largez) && (value.z>largez - 2)){ return false; }
+	return true;
+}
+
+bool Camera3::OBJboundaryX(Vector3 Testvalue)
+{
+	if (SceneGalaxy == true)
+	{
+		if (boundaryCheckerX(-20, 20, -20, 20, Testvalue) == false){ return false; }
+	}
+	if (SceneMun == true)
+	{
+		if (boundaryCheckerX(-30, 30, -30, 30, Testvalue) == false){ return false; }
+	}
+	return true;
+}
+
+bool Camera3::OBJboundaryZ(Vector3 Testvalue)
+{
+	if (SceneGalaxy == true)
+	{
+		if (boundaryCheckerZ(-20, 20, -20, 20, Testvalue) == false){ return false; }
+	}
+	if (SceneMun == true)
+	{
+		if (boundaryCheckerZ(-30, 30, -30, 30, Testvalue) == false){ return false; }
+	}
+	return true;
+}
+
+bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
+{
+	if (SceneGalaxy == true)
+	{
+		if (Testvalue.y >= 20)
+		{
+			if (XZ == 1)
+			{
+				if (boundaryCheckerX(-20, 20, -20, 20, Testvalue) == false)
+				{
+					return false;
+				}
+			}
+			else if (XZ == 2)
+			{
+				if (boundaryCheckerZ(-20, 20, -20, 20, Testvalue) == false)
+				{
+					return false;
+				}
+			}
+		}
+	}
+	if (SceneMun == true)
+	{
+		if (Testvalue.y >= 20)
+		{
+			if (XZ == 1)
+			{
+				if (boundaryCheckerX(-30, 30, -30, 30, Testvalue) == false)
+				{
+					return false;
+				}
+			}
+			else if (XZ == 2)
+			{
+				if (boundaryCheckerZ(-30, 30, -30, 30, Testvalue) == false)
+				{
+					return false;
+				}
+			}
+		}
+	}
+	return true;
 }

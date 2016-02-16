@@ -19,9 +19,11 @@
 SceneGalaxy::SceneGalaxy()
 {
 }
+
 SceneGalaxy::~SceneGalaxy()
 {
 }
+
 void SceneGalaxy::Init()
 {
 
@@ -177,8 +179,11 @@ void SceneGalaxy::Init()
 	Mtx44 projection;
 	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 10000.f);
 	projectionStack.LoadMatrix(projection);
-}
 
+	camera.SceneGalaxy = true;
+	camera.SceneMun = false;
+	camera.SceneSoraJewel = false;
+}
 
 void SceneGalaxy::Update(double dt)
 {
@@ -230,9 +235,10 @@ void SceneGalaxy::Update(double dt)
 	camPosX = camera.position.x;
 	camPosY = camera.position.y;
 	camPosz = camera.position.z;
-
+	
 
 }
+
 void SceneGalaxy::lighting()
 {
 	if (light[0].type == Light::LIGHT_DIRECTIONAL)
@@ -255,6 +261,7 @@ void SceneGalaxy::lighting()
 		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
 	}
 }
+
 void SceneGalaxy::lighting2()
 {
 	if (light[1].type == Light::LIGHT_DIRECTIONAL)
@@ -278,6 +285,7 @@ void SceneGalaxy::lighting2()
 	}
 
 }
+
 void SceneGalaxy::renderMesh(Mesh *mesh, bool enableLight)
 {
 	Mtx44 MVP, modelView, modelView_inverse_transpose;
@@ -393,7 +401,6 @@ void SceneGalaxy::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, 
 
 }
 
-
 void SceneGalaxy::Render()
 {
 	// Render VBO here
@@ -468,7 +475,7 @@ void SceneGalaxy::Render()
 void SceneGalaxy::RenderXwing()
 {
 	modelStack.PushMatrix();
-	modelStack.Translate(camera.target.x, camera.target.y, camera.target.z);
+	modelStack.Translate(0, 400, 300);
 	modelStack.Scale(2.2, 2.2, 2.2);
 	renderMesh(meshList[GEO_XWING], false);
 	modelStack.PopMatrix();

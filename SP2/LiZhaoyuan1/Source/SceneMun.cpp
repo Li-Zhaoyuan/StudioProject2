@@ -217,6 +217,10 @@ void SceneMun::Init()
 	Mtx44 projection;
 	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 10000.f);
 	projectionStack.LoadMatrix(projection);
+
+	camera.SceneGalaxy = false;
+	camera.SceneMun = true;
+	camera.SceneSoraJewel = false;
 }
 
 

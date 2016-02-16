@@ -23,6 +23,15 @@ public:
 
 	void UpdateCollision(float bounds, double dt);
 
+	bool SceneSoraJewel = false;
+	bool SceneMun = false;
+	bool SceneGalaxy = false;
+	bool boundaryCheckerX(float smallx, float largex, float smallz, float largez, Vector3 value);
+	bool boundaryCheckerZ(float smallx, float largex, float smallz, float largez, Vector3 value);
+	bool OBJboundaryX(Vector3 Testvalue);
+	bool OBJboundaryZ(Vector3 Testvalue);
+	bool OBJboundaryY(Vector3 Testvalue, int XZ);
+
 	float rotateChar;
 	float translateChar;
 	

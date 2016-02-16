@@ -10,9 +10,10 @@
 #include "Camera4.h"
 #include "MatrixStack.h"
 #include "RenderMun.h"
+#include "OBJBoundary.h"
+
 class SceneGalaxy : public Scene
 {
-
 	enum GEOMETRY_TYPE
 	{
 		GEO_AXES,
@@ -112,9 +113,9 @@ public:
 	~SceneGalaxy();
 
 	void skybox();
-
 	virtual void Init();
 	virtual void Update(double dt);
+	void Boundary();
 	virtual void Render();
 	virtual void RenderXwing();
 	virtual void RenderAsteroid();
@@ -130,8 +131,7 @@ private:
 	void lighting();
 	void lighting2();
 	void RenderSkybox();
-	void interactionWithRobby();
-	void interactionWithSnowBalls();
+
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
 
@@ -145,6 +145,7 @@ private:
 	float planet1RevAngle, planet1RotAngle, moon1RotAngle;*/
 
 	Camera3 camera;
+	OBJBoundary obj;
 
 	float boxX = 0;
 	float boxZ = 0;
