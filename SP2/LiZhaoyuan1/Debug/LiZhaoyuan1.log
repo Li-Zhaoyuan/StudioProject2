@@ -1,9 +1,65 @@
-﻿Build started 2/16/2016 5:53:11 PM.
-     1>Project "C:\Users\n1507\Desktop\SP2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
-     1>Link:
-         LiZhaoyuan1.vcxproj -> C:\Users\n1507\Desktop\SP2\SP2\Debug\LiZhaoyuan1.exe
-     1>Done Building Project "C:\Users\n1507\Desktop\SP2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
+﻿Build started 16/2/2016 9:40:26 PM.
+     1>Project "E:\School stuff\2015S2\Computer Graphics Project\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         E:\Programs\Visual Studio 2013\VC\bin\CL.exe /c /I"E:\School stuff\2015S2\Computer Graphics Project\SP2\\Common\Source" /I"E:\School stuff\2015S2\Computer Graphics Project\SP2\\glfw\include" /I"E:\School stuff\2015S2\Computer Graphics Project\SP2\\glew\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\Application.cpp Source\Camera.cpp Source\Camera2.cpp Source\Camera3.cpp source\Camera4.cpp Source\LoadOBJ.cpp Source\LoadTGA.cpp Source\main.cpp Source\Mesh.cpp Source\MeshBuilder.cpp Source\RenderGalaxy.cpp Source\RenderMun.cpp Source\RenderSoraJewel.cpp Source\SceneGalaxy.cpp Source\SceneMun.cpp Source\SceneSoraJewel.cpp Source\shader.cpp Source\SP2.cpp Source\Utility.cpp
+         Utility.cpp
+         SP2.cpp
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\sp2.cpp(145): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\sp2.cpp(146): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\sp2.cpp(147): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\sp2.cpp(441): warning C4305: 'argument' : truncation from 'double' to 'float'
+         shader.cpp
+         SceneSoraJewel.cpp
+         SceneMun.cpp
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenemun.h(152): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenemun.cpp(167): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenemun.cpp(495): warning C4305: 'argument' : truncation from 'double' to 'float'
+         SceneGalaxy.cpp
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenegalaxy.cpp(441): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenegalaxy.cpp(472): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenegalaxy.cpp(482): warning C4305: 'argument' : truncation from 'double' to 'float'
+         RenderSoraJewel.cpp
+         RenderMun.cpp
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\rendermun.cpp(34): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\rendermun.cpp(76): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\rendermun.cpp(77): warning C4305: 'argument' : truncation from 'double' to 'float'
+         RenderGalaxy.cpp
+         MeshBuilder.cpp
+         Mesh.cpp
+         main.cpp
+         LoadTGA.cpp
+         LoadOBJ.cpp
+         Camera4.cpp
+         Camera3.cpp
+         Camera2.cpp
+         Camera.cpp
+         Application.cpp
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenemun.h(152): warning C4305: 'argument' : truncation from 'double' to 'float'
+         Generating Code...
+       Link:
+         E:\Programs\Visual Studio 2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\LiZhaoyuan1.exe" /INCREMENTAL /NOLOGO /LIBPATH:"E:\School stuff\2015S2\Computer Graphics Project\SP2\\glew\lib" /LIBPATH:"E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug" /LIBPATH:"E:\School stuff\2015S2\Computer Graphics Project\SP2\\glfw\lib-msvc120" glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\LiZhaoyuan1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\LiZhaoyuan1.lib" /MACHINE:X86 Debug\Application.obj
+         Debug\Camera.obj
+         Debug\Camera2.obj
+         Debug\Camera3.obj
+         Debug\Camera4.obj
+         Debug\LoadOBJ.obj
+         Debug\LoadTGA.obj
+         Debug\main.obj
+         Debug\Mesh.obj
+         Debug\MeshBuilder.obj
+         Debug\RenderGalaxy.obj
+         Debug\RenderMun.obj
+         Debug\RenderSoraJewel.obj
+         Debug\SceneGalaxy.obj
+         Debug\SceneMun.obj
+         Debug\SceneSoraJewel.obj
+         Debug\shader.obj
+         Debug\SP2.obj
+         Debug\Utility.obj
+     1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+         LiZhaoyuan1.vcxproj -> E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\LiZhaoyuan1.exe
+     1>Done Building Project "E:\School stuff\2015S2\Computer Graphics Project\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.04
+Time Elapsed 00:00:09.83
