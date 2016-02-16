@@ -142,7 +142,7 @@ void SP2::Init()
 
 
 	//Initialize camera settings
-	camera.Init(Vector3(0, 200, 1), Vector3(0, 200, 0), Vector3(0, 1, 0));
+	camera.Init(Vector3(0, 500, 1), Vector3(0, 500, 0), Vector3(0, 1, 0));
 
 	
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
@@ -159,7 +159,7 @@ void SP2::Init()
 	meshList[GEO_TOP] = MeshBuilder::GenerateQuad("top", Color(1, 1, 1));
 	meshList[GEO_TOP]->textureID = LoadTGA("Image//NebulaTop.tga");
 	meshList[GEO_BOTTOM] = MeshBuilder::GenerateQuad("bottom", Color(1, 1, 1));
-	meshList[GEO_BOTTOM]->textureID = LoadTGA("Image//NebulaBottom.tga");
+	meshList[GEO_BOTTOM]->textureID = LoadTGA("Image//NebulaBottom_Kai.tga");
 	meshList[GEO_LEFT] = MeshBuilder::GenerateQuad("left", Color(1, 1, 1));
 	meshList[GEO_LEFT]->textureID = LoadTGA("Image//NebulaBack.tga");
 	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1));
