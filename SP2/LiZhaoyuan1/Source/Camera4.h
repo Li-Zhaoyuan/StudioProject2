@@ -14,6 +14,7 @@ public:
 	Vector3 defaultPosition;
 	Vector3 defaultTarget;
 	Vector3 defaultUp;
+	Vector3 playerposition = Vector3(0, 0, 1);
 
 	Camera4();
 	~Camera4();
@@ -24,14 +25,6 @@ public:
 	void UpdateCollision(float bounds, double dt);
 
 	float rotateChar;
-
-	//angle of rotation
-	float xpos = 0, ypos = 0, zpos = 0, xrot = 0, yrot = 0, zrot = 0;
-	float Charradius=10.f; //radial distance from character
-	float lastx, lasty;
-
-	//keyboard ctrls
-	void keyboard(int x, int y);
 };
 
 
