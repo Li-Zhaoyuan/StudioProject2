@@ -33,18 +33,21 @@ class SP2 : public Scene
 		GEO_MUNBOTTOM,
 		GEO_MUNFRONT,
 		GEO_MUNBACK,
+		GEO_MUNGROUND,
 		GEO_GALAXYLEFT,
 		GEO_GALAXYRIGHT,
 		GEO_GALAXYTOP,
 		GEO_GALAXYBOTTOM,
 		GEO_GALAXYFRONT,
 		GEO_GALAXYBACK,
+		GEO_GALAXYGROUND,
 		GEO_SORAJEWELLEFT,
 		GEO_SORAJEWELRIGHT,
 		GEO_SORAJEWELTOP,
 		GEO_SORAJEWELBOTTOM,
 		GEO_SORAJEWELFRONT,
 		GEO_SORAJEWELBACK,
+		SEO_SORAJEWELGROUND,
 		GEO_ASTEROID,
 		GEO_GLOBE,
 		GEO_PROJECTOR,
@@ -138,7 +141,7 @@ private:
 	/*float rotateAngle;
 	float planet1RevAngle, planet1RotAngle, moon1RotAngle;*/
 
-	Camera4 camera;
+	Camera3 camera;
 
 	float boxX = 0;
 	float boxZ = 0;
@@ -155,7 +158,9 @@ private:
 	void SoraJewelInit();
 	void SoraJewelRender();
 
-	
+	void renderMunSkybox();
+	void renderGalaxySkybox();
+	void renderSoraJewelSkybox();
 
 	MS modelStack, viewStack, projectionStack;
 };

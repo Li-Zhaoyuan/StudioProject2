@@ -104,6 +104,9 @@
     <ClCompile Include="Source\RenderGalaxy.cpp" />
     <ClCompile Include="Source\RenderMun.cpp" />
     <ClCompile Include="Source\RenderSoraJewel.cpp" />
+    <ClCompile Include="Source\SceneGalaxy.cpp" />
+    <ClCompile Include="Source\SceneMun.cpp" />
+    <ClCompile Include="Source\SceneSoraJewel.cpp" />
     <ClCompile Include="Source\shader.cpp" />
     <ClCompile Include="Source\SP2.cpp" />
     <ClCompile Include="Source\Utility.cpp" />
@@ -124,6 +127,9 @@
     <ClInclude Include="Source\RenderMun.h" />
     <ClInclude Include="Source\RenderSoraJewel.h" />
     <ClInclude Include="Source\Scene.h" />
+    <ClInclude Include="Source\SceneGalaxy.h" />
+    <ClInclude Include="Source\SceneMun.h" />
+    <ClInclude Include="Source\SceneSoraJewel.h" />
     <ClInclude Include="Source\shader.hpp" />
     <ClInclude Include="Source\SP2.h" />
     <ClInclude Include="Source\Utility.h" />

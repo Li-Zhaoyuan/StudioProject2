@@ -165,7 +165,7 @@ void SP2::Init()
 	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1));
 	meshList[GEO_RIGHT]->textureID = LoadTGA("Image//NebulaRight.tga");
 	
-	
+	MunInit();
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//TimesNewRoman.tga");
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("lightball", Color(1, 1, 1), 18, 36);
@@ -178,7 +178,7 @@ void SP2::Init()
 
 void SP2::Update(double dt)
 {
-	camera.Update(dt,50);
+	camera.Update(dt,100);
 	fps = 1 / dt;
 
 	if (Application::IsKeyPressed('5'))
@@ -428,21 +428,21 @@ void SP2::Render()
 	renderMesh(meshList[GEO_LIGHTBALL], false);
 	modelStack.PopMatrix();
 
-	
+	MunRender();
 	modelStack.PushMatrix();
 	renderMesh(meshList[GEO_AXES], false);
 	modelStack.PopMatrix();
 
-	modelStack.PushMatrix();
+	/*modelStack.PushMatrix();
 	modelStack.Translate(0, 496.9, 0);
 	RenderSkybox();
-	modelStack.PopMatrix();
+	modelStack.PopMatrix();*/
 
-	modelStack.PushMatrix();
+	/*modelStack.PushMatrix();
 	modelStack.Translate(0.0f, 0.0f, -camera.Charradius);
 	modelStack.Rotate(camera.xrot, 1.0f, 0.f, 0.f);
 	renderMesh(meshList[GEO_CUBE], false);
-	modelStack.PopMatrix();
+	modelStack.PopMatrix();*/
 
 	
 
