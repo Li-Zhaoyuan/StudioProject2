@@ -47,7 +47,7 @@ class SP2 : public Scene
 		GEO_SORAJEWELBOTTOM,
 		GEO_SORAJEWELFRONT,
 		GEO_SORAJEWELBACK,
-		SEO_SORAJEWELGROUND,
+		GEO_SORAJEWEL,
 		GEO_ASTEROID,
 		GEO_GLOBE,
 		GEO_PROJECTOR,
@@ -141,7 +141,7 @@ private:
 	/*float rotateAngle;
 	float planet1RevAngle, planet1RotAngle, moon1RotAngle;*/
 
-	Camera3 camera;
+	Camera4 camera;
 
 	float boxX = 0;
 	float boxZ = 0;
