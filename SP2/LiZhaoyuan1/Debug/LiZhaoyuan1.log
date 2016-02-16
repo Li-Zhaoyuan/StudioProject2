@@ -1,13 +1,43 @@
+<<<<<<< HEAD
 ﻿Build started 16/2/2016 10:19:27 AM.
      1>Project "C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\\Common\Source /IC:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\\glfw\include /IC:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\\glew\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\Application.cpp Source\Camera.cpp Source\Camera2.cpp Source\Camera3.cpp source\Camera4.cpp Source\LoadOBJ.cpp Source\LoadTGA.cpp Source\main.cpp Source\Mesh.cpp Source\MeshBuilder.cpp Source\RenderGalaxy.cpp Source\RenderMun.cpp Source\RenderSoraJewel.cpp Source\shader.cpp Source\SP2.cpp Source\Utility.cpp
          Utility.cpp
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+﻿Build started 2/16/2016 10:38:48 AM.
+     1>Project "C:\Users\n1507\Desktop\TheeComPGProject\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\n1507\Desktop\TheeComPGProject\SP2\\Common\Source /IC:\Users\n1507\Desktop\TheeComPGProject\SP2\\glfw\include /IC:\Users\n1507\Desktop\TheeComPGProject\SP2\\glew\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\Application.cpp Source\SP2.cpp source\Camera4.cpp
+         Camera4.cpp
+     1>c:\users\n1507\desktop\theecompgproject\sp2\lizhaoyuan1\source\camera4.cpp(362): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\n1507\desktop\theecompgproject\sp2\lizhaoyuan1\source\camera4.cpp(363): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\n1507\desktop\theecompgproject\sp2\lizhaoyuan1\source\camera4.cpp(370): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\n1507\desktop\theecompgproject\sp2\lizhaoyuan1\source\camera4.cpp(371): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+         SP2.cpp
+     1>c:\users\n1507\desktop\theecompgproject\sp2\lizhaoyuan1\source\sp2.cpp(445): warning C4305: 'argument' : truncation from 'double' to 'float'
+         Generating Code...
+         Compiling...
+         Application.cpp
+=======
+﻿Build started 16/2/2016 12:09:55 AM.
+     1>Project "C:\Users\-\Desktop\SP2_2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+=======
+﻿Build started 16/2/2016 12:09:55 AM.
+     1>Project "C:\Users\-\Desktop\SP2_2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+>>>>>>> d8dc545a6e34fbaa27958d56efc1d72a55870b9a
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\-\Desktop\SP2_2\SP2\\Common\Source" /I"C:\Users\-\Desktop\SP2_2\SP2\\glfw\include" /I"C:\Users\-\Desktop\SP2_2\SP2\\glew\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\RenderMun.cpp Source\SP2.cpp
+>>>>>>> 7621b6302a0375ecdbf79ae30f8150b69b63d653
          SP2.cpp
      1>c:\users\mingj\onedrive\documents\studioproject2\sp2\lizhaoyuan1\source\sp2.cpp(437): warning C4305: 'argument' : truncation from 'double' to 'float'
          shader.cpp
          RenderSoraJewel.cpp
          RenderMun.cpp
+<<<<<<< HEAD
          RenderGalaxy.cpp
          MeshBuilder.cpp
          Mesh.cpp
@@ -19,6 +49,12 @@
          Camera2.cpp
          Camera.cpp
          Application.cpp
+=======
+<<<<<<< HEAD
+>>>>>>> d8dc545a6e34fbaa27958d56efc1d72a55870b9a
+=======
+>>>>>>> d8dc545a6e34fbaa27958d56efc1d72a55870b9a
+>>>>>>> 7621b6302a0375ecdbf79ae30f8150b69b63d653
          Generating Code...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\Debug\LiZhaoyuan1.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\\glew\lib /LIBPATH:C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\Debug /LIBPATH:"C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\\glfw\lib-msvc120" glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\Debug\LiZhaoyuan1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\Debug\LiZhaoyuan1.lib" /MACHINE:X86 Debug\Application.obj
@@ -44,4 +80,16 @@
 
 Build succeeded.
 
+<<<<<<< HEAD
 Time Elapsed 00:00:33.77
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+Time Elapsed 00:00:02.89
+=======
+Time Elapsed 00:00:02.14
+>>>>>>> d8dc545a6e34fbaa27958d56efc1d72a55870b9a
+=======
+Time Elapsed 00:00:02.14
+>>>>>>> d8dc545a6e34fbaa27958d56efc1d72a55870b9a
+>>>>>>> 7621b6302a0375ecdbf79ae30f8150b69b63d653
