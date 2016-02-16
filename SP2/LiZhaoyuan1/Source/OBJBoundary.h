@@ -8,7 +8,7 @@
 #include "Camera4.h"
 #include "MatrixStack.h"
 #include "RenderMun.h"
-class OBJBoundary : public Scene
+class OBJBoundary
 {
 
 public:

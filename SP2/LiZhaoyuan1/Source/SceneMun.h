@@ -144,6 +144,7 @@ private:
 	float planet1RevAngle, planet1RotAngle, moon1RotAngle;*/
 
 	Camera3 camera;
+	OBJBoundary obj;
 
 	float boxX = 0;
 	float boxZ = 0;
