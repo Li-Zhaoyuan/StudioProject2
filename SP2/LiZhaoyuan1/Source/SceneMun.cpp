@@ -184,7 +184,7 @@ void SceneMun::Init()
 	meshList[GEO_ALIEN]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ALIEN]->material.kShininess = 5.f;
 	meshList[GEO_CAVE] = MeshBuilder::GenerateOBJ("cave", "OBJ//Cave.obj");
-	meshList[GEO_CAVE]->textureID = LoadTGA("Image//Cave.tga");
+	meshList[GEO_CAVE]->textureID = LoadTGA("Image//StoneTile.tga");
 	meshList[GEO_CAVE]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_CAVE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_CAVE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
