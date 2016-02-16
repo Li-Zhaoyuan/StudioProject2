@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿Build started 2/16/2016 10:38:48 AM.
      1>Project "C:\Users\n1507\Desktop\TheeComPGProject\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
@@ -17,10 +18,18 @@
 ﻿Build started 16/2/2016 12:09:55 AM.
      1>Project "C:\Users\-\Desktop\SP2_2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
+=======
+﻿Build started 16/2/2016 12:09:55 AM.
+     1>Project "C:\Users\-\Desktop\SP2_2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+>>>>>>> d8dc545a6e34fbaa27958d56efc1d72a55870b9a
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\-\Desktop\SP2_2\SP2\\Common\Source" /I"C:\Users\-\Desktop\SP2_2\SP2\\glfw\include" /I"C:\Users\-\Desktop\SP2_2\SP2\\glew\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\RenderMun.cpp Source\SP2.cpp
          SP2.cpp
      1>c:\users\-\desktop\sp2_2\sp2\lizhaoyuan1\source\sp2.cpp(437): warning C4305: 'argument' : truncation from 'double' to 'float'
          RenderMun.cpp
+<<<<<<< HEAD
+>>>>>>> d8dc545a6e34fbaa27958d56efc1d72a55870b9a
+=======
 >>>>>>> d8dc545a6e34fbaa27958d56efc1d72a55870b9a
          Generating Code...
        Link:
@@ -46,7 +55,11 @@
 Build succeeded.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Time Elapsed 00:00:02.89
+=======
+Time Elapsed 00:00:02.14
+>>>>>>> d8dc545a6e34fbaa27958d56efc1d72a55870b9a
 =======
 Time Elapsed 00:00:02.14
 >>>>>>> d8dc545a6e34fbaa27958d56efc1d72a55870b9a
