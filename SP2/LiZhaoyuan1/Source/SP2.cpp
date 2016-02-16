@@ -447,7 +447,8 @@ void SP2::Render()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(camera.position.x , camera.position.y , camera.position.z-4);
+	modelStack.Translate(0.0f, 0.0f, -camera.Charradius);
+	modelStack.Rotate(camera.xrot, 1.0f, 0.f, 0.f);
 	renderMesh(meshList[GEO_CUBE], false);
 	modelStack.PopMatrix();
 
