@@ -96,7 +96,7 @@ void SceneSoraJewel::Init()
 
 	glUniform1i(m_parameters[U_NUMLIGHTS], 2);
 
-	light[0].type = Light::LIGHT_SPOT;
+	light[0].type = Light::LIGHT_POINT;
 	light[0].position.Set(-5, 2, -10);
 	light[0].color.Set(1, 1, 1);
 	light[0].power = 1;
@@ -142,30 +142,33 @@ void SceneSoraJewel::Init()
 
 
 	//Initialize camera settings
-	camera.Init(Vector3(0, 500, 1), Vector3(0, 500, 0), Vector3(0, 1, 0));
+	camera.Init(Vector3(0, 0, 1), Vector3(0, 0, 0), Vector3(0, 1, 0));
 
 
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
 
 	meshList[GEO_CUBE] = MeshBuilder::GenerateCube("reference", Color(0, 0, 0));
 
-	meshList[GEO_QUAD] = MeshBuilder::GenerateQuad("quad", Color(1, 1, 1));
-	meshList[GEO_QUAD]->textureID = LoadTGA("Image//Pikachu2.tga");
+	meshList[GEO_SORAJEWELFRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
+	meshList[GEO_SORAJEWELFRONT]->textureID = LoadTGA("Image//SoraJewelFront.tga");
+	meshList[GEO_SORAJEWELBACK] = MeshBuilder::GenerateQuad("back", Color(1, 1, 1));
+	meshList[GEO_SORAJEWELBACK]->textureID = LoadTGA("Image//SoraJewelBack.tga");
+	meshList[GEO_SORAJEWELTOP] = MeshBuilder::GenerateQuad("top", Color(1, 1, 1));
+	meshList[GEO_SORAJEWELTOP]->textureID = LoadTGA("Image//SoraJewelUp.tga");
+	meshList[GEO_SORAJEWELBOTTOM] = MeshBuilder::GenerateQuad("bottom", Color(1, 1, 1));
+	meshList[GEO_SORAJEWELBOTTOM]->textureID = LoadTGA("Image//SoraJewelDown.tga");
+	meshList[GEO_SORAJEWELLEFT] = MeshBuilder::GenerateQuad("left", Color(1, 1, 1));
+	meshList[GEO_SORAJEWELLEFT]->textureID = LoadTGA("Image//SoraJewelLeft.tga");
+	meshList[GEO_SORAJEWELRIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1));
+	meshList[GEO_SORAJEWELRIGHT]->textureID = LoadTGA("Image//SoraJewelRight.tga");
 
-	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
-	meshList[GEO_FRONT]->textureID = LoadTGA("Image//NebulaFront.tga");
-	meshList[GEO_BACK] = MeshBuilder::GenerateQuad("back", Color(1, 1, 1));
-	meshList[GEO_BACK]->textureID = LoadTGA("Image//NebulaLeft.tga");
-	meshList[GEO_TOP] = MeshBuilder::GenerateQuad("top", Color(1, 1, 1));
-	meshList[GEO_TOP]->textureID = LoadTGA("Image//NebulaTop.tga");
-	meshList[GEO_BOTTOM] = MeshBuilder::GenerateQuad("bottom", Color(1, 1, 1));
-	meshList[GEO_BOTTOM]->textureID = LoadTGA("Image//NebulaBottom_Kai.tga");
-	meshList[GEO_LEFT] = MeshBuilder::GenerateQuad("left", Color(1, 1, 1));
-	meshList[GEO_LEFT]->textureID = LoadTGA("Image//NebulaBack.tga");
-	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1));
-	meshList[GEO_RIGHT]->textureID = LoadTGA("Image//NebulaRight.tga");
+	meshList[GEO_SORAJEWEL] = MeshBuilder::GenerateOBJ("BASE", "OBJ//SoraJewelBase_Kai.obj");
+	meshList[GEO_SORAJEWEL]->textureID = LoadTGA("Image//SoraJewelBase_Texture.tga");
+	meshList[GEO_SORAJEWEL]->material.kSpecular.Set(0.6f, 0.6f, 0.6f);
+	meshList[GEO_SORAJEWEL]->material.kDiffuse.Set(0.3f, 0.3f, 0.3f);
+	meshList[GEO_SORAJEWEL]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_SORAJEWEL]->material.kShininess = 1.f;
 
-	
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//TimesNewRoman.tga");
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("lightball", Color(1, 1, 1), 18, 36);
@@ -178,7 +181,7 @@ void SceneSoraJewel::Init()
 
 void SceneSoraJewel::Update(double dt)
 {
-	camera.Update(dt, 100);
+	camera.Update(dt, 1000);
 	fps = 1 / dt;
 
 	if (Application::IsKeyPressed('5'))
@@ -226,8 +229,6 @@ void SceneSoraJewel::Update(double dt)
 	camPosX = camera.position.x;
 	camPosY = camera.position.y;
 	camPosz = camera.position.z;
-
-
 }
 void SceneSoraJewel::lighting()
 {
@@ -421,7 +422,6 @@ void SceneSoraJewel::Render()
 	//Set projection matrix to perspective mode
 	projection.SetToPerspective(45.0f, 4.0f / 3.0f, 0.1f, 10000.0f); //FOV, Aspect Ratio, Near plane, Far plane
 	lighting();
-	lighting2();
 	modelStack.PushMatrix();
 	modelStack.Translate(light[0].position.x, light[0].position.y, light[0].position.z);
 	modelStack.Scale(0.1f, 0.1f, 0.1f);
@@ -438,14 +438,14 @@ void SceneSoraJewel::Render()
 	RenderSkybox();
 	modelStack.PopMatrix();*/
 
-	/*modelStack.PushMatrix();
-	modelStack.Translate(0.0f, 0.0f, -camera.Charradius);
-	modelStack.Rotate(camera.xrot, 1.0f, 0.f, 0.f);
-	renderMesh(meshList[GEO_CUBE], false);
-	modelStack.PopMatrix();*/
+	modelStack.PushMatrix();
+	RenderSkybox();
+	modelStack.PopMatrix();
 
-
-
+	modelStack.PushMatrix();
+	modelStack.Scale(10, 10, 10);
+	renderMesh(meshList[GEO_SORAJEWEL], true);
+	modelStack.PopMatrix();
 
 	std::stringstream playerPos;
 	playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosz;
@@ -461,53 +461,52 @@ void SceneSoraJewel::Render()
 void SceneSoraJewel::RenderSkybox()
 {
 	modelStack.PushMatrix();
+	modelStack.Rotate(180, 0, 1, 0);
 	modelStack.Translate(0, 0, -498);
 	modelStack.Rotate(90, 1, 0, 0);
-	modelStack.Rotate(180, 0, 1, 0);
 	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_BACK], false);
+	renderMesh(meshList[GEO_SORAJEWELBACK], false);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(0, 498, 0);
-	modelStack.Rotate(-90, 0, 1, 0);
-	modelStack.Rotate(180, 1, 0, 0);
+	modelStack.Rotate(270, 0, 1, 0);
+	modelStack.Rotate(180, 0, 0, 1);
 	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_TOP], false);
+	renderMesh(meshList[GEO_SORAJEWELTOP], false);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(-498, 0, 0);
 	modelStack.Rotate(-90, 0, 0, 1);
 	modelStack.Rotate(90, 0, 1, 0);
-	modelStack.Rotate(180, 0, 1, 0);
 	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_LEFT], false);
+	renderMesh(meshList[GEO_SORAJEWELLEFT], false);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(498, 0, 0);
-	modelStack.Rotate(90, 0, 0, 1);
-	modelStack.Rotate(90, 0, 1, 0);
+	modelStack.Translate(0, 0, -498);
+	modelStack.Rotate(90, 1, 0, 0);
 	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_FRONT], false);
+	renderMesh(meshList[GEO_SORAJEWELFRONT], false);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(0, -498, 0);
 	modelStack.Rotate(-90, 0, 1, 0);
 	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_BOTTOM], false);
+	renderMesh(meshList[GEO_SORAJEWELBOTTOM], false);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
+	modelStack.Rotate(90, 0, 90, 0);
 	modelStack.Translate(0, 0, 498);
 	modelStack.Rotate(180, 0, 1, 0);
 	modelStack.Rotate(90, 1, 0, 0);
-	modelStack.Rotate(180, 0, 1, 0);
 	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_RIGHT], false);
+	renderMesh(meshList[GEO_SORAJEWELRIGHT], false);
 	modelStack.PopMatrix();
+
 }
 
 void SceneSoraJewel::Exit()
