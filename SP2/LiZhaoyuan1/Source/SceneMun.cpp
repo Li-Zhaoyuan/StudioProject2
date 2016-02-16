@@ -142,7 +142,7 @@ void SceneMun::Init()
 
 
 	//Initialize camera settings
-	camera.Init(Vector3(0, 500, 1), Vector3(0, 500, 0), Vector3(0, 1, 0));
+	camera.Init(Vector3(0, 0, 1), Vector3(0, 0, 0), Vector3(0, 1, 0));
 
 
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
@@ -152,18 +152,43 @@ void SceneMun::Init()
 	meshList[GEO_QUAD] = MeshBuilder::GenerateQuad("quad", Color(1, 1, 1));
 	meshList[GEO_QUAD]->textureID = LoadTGA("Image//Pikachu2.tga");
 
-	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
-	meshList[GEO_FRONT]->textureID = LoadTGA("Image//NebulaFront.tga");
-	meshList[GEO_BACK] = MeshBuilder::GenerateQuad("back", Color(1, 1, 1));
-	meshList[GEO_BACK]->textureID = LoadTGA("Image//NebulaLeft.tga");
-	meshList[GEO_TOP] = MeshBuilder::GenerateQuad("top", Color(1, 1, 1));
-	meshList[GEO_TOP]->textureID = LoadTGA("Image//NebulaTop.tga");
-	meshList[GEO_BOTTOM] = MeshBuilder::GenerateQuad("bottom", Color(1, 1, 1));
-	meshList[GEO_BOTTOM]->textureID = LoadTGA("Image//NebulaBottom_Kai.tga");
-	meshList[GEO_LEFT] = MeshBuilder::GenerateQuad("left", Color(1, 1, 1));
-	meshList[GEO_LEFT]->textureID = LoadTGA("Image//NebulaBack.tga");
-	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1));
-	meshList[GEO_RIGHT]->textureID = LoadTGA("Image//NebulaRight.tga");
+	meshList[GEO_MUNFRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
+	meshList[GEO_MUNFRONT]->textureID = LoadTGA("Image//MunFront.tga");
+	meshList[GEO_MUNBACK] = MeshBuilder::GenerateQuad("back", Color(1, 1, 1));
+	meshList[GEO_MUNBACK]->textureID = LoadTGA("Image//MunLeft.tga");
+	meshList[GEO_MUNTOP] = MeshBuilder::GenerateQuad("top", Color(1, 1, 1));
+	meshList[GEO_MUNTOP]->textureID = LoadTGA("Image//MunTop.tga");
+	meshList[GEO_MUNBOTTOM] = MeshBuilder::GenerateQuad("bottom", Color(1, 1, 1));
+	meshList[GEO_MUNBOTTOM]->textureID = LoadTGA("Image//MunBottom.tga");
+	meshList[GEO_MUNLEFT] = MeshBuilder::GenerateQuad("left", Color(1, 1, 1));
+	meshList[GEO_MUNLEFT]->textureID = LoadTGA("Image//MunBack.tga");
+	meshList[GEO_MUNRIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1));
+	meshList[GEO_MUNRIGHT]->textureID = LoadTGA("Image//MunRight.tga");
+	meshList[GEO_MUNGROUND] = MeshBuilder::GenerateQuad("ground", Color(0.2, 0.2, 0.2));
+	meshList[GEO_CRASHEDPLANE] = MeshBuilder::GenerateOBJ("crashedplane", "OBJ//XWingCrash.obj");
+	meshList[GEO_CRASHEDPLANE]->textureID = LoadTGA("Image//XWingCrash_Texture.tga");
+	meshList[GEO_CRASHEDPLANE]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_CRASHEDPLANE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_CRASHEDPLANE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_CRASHEDPLANE]->material.kShininess = 5.f;
+	meshList[GEO_HOUSE] = MeshBuilder::GenerateOBJ("house", "OBJ//house.obj");
+	meshList[GEO_HOUSE]->textureID = LoadTGA("Image//house.tga");
+	meshList[GEO_HOUSE]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_HOUSE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_HOUSE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_HOUSE]->material.kShininess = 5.f;
+	meshList[GEO_MALE] = MeshBuilder::GenerateOBJ("Guy", "OBJ//CharacterModel.obj");
+	meshList[GEO_MALE]->textureID = LoadTGA("Image//HumanCharacter.tga");
+	meshList[GEO_MALE]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_MALE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_MALE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_MALE]->material.kShininess = 5.f;
+	meshList[GEO_CAVE] = MeshBuilder::GenerateOBJ("Guy", "OBJ//Cave.obj");
+	meshList[GEO_CAVE]->textureID = LoadTGA("Image//Cave.tga");
+	meshList[GEO_CAVE]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_CAVE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_CAVE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_CAVE]->material.kShininess = 5.f;
 
 	
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
@@ -433,11 +458,42 @@ void SceneMun::Render()
 	renderMesh(meshList[GEO_AXES], false);
 	modelStack.PopMatrix();
 
-	/*modelStack.PushMatrix();
-	modelStack.Translate(0, 496.9, 0);
+	modelStack.PushMatrix();
+	//modelStack.Translate(0, 496.9, 0);
+	modelStack.Rotate(180, 1, 0, 0);
 	RenderSkybox();
-	modelStack.PopMatrix();*/
+	modelStack.PopMatrix();
+	
 
+	modelStack.PushMatrix();
+	modelStack.Translate(0, -5, 0);
+	modelStack.Scale(100, 100, 100);
+	renderMesh(meshList[GEO_MUNGROUND], false);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-36, 4.9, -34);
+	modelStack.Scale(2.2, 2.2, 2.2);
+	renderMesh(meshList[GEO_CRASHEDPLANE], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(15, -5, 20);
+	renderMesh(meshList[GEO_HOUSE], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(34, -4, 3);
+	modelStack.Rotate(90, 0, 1, 0);
+	renderMesh(meshList[GEO_MALE], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-35, -5, 35);
+	modelStack.Scale(5, 5, 5);
+	//modelStack.Rotate(90, 0, 1, 0);
+	renderMesh(meshList[GEO_CAVE], true);
+	modelStack.PopMatrix();
 	/*modelStack.PushMatrix();
 	modelStack.Translate(0.0f, 0.0f, -camera.Charradius);
 	modelStack.Rotate(camera.xrot, 1.0f, 0.f, 0.f);
@@ -465,7 +521,7 @@ void SceneMun::RenderSkybox()
 	modelStack.Rotate(90, 1, 0, 0);
 	modelStack.Rotate(180, 0, 1, 0);
 	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_BACK], false);
+	renderMesh(meshList[GEO_MUNBACK], false);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
@@ -473,7 +529,7 @@ void SceneMun::RenderSkybox()
 	modelStack.Rotate(-90, 0, 1, 0);
 	modelStack.Rotate(180, 1, 0, 0);
 	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_TOP], false);
+	renderMesh(meshList[GEO_MUNTOP], false);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
@@ -482,7 +538,7 @@ void SceneMun::RenderSkybox()
 	modelStack.Rotate(90, 0, 1, 0);
 	modelStack.Rotate(180, 0, 1, 0);
 	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_LEFT], false);
+	renderMesh(meshList[GEO_MUNLEFT], false);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
@@ -490,14 +546,13 @@ void SceneMun::RenderSkybox()
 	modelStack.Rotate(90, 0, 0, 1);
 	modelStack.Rotate(90, 0, 1, 0);
 	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_FRONT], false);
+	renderMesh(meshList[GEO_MUNFRONT], false);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(0, -498, 0);
-	modelStack.Rotate(-90, 0, 1, 0);
 	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_BOTTOM], false);
+	renderMesh(meshList[GEO_MUNBOTTOM], false);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
@@ -506,7 +561,7 @@ void SceneMun::RenderSkybox()
 	modelStack.Rotate(90, 1, 0, 0);
 	modelStack.Rotate(180, 0, 1, 0);
 	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_RIGHT], false);
+	renderMesh(meshList[GEO_MUNRIGHT], false);
 	modelStack.PopMatrix();
 }
 
