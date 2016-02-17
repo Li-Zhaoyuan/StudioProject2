@@ -14,8 +14,7 @@
 #include "Utility.h"
 
 #include "LoadTGA.h"
-//#include "RenderMun.h"
-//#include "LoadOBJ.h"
+
 SceneSoraJewel::SceneSoraJewel()
 {
 }
@@ -24,7 +23,6 @@ SceneSoraJewel::~SceneSoraJewel()
 }
 void SceneSoraJewel::Init()
 {
-
 	//// Init VBO here
 
 	//// Set background color to dark blue
@@ -142,12 +140,10 @@ void SceneSoraJewel::Init()
 
 	
 	//Initialize camera settings
-	camera.Init(Vector3(0, 0, 1), Vector3(0, 0, 0), Vector3(0, 1, 0));
+	camera.Init(Vector3(0, 7, 1), Vector3(0, 7, 0), Vector3(0, 1, 0));
 
 
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
-
-	meshList[GEO_CUBE] = MeshBuilder::GenerateCube("reference", Color(0, 0, 0));
 
 	meshList[GEO_SORAJEWELFRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
 	meshList[GEO_SORAJEWELFRONT]->textureID = LoadTGA("Image//SoraJewelFront.tga");
@@ -175,6 +171,34 @@ void SceneSoraJewel::Init()
 	meshList[GEO_XWING]->material.kDiffuse.Set(0.3f, 0.3f, 0.3f);
 	meshList[GEO_XWING]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
 	meshList[GEO_XWING]->material.kShininess = 1.f;
+
+	meshList[GEO_GLASS] = MeshBuilder::GenerateOBJ("Glass", "OBJ//glass.obj");
+	meshList[GEO_GLASS]->textureID = LoadTGA("Image//Glass.tga");
+	meshList[GEO_GLASS]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_GLASS]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_GLASS]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_GLASS]->material.kShininess = 1.f;
+
+	meshList[GEO_GLOBE] = MeshBuilder::GenerateOBJ("Glass", "OBJ//earth.obj");
+	meshList[GEO_GLOBE]->textureID = LoadTGA("Image//hologram_earth.tga");
+	meshList[GEO_GLOBE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_GLOBE]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_GLOBE]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_GLOBE]->material.kShininess = 1.f;
+
+	meshList[GEO_SOFA] = MeshBuilder::GenerateOBJ("Sofa", "OBJ//sofa_kaii.obj");
+	meshList[GEO_SOFA]->textureID = LoadTGA("Image//Sofa_Texture.tga");
+	meshList[GEO_SOFA]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_SOFA]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_SOFA]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_SOFA]->material.kShininess = 1.f;
+
+	meshList[GEO_PROJECTOR] = MeshBuilder::GenerateOBJ("Sofa", "OBJ//earth_stand.obj");
+	meshList[GEO_PROJECTOR]->textureID = LoadTGA("Image//hologram_base.tga");
+	meshList[GEO_PROJECTOR]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_PROJECTOR]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_PROJECTOR]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_PROJECTOR]->material.kShininess = 1.f;
 
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//TimesNewRoman.tga");
@@ -293,10 +317,6 @@ void SceneSoraJewel::renderMesh(Mesh *mesh, bool enableLight)
 	glUniformMatrix4fv(m_parameters[U_MVP], 1, GL_FALSE, &MVP.a[0]);
 	modelView = viewStack.Top() * modelStack.Top();
 	glUniformMatrix4fv(m_parameters[U_MODELVIEW], 1, GL_FALSE, &modelView.a[0]);
-	/*if (enableLight)
-	{
-	this->enableLight = enableLight;
-	}*/
 	if (enableLight)
 	{
 		glUniform1i(m_parameters[U_LIGHTENABLED], 1);
@@ -401,7 +421,6 @@ void SceneSoraJewel::RenderTextOnScreen(Mesh* mesh, std::string text, Color colo
 
 }
 
-
 void SceneSoraJewel::Render()
 {
 	// Render VBO here
@@ -445,11 +464,6 @@ void SceneSoraJewel::Render()
 	renderMesh(meshList[GEO_AXES], false);
 	modelStack.PopMatrix();
 
-	/*modelStack.PushMatrix();
-	modelStack.Translate(0, 496.9, 0);
-	RenderSkybox();
-	modelStack.PopMatrix();*/
-
 	modelStack.PushMatrix();
 	RenderSkybox();
 	modelStack.PopMatrix();
@@ -464,6 +478,36 @@ void SceneSoraJewel::Render()
 	modelStack.Rotate(90, 0, 1, 0);
 	modelStack.Scale(2.2f, 2.2f, 2.2f);
 	renderMesh(meshList[GEO_XWING], false);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-120, 3, -83);
+	modelStack.Rotate(90, 0, 1, 0);
+	modelStack.Scale(25, 15, 25);
+	renderMesh(meshList[GEO_SOFA], false);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(25, 0, -53);
+	modelStack.Scale(30, 30, 30);
+	renderMesh(meshList[GEO_PROJECTOR], false);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	glBlendFunc(1.9, 1);
+	modelStack.Translate(25, 45, -53);
+	modelStack.Scale(30, 30, 30);
+	renderMesh(meshList[GEO_GLOBE], false);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	glBlendFunc(1.9, 1);
+	modelStack.Translate(64, 0, 68);
+	modelStack.Scale(20, 20, 20);
+	modelStack.Rotate(90, 0, 1, 0);
+	renderMesh(meshList[GEO_GLASS], false);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	modelStack.PopMatrix();
 
 	std::stringstream playerPos;
