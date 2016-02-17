@@ -146,6 +146,7 @@
     <Image Include="Image\doorman.tga" />
     <Image Include="Image\front.tga" />
     <Image Include="Image\left.tga" />
+    <Image Include="Image\Munmap.tga" />
     <Image Include="Image\Pikachu2.tga" />
     <Image Include="Image\right.tga" />
     <Image Include="Image\shoe.tga" />

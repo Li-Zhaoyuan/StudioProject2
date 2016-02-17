@@ -391,7 +391,7 @@ bool Camera3::OBJboundaryX(Vector3 Testvalue)
 	}
 	if (SceneMun == true)
 	{
-		if (boundaryCheckerX(-30, 30, -30, 30, Testvalue) == false){ return false; }
+		if (boundaryCheckerX(2, 50, -47, -26, Testvalue) == false){ return false; }
 	}
 	return true;
 }
@@ -404,7 +404,8 @@ bool Camera3::OBJboundaryZ(Vector3 Testvalue)
 	}
 	if (SceneMun == true)
 	{
-		if (boundaryCheckerZ(-30, 30, -30, 30, Testvalue) == false){ return false; }
+		if (boundaryCheckerZ(2, 50, -50, -26, Testvalue) == false){ return false; }
+		if (boundaryCheckerZ(-39, -32, -38, -28, Testvalue) == false){ return false; }
 	}
 	return true;
 }
@@ -437,14 +438,22 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 		{
 			if (XZ == 1)
 			{
-				if (boundaryCheckerX(-30, 30, -30, 30, Testvalue) == false)
+				if (boundaryCheckerX(2, 50, -50, -26, Testvalue) == false)
+				{
+					return false;
+				}
+				if (boundaryCheckerX(-39, -32, -38, -28, Testvalue) == false)
 				{
 					return false;
 				}
 			}
 			else if (XZ == 2)
 			{
-				if (boundaryCheckerZ(-30, 30, -30, 30, Testvalue) == false)
+				if (boundaryCheckerZ(2, 50, -50, -26, Testvalue) == false)
+				{
+					return false;
+				}
+				if (boundaryCheckerX(-39, -32, -38, -28, Testvalue) == false)
 				{
 					return false;
 				}

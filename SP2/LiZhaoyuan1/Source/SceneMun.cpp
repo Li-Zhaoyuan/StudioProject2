@@ -208,11 +208,14 @@ void SceneMun::Init()
 	meshList[GEO_ORE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ORE]->material.kShininess = 5.f;
 	
+	meshList[GEO_MINIMAP] = MeshBuilder::GenerateQuad("Minimap", Color(1.f, 1.f, 1.f));
+	meshList[GEO_MINIMAP]->textureID = LoadTGA("Image//Munmap.tga");
+	
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//TimesNewRoman.tga");
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("lightball", Color(1, 1, 1), 18, 36);
 
-
+	meshList[GEO_MAINICON] = MeshBuilder::GenerateCube("mainicon for map", Color(1, 0, 0));
 
 	Mtx44 projection;
 	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 10000.f);
@@ -448,6 +451,60 @@ void SceneMun::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, flo
 
 }
 
+void SceneMun::Renderpicturetoscreen()
+{
+	Mtx44 ortho;
+	glDisable(GL_DEPTH_TEST);
+	ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+	projectionStack.PushMatrix();
+	projectionStack.LoadMatrix(ortho);
+	viewStack.PushMatrix();
+	viewStack.LoadIdentity(); //No need camera for ortho mode
+	modelStack.PushMatrix();
+	modelStack.LoadIdentity(); //Reset modelStack
+	modelStack.Translate(60, 10, -2);
+	modelStack.Scale(10, 10, 10);
+	modelStack.Rotate(90, 1, 0, 0);
+	renderMesh(meshList[GEO_MINIMAP], false);
+	projectionStack.PopMatrix();
+	viewStack.PopMatrix();
+	modelStack.PopMatrix();
+	glEnable(GL_DEPTH_TEST);
+
+	glDisable(GL_DEPTH_TEST);
+	ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+	projectionStack.PushMatrix();
+	projectionStack.LoadMatrix(ortho);
+	viewStack.PushMatrix();
+	viewStack.LoadIdentity(); //No need camera for ortho mode
+	modelStack.PushMatrix();
+	modelStack.LoadIdentity(); //Reset modelStack
+	modelStack.Translate(60, 10, -1);
+	modelStack.Scale(0.5, 0.5, 0.5);
+	modelStack.Rotate(90, 1, 0, 0);
+	renderMesh(meshList[GEO_MAINICON], false);
+	projectionStack.PopMatrix();
+	viewStack.PopMatrix();
+	modelStack.PopMatrix();
+	glEnable(GL_DEPTH_TEST);
+
+	glDisable(GL_DEPTH_TEST);
+	ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+	projectionStack.PushMatrix();
+	projectionStack.LoadMatrix(ortho);
+	viewStack.PushMatrix();
+	viewStack.LoadIdentity(); //No need camera for ortho mode
+	modelStack.PushMatrix();
+	modelStack.LoadIdentity(); //Reset modelStack
+	modelStack.Translate(65, 5, -1);
+	modelStack.Scale(0.5, 0.5, 0.5);
+	modelStack.Rotate(90, 1, 0, 0);
+	renderMesh(meshList[GEO_MAINICON], false);
+	projectionStack.PopMatrix();
+	viewStack.PopMatrix();
+	modelStack.PopMatrix();
+	glEnable(GL_DEPTH_TEST);
+}
 
 void SceneMun::Render()
 {
@@ -487,7 +544,7 @@ void SceneMun::Render()
 	renderMesh(meshList[GEO_LIGHTBALL], false);
 	modelStack.PopMatrix();
 
-	
+
 	modelStack.PushMatrix();
 	renderMesh(meshList[GEO_AXES], false);
 	modelStack.PopMatrix();
@@ -567,14 +624,21 @@ void SceneMun::Render()
 	renderMesh(meshList[GEO_ORE], true);
 	modelStack.PopMatrix();
 
+	modelStack.PushMatrix();
+	modelStack.Translate(0, 0, 0);
+	modelStack.Scale(2, 2, 2);
+	modelStack.Rotate(90, 1, 0, 0);
+	renderMesh(meshList[GEO_MINIMAP],false);
+	modelStack.PopMatrix();
+
+	Renderpicturetoscreen();
+
 	std::stringstream playerPos;
 	playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosz;
 	//RenderTextOnScreen(meshList[GEO_TEXT], playerPos.str(), Color(1, 0, 0), 2, 0, 18);
 	std::stringstream ss;
 	ss << "FPS:" << fps << "         " << playerPos.str();
 	RenderTextOnScreen(meshList[GEO_TEXT], ss.str(), Color(0, 1, 0), 3, 0, 19);
-
-
 
 }
 

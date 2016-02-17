@@ -57,6 +57,8 @@ class SceneMun : public Scene
 		GEO_PICKAXE,
 		GEO_CRASHEDPLANE,
 		GEO_MUN,
+		GEO_MINIMAP,
+		GEO_MAINICON,
 		GEO_FEMALEA,
 		GEO_FEMALEB,
 		GEO_ALIEN,
@@ -131,7 +133,7 @@ private:
 	void interactionWithSnowBalls();
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
-
+	void Renderpicturetoscreen();
 	unsigned m_vertexArrayID;
 	Mesh *meshList[NUM_GEOMETRY];
 
