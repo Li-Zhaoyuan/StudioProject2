@@ -387,11 +387,15 @@ bool Camera3::OBJboundaryX(Vector3 Testvalue)
 {
 	if (SceneGalaxy == true)
 	{
-		if (boundaryCheckerX(-20, 20, -20, 20, Testvalue) == false){ return false; }
+		if (AllGalaxyBoundaryX(Testvalue)){ return false; }
 	}
 	if (SceneMun == true)
 	{
-		if (boundaryCheckerX(2, 50, -47, -26, Testvalue) == false){ return false; }
+		if (AllMunBoundaryX(Testvalue)){ return false; }
+	}
+	if (SceneSoraJewel == true)
+	{
+		if (AllSoraJewelBoundaryX(Testvalue)){ return false; }
 	}
 	return true;
 }
@@ -400,12 +404,15 @@ bool Camera3::OBJboundaryZ(Vector3 Testvalue)
 {
 	if (SceneGalaxy == true)
 	{
-		if (boundaryCheckerZ(-20, 20, -20, 20, Testvalue) == false){ return false; }
+		if (AllGalaxyBoundaryZ(Testvalue)){ return false; }
 	}
 	if (SceneMun == true)
 	{
-		if (boundaryCheckerZ(2, 50, -50, -26, Testvalue) == false){ return false; }
-		if (boundaryCheckerZ(-39, -32, -38, -28, Testvalue) == false){ return false; }
+		if (AllGalaxyBoundaryZ(Testvalue)){ return false; }
+	}
+	if (SceneSoraJewel == true)
+	{
+		if (AllSoraJewelBoundaryZ(Testvalue)){ return false; }
 	}
 	return true;
 }
@@ -418,14 +425,14 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 		{
 			if (XZ == 1)
 			{
-				if (boundaryCheckerX(-20, 20, -20, 20, Testvalue) == false)
+				if (AllGalaxyBoundaryX(Testvalue))
 				{
 					return false;
 				}
 			}
 			else if (XZ == 2)
 			{
-				if (boundaryCheckerZ(-20, 20, -20, 20, Testvalue) == false)
+				if (AllGalaxyBoundaryZ(Testvalue))
 				{
 					return false;
 				}
@@ -434,26 +441,38 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 	}
 	if (SceneMun == true)
 	{
-		if (Testvalue.y >= 20)
+		if (Testvalue.y >= 0)
 		{
 			if (XZ == 1)
 			{
-				if (boundaryCheckerX(2, 50, -50, -26, Testvalue) == false)
-				{
-					return false;
-				}
-				if (boundaryCheckerX(-39, -32, -38, -28, Testvalue) == false)
+				if (AllMunBoundaryX(Testvalue))
 				{
 					return false;
 				}
 			}
 			else if (XZ == 2)
 			{
-				if (boundaryCheckerZ(2, 50, -50, -26, Testvalue) == false)
+				if (AllMunBoundaryZ(Testvalue))
 				{
 					return false;
 				}
-				if (boundaryCheckerX(-39, -32, -38, -28, Testvalue) == false)
+			}
+		}
+	}
+	if (SceneMun == true)
+	{
+		if (Testvalue.y >= 0)
+		{
+			if (XZ == 1)
+			{
+				if (AllSoraJewelBoundaryX(Testvalue))
+				{
+					return false;
+				}
+			}
+			else if (XZ == 2)
+			{
+				if (AllSoraJewelBoundaryZ(Testvalue))
 				{
 					return false;
 				}
@@ -461,4 +480,46 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 		}
 	}
 	return true;
+}
+
+bool Camera3::AllGalaxyBoundaryX(Vector3 Testvalue)
+{
+	if (!boundaryCheckerX(-20, 20, -20, 20, Testvalue))
+		return false;
+	return true;
+}
+
+bool Camera3::AllGalaxyBoundaryZ(Vector3 Testvalue)
+{
+	if (!boundaryCheckerX(-20, 20, -20, 20, Testvalue))
+		return false;
+	return true;
+}
+
+bool Camera3::AllMunBoundaryX(Vector3 Testvalue)
+{
+	if (!boundaryCheckerX(2, 50, -50, -26, Testvalue))
+		return false;
+	if (!boundaryCheckerX(-39, -32, -38, -28, Testvalue))
+		return false;
+	return true;
+}
+
+bool Camera3::AllMunBoundaryZ(Vector3 Testvalue)
+{
+	if (!boundaryCheckerZ(2, 50, -50, -26, Testvalue))
+		return false;
+	if (!boundaryCheckerZ(-39, -32, -38, -28, Testvalue))
+		return false;
+	return true;
+}
+
+bool Camera3::AllSoraJewelBoundaryX(Vector3 Testvalue)
+{
+
+}
+
+bool Camera3::AllSoraJewelBoundaryZ(Vector3 Testvalue)
+{
+
 }
