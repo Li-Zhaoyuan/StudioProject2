@@ -279,6 +279,26 @@ void SceneMun::Update(double dt)
 	camPosz = camera.position.z;
 	
 
+	if (camera.position.x < worriedladyCoord.x)
+	{
+		worriedladytempx = worriedladyCoord.x - camera.position.x;
+		worriedladytempz = worriedladyCoord.z - camera.position.z;
+		rotateworriedlady = atan(worriedladytempz / worriedladytempx)*(180 / Math::PI);
+	}
+	
+	if ( camera.position.x > minerandplusCoord.x)
+	{
+		minerandplusx = minerandplusCoord.x - camera.position.x;
+		minerandplusz = camera.position.z - minerandplusCoord.z;
+		rotateminer = atan(minerandplusz / minerandplusx)*(180 / Math::PI);
+	}
+	
+	if (camera.position.z < questdudeCoord.z)
+	{
+		questdudex = questdudeCoord.x - camera.position.x;
+		questdudez = questdudeCoord.z - camera.position.z;
+		rotatequestdude = atan(questdudex / questdudez)*(180 / Math::PI);
+	}
 
 }
 void SceneMun::lighting()
@@ -571,12 +591,14 @@ void SceneMun::Render()
 
 	modelStack.PushMatrix();
 	modelStack.Translate(worriedladyCoord.x, worriedladyCoord.y, worriedladyCoord.z);
+	modelStack.Rotate(-rotateworriedlady, 0, 1, 0);
 	modelStack.Rotate(180, 0, 1, 0);
 	renderMesh(meshList[GEO_FEMALEA], true);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(questdudeCoord.x, questdudeCoord.y, questdudeCoord.z);
+	modelStack.Rotate(rotatequestdude, 0, 1, 0);
 	modelStack.Rotate(90, 0, 1, 0);
 	renderMesh(meshList[GEO_ALIEN], true);
 	modelStack.PopMatrix();
@@ -590,6 +612,7 @@ void SceneMun::Render()
 	
 	modelStack.PushMatrix();
 	modelStack.Translate(minerandplusCoord.x, minerandplusCoord.y, minerandplusCoord.z);
+	modelStack.Rotate(rotateminer, 0, 1, 0);
 	modelStack.PushMatrix();
 	modelStack.Translate(0, -5.5, 0);
 	renderMesh(meshList[GEO_ALIEN], true);

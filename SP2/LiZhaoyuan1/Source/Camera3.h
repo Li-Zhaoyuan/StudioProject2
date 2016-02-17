@@ -33,6 +33,12 @@ public:
 	bool OBJboundaryX(Vector3 Testvalue);
 	bool OBJboundaryZ(Vector3 Testvalue);
 	bool OBJboundaryY(Vector3 Testvalue, int XZ);
+	bool AllGalaxyBoundaryX(Vector3 Testvalue);
+	bool AllGalaxyBoundaryZ(Vector3 Testvalue);
+	bool AllMunBoundaryX(Vector3 Testvalue);
+	bool AllMunBoundaryZ(Vector3 Testvalue);
+	bool AllSoraJewelBoundaryX(Vector3 Testvalue);
+	bool AllSoraJewelBoundaryZ(Vector3 Testvalue);
 
 	float rotateChar;
 	float translateChar;
