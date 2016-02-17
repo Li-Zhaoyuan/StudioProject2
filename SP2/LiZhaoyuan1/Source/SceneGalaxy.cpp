@@ -185,6 +185,9 @@ void SceneGalaxy::Init()
 	camera.SceneSoraJewel = false;
 }
 
+static float rotateXWing = 0.f;
+bool rotateXWing_Limit;
+
 void SceneGalaxy::Update(double dt)
 {
 	camera.Update(dt, 100);
@@ -231,6 +234,30 @@ void SceneGalaxy::Update(double dt)
 		enableLight = true;
 	if (Application::IsKeyPressed('Z'))
 		enableLight = false;
+	
+	if (rotateXWing_Limit)
+	{
+		if (Application::IsKeyPressed('D'))
+		{
+			rotateXWing += 5.f;
+		}
+		else if (Application::IsKeyPressed('A'))
+		{
+			rotateXWing -= 5.f;
+		}
+	}
+	else
+	{
+		if (Application::IsKeyPressed('A'))
+		{
+			rotateXWing -= 5.f;
+		}
+		else if (Application::IsKeyPressed('D'))
+		{
+			rotateXWing += 5.f;
+		}
+	}
+
 
 	camPosX = camera.position.x;
 	camPosY = camera.position.y;
@@ -476,6 +503,7 @@ void SceneGalaxy::RenderXwing()
 {
 	modelStack.PushMatrix();
 	modelStack.Translate(0, 400, 300);
+	modelStack.Rotate(rotateXWing, 0, 0, 1);
 	modelStack.Scale(2.2, 2.2, 2.2);
 	renderMesh(meshList[GEO_XWING], false);
 	modelStack.PopMatrix();
