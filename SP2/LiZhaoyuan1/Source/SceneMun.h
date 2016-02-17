@@ -57,6 +57,8 @@ class SceneMun : public Scene
 		GEO_PICKAXE,
 		GEO_CRASHEDPLANE,
 		GEO_MUN,
+		GEO_MINIMAP,
+		GEO_MAINICON,
 		GEO_FEMALEA,
 		GEO_FEMALEB,
 		GEO_ALIEN,
@@ -131,7 +133,7 @@ private:
 	void interactionWithSnowBalls();
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
-
+	void Renderpicturetoscreen();
 	unsigned m_vertexArrayID;
 	Mesh *meshList[NUM_GEOMETRY];
 
@@ -158,6 +160,18 @@ private:
 	Vector3 caveCoord = Vector3(-35, -5, 35);
 	Vector3 oreCoord = Vector3(-42, -2.75, 35);
 	
+	float worriedladytempx = 0;
+	float worriedladytempz = 0;
+
+	float minerandplusx = 0;
+	float minerandplusz = 0;
+
+	float questdudex = 0;
+	float questdudez = 0;
+
+	float rotateworriedlady = 0;
+	float rotateminer = 0;
+	float rotatequestdude = 0;
 
 	MS modelStack, viewStack, projectionStack;
 };
