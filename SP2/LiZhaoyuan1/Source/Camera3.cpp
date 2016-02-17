@@ -516,10 +516,18 @@ bool Camera3::AllMunBoundaryZ(Vector3 Testvalue)
 
 bool Camera3::AllSoraJewelBoundaryX(Vector3 Testvalue)
 {
-
+	/*if (!boundaryCheckerX(2, 50, -50, -26, Testvalue))
+		return false;
+	if (!boundaryCheckerX(-39, -32, -38, -28, Testvalue))
+		return false;*/
+	return false;
 }
 
 bool Camera3::AllSoraJewelBoundaryZ(Vector3 Testvalue)
 {
-
+	//if(!boundaryCheckerZ(2, 50, -50, -26, Testvalue))
+	//	return false;
+	//if (!boundaryCheckerZ(-39, -32, -38, -28, Testvalue))
+	//	return false;
+	return false;
 }
