@@ -158,6 +158,18 @@ private:
 	Vector3 caveCoord = Vector3(-35, -5, 35);
 	Vector3 oreCoord = Vector3(-42, -2.75, 35);
 	
+	float worriedladytempx = 0;
+	float worriedladytempz = 0;
+
+	float minerandplusx = 0;
+	float minerandplusz = 0;
+
+	float questdudex = 0;
+	float questdudez = 0;
+
+	float rotateworriedlady = 0;
+	float rotateminer = 0;
+	float rotatequestdude = 0;
 
 	MS modelStack, viewStack, projectionStack;
 };
