@@ -179,7 +179,7 @@ void SceneSoraJewel::Init()
 	meshList[GEO_GLASS]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
 	meshList[GEO_GLASS]->material.kShininess = 1.f;
 
-	meshList[GEO_GLOBE] = MeshBuilder::GenerateOBJ("Glass", "OBJ//earth.obj");
+	meshList[GEO_GLOBE] = MeshBuilder::GenerateOBJ("Globe", "OBJ//earth.obj");
 	meshList[GEO_GLOBE]->textureID = LoadTGA("Image//hologram_earth.tga");
 	meshList[GEO_GLOBE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_GLOBE]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
@@ -193,7 +193,7 @@ void SceneSoraJewel::Init()
 	meshList[GEO_SOFA]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
 	meshList[GEO_SOFA]->material.kShininess = 1.f;
 
-	meshList[GEO_PROJECTOR] = MeshBuilder::GenerateOBJ("Sofa", "OBJ//earth_stand.obj");
+	meshList[GEO_PROJECTOR] = MeshBuilder::GenerateOBJ("projector", "OBJ//earth_base.obj");
 	meshList[GEO_PROJECTOR]->textureID = LoadTGA("Image//hologram_base.tga");
 	meshList[GEO_PROJECTOR]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_PROJECTOR]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
