@@ -200,13 +200,6 @@ void SceneSoraJewel::Init()
 	meshList[GEO_PROJECTOR]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
 	meshList[GEO_PROJECTOR]->material.kShininess = 1.f;
 
-	meshList[GEO_QUESTLADY] = MeshBuilder::GenerateOBJ("projector", "OBJ//CharacterModel.obj");
-	meshList[GEO_QUESTLADY]->textureID = LoadTGA("Image//FemaleCharacter.tga");
-	meshList[GEO_QUESTLADY]->material.kSpecular.Set(0.1f, 0.1f, 0.1f);
-	meshList[GEO_QUESTLADY]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
-	meshList[GEO_QUESTLADY]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
-	meshList[GEO_QUESTLADY]->material.kShininess = 1.f;
-
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//TimesNewRoman.tga");
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("lightball", Color(1, 1, 1), 18, 36);
@@ -501,13 +494,6 @@ void SceneSoraJewel::Render()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(0.8f, 1, -55);
-	modelStack.Rotate(180, 0, 1, 0);
-	modelStack.Scale(2, 2, 2);
-	renderMesh(meshList[GEO_QUESTLADY], false);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
 	glBlendFunc(1.9, 1);
 	modelStack.Translate(25, 45, -53);
 	modelStack.Scale(30, 30, 30);
@@ -530,6 +516,9 @@ void SceneSoraJewel::Render()
 	std::stringstream ss;
 	ss << "FPS:" << fps << "         " << playerPos.str();
 	RenderTextOnScreen(meshList[GEO_TEXT], ss.str(), Color(0, 1, 0), 3, 0, 19);
+
+
+
 }
 
 void SceneSoraJewel::RenderSkybox()

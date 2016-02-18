@@ -234,7 +234,7 @@ void SceneGalaxy::Update(double dt)
 		enableLight = true;
 	if (Application::IsKeyPressed('Z'))
 		enableLight = false;
-	
+
 	if (rotateXWing_Limit)
 	{
 		if (Application::IsKeyPressed('D'))
@@ -257,7 +257,6 @@ void SceneGalaxy::Update(double dt)
 			rotateXWing += 5.f;
 		}
 	}
-
 
 	camPosX = camera.position.x;
 	camPosY = camera.position.y;
