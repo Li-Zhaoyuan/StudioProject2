@@ -257,7 +257,7 @@ void Camera3::Update(double dt, float bounds)
 		Vector3 view = (target - position).Normalized();
 
 		Vector3 Testvalue;
-		Testvalue = (position + view * dt * CAMERA_SPEED);
+		Testvalue = (position - view * dt * CAMERA_SPEED);
 
 		if (position.x - (view.x * (float)(CAMERA_SPEED * dt)) > -bounds
 			&& position.x - (view.x * (float)(CAMERA_SPEED * dt)) < bounds
@@ -451,7 +451,7 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 	}
 	if (SceneMun == true)
 	{
-		if (Testvalue.y >= 0)
+		if (Testvalue.y <= 100)
 		{
 			if (XZ == 1)
 			{
@@ -471,7 +471,7 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 	}
 	if (SceneSoraJewel == true)
 	{
-		if (Testvalue.y >= 0)
+		if (Testvalue.y <= 100)
 		{
 			if (XZ == 1)
 			{
@@ -522,18 +522,18 @@ bool Camera3::AllMunBoundaryZ(Vector3 Testvalue)
 
 bool Camera3::AllSoraJewelBoundaryX(Vector3 Testvalue)
 {
-	/*if (!boundaryCheckerX(2, 50, -50, -26, Testvalue))
-		return false;
-	if (!boundaryCheckerX(-39, -32, -38, -28, Testvalue))
+	if (!boundaryCheckerX(-20, 55, -86, -20, Testvalue))
+		return true;
+	/*if (!boundaryCheckerX(-39, -32, -38, -28, Testvalue))
 		return false;*/
 	return false;
 }
 
 bool Camera3::AllSoraJewelBoundaryZ(Vector3 Testvalue)
 {
-	//if(!boundaryCheckerZ(2, 50, -50, -26, Testvalue))
-	//	return false;
-	//if (!boundaryCheckerZ(-39, -32, -38, -28, Testvalue))
-	//	return false;
+	if (!boundaryCheckerZ(-20, 55, -86, -20, Testvalue))
+		return true;
+	/*if (!boundaryCheckerZ(-39, -32, -38, -28, Testvalue))
+		return false;*/
 	return false;
 }
