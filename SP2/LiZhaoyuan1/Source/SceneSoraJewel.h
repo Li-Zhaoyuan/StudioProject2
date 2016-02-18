@@ -30,6 +30,7 @@ class SceneSoraJewel : public Scene
 		GEO_GLOBE,
 		GEO_PROJECTOR,
 		GEO_SOFA,
+		GEO_QUESTLADY,
 		NUM_GEOMETRY,
 	};
 
