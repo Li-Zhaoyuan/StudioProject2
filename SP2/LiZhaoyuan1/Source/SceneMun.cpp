@@ -143,8 +143,8 @@ void SceneMun::Init()
 
 	//Initialize camera settings
 	camera.Init(Vector3(0, 0, 1), Vector3(0, 0, 0), Vector3(0, 1, 0));
-	camera.minimapcoords.y = 10;
-	camera.minimapcoords.x = 60;
+	camera.minimapcoords.y = 55;
+	camera.minimapcoords.x = 75;
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
 
 	meshList[GEO_CUBE] = MeshBuilder::GenerateCube("reference", Color(0, 0, 0));
@@ -472,7 +472,7 @@ void SceneMun::Renderpicturetoscreen()
 	viewStack.LoadIdentity(); //No need camera for ortho mode
 	modelStack.PushMatrix();
 	modelStack.LoadIdentity(); //Reset modelStack
-	modelStack.Translate(60, 10, -2);
+	modelStack.Translate(75, 55, -2);
 	modelStack.Scale(10, 10, 10);
 	modelStack.Rotate(90, 1, 0, 0);
 	renderMesh(meshList[GEO_MINIMAP], false);
