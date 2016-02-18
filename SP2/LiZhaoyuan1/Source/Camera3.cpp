@@ -45,18 +45,7 @@ void Camera3::Update(double dt, float bounds)
 		target = position + view;
 		up = rotation * up;	
 	}
-	if (mousecursor.x<800 / 2)
-	{
-		float yaw = (float)(CAMERA_SPEED * 0.5 * dt*(800/2-mousecursor.x));
-		rotateChar += yaw;
-		Vector3 view = (target - position).Normalized();
-		Vector3 right = view.Cross(up);
-		Mtx44 rotation;
-		rotation.SetToRotation(yaw, 0, 1, 0);
-		view = rotation * view;
-		target = position + view;
-		up = rotation * up;
-	}
+	
 	if (Application::IsKeyPressed('A'))
 	{
 		Vector3 view = (target - position).Normalized();
@@ -77,6 +66,7 @@ void Camera3::Update(double dt, float bounds)
 				position.x -= right.x * (float)(CAMERA_SPEED * dt);
 				target.x -= right.x * (float)(CAMERA_SPEED * dt);
 				minimapcoords.y += (right.x*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.y += (right.x*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
 		if (position.z - (right.z * (float)(CAMERA_SPEED * dt)) > -bounds
@@ -88,6 +78,7 @@ void Camera3::Update(double dt, float bounds)
 				position.z -= right.z * (float)(CAMERA_SPEED * dt);
 				target.z -= right.z * (float)(CAMERA_SPEED * dt);
 				minimapcoords.x += (right.z*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.x += (right.z*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
 
@@ -105,19 +96,7 @@ void Camera3::Update(double dt, float bounds)
 		up = rotation * up;
 			
 	}
-	if (mousecursor.x>800 / 2)
-	{
-		float yaw = (float)(-CAMERA_SPEED* 0.5 * dt*(mousecursor.x - 800 / 2));
-		rotateChar += yaw;
-		Vector3 view = (target - position).Normalized();
-		Vector3 right = view.Cross(up);
-		Mtx44 rotation;
-		rotation.SetToRotation(yaw, 0, 1, 0);
-		view = rotation * view;
-		target = position + view;
-		up = rotation * up;
 
-	}
 	if (Application::IsKeyPressed('D'))
 	{
 		Vector3 view = (target - position).Normalized();
@@ -138,6 +117,7 @@ void Camera3::Update(double dt, float bounds)
 				position.x += right.x * (float)(CAMERA_SPEED * dt);
 				target.x += right.x * (float)(CAMERA_SPEED * dt);
 				minimapcoords.y -= (right.x*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.y -= (right.x*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
 		if (position.z + (right.z * (float)(CAMERA_SPEED * dt)) > -bounds
@@ -149,6 +129,7 @@ void Camera3::Update(double dt, float bounds)
 				position.z += right.z * (float)(CAMERA_SPEED * dt);
 				target.z += right.z * (float)(CAMERA_SPEED * dt);
 				minimapcoords.x -= (right.z*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.x -= (right.z*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
 	}
@@ -170,24 +151,7 @@ void Camera3::Update(double dt, float bounds)
 			}
 			
 	}
-	if (mousecursor.y<600 / 2)
-	{
-		
-			float pitch = (float)(CAMERA_SPEED * 0.5* dt*(600 / 2 - mousecursor.y));
-			Vector3 view = (target - position).Normalized();
-			Vector3 right = view.Cross(up);
-			right.y = 0;
-			right.Normalize();
-			up = right.Cross(view).Normalized();
-			if (view.y < 0.984)
-			{
-			Mtx44 rotation;
-			rotation.SetToRotation(pitch, right.x, right.y, right.z);
-			view = rotation * view;
-			target = view + position;
-		}
 
-	}
 	if (Application::IsKeyPressed('W'))
 	{
 		Vector3 view = (target - position).Normalized();
@@ -204,6 +168,7 @@ void Camera3::Update(double dt, float bounds)
 				position.x += view.x * (float)(CAMERA_SPEED * dt);
 				target.x += view.x * (float)(CAMERA_SPEED * dt); 
 				minimapcoords.y -= (view.x*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.y -= (view.x*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
 		if (position.z + (view.z * (float)(CAMERA_SPEED * dt)) > -bounds
@@ -215,6 +180,7 @@ void Camera3::Update(double dt, float bounds)
 				position.z += view.z * (float)(CAMERA_SPEED * dt);
 				target.z += view.z * (float)(CAMERA_SPEED * dt);
 				minimapcoords.x -= (view.z*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.x -= (view.z*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
 	}
@@ -235,23 +201,6 @@ void Camera3::Update(double dt, float bounds)
 		}
 			
 	}
-	if (mousecursor.y>600 / 2)
-	{
-		if (target.y > -0.8)
-		{
-			float pitch = (float)(-CAMERA_SPEED * 0.5 * 2 * dt*(mousecursor.y - 600 / 2));
-			Vector3 view = (target - position).Normalized();
-			Vector3 right = view.Cross(up);
-			right.y = 0;
-			right.Normalize();
-			up = right.Cross(view).Normalized();
-			Mtx44 rotation;
-			rotation.SetToRotation(pitch, right.x, right.y, right.z);
-			view = rotation * view;
-			target = view + position;
-		}
-
-	}
 	if (Application::IsKeyPressed('S'))
 	{
 		Vector3 view = (target - position).Normalized();
@@ -268,6 +217,7 @@ void Camera3::Update(double dt, float bounds)
 				position.x -= view.x * (float)(CAMERA_SPEED * dt);
 				target.x -= view.x * (float)(CAMERA_SPEED * dt);
 				minimapcoords.y += (view.x*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.y += (view.x*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
 		if (position.z - (view.z * (float)(CAMERA_SPEED * dt)) > -bounds
@@ -279,17 +229,80 @@ void Camera3::Update(double dt, float bounds)
 				position.z -= view.z * (float)(CAMERA_SPEED * dt);
 				target.z -= view.z * (float)(CAMERA_SPEED * dt);
 				minimapcoords.x += (view.z*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.x += (view.z*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
 	}
 	
 	if (Application::IsKeyPressed('R'))
 	{
-		minimapcoords.x = 60;
-		minimapcoords.y = 10;
+		minimapcoords.x = 75;
+		minimapcoords.y = 55;
+		minimapsoracoords.x = 75;
+		minimapsoracoords.y = 55;
 		Reset();
 	}
-	SetCursorPos(800 / 2, 600 / 2);
+	/*SetCursorPos(800 / 2, 600 / 2);
+	if (mousecursor.x<800 / 2)
+	{
+		float yaw = (float)(CAMERA_SPEED * 0.5 * dt*(800 / 2 - mousecursor.x));
+		rotateChar += yaw;
+		Vector3 view = (target - position).Normalized();
+		Vector3 right = view.Cross(up);
+		Mtx44 rotation;
+		rotation.SetToRotation(yaw, 0, 1, 0);
+		view = rotation * view;
+		target = position + view;
+		up = rotation * up;
+	}
+	if (mousecursor.x>800 / 2)
+	{
+		float yaw = (float)(-CAMERA_SPEED* 0.5 * dt*(mousecursor.x - 800 / 2));
+		rotateChar += yaw;
+		Vector3 view = (target - position).Normalized();
+		Vector3 right = view.Cross(up);
+		Mtx44 rotation;
+		rotation.SetToRotation(yaw, 0, 1, 0);
+		view = rotation * view;
+		target = position + view;
+		up = rotation * up;
+
+	}
+	if (mousecursor.y<600 / 2)
+	{
+
+		float pitch = (float)(CAMERA_SPEED * 0.5* dt*(600 / 2 - mousecursor.y));
+		Vector3 view = (target - position).Normalized();
+		Vector3 right = view.Cross(up);
+		right.y = 0;
+		right.Normalize();
+		up = right.Cross(view).Normalized();
+		if (view.y < 0.984)
+		{
+			Mtx44 rotation;
+			rotation.SetToRotation(pitch, right.x, right.y, right.z);
+			view = rotation * view;
+			target = view + position;
+		}
+
+	}
+	if (mousecursor.y>600 / 2)
+	{
+		if (target.y > -0.8)
+		{
+			float pitch = (float)(-CAMERA_SPEED * 0.5 * 2 * dt*(mousecursor.y - 600 / 2));
+			Vector3 view = (target - position).Normalized();
+			Vector3 right = view.Cross(up);
+			right.y = 0;
+			right.Normalize();
+			up = right.Cross(view).Normalized();
+			Mtx44 rotation;
+			rotation.SetToRotation(pitch, right.x, right.y, right.z);
+			view = rotation * view;
+			target = view + position;
+		}
+
+	}*/
 	
 }
 
@@ -471,7 +484,11 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 	}
 	if (SceneSoraJewel == true)
 	{
+<<<<<<< HEAD
 		if (Testvalue.y >= 20)
+=======
+		if (Testvalue.y <= 100)
+>>>>>>> 9c218b9cba6a45bcd3abd88503382f00b3b8c991
 		{
 			if (XZ == 1)
 			{
@@ -526,19 +543,32 @@ bool Camera3::AllMunBoundaryZ(Vector3 Testvalue)
 
 bool Camera3::AllSoraJewelBoundaryX(Vector3 Testvalue)
 {
+<<<<<<< HEAD
 	if (!boundaryCheckerX(2, 50, -50, -26, Testvalue))
 		return false;
 	/*
 	if (!boundaryCheckerX(-39, -32, -38, -28, Testvalue))
+=======
+	if (!boundaryCheckerX(-20, 55, -86, -20, Testvalue))
+		return true;
+	/*if (!boundaryCheckerX(-39, -32, -38, -28, Testvalue))
+>>>>>>> 9c218b9cba6a45bcd3abd88503382f00b3b8c991
 		return false;*/
 	return false;
 }
 
 bool Camera3::AllSoraJewelBoundaryZ(Vector3 Testvalue)
 {
+<<<<<<< HEAD
 	if(!boundaryCheckerZ(2, 50, -50, -26, Testvalue))
 		return false;
 	//if (!boundaryCheckerZ(-39, -32, -38, -28, Testvalue))
 	//	return false;
+=======
+	if (!boundaryCheckerZ(-20, 55, -86, -20, Testvalue))
+		return true;
+	/*if (!boundaryCheckerZ(-39, -32, -38, -28, Testvalue))
+		return false;*/
+>>>>>>> 9c218b9cba6a45bcd3abd88503382f00b3b8c991
 	return false;
 }
