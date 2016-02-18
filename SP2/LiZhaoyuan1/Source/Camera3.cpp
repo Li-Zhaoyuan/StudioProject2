@@ -257,7 +257,7 @@ void Camera3::Update(double dt, float bounds)
 		Vector3 view = (target - position).Normalized();
 
 		Vector3 Testvalue;
-		Testvalue = (position + view * dt * CAMERA_SPEED);
+		Testvalue = (position - view * dt * CAMERA_SPEED);
 
 		if (position.x - (view.x * (float)(CAMERA_SPEED * dt)) > -bounds
 			&& position.x - (view.x * (float)(CAMERA_SPEED * dt)) < bounds
@@ -381,15 +381,15 @@ void Camera3::UpdateCollision(float bounds, double dt)
 
 bool Camera3::boundaryCheckerX(float smallx, float largex, float smallz, float largez, Vector3 value)
 {
-	if ((value.z > smallz) && (value.z<largez) && (value.x > smallx) && (value.x<smallx + 2)){ return false; }
-	if ((value.z > smallz) && (value.z<largez) && (value.x < largex) && (value.x>largex - 2)){ return false; }
+	if ((value.z > smallz) && (value.z<largez) && (value.x > smallx) && (value.x<smallx + 4)){ return false; }
+	if ((value.z > smallz) && (value.z<largez) && (value.x < largex) && (value.x>largex - 4)){ return false; }
 	return true;
 }
 
 bool Camera3::boundaryCheckerZ(float smallx, float largex, float smallz, float largez, Vector3 value)
 {
-	if ((value.x > smallx) && (value.x<largex) && (value.z > smallz) && (value.z<smallz + 2)){ return false; }
-	if ((value.x > smallx) && (value.x<largex) && (value.z < largez) && (value.z>largez - 2)){ return false; }
+	if ((value.x > smallx) && (value.x<largex) && (value.z > smallz) && (value.z<smallz + 4)){ return false; }
+	if ((value.x > smallx) && (value.x<largex) && (value.z < largez) && (value.z>largez - 4)){ return false; }
 	return true;
 }
 
@@ -451,7 +451,7 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 	}
 	if (SceneMun == true)
 	{
-		if (Testvalue.y >= 0)
+		if (Testvalue.y <= 100)
 		{
 			if (XZ == 1)
 			{
@@ -471,7 +471,7 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 	}
 	if (SceneSoraJewel == true)
 	{
-		if (Testvalue.y >= 0)
+		if (Testvalue.y >= 20)
 		{
 			if (XZ == 1)
 			{
@@ -494,11 +494,15 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 
 bool Camera3::AllGalaxyBoundaryX(Vector3 Testvalue)
 {
+	if (!boundaryCheckerX(20, 50, 20, 50, Testvalue))
+		return true;
 	return false;
 }
 
 bool Camera3::AllGalaxyBoundaryZ(Vector3 Testvalue)
 {
+	if (!boundaryCheckerZ(20, 50, 20, 50, Testvalue))
+		return true;
 	return false;
 }
 
@@ -522,8 +526,9 @@ bool Camera3::AllMunBoundaryZ(Vector3 Testvalue)
 
 bool Camera3::AllSoraJewelBoundaryX(Vector3 Testvalue)
 {
-	/*if (!boundaryCheckerX(2, 50, -50, -26, Testvalue))
+	if (!boundaryCheckerX(2, 50, -50, -26, Testvalue))
 		return false;
+	/*
 	if (!boundaryCheckerX(-39, -32, -38, -28, Testvalue))
 		return false;*/
 	return false;
@@ -531,8 +536,8 @@ bool Camera3::AllSoraJewelBoundaryX(Vector3 Testvalue)
 
 bool Camera3::AllSoraJewelBoundaryZ(Vector3 Testvalue)
 {
-	//if(!boundaryCheckerZ(2, 50, -50, -26, Testvalue))
-	//	return false;
+	if(!boundaryCheckerZ(2, 50, -50, -26, Testvalue))
+		return false;
 	//if (!boundaryCheckerZ(-39, -32, -38, -28, Testvalue))
 	//	return false;
 	return false;

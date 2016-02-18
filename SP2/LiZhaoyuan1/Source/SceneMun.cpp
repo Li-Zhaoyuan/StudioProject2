@@ -218,7 +218,7 @@ void SceneMun::Init()
 	meshList[GEO_MAINICON] = MeshBuilder::GenerateCube("mainicon for map", Color(1, 0, 0));
 
 	Mtx44 projection;
-	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 10000.f);
+	projection.SetToPerspective(45.f, 16.f / 9.f, 0.1f, 10000.f);
 	projectionStack.LoadMatrix(projection);
 
 	camera.SceneGalaxy = false;
