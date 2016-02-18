@@ -15,7 +15,8 @@ public:
 	Vector3 defaultTarget;
 	Vector3 defaultUp;
 
-	Vector3 minimapcoords =(60,10,-1);
+	Vector3 minimapcoords = (75, 55, -1);
+	Vector3 minimapsoracoords = (75, 55, -1);
 
 	Camera3();
 	~Camera3();

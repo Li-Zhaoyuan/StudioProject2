@@ -140,7 +140,11 @@ void SceneSoraJewel::Init()
 
 	
 	//Initialize camera settings
+<<<<<<< HEAD
 	camera.Init(Vector3(0, 10, 1), Vector3(0, 10, 0), Vector3(0, 1, 0));
+=======
+	camera.Init(Vector3(0, 350, 1), Vector3(0, 7, 0), Vector3(0, 1, 0));
+>>>>>>> 53191886340100ce950c6306ba073ab85bf2ff7e
 
 
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
