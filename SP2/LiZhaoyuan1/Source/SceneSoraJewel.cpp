@@ -145,9 +145,15 @@ void SceneSoraJewel::Init()
 
 	//camera.Init(Vector3(0, 350, 1), Vector3(0, 7, 0), Vector3(0, 1, 0));
 
-
+	camera.minimapsoracoords.x = 78.f;
+	camera.minimapsoracoords = 55.f;
 
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
+
+	meshList[GEO_MINIMAPSJ] = MeshBuilder::GenerateQuad("Minimap for Sora Jewel", Color(1, 1, 1));
+	meshList[GEO_MINIMAPSJ]->textureID = LoadTGA("Image//SoraJewelMap.tga");
+
+	meshList[GEO_MAINICONSJ] = MeshBuilder::GenerateQuad("front", Color(0.f, 1.f, 0.f));
 
 	meshList[GEO_SORAJEWELFRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
 	meshList[GEO_SORAJEWELFRONT]->textureID = LoadTGA("Image//SoraJewelFront.tga");
@@ -482,7 +488,7 @@ void SceneSoraJewel::Render()
 	renderMesh(meshList[GEO_LIGHTBALL], false);
 	modelStack.PopMatrix();
 
-	
+	//
 	modelStack.PushMatrix();
 	renderMesh(meshList[GEO_AXES], false);
 	modelStack.PopMatrix();
@@ -545,7 +551,6 @@ void SceneSoraJewel::Render()
 	modelStack.Scale(2.4f, 2.4f, 2.4f);
 	renderMesh(meshList[GEO_QUESTLADY], false);
 	modelStack.PopMatrix();
-
 	modelStack.PushMatrix();
 	modelStack.Translate(-96, 5, -40);
 	modelStack.Rotate(180, 0, 1, 0);
@@ -567,6 +572,7 @@ void SceneSoraJewel::Render()
 	modelStack.Scale(2.4f, 2.4f, 2.4f);
 	renderMesh(meshList[GEO_COMMANDER], false);
 	modelStack.PopMatrix();
+	renderminimaptoscreen();
 
 	std::stringstream playerPos;
 	playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosz;
@@ -575,7 +581,44 @@ void SceneSoraJewel::Render()
 	ss << "FPS:" << fps << "         " << playerPos.str();
 	RenderTextOnScreen(meshList[GEO_TEXT], ss.str(), Color(0, 1, 0), 3, 0, 19);
 }
+void SceneSoraJewel::renderminimaptoscreen()
+{
+	Mtx44 ortho;
+	glDisable(GL_DEPTH_TEST);
+	ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+	projectionStack.PushMatrix();
+	projectionStack.LoadMatrix(ortho);
+	viewStack.PushMatrix();
+	viewStack.LoadIdentity(); //No need camera for ortho mode
+	modelStack.PushMatrix();
+	modelStack.LoadIdentity(); //Reset modelStack
+	modelStack.Translate(75, 55, -2);
+	modelStack.Scale(10, 10, 10);
+	modelStack.Rotate(90, 1, 0, 0);
+	renderMesh(meshList[GEO_MINIMAPSJ], false);
+	projectionStack.PopMatrix();
+	viewStack.PopMatrix();
+	modelStack.PopMatrix();
+	glEnable(GL_DEPTH_TEST);
 
+	glDisable(GL_DEPTH_TEST);
+	ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+	projectionStack.PushMatrix();
+	projectionStack.LoadMatrix(ortho);
+	viewStack.PushMatrix();
+	viewStack.LoadIdentity(); //No need camera for ortho mode
+	modelStack.PushMatrix();
+	modelStack.LoadIdentity(); //Reset modelStack
+	modelStack.Translate(camera.minimapsoracoords.x, camera.minimapsoracoords.y, -1);
+	modelStack.Scale(0.5, 0.5, 0.5);
+	modelStack.Rotate(90, 1, 0, 0);
+	renderMesh(meshList[GEO_MAINICONSJ], false);
+	projectionStack.PopMatrix();
+	viewStack.PopMatrix();
+	modelStack.PopMatrix();
+	glEnable(GL_DEPTH_TEST);
+
+}
 void SceneSoraJewel::RenderSkybox()
 {
 	modelStack.PushMatrix();

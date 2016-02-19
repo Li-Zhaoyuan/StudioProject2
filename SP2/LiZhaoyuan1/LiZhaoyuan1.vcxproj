@@ -150,6 +150,7 @@
     <Image Include="Image\Pikachu2.tga" />
     <Image Include="Image\right.tga" />
     <Image Include="Image\shoe.tga" />
+    <Image Include="Image\SoraJewelMap.tga" />
     <Image Include="Image\top.tga" />
     <Image Include="Image\winebottle.tga" />
   </ItemGroup>

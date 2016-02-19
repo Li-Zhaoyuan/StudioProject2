@@ -38,6 +38,8 @@ class SceneSoraJewel : public Scene
 		GEO_KEG,
 		GEO_BEERFULL,
 		GEO_BEEREMPTY,
+		GEO_MAINICONSJ,
+		GEO_MINIMAPSJ,
 		NUM_GEOMETRY,
 	};
 
@@ -107,6 +109,7 @@ private:
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
 	//void TextForInteractions();
+	void renderminimaptoscreen();
 
 	unsigned m_vertexArrayID;
 	Mesh *meshList[NUM_GEOMETRY];
