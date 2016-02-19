@@ -150,7 +150,6 @@ void SceneMun::Init()
 	meshList[GEO_CUBE] = MeshBuilder::GenerateCube("reference", Color(0, 0, 0));
 
 	meshList[GEO_QUAD] = MeshBuilder::GenerateQuad("quad", Color(1, 1, 1));
-	meshList[GEO_QUAD]->textureID = LoadTGA("Image//Pikachu2.tga");
 
 	//Skybox
 	meshList[GEO_MUNFRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
@@ -217,8 +216,16 @@ void SceneMun::Init()
 	meshList[GEO_ORE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ORE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ORE]->material.kShininess = 5.f;
+<<<<<<< HEAD
 	//Minimaps
 	//meshList[GEO_SPHERE] = MeshBuilder::GenerateSphere("target", Color(1, 0, 0), 18, 36);
+=======
+	
+	//Minimaps
+
+	//meshList[GEO_SPHERE] = MeshBuilder::GenerateSphere("target", Color(1, 0, 0), 18, 36);
+
+>>>>>>> 262d7d6c149c7fffc1cfb896f303db17d5038c1b
 	meshList[GEO_MINIMAP] = MeshBuilder::GenerateQuad("Minimap", Color(1.f, 1.f, 1.f));
 	meshList[GEO_MINIMAP]->textureID = LoadTGA("Image//Munmap.tga");
 	
