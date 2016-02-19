@@ -145,9 +145,15 @@ void SceneSoraJewel::Init()
 
 	//camera.Init(Vector3(0, 350, 1), Vector3(0, 7, 0), Vector3(0, 1, 0));
 
-
+	camera.minimapsoracoords.x = 78.f;
+	camera.minimapsoracoords = 55.f;
 
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
+
+	meshList[GEO_MINIMAPSJ] = MeshBuilder::GenerateQuad("Minimap for Sora Jewel", Color(1, 1, 1));
+	meshList[GEO_MINIMAPSJ]->textureID = LoadTGA("Image//SoraJewelMap.tga");
+
+	meshList[GEO_MAINICONSJ] = MeshBuilder::GenerateQuad("front", Color(0.f, 1.f, 0.f));
 
 	meshList[GEO_SORAJEWELFRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
 	meshList[GEO_SORAJEWELFRONT]->textureID = LoadTGA("Image//SoraJewelFront.tga");
@@ -204,12 +210,42 @@ void SceneSoraJewel::Init()
 	meshList[GEO_PROJECTOR]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
 	meshList[GEO_PROJECTOR]->material.kShininess = 1.f;
 
+	meshList[GEO_COUNTER] = MeshBuilder::GenerateOBJ("Counter", "OBJ//Counter.obj");
+	meshList[GEO_COUNTER]->textureID = LoadTGA("Image//hologram_base.tga");
+	meshList[GEO_COUNTER]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_COUNTER]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_COUNTER]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_COUNTER]->material.kShininess = 1.f;
+
+	//Characters
 	meshList[GEO_QUESTLADY] = MeshBuilder::GenerateOBJ("quest lady", "OBJ//CharacterModel.obj");
 	meshList[GEO_QUESTLADY]->textureID = LoadTGA("Image//FemaleCharacter.tga");
 	meshList[GEO_QUESTLADY]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_QUESTLADY]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
 	meshList[GEO_QUESTLADY]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
 	meshList[GEO_QUESTLADY]->material.kShininess = 1.f;
+
+	meshList[GEO_ENGINEER] = MeshBuilder::GenerateOBJ("Counter", "OBJ//CharacterModel.obj");
+	meshList[GEO_ENGINEER]->textureID = LoadTGA("Image//mainCharacterY.tga");
+	meshList[GEO_ENGINEER]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_ENGINEER]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_ENGINEER]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_ENGINEER]->material.kShininess = 1.f;
+
+	meshList[GEO_NORMALDUDE] = MeshBuilder::GenerateOBJ("Counter", "OBJ//CharacterModel.obj");
+	meshList[GEO_NORMALDUDE]->textureID = LoadTGA("Image//mainCharacter.tga");
+	meshList[GEO_NORMALDUDE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_NORMALDUDE]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_NORMALDUDE]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_NORMALDUDE]->material.kShininess = 1.f;
+
+	meshList[GEO_COMMANDER] = MeshBuilder::GenerateOBJ("Counter", "OBJ//CharacterModel.obj");
+	meshList[GEO_COMMANDER]->textureID = LoadTGA("Image//mainCharacterR.tga");
+	meshList[GEO_COMMANDER]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_COMMANDER]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_COMMANDER]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_COMMANDER]->material.kShininess = 1.f;
+
 
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//TimesNewRoman.tga");
@@ -259,8 +295,6 @@ void SceneSoraJewel::Update(double dt)
 	camPosX = camera.position.x;
 	camPosY = camera.position.y;
 	camPosz = camera.position.z;
-	Vector3 Testvalue;
-	std::cout << camera.AllSoraJewelBoundaryX(Testvalue) << " " << camera.AllSoraJewelBoundaryZ(Testvalue) << std::endl;
 }
 void SceneSoraJewel::lighting()
 {
@@ -414,7 +448,6 @@ void SceneSoraJewel::RenderTextOnScreen(Mesh* mesh, std::string text, Color colo
 	projectionStack.PopMatrix();
 	viewStack.PopMatrix();
 	modelStack.PopMatrix();
-
 }
 
 void SceneSoraJewel::Render()
@@ -455,7 +488,7 @@ void SceneSoraJewel::Render()
 	renderMesh(meshList[GEO_LIGHTBALL], false);
 	modelStack.PopMatrix();
 
-	
+	//
 	modelStack.PushMatrix();
 	renderMesh(meshList[GEO_AXES], false);
 	modelStack.PopMatrix();
@@ -470,9 +503,9 @@ void SceneSoraJewel::Render()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-61, 7, 60);
+	modelStack.Translate(-70, 9, 60);
 	modelStack.Rotate(90, 0, 1, 0);
-	modelStack.Scale(2.2f, 2.2f, 2.2f);
+	modelStack.Scale(5.f, 5.f, 5.f);
 	renderMesh(meshList[GEO_XWING], true);
 	modelStack.PopMatrix();
 
@@ -485,12 +518,18 @@ void SceneSoraJewel::Render()
 
 	modelStack.PushMatrix();
 	modelStack.Translate(25, 0, -53);
-	modelStack.Scale(30, 30, 30);
+	modelStack.Scale(5, 5, 5);
 	renderMesh(meshList[GEO_PROJECTOR], true);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	glBlendFunc(1.1, 1);
+	modelStack.Translate(25, 0, -53);
+	modelStack.Scale(35, 10, 35);
+	renderMesh(meshList[GEO_COUNTER], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	glBlendFunc(1.1f, 1);
 	modelStack.Translate(25, 45, -53);
 	modelStack.Scale(30, 30, 30);
 	renderMesh(meshList[GEO_GLOBE], true);
@@ -498,7 +537,7 @@ void SceneSoraJewel::Render()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	glBlendFunc(1.9, 1);
+	glBlendFunc(1.9f, 1);
 	modelStack.Translate(64, 0, 68);
 	modelStack.Scale(20, 20, 20);
 	modelStack.Rotate(90, 0, 1, 0);
@@ -507,11 +546,33 @@ void SceneSoraJewel::Render()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(0.8f, -1.f, -55);
+	modelStack.Translate(13, -1, -53);
 	modelStack.Rotate(180, 0, 1, 0);
-	modelStack.Scale(2, 2, 2);
+	modelStack.Scale(2.4f, 2.4f, 2.4f);
 	renderMesh(meshList[GEO_QUESTLADY], false);
 	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-96, 5, -40);
+	modelStack.Rotate(180, 0, 1, 0);
+	modelStack.Rotate(90, 0, 0, 1);
+	modelStack.Scale(2.4f, 2.4f, 2.4f);
+	renderMesh(meshList[GEO_ENGINEER], false);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(25, -1, -40);
+	modelStack.Rotate(270, 0, 1, 0);
+	modelStack.Scale(2.4f, 2.4f, 2.4f);
+	renderMesh(meshList[GEO_NORMALDUDE], false);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-55, 1, 43);
+	modelStack.Rotate(90, 0, 1, 0);
+	modelStack.Scale(2.4f, 2.4f, 2.4f);
+	renderMesh(meshList[GEO_COMMANDER], false);
+	modelStack.PopMatrix();
+	renderminimaptoscreen();
 
 	std::stringstream playerPos;
 	playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosz;
@@ -519,11 +580,45 @@ void SceneSoraJewel::Render()
 	std::stringstream ss;
 	ss << "FPS:" << fps << "         " << playerPos.str();
 	RenderTextOnScreen(meshList[GEO_TEXT], ss.str(), Color(0, 1, 0), 3, 0, 19);
+}
+void SceneSoraJewel::renderminimaptoscreen()
+{
+	Mtx44 ortho;
+	glDisable(GL_DEPTH_TEST);
+	ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+	projectionStack.PushMatrix();
+	projectionStack.LoadMatrix(ortho);
+	viewStack.PushMatrix();
+	viewStack.LoadIdentity(); //No need camera for ortho mode
+	modelStack.PushMatrix();
+	modelStack.LoadIdentity(); //Reset modelStack
+	modelStack.Translate(75, 55, -2);
+	modelStack.Scale(10, 10, 10);
+	modelStack.Rotate(90, 1, 0, 0);
+	renderMesh(meshList[GEO_MINIMAPSJ], false);
+	projectionStack.PopMatrix();
+	viewStack.PopMatrix();
+	modelStack.PopMatrix();
+	glEnable(GL_DEPTH_TEST);
 
-
+	glDisable(GL_DEPTH_TEST);
+	ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+	projectionStack.PushMatrix();
+	projectionStack.LoadMatrix(ortho);
+	viewStack.PushMatrix();
+	viewStack.LoadIdentity(); //No need camera for ortho mode
+	modelStack.PushMatrix();
+	modelStack.LoadIdentity(); //Reset modelStack
+	modelStack.Translate(camera.minimapsoracoords.x, camera.minimapsoracoords.y, -1);
+	modelStack.Scale(0.5, 0.5, 0.5);
+	modelStack.Rotate(90, 1, 0, 0);
+	renderMesh(meshList[GEO_MAINICONSJ], false);
+	projectionStack.PopMatrix();
+	viewStack.PopMatrix();
+	modelStack.PopMatrix();
+	glEnable(GL_DEPTH_TEST);
 
 }
-
 void SceneSoraJewel::RenderSkybox()
 {
 	modelStack.PushMatrix();

@@ -189,7 +189,7 @@ void SceneGalaxy::Init()
 }
 
 static float rotateXWing = 0.f;
-static int Health = 100.f;
+static int Health = 100;
 bool rotateXWing_Limit;
 static float testtranslate = 0.f;
 
