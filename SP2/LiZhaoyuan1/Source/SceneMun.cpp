@@ -216,12 +216,11 @@ void SceneMun::Init()
 	meshList[GEO_ORE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ORE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ORE]->material.kShininess = 5.f;
-<<<<<<< HEAD
 	
 	//Minimaps
-=======
+
 	//meshList[GEO_SPHERE] = MeshBuilder::GenerateSphere("target", Color(1, 0, 0), 18, 36);
->>>>>>> bad6ee74bd5ce348754bde1feb835f3e0cf37af0
+
 	meshList[GEO_MINIMAP] = MeshBuilder::GenerateQuad("Minimap", Color(1.f, 1.f, 1.f));
 	meshList[GEO_MINIMAP]->textureID = LoadTGA("Image//Munmap.tga");
 	
