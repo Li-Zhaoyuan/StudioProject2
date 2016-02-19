@@ -135,7 +135,8 @@ void Camera3::Update(double dt, float bounds)
 	}
 	if (Application::IsKeyPressed(VK_UP))
 	{
-		
+		if (target.y < (position.y + 0.8))
+		{
 			float pitch = (float)(CAMERA_SPEED * 2 * dt);
 			Vector3 view = (target - position).Normalized();
 			Vector3 right = view.Cross(up);
@@ -149,6 +150,7 @@ void Camera3::Update(double dt, float bounds)
 				view = rotation * view;
 				target = view + position;
 			}
+		}
 			
 	}
 
@@ -186,7 +188,7 @@ void Camera3::Update(double dt, float bounds)
 	}
 	if (Application::IsKeyPressed(VK_DOWN))
 	{
-		if (target.y > -0.8)
+		if (target.y > position.y -0.8)
 		{
 			float pitch = (float)(-CAMERA_SPEED * dt);
 			Vector3 view = (target - position).Normalized();
@@ -270,15 +272,15 @@ void Camera3::Update(double dt, float bounds)
 	}
 	if (mousecursor.y<600 / 2)
 	{
-
-		float pitch = (float)(CAMERA_SPEED * 0.5* dt*(600 / 2 - mousecursor.y));
-		Vector3 view = (target - position).Normalized();
-		Vector3 right = view.Cross(up);
-		right.y = 0;
-		right.Normalize();
-		up = right.Cross(view).Normalized();
-		if (view.y < 0.984)
+		if (target.y < (position.y + 0.8))
 		{
+			float pitch = (float)(CAMERA_SPEED * 0.5* dt*(600 / 2 - mousecursor.y));
+			Vector3 view = (target - position).Normalized();
+			Vector3 right = view.Cross(up);
+			right.y = 0;
+			right.Normalize();
+			up = right.Cross(view).Normalized();
+
 			Mtx44 rotation;
 			rotation.SetToRotation(pitch, right.x, right.y, right.z);
 			view = rotation * view;
@@ -288,7 +290,7 @@ void Camera3::Update(double dt, float bounds)
 	}
 	if (mousecursor.y>600 / 2)
 	{
-		if (target.y > -0.8)
+		if (target.y > (position.y - 0.8))
 		{
 			float pitch = (float)(-CAMERA_SPEED * 0.5 * 2 * dt*(mousecursor.y - 600 / 2));
 			Vector3 view = (target - position).Normalized();

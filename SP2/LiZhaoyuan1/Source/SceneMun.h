@@ -137,6 +137,8 @@ private:
 	void npcRotate();
 	void interactions();
 	void RenderPickaxeOnScreen();
+	void RenderLoadingBarOnScreen();
+	void RenderOreOnScreen();
 	unsigned m_vertexArrayID;
 	Mesh *meshList[NUM_GEOMETRY];
 
@@ -176,7 +178,11 @@ private:
 	float rotateminer = 0;
 	float rotatequestdude = 0;
 
-	bool firstconvowithlady = false;
+	float loadingbar = 0.01;
+
+	bool mining = false;
+	bool isMined = false;
+	bool isRepairing = false;
 
 	MS modelStack, viewStack, projectionStack;
 };

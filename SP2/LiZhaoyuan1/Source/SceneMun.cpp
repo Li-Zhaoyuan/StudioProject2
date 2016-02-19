@@ -147,9 +147,9 @@ void SceneMun::Init()
 	camera.minimapcoords.x = 75;
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
 
-	meshList[GEO_CUBE] = MeshBuilder::GenerateCube("reference", Color(0, 0, 0));
+	meshList[GEO_CUBE] = MeshBuilder::GenerateCube("reference", Color(0, 1, 0));
 
-	meshList[GEO_QUAD] = MeshBuilder::GenerateQuad("quad", Color(1, 1, 1));
+	meshList[GEO_QUAD] = MeshBuilder::GenerateQuad("quad", Color(0, 1, 0));
 
 	//Skybox
 	meshList[GEO_MUNFRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
@@ -237,6 +237,39 @@ void SceneMun::Init()
 	camera.SceneGalaxy = false;
 	camera.SceneMun = true;
 	camera.SceneSoraJewel = false;
+
+	boxX = 0;
+	boxZ = 0;
+	camPosX = 0;
+	camPosY = 0;
+	camPosz = 0;
+
+	crashedplaneCoord = Vector3(-36.f, 4.9f, -34.f);
+	questdudehouseCoord = Vector3(33, -5, 20);
+	worriedladyhouseCoord = Vector3(20, -5, -38);
+	worriedladyCoord = Vector3(2, -4, -38);
+	questdudeCoord = Vector3(33, -4, 3);
+	minerandplusCoord = Vector3(-19, 0, 25);
+	caveCoord = Vector3(-35, -5, 35);
+	oreCoord = Vector3(-42, -2.75, 35);
+
+	worriedladytempx = 0;
+	worriedladytempz = 0;
+
+	minerandplusx = 0;
+	minerandplusz = 0;
+
+	questdudex = 0;
+	questdudez = 0;
+
+	rotateworriedlady = 0;
+	rotateminer = 0;
+	rotatequestdude = 0;
+
+	loadingbar = 0.01;
+
+	mining = false;
+	isMined = false;
 }
 
 
@@ -291,6 +324,19 @@ void SceneMun::Update(double dt)
 	camPosY = camera.position.y;
 	camPosz = camera.position.z;
 	
+	if (mining && loadingbar <=20)
+	{
+		loadingbar += (float)(5 * dt);
+	}
+	else if (mining && loadingbar >= 20)
+	{
+		isMined = true;
+	}
+	else
+	{
+		loadingbar = 0.01f;
+	}
+
 	npcRotate();
 	interactions();
 	camera.target;
@@ -439,7 +485,7 @@ void SceneMun::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, flo
 	for (unsigned i = 0; i < text.length(); ++i)
 	{
 		Mtx44 characterSpacing;
-		characterSpacing.SetToTranslation(i * 0.5f + 0.5f, 0.5f, 0); //1.0f is the spacing of each character, you may change this value
+		characterSpacing.SetToTranslation(i * 0.5f + 0.7f, 0.5f, 0); //1.0f is the spacing of each character, you may change this value
 		Mtx44 MVP = projectionStack.Top() * viewStack.Top() * modelStack.Top() * characterSpacing;
 		glUniformMatrix4fv(m_parameters[U_MVP], 1, GL_FALSE, &MVP.a[0]);
 
@@ -621,12 +667,18 @@ void SceneMun::Render()
 	renderMesh(meshList[GEO_PICKAXE], true);
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(oreCoord.x, oreCoord.y, oreCoord.z);
-	modelStack.Scale(2, 2, 2);
-	renderMesh(meshList[GEO_ORE], true);
-	modelStack.PopMatrix();
+	if (!isMined)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(oreCoord.x, oreCoord.y, oreCoord.z);
+		modelStack.Scale(2, 2, 2);
+		renderMesh(meshList[GEO_ORE], true);
+		modelStack.PopMatrix();
+	}
+	if (isMined)
+	{
+		RenderOreOnScreen();
+	}
 
 	modelStack.PushMatrix();
 	modelStack.Translate(camera.target.x, camera.target.y, camera.target.z);
@@ -636,17 +688,18 @@ void SceneMun::Render()
 
 	RenderPickaxeOnScreen();
 	Renderpicturetoscreen();
-	if (firstconvowithlady)
+	if (mining)
 	{
-		std::stringstream playerPos;
-		playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosz;
-		//RenderTextOnScreen(meshList[GEO_TEXT], playerPos.str(), Color(1, 0, 0), 2, 0, 18);
-		std::stringstream ss;
-		ss << "FPS:" << fps << "         " << playerPos.str();
-		RenderTextOnScreen(meshList[GEO_TEXT], ss.str(), Color(0, 1, 0), 3, 0, 19);
+		RenderTextOnScreen(meshList[GEO_TEXT], "M ining", Color(0, 1, 0), 3, 11, 15);
+		RenderLoadingBarOnScreen();
 	}
 	
-
+	std::stringstream playerPos;
+	playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosz;
+	//RenderTextOnScreen(meshList[GEO_TEXT], playerPos.str(), Color(1, 0, 0), 2, 0, 18);
+	std::stringstream ss;
+	ss << "FPS:" << fps << "         " << playerPos.str();
+	RenderTextOnScreen(meshList[GEO_TEXT], ss.str(), Color(0, 1, 0), 3, 0, 19);
 }
 
 void SceneMun::RenderSkybox()
@@ -733,26 +786,27 @@ void SceneMun::npcRotate()
 
 void SceneMun::interactions()
 {
-	if (oreCoord.x + 2.5 >camera.target.x
-		&& oreCoord.x - 2.5 < camera.target.x
-		&& oreCoord.z + 2 > camera.target.z
-		&& oreCoord.z - 2 < camera.target.z
-		&& oreCoord.y + 2.5 > camera.target.y
-		&& oreCoord.y - 2.5 < camera.target.y
-		&& Application::IsKeyPressed(VK_LBUTTON))
+	if (oreCoord.x + 1.2 >camera.target.x
+		&& oreCoord.x - 1.2 < camera.target.x
+		&& oreCoord.z + 1.5 > camera.target.z
+		&& oreCoord.z - 1.5 < camera.target.z
+		&& oreCoord.y + 2.2 > camera.target.y
+		&& oreCoord.y - 2.2 < camera.target.y
+		&& Application::IsKeyPressed(VK_LBUTTON)
+		&& !isMined)
 	{
-		firstconvowithlady = true;
+		mining = true;
 	}
 	else
 	{
-		firstconvowithlady = false;
+		mining = false;
 	}
 }
 
 void SceneMun::RenderPickaxeOnScreen()
 {
 
-	if (Application::IsKeyPressed(VK_LBUTTON))
+	if (Application::IsKeyPressed(VK_LBUTTON) )
 	{
 		Mtx44 ortho;
 		glDisable(GL_DEPTH_TEST);
@@ -795,4 +849,73 @@ void SceneMun::RenderPickaxeOnScreen()
 		glEnable(GL_DEPTH_TEST);
 	}
 	
+}
+
+void SceneMun::RenderLoadingBarOnScreen()
+{
+	Mtx44 ortho;
+	glDisable(GL_DEPTH_TEST);
+	ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+	projectionStack.PushMatrix();
+	projectionStack.LoadMatrix(ortho);
+	viewStack.PushMatrix();
+	viewStack.LoadIdentity(); //No need camera for ortho mode
+	modelStack.PushMatrix();
+	modelStack.LoadIdentity(); //Reset modelStack
+	modelStack.Translate(30, 40, -1);
+	modelStack.Scale(loadingbar, 3, 3);
+	modelStack.Translate(0.5, 0, -1);
+	//modelStack.Rotate(45, 0, 1, 0);
+	//modelStack.Rotate(-45, 1, 0, 0);
+	renderMesh(meshList[GEO_CUBE], false);
+	projectionStack.PopMatrix();
+	viewStack.PopMatrix();
+	modelStack.PopMatrix();
+	glEnable(GL_DEPTH_TEST);
+}
+
+void SceneMun::RenderOreOnScreen()
+{
+	if (!isRepairing)
+	{
+		Mtx44 ortho;
+		glDisable(GL_DEPTH_TEST);
+		ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+		projectionStack.PushMatrix();
+		projectionStack.LoadMatrix(ortho);
+		viewStack.PushMatrix();
+		viewStack.LoadIdentity(); //No need camera for ortho mode
+		modelStack.PushMatrix();
+		modelStack.LoadIdentity(); //Reset modelStack
+		modelStack.Translate(15, 10, -7);
+		modelStack.Rotate(45, 0, 1, 0);
+		modelStack.Rotate(45, 0, 0, 1);
+		modelStack.Scale(15, 15, 15);
+		renderMesh(meshList[GEO_ORE], true);
+		projectionStack.PopMatrix();
+		viewStack.PopMatrix();
+		modelStack.PopMatrix();
+		glEnable(GL_DEPTH_TEST);
+	}
+	else if (isRepairing)
+	{
+		Mtx44 ortho;
+		glDisable(GL_DEPTH_TEST);
+		ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+		projectionStack.PushMatrix();
+		projectionStack.LoadMatrix(ortho);
+		viewStack.PushMatrix();
+		viewStack.LoadIdentity(); //No need camera for ortho mode
+		modelStack.PushMatrix();
+		modelStack.LoadIdentity(); //Reset modelStack
+		modelStack.Translate(40, 15, -5);
+		modelStack.Rotate(45, 0, 1, 0);
+		modelStack.Rotate(45, 0, 0, 1);
+		modelStack.Scale(15, 15, 15);
+		renderMesh(meshList[GEO_ORE], true);
+		projectionStack.PopMatrix();
+		viewStack.PopMatrix();
+		modelStack.PopMatrix();
+		glEnable(GL_DEPTH_TEST);
+	}
 }
