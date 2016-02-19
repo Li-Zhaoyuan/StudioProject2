@@ -263,7 +263,9 @@ void SceneGalaxy::Update(double dt)
 	camPosY = camera.position.y;
 	camPosz = camera.position.z;
 	
-
+	std::cout << "galaxy " << camera.SceneGalaxy << std::endl;
+	std::cout << "mun " << camera.SceneMun << std::endl;
+	std::cout << "sora " << camera.SceneSoraJewel << std::endl;
 }
 
 void SceneGalaxy::lighting()

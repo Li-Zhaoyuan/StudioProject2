@@ -150,7 +150,6 @@ void SceneMun::Init()
 	meshList[GEO_CUBE] = MeshBuilder::GenerateCube("reference", Color(0, 0, 0));
 
 	meshList[GEO_QUAD] = MeshBuilder::GenerateQuad("quad", Color(1, 1, 1));
-	meshList[GEO_QUAD]->textureID = LoadTGA("Image//Pikachu2.tga");
 
 	meshList[GEO_MUNFRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
 	meshList[GEO_MUNFRONT]->textureID = LoadTGA("Image//MunFront.tga");

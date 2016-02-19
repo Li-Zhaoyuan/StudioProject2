@@ -259,6 +259,8 @@ void SceneSoraJewel::Update(double dt)
 	camPosX = camera.position.x;
 	camPosY = camera.position.y;
 	camPosz = camera.position.z;
+	Vector3 Testvalue;
+	std::cout << camera.AllSoraJewelBoundaryX(Testvalue) << " " << camera.AllSoraJewelBoundaryZ(Testvalue) << std::endl;
 }
 void SceneSoraJewel::lighting()
 {
