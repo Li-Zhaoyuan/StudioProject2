@@ -217,8 +217,12 @@ void SceneMun::Init()
 	meshList[GEO_ORE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ORE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ORE]->material.kShininess = 5.f;
+<<<<<<< HEAD
 	
 	//Minimaps
+=======
+	//meshList[GEO_SPHERE] = MeshBuilder::GenerateSphere("target", Color(1, 0, 0), 18, 36);
+>>>>>>> bad6ee74bd5ce348754bde1feb835f3e0cf37af0
 	meshList[GEO_MINIMAP] = MeshBuilder::GenerateQuad("Minimap", Color(1.f, 1.f, 1.f));
 	meshList[GEO_MINIMAP]->textureID = LoadTGA("Image//Munmap.tga");
 	
@@ -229,7 +233,7 @@ void SceneMun::Init()
 	meshList[GEO_MAINICON] = MeshBuilder::GenerateCube("mainicon for map", Color(1, 0, 0));
 
 	Mtx44 projection;
-	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 10000.f);
+	projection.SetToPerspective(45.f, 16.f / 9.f, 0.1f, 10000.f);
 	projectionStack.LoadMatrix(projection);
 
 	camera.SceneGalaxy = false;
@@ -289,28 +293,9 @@ void SceneMun::Update(double dt)
 	camPosY = camera.position.y;
 	camPosz = camera.position.z;
 	
-
-	if (camera.position.x < worriedladyCoord.x)
-	{
-		worriedladytempx = worriedladyCoord.x - camera.position.x;
-		worriedladytempz = worriedladyCoord.z - camera.position.z;
-		rotateworriedlady = atan(worriedladytempz / worriedladytempx)*(180 / Math::PI);
-	}
-	
-	if ( camera.position.x > minerandplusCoord.x)
-	{
-		minerandplusx = minerandplusCoord.x - camera.position.x;
-		minerandplusz = camera.position.z - minerandplusCoord.z;
-		rotateminer = atan(minerandplusz / minerandplusx)*(180 / Math::PI);
-	}
-	
-	if (camera.position.z < questdudeCoord.z)
-	{
-		questdudex = questdudeCoord.x - camera.position.x;
-		questdudez = questdudeCoord.z - camera.position.z;
-		rotatequestdude = atan(questdudex / questdudez)*(180 / Math::PI);
-	}
-
+	npcRotate();
+	interactions();
+	camera.target;
 }
 void SceneMun::lighting()
 {
@@ -645,14 +630,24 @@ void SceneMun::Render()
 	renderMesh(meshList[GEO_ORE], true);
 	modelStack.PopMatrix();
 
-	Renderpicturetoscreen();
+	modelStack.PushMatrix();
+	modelStack.Translate(camera.target.x, camera.target.y, camera.target.z);
+	modelStack.Scale(0.01, 0.01, 0.01);
+	renderMesh(meshList[GEO_LIGHTBALL], false);
+	modelStack.PopMatrix();
 
-	std::stringstream playerPos;
-	playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosz;
-	//RenderTextOnScreen(meshList[GEO_TEXT], playerPos.str(), Color(1, 0, 0), 2, 0, 18);
-	std::stringstream ss;
-	ss << "FPS:" << fps << "         " << playerPos.str();
-	RenderTextOnScreen(meshList[GEO_TEXT], ss.str(), Color(0, 1, 0), 3, 0, 19);
+	RenderPickaxeOnScreen();
+	Renderpicturetoscreen();
+	if (firstconvowithlady)
+	{
+		std::stringstream playerPos;
+		playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosz;
+		//RenderTextOnScreen(meshList[GEO_TEXT], playerPos.str(), Color(1, 0, 0), 2, 0, 18);
+		std::stringstream ss;
+		ss << "FPS:" << fps << "         " << playerPos.str();
+		RenderTextOnScreen(meshList[GEO_TEXT], ss.str(), Color(0, 1, 0), 3, 0, 19);
+	}
+	
 
 }
 
@@ -705,6 +700,7 @@ void SceneMun::RenderSkybox()
 	modelStack.Scale(1000, 1000, 1000);
 	renderMesh(meshList[GEO_MUNRIGHT], false);
 	modelStack.PopMatrix();
+
 }
 
 void SceneMun::Exit()
@@ -713,4 +709,92 @@ void SceneMun::Exit()
 	glDeleteProgram(m_programID);
 }
 
+void SceneMun::npcRotate()
+{
+	if (camera.position.x < worriedladyCoord.x)
+	{
+		worriedladytempx = worriedladyCoord.x - camera.position.x;
+		worriedladytempz = worriedladyCoord.z - camera.position.z;
+		rotateworriedlady = atan(worriedladytempz / worriedladytempx)*(180 / Math::PI);
+	}
 
+	if (camera.position.x > minerandplusCoord.x)
+	{
+		minerandplusx = minerandplusCoord.x - camera.position.x;
+		minerandplusz = camera.position.z - minerandplusCoord.z;
+		rotateminer = atan(minerandplusz / minerandplusx)*(180 / Math::PI);
+	}
+
+	if (camera.position.z < questdudeCoord.z)
+	{
+		questdudex = questdudeCoord.x - camera.position.x;
+		questdudez = questdudeCoord.z - camera.position.z;
+		rotatequestdude = atan(questdudex / questdudez)*(180 / Math::PI);
+	}
+}
+
+void SceneMun::interactions()
+{
+	if (oreCoord.x + 2.5 >camera.target.x
+		&& oreCoord.x - 2.5 < camera.target.x
+		&& oreCoord.z + 2 > camera.target.z
+		&& oreCoord.z - 2 < camera.target.z
+		&& oreCoord.y + 2.5 > camera.target.y
+		&& oreCoord.y - 2.5 < camera.target.y
+		&& Application::IsKeyPressed(VK_LBUTTON))
+	{
+		firstconvowithlady = true;
+	}
+	else
+	{
+		firstconvowithlady = false;
+	}
+}
+
+void SceneMun::RenderPickaxeOnScreen()
+{
+
+	if (Application::IsKeyPressed(VK_LBUTTON))
+	{
+		Mtx44 ortho;
+		glDisable(GL_DEPTH_TEST);
+		ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+		projectionStack.PushMatrix();
+		projectionStack.LoadMatrix(ortho);
+		viewStack.PushMatrix();
+		viewStack.LoadIdentity(); //No need camera for ortho mode
+		modelStack.PushMatrix();
+		modelStack.LoadIdentity(); //Reset modelStack
+		modelStack.Translate(40, 15, -5);
+		modelStack.Scale(6.5, 7.5, 6.5);
+		//modelStack.Rotate(45, 0, 1, 0);
+		//modelStack.Rotate(-45, 1, 0, 0);
+		renderMesh(meshList[GEO_PICKAXE], true);
+		projectionStack.PopMatrix();
+		viewStack.PopMatrix();
+		modelStack.PopMatrix();
+		glEnable(GL_DEPTH_TEST);
+	}
+	else
+	{
+		Mtx44 ortho;
+		glDisable(GL_DEPTH_TEST);
+		ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+		projectionStack.PushMatrix();
+		projectionStack.LoadMatrix(ortho);
+		viewStack.PushMatrix();
+		viewStack.LoadIdentity(); //No need camera for ortho mode
+		modelStack.PushMatrix();
+		modelStack.LoadIdentity(); //Reset modelStack
+		modelStack.Translate(60, 10, -5);
+		modelStack.Scale(6.5, 6.5, 6.5);
+		modelStack.Rotate(45, 0, 1, 0);
+		//modelStack.Rotate(-45, 1, 0, 0);
+		renderMesh(meshList[GEO_PICKAXE], true);
+		projectionStack.PopMatrix();
+		viewStack.PopMatrix();
+		modelStack.PopMatrix();
+		glEnable(GL_DEPTH_TEST);
+	}
+	
+}

@@ -115,7 +115,7 @@ public:
 	void skybox();
 	virtual void Init();
 	virtual void Update(double dt);
-	void Boundary();
+	void XWingHealth();
 	virtual void Render();
 	virtual void RenderXwing();
 	virtual void RenderAsteroid();
@@ -149,9 +149,9 @@ private:
 
 	float boxX = 0;
 	float boxZ = 0;
-	float camPosX = 0;
-	float camPosY = 0;
-	float camPosz = 0;
+	int camPosX = 0;
+	int camPosY = 0;
+	int camPosz = 0;
 
 	void MunInit();
 	void MunRender();

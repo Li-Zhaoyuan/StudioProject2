@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿Build started 2/19/2016 11:04:38 AM.
      1>Project "C:\Users\n1507\Desktop\CompG Project\SP2\Common\Common.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
@@ -14,6 +15,13 @@
          Debug\Vector3.obj
          Common.vcxproj -> C:\Users\n1507\Desktop\CompG Project\SP2\Debug\Common.lib
      1>Done Building Project "C:\Users\n1507\Desktop\CompG Project\SP2\Common\Common.vcxproj" (Rebuild target(s)).
+=======
+﻿Build started 2/19/2016 9:58:21 AM.
+     1>Project "C:\Users\n1507\Desktop\SP2_1\SP2\Common\Common.vcxproj" on node 2 (Build target(s)).
+     1>Lib:
+         Common.vcxproj -> C:\Users\n1507\Desktop\SP2_1\SP2\Debug\Common.lib
+     1>Done Building Project "C:\Users\n1507\Desktop\SP2_1\SP2\Common\Common.vcxproj" (Build target(s)).
+>>>>>>> bad6ee74bd5ce348754bde1feb835f3e0cf37af0
 
 Build succeeded.
 

@@ -134,6 +134,9 @@ private:
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
 	void Renderpicturetoscreen();
+	void npcRotate();
+	void interactions();
+	void RenderPickaxeOnScreen();
 	unsigned m_vertexArrayID;
 	Mesh *meshList[NUM_GEOMETRY];
 
@@ -172,6 +175,8 @@ private:
 	float rotateworriedlady = 0;
 	float rotateminer = 0;
 	float rotatequestdude = 0;
+
+	bool firstconvowithlady = false;
 
 	MS modelStack, viewStack, projectionStack;
 };

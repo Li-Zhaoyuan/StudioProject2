@@ -177,7 +177,7 @@ void SceneGalaxy::Init()
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("lightball", Color(1, 1, 1), 18, 36);
 
 	Mtx44 projection;
-	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 10000.f);
+	projection.SetToPerspective(45.f, 16.f / 9.f, 0.1f, 10000.f);
 	projectionStack.LoadMatrix(projection);
 
 	camera.SceneGalaxy = true;
@@ -186,6 +186,7 @@ void SceneGalaxy::Init()
 }
 
 static float rotateXWing = 0.f;
+static int Health = 100.f;
 bool rotateXWing_Limit;
 
 void SceneGalaxy::Update(double dt)
@@ -498,10 +499,16 @@ void SceneGalaxy::Render()
 
 }
 
+void SceneGalaxy::XWingHealth()
+{
+	
+}
+
 void SceneGalaxy::RenderXwing()
 {
 	modelStack.PushMatrix();
-	modelStack.Translate(0, 400, 300);
+	modelStack.Translate(camera.target.x, 490, camera.target.z + (-30));
+	modelStack.Rotate(180, 0, 1, 0);
 	modelStack.Rotate(rotateXWing, 0, 0, 1);
 	modelStack.Scale(2.2f, 2.2f, 2.2f);
 	renderMesh(meshList[GEO_XWING], false);
