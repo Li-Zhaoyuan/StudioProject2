@@ -172,6 +172,9 @@ void SceneGalaxy::Init()
 	meshList[GEO_ASTEROID] = MeshBuilder::GenerateOBJ("asteroid", "OBJ//asteroid.obj");
 	meshList[GEO_ASTEROID]->textureID = LoadTGA("Image//asteroid.tga");
 
+	meshList[GEO_MISSILE] = MeshBuilder::GenerateOBJ("missile", "OBJ//missile.obj");
+	meshList[GEO_MISSILE]->textureID = LoadTGA("Image//missile.tga");
+
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//TimesNewRoman.tga");
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("lightball", Color(1, 1, 1), 18, 36);
@@ -188,6 +191,7 @@ void SceneGalaxy::Init()
 static float rotateXWing = 0.f;
 static int Health = 100.f;
 bool rotateXWing_Limit;
+static float testtranslate = 0.f;
 
 void SceneGalaxy::Update(double dt)
 {
@@ -241,10 +245,12 @@ void SceneGalaxy::Update(double dt)
 		if (Application::IsKeyPressed('D'))
 		{
 			rotateXWing += 5.f;
+			testtranslate += 5.f;
 		}
 		else if (Application::IsKeyPressed('A'))
 		{
 			rotateXWing -= 5.f;
+			testtranslate -= 5.f;
 		}
 	}
 	else
@@ -252,20 +258,39 @@ void SceneGalaxy::Update(double dt)
 		if (Application::IsKeyPressed('A'))
 		{
 			rotateXWing -= 5.f;
+			testtranslate -= 5.f;
 		}
 		else if (Application::IsKeyPressed('D'))
 		{
 			rotateXWing += 5.f;
+			testtranslate += 5.f;
 		}
+	}
+
+	if (shootMissile == true)
+	{
+		missileCoord += (tempView)*(float)(10 * dt);
+	}
+
+	if (Application::IsKeyPressed(VK_LBUTTON))
+	{
+		if (bullets > 0)
+		{
+			bullets--;
+			std::cout << bullets << std::endl;
+		}
+		else 
+			return;
+		missileCoord = camera.position;
+		tempView = (camera.target - camera.position).Normalized();
+		shootMissile = true;
+		tempPos = camera.position;
 	}
 
 	camPosX = camera.position.x;
 	camPosY = camera.position.y;
 	camPosz = camera.position.z;
 	
-	std::cout << "galaxy " << camera.SceneGalaxy << std::endl;
-	std::cout << "mun " << camera.SceneMun << std::endl;
-	std::cout << "sora " << camera.SceneSoraJewel << std::endl;
 }
 
 void SceneGalaxy::lighting()
@@ -469,9 +494,9 @@ void SceneGalaxy::Render()
 	modelStack.PopMatrix();
 
 	
-	modelStack.PushMatrix();
+	/*modelStack.PushMatrix();
 	renderMesh(meshList[GEO_AXES], false);
-	modelStack.PopMatrix();
+	modelStack.PopMatrix();*/
 
 	modelStack.PushMatrix();
 	modelStack.Translate(0, 496.9f, 0);
@@ -480,6 +505,7 @@ void SceneGalaxy::Render()
 
 	RenderXwing();
 	RenderAsteroid();
+	RenderMissile();
 
 	/*modelStack.PushMatrix();
 	modelStack.Translate(0.0f, 0.0f, -camera.Charradius);
@@ -525,6 +551,19 @@ void SceneGalaxy::RenderAsteroid()
 	modelStack.Scale(2.2f, 2.2f, 2.2f);
 	renderMesh(meshList[GEO_ASTEROID], false);
 	modelStack.PopMatrix();
+}
+
+void SceneGalaxy::RenderMissile()
+{
+	if (shootMissile == true)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(missileCoord.x, 500, missileCoord.z);
+		modelStack.Scale(1.2f, 1.2f, 1.2f);
+		renderMesh(meshList[GEO_MISSILE], false);
+		modelStack.PopMatrix();
+	}
+	
 }
 
 void SceneGalaxy::RenderSkybox()

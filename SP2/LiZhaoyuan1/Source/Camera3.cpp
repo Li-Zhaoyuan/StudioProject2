@@ -444,7 +444,7 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 {
 	if (SceneGalaxy == true)
 	{
-		if (Testvalue.y <= 1000)
+		if (Testvalue.y <= 100)
 		{
 			if (XZ == 1)
 			{
@@ -507,15 +507,13 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 
 bool Camera3::AllGalaxyBoundaryX(Vector3 Testvalue)
 {
-	if (boundaryCheckerX(20, 50, 20, 50, Testvalue) == false)
-		return true;
+	
 	return false;
 }
 
 bool Camera3::AllGalaxyBoundaryZ(Vector3 Testvalue)
 {
-	if (boundaryCheckerZ(20, 50, 20, 50, Testvalue) == false)
-		return true;
+	
 	return false;
 }
 

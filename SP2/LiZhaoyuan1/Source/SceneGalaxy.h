@@ -10,6 +10,7 @@
 #include "Camera4.h"
 #include "MatrixStack.h"
 #include "RenderMun.h"
+#include <vector>
 //#include "OBJBoundary.h"
 
 class SceneGalaxy : public Scene
@@ -65,6 +66,7 @@ class SceneGalaxy : public Scene
 		GEO_MALE,
 		GEO_PROTAGANIST,
 		GEO_CAVE,
+		GEO_MISSILE,
 		NUM_GEOMETRY,
 	};
 
@@ -119,6 +121,7 @@ public:
 	virtual void Render();
 	virtual void RenderXwing();
 	virtual void RenderAsteroid();
+	virtual void RenderMissile();
 	virtual void Exit();
 
 private:
@@ -126,6 +129,14 @@ private:
 	bool enableLight = false;
 	float LSPEED = 10.f;
 	double fps = 0;
+	Vector3 missileCoord;
+	Vector3 tempView;
+	bool shootMissile = false;
+	Vector3 tempPos;
+
+	int bullets = 100;
+
+
 
 	void renderMesh(Mesh *mesh, bool enableLight);
 	void lighting();
