@@ -242,7 +242,7 @@ void Camera3::Update(double dt, float bounds)
 		minimapsoracoords.y = 55;
 		Reset();
 	}
-	/*SetCursorPos(800 / 2, 600 / 2);
+	
 	if (mousecursor.x<800 / 2)
 	{
 		float yaw = (float)(CAMERA_SPEED * 0.5 * dt*(800 / 2 - mousecursor.x));
@@ -302,8 +302,8 @@ void Camera3::Update(double dt, float bounds)
 			target = view + position;
 		}
 
-	}*/
-	
+	}
+	SetCursorPos(800 / 2, 600 / 2);
 }
 
 void Camera3::Reset()
@@ -484,11 +484,11 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 	}
 	if (SceneSoraJewel == true)
 	{
-<<<<<<< HEAD
+
 		if (Testvalue.y >= 20)
-=======
+
 		if (Testvalue.y <= 100)
->>>>>>> 9c218b9cba6a45bcd3abd88503382f00b3b8c991
+
 		{
 			if (XZ == 1)
 			{
@@ -543,7 +543,7 @@ bool Camera3::AllMunBoundaryZ(Vector3 Testvalue)
 
 bool Camera3::AllSoraJewelBoundaryX(Vector3 Testvalue)
 {
-<<<<<<< HEAD
+
 	if (!boundaryCheckerX(2, 50, -50, -26, Testvalue))
 		return false;
 	/*
@@ -559,16 +559,16 @@ bool Camera3::AllSoraJewelBoundaryX(Vector3 Testvalue)
 
 bool Camera3::AllSoraJewelBoundaryZ(Vector3 Testvalue)
 {
-<<<<<<< HEAD
+
 	if(!boundaryCheckerZ(2, 50, -50, -26, Testvalue))
 		return false;
 	//if (!boundaryCheckerZ(-39, -32, -38, -28, Testvalue))
 	//	return false;
-=======
+
 	if (!boundaryCheckerZ(-20, 55, -86, -20, Testvalue))
 		return true;
 	/*if (!boundaryCheckerZ(-39, -32, -38, -28, Testvalue))
 		return false;*/
->>>>>>> 9c218b9cba6a45bcd3abd88503382f00b3b8c991
+
 	return false;
 }
