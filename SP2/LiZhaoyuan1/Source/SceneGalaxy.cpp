@@ -471,7 +471,7 @@ void SceneGalaxy::Render()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(0, 496.9, 0);
+	modelStack.Translate(0, 496.9f, 0);
 	RenderSkybox();
 	modelStack.PopMatrix();
 
@@ -503,7 +503,7 @@ void SceneGalaxy::RenderXwing()
 	modelStack.PushMatrix();
 	modelStack.Translate(0, 400, 300);
 	modelStack.Rotate(rotateXWing, 0, 0, 1);
-	modelStack.Scale(2.2, 2.2, 2.2);
+	modelStack.Scale(2.2f, 2.2f, 2.2f);
 	renderMesh(meshList[GEO_XWING], false);
 	modelStack.PopMatrix();
 
@@ -513,7 +513,7 @@ void SceneGalaxy::RenderAsteroid()
 {
 	modelStack.PushMatrix();
 	modelStack.Translate(0, 500, 50);
-	modelStack.Scale(2.2, 2.2, 2.2);
+	modelStack.Scale(2.2f, 2.2f, 2.2f);
 	renderMesh(meshList[GEO_ASTEROID], false);
 	modelStack.PopMatrix();
 }
