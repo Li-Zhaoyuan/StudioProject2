@@ -23,7 +23,8 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 	this->up = defaultUp = right.Cross(view).Normalized();
 	translateChar = 0;
 	rotateChar = 0;
-	minimapcoords = (60, 10, -1);
+	minimapcoords = (60.f, 10.f, -1.f);
+	minimapsoracoords = (78.f, 55.f, -1.f);
 	SetCursorPos( 800 / 2, 600 / 2);
 }
 
@@ -66,7 +67,7 @@ void Camera3::Update(double dt, float bounds)
 				position.x -= right.x * (float)(CAMERA_SPEED * dt);
 				target.x -= right.x * (float)(CAMERA_SPEED * dt);
 				minimapcoords.y += (right.x*(float)(CAMERA_SPEED*dt*0.1));
-				minimapsoracoords.y += (right.x*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.x += (right.x*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
 		if (position.z - (right.z * (float)(CAMERA_SPEED * dt)) > -bounds
@@ -78,7 +79,7 @@ void Camera3::Update(double dt, float bounds)
 				position.z -= right.z * (float)(CAMERA_SPEED * dt);
 				target.z -= right.z * (float)(CAMERA_SPEED * dt);
 				minimapcoords.x += (right.z*(float)(CAMERA_SPEED*dt*0.1));
-				minimapsoracoords.x += (right.z*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.y += (right.z*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
 
@@ -117,7 +118,7 @@ void Camera3::Update(double dt, float bounds)
 				position.x += right.x * (float)(CAMERA_SPEED * dt);
 				target.x += right.x * (float)(CAMERA_SPEED * dt);
 				minimapcoords.y -= (right.x*(float)(CAMERA_SPEED*dt*0.1));
-				minimapsoracoords.y -= (right.x*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.x += (right.x*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
 		if (position.z + (right.z * (float)(CAMERA_SPEED * dt)) > -bounds
@@ -129,7 +130,7 @@ void Camera3::Update(double dt, float bounds)
 				position.z += right.z * (float)(CAMERA_SPEED * dt);
 				target.z += right.z * (float)(CAMERA_SPEED * dt);
 				minimapcoords.x -= (right.z*(float)(CAMERA_SPEED*dt*0.1));
-				minimapsoracoords.x -= (right.z*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.y -= (right.z*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
 	}
@@ -170,7 +171,7 @@ void Camera3::Update(double dt, float bounds)
 				position.x += view.x * (float)(CAMERA_SPEED * dt);
 				target.x += view.x * (float)(CAMERA_SPEED * dt); 
 				minimapcoords.y -= (view.x*(float)(CAMERA_SPEED*dt*0.1));
-				minimapsoracoords.y -= (view.x*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.x += (view.x*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
 		if (position.z + (view.z * (float)(CAMERA_SPEED * dt)) > -bounds
@@ -182,7 +183,7 @@ void Camera3::Update(double dt, float bounds)
 				position.z += view.z * (float)(CAMERA_SPEED * dt);
 				target.z += view.z * (float)(CAMERA_SPEED * dt);
 				minimapcoords.x -= (view.z*(float)(CAMERA_SPEED*dt*0.1));
-				minimapsoracoords.x -= (view.z*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.y -= (view.z*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
 	}
@@ -219,7 +220,7 @@ void Camera3::Update(double dt, float bounds)
 				position.x -= view.x * (float)(CAMERA_SPEED * dt);
 				target.x -= view.x * (float)(CAMERA_SPEED * dt);
 				minimapcoords.y += (view.x*(float)(CAMERA_SPEED*dt*0.1));
-				minimapsoracoords.y += (view.x*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.x += (view.x*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
 		if (position.z - (view.z * (float)(CAMERA_SPEED * dt)) > -bounds
@@ -231,7 +232,8 @@ void Camera3::Update(double dt, float bounds)
 				position.z -= view.z * (float)(CAMERA_SPEED * dt);
 				target.z -= view.z * (float)(CAMERA_SPEED * dt);
 				minimapcoords.x += (view.z*(float)(CAMERA_SPEED*dt*0.1));
-				minimapsoracoords.x += (view.z*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.y += (view.z*(float)(CAMERA_SPEED*dt*0.1));
+
 			}
 		}
 	}
@@ -240,7 +242,7 @@ void Camera3::Update(double dt, float bounds)
 	{
 		minimapcoords.x = 75;
 		minimapcoords.y = 55;
-		minimapsoracoords.x = 75;
+		minimapsoracoords.x = 78;
 		minimapsoracoords.y = 55;
 		Reset();
 	}
@@ -414,11 +416,11 @@ bool Camera3::OBJboundaryX(Vector3 Testvalue)
 	{
 		if (AllGalaxyBoundaryX(Testvalue)){ return false; }
 	}
-	else if (SceneMun == true)
+	if (SceneMun == true)
 	{
 		if (AllMunBoundaryX(Testvalue)){ return false; }
 	}
-	else if (SceneSoraJewel == true)
+	if (SceneSoraJewel == true)
 	{
 		if (AllSoraJewelBoundaryX(Testvalue)){ return false; }
 	}
@@ -431,11 +433,11 @@ bool Camera3::OBJboundaryZ(Vector3 Testvalue)
 	{
 		if (AllGalaxyBoundaryZ(Testvalue)){ return false; }
 	}
-	else if (SceneMun == true)
+	if (SceneMun == true)
 	{
 		if (AllGalaxyBoundaryZ(Testvalue)){ return false; }
 	}
-	else if (SceneSoraJewel == true)
+	if (SceneSoraJewel == true)
 	{
 		if (AllSoraJewelBoundaryZ(Testvalue)){ return false; }
 	}
@@ -446,7 +448,7 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 {
 	if (SceneGalaxy == true)
 	{
-		if (Testvalue.y <= 1000)
+		if (Testvalue.y >= 20)
 		{
 			if (XZ == 1)
 			{
@@ -464,7 +466,7 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 			}
 		}
 	}
-	else if (SceneMun == true)
+	if (SceneMun == true)
 	{
 		if (Testvalue.y <= 100)
 		{
@@ -484,9 +486,13 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 			}
 		}
 	}
-	else if (SceneSoraJewel == true)
+	if (SceneSoraJewel == true)
 	{
+
+		if (Testvalue.y >= 20)
+
 		if (Testvalue.y <= 100)
+
 		{
 			if (XZ == 1)
 			{
@@ -509,52 +515,46 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 
 bool Camera3::AllGalaxyBoundaryX(Vector3 Testvalue)
 {
-	if (boundaryCheckerX(20, 50, 20, 50, Testvalue) == false)
+	if (!boundaryCheckerX(20, 50, 20, 50, Testvalue))
 		return true;
 	return false;
 }
 
 bool Camera3::AllGalaxyBoundaryZ(Vector3 Testvalue)
 {
-	if (boundaryCheckerZ(20, 50, 20, 50, Testvalue) == false)
+	if (!boundaryCheckerZ(20, 50, 20, 50, Testvalue))
 		return true;
 	return false;
 }
 
 bool Camera3::AllMunBoundaryX(Vector3 Testvalue)
 {
-	if (boundaryCheckerX(2, 50, -50, -26, Testvalue) == false)
+	if (!boundaryCheckerX(2, 50, -50, -26, Testvalue))
 		return true;
-	if (boundaryCheckerX(-39, -32, -38, -28, Testvalue) == false)
+	if (!boundaryCheckerX(-39, -32, -38, -28, Testvalue))
 		return true;
 	return false;
 }
 
 bool Camera3::AllMunBoundaryZ(Vector3 Testvalue)
 {
-	if (boundaryCheckerZ(2, 50, -50, -26, Testvalue) == false)
+	if (!boundaryCheckerZ(2, 50, -50, -26, Testvalue))
 		return true;
-	if (boundaryCheckerZ(-39, -32, -38, -28, Testvalue) == false)
+	if (!boundaryCheckerZ(-39, -32, -38, -28, Testvalue))
 		return true;
 	return false;
 }
 
 bool Camera3::AllSoraJewelBoundaryX(Vector3 Testvalue)
 {
-
-	if (boundaryCheckerX(-20, 55, -86, -20, Testvalue) == false)
+	if (!boundaryCheckerX(-0.4f, 50, -79, -27, Testvalue))
 		return true;
-	/*if (!boundaryCheckerX(-39, -32, -38, -28, Testvalue))
-		return false;*/
 	return false;
 }
 
 bool Camera3::AllSoraJewelBoundaryZ(Vector3 Testvalue)
 {
-
-	if (boundaryCheckerZ(-20, 55, -86, -20, Testvalue) == false)
+	if (!boundaryCheckerZ(-0.4f, 50, -79, -27, Testvalue))
 		return true;
-	/*if (!boundaryCheckerZ(-39, -32, -38, -28, Testvalue))
-		return false;*/
 	return false;
 }

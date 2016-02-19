@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿Build started 2/19/2016 5:39:35 PM.
      1>Project "C:\Users\n1507\Desktop\SP2_1\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
@@ -32,3 +33,14 @@
 Build succeeded.
 
 Time Elapsed 00:00:00.93
+=======
+﻿Build started 19/2/2016 17:25:43.
+     1>Project "C:\Users\User\Desktop\Studio Project\SP2\SP2ReallyConfirmed\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         LiZhaoyuan1.vcxproj -> C:\Users\User\Desktop\Studio Project\SP2\SP2ReallyConfirmed\SP2\Debug\LiZhaoyuan1.exe
+     1>Done Building Project "C:\Users\User\Desktop\Studio Project\SP2\SP2ReallyConfirmed\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.11
+>>>>>>> 56d5bad15446022419f9b6cc576e72939cefe3f7
