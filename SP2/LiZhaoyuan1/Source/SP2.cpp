@@ -438,7 +438,7 @@ void SP2::Render()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(0, 496.9, 0);
+	modelStack.Translate(0.f, 496.9f, 0.f);
 	RenderSkybox();
 	modelStack.PopMatrix();
 

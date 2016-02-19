@@ -217,12 +217,8 @@ void SceneMun::Init()
 	meshList[GEO_ORE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ORE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ORE]->material.kShininess = 5.f;
-<<<<<<< HEAD
-	
 	//Minimaps
-=======
 	//meshList[GEO_SPHERE] = MeshBuilder::GenerateSphere("target", Color(1, 0, 0), 18, 36);
->>>>>>> bad6ee74bd5ce348754bde1feb835f3e0cf37af0
 	meshList[GEO_MINIMAP] = MeshBuilder::GenerateQuad("Minimap", Color(1.f, 1.f, 1.f));
 	meshList[GEO_MINIMAP]->textureID = LoadTGA("Image//Munmap.tga");
 	
@@ -494,22 +490,6 @@ void SceneMun::Renderpicturetoscreen()
 	modelStack.PopMatrix();
 	glEnable(GL_DEPTH_TEST);
 
-	glDisable(GL_DEPTH_TEST);
-	ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
-	projectionStack.PushMatrix();
-	projectionStack.LoadMatrix(ortho);
-	viewStack.PushMatrix();
-	viewStack.LoadIdentity(); //No need camera for ortho mode
-	modelStack.PushMatrix();
-	modelStack.LoadIdentity(); //Reset modelStack
-	modelStack.Translate(65, 5, -1);
-	modelStack.Scale(0.5, 0.5, 0.5);
-	modelStack.Rotate(90, 1, 0, 0);
-	renderMesh(meshList[GEO_MAINICON], false);
-	projectionStack.PopMatrix();
-	viewStack.PopMatrix();
-	modelStack.PopMatrix();
-	glEnable(GL_DEPTH_TEST);
 }
 
 void SceneMun::Render()
@@ -632,7 +612,7 @@ void SceneMun::Render()
 
 	modelStack.PushMatrix();
 	modelStack.Translate(camera.target.x, camera.target.y, camera.target.z);
-	modelStack.Scale(0.01, 0.01, 0.01);
+	modelStack.Scale(0.01f, 0.01f, 0.01f);
 	renderMesh(meshList[GEO_LIGHTBALL], false);
 	modelStack.PopMatrix();
 
