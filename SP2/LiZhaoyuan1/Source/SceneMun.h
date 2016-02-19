@@ -154,7 +154,7 @@ private:
 	float camPosY = 0;
 	float camPosz = 0;
 	
-	Vector3 crashedplaneCoord = Vector3(-36,4.9,-34);
+	Vector3 crashedplaneCoord = Vector3(-36.f,4.9f,-34.f);
 	Vector3 questdudehouseCoord = Vector3(33, -5, 20);
 	Vector3 worriedladyhouseCoord = Vector3(20, -5, -38);
 	Vector3 worriedladyCoord = Vector3(2, -4, -38);

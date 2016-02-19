@@ -151,6 +151,7 @@ void SceneMun::Init()
 
 	meshList[GEO_QUAD] = MeshBuilder::GenerateQuad("quad", Color(1, 1, 1));
 
+	//Skybox
 	meshList[GEO_MUNFRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
 	meshList[GEO_MUNFRONT]->textureID = LoadTGA("Image//MunFront.tga");
 	meshList[GEO_MUNBACK] = MeshBuilder::GenerateQuad("back", Color(1, 1, 1));
@@ -163,50 +164,64 @@ void SceneMun::Init()
 	meshList[GEO_MUNLEFT]->textureID = LoadTGA("Image//MunBack.tga");
 	meshList[GEO_MUNRIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1));
 	meshList[GEO_MUNRIGHT]->textureID = LoadTGA("Image//MunRight.tga");
-	meshList[GEO_MUNGROUND] = MeshBuilder::GenerateQuad("ground", Color(0.2, 0.2, 0.2));
+	meshList[GEO_MUNGROUND] = MeshBuilder::GenerateQuad("ground", Color(0.2f, 0.2f, 0.2f));
+
+	//Objs -Xwing
 	meshList[GEO_CRASHEDPLANE] = MeshBuilder::GenerateOBJ("crashedplane", "OBJ//XWingCrash.obj");
 	meshList[GEO_CRASHEDPLANE]->textureID = LoadTGA("Image//XWingCrash_Texture.tga");
 	meshList[GEO_CRASHEDPLANE]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_CRASHEDPLANE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_CRASHEDPLANE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_CRASHEDPLANE]->material.kShininess = 5.f;
+	//Houses
 	meshList[GEO_HOUSE] = MeshBuilder::GenerateOBJ("house", "OBJ//house.obj");
 	meshList[GEO_HOUSE]->textureID = LoadTGA("Image//house.tga");
 	meshList[GEO_HOUSE]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_HOUSE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_HOUSE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_HOUSE]->material.kShininess = 5.f;
+	//NPCS
 	meshList[GEO_ALIEN] = MeshBuilder::GenerateOBJ("Guy", "OBJ//CharacterModel.obj");
 	meshList[GEO_ALIEN]->textureID = LoadTGA("Image//CatAlien.tga");
 	meshList[GEO_ALIEN]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ALIEN]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ALIEN]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ALIEN]->material.kShininess = 5.f;
-	meshList[GEO_CAVE] = MeshBuilder::GenerateOBJ("cave", "OBJ//Cave.obj");
-	meshList[GEO_CAVE]->textureID = LoadTGA("Image//StoneTile.tga");
-	meshList[GEO_CAVE]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
-	meshList[GEO_CAVE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
-	meshList[GEO_CAVE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
-	meshList[GEO_CAVE]->material.kShininess = 5.f;
-	meshList[GEO_PICKAXE] = MeshBuilder::GenerateOBJ("pickaxe", "OBJ//Pickaxe.obj");
-	meshList[GEO_PICKAXE]->textureID = LoadTGA("Image//Pickaxe.tga");
-	meshList[GEO_PICKAXE]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
-	meshList[GEO_PICKAXE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
-	meshList[GEO_PICKAXE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
-	meshList[GEO_PICKAXE]->material.kShininess = 5.f;
+
 	meshList[GEO_FEMALEA] = MeshBuilder::GenerateOBJ("femaleA", "OBJ//CharacterModel.obj");
 	meshList[GEO_FEMALEA]->textureID = LoadTGA("Image//FemaleCharacter2.tga");
 	meshList[GEO_FEMALEA]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_FEMALEA]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_FEMALEA]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_FEMALEA]->material.kShininess = 5.f;
+
+	//Cave
+	meshList[GEO_CAVE] = MeshBuilder::GenerateOBJ("cave", "OBJ//Cave.obj");
+	meshList[GEO_CAVE]->textureID = LoadTGA("Image//StoneTile.tga");
+	meshList[GEO_CAVE]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_CAVE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_CAVE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_CAVE]->material.kShininess = 5.f;
+	//Pickaxe Pick-up item
+	meshList[GEO_PICKAXE] = MeshBuilder::GenerateOBJ("pickaxe", "OBJ//Pickaxe.obj");
+	meshList[GEO_PICKAXE]->textureID = LoadTGA("Image//Pickaxe.tga");
+	meshList[GEO_PICKAXE]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_PICKAXE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_PICKAXE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_PICKAXE]->material.kShininess = 5.f;
+
 	meshList[GEO_ORE] = MeshBuilder::GenerateOBJ("ore", "OBJ//oreCube.obj");
 	meshList[GEO_ORE]->textureID = LoadTGA("Image//diamondOre.tga");
 	meshList[GEO_ORE]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ORE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ORE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ORE]->material.kShininess = 5.f;
+<<<<<<< HEAD
+	
+	//Minimaps
+=======
 	//meshList[GEO_SPHERE] = MeshBuilder::GenerateSphere("target", Color(1, 0, 0), 18, 36);
+>>>>>>> bad6ee74bd5ce348754bde1feb835f3e0cf37af0
 	meshList[GEO_MINIMAP] = MeshBuilder::GenerateQuad("Minimap", Color(1.f, 1.f, 1.f));
 	meshList[GEO_MINIMAP]->textureID = LoadTGA("Image//Munmap.tga");
 	
@@ -554,7 +569,7 @@ void SceneMun::Render()
 
 	modelStack.PushMatrix();
 	modelStack.Translate(crashedplaneCoord.x, crashedplaneCoord.y, crashedplaneCoord.z);
-	modelStack.Scale(2.2, 2.2, 2.2);
+	modelStack.Scale(2.2f, 2.2f, 2.2f);
 	renderMesh(meshList[GEO_CRASHEDPLANE], true);
 	modelStack.PopMatrix();
 

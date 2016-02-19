@@ -31,7 +31,7 @@ void SP2::MunInit()
 	meshList[GEO_MUNLEFT]->textureID = LoadTGA("Image//MunBack.tga");
 	meshList[GEO_MUNRIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1));
 	meshList[GEO_MUNRIGHT]->textureID = LoadTGA("Image//MunRight.tga");
-	meshList[GEO_MUNGROUND] = MeshBuilder::GenerateQuad("ground", Color(0.2, 0.2, 0.2));
+	meshList[GEO_MUNGROUND] = MeshBuilder::GenerateQuad("ground", Color(0.2f, 0.2f, 0.2f));
 	meshList[GEO_CRASHEDPLANE] = MeshBuilder::GenerateOBJ("crashedplane", "OBJ//XWingCrash.obj");
 	meshList[GEO_CRASHEDPLANE]->textureID = LoadTGA("Image//XWingCrash_Texture.tga");
 	meshList[GEO_CRASHEDPLANE]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
@@ -73,8 +73,8 @@ void SP2::MunRender()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-36, 4.9, -34);
-	modelStack.Scale(2.2, 2.2, 2.2);
+	modelStack.Translate(-36.f, 4.9f, -34.f);
+	modelStack.Scale(2.2f, 2.2f, 2.2f);
 	renderMesh(meshList[GEO_CRASHEDPLANE], true);
 	modelStack.PopMatrix();
 
