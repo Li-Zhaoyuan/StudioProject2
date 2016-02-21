@@ -264,7 +264,7 @@ void SceneMun::Init()
 	rotateminer = 0;
 	rotatequestdude = 0;
 
-	loadingbar = 0.01;
+	loadingbar = 0.01f;
 
 	mining = false;
 	isMined = false;

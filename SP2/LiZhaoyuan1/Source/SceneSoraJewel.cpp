@@ -189,6 +189,27 @@ void SceneSoraJewel::Init()
 	meshList[GEO_GLASS]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
 	meshList[GEO_GLASS]->material.kShininess = 1.f;
 
+	meshList[GEO_KEG] = MeshBuilder::GenerateOBJ("Glass", "OBJ//Keg.obj");
+	meshList[GEO_KEG]->textureID = LoadTGA("Image//Keg_Texture.tga");
+	meshList[GEO_KEG]->material.kSpecular.Set(0.2f, 0.2f, 0.2f);
+	meshList[GEO_KEG]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_KEG]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_KEG]->material.kShininess = 1.f;
+
+	meshList[GEO_BEEREMPTY] = MeshBuilder::GenerateOBJ("Glass", "OBJ//Beer_Empty.obj");
+	meshList[GEO_BEEREMPTY]->textureID = LoadTGA("Image//Beer_Empty_Texture.tga");
+	meshList[GEO_BEEREMPTY]->material.kSpecular.Set(0.2f, 0.2f, 0.2f);
+	meshList[GEO_BEEREMPTY]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_BEEREMPTY]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_BEEREMPTY]->material.kShininess = 1.f;
+
+	meshList[GEO_BEERFULL] = MeshBuilder::GenerateOBJ("Glass", "OBJ//Beer.obj");
+	meshList[GEO_BEERFULL]->textureID = LoadTGA("Image//Beer_Full_Texture.tga");
+	meshList[GEO_BEERFULL]->material.kSpecular.Set(0.2f, 0.2f, 0.2f);
+	meshList[GEO_BEERFULL]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_BEERFULL]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_BEERFULL]->material.kShininess = 1.5f;
+
 	meshList[GEO_GLOBE] = MeshBuilder::GenerateOBJ("Globe", "OBJ//earth.obj");
 	meshList[GEO_GLOBE]->textureID = LoadTGA("Image//hologram_earth.tga");
 	meshList[GEO_GLOBE]->material.kSpecular.Set(0.2f, 0.2f, 0.2f);
@@ -529,6 +550,21 @@ void SceneSoraJewel::Render()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
+	glBlendFunc(1.5, 1);
+	modelStack.Translate(18, 8, -33);
+	modelStack.Rotate(-90, 0, 1, 0);
+	modelStack.Scale(1, 1, 1);
+	renderMesh(meshList[GEO_BEEREMPTY], true);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-50, 0, -104);
+	modelStack.Scale(5, 5, 5);
+	renderMesh(meshList[GEO_KEG], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
 	glBlendFunc(1.1f, 1);
 	modelStack.Translate(25, 45, -53);
 	modelStack.Scale(30, 30, 30);
@@ -545,12 +581,15 @@ void SceneSoraJewel::Render()
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	modelStack.PopMatrix();
 
+
+	//NPC Rendering
 	modelStack.PushMatrix();
 	modelStack.Translate(13, -1, -53);
 	modelStack.Rotate(180, 0, 1, 0);
 	modelStack.Scale(2.4f, 2.4f, 2.4f);
 	renderMesh(meshList[GEO_QUESTLADY], false);
 	modelStack.PopMatrix();
+
 	modelStack.PushMatrix();
 	modelStack.Translate(-96, 5, -40);
 	modelStack.Rotate(180, 0, 1, 0);

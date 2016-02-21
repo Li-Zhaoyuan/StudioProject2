@@ -1,5 +1,5 @@
-#ifndef SceneSoraJewel_H_
-#define SceneSoraJewel_H_
+#ifndef SCENESORAJEWEL_H_
+#define SCENESORAJEWEL_H_
 
 #include "Scene.h"
 #include "Mesh.h"
