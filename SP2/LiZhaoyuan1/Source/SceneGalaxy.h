@@ -11,7 +11,7 @@
 #include "MatrixStack.h"
 #include "RenderMun.h"
 #include <vector>
-#include "Shooting.h"
+#include "Missile.h"
 
 class SceneGalaxy : public Scene
 {
@@ -135,8 +135,9 @@ private:
 	double fps = 0;
 	bool shootMissile = false;
 	
-
-	int bullets = 100;
+	int Missiles;
+	int bulletCount = 0;
+	Missile* Capacity;
 
 	void renderMesh(Mesh *mesh, bool enableLight);
 	void lighting();

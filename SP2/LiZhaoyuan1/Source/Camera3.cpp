@@ -318,6 +318,84 @@ void Camera3::Reset()
 	view = (target - position).Normalized();
 }
 
+void Camera3::XWingCamera(double dt, float bounds)
+{
+	POINT mousecursor;
+	static const float CAMERA_SPEED = 25.f;
+	GetCursorPos(&mousecursor);
+
+	if (Application::IsKeyPressed('R'))
+	{
+		Reset();
+	}
+	if (mousecursor.x<800 / 2)
+	{
+		if (target.x > (position.x - 0.1))
+		{
+			float yaw = (float)(CAMERA_SPEED * 0.5 * dt*(800 / 2 - mousecursor.x));
+			rotateChar += yaw;
+			Vector3 view = (target - position).Normalized();
+			Vector3 right = view.Cross(up);
+			Mtx44 rotation;
+			rotation.SetToRotation(yaw, 0, 1, 0);
+			view = rotation * view;
+			target = position + view;
+			up = rotation * up;
+		}
+	}
+	if (mousecursor.x>800 / 2)
+	{
+		if (target.x < (position.x + 0.1))
+		{
+			float yaw = (float)(-CAMERA_SPEED* 0.5 * dt*(mousecursor.x - 800 / 2));
+			rotateChar += yaw;
+			Vector3 view = (target - position).Normalized();
+			Vector3 right = view.Cross(up);
+			Mtx44 rotation;
+			rotation.SetToRotation(yaw, 0, 1, 0);
+			view = rotation * view;
+			target = position + view;
+			up = rotation * up;
+		}
+	}
+	if (mousecursor.y<600 / 2)
+	{
+		if (target.y < (position.y + 0.2))
+		{
+			float pitch = (float)(CAMERA_SPEED * 0.5* dt*(600 / 2 - mousecursor.y));
+			Vector3 view = (target - position).Normalized();
+			Vector3 right = view.Cross(up);
+			right.y = 0;
+			right.Normalize();
+			up = right.Cross(view).Normalized();
+
+			Mtx44 rotation;
+			rotation.SetToRotation(pitch, right.x, right.y, right.z);
+			view = rotation * view;
+			target = view + position;
+		}
+
+	}
+	if (mousecursor.y>600 / 2)
+	{
+		if (target.y > (position.y - 0.2))
+		{
+			float pitch = (float)(-CAMERA_SPEED * 0.5 * 2 * dt*(mousecursor.y - 600 / 2));
+			Vector3 view = (target - position).Normalized();
+			Vector3 right = view.Cross(up);
+			right.y = 0;
+			right.Normalize();
+			up = right.Cross(view).Normalized();
+			Mtx44 rotation;
+			rotation.SetToRotation(pitch, right.x, right.y, right.z);
+			view = rotation * view;
+			target = view + position;
+		}
+
+	}
+	view = (target - position).Normalized();
+	SetCursorPos(800 / 2, 600 / 2);
+}
 void Camera3::UpdateCollision(float bounds, double dt)
 {
 	static const float CAMERA_SPEED = 25.f;
@@ -399,15 +477,15 @@ void Camera3::UpdateCollision(float bounds, double dt)
 
 bool Camera3::boundaryCheckerX(float smallx, float largex, float smallz, float largez, Vector3 value)
 {
-	if ((value.z > smallz) && (value.z<largez) && (value.x > smallx) && (value.x<smallx + 4)){ return false; }
-	if ((value.z > smallz) && (value.z<largez) && (value.x < largex) && (value.x>largex - 4)){ return false; }
+	if ((value.z > smallz) && (value.z < largez) && (value.x > smallx) && (value.x < smallx + 4)){ return false; }
+	if ((value.z > smallz) && (value.z < largez) && (value.x < largex) && (value.x > largex - 4)){ return false; }
 	return true;
 }
 
 bool Camera3::boundaryCheckerZ(float smallx, float largex, float smallz, float largez, Vector3 value)
 {
-	if ((value.x > smallx) && (value.x<largex) && (value.z > smallz) && (value.z<smallz + 4)){ return false; }
-	if ((value.x > smallx) && (value.x<largex) && (value.z < largez) && (value.z>largez - 4)){ return false; }
+	if ((value.x > smallx) && (value.x < largex) && (value.z > smallz) && (value.z < smallz + 4)){ return false; }
+	if ((value.x > smallx) && (value.x < largex) && (value.z < largez) && (value.z > largez - 4)){ return false; }
 	return true;
 }
 
@@ -489,9 +567,6 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 	}
 	if (SceneSoraJewel == true)
 	{
-
-		if (Testvalue.y >= 20)
-
 		if (Testvalue.y <= 100)
 
 		{
@@ -514,23 +589,22 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 	return true;
 }
 
+//Depending on X or Z have to do some changes
+//BoundaryX, 'Z' coords are to +.5 for smallZ, -.5 for largeZ
+//BoundaryZ, 'X' coords are to +.5 for smallX, -.5 for largeX
 bool Camera3::AllGalaxyBoundaryX(Vector3 Testvalue)
 {
-	if (!boundaryCheckerX(20, 50, 20, 50, Testvalue))
-		return true;
 	return false;
 }
 
 bool Camera3::AllGalaxyBoundaryZ(Vector3 Testvalue)
 {
-	if (!boundaryCheckerZ(20, 50, 20, 50, Testvalue))
-		return true;
 	return false;
 }
 
 bool Camera3::AllMunBoundaryX(Vector3 Testvalue)
 {
-	if (!boundaryCheckerX(2, 50, -50, -26, Testvalue))
+	if (!boundaryCheckerX(2, 50, -49.5, -24.5, Testvalue))
 		return true;
 	if (!boundaryCheckerX(-39, -32, -38, -28, Testvalue))
 		return true;
@@ -539,7 +613,7 @@ bool Camera3::AllMunBoundaryX(Vector3 Testvalue)
 
 bool Camera3::AllMunBoundaryZ(Vector3 Testvalue)
 {
-	if (!boundaryCheckerZ(2, 50, -50, -26, Testvalue))
+	if (!boundaryCheckerZ(2.5, 49.5, -50, -24, Testvalue))
 		return true;
 	if (!boundaryCheckerZ(-39, -32, -38, -28, Testvalue))
 		return true;

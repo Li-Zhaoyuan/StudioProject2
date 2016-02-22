@@ -23,7 +23,7 @@ public:
 	virtual void Init(const Vector3& pos, const Vector3& target, const Vector3& up);
 	virtual void Update(double dt, float bounds);
 	virtual void Reset();
-
+	void XWingCamera(double dt, float bounds);
 	void UpdateCollision(float bounds, double dt);
 
 	bool SceneSoraJewel = false;
