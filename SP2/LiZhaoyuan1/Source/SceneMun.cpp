@@ -149,7 +149,7 @@ void SceneMun::Init()
 
 	meshList[GEO_CUBE] = MeshBuilder::GenerateCube("reference", Color(0, 1, 0));
 
-	meshList[GEO_QUAD] = MeshBuilder::GenerateQuad("quad", Color(0, 1, 0));
+	meshList[GEO_QUAD] = MeshBuilder::GenerateQuad("quad", Color(1, 1, 1));
 
 	//Skybox
 	meshList[GEO_MUNFRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
@@ -173,6 +173,12 @@ void SceneMun::Init()
 	meshList[GEO_CRASHEDPLANE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_CRASHEDPLANE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_CRASHEDPLANE]->material.kShininess = 5.f;
+	meshList[GEO_PLANE] = MeshBuilder::GenerateOBJ("plane", "OBJ//XwingLand.obj");
+	meshList[GEO_PLANE]->textureID = LoadTGA("Image//XWing_Texture.tga");
+	meshList[GEO_PLANE]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_PLANE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_PLANE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_PLANE]->material.kShininess = 5.f;
 	//Houses
 	meshList[GEO_HOUSE] = MeshBuilder::GenerateOBJ("house", "OBJ//house.obj");
 	meshList[GEO_HOUSE]->textureID = LoadTGA("Image//house.tga");
@@ -236,13 +242,14 @@ void SceneMun::Init()
 	camera.SceneMun = true;
 	camera.SceneSoraJewel = false;
 
-	boxX = 0;
+	/*boxX = 0;
 	boxZ = 0;
 	camPosX = 0;
 	camPosY = 0;
 	camPosz = 0;
 
 	crashedplaneCoord = Vector3(-36.f, 4.9f, -34.f);
+	planecoord = Vector3(-36.f, -2.9f, -45.f);
 	questdudehouseCoord = Vector3(33, -5, 20);
 	worriedladyhouseCoord = Vector3(20, -5, -38);
 	worriedladyCoord = Vector3(2, -4, -38);
@@ -267,7 +274,7 @@ void SceneMun::Init()
 	loadingbar = 0.01f;
 
 	mining = false;
-	isMined = false;
+	isMined = false;*/
 }
 
 
@@ -322,7 +329,7 @@ void SceneMun::Update(double dt)
 	camPosY = camera.position.y;
 	camPosz = camera.position.z;
 	
-	if (mining && loadingbar <=20)
+	if ((mining || isRepairing) && loadingbar <= 20)
 	{
 		loadingbar += (float)(5 * dt);
 	}
@@ -330,10 +337,27 @@ void SceneMun::Update(double dt)
 	{
 		isMined = true;
 	}
+	else if (isRepairing && loadingbar >= 20)
+	{
+		isRepaired = true;
+	}
 	else
 	{
 		loadingbar = 0.01f;
 	}
+
+	/*if (isRepairing && loadingbar <= 20)
+	{
+		loadingbar += (float)(5 * dt);
+	}
+	else if (isRepairing && loadingbar >= 20)
+	{
+		isRepaired = true;
+	}
+	else
+	{
+		loadingbar = 0.01f;
+	}*/
 
 	npcRotate();
 	interactions();
@@ -594,11 +618,22 @@ void SceneMun::Render()
 	renderMesh(meshList[GEO_MUNGROUND], false);
 	modelStack.PopMatrix();
 
-	modelStack.PushMatrix();
-	modelStack.Translate(crashedplaneCoord.x, crashedplaneCoord.y, crashedplaneCoord.z);
-	modelStack.Scale(2.2f, 2.2f, 2.2f);
-	renderMesh(meshList[GEO_CRASHEDPLANE], true);
-	modelStack.PopMatrix();
+	if (!isRepaired)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(crashedplaneCoord.x, crashedplaneCoord.y, crashedplaneCoord.z);
+		modelStack.Scale(2.2f, 2.2f, 2.2f);
+		renderMesh(meshList[GEO_CRASHEDPLANE], true);
+		modelStack.PopMatrix();
+	}
+	if (isRepaired)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(planecoord.x, planecoord.y, planecoord.z);
+		modelStack.Scale(2.2f, 2.2f, 2.2f);
+		renderMesh(meshList[GEO_PLANE], true);
+		modelStack.PopMatrix();
+	}
 
 	modelStack.PushMatrix();
 	modelStack.Translate(questdudehouseCoord.x, questdudehouseCoord.y, questdudehouseCoord.z);
@@ -668,13 +703,23 @@ void SceneMun::Render()
 	renderMesh(meshList[GEO_LIGHTBALL], false);
 	modelStack.PopMatrix();
 
-	RenderPickaxeOnScreen();
+	if (!isMined)
+	{
+		RenderPickaxeOnScreen();
+	}
+	
 	Renderpicturetoscreen();
 	if (mining)
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "M ining", Color(0, 1, 0), 3, 11, 15);
 		RenderLoadingBarOnScreen();
 	}
+	if (isRepairing && isMined)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Repairing", Color(0, 1, 0), 3, 11, 15);
+		RenderLoadingBarOnScreen();
+	}
+	RenderTextBoxOnScreen();
 	
 	std::stringstream playerPos;
 	playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosz;
@@ -783,6 +828,36 @@ void SceneMun::interactions()
 	{
 		mining = false;
 	}
+
+	if (crashedplaneCoord.x + 2 >camera.target.x
+		&& crashedplaneCoord.x - 2 < camera.target.x
+		&& crashedplaneCoord.z + 6 > camera.target.z
+		&& crashedplaneCoord.z - 2 < camera.target.z
+		&& Application::IsKeyPressed(VK_LBUTTON)
+		&& !isRepaired)
+	{
+		isRepairing = true;
+	}
+	else
+	{
+		isRepairing = false;
+	}
+
+	if (worriedladyCoord.x + 4 >camera.target.x
+		&& worriedladyCoord.x - 4 < camera.target.x
+		&& worriedladyCoord.z + 3 > camera.target.z
+		&& worriedladyCoord.z - 3 < camera.target.z
+		&& Application::IsKeyPressed(VK_RBUTTON))
+	{
+		isTalkingToLady = true;
+	}
+	else if (worriedladyCoord.x + 4 <camera.target.x
+		|| worriedladyCoord.x - 4 > camera.target.x
+		|| worriedladyCoord.z + 3 < camera.target.z
+		|| worriedladyCoord.z - 3 > camera.target.z)
+	{
+		isTalkingToLady = false;
+	}
 }
 
 void SceneMun::RenderPickaxeOnScreen()
@@ -858,7 +933,7 @@ void SceneMun::RenderLoadingBarOnScreen()
 
 void SceneMun::RenderOreOnScreen()
 {
-	if (!isRepairing)
+	if (!isRepairing && !isRepaired)
 	{
 		Mtx44 ortho;
 		glDisable(GL_DEPTH_TEST);
@@ -869,7 +944,7 @@ void SceneMun::RenderOreOnScreen()
 		viewStack.LoadIdentity(); //No need camera for ortho mode
 		modelStack.PushMatrix();
 		modelStack.LoadIdentity(); //Reset modelStack
-		modelStack.Translate(15, 10, -7);
+		modelStack.Translate(60, 10, -7);
 		modelStack.Rotate(45, 0, 1, 0);
 		modelStack.Rotate(45, 0, 0, 1);
 		modelStack.Scale(15, 15, 15);
@@ -890,7 +965,7 @@ void SceneMun::RenderOreOnScreen()
 		viewStack.LoadIdentity(); //No need camera for ortho mode
 		modelStack.PushMatrix();
 		modelStack.LoadIdentity(); //Reset modelStack
-		modelStack.Translate(40, 15, -5);
+		modelStack.Translate(40, 15, -7);
 		modelStack.Rotate(45, 0, 1, 0);
 		modelStack.Rotate(45, 0, 0, 1);
 		modelStack.Scale(15, 15, 15);
@@ -899,5 +974,56 @@ void SceneMun::RenderOreOnScreen()
 		viewStack.PopMatrix();
 		modelStack.PopMatrix();
 		glEnable(GL_DEPTH_TEST);
+	}
+}
+
+void SceneMun::RenderTextBoxOnScreen()
+{
+	if (isTalkingToLady)
+	{
+		Mtx44 ortho;
+		glDisable(GL_DEPTH_TEST);
+		ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+		projectionStack.PushMatrix();
+		projectionStack.LoadMatrix(ortho);
+		viewStack.PushMatrix();
+		viewStack.LoadIdentity(); //No need camera for ortho mode
+		modelStack.PushMatrix();
+		modelStack.LoadIdentity(); //Reset modelStack
+		modelStack.Translate(40, 10, -1);
+		/*modelStack.Rotate(45, 0, 1, 0);
+		modelStack.Rotate(45, 0, 0, 1);*/
+		modelStack.Scale(45, 15, 1);
+		modelStack.Rotate(90, 1, 0, 0);
+		renderMesh(meshList[GEO_QUAD], true);
+		projectionStack.PopMatrix();
+		viewStack.PopMatrix();
+		modelStack.PopMatrix();
+		glEnable(GL_DEPTH_TEST);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Oh Lord! Are you okayyyyy?", Color(0, 0, 0), 3, 7, 4);
+	}
+
+	if (isTalkingToQuestDude)
+	{
+		Mtx44 ortho;
+		glDisable(GL_DEPTH_TEST);
+		ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+		projectionStack.PushMatrix();
+		projectionStack.LoadMatrix(ortho);
+		viewStack.PushMatrix();
+		viewStack.LoadIdentity(); //No need camera for ortho mode
+		modelStack.PushMatrix();
+		modelStack.LoadIdentity(); //Reset modelStack
+		modelStack.Translate(40, 10, -1);
+		/*modelStack.Rotate(45, 0, 1, 0);
+		modelStack.Rotate(45, 0, 0, 1);*/
+		modelStack.Scale(45, 15, 1);
+		modelStack.Rotate(90, 1, 0, 0);
+		renderMesh(meshList[GEO_QUAD], true);
+		projectionStack.PopMatrix();
+		viewStack.PopMatrix();
+		modelStack.PopMatrix();
+		glEnable(GL_DEPTH_TEST);
+		RenderTextOnScreen(meshList[GEO_TEXT], "I see ", Color(0, 0, 0), 3, 7, 4);
 	}
 }

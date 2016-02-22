@@ -101,6 +101,7 @@
     <ClCompile Include="Source\main.cpp" />
     <ClCompile Include="Source\Mesh.cpp" />
     <ClCompile Include="Source\MeshBuilder.cpp" />
+    <ClCompile Include="Source\Missile.cpp" />
     <ClCompile Include="Source\RenderGalaxy.cpp" />
     <ClCompile Include="Source\RenderMun.cpp" />
     <ClCompile Include="Source\RenderSoraJewel.cpp" />
@@ -108,8 +109,10 @@
     <ClCompile Include="Source\SceneMun.cpp" />
     <ClCompile Include="Source\SceneSoraJewel.cpp" />
     <ClCompile Include="Source\shader.cpp" />
+    <ClCompile Include="Source\Shooting.cpp" />
     <ClCompile Include="Source\SP2.cpp" />
     <ClCompile Include="Source\Utility.cpp" />
+    <ClCompile Include="Source\XwingCamera.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Application.h" />
@@ -123,6 +126,7 @@
     <ClInclude Include="Source\Material.h" />
     <ClInclude Include="Source\Mesh.h" />
     <ClInclude Include="Source\MeshBuilder.h" />
+    <ClInclude Include="Source\Missile.h" />
     <ClInclude Include="Source\RenderGalaxy.h" />
     <ClInclude Include="Source\RenderMun.h" />
     <ClInclude Include="Source\RenderSoraJewel.h" />
@@ -131,9 +135,11 @@
     <ClInclude Include="Source\SceneMun.h" />
     <ClInclude Include="Source\SceneSoraJewel.h" />
     <ClInclude Include="Source\shader.hpp" />
+    <ClInclude Include="Source\Shooting.h" />
     <ClInclude Include="Source\SP2.h" />
     <ClInclude Include="Source\Utility.h" />
     <ClInclude Include="Source\Vertex.h" />
+    <ClInclude Include="Source\XwingCamera.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Image\back.tga" />
