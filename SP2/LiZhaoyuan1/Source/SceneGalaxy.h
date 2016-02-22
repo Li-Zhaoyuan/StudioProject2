@@ -5,13 +5,12 @@
 #include "Mesh.h"
 #include "Light.h"
 #include "Camera.h"
-#include "Camera2.h"
 #include "Camera3.h"
 #include "Camera4.h"
 #include "MatrixStack.h"
 #include "RenderMun.h"
 #include <vector>
-#include "Shooting.h"
+#include "Missile.h"
 
 class SceneGalaxy : public Scene
 {
@@ -136,7 +135,10 @@ private:
 	bool shootMissile = false;
 	
 
-	int bullets = 100;
+	int Missiles;
+	int bulletCount = 0;
+	Missile* Capacity;
+
 
 	void renderMesh(Mesh *mesh, bool enableLight);
 	void lighting();

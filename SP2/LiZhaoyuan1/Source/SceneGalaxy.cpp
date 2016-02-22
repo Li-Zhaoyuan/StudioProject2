@@ -16,7 +16,7 @@
 #include "LoadTGA.h"
 
 
-Shooting missile(100);
+Missile missile(100);
 
 
 SceneGalaxy::SceneGalaxy()
@@ -200,7 +200,7 @@ static int MissileCapacity = 1000;
 
 void SceneGalaxy::Update(double dt)
 {
-	camera.Update(dt, 100);
+	camera.XWingCamera(dt, 100);
 	fps = 1 / dt;
 	missile.update(dt);
 
@@ -538,6 +538,7 @@ void SceneGalaxy::RenderXwing()
 	modelStack.PushMatrix();
 	modelStack.Translate(0, 490, 0);
 	modelStack.Rotate(180, 0, 1, 0);
+	modelStack.Rotate(rotateXWing, 0, 0, 1);
 	modelStack.Scale(2.2f, 2.2f, 2.2f);
 	renderMesh(meshList[GEO_XWING], false);
 	modelStack.PopMatrix();
@@ -557,7 +558,7 @@ void SceneGalaxy::RenderMissile()
 {
 	if (shootMissile == true)
 	{
-		for (int i = 0; i < missile.AmmoInClip; i++)
+		for (int i = 0; i < missile.Missiles; i++)
 		{
 			modelStack.PushMatrix();
 			modelStack.Translate(missile.Capacity[i].getPositionOfMissile().x, missile.Capacity[i].getPositionOfMissile().y, missile.Capacity[i].getPositionOfMissile().z);

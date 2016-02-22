@@ -101,6 +101,8 @@
     <ClCompile Include="Source\main.cpp" />
     <ClCompile Include="Source\Mesh.cpp" />
     <ClCompile Include="Source\MeshBuilder.cpp" />
+    <ClCompile Include="Source\Missile.cpp" />
+    <ClCompile Include="Source\Physics.cpp" />
     <ClCompile Include="Source\RenderGalaxy.cpp" />
     <ClCompile Include="Source\RenderMun.cpp" />
     <ClCompile Include="Source\RenderSoraJewel.cpp" />
@@ -117,12 +119,15 @@
     <ClInclude Include="Source\Camera2.h" />
     <ClInclude Include="Source\Camera3.h" />
     <ClInclude Include="source\Camera4.h" />
+    <ClInclude Include="Source\CurrentGameState.h" />
     <ClInclude Include="Source\Light.h" />
     <ClInclude Include="Source\LoadOBJ.h" />
     <ClInclude Include="Source\LoadTGA.h" />
     <ClInclude Include="Source\Material.h" />
     <ClInclude Include="Source\Mesh.h" />
     <ClInclude Include="Source\MeshBuilder.h" />
+    <ClInclude Include="Source\Missile.h" />
+    <ClInclude Include="Source\Physics.h" />
     <ClInclude Include="Source\RenderGalaxy.h" />
     <ClInclude Include="Source\RenderMun.h" />
     <ClInclude Include="Source\RenderSoraJewel.h" />

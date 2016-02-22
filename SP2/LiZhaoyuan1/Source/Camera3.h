@@ -24,6 +24,7 @@ public:
 	virtual void Update(double dt, float bounds);
 	virtual void Reset();
 
+	void XWingCamera(double dt, float bounds);
 	void UpdateCollision(float bounds, double dt);
 
 	bool SceneSoraJewel = false;
