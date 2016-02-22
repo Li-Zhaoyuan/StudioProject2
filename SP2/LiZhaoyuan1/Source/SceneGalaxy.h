@@ -11,7 +11,7 @@
 #include "MatrixStack.h"
 #include "RenderMun.h"
 #include <vector>
-//#include "OBJBoundary.h"
+#include "Shooting.h"
 
 class SceneGalaxy : public Scene
 {
@@ -114,6 +114,10 @@ public:
 	SceneGalaxy();
 	~SceneGalaxy();
 
+	Vector3 missileCoord;
+	Vector3 tempView;
+	Vector3 tempPos;
+
 	void skybox();
 	virtual void Init();
 	virtual void Update(double dt);
@@ -129,14 +133,10 @@ private:
 	bool enableLight = false;
 	float LSPEED = 10.f;
 	double fps = 0;
-	Vector3 missileCoord;
-	Vector3 tempView;
 	bool shootMissile = false;
-	Vector3 tempPos;
+	
 
 	int bullets = 100;
-
-
 
 	void renderMesh(Mesh *mesh, bool enableLight);
 	void lighting();

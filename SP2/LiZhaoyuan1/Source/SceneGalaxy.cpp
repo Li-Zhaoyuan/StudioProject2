@@ -14,8 +14,11 @@
 #include "Utility.h"
 
 #include "LoadTGA.h"
-//#include "RenderMun.h"
-//#include "LoadOBJ.h"
+
+
+Shooting missile(100);
+
+
 SceneGalaxy::SceneGalaxy()
 {
 }
@@ -186,17 +189,20 @@ void SceneGalaxy::Init()
 	camera.SceneGalaxy = true;
 	camera.SceneMun = false;
 	camera.SceneSoraJewel = false;
+	missile.init(&camera);
 }
 
 static float rotateXWing = 0.f;
 static int Health = 100;
 bool rotateXWing_Limit;
-static float testtranslate = 0.f;
+static int MissileCapacity = 1000;
+
 
 void SceneGalaxy::Update(double dt)
 {
 	camera.Update(dt, 100);
 	fps = 1 / dt;
+	missile.update(dt);
 
 	if (Application::IsKeyPressed('5'))
 	{
@@ -240,17 +246,17 @@ void SceneGalaxy::Update(double dt)
 	if (Application::IsKeyPressed('Z'))
 		enableLight = false;
 
+	//
+
 	if (rotateXWing_Limit)
 	{
 		if (Application::IsKeyPressed('D'))
 		{
 			rotateXWing += 5.f;
-			testtranslate += 5.f;
 		}
 		else if (Application::IsKeyPressed('A'))
 		{
 			rotateXWing -= 5.f;
-			testtranslate -= 5.f;
 		}
 	}
 	else
@@ -258,35 +264,30 @@ void SceneGalaxy::Update(double dt)
 		if (Application::IsKeyPressed('A'))
 		{
 			rotateXWing -= 5.f;
-			testtranslate -= 5.f;
 		}
 		else if (Application::IsKeyPressed('D'))
 		{
 			rotateXWing += 5.f;
-			testtranslate += 5.f;
 		}
 	}
 
-	if (shootMissile == true)
-	{
-		missileCoord += (tempView)*(float)(10 * dt);
-	}
+	//
 
+	//
+
+	missile.update(dt);
 	if (Application::IsKeyPressed(VK_LBUTTON))
 	{
-		if (bullets > 0)
-		{
-			bullets--;
-			std::cout << bullets << std::endl;
-		}
-		else 
-			return;
-		missileCoord = camera.position;
-		tempView = (camera.target - camera.position).Normalized();
 		shootMissile = true;
-		tempPos = camera.position;
+		if (shootMissile == true)
+		{
+			missile.Firing();
+		}
 	}
 
+	//
+
+	std::cout << camera.target - camera.position << std::endl;
 	camPosX = camera.position.x;
 	camPosY = camera.position.y;
 	camPosz = camera.position.z;
@@ -535,9 +536,8 @@ void SceneGalaxy::XWingHealth()
 void SceneGalaxy::RenderXwing()
 {
 	modelStack.PushMatrix();
-	modelStack.Translate(camera.target.x, 490, camera.target.z + (-30));
+	modelStack.Translate(0, 490, 0);
 	modelStack.Rotate(180, 0, 1, 0);
-	modelStack.Rotate(rotateXWing, 0, 0, 1);
 	modelStack.Scale(2.2f, 2.2f, 2.2f);
 	renderMesh(meshList[GEO_XWING], false);
 	modelStack.PopMatrix();
@@ -557,13 +557,15 @@ void SceneGalaxy::RenderMissile()
 {
 	if (shootMissile == true)
 	{
-		modelStack.PushMatrix();
-		modelStack.Translate(missileCoord.x, 500, missileCoord.z);
-		modelStack.Scale(1.2f, 1.2f, 1.2f);
-		renderMesh(meshList[GEO_MISSILE], false);
-		modelStack.PopMatrix();
+		for (int i = 0; i < missile.AmmoInClip; i++)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(missile.Capacity[i].getPositionOfMissile().x, missile.Capacity[i].getPositionOfMissile().y, missile.Capacity[i].getPositionOfMissile().z);
+			modelStack.Scale(2.f, 2.f, 2.f);
+			renderMesh(meshList[GEO_MISSILE], false);
+			modelStack.PopMatrix();
+		}
 	}
-	
 }
 
 void SceneGalaxy::RenderSkybox()

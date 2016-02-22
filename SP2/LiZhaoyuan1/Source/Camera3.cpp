@@ -307,6 +307,7 @@ void Camera3::Update(double dt, float bounds)
 		}
 
 	}
+	view = (target - position).Normalized();
 	SetCursorPos(800 / 2, 600 / 2);
 }
 
@@ -315,6 +316,7 @@ void Camera3::Reset()
 	position = defaultPosition;
 	target = defaultTarget;
 	up = defaultUp;
+	view = (target - position).Normalized();
 }
 
 void Camera3::UpdateCollision(float bounds, double dt)
@@ -448,11 +450,7 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 {
 	if (SceneGalaxy == true)
 	{
-<<<<<<< HEAD
 		if (Testvalue.y <= 100)
-=======
-		if (Testvalue.y >= 20)
->>>>>>> 5bd38f1da46d8ba1b7ac30818ee3daac76aeec7c
 		{
 			if (XZ == 1)
 			{
@@ -519,23 +517,15 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 
 bool Camera3::AllGalaxyBoundaryX(Vector3 Testvalue)
 {
-<<<<<<< HEAD
-	
-=======
 	if (!boundaryCheckerX(20, 50, 20, 50, Testvalue))
 		return true;
->>>>>>> 5bd38f1da46d8ba1b7ac30818ee3daac76aeec7c
 	return false;
 }
 
 bool Camera3::AllGalaxyBoundaryZ(Vector3 Testvalue)
 {
-<<<<<<< HEAD
-	
-=======
 	if (!boundaryCheckerZ(20, 50, 20, 50, Testvalue))
 		return true;
->>>>>>> 5bd38f1da46d8ba1b7ac30818ee3daac76aeec7c
 	return false;
 }
 
