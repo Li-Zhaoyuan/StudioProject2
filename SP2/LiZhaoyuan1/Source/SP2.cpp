@@ -142,10 +142,7 @@ void SP2::Init()
 
 
 	//Initialize camera settings
-	camera.position.x = camera.playerposition.x + cos(30)*(10);
-	camera.position.y = camera.playerposition.y + cos(30)*(10);
-	camera.position.z = camera.playerposition.z + cos(30)*(10);
-	camera.Init(Vector3(camera.position.x, camera.position.y, camera.position.z), Vector3(camera.target.x, camera.playerposition.y, camera.playerposition.z), Vector3(0, 1, 0));
+	camera.Init(Vector3(0,0,1), Vector3(0,0,0), Vector3(0, 1, 0));
 
 	
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
@@ -184,6 +181,10 @@ void SP2::Update(double dt)
 	camera.Update(dt,100);
 	fps = 1 / dt;
 
+	if (camera.position.x >= 50 && camera.position.z >= 50)
+	{
+		Gamemode::getinstance()->currentgamestate = 2;
+	}
 	if (Application::IsKeyPressed('5'))
 	{
 		light[0].type = Light::LIGHT_SPOT;
@@ -443,7 +444,7 @@ void SP2::Render()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(camera.playerposition.x, camera.playerposition.y, camera.playerposition.z);
+	modelStack.Translate(0,0,0);
 	//modelStack.Rotate(camera., 1.0f, 0.f, 0.f);
 	renderMesh(meshList[GEO_CUBE], false);
 	modelStack.PopMatrix();

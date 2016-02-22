@@ -67,7 +67,7 @@ void Camera3::Update(double dt, float bounds)
 				position.x -= right.x * (float)(CAMERA_SPEED * dt);
 				target.x -= right.x * (float)(CAMERA_SPEED * dt);
 				minimapcoords.y += (right.x*(float)(CAMERA_SPEED*dt*0.1));
-				minimapsoracoords.x += (right.x*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.x -= (right.x*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
 		if (position.z - (right.z * (float)(CAMERA_SPEED * dt)) > -bounds
@@ -79,7 +79,7 @@ void Camera3::Update(double dt, float bounds)
 				position.z -= right.z * (float)(CAMERA_SPEED * dt);
 				target.z -= right.z * (float)(CAMERA_SPEED * dt);
 				minimapcoords.x += (right.z*(float)(CAMERA_SPEED*dt*0.1));
-				minimapsoracoords.y += (right.z*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.y -= (right.z*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
 

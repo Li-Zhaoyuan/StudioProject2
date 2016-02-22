@@ -20,12 +20,6 @@ class SceneMun : public Scene
 		GEO_CUBE,
 		GEO_SPHERE,
 		GEO_LIGHTBALL,
-		GEO_LEFT,
-		GEO_RIGHT,
-		GEO_TOP,
-		GEO_BOTTOM,
-		GEO_FRONT,
-		GEO_BACK,
 		GEO_TEXT,
 		GEO_MUNLEFT,
 		GEO_MUNRIGHT,
@@ -34,28 +28,11 @@ class SceneMun : public Scene
 		GEO_MUNFRONT,
 		GEO_MUNBACK,
 		GEO_MUNGROUND,
-		GEO_GALAXYLEFT,
-		GEO_GALAXYRIGHT,
-		GEO_GALAXYTOP,
-		GEO_GALAXYBOTTOM,
-		GEO_GALAXYFRONT,
-		GEO_GALAXYBACK,
-		GEO_GALAXYGROUND,
-		GEO_SORAJEWELLEFT,
-		GEO_SORAJEWELRIGHT,
-		GEO_SORAJEWELTOP,
-		GEO_SORAJEWELBOTTOM,
-		GEO_SORAJEWELFRONT,
-		GEO_SORAJEWELBACK,
-		SEO_SORAJEWELGROUND,
-		GEO_ASTEROID,
-		GEO_GLOBE,
-		GEO_PROJECTOR,
-		GEO_SOFA,
 		GEO_HOUSE,
 		GEO_ORE,
 		GEO_PICKAXE,
 		GEO_CRASHEDPLANE,
+		GEO_PLANE,
 		GEO_MUN,
 		GEO_MINIMAP,
 		GEO_MAINICON,
@@ -139,6 +116,7 @@ private:
 	void RenderPickaxeOnScreen();
 	void RenderLoadingBarOnScreen();
 	void RenderOreOnScreen();
+	void RenderTextBoxOnScreen();
 	unsigned m_vertexArrayID;
 	Mesh *meshList[NUM_GEOMETRY];
 
@@ -157,6 +135,7 @@ private:
 	float camPosz = 0;
 	
 	Vector3 crashedplaneCoord = Vector3(-36.f,4.9f,-34.f);
+	Vector3 planecoord = Vector3(-36.f, -2.9f, -45.f);
 	Vector3 questdudehouseCoord = Vector3(33, -5, 20);
 	Vector3 worriedladyhouseCoord = Vector3(20, -5, -38);
 	Vector3 worriedladyCoord = Vector3(2, -4, -38);
@@ -183,6 +162,9 @@ private:
 	bool mining = false;
 	bool isMined = false;
 	bool isRepairing = false;
+	bool isRepaired = false;
+	bool isTalkingToLady = false;
+	bool isTalkingToQuestDude = false;
 
 	MS modelStack, viewStack, projectionStack;
 };

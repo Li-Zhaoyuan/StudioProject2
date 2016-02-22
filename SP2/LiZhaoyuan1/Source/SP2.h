@@ -7,7 +7,6 @@
 #include "Camera.h"
 #include "Camera2.h"
 #include "Camera3.h"
-#include "Camera4.h"
 #include "MatrixStack.h"
 #include "RenderMun.h"
 class SP2 : public Scene
@@ -141,7 +140,7 @@ private:
 	/*float rotateAngle;
 	float planet1RevAngle, planet1RotAngle, moon1RotAngle;*/
 
-	Camera4 camera;
+	Camera3 camera;
 
 	float boxX = 0;
 	float boxZ = 0;
