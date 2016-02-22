@@ -270,7 +270,6 @@ void Camera3::Update(double dt, float bounds)
 		view = rotation * view;
 		target = position + view;
 		up = rotation * up;
-
 	}
 	if (mousecursor.y<600 / 2)
 	{
