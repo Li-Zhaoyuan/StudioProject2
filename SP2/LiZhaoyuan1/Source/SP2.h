@@ -7,7 +7,6 @@
 #include "Camera.h"
 #include "Camera2.h"
 #include "Camera3.h"
-#include "Camera4.h"
 #include "MatrixStack.h"
 #include "RenderMun.h"
 class SP2 : public Scene
