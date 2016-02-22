@@ -128,7 +128,7 @@ private:
 	float boxZ = 0;
 	float camPosX = 0;
 	float camPosY = 0;
-	float camPosz = 0;
+	float camPosZ = 0;
 
 	float rotateGlobeY = 0;
 
@@ -144,6 +144,9 @@ private:
 	void renderMunSkybox();
 	void renderGalaxySkybox();
 	void renderSoraJewelSkybox();
+
+	bool Quest1;
+	bool Quest2;
 
 	bool EmptyinHand;
 	bool BeerinHand;
