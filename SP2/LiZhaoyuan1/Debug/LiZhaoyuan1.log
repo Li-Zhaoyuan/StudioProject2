@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+﻿Build started 2/22/2016 5:25:22 PM.
+=======
+<<<<<<< HEAD
 ﻿Build started 2/22/2016 5:43:07 PM.
      1>Project "C:\Users\n1507\Desktop\SP2_1\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
@@ -35,6 +38,7 @@ Build succeeded.
 Time Elapsed 00:00:00.85
 =======
 ﻿Build started 2/22/2016 4:22:14 PM.
+>>>>>>> 4b7a28ec0970d96aa460cac697c3f2c969fa57c1
      1>Project "C:\Users\n1507\Desktop\CompG Project\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
      1>Link:
          LiZhaoyuan1.vcxproj -> C:\Users\n1507\Desktop\CompG Project\SP2\Debug\LiZhaoyuan1.exe
@@ -42,5 +46,9 @@ Time Elapsed 00:00:00.85
 
 Build succeeded.
 
+<<<<<<< HEAD
+Time Elapsed 00:00:00.16
+=======
 Time Elapsed 00:00:00.05
 >>>>>>> c050136b01f8f330469c066c1e4399e611d8b3cf
+>>>>>>> 4b7a28ec0970d96aa460cac697c3f2c969fa57c1
