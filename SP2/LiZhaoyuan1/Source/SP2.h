@@ -141,7 +141,7 @@ private:
 	/*float rotateAngle;
 	float planet1RevAngle, planet1RotAngle, moon1RotAngle;*/
 
-	Camera4 camera;
+	Camera3 camera;
 
 	float boxX = 0;
 	float boxZ = 0;
