@@ -181,6 +181,10 @@ void SP2::Update(double dt)
 	camera.Update(dt,100);
 	fps = 1 / dt;
 
+	if (camera.position.x >= 50 && camera.position.z >= 50)
+	{
+		Gamemode::getinstance()->currentgamestate = 2;
+	}
 	if (Application::IsKeyPressed('5'))
 	{
 		light[0].type = Light::LIGHT_SPOT;

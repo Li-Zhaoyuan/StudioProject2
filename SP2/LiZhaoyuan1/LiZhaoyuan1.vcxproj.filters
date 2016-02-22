@@ -190,6 +190,9 @@
     <ClInclude Include="Source\XwingCamera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="source\CurrentGameState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Image\color2.tga">
