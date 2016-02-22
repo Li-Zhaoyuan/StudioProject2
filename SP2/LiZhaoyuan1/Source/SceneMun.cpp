@@ -1,5 +1,5 @@
 #include <sstream>
-
+#include <iostream>
 #include "SceneMun.h"
 #include "GL\glew.h"
 #include "GLFW\glfw3.h"
@@ -813,12 +813,20 @@ void SceneMun::npcRotate()
 
 void SceneMun::interactions()
 {
-	if (oreCoord.x + 1.2 >camera.target.x
-		&& oreCoord.x - 1.2 < camera.target.x
-		&& oreCoord.z + 1.5 > camera.target.z
-		&& oreCoord.z - 1.5 < camera.target.z
-		&& oreCoord.y + 2.2 > camera.target.y
-		&& oreCoord.y - 2.2 < camera.target.y
+	Vector3 tempview = (camera.target - camera.position);
+	Vector3 viewAtOre = (oreCoord - camera.position);
+	Vector3 viewAtLady = (worriedladyCoord - camera.position);
+	Vector3 viewAtDude = (questdudeCoord - camera.position);
+	Vector3 viewAtMiner = (minerandplusCoord - camera.position);
+	Vector3 viewAtCrashedPlane = (crashedplaneCoord - camera.position);
+	float RadiusFromOre = (viewAtOre - tempview).Length();
+	float RadiusFromLady = (viewAtLady - tempview).Length();
+	float RadiusFromDude = (viewAtDude - tempview).Length();
+	float RadiusFromMiner = (viewAtMiner - tempview).Length();
+	float RadiusFromCrashedPlane = (viewAtCrashedPlane - tempview).Length();
+	
+	std::cout << RadiusFromCrashedPlane << std::endl;
+	if (RadiusFromOre < 2.5f
 		&& Application::IsKeyPressed(VK_LBUTTON)
 		&& !isMined)
 	{
@@ -829,10 +837,7 @@ void SceneMun::interactions()
 		mining = false;
 	}
 
-	if (crashedplaneCoord.x + 2 >camera.target.x
-		&& crashedplaneCoord.x - 2 < camera.target.x
-		&& crashedplaneCoord.z + 6 > camera.target.z
-		&& crashedplaneCoord.z - 2 < camera.target.z
+	if (RadiusFromCrashedPlane < 7.5f
 		&& Application::IsKeyPressed(VK_LBUTTON)
 		&& !isRepaired)
 	{
@@ -843,20 +848,24 @@ void SceneMun::interactions()
 		isRepairing = false;
 	}
 
-	if (worriedladyCoord.x + 4 >camera.target.x
-		&& worriedladyCoord.x - 4 < camera.target.x
-		&& worriedladyCoord.z + 3 > camera.target.z
-		&& worriedladyCoord.z - 3 < camera.target.z
+	if (RadiusFromLady < 6.0f
 		&& Application::IsKeyPressed(VK_RBUTTON))
 	{
 		isTalkingToLady = true;
 	}
-	else if (worriedladyCoord.x + 4 <camera.target.x
-		|| worriedladyCoord.x - 4 > camera.target.x
-		|| worriedladyCoord.z + 3 < camera.target.z
-		|| worriedladyCoord.z - 3 > camera.target.z)
+	else if (RadiusFromLady > 6.0f)
 	{
 		isTalkingToLady = false;
+	}
+
+	if (RadiusFromDude < 6.0f
+		&& Application::IsKeyPressed(VK_RBUTTON))
+	{
+		isTalkingToQuestDude = true;
+	}
+	else if (RadiusFromDude > 6.0f)
+	{
+		isTalkingToQuestDude = false;
 	}
 }
 
@@ -1024,6 +1033,9 @@ void SceneMun::RenderTextBoxOnScreen()
 		viewStack.PopMatrix();
 		modelStack.PopMatrix();
 		glEnable(GL_DEPTH_TEST);
-		RenderTextOnScreen(meshList[GEO_TEXT], "I see ", Color(0, 0, 0), 3, 7, 4);
+		RenderTextOnScreen(meshList[GEO_TEXT], "I see you need some materials", Color(0, 0, 0), 3, 6, 4);
+		RenderTextOnScreen(meshList[GEO_TEXT], "to fix your ship. G ive this", Color(0, 0, 0), 3, 6, 3);
+		RenderTextOnScreen(meshList[GEO_TEXT], "letter to the M iner near the", Color(0, 0, 0), 3, 6, 2);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Cave.", Color(0, 0, 0), 3, 6, 1);
 	}
 }
