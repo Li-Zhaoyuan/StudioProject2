@@ -107,10 +107,17 @@
     <ClCompile Include="Source\SceneSoraJewel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
+    <ClCompile Include="Source\Missile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Shooting.cpp">
+=======
     <ClCompile Include="Source\Shooting.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source\Missile.cpp">
+>>>>>>> 51327ef04055285cc58fd8e425c6cf167db6f902
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source\XwingCamera.cpp">
