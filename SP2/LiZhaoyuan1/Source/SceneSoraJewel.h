@@ -10,6 +10,8 @@
 #include "Camera4.h"
 #include "MatrixStack.h"
 #include "RenderMun.h"
+#include "Physics.h"
+
 class SceneSoraJewel : public Scene
 {
 	enum GEOMETRY_TYPE
@@ -88,6 +90,8 @@ public:
 	~SceneSoraJewel();
 
 	void skybox();
+	void renderLast();
+	void renderNPCAnimations();
 
 	virtual void Init();
 	virtual void Update(double dt);
@@ -104,8 +108,6 @@ private:
 	void lighting();
 	void lighting2();
 	void RenderSkybox();
-	void interactionWithRobby();
-	void interactionWithSnowBalls();
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
 	//void TextForInteractions();
@@ -128,6 +130,8 @@ private:
 	float camPosY = 0;
 	float camPosz = 0;
 
+	float rotateGlobeY = 0;
+
 	void MunInit();
 	void MunRender();
 
@@ -140,6 +144,9 @@ private:
 	void renderMunSkybox();
 	void renderGalaxySkybox();
 	void renderSoraJewelSkybox();
+
+	bool EmptyinHand;
+	bool BeerinHand;
 
 	MS modelStack, viewStack, projectionStack;
 };
