@@ -127,12 +127,12 @@ void Application::Run()
 		{
 			currscene->Init();
 		}
-		else if (IsKeyPressed('X'))
+		else if (IsKeyPressed('Z'))
 		{
 			currscene = scene1;
 			currscene->Init();
 		}
-		else if (IsKeyPressed('Z'))
+		else if (IsKeyPressed('X'))
 		{
 			currscene = scene2;
 			currscene->Init();

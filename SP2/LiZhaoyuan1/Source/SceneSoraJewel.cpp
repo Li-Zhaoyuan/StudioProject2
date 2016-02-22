@@ -139,7 +139,7 @@ void SceneSoraJewel::Init()
 	
 	//Initialize camera settings
 
-	camera.Init(Vector3(0, 10, 1), Vector3(0, 10, 0), Vector3(0, 1, 0));
+	camera.Init(Vector3(0, 0, 1), Vector3(0, 10, 0), Vector3(0, 1, 0));
 
 	//camera.Init(Vector3(0, 350, 1), Vector3(0, 7, 0), Vector3(0, 1, 0));
 
@@ -273,6 +273,9 @@ void SceneSoraJewel::Init()
 	projection.SetToPerspective(45.f, 16.f / 9.f, 0.1f, 10000.f);
 	projectionStack.LoadMatrix(projection);
 
+	Quest1 = false;
+	Quest2 = false;
+
 	EmptyinHand = false;
 	BeerinHand = false;
 
@@ -312,25 +315,47 @@ void SceneSoraJewel::Update(double dt)
 	if (Application::IsKeyPressed('Z'))
 		enableLight = false;
 
-	if (Application::IsKeyPressed('E') && (camera.position.x >= 13 && camera.position.z >= -27) && (camera.position.x <= 20 && camera.position.z <= -20))
+	if (camera.position.x >= -28 && camera.position.z >= 49 && camera.position.x <= -18 && camera.position.z <= 60)
+	{
+		camera.position.x = -96;
+		camera.position.y = 25;
+		camera.position.z = 82;
+	}
+	if (Application::IsKeyPressed('E') && (camera.position.x >= -13 && camera.position.z >= -60) && (camera.position.x <= -1 && camera.position.z <= -46))
+	{
+		Quest1 = true;
+	}
+	if (Application::IsKeyPressed('E') && (camera.position.x >= -96.2f && camera.position.z >= 45) && (camera.position.x <= -90	 && camera.position.z <= 51))
+	{
+		Quest2 = true;
+	}
+	if (Application::IsKeyPressed('E') && Quest2 == true && (camera.position.x >= 13 && camera.position.z >= -27) && (camera.position.x <= 20 && camera.position.z <= -20))
 	{
 		EmptyinHand = true;
 		BeerinHand = false;
 	}
-
-	if (Application::IsKeyPressed('E') && (camera.position.x >= -57 && camera.position.z >= -95) && (camera.position.x <= -45 && camera.position.z <= -83))
+	if (Application::IsKeyPressed('E') && Quest2 == true && (camera.position.x >= 13 && camera.position.z >= -27) && (camera.position.x <= 20 && camera.position.z <= -20))
+	{
+		EmptyinHand = true;
+		BeerinHand = false;
+	}
+	if (Application::IsKeyPressed('E') && Quest2 == true && (camera.position.x >= -57 && camera.position.z >= -95) && (camera.position.x <= -45 && camera.position.z <= -83))
 	{
 		EmptyinHand = false;
 		BeerinHand = true;
 	}
+	if (Application::IsKeyPressed('E') && (camera.position.x >= -80 && camera.position.z >= -42) && (camera.position.x <= -72 && camera.position.z <= -30))
+	{
+		BeerinHand = false;
+	}
 
-	rotateGlobeY += 3 * dt;
+	rotateGlobeY += (float)(3 * dt);
 	if (rotateGlobeY >= 360)
 		rotateGlobeY = 0;
 
 	camPosX = camera.position.x;
 	camPosY = camera.position.y;
-	camPosz = camera.position.z;
+	camPosZ = camera.position.z;
 }
 void SceneSoraJewel::lighting()
 {
@@ -632,7 +657,7 @@ void SceneSoraJewel::Render()
 	renderminimaptoscreen();
 
 	std::stringstream playerPos;
-	playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosz;
+	playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosZ;
 	std::stringstream ss;
 	ss << "FPS:" << fps << "         " << playerPos.str();
 	RenderTextOnScreen(meshList[GEO_TEXT], ss.str(), Color(0, 1, 0), 3, 0, 19);

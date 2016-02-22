@@ -193,16 +193,36 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Shader\LightSource.fragmentshader" />
-    <None Include="Shader\Shading.fragmentshader" />
-    <None Include="Shader\Shading.vertexshader" />
-    <None Include="Shader\SimpleFragmentShader.fragmentshader" />
-    <None Include="Shader\SimpleVertexShader.vertexshader" />
-    <None Include="Shader\Text.fragmentshader" />
-    <None Include="Shader\Texture.fragmentshader" />
-    <None Include="Shader\Texture.vertexshader" />
-    <None Include="Shader\TransformVertexShader.vertexshader" />
-    <None Include="Shader\Blending.fragmentshader" />
+    <None Include="Shader\Blending.fragmentshader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shader\LightSource.fragmentshader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shader\Shading.fragmentshader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shader\Shading.vertexshader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shader\SimpleFragmentShader.fragmentshader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shader\SimpleVertexShader.vertexshader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shader\Text.fragmentshader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shader\Texture.fragmentshader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shader\Texture.vertexshader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shader\TransformVertexShader.vertexshader">
+      <Filter>Shaders</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
@@ -216,6 +236,9 @@
     </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{4d9d96b4-b85b-4994-b3d4-4855edd29619}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{6c6176d3-ba0d-4396-b6da-a9c39cf5eef8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
