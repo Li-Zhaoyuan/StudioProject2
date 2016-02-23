@@ -16,7 +16,7 @@
 #include "LoadTGA.h"
 
 
-Missile missile(100);
+Missile missile(10);
 
 
 SceneGalaxy::SceneGalaxy()
@@ -195,8 +195,6 @@ void SceneGalaxy::Init()
 static float rotateXWing = 0.f;
 static int Health = 100;
 bool rotateXWing_Limit;
-static int MissileCapacity = 1000;
-
 
 void SceneGalaxy::Update(double dt)
 {
@@ -508,15 +506,6 @@ void SceneGalaxy::Render()
 	RenderAsteroid();
 	RenderMissile();
 
-	/*modelStack.PushMatrix();
-	modelStack.Translate(0.0f, 0.0f, -camera.Charradius);
-	modelStack.Rotate(camera.xrot, 1.0f, 0.f, 0.f);
-	renderMesh(meshList[GEO_CUBE], false);
-	modelStack.PopMatrix();*/
-
-
-
-
 	std::stringstream playerPos;
 	playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosz;
 	//RenderTextOnScreen(meshList[GEO_TEXT], playerPos.str(), Color(1, 0, 0), 2, 0, 18);
@@ -536,7 +525,7 @@ void SceneGalaxy::XWingHealth()
 void SceneGalaxy::RenderXwing()
 {
 	modelStack.PushMatrix();
-	modelStack.Translate(0, 490, 0);
+	modelStack.Translate(0, 490, -30);
 	modelStack.Rotate(180, 0, 1, 0);
 	modelStack.Rotate(rotateXWing, 0, 0, 1);
 	modelStack.Scale(2.2f, 2.2f, 2.2f);

@@ -56,7 +56,7 @@ void Camera3::Update(double dt, float bounds)
 		up = right.Cross(view).Normalized();
 
 		Vector3 Testvalue;
-		Testvalue = (position + view * dt * CAMERA_SPEED);
+		Testvalue = (position - view * dt * CAMERA_SPEED);
 
 		if (position.x - (right.x * (float)(CAMERA_SPEED * dt)) > -bounds
 			&& position.x - (right.x * (float)(CAMERA_SPEED * dt)) < bounds
@@ -107,7 +107,7 @@ void Camera3::Update(double dt, float bounds)
 		up = right.Cross(view).Normalized();
 
 		Vector3 Testvalue;
-		Testvalue = (position + view * dt * CAMERA_SPEED);
+		Testvalue = (position - view * dt * CAMERA_SPEED);
 
 		if (position.x + (right.x * (float)(CAMERA_SPEED * dt)) > -bounds
 			&& position.x + (right.x * (float)(CAMERA_SPEED * dt)) < bounds
@@ -400,7 +400,7 @@ void Camera3::UpdateCollision(float bounds, double dt)
 void Camera3::XWingCamera(double dt, float bounds)
 {
 	POINT mousecursor;
-	static const float CAMERA_SPEED = 25.f;
+	static const float CAMERA_SPEED = 5.f;
 	GetCursorPos(&mousecursor);
 
 	if (Application::IsKeyPressed('R'))
@@ -481,7 +481,6 @@ bool Camera3::boundaryCheckerX(float smallx, float largex, float smallz, float l
 {
 	if ((value.z > smallz) && (value.z < largez) && (value.x > smallx) && (value.x < smallx + 4)){ return false; }
 	if ((value.z > smallz) && (value.z < largez) && (value.x < largex) && (value.x > largex - 4)){ return false; }
-
 	return true;
 }
 
@@ -489,7 +488,6 @@ bool Camera3::boundaryCheckerZ(float smallx, float largex, float smallz, float l
 {
 	if ((value.x > smallx) && (value.x < largex) && (value.z > smallz) && (value.z < smallz + 4)){ return false; }
 	if ((value.x > smallx) && (value.x < largex) && (value.z < largez) && (value.z > largez - 4)){ return false; }
-
 	return true;
 }
 
@@ -571,9 +569,6 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 	}
 	if (SceneSoraJewel == true)
 	{
-
-		if (Testvalue.y >= 20)
-
 		if (Testvalue.y <= 100)
 
 		{
@@ -613,18 +608,26 @@ bool Camera3::AllGalaxyBoundaryZ(Vector3 Testvalue)
 
 bool Camera3::AllMunBoundaryX(Vector3 Testvalue)
 {
-	if (!boundaryCheckerX(2, 50, -49.5, -24.5, Testvalue))
+	//women's house
+	if (!boundaryCheckerX(2, 4, -50, -26, Testvalue))
 		return true;
-	if (!boundaryCheckerX(-39, -32, -38, -28, Testvalue))
+	if (!boundaryCheckerX(48, 50, -50, -26, Testvalue))
+		return true;
+	//women's house
+	if (!boundaryCheckerX(-39, -32, -37.5, -27.5, Testvalue))
 		return true;
 	return false;
 }
 
 bool Camera3::AllMunBoundaryZ(Vector3 Testvalue)
 {
-	if (!boundaryCheckerZ(2.5, 49.5, -50, -24, Testvalue))
+	//women's house
+	if (!boundaryCheckerZ(2, 50, -26, -24, Testvalue))
 		return true;
-	if (!boundaryCheckerZ(-39, -32, -38, -28, Testvalue))
+	if (!boundaryCheckerZ(2, 50, -50, -48, Testvalue))
+		return true; 
+	//women's house
+	if (!boundaryCheckerZ(-39.5, -31.5, -38, -28, Testvalue))
 		return true;
 	return false;
 }
