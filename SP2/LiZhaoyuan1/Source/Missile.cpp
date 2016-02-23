@@ -13,7 +13,7 @@ Missile::Missile(const int &AmmoInMag)
 
 Missile::~Missile()
 {
-	delete[] Capacity;
+	//delete[] Capacity;
 }
 void Missile::updatePosition(const Vector3 &pos)
 {
