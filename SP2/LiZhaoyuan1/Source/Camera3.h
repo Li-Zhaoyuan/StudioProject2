@@ -15,6 +15,9 @@ public:
 	Vector3 defaultTarget;
 	Vector3 defaultUp;
 
+	Vector3 currentV = (0, 0, 0);
+	Vector3 displacement = (0, 0, 0);
+
 	Vector3 minimapcoords = (75.f, 55.f, -1.f);
 	Vector3 minimapsoracoords = (78.f, 55.f, -1.f);
 
@@ -22,6 +25,7 @@ public:
 	~Camera3();
 	virtual void Init(const Vector3& pos, const Vector3& target, const Vector3& up);
 	virtual void Update(double dt, float bounds);
+	virtual void SJUpdate(double dt, float bounds);
 	virtual void Reset();
 
 	void XWingCamera(double dt, float bounds);
@@ -41,10 +45,17 @@ public:
 	bool AllMunBoundaryZ(Vector3 Testvalue);
 	bool AllSoraJewelBoundaryX(Vector3 Testvalue);
 	bool AllSoraJewelBoundaryZ(Vector3 Testvalue);
+	bool OnGround();
+
+	bool jump = false;
 
 	float rotateChar;
 	float translateChar;
-	
+
+	float Force;
+	float mass;
+	float gravity;
+	float acceleration;
 };
 
 #endif

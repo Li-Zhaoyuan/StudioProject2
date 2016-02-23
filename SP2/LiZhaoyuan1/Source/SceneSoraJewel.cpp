@@ -12,6 +12,7 @@
 #include "Light.h"
 #include "Material.h"
 #include "Utility.h"
+#include "Physics.h"
 
 #include "LoadTGA.h"
 
@@ -289,7 +290,7 @@ void SceneSoraJewel::Init()
 
 void SceneSoraJewel::Update(double dt)
 {
-	camera.Update(dt, 1000);
+	camera.SJUpdate(dt, 1000);
 	fps = 1 / dt;
 	if (camera.position.x >= 50 && camera.position.z >= 50 && Application::IsKeyPressed('E'))
 	{
@@ -356,7 +357,6 @@ void SceneSoraJewel::Update(double dt)
 	{
 		QuestsDone = true;
 	}
-
 	rotateGlobeY += (float)(3 * dt);
 	if (rotateGlobeY >= 360)
 		rotateGlobeY = 0;
@@ -404,7 +404,6 @@ void SceneSoraJewel::lighting2()
 	}
 	else if (light[1].type == Light::LIGHT_POINT)
 	{
-
 		Position lightPosition_cameraspace = viewStack.Top() * light[1].position;
 		glUniform3fv(m_parameters[U_LIGHT1_POSITION], 1, &lightPosition_cameraspace.x);
 	}

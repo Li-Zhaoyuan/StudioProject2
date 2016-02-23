@@ -1,22 +1,19 @@
 #ifndef PHYSICS_H
 #define PHYSICS_H
 
-class Physics
+#include "Vector3.h"
+
+struct Physics
 {
-	float finalvelocity;
-	float initvelocity = 0;
-	float gravity = -9.8f;
-	float acceleration;
-	float displacement;
-
-protected:
-	float groundLevel;
-
 public:
 	Physics();
 	~Physics();
 
-	int Gravity();
+	static float VelocityUAT(float u, float a, float t);
+	static float DisplacementUVT(float u, float v, float t);
+	static float DisplacemnetUTAT(float u, float t, float a);
+	static float VelocityU2AS(float u, float a, float s);
+	static float AccelerationFM(float M, float F);
 };
 
 #endif
