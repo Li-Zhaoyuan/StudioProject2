@@ -117,6 +117,8 @@ private:
 	void RenderLoadingBarOnScreen();
 	void RenderOreOnScreen();
 	void RenderTextBoxOnScreen();
+	void RenderLetterOnScreen();
+	void RenderInfomationOnScreen();
 	unsigned m_vertexArrayID;
 	Mesh *meshList[NUM_GEOMETRY];
 
@@ -165,6 +167,11 @@ private:
 	bool isRepaired = false;
 	bool isTalkingToLady = false;
 	bool isTalkingToQuestDude = false;
+	bool TalkedToQuestDude = false;
+	bool isTalkingToMinerType1 = false;
+	bool isTalkingToMinerType2 = false;
+	bool minergotLetter = false;
+	bool playergetpickaxe = false;
 
 	MS modelStack, viewStack, projectionStack;
 };

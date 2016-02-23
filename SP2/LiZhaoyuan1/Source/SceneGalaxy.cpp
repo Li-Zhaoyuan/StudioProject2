@@ -201,7 +201,10 @@ void SceneGalaxy::Update(double dt)
 	camera.XWingCamera(dt, 100);
 	fps = 1 / dt;
 	missile.update(dt);
-
+	if (Application::IsKeyPressed('E'))
+	{
+		Gamemode::getinstance()->currentgamestate = 4;
+	}
 	if (Application::IsKeyPressed('5'))
 	{
 		light[0].type = Light::LIGHT_SPOT;

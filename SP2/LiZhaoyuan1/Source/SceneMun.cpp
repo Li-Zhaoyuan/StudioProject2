@@ -1,5 +1,5 @@
 #include <sstream>
-#include <iostream>
+
 #include "SceneMun.h"
 #include "GL\glew.h"
 #include "GLFW\glfw3.h"
@@ -96,25 +96,25 @@ void SceneMun::Init()
 
 	glUniform1i(m_parameters[U_NUMLIGHTS], 2);
 
-	light[0].type = Light::LIGHT_POINT;
-	light[0].position.Set(-5, 1, -10);
+	light[0].type = Light::LIGHT_DIRECTIONAL;
+	light[0].position.Set(0, 100, -100);
 	light[0].color.Set(1, 1, 1);
 	light[0].power = 1;
 	light[0].kC = 1.f;
 	light[0].kL = 0.01f;
-	light[0].kQ = 0.01f;
+	light[0].kQ = 0.001f;
 	light[0].cosCutoff = cos(Math::DegreeToRadian(45));
 	light[0].cosInner = cos(Math::DegreeToRadian(30));
 	light[0].exponent = 3.f;
 	light[0].spotDirection.Set(0.f, 1.f, 0.f);
 
 	light[1].type = Light::LIGHT_DIRECTIONAL;
-	light[1].position.Set(2, 2, 0);
+	light[1].position.Set(0, 100, 100);
 	light[1].color.Set(1, 1, 1);
 	light[1].power = 1;
 	light[1].kC = 1.f;
 	light[1].kL = 0.01f;
-	light[1].kQ = 0.01f;
+	light[1].kQ = 0.001f;
 	light[1].cosCutoff = cos(Math::DegreeToRadian(45));
 	light[1].cosInner = cos(Math::DegreeToRadian(30));
 	light[1].exponent = 3.f;
@@ -674,15 +674,18 @@ void SceneMun::Render()
 	modelStack.Translate(0, -5.5, 0);
 	renderMesh(meshList[GEO_ALIEN], true);
 	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	//modelStack.Rotate(-90, 0, 1, 0);
-	modelStack.Translate(0.5, -2.75, 1.25);
-	modelStack.Rotate(-90, 0, 0, 1);
-	modelStack.Rotate(90, 0, 1, 0);
-	modelStack.Scale(0.5, 0.5, 0.5);
-	renderMesh(meshList[GEO_PICKAXE], true);
-	modelStack.PopMatrix();
+	if (!playergetpickaxe)
+	{
+		modelStack.PushMatrix();
+		//modelStack.Rotate(-90, 0, 1, 0);
+		modelStack.Translate(0.5, -2.75, 1.25);
+		modelStack.Rotate(-90, 0, 0, 1);
+		modelStack.Rotate(90, 0, 1, 0);
+		modelStack.Scale(0.5, 0.5, 0.5);
+		renderMesh(meshList[GEO_PICKAXE], true);
+		modelStack.PopMatrix();
+	}
+		
 	modelStack.PopMatrix();
 	if (!isMined)
 	{
@@ -703,11 +706,11 @@ void SceneMun::Render()
 	renderMesh(meshList[GEO_LIGHTBALL], false);
 	modelStack.PopMatrix();
 
-	if (!isMined)
+	if (!isMined && playergetpickaxe == true)
 	{
 		RenderPickaxeOnScreen();
 	}
-	
+	RenderLetterOnScreen();
 	Renderpicturetoscreen();
 	if (mining)
 	{
@@ -825,8 +828,9 @@ void SceneMun::interactions()
 	float RadiusFromMiner = (viewAtMiner - tempview).Length();
 	float RadiusFromCrashedPlane = (viewAtCrashedPlane - tempview).Length();
 	
-	std::cout << RadiusFromCrashedPlane << std::endl;
+	
 	if (RadiusFromOre < 2.5f
+		&& playergetpickaxe == true
 		&& Application::IsKeyPressed(VK_LBUTTON)
 		&& !isMined)
 	{
@@ -861,11 +865,34 @@ void SceneMun::interactions()
 	if (RadiusFromDude < 6.0f
 		&& Application::IsKeyPressed(VK_RBUTTON))
 	{
+		TalkedToQuestDude = true;
 		isTalkingToQuestDude = true;
 	}
 	else if (RadiusFromDude > 6.0f)
 	{
 		isTalkingToQuestDude = false;
+	}
+	if (RadiusFromMiner < 6.0f
+		&& TalkedToQuestDude == true
+		&& Application::IsKeyPressed(VK_RBUTTON))
+	{
+		minergotLetter = true;
+		playergetpickaxe = true;
+		isTalkingToMinerType2 = true;
+	}
+	else if (RadiusFromMiner > 6.0f)
+	{
+		isTalkingToMinerType2 = false;
+	}
+	if (RadiusFromMiner < 6.0f
+		&& TalkedToQuestDude == false
+		&& Application::IsKeyPressed(VK_RBUTTON))
+	{
+		isTalkingToMinerType1 = true;
+	}
+	else if (RadiusFromMiner > 6.0f)
+	{
+		isTalkingToMinerType1 = false;
 	}
 }
 
@@ -1038,4 +1065,83 @@ void SceneMun::RenderTextBoxOnScreen()
 		RenderTextOnScreen(meshList[GEO_TEXT], "letter to the M iner near the", Color(0, 0, 0), 3, 6, 2);
 		RenderTextOnScreen(meshList[GEO_TEXT], "Cave.", Color(0, 0, 0), 3, 6, 1);
 	}
+	if (isTalkingToMinerType1)
+	{
+		Mtx44 ortho;
+		glDisable(GL_DEPTH_TEST);
+		ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+		projectionStack.PushMatrix();
+		projectionStack.LoadMatrix(ortho);
+		viewStack.PushMatrix();
+		viewStack.LoadIdentity(); //No need camera for ortho mode
+		modelStack.PushMatrix();
+		modelStack.LoadIdentity(); //Reset modelStack
+		modelStack.Translate(40, 10, -1);
+		/*modelStack.Rotate(45, 0, 1, 0);
+		modelStack.Rotate(45, 0, 0, 1);*/
+		modelStack.Scale(45, 15, 1);
+		modelStack.Rotate(90, 1, 0, 0);
+		renderMesh(meshList[GEO_QUAD], true);
+		projectionStack.PopMatrix();
+		viewStack.PopMatrix();
+		modelStack.PopMatrix();
+		glEnable(GL_DEPTH_TEST);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Go Away, Im busy", Color(0, 0, 0), 3, 7, 4);
+	}
+	if (isTalkingToMinerType2)
+	{
+		Mtx44 ortho;
+		glDisable(GL_DEPTH_TEST);
+		ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+		projectionStack.PushMatrix();
+		projectionStack.LoadMatrix(ortho);
+		viewStack.PushMatrix();
+		viewStack.LoadIdentity(); //No need camera for ortho mode
+		modelStack.PushMatrix();
+		modelStack.LoadIdentity(); //Reset modelStack
+		modelStack.Translate(40, 10, -1);
+		/*modelStack.Rotate(45, 0, 1, 0);
+		modelStack.Rotate(45, 0, 0, 1);*/
+		modelStack.Scale(45, 15, 1);
+		modelStack.Rotate(90, 1, 0, 0);
+		renderMesh(meshList[GEO_QUAD], true);
+		projectionStack.PopMatrix();
+		viewStack.PopMatrix();
+		modelStack.PopMatrix();
+		glEnable(GL_DEPTH_TEST);
+		RenderTextOnScreen(meshList[GEO_TEXT], "I see the chief wants me to", Color(0, 0, 0), 3, 6, 4);
+		RenderTextOnScreen(meshList[GEO_TEXT], "help you, use my pickaxe to ", Color(0, 0, 0), 3, 6, 3);
+		RenderTextOnScreen(meshList[GEO_TEXT], "mine your materials.", Color(0, 0, 0), 3, 6, 2);
+	}
+}
+
+void SceneMun::RenderLetterOnScreen()
+{
+	if (TalkedToQuestDude && !minergotLetter)
+	{
+		Mtx44 ortho;
+		glDisable(GL_DEPTH_TEST);
+		ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+		projectionStack.PushMatrix();
+		projectionStack.LoadMatrix(ortho);
+		viewStack.PushMatrix();
+		viewStack.LoadIdentity(); //No need camera for ortho mode
+		modelStack.PushMatrix();
+		modelStack.LoadIdentity(); //Reset modelStack
+		modelStack.Translate(60, 10, -5);
+		modelStack.Scale(6.5, 6.5, 6.5);
+		modelStack.Rotate(90, 1, 0, 0);
+		//modelStack.Rotate(-45, 1, 0, 0);
+		renderMesh(meshList[GEO_QUAD], true);
+		projectionStack.PopMatrix();
+		viewStack.PopMatrix();
+		modelStack.PopMatrix();
+		glEnable(GL_DEPTH_TEST);
+	}
+	
+}
+
+void SceneMun::RenderInfomationOnScreen()
+{
+
 }

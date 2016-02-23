@@ -109,6 +109,10 @@ void Application::Init()
 
 void Application::Run()
 {
+	int loadingitonceSoraJewel=1;
+	int loadingitonceGalaxy = 1;
+	int loadingitonceMun = 1;
+	
 	//Main Loop
 	Scene *currscene = new SP2();
 	Scene *scenestart = new SP2();
@@ -130,7 +134,8 @@ void Application::Run()
 		else if (IsKeyPressed('Z'))
 		{
 			currscene = scene1;
-			currscene->Init();
+			//currscene->Init();
+			sceneischanged = true;
 		}
 		else if (IsKeyPressed('X'))
 		{
@@ -140,28 +145,40 @@ void Application::Run()
 		else if (IsKeyPressed('C'))
 		{
 			currscene = scene3;
-			currscene->Init();
+			//currscene->Init();
+			sceneischanged = true;
 		}
-		//if (Gamemode::getinstance()->currentgamestate == 1)
-		//{
-		//	currscene = new SP2();
-		//	//currscene->Init();
-		//}
-		//else if (Gamemode::getinstance()->currentgamestate == 2)
-		//	{
-		//		currscene = scene1;
-		//		//currscene->Init();
-		//}
-		//else if (Gamemode::getinstance()->currentgamestate == 3)
-		//	{
-		//		currscene = scene2;
-		//		//currscene->Init();
-		//	}
-		//	else if (Gamemode::getinstance()->currentgamestate == 4)
-		//	{
-		//		currscene = scene3;
-		//		//currscene->Init();
-		//	}
+		if (Gamemode::getinstance()->currentgamestate == 1)
+		{
+			currscene = new SP2();
+			//currscene->Init();
+		}
+		else if (Gamemode::getinstance()->currentgamestate == 2 && loadingitonceSoraJewel == 1)
+			{
+				currscene = scene1;
+				//currscene->Init();
+				sceneischanged = true;
+				loadingitonceSoraJewel += 1;
+		}
+		else if (Gamemode::getinstance()->currentgamestate == 3 && loadingitonceGalaxy == 1)
+			{
+				currscene = scene2;
+				//currscene->Init();
+				sceneischanged = true;
+				loadingitonceGalaxy += 1;
+			}
+		else if (Gamemode::getinstance()->currentgamestate == 4 && loadingitonceMun==1)
+			{
+				currscene = scene3;
+				//currscene->Init();
+				sceneischanged = true;
+				loadingitonceMun += 1;
+			}
+		if (sceneischanged == true)
+		{
+			currscene->Init();
+			sceneischanged = false;
+		}
 			currscene->Update(m_timer.getElapsedTime());
 			currscene->Render();
 			//Swap buffers
