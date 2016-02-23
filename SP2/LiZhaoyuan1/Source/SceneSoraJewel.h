@@ -9,7 +9,6 @@
 #include "Camera3.h"
 #include "Camera4.h"
 #include "MatrixStack.h"
-#include "RenderMun.h"
 #include "Physics.h"
 
 class SceneSoraJewel : public Scene
@@ -145,10 +144,6 @@ private:
 
 	void SoraJewelInit();
 	void SoraJewelRender();
-
-	void renderMunSkybox();
-	void renderGalaxySkybox();
-	void renderSoraJewelSkybox();
 
 	bool Quest1;
 	bool Quest1Done;

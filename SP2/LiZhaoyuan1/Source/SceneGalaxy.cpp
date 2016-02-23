@@ -198,9 +198,9 @@ bool rotateXWing_Limit;
 
 void SceneGalaxy::Update(double dt)
 {
-	camera.XWingCamera(dt, 100);
+	camera.Update(dt, 100);
 	fps = 1 / dt;
-	missile.update(dt);
+
 	if (Application::IsKeyPressed('E'))
 	{
 		Gamemode::getinstance()->currentgamestate = 4;
@@ -286,6 +286,8 @@ void SceneGalaxy::Update(double dt)
 		}
 	}
 
+
+	asteroid.Animation(dt);
 	//
 
 	std::cout << camera.target - camera.position << std::endl;
@@ -539,11 +541,12 @@ void SceneGalaxy::RenderXwing()
 
 void SceneGalaxy::RenderAsteroid()
 {
-	modelStack.PushMatrix();
-	modelStack.Translate(0, 500, 50);
-	modelStack.Scale(2.2f, 2.2f, 2.2f);
-	renderMesh(meshList[GEO_ASTEROID], false);
-	modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		modelStack.Translate(asteroid.getPositionOfMissile().x, asteroid.getPositionOfMissile().y + 500, asteroid.getPositionOfMissile().z);
+		modelStack.Scale(2.2f, 2.2f, 2.2f);
+		renderMesh(meshList[GEO_ASTEROID], false);
+		modelStack.PopMatrix();
+
 }
 
 void SceneGalaxy::RenderMissile()
@@ -553,8 +556,26 @@ void SceneGalaxy::RenderMissile()
 		for (int i = 0; i < missile.Missiles; i++)
 		{
 			modelStack.PushMatrix();
-			modelStack.Translate(missile.Capacity[i].getPositionOfMissile().x, missile.Capacity[i].getPositionOfMissile().y, missile.Capacity[i].getPositionOfMissile().z);
+			modelStack.Translate((missile.Capacity[i].getPositionOfMissile().x) + 10 ,
+				(missile.Capacity[i].getPositionOfMissile().y) - 10, 
+				(missile.Capacity[i].getPositionOfMissile().z) - 30);
 			modelStack.Scale(2.f, 2.f, 2.f);
+			modelStack.Rotate(rotateXWing, 0, 0, 1);
+			renderMesh(meshList[GEO_MISSILE], false);
+			modelStack.PopMatrix();
+		}
+	}
+
+	if (shootMissile == true)
+	{
+		for (int i = 0; i < missile.Missiles; i++)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate((missile.Capacity[i].getPositionOfMissile().x) - 10,
+				(missile.Capacity[i].getPositionOfMissile().y) - 10,
+				(missile.Capacity[i].getPositionOfMissile().z) - 30);
+			modelStack.Scale(2.f, 2.f, 2.f);
+			modelStack.Rotate(rotateXWing, 0, 0, 1);
 			renderMesh(meshList[GEO_MISSILE], false);
 			modelStack.PopMatrix();
 		}

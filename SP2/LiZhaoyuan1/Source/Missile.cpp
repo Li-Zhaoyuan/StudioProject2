@@ -2,7 +2,7 @@
 
 Missile::Missile()
 {
-	position = Vector3(20, -10, 20);
+	position = Vector3(0, -10, 0);
 }
 
 Missile::Missile(const int &AmmoInMag)
@@ -17,10 +17,9 @@ Missile::~Missile()
 }
 void Missile::updatePosition(const Vector3 &pos)
 {
-	position.x = 0;
-	position.y = 490;
-	position.z = -20;
+	position = pos;
 }
+
 Vector3 Missile::getPositionOfMissile()
 {
 	return position;
