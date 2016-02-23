@@ -181,7 +181,7 @@ void SP2::Update(double dt)
 	camera.Update(dt,100);
 	fps = 1 / dt;
 
-	if (camera.position.x >= 50 && camera.position.z >= 50)
+	if (camera.position.x >= 50 && camera.position.z >= 50 && Application::IsKeyPressed('E'))
 	{
 		Gamemode::getinstance()->currentgamestate = 2;
 	}

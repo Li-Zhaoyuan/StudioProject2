@@ -14,7 +14,7 @@ public:
 	void Exit();
 	static bool IsKeyPressed(unsigned short key);
 	void changescenes();
-
+	bool sceneischanged = false;
 private:
 	//Declare a window object
 	StopWatch m_timer;

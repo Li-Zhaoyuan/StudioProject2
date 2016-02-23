@@ -291,7 +291,10 @@ void SceneSoraJewel::Update(double dt)
 {
 	camera.Update(dt, 1000);
 	fps = 1 / dt;
-
+	if (camera.position.x >= 50 && camera.position.z >= 50 && Application::IsKeyPressed('E'))
+	{
+		Gamemode::getinstance()->currentgamestate = 3;
+	}
 	if (Application::IsKeyPressed('1')) //enable back face culling
 		glEnable(GL_CULL_FACE);
 	if (Application::IsKeyPressed('2')) //disable back face culling
