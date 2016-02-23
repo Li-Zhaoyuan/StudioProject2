@@ -127,27 +127,27 @@ void Application::Run()
 	m_timer.startTimer();    // Start timer to calculate how long it takes to render this fr
 	while (!glfwWindowShouldClose(m_window) && !IsKeyPressed(VK_ESCAPE))
 	{
-		//if (IsKeyPressed('I'))
-		//{
-		//	currscene->Init();
-		//}
-		//else if (IsKeyPressed('Z'))
-		//{
-		//	currscene = scene1;
-		//	//currscene->Init();
-		//	sceneischanged = true;
-		//}
-		//else if (IsKeyPressed('X'))
-		//{
-		//	currscene = scene2;
-		//	currscene->Init();
-		//}
-		//else if (IsKeyPressed('C'))
-		//{
-		//	currscene = scene3;
-		//	//currscene->Init();
-		//	sceneischanged = true;
-		//}
+		if (IsKeyPressed('I'))
+		{
+			currscene->Init();
+		}
+		else if (IsKeyPressed('Z'))
+		{
+			currscene = scene1;
+			//currscene->Init();
+			sceneischanged = true;
+		}
+		else if (IsKeyPressed('X'))
+		{
+			currscene = scene2;
+			currscene->Init();
+		}
+		else if (IsKeyPressed('C'))
+		{
+			currscene = scene3;
+			//currscene->Init();
+			sceneischanged = true;
+		}
 		if (Gamemode::getinstance()->currentgamestate == 1)
 		{
 			currscene = new SP2();
