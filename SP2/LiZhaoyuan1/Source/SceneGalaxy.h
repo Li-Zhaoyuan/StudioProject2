@@ -131,7 +131,7 @@ private:
 	Light light[2];
 	bool enableLight = false;
 	float LSPEED = 10.f;
-	double fps = 0;
+	int fps = 0;
 	bool shootMissile = false;
 	
 
@@ -154,17 +154,13 @@ private:
 	unsigned m_programID;
 	unsigned m_parameters[U_TOTAL];
 
-	/*float rotateAngle;
-	float planet1RevAngle, planet1RotAngle, moon1RotAngle;*/
-
 	Camera3 camera;
-	//OBJBoundary obj;
 
 	float boxX = 0;
 	float boxZ = 0;
-	float camPosX = 0;
-	float camPosY = 0;
-	float camPosz = 0;
+	int camPosX = 0;
+	int camPosY = 0;
+	int camPosz = 0;
 
 	void MunInit();
 	void MunRender();

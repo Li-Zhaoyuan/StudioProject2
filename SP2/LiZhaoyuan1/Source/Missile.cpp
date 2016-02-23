@@ -13,7 +13,7 @@ Missile::Missile(const int &AmmoInMag)
 
 Missile::~Missile()
 {
-	//delete[] Capacity;
+	
 }
 void Missile::updatePosition(const Vector3 &pos)
 {
@@ -31,9 +31,9 @@ void Missile::setView(const Vector3 &view)
 }
 void Missile::Animation(double dt)
 {
-	float speed = 100;
+	float speed = 750.f;
 	position += view * speed * dt;
-	if (position.x > 1000 || position.y > 1000 || position.z > 1000|| position.x < -1000 || position.y < -1000 || position.z < -1000)
+	if (position.x > 750 || position.y > 750 || position.z > 750|| position.x < -750 || position.y < -750 || position.z < -750)
 	{
 		view = Vector3(0, 0, 0);
 	}

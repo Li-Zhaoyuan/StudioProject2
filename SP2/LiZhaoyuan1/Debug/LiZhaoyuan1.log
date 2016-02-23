@@ -1,22 +1,14 @@
-<<<<<<< HEAD
-﻿Build started 2/23/2016 11:23:24 AM.
-     1>Project "C:\Users\n1507\Desktop\CompG Project\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
-     1>Link:
-         LiZhaoyuan1.vcxproj -> C:\Users\n1507\Desktop\CompG Project\SP2\Debug\LiZhaoyuan1.exe
-     1>Done Building Project "C:\Users\n1507\Desktop\CompG Project\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:00.17
-=======
-﻿Build started 2/23/2016 11:30:27 AM.
-     1>Project "C:\Users\n1507\Desktop\SP2_1\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
+﻿Build started 23/2/2016 12:34:52 PM.
+     1>Project "C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\n1507\Desktop\SP2_1\SP2\\Common\Source /IC:\Users\n1507\Desktop\SP2_1\SP2\\glfw\include /IC:\Users\n1507\Desktop\SP2_1\SP2\\glew\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\SceneMun.cpp
-         SceneMun.cpp
-     1>c:\users\n1507\desktop\sp2_1\sp2\lizhaoyuan1\source\scenemun.h(161): warning C4305: 'initializing' : truncation from 'double' to 'float'
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\\Common\Source /IC:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\\glfw\include /IC:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\\glew\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\Camera3.cpp
+         Camera3.cpp
+     1>c:\users\mingj\onedrive\documents\studioproject2\sp2\lizhaoyuan1\source\camera3.cpp(59): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\onedrive\documents\studioproject2\sp2\lizhaoyuan1\source\camera3.cpp(110): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\onedrive\documents\studioproject2\sp2\lizhaoyuan1\source\camera3.cpp(163): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\onedrive\documents\studioproject2\sp2\lizhaoyuan1\source\camera3.cpp(212): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
        Link:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\n1507\Desktop\SP2_1\SP2\Debug\LiZhaoyuan1.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\n1507\Desktop\SP2_1\SP2\\glew\lib /LIBPATH:C:\Users\n1507\Desktop\SP2_1\SP2\Debug /LIBPATH:"C:\Users\n1507\Desktop\SP2_1\SP2\\glfw\lib-msvc120" glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\n1507\Desktop\SP2_1\SP2\Debug\LiZhaoyuan1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\n1507\Desktop\SP2_1\SP2\Debug\LiZhaoyuan1.lib" /MACHINE:X86 Debug\Application.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\Debug\LiZhaoyuan1.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\\glew\lib /LIBPATH:C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\Debug /LIBPATH:"C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\\glfw\lib-msvc120" glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\Debug\LiZhaoyuan1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\Debug\LiZhaoyuan1.lib" /MACHINE:X86 Debug\Application.obj
          Debug\Camera.obj
          Debug\Camera2.obj
          Debug\Camera3.obj
@@ -37,10 +29,9 @@ Time Elapsed 00:00:00.17
          Debug\shader.obj
          Debug\SP2.obj
          Debug\Utility.obj
-         LiZhaoyuan1.vcxproj -> C:\Users\n1507\Desktop\SP2_1\SP2\Debug\LiZhaoyuan1.exe
-     1>Done Building Project "C:\Users\n1507\Desktop\SP2_1\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
+         LiZhaoyuan1.vcxproj -> C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\Debug\LiZhaoyuan1.exe
+     1>Done Building Project "C:\Users\mingj\OneDrive\Documents\StudioProject2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.94
->>>>>>> 167c81188a45321f0ac85757bfe7114e2a0216ee
+Time Elapsed 00:00:01.01
