@@ -280,7 +280,7 @@ void SceneMun::Init()
 
 void SceneMun::Update(double dt)
 {
-	camera.Update(dt, 49);
+	camera.Update(dt, 100);
 	fps = 1 / dt;
 
 	if (Application::IsKeyPressed('5'))

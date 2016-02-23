@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿Build started 2/23/2016 5:31:51 PM.
      1>Project "C:\Users\n1507\Desktop\SP2_1\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
@@ -16,8 +17,21 @@
      1>c:\users\n1507\desktop\sp2_1\sp2\lizhaoyuan1\source\scenemun.cpp(1064): warning C4554: '&' : check operator precedence for possible error; use parentheses to clarify precedence
      1>c:\users\n1507\desktop\sp2_1\sp2\lizhaoyuan1\source\scenemun.cpp(1087): warning C4554: '&' : check operator precedence for possible error; use parentheses to clarify precedence
      1>c:\users\n1507\desktop\sp2_1\sp2\lizhaoyuan1\source\scenemun.cpp(1116): warning C4554: '&' : check operator precedence for possible error; use parentheses to clarify precedence
+=======
+﻿Build started 2/23/2016 4:49:51 PM.
+     1>Project "C:\Users\n1507\Desktop\CompG Project\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\n1507\Desktop\CompG Project\SP2\\Common\Source" /I"C:\Users\n1507\Desktop\CompG Project\SP2\\glfw\include" /I"C:\Users\n1507\Desktop\CompG Project\SP2\\glew\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\SceneSoraJewel.cpp
+         SceneSoraJewel.cpp
+     1>c:\users\n1507\desktop\compg project\sp2\lizhaoyuan1\source\scenesorajewel.cpp(367): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>c:\users\n1507\desktop\compg project\sp2\lizhaoyuan1\source\scenesorajewel.cpp(373): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>c:\users\n1507\desktop\compg project\sp2\lizhaoyuan1\source\scenesorajewel.cpp(689): warning C4244: 'argument' : conversion from 'float' to 'GLenum', possible loss of data
+     1>c:\users\n1507\desktop\compg project\sp2\lizhaoyuan1\source\scenesorajewel.cpp(698): warning C4244: 'argument' : conversion from 'float' to 'GLenum', possible loss of data
+     1>c:\users\n1507\desktop\compg project\sp2\lizhaoyuan1\source\scenesorajewel.cpp(734): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\n1507\desktop\compg project\sp2\lizhaoyuan1\source\scenesorajewel.cpp(739): warning C4305: 'argument' : truncation from 'double' to 'float'
+>>>>>>> 856765cef0ff3a90124891a65b2c2f2831458b5d
        Link:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\n1507\Desktop\SP2_1\SP2\Debug\LiZhaoyuan1.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\n1507\Desktop\SP2_1\SP2\\glew\lib /LIBPATH:C:\Users\n1507\Desktop\SP2_1\SP2\Debug /LIBPATH:"C:\Users\n1507\Desktop\SP2_1\SP2\\glfw\lib-msvc120" glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\n1507\Desktop\SP2_1\SP2\Debug\LiZhaoyuan1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\n1507\Desktop\SP2_1\SP2\Debug\LiZhaoyuan1.lib" /MACHINE:X86 Debug\Application.obj
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\n1507\Desktop\CompG Project\SP2\Debug\LiZhaoyuan1.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\n1507\Desktop\CompG Project\SP2\\glew\lib" /LIBPATH:"C:\Users\n1507\Desktop\CompG Project\SP2\Debug" /LIBPATH:"C:\Users\n1507\Desktop\CompG Project\SP2\\glfw\lib-msvc120" glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\n1507\Desktop\CompG Project\SP2\Debug\LiZhaoyuan1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\n1507\Desktop\CompG Project\SP2\Debug\LiZhaoyuan1.lib" /MACHINE:X86 Debug\Application.obj
          Debug\Camera.obj
          Debug\Camera2.obj
          Debug\Camera3.obj
@@ -38,9 +52,13 @@
          Debug\shader.obj
          Debug\SP2.obj
          Debug\Utility.obj
-         LiZhaoyuan1.vcxproj -> C:\Users\n1507\Desktop\SP2_1\SP2\Debug\LiZhaoyuan1.exe
-     1>Done Building Project "C:\Users\n1507\Desktop\SP2_1\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
+         LiZhaoyuan1.vcxproj -> C:\Users\n1507\Desktop\CompG Project\SP2\Debug\LiZhaoyuan1.exe
+     1>Done Building Project "C:\Users\n1507\Desktop\CompG Project\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
 
 Build succeeded.
 
+<<<<<<< HEAD
 Time Elapsed 00:00:00.87
+=======
+Time Elapsed 00:00:00.91
+>>>>>>> 856765cef0ff3a90124891a65b2c2f2831458b5d
