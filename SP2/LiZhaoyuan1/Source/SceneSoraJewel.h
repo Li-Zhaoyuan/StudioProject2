@@ -146,7 +146,13 @@ private:
 	void renderSoraJewelSkybox();
 
 	bool Quest1;
+	bool Quest1Done;
 	bool Quest2;
+	bool Quest2Done;
+	bool QuestsDone;
+
+	bool TextQ1Activated;
+	bool TextQ2Activated;
 
 	bool EmptyinHand;
 	bool BeerinHand;
