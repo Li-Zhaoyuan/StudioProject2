@@ -118,6 +118,7 @@ private:
 	void RenderOreOnScreen();
 	void RenderTextBoxOnScreen();
 	void RenderLetterOnScreen();
+	void RenderInfomationOnScreen();
 	unsigned m_vertexArrayID;
 	Mesh *meshList[NUM_GEOMETRY];
 

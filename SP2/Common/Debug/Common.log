@@ -1,17 +1,21 @@
 <<<<<<< HEAD
-﻿Build started 2/23/2016 9:18:12 AM.
-     1>Project "C:\Users\n1507\Desktop\CompG Project\SP2\Common\Common.vcxproj" on node 2 (Build target(s)).
+﻿Build started 23/2/2016 1:28:21 PM.
+     1>Project "E:\School stuff\2015S2\Computer Graphics Project\SP2\Common\Common.vcxproj" on node 2 (Build target(s)).
      1>Lib:
-         Common.vcxproj -> C:\Users\n1507\Desktop\CompG Project\SP2\Debug\Common.lib
-     1>Done Building Project "C:\Users\n1507\Desktop\CompG Project\SP2\Common\Common.vcxproj" (Build target(s)).
+         Common.vcxproj -> E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\Common.lib
+     1>Done Building Project "E:\School stuff\2015S2\Computer Graphics Project\SP2\Common\Common.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.13
 =======
-﻿Build started 2/23/2016 9:13:29 AM.
+﻿Build started 2/23/2016 11:51:12 AM.
      1>Project "C:\Users\n1507\Desktop\SP2_1\SP2\Common\Common.vcxproj" on node 2 (Build target(s)).
      1>Lib:
          Common.vcxproj -> C:\Users\n1507\Desktop\SP2_1\SP2\Debug\Common.lib
      1>Done Building Project "C:\Users\n1507\Desktop\SP2_1\SP2\Common\Common.vcxproj" (Build target(s)).
->>>>>>> 167c81188a45321f0ac85757bfe7114e2a0216ee
 
 Build succeeded.
 
-Time Elapsed 00:00:00.03
+Time Elapsed 00:00:00.14
+>>>>>>> 91d67f3deddfc625b5677f25aad9e30d66007e52
