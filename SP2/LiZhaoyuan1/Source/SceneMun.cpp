@@ -329,35 +329,24 @@ void SceneMun::Update(double dt)
 	camPosY = camera.position.y;
 	camPosz = camera.position.z;
 	
-	if ((mining || isRepairing) && loadingbar <= 20)
+	if ((((interact >> MINING) & 1 > 0) || ((interact >> REPAIRING) & 1 > 0)) && loadingbar <= 20)
 	{
 		loadingbar += (float)(5 * dt);
 	}
-	else if (mining && loadingbar >= 20)
+	else if (((interact >> MINING) & 1 > 0) && loadingbar >= 20)
 	{
-		isMined = true;
+		interact |= 1 << MINED;
 	}
-	else if (isRepairing && loadingbar >= 20)
+	else if (((interact >> REPAIRING) & 1 > 0) && loadingbar >= 20)
 	{
-		isRepaired = true;
+		interact |= 1 << REPAIRED;
 	}
 	else
 	{
 		loadingbar = 0.01f;
 	}
 
-	/*if (isRepairing && loadingbar <= 20)
-	{
-		loadingbar += (float)(5 * dt);
-	}
-	else if (isRepairing && loadingbar >= 20)
-	{
-		isRepaired = true;
-	}
-	else
-	{
-		loadingbar = 0.01f;
-	}*/
+	
 
 	npcRotate();
 	interactions();
@@ -618,7 +607,7 @@ void SceneMun::Render()
 	renderMesh(meshList[GEO_MUNGROUND], false);
 	modelStack.PopMatrix();
 
-	if (!isRepaired)
+	if ((((interact >> REPAIRED) & 1) < 1))
 	{
 		modelStack.PushMatrix();
 		modelStack.Translate(crashedplaneCoord.x, crashedplaneCoord.y, crashedplaneCoord.z);
@@ -626,7 +615,7 @@ void SceneMun::Render()
 		renderMesh(meshList[GEO_CRASHEDPLANE], true);
 		modelStack.PopMatrix();
 	}
-	if (isRepaired)
+	if ((((interact >> REPAIRED) & 1) > 0))
 	{
 		modelStack.PushMatrix();
 		modelStack.Translate(planecoord.x, planecoord.y, planecoord.z);
@@ -674,7 +663,7 @@ void SceneMun::Render()
 	modelStack.Translate(0, -5.5, 0);
 	renderMesh(meshList[GEO_ALIEN], true);
 	modelStack.PopMatrix();
-	if (!playergetpickaxe)
+	if ((((interact >> PLAYER_GET_PICKAXE) & 1) < 1))
 	{
 		modelStack.PushMatrix();
 		//modelStack.Rotate(-90, 0, 1, 0);
@@ -687,7 +676,7 @@ void SceneMun::Render()
 	}
 		
 	modelStack.PopMatrix();
-	if (!isMined)
+	if ((((interact >> MINED) & 1) < 1))
 	{
 		modelStack.PushMatrix();
 		modelStack.Translate(oreCoord.x, oreCoord.y, oreCoord.z);
@@ -695,7 +684,7 @@ void SceneMun::Render()
 		renderMesh(meshList[GEO_ORE], true);
 		modelStack.PopMatrix();
 	}
-	if (isMined)
+	if ((((interact >> MINED) & 1) > 0))
 	{
 		RenderOreOnScreen();
 	}
@@ -706,18 +695,18 @@ void SceneMun::Render()
 	renderMesh(meshList[GEO_LIGHTBALL], false);
 	modelStack.PopMatrix();
 
-	if (!isMined && playergetpickaxe == true)
+	if ((((interact >> MINED) & 1) < 1) && (((interact >> PLAYER_GET_PICKAXE) & 1) > 0))
 	{
 		RenderPickaxeOnScreen();
 	}
 	RenderLetterOnScreen();
 	Renderpicturetoscreen();
-	if (mining)
+	if (((interact >> MINING) & 1 > 0))
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "M ining", Color(0, 1, 0), 3, 11, 15);
 		RenderLoadingBarOnScreen();
 	}
-	if (isRepairing && isMined)
+	if (((interact >> REPAIRING) & 1 > 0) && (((interact >> MINED) & 1) > 0))
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Repairing", Color(0, 1, 0), 3, 11, 15);
 		RenderLoadingBarOnScreen();
@@ -830,69 +819,76 @@ void SceneMun::interactions()
 	
 	
 	if (RadiusFromOre < 2.5f
-		&& playergetpickaxe == true
+		&& (((interact >> PLAYER_GET_PICKAXE) & 1) > 0)
 		&& Application::IsKeyPressed(VK_LBUTTON)
-		&& !isMined)
+		&& (((interact >> MINED) & 1) < 1))
 	{
-		mining = true;
+		interact |= 1 << MINING;
 	}
 	else
 	{
-		mining = false;
+		interact &= ~(1 << MINING);
 	}
 
 	if (RadiusFromCrashedPlane < 7.5f
 		&& Application::IsKeyPressed(VK_LBUTTON)
-		&& !isRepaired)
+		&& (((interact >> REPAIRED) & 1) < 1))
 	{
-		isRepairing = true;
+		interact |= 1 << REPAIRING;
 	}
 	else
 	{
-		isRepairing = false;
+		interact &= ~(1 << REPAIRING);
 	}
 
 	if (RadiusFromLady < 6.0f
 		&& Application::IsKeyPressed(VK_RBUTTON))
 	{
-		isTalkingToLady = true;
+		/*isTalkingToLady = true;*/
+		interact |= 1 << TALKING_TO_LADY;
 	}
 	else if (RadiusFromLady > 6.0f)
 	{
-		isTalkingToLady = false;
+		interact &= ~(1 << TALKING_TO_LADY);
 	}
 
 	if (RadiusFromDude < 6.0f
 		&& Application::IsKeyPressed(VK_RBUTTON))
 	{
-		TalkedToQuestDude = true;
-		isTalkingToQuestDude = true;
+		/*TalkedToQuestDude = true;*/
+		interact |= 1 << TALKED_QUEST_DUDE;
+		interact |= 1 << TALKING_TO_QUEST_DUDE;
+		/*isTalkingToQuestDude = true;*/
 	}
 	else if (RadiusFromDude > 6.0f)
 	{
-		isTalkingToQuestDude = false;
+		interact &= ~(1 << TALKING_TO_QUEST_DUDE);
+		/*isTalkingToQuestDude = false;*/
 	}
 	if (RadiusFromMiner < 6.0f
-		&& TalkedToQuestDude == true
+		&& ((interact >> TALKED_QUEST_DUDE) & 1 > 0)
 		&& Application::IsKeyPressed(VK_RBUTTON))
 	{
-		minergotLetter = true;
-		playergetpickaxe = true;
-		isTalkingToMinerType2 = true;
+		interact |= 1 << MINER_GET_LETTER;
+		interact |= 1 << PLAYER_GET_PICKAXE;
+		interact |= 1 << TALKING_TO_MINER_CASE_2;
+		/*isTalkingToMinerType2 = true;*/
 	}
 	else if (RadiusFromMiner > 6.0f)
 	{
-		isTalkingToMinerType2 = false;
+		interact &= ~(1 << TALKING_TO_MINER_CASE_2);
+		/*isTalkingToMinerType2 = false;*/
 	}
 	if (RadiusFromMiner < 6.0f
-		&& TalkedToQuestDude == false
+		&& (((interact >> TALKED_QUEST_DUDE) & 1)< 1)
 		&& Application::IsKeyPressed(VK_RBUTTON))
 	{
-		isTalkingToMinerType1 = true;
+		/*isTalkingToMinerType1 = true;*/
+		interact |= 1 << TALKING_TO_MINER_CASE_1;
 	}
 	else if (RadiusFromMiner > 6.0f)
 	{
-		isTalkingToMinerType1 = false;
+		interact &= ~(1 << TALKING_TO_MINER_CASE_1);
 	}
 }
 
@@ -969,7 +965,7 @@ void SceneMun::RenderLoadingBarOnScreen()
 
 void SceneMun::RenderOreOnScreen()
 {
-	if (!isRepairing && !isRepaired)
+	if ((((interact >> REPAIRING) & 1) < 1) && (((interact >> REPAIRED) & 1) < 1))
 	{
 		Mtx44 ortho;
 		glDisable(GL_DEPTH_TEST);
@@ -990,7 +986,7 @@ void SceneMun::RenderOreOnScreen()
 		modelStack.PopMatrix();
 		glEnable(GL_DEPTH_TEST);
 	}
-	else if (isRepairing)
+	else if ((((interact >> REPAIRING) & 1 > 0)))
 	{
 		Mtx44 ortho;
 		glDisable(GL_DEPTH_TEST);
@@ -1015,7 +1011,7 @@ void SceneMun::RenderOreOnScreen()
 
 void SceneMun::RenderTextBoxOnScreen()
 {
-	if (isTalkingToLady)
+	if ((((interact >> TALKING_TO_LADY) & 1 > 0)))
 	{
 		Mtx44 ortho;
 		glDisable(GL_DEPTH_TEST);
@@ -1039,7 +1035,7 @@ void SceneMun::RenderTextBoxOnScreen()
 		RenderTextOnScreen(meshList[GEO_TEXT], "Oh Lord! Are you okayyyyy?", Color(0, 0, 0), 3, 7, 4);
 	}
 
-	if (isTalkingToQuestDude)
+	if ((((interact >> TALKING_TO_QUEST_DUDE) & 1 > 0)))
 	{
 		Mtx44 ortho;
 		glDisable(GL_DEPTH_TEST);
@@ -1065,7 +1061,7 @@ void SceneMun::RenderTextBoxOnScreen()
 		RenderTextOnScreen(meshList[GEO_TEXT], "letter to the M iner near the", Color(0, 0, 0), 3, 6, 2);
 		RenderTextOnScreen(meshList[GEO_TEXT], "Cave.", Color(0, 0, 0), 3, 6, 1);
 	}
-	if (isTalkingToMinerType1)
+	if ((((interact >> TALKING_TO_MINER_CASE_1) & 1 > 0)))
 	{
 		Mtx44 ortho;
 		glDisable(GL_DEPTH_TEST);
@@ -1088,7 +1084,7 @@ void SceneMun::RenderTextBoxOnScreen()
 		glEnable(GL_DEPTH_TEST);
 		RenderTextOnScreen(meshList[GEO_TEXT], "Go Away, Im busy", Color(0, 0, 0), 3, 7, 4);
 	}
-	if (isTalkingToMinerType2)
+	if ((((interact >> TALKING_TO_MINER_CASE_2) & 1 > 0)))
 	{
 		Mtx44 ortho;
 		glDisable(GL_DEPTH_TEST);
@@ -1117,7 +1113,7 @@ void SceneMun::RenderTextBoxOnScreen()
 
 void SceneMun::RenderLetterOnScreen()
 {
-	if (TalkedToQuestDude && !minergotLetter)
+	if (((interact >> TALKED_QUEST_DUDE) & 1 > 0) && (((interact >> MINER_GET_LETTER) & 1) < 1))
 	{
 		Mtx44 ortho;
 		glDisable(GL_DEPTH_TEST);

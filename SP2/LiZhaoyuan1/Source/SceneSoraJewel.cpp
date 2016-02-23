@@ -252,6 +252,41 @@ void SceneSoraJewel::Init()
 	meshList[GEO_ENGINEER]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
 	meshList[GEO_ENGINEER]->material.kShininess = 1.f;
 
+	meshList[GEO_ENGINEER_BODY] = MeshBuilder::GenerateOBJ("Counter", "OBJ//HeadBody.obj");
+	meshList[GEO_ENGINEER_BODY]->textureID = LoadTGA("Image//mainCharacterY.tga");
+	meshList[GEO_ENGINEER_BODY]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_ENGINEER_BODY]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_ENGINEER_BODY]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_ENGINEER_BODY]->material.kShininess = 1.f;
+
+	meshList[GEO_ENGINEER_ARMLEFT] = MeshBuilder::GenerateOBJ("Counter", "OBJ//LeftArm.obj");
+	meshList[GEO_ENGINEER_ARMLEFT]->textureID = LoadTGA("Image//mainCharacterY.tga");
+	meshList[GEO_ENGINEER_ARMLEFT]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_ENGINEER_ARMLEFT]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_ENGINEER_ARMLEFT]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_ENGINEER_ARMLEFT]->material.kShininess = 1.f;
+
+	meshList[GEO_ENGINEER_ARMRIGHT] = MeshBuilder::GenerateOBJ("Counter", "OBJ//RightArm.obj");
+	meshList[GEO_ENGINEER_ARMRIGHT]->textureID = LoadTGA("Image//mainCharacterY.tga");
+	meshList[GEO_ENGINEER_ARMRIGHT]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_ENGINEER_ARMRIGHT]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_ENGINEER_ARMRIGHT]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_ENGINEER_ARMRIGHT]->material.kShininess = 1.f;
+
+	meshList[GEO_ENGINEER_LEGLEFT] = MeshBuilder::GenerateOBJ("Counter", "OBJ//LeftLeg.obj");
+	meshList[GEO_ENGINEER_LEGLEFT]->textureID = LoadTGA("Image//mainCharacterY.tga");
+	meshList[GEO_ENGINEER_LEGLEFT]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_ENGINEER_LEGLEFT]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_ENGINEER_LEGLEFT]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_ENGINEER_LEGLEFT]->material.kShininess = 1.f;
+
+	meshList[GEO_ENGINEER_LEGRIGHT] = MeshBuilder::GenerateOBJ("Counter", "OBJ//RightLeg.obj");
+	meshList[GEO_ENGINEER_LEGRIGHT]->textureID = LoadTGA("Image//mainCharacterY.tga");
+	meshList[GEO_ENGINEER_LEGRIGHT]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_ENGINEER_LEGRIGHT]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_ENGINEER_LEGRIGHT]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_ENGINEER_LEGRIGHT]->material.kShininess = 1.f;
+
 	meshList[GEO_NORMALDUDE] = MeshBuilder::GenerateOBJ("Counter", "OBJ//CharacterModel.obj");
 	meshList[GEO_NORMALDUDE]->textureID = LoadTGA("Image//mainCharacter.tga");
 	meshList[GEO_NORMALDUDE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
@@ -286,6 +321,9 @@ void SceneSoraJewel::Init()
 	camera.SceneGalaxy = false;
 	camera.SceneMun = false;
 	camera.SceneSoraJewel = true;
+
+	Engineerpositionx = -78.f, Engineerpositiony = 10.f, Engineerpositionz = -45.5f; Engineerrotationarm = 45;
+	//Engineerrotationy = 280;
 }
 
 void SceneSoraJewel::Update(double dt)
@@ -321,6 +359,41 @@ void SceneSoraJewel::Update(double dt)
 		enableLight = true;
 	if (Application::IsKeyPressed('Z'))
 		enableLight = false;
+
+	
+	if (Application::IsKeyPressed(VK_SPACE))
+	{
+		if (Engineerpositionx < -25)
+		{
+			Engineerpositionx += (0.33);
+			characterismoving = true;
+		}
+		if (Engineerpositionz < 53)
+		{
+			characterismoving = true;
+			Engineerpositionz += 1 * 0.6;
+		}
+		
+	}
+	if (characterismoving == true)
+	{
+		if ((Engineerrotationarm>0) && (rotationarmmax==true))
+		{
+			Engineerrotationarm -= (1);
+		}
+		else if (Engineerrotationarm <= 0)
+		{
+			rotationarmmax = false;
+		}
+		if ((Engineerrotationarm>45)&&(rotationarmmax==false))
+		{
+			Engineerrotationarm += (1);
+		}
+		 if (Engineerrotationarm > 45)
+		{
+			rotationarmmax = true;
+		}
+	}
 
 	if (camera.position.x >= -28 && camera.position.z >= 49 && camera.position.x <= -18 && camera.position.z <= 60)
 	{
@@ -636,6 +709,37 @@ void SceneSoraJewel::Render()
 	modelStack.Rotate(180, 0, 1, 0);
 	modelStack.Scale(2.4f, 2.4f, 2.4f);
 	renderMesh(meshList[GEO_QUESTLADY], false);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	
+	modelStack.Translate(Engineerpositionx, -2, Engineerpositionz);
+	modelStack.Rotate(280, 0, 1, 0);
+	modelStack.Scale(2.4f, 2.4f, 2.4f);
+	renderMesh(meshList[GEO_ENGINEER_BODY], false);
+	
+	modelStack.PushMatrix();
+	modelStack.Translate(0, 5, 0);
+	modelStack.Rotate(Engineerrotationarm, 0, 0, 1);
+	modelStack.Scale(1.f, 1.f, 1.f);
+	renderMesh(meshList[GEO_ENGINEER_ARMLEFT], false);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(0, 5, 0);
+	modelStack.Scale(1.f, 1.f, 1.f);
+	renderMesh(meshList[GEO_ENGINEER_ARMRIGHT], false);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(0, 2.6, 0);
+	modelStack.Scale(1.f, 1.f, 1.f);
+	renderMesh(meshList[GEO_ENGINEER_LEGLEFT], false);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(0, 2.6, 0);
+	modelStack.Scale(1.f, 1.f, 1.f);
+	renderMesh(meshList[GEO_ENGINEER_LEGRIGHT], false);
+	modelStack.PopMatrix();
+	//Body Parent
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
