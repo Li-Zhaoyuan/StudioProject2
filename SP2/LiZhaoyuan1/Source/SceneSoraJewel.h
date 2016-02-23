@@ -35,6 +35,11 @@ class SceneSoraJewel : public Scene
 		GEO_SOFA,
 		GEO_QUESTLADY,
 		GEO_ENGINEER,
+		GEO_ENGINEER_LEGLEFT,
+		GEO_ENGINEER_LEGRIGHT,
+		GEO_ENGINEER_ARMLEFT,
+		GEO_ENGINEER_ARMRIGHT,
+		GEO_ENGINEER_BODY,
 		GEO_COMMANDER,
 		GEO_NORMALDUDE,
 		GEO_KEG,
@@ -156,6 +161,10 @@ private:
 
 	bool EmptyinHand;
 	bool BeerinHand;
+
+	float Engineerpositionx, Engineerpositiony, Engineerpositionz;
+	bool characterismoving = false; bool rotationarmmax = true;
+	float Engineerrotationarm;
 
 	MS modelStack, viewStack, projectionStack;
 };
