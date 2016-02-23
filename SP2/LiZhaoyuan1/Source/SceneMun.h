@@ -85,6 +85,20 @@ class SceneMun : public Scene
 		U_TOTAL,
 	};
 
+	enum Interactions
+	{
+		TALKED_QUEST_DUDE = 0,
+		MINER_GET_LETTER,
+		PLAYER_GET_PICKAXE,
+		MINING,
+		REPAIRING,
+		TALKING_TO_LADY,
+		TALKING_TO_QUEST_DUDE,
+		TALKING_TO_MINER_CASE_1,
+		TALKING_TO_MINER_CASE_2,
+		MINED,
+		REPAIRED,
+	};
 public:
 	SceneMun();
 	~SceneMun();
@@ -136,6 +150,8 @@ private:
 	float camPosY = 0;
 	float camPosz = 0;
 	
+	int interact = 0;
+
 	Vector3 crashedplaneCoord = Vector3(-36.f,4.9f,-34.f);
 	Vector3 planecoord = Vector3(-36.f, -2.9f, -45.f);
 	Vector3 questdudehouseCoord = Vector3(33, -5, 20);
@@ -161,17 +177,7 @@ private:
 
 	float loadingbar = 0.01;
 
-	bool mining = false;
-	bool isMined = false;
-	bool isRepairing = false;
-	bool isRepaired = false;
-	bool isTalkingToLady = false;
-	bool isTalkingToQuestDude = false;
-	bool TalkedToQuestDude = false;
-	bool isTalkingToMinerType1 = false;
-	bool isTalkingToMinerType2 = false;
-	bool minergotLetter = false;
-	bool playergetpickaxe = false;
+	
 
 	MS modelStack, viewStack, projectionStack;
 };
