@@ -469,7 +469,7 @@ void SceneSoraJewel::Update(double dt)
 		camera.position.x = -96;
 		camera.position.y = 25;
 		camera.position.z = 82;
-		camera.up.Normalized();
+		camera.up.y = 1;
 	}
 	if (Application::IsKeyPressed('E') && (camera.position.x >= -13 && camera.position.z >= -60) && (camera.position.x <= -1 && camera.position.z <= -46))
 	{

@@ -127,7 +127,7 @@ void Camera3::Update(double dt, float bounds)
 		{
 			if (OBJboundaryY(Testvalue, 2) == true)
 			{
-				position.z += right.z * dt * -CAMERA_SPEED;
+				position.z += (float)(right.z * dt * -CAMERA_SPEED);
 				target.z += right.z * dt * -CAMERA_SPEED;
 				minimapcoords.x += (right.z*(float)(CAMERA_SPEED*dt*0.1));
 			}
@@ -934,9 +934,12 @@ void Camera3::SJUpdate(double dt, float bounds)
 
 bool Camera3::OnGround()
 {
+	if (position.y <= 25 && (position.x >= -117 && position.z >= 30) && (position.x <= -51 && position.z <= 100))
+		return true;
 	if (position.y <= 5 && (position.x >= -140 && position.z >= 20) && (position.x <= 61 && position.z <= 113))
 		return true;
-	else if (position.y <= 10)
+	else if (position.y <= 10 && (position.x >= -140 && position.z >= -112) && (position.x <= 62 && position.z <= 0))
 		return true;
+
 	return false;
 }
