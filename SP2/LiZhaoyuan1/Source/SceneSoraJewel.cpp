@@ -360,33 +360,76 @@ void SceneSoraJewel::Update(double dt)
 	if (Application::IsKeyPressed('Z'))
 		enableLight = false;
 
-	
-	if (Application::IsKeyPressed(VK_SPACE))
+
+	if (camera.position.x >= -28 && camera.position.z >= 49 && camera.position.x <= -18 && camera.position.z <= 60)
 	{
-		if (Engineerpositionx < -25)
+		camera.position.x = -96;
+		camera.position.y = 25;
+		camera.position.z = 82;
+		camera.up.Normalized();
+	}
+	if (Application::IsKeyPressed('E') && (camera.position.x >= -13 && camera.position.z >= -60) && (camera.position.x <= -1 && camera.position.z <= -46))
+	{
+		Quest1 = true;
+	}
+	if (Application::IsKeyPressed('E') && Quest1 == true && (camera.position.x >= -96.2f && camera.position.z >= 45) && (camera.position.x <= -90	 && camera.position.z <= 51) && camera.position.y >= 14)
+	{
+		Quest2 = true;
+	}
+	if (Application::IsKeyPressed('E') && Quest2 == true && (camera.position.x >= 13 && camera.position.z >= -27) && (camera.position.x <= 20 && camera.position.z <= -20))
+	{
+		EmptyinHand = true;
+		BeerinHand = false;
+	}
+	if (Application::IsKeyPressed('E') && Quest2 == true && (camera.position.x >= -57 && camera.position.z >= -95) && (camera.position.x <= -45 && camera.position.z <= -83))
+	{
+		EmptyinHand = false;
+		BeerinHand = true;
+	}
+	if (Application::IsKeyPressed('E') && (camera.position.x >= -80 && camera.position.z >= -42) && (camera.position.x <= -72 && camera.position.z <= -30))
+	{
+		Quest1Done = true;
+		Quest2Done = true;
+		BeerinHand = false;
+	}
+	if (Quest1Done == true && Quest2Done == true)
+	{
+		QuestsDone = true;
+	}
+	rotateGlobeY += (float)(3 * dt);
+	if (rotateGlobeY >= 360)
+		rotateGlobeY = 0;
+
+	camPosX = camera.position.x;
+	camPosY = camera.position.y;
+	camPosZ = camera.position.z;
+
+	if (QuestsDone ==true)
+	{
+		if (Engineerpositionx < -25.f)
 		{
 			Engineerpositionx += (0.33f);
 			characterismoving = true;
 		}
-		if (Engineerpositionz < 53)
+		if (Engineerpositionz < 53.f)
 		{
 			characterismoving = true;
 			Engineerpositionz += 1 * 0.6f;
 		}
-		if (Engineerpositionx == -25)
+		if (Engineerpositionx >= -25)
 		{
-			
+
 			characterismoving = false;
 		}
-		if (Engineerpositionz == 53)
+		if (Engineerpositionz >= 53)
 		{
 			characterismoving = false;
 		}
-		
+
 	}
 	if (characterismoving == true)
 	{
-		if ((Engineerrotationarmleft >=-45) && (rotationarmmax == true))
+		if ((Engineerrotationarmleft >= -45) && (rotationarmmax == true))
 		{
 			Engineerrotationarmleft -= (float)(80 * dt);
 		}
@@ -421,7 +464,7 @@ void SceneSoraJewel::Update(double dt)
 		{
 			rotationarmmax2 = true;
 		}
-		
+
 
 		if ((Engineerrotationlegleft >= -45) && (rotationlegmaxleft == true))
 		{
@@ -459,53 +502,7 @@ void SceneSoraJewel::Update(double dt)
 			rotationlegmaxright = true;
 		}
 	}
-	else
-	{
-
-	}
-
-	if (camera.position.x >= -28 && camera.position.z >= 49 && camera.position.x <= -18 && camera.position.z <= 60)
-	{
-		camera.position.x = -96;
-		camera.position.y = 25;
-		camera.position.z = 82;
-		camera.up.y = 1;
-	}
-	if (Application::IsKeyPressed('E') && (camera.position.x >= -13 && camera.position.z >= -60) && (camera.position.x <= -1 && camera.position.z <= -46))
-	{
-		Quest1 = true;
-	}
-	if (Application::IsKeyPressed('E') && Quest1 == true && (camera.position.x >= -96.2f && camera.position.z >= 45) && (camera.position.x <= -90	 && camera.position.z <= 51) && camera.position.y >= 14)
-	{
-		Quest2 = true;
-	}
-	if (Application::IsKeyPressed('E') && Quest2 == true && (camera.position.x >= 13 && camera.position.z >= -27) && (camera.position.x <= 20 && camera.position.z <= -20))
-	{
-		EmptyinHand = true;
-		BeerinHand = false;
-	}
-	if (Application::IsKeyPressed('E') && Quest2 == true && (camera.position.x >= -57 && camera.position.z >= -95) && (camera.position.x <= -45 && camera.position.z <= -83))
-	{
-		EmptyinHand = false;
-		BeerinHand = true;
-	}
-	if (Application::IsKeyPressed('E') && (camera.position.x >= -80 && camera.position.z >= -42) && (camera.position.x <= -72 && camera.position.z <= -30))
-	{
-		Quest1Done = true;
-		Quest2Done = true;
-		BeerinHand = false;
-	}
-	if (Quest1Done == true && Quest2Done == true)
-	{
-		QuestsDone = true;
-	}
-	rotateGlobeY += (float)(3 * dt);
-	if (rotateGlobeY >= 360)
-		rotateGlobeY = 0;
-
-	camPosX = camera.position.x;
-	camPosY = camera.position.y;
-	camPosZ = camera.position.z;
+	
 }
 void SceneSoraJewel::lighting()
 {
@@ -842,6 +839,7 @@ void SceneSoraJewel::Render()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The Quest For Sora Jewel", Color(0, 1, 0), 2, 2, 10);
 	}
+
 	/*if (Quest1 == true && Quest2 == false && QuestsDone == false && !Application::IsKeyPressed('W') && !Application::IsKeyPressed('A') && !Application::IsKeyPressed('S') && !Application::IsKeyPressed('D'))
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The Quest For Sora Jewel", (0, 1, 0), 5, 4, 10);
