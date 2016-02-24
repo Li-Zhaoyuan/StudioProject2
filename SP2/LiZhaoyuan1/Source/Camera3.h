@@ -15,8 +15,8 @@ public:
 	Vector3 defaultTarget;
 	Vector3 defaultUp;
 
-	Vector3 currentV = (0, 0, 0);
-	Vector3 displacement = (0, 0, 0);
+	Vector3 currentV = (0.f, 0.f, 0.f);
+	Vector3 displacement = (0.f, 0.f, 0.f);
 
 	Vector3 minimapcoords = (75.f, 55.f, -1.f);
 	Vector3 minimapsoracoords = (78.f, 55.f, -1.f);
