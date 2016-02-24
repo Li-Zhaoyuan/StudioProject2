@@ -135,6 +135,7 @@ private:
 	
 	Vector3 Asteroid = Vector3(239, 600, -400);
 	Vector3 Asteroid2 = Vector3(-203, 490, -230);
+	Vector3 Asteroid3 = Vector3(-279, 900, -300);
 
 	int Missiles;
 	int bulletCount = 0;

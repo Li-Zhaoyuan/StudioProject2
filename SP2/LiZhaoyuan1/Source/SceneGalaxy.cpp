@@ -219,6 +219,18 @@ void SceneGalaxy::MovingAsteroid(double dt)
 		else if (Asteroid2.z > -30)
 			Asteroid2.z -= 2.5 * speed;
 	}
+
+	if (getMagnitude(camera.position, Asteroid3) > 0)
+	{
+		if (Asteroid3.x == 0)
+			return;
+		else if (Asteroid3.x < 0)
+			Asteroid3.x += 1.5 * speed;
+		if (Asteroid3.z == 0)
+			return;
+		else if (Asteroid3.z > -30)
+			Asteroid3.z -= 2.5 * speed;
+	}
 }
 
 int SceneGalaxy::getMagnitude(Vector3 A, Vector3 B)
