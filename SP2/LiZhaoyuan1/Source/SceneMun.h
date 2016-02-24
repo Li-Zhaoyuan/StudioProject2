@@ -9,7 +9,6 @@
 #include "Camera3.h"
 #include "Camera4.h"
 #include "MatrixStack.h"
-#include "RenderMun.h"
 class SceneMun : public Scene
 {
 
@@ -175,7 +174,7 @@ private:
 	float rotateminer = 0;
 	float rotatequestdude = 0;
 
-	float loadingbar = 0.01;
+	float loadingbar = 0.01f;
 
 	
 

@@ -8,9 +8,10 @@
 #include "Camera3.h"
 #include "Camera4.h"
 #include "MatrixStack.h"
-#include "RenderMun.h"
 #include <vector>
 #include "Missile.h"
+#include <cmath>
+
 
 class SceneGalaxy : public Scene
 {
@@ -113,10 +114,6 @@ public:
 	SceneGalaxy();
 	~SceneGalaxy();
 
-	Vector3 missileCoord;
-	Vector3 tempView;
-	Vector3 tempPos;
-
 	void skybox();
 	virtual void Init();
 	virtual void Update(double dt);
@@ -124,6 +121,8 @@ public:
 	virtual void Render();
 	virtual void RenderXwing();
 	virtual void RenderAsteroid();
+	virtual void MovingAsteroid(double dt);
+	int getMagnitude(Vector3 A, Vector3 B);
 	virtual void RenderMissile();
 	virtual void Exit();
 
@@ -133,7 +132,16 @@ private:
 	float LSPEED = 10.f;
 	int fps = 0;
 	bool shootMissile = false;
+	bool shootAsteroid = false;
+
 	
+	Vector3 Asteroid = Vector3(239, 980, -400);
+	float tempPosX = 0;
+	float tempPosY = 0;
+	float tempPosZ = 0;
+	float rotateAsteroid = 0;
+	float translateAsteroidX = 0;
+	float translateAsteroidZ = 0;
 
 	int Missiles;
 	int bulletCount = 0;
@@ -170,10 +178,6 @@ private:
 
 	void SoraJewelInit();
 	void SoraJewelRender();
-
-	void renderMunSkybox();
-	void renderGalaxySkybox();
-	void renderSoraJewelSkybox();
 
 	MS modelStack, viewStack, projectionStack;
 };

@@ -9,7 +9,6 @@
 #include "Camera3.h"
 #include "Camera4.h"
 #include "MatrixStack.h"
-#include "RenderMun.h"
 #include "Physics.h"
 
 class SceneSoraJewel : public Scene
@@ -146,10 +145,6 @@ private:
 	void SoraJewelInit();
 	void SoraJewelRender();
 
-	void renderMunSkybox();
-	void renderGalaxySkybox();
-	void renderSoraJewelSkybox();
-
 	bool Quest1;
 	bool Quest1Done;
 	bool Quest2;
@@ -163,8 +158,8 @@ private:
 	bool BeerinHand;
 
 	float Engineerpositionx, Engineerpositiony, Engineerpositionz;
-	bool characterismoving = false; bool rotationarmmax = true;
-	float Engineerrotationarm;
+	bool characterismoving = false; bool rotationarmmax = true; bool rotationarmmax2 = true, rotationlegmaxleft = true, rotationlegmaxright = true;
+	float Engineerrotationarmleft, Engineerrotationarmright, Engineerrotationlegleft, Engineerrotationlegright;
 
 	MS modelStack, viewStack, projectionStack;
 };

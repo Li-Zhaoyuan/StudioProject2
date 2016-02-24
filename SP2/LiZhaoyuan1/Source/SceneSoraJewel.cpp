@@ -322,7 +322,7 @@ void SceneSoraJewel::Init()
 	camera.SceneMun = false;
 	camera.SceneSoraJewel = true;
 
-	Engineerpositionx = -78.f, Engineerpositiony = 10.f, Engineerpositionz = -45.5f; Engineerrotationarm = 45;
+	Engineerpositionx = -78.f, Engineerpositiony = 10.f, Engineerpositionz = -45.5f; Engineerrotationarmleft = 45; Engineerrotationarmright = -45; Engineerrotationlegleft = -45; Engineerrotationlegright = 45;
 	//Engineerrotationy = 280;
 }
 
@@ -365,34 +365,103 @@ void SceneSoraJewel::Update(double dt)
 	{
 		if (Engineerpositionx < -25)
 		{
-			Engineerpositionx += (0.33);
+			Engineerpositionx += (0.33f);
 			characterismoving = true;
 		}
 		if (Engineerpositionz < 53)
 		{
 			characterismoving = true;
-			Engineerpositionz += 1 * 0.6;
+			Engineerpositionz += 1 * 0.6f;
+		}
+		if (Engineerpositionx == -25)
+		{
+			
+			characterismoving = false;
+		}
+		if (Engineerpositionz == 53)
+		{
+			characterismoving = false;
 		}
 		
 	}
 	if (characterismoving == true)
 	{
-		if ((Engineerrotationarm>0) && (rotationarmmax==true))
+		if ((Engineerrotationarmleft >=-45) && (rotationarmmax == true))
 		{
-			Engineerrotationarm -= (1);
+			Engineerrotationarmleft -= (float)(80 * dt);
 		}
-		else if (Engineerrotationarm <= 0)
+		else if ((Engineerrotationarmleft < -45))
 		{
 			rotationarmmax = false;
 		}
-		if ((Engineerrotationarm>45)&&(rotationarmmax==false))
+		if ((Engineerrotationarmleft <= 45) && (rotationarmmax == false))
 		{
-			Engineerrotationarm += (1);
+			Engineerrotationarmleft += (float)(80 * dt);
 		}
-		 if (Engineerrotationarm > 45)
+
+		else if ((Engineerrotationarmleft > 45))
 		{
 			rotationarmmax = true;
 		}
+
+		if ((Engineerrotationarmright >= -45) && (rotationarmmax2 == true))
+		{
+			Engineerrotationarmright -= (float)(80 * dt);
+		}
+		else if ((Engineerrotationarmright < -45))
+		{
+			rotationarmmax2 = false;
+		}
+		if ((Engineerrotationarmright <= 45) && (rotationarmmax2 == false))
+		{
+			Engineerrotationarmright += (float)(80 * dt);
+		}
+
+		else if ((Engineerrotationarmright > 45))
+		{
+			rotationarmmax2 = true;
+		}
+		
+
+		if ((Engineerrotationlegleft >= -45) && (rotationlegmaxleft == true))
+		{
+			Engineerrotationlegleft -= (float)(80 * dt);
+		}
+		else if ((Engineerrotationlegleft < -45))
+		{
+			rotationlegmaxleft = false;
+		}
+		if ((Engineerrotationlegleft <= 45) && (rotationlegmaxleft == false))
+		{
+			Engineerrotationlegleft += (float)(80 * dt);
+		}
+
+		else if ((Engineerrotationlegleft > 45))
+		{
+			rotationlegmaxleft = true;
+		}
+
+		if ((Engineerrotationlegright >= -45) && (rotationlegmaxright == true))
+		{
+			Engineerrotationlegright -= (float)(80 * dt);
+		}
+		else if ((Engineerrotationlegright < -45))
+		{
+			rotationlegmaxright = false;
+		}
+		if ((Engineerrotationlegright <= 45) && (rotationlegmaxright == false))
+		{
+			Engineerrotationlegright += (float)(80 * dt);
+		}
+
+		else if ((Engineerrotationlegright > 45))
+		{
+			rotationlegmaxright = true;
+		}
+	}
+	else
+	{
+
 	}
 
 	if (camera.position.x >= -28 && camera.position.z >= 49 && camera.position.x <= -18 && camera.position.z <= 60)
@@ -685,7 +754,7 @@ void SceneSoraJewel::Render()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	glBlendFunc(1.1f, 1);
+	glBlendFunc(1.1, 1);
 	modelStack.Translate(25, 45, -53);
 	modelStack.Rotate(rotateGlobeY, 0, 1, 0);
 	modelStack.Scale(30, 30, 30);
@@ -694,7 +763,7 @@ void SceneSoraJewel::Render()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	glBlendFunc(1.9f, 1);
+	glBlendFunc(1.9, 1);
 	modelStack.Translate(64, 0, 68);
 	modelStack.Scale(20, 20, 20);
 	modelStack.Rotate(90, 0, 1, 0);
@@ -719,23 +788,26 @@ void SceneSoraJewel::Render()
 	renderMesh(meshList[GEO_ENGINEER_BODY], false);
 	
 	modelStack.PushMatrix();
-	modelStack.Translate(0, 5, 0);
-	modelStack.Rotate(Engineerrotationarm, 0, 0, 1);
+	modelStack.Translate(0, 4.6f, 0);
+	modelStack.Rotate(Engineerrotationarmleft, 0, 0, 1);
 	modelStack.Scale(1.f, 1.f, 1.f);
 	renderMesh(meshList[GEO_ENGINEER_ARMLEFT], false);
 	modelStack.PopMatrix();
 	modelStack.PushMatrix();
-	modelStack.Translate(0, 5, 0);
+	modelStack.Translate(0, 4.6f, 0);
+	modelStack.Rotate(Engineerrotationarmright, 0, 0, 1);
 	modelStack.Scale(1.f, 1.f, 1.f);
 	renderMesh(meshList[GEO_ENGINEER_ARMRIGHT], false);
 	modelStack.PopMatrix();
 	modelStack.PushMatrix();
-	modelStack.Translate(0, 2.6, 0);
+	modelStack.Translate(0.f, 2.6f, 0.f);
+	modelStack.Rotate(Engineerrotationlegleft, 0, 0, 1);
 	modelStack.Scale(1.f, 1.f, 1.f);
 	renderMesh(meshList[GEO_ENGINEER_LEGLEFT], false);
 	modelStack.PopMatrix();
 	modelStack.PushMatrix();
-	modelStack.Translate(0, 2.6, 0);
+	modelStack.Translate(0.f, 2.6f, 0.f);
+	modelStack.Rotate(Engineerrotationlegright, 0, 0, 1);
 	modelStack.Scale(1.f, 1.f, 1.f);
 	renderMesh(meshList[GEO_ENGINEER_LEGRIGHT], false);
 	modelStack.PopMatrix();
