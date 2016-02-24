@@ -153,7 +153,8 @@ Mtx44 Mtx44::GetInverse() const throw( DivideByZero ) {
     float det = a0*b5 - a1*b4 + a2*b3 + a3*b2 - a4*b1 + a5*b0;
 	if(abs(det) < Math::EPSILON)
 		throw DivideByZero();
-    Mtx44 inverse;
+
+	Mtx44 inverse;
 	if (Math::FAbs(det) > Math::EPSILON)
     {
         inverse.a[ 0] = + a[ 5]*b5 - a[ 6]*b4 + a[ 7]*b3;

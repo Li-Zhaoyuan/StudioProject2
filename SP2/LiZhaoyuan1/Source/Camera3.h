@@ -56,6 +56,7 @@ public:
 	float mass;
 	float gravity;
 	float acceleration;
+	float speed;
 };
 
 #endif
