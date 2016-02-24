@@ -14,6 +14,7 @@ public:
 	Vector3 getPositionOfMissile();
 	void updatePosition(const Vector3 &pos);
 	void FlytowardPlayer();
+	void update(double dt);
 
 private:
 	Vector3 AsteroidCoord = Vector3(-40, 600, -100);
