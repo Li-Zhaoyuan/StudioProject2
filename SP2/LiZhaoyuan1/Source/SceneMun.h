@@ -160,7 +160,12 @@ private:
 	Vector3 minerandplusCoord = Vector3(-19, 0, 25);
 	Vector3 caveCoord = Vector3(-35, -5, 35);
 	Vector3 oreCoord = Vector3(-42, -2.75, 35);
-	
+	Vector3 tempview;
+	Vector3 viewAtOre;
+	Vector3 viewAtLady;
+	Vector3 viewAtDude;
+	Vector3 viewAtMiner;
+	Vector3 viewAtCrashedPlane;
 	float worriedladytempx = 0;
 	float worriedladytempz = 0;
 
@@ -175,8 +180,13 @@ private:
 	float rotatequestdude = 0;
 
 	float loadingbar = 0.01f;
-
 	
+	float RadiusFromOre;
+	float RadiusFromLady;
+	float RadiusFromDude;
+	float RadiusFromMiner;
+	float RadiusFromCrashedPlane;
+	float rotateAngle = 0;
 
 	MS modelStack, viewStack, projectionStack;
 };

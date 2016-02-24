@@ -346,7 +346,13 @@ void SceneMun::Update(double dt)
 		loadingbar = 0.01f;
 	}
 
+	static int rotateDir = 1;
 	
+	if (rotateAngle * rotateDir > 5)
+	{
+		rotateDir = -rotateDir;
+	}
+	rotateAngle += (float)(rotateDir * 20 * dt);
 
 	npcRotate();
 	interactions();
@@ -719,6 +725,7 @@ void SceneMun::Render()
 	std::stringstream ss;
 	ss << "FPS:" << fps << "         " << playerPos.str();
 	RenderTextOnScreen(meshList[GEO_TEXT], ss.str(), Color(0, 1, 0), 3, 0, 19);
+	
 }
 
 void SceneMun::RenderSkybox()
@@ -805,17 +812,17 @@ void SceneMun::npcRotate()
 
 void SceneMun::interactions()
 {
-	Vector3 tempview = (camera.target - camera.position);
-	Vector3 viewAtOre = (oreCoord - camera.position);
-	Vector3 viewAtLady = (worriedladyCoord - camera.position);
-	Vector3 viewAtDude = (questdudeCoord - camera.position);
-	Vector3 viewAtMiner = (minerandplusCoord - camera.position);
-	Vector3 viewAtCrashedPlane = (crashedplaneCoord - camera.position);
-	float RadiusFromOre = (viewAtOre - tempview).Length();
-	float RadiusFromLady = (viewAtLady - tempview).Length();
-	float RadiusFromDude = (viewAtDude - tempview).Length();
-	float RadiusFromMiner = (viewAtMiner - tempview).Length();
-	float RadiusFromCrashedPlane = (viewAtCrashedPlane - tempview).Length();
+	tempview = (camera.target - camera.position);
+	viewAtOre = (oreCoord - camera.position);
+	viewAtLady = (worriedladyCoord - camera.position);
+	viewAtDude = (questdudeCoord - camera.position);
+	viewAtMiner = (minerandplusCoord - camera.position);
+	viewAtCrashedPlane = (crashedplaneCoord - camera.position);
+	RadiusFromOre = (viewAtOre - tempview).Length();
+	RadiusFromLady = (viewAtLady - tempview).Length();
+	RadiusFromDude = (viewAtDude - tempview).Length();
+	RadiusFromMiner = (viewAtMiner - tempview).Length();
+	RadiusFromCrashedPlane = (viewAtCrashedPlane - tempview).Length();
 	
 	
 	if (RadiusFromOre < 2.5f
@@ -844,7 +851,6 @@ void SceneMun::interactions()
 	if (RadiusFromLady < 6.0f
 		&& Application::IsKeyPressed(VK_RBUTTON))
 	{
-		/*isTalkingToLady = true;*/
 		interact |= 1 << TALKING_TO_LADY;
 	}
 	else if (RadiusFromLady > 6.0f)
@@ -855,15 +861,12 @@ void SceneMun::interactions()
 	if (RadiusFromDude < 6.0f
 		&& Application::IsKeyPressed(VK_RBUTTON))
 	{
-		/*TalkedToQuestDude = true;*/
 		interact |= 1 << TALKED_QUEST_DUDE;
 		interact |= 1 << TALKING_TO_QUEST_DUDE;
-		/*isTalkingToQuestDude = true;*/
 	}
 	else if (RadiusFromDude > 6.0f)
 	{
 		interact &= ~(1 << TALKING_TO_QUEST_DUDE);
-		/*isTalkingToQuestDude = false;*/
 	}
 	if (RadiusFromMiner < 6.0f
 		&& ((interact >> TALKED_QUEST_DUDE) & 1 > 0)
@@ -872,18 +875,15 @@ void SceneMun::interactions()
 		interact |= 1 << MINER_GET_LETTER;
 		interact |= 1 << PLAYER_GET_PICKAXE;
 		interact |= 1 << TALKING_TO_MINER_CASE_2;
-		/*isTalkingToMinerType2 = true;*/
 	}
 	else if (RadiusFromMiner > 6.0f)
 	{
 		interact &= ~(1 << TALKING_TO_MINER_CASE_2);
-		/*isTalkingToMinerType2 = false;*/
 	}
 	if (RadiusFromMiner < 6.0f
 		&& (((interact >> TALKED_QUEST_DUDE) & 1)< 1)
 		&& Application::IsKeyPressed(VK_RBUTTON))
 	{
-		/*isTalkingToMinerType1 = true;*/
 		interact |= 1 << TALKING_TO_MINER_CASE_1;
 	}
 	else if (RadiusFromMiner > 6.0f)
@@ -906,9 +906,10 @@ void SceneMun::RenderPickaxeOnScreen()
 		viewStack.LoadIdentity(); //No need camera for ortho mode
 		modelStack.PushMatrix();
 		modelStack.LoadIdentity(); //Reset modelStack
-		modelStack.Translate(40, 15, -5);
-		modelStack.Scale(6.5, 7.5, 6.5);
-		//modelStack.Rotate(45, 0, 1, 0);
+		modelStack.Rotate(rotateAngle, 0, 0, 1);
+		modelStack.Translate(60, 10, -5);
+		modelStack.Scale(6.5, 6.5, 6.5);
+		modelStack.Rotate(-90, 0, 1, 0);
 		//modelStack.Rotate(-45, 1, 0, 0);
 		renderMesh(meshList[GEO_PICKAXE], true);
 		projectionStack.PopMatrix();
@@ -927,9 +928,10 @@ void SceneMun::RenderPickaxeOnScreen()
 		viewStack.LoadIdentity(); //No need camera for ortho mode
 		modelStack.PushMatrix();
 		modelStack.LoadIdentity(); //Reset modelStack
+		//modelStack.Rotate(rotateAngle, 0, 0.5, 0.5);
 		modelStack.Translate(60, 10, -5);
 		modelStack.Scale(6.5, 6.5, 6.5);
-		modelStack.Rotate(45, 0, 1, 0);
+		modelStack.Rotate(90, 0, 1, 0);
 		//modelStack.Rotate(-45, 1, 0, 0);
 		renderMesh(meshList[GEO_PICKAXE], true);
 		projectionStack.PopMatrix();
@@ -998,6 +1000,7 @@ void SceneMun::RenderOreOnScreen()
 		modelStack.PushMatrix();
 		modelStack.LoadIdentity(); //Reset modelStack
 		modelStack.Translate(40, 15, -7);
+		modelStack.Rotate(rotateAngle, 1, 0, 0);
 		modelStack.Rotate(45, 0, 1, 0);
 		modelStack.Rotate(45, 0, 0, 1);
 		modelStack.Scale(15, 15, 15);
@@ -1124,7 +1127,7 @@ void SceneMun::RenderLetterOnScreen()
 		viewStack.LoadIdentity(); //No need camera for ortho mode
 		modelStack.PushMatrix();
 		modelStack.LoadIdentity(); //Reset modelStack
-		modelStack.Translate(60, 10, -5);
+		modelStack.Translate(70, 10, -5);
 		modelStack.Scale(6.5, 6.5, 6.5);
 		modelStack.Rotate(90, 1, 0, 0);
 		//modelStack.Rotate(-45, 1, 0, 0);
