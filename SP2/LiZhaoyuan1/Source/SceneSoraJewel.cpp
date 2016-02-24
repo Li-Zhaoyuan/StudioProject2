@@ -360,109 +360,6 @@ void SceneSoraJewel::Update(double dt)
 	if (Application::IsKeyPressed('Z'))
 		enableLight = false;
 
-	
-	if (Application::IsKeyPressed(VK_SPACE))
-	{
-		if (Engineerpositionx < -25)
-		{
-			Engineerpositionx += (0.33f);
-			characterismoving = true;
-		}
-		if (Engineerpositionz < 53)
-		{
-			characterismoving = true;
-			Engineerpositionz += 1 * 0.6f;
-		}
-		if (Engineerpositionx == -25)
-		{
-			
-			characterismoving = false;
-		}
-		if (Engineerpositionz == 53)
-		{
-			characterismoving = false;
-		}
-		
-	}
-	if (characterismoving == true)
-	{
-		if ((Engineerrotationarmleft >=-45) && (rotationarmmax == true))
-		{
-			Engineerrotationarmleft -= (float)(80 * dt);
-		}
-		else if ((Engineerrotationarmleft < -45))
-		{
-			rotationarmmax = false;
-		}
-		if ((Engineerrotationarmleft <= 45) && (rotationarmmax == false))
-		{
-			Engineerrotationarmleft += (float)(80 * dt);
-		}
-
-		else if ((Engineerrotationarmleft > 45))
-		{
-			rotationarmmax = true;
-		}
-
-		if ((Engineerrotationarmright >= -45) && (rotationarmmax2 == true))
-		{
-			Engineerrotationarmright -= (float)(80 * dt);
-		}
-		else if ((Engineerrotationarmright < -45))
-		{
-			rotationarmmax2 = false;
-		}
-		if ((Engineerrotationarmright <= 45) && (rotationarmmax2 == false))
-		{
-			Engineerrotationarmright += (float)(80 * dt);
-		}
-
-		else if ((Engineerrotationarmright > 45))
-		{
-			rotationarmmax2 = true;
-		}
-		
-
-		if ((Engineerrotationlegleft >= -45) && (rotationlegmaxleft == true))
-		{
-			Engineerrotationlegleft -= (float)(80 * dt);
-		}
-		else if ((Engineerrotationlegleft < -45))
-		{
-			rotationlegmaxleft = false;
-		}
-		if ((Engineerrotationlegleft <= 45) && (rotationlegmaxleft == false))
-		{
-			Engineerrotationlegleft += (float)(80 * dt);
-		}
-
-		else if ((Engineerrotationlegleft > 45))
-		{
-			rotationlegmaxleft = true;
-		}
-
-		if ((Engineerrotationlegright >= -45) && (rotationlegmaxright == true))
-		{
-			Engineerrotationlegright -= (float)(80 * dt);
-		}
-		else if ((Engineerrotationlegright < -45))
-		{
-			rotationlegmaxright = false;
-		}
-		if ((Engineerrotationlegright <= 45) && (rotationlegmaxright == false))
-		{
-			Engineerrotationlegright += (float)(80 * dt);
-		}
-
-		else if ((Engineerrotationlegright > 45))
-		{
-			rotationlegmaxright = true;
-		}
-	}
-	else
-	{
-
-	}
 
 	if (camera.position.x >= -28 && camera.position.z >= 49 && camera.position.x <= -18 && camera.position.z <= 60)
 	{
@@ -506,6 +403,106 @@ void SceneSoraJewel::Update(double dt)
 	camPosX = camera.position.x;
 	camPosY = camera.position.y;
 	camPosZ = camera.position.z;
+
+	if (QuestsDone ==true)
+	{
+		if (Engineerpositionx < -25.f)
+		{
+			Engineerpositionx += (0.33f);
+			characterismoving = true;
+		}
+		if (Engineerpositionz < 53.f)
+		{
+			characterismoving = true;
+			Engineerpositionz += 1 * 0.6f;
+		}
+		if (Engineerpositionx >= -25)
+		{
+
+			characterismoving = false;
+		}
+		if (Engineerpositionz >= 53)
+		{
+			characterismoving = false;
+		}
+
+	}
+	if (characterismoving == true)
+	{
+		if ((Engineerrotationarmleft >= -45) && (rotationarmmax == true))
+		{
+			Engineerrotationarmleft -= (float)(80 * dt);
+		}
+		else if ((Engineerrotationarmleft < -45))
+		{
+			rotationarmmax = false;
+		}
+		if ((Engineerrotationarmleft <= 45) && (rotationarmmax == false))
+		{
+			Engineerrotationarmleft += (float)(80 * dt);
+		}
+
+		else if ((Engineerrotationarmleft > 45))
+		{
+			rotationarmmax = true;
+		}
+
+		if ((Engineerrotationarmright >= -45) && (rotationarmmax2 == true))
+		{
+			Engineerrotationarmright -= (float)(80 * dt);
+		}
+		else if ((Engineerrotationarmright < -45))
+		{
+			rotationarmmax2 = false;
+		}
+		if ((Engineerrotationarmright <= 45) && (rotationarmmax2 == false))
+		{
+			Engineerrotationarmright += (float)(80 * dt);
+		}
+
+		else if ((Engineerrotationarmright > 45))
+		{
+			rotationarmmax2 = true;
+		}
+
+
+		if ((Engineerrotationlegleft >= -45) && (rotationlegmaxleft == true))
+		{
+			Engineerrotationlegleft -= (float)(80 * dt);
+		}
+		else if ((Engineerrotationlegleft < -45))
+		{
+			rotationlegmaxleft = false;
+		}
+		if ((Engineerrotationlegleft <= 45) && (rotationlegmaxleft == false))
+		{
+			Engineerrotationlegleft += (float)(80 * dt);
+		}
+
+		else if ((Engineerrotationlegleft > 45))
+		{
+			rotationlegmaxleft = true;
+		}
+
+		if ((Engineerrotationlegright >= -45) && (rotationlegmaxright == true))
+		{
+			Engineerrotationlegright -= (float)(80 * dt);
+		}
+		else if ((Engineerrotationlegright < -45))
+		{
+			rotationlegmaxright = false;
+		}
+		if ((Engineerrotationlegright <= 45) && (rotationlegmaxright == false))
+		{
+			Engineerrotationlegright += (float)(80 * dt);
+		}
+
+		else if ((Engineerrotationlegright > 45))
+		{
+			rotationlegmaxright = true;
+		}
+	}
+	
 }
 void SceneSoraJewel::lighting()
 {
@@ -842,6 +839,7 @@ void SceneSoraJewel::Render()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The Quest For Sora Jewel", Color(0, 1, 0), 2, 2, 10);
 	}
+
 	/*if (Quest1 == true && Quest2 == false && QuestsDone == false && !Application::IsKeyPressed('W') && !Application::IsKeyPressed('A') && !Application::IsKeyPressed('S') && !Application::IsKeyPressed('D'))
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The Quest For Sora Jewel", (0, 1, 0), 5, 4, 10);
