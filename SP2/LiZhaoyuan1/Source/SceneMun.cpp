@@ -329,15 +329,15 @@ void SceneMun::Update(double dt)
 	camPosY = camera.position.y;
 	camPosz = camera.position.z;
 	
-	if ((((interact >> MINING) & 1 > 0) || ((interact >> REPAIRING) & 1 > 0)) && loadingbar <= 20)
+	if ((((interact >> MINING) & 1 > 0) || ((interact >> REPAIRING) & 1 > 0)) && (loadingbar <= 20))
 	{
 		loadingbar += (float)(5 * dt);
 	}
-	else if (((interact >> MINING) & 1 > 0) && loadingbar >= 20)
+	else if (((interact >> MINING) & 1 > 0) && (loadingbar >= 20))
 	{
 		interact |= 1 << MINED;
 	}
-	else if (((interact >> REPAIRING) & 1 > 0) && loadingbar >= 20)
+	else if (((interact >> REPAIRING) & 1 > 0) && (loadingbar >= 20))
 	{
 		interact |= 1 << REPAIRED;
 	}
@@ -701,7 +701,7 @@ void SceneMun::Render()
 	}
 	RenderLetterOnScreen();
 	Renderpicturetoscreen();
-	if (((interact >> MINING) & 1 > 0))
+	if (((interact >> MINING) & (1 > 0)))
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "M ining", Color(0, 1, 0), 3, 11, 15);
 		RenderLoadingBarOnScreen();

@@ -158,8 +158,8 @@ private:
 	bool BeerinHand;
 
 	float Engineerpositionx, Engineerpositiony, Engineerpositionz;
-	bool characterismoving = false; bool rotationarmmax = true;
-	float Engineerrotationarm;
+	bool characterismoving = false; bool rotationarmmax = true; bool rotationarmmax2 = true, rotationlegmaxleft = true, rotationlegmaxright = true;
+	float Engineerrotationarmleft, Engineerrotationarmright, Engineerrotationlegleft, Engineerrotationlegright;
 
 	MS modelStack, viewStack, projectionStack;
 };
