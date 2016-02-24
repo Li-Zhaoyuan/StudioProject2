@@ -132,16 +132,9 @@ private:
 	float LSPEED = 10.f;
 	int fps = 0;
 	bool shootMissile = false;
-	bool shootAsteroid = false;
-
 	
-	Vector3 Asteroid = Vector3(239, 980, -400);
-	float tempPosX = 0;
-	float tempPosY = 0;
-	float tempPosZ = 0;
-	float rotateAsteroid = 0;
-	float translateAsteroidX = 0;
-	float translateAsteroidZ = 0;
+	Vector3 Asteroid = Vector3(239, 600, -400);
+	Vector3 Asteroid2 = Vector3(-203, 490, -230);
 
 	int Missiles;
 	int bulletCount = 0;

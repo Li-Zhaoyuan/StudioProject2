@@ -201,20 +201,23 @@ void SceneGalaxy::MovingAsteroid(double dt)
 	float speed = 10.f * dt;
 	if (getMagnitude(camera.position, Asteroid) > 0)
 	{
-		if (Asteroid.x == 0 && Asteroid.y == 0 && Asteroid.z == 0)
+		if (Asteroid != Vector3 (0, 500, 1))
+		{
+			Asteroid -= 2.5 * speed;
+		}
+		else if (Asteroid == (0, 0, 0))
 			return;
-		else if (Asteroid.x > 0 && Asteroid.y > 500 && Asteroid.z < 0)
-			Asteroid.x -= 10 * speed;
-			Asteroid.z += 10 * speed;
-			Asteroid.y -= 15 * speed;
-		/*if (Asteroid.z == 0)
+	}
+	if (getMagnitude(camera.position, Asteroid2) > 0)
+	{
+		if (Asteroid2.x == 0)
 			return;
-		else if (Asteroid.z < 0)
-			Asteroid.z += 10 * speed;
-		if (Asteroid.y == 0)
+		else if (Asteroid2.x < 0)
+			Asteroid2.x += 1.5 * speed;
+		if (Asteroid2.z == 0)
 			return;
-		else if (Asteroid.y > 500)
-			Asteroid.y -= 15 * speed;*/
+		else if (Asteroid2.z > -30)
+			Asteroid2.z -= 2.5 * speed;
 	}
 }
 
@@ -570,6 +573,12 @@ void SceneGalaxy::RenderAsteroid()
 {
 		modelStack.PushMatrix();
 		modelStack.Translate(Asteroid.x, Asteroid.y, Asteroid.z);
+		modelStack.Scale(2.2f, 2.2f, 2.2f);
+		renderMesh(meshList[GEO_ASTEROID], false);
+		modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+		modelStack.Translate(Asteroid2.x, Asteroid2.y, Asteroid2.z);
 		modelStack.Scale(2.2f, 2.2f, 2.2f);
 		renderMesh(meshList[GEO_ASTEROID], false);
 		modelStack.PopMatrix();
