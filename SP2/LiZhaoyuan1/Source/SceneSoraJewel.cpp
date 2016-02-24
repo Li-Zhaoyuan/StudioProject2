@@ -140,7 +140,7 @@ void SceneSoraJewel::Init()
 	
 	//Initialize camera settings
 
-	camera.Init(Vector3(0, 10, 1), Vector3(0, 10, 0), Vector3(0, 1, 0));
+	camera.Init(Vector3(0, 10, 30), Vector3(0, 10, 0), Vector3(0, 1, 0));
 
 	//camera.Init(Vector3(0, 350, 1), Vector3(0, 7, 0), Vector3(0, 1, 0));
 

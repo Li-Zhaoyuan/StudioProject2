@@ -27,8 +27,9 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 	minimapsoracoords = (78.f, 55.f, -1.f);
 	SetCursorPos( 800 / 2, 600 / 2);
 	mass = 70;
-	Force = 30000;
-	gravity = -9.8f;
+	Force = 1000;
+	speed = 0.f;
+	gravity = -1.f;
 }
 
 void Camera3::Update(double dt, float bounds)
@@ -930,21 +931,28 @@ void Camera3::SJUpdate(double dt, float bounds)
 	view = (target - position).Normalized();
 	SetCursorPos(800 / 2, 600 / 2);
 
-	if (Application::IsKeyPressed(VK_SPACE) && OnGround())
-		jump = true;
-	else
-		jump = false;
-	if (jump == true)
+	if (Application::IsKeyPressed(VK_SPACE))
 	{
-		acceleration = Physics::AccelerationFM(mass, Force) + gravity;
-		position.y += Physics::DisplacemnetUTAT(currentV.y, dt, acceleration);
-		currentV.y = Physics::VelocityUAT(currentV.y, acceleration, dt);
+		if (speed == 0.f)
+			speed = 50.f * dt;
 	}
+
+	position.y += speed;
+	target.y += speed;
+	speed += gravity * dt;
+
+	if (OnGround())
+	{
+		speed = 0.f;
+	}
+	OnGround();
 }
 
 bool Camera3::OnGround()
 {
-	if (position.y <= 10)
+	if (position.y <= 5 && (position.x >= -140 && position.z >= 20) && (position.x <= 61 && position.z <= 113))
+		return true;
+	else if (position.y <= 10)
 		return true;
 	return false;
 }
