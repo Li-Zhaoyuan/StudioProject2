@@ -174,7 +174,7 @@ private:
 	float rotateminer = 0;
 	float rotatequestdude = 0;
 
-	float loadingbar = 0.01;
+	float loadingbar = 0.01f;
 
 	
 
