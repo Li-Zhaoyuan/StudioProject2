@@ -196,6 +196,41 @@ static float rotateXWing = 0.f;
 static int Health = 100;
 bool rotateXWing_Limit;
 
+void SceneGalaxy::MovingAsteroid(double dt)
+{
+	float speed = 10.f * dt;
+	if (getMagnitude(camera.position, Asteroid) > 0)
+	{
+		if (Asteroid != Vector3 (0, 500, 1))
+		{
+			Asteroid -= 2.5 * speed;
+		}
+		else if (Asteroid == (0, 0, 0))
+			return;
+	}
+	if (getMagnitude(camera.position, Asteroid2) > 0)
+	{
+		if (Asteroid2.x == 0)
+			return;
+		else if (Asteroid2.x < 0)
+			Asteroid2.x += 1.5 * speed;
+		if (Asteroid2.z == 0)
+			return;
+		else if (Asteroid2.z > -30)
+			Asteroid2.z -= 2.5 * speed;
+	}
+}
+
+int SceneGalaxy::getMagnitude(Vector3 A, Vector3 B)
+{
+	// A camera, B target
+	int totalX = (A.x - B.x) * (A.x - B.x);
+	int totalY = (A.y - B.y) * (A.y - B.y);
+	int totalZ = (A.z - B.z) * (A.z - B.z);
+	int mag = totalX + totalY + totalZ;
+	return sqrt(mag);
+}
+
 void SceneGalaxy::Update(double dt)
 {
 	camera.Update(dt, 100);
@@ -275,7 +310,6 @@ void SceneGalaxy::Update(double dt)
 	//
 
 	//
-
 	missile.update(dt);
 	if (Application::IsKeyPressed(VK_LBUTTON))
 	{
@@ -285,17 +319,15 @@ void SceneGalaxy::Update(double dt)
 			missile.Firing();
 		}
 	}
-
-
-	asteroid.Animation(dt);
 	//
+	MovingAsteroid(dt);
 
 	std::cout << camera.target - camera.position << std::endl;
 	camPosX = camera.position.x;
 	camPosY = camera.position.y;
 	camPosz = camera.position.z;
 	
-}
+} 
 
 void SceneGalaxy::lighting()
 {
@@ -518,8 +550,6 @@ void SceneGalaxy::Render()
 	ss << "FPS:" << fps << "         " << playerPos.str();
 	RenderTextOnScreen(meshList[GEO_TEXT], ss.str(), Color(0, 1, 0), 3, 0, 19);
 
-
-
 }
 
 void SceneGalaxy::XWingHealth()
@@ -542,7 +572,13 @@ void SceneGalaxy::RenderXwing()
 void SceneGalaxy::RenderAsteroid()
 {
 		modelStack.PushMatrix();
-		modelStack.Translate(asteroid.getPositionOfMissile().x, asteroid.getPositionOfMissile().y + 500, asteroid.getPositionOfMissile().z);
+		modelStack.Translate(Asteroid.x, Asteroid.y, Asteroid.z);
+		modelStack.Scale(2.2f, 2.2f, 2.2f);
+		renderMesh(meshList[GEO_ASTEROID], false);
+		modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+		modelStack.Translate(Asteroid2.x, Asteroid2.y, Asteroid2.z);
 		modelStack.Scale(2.2f, 2.2f, 2.2f);
 		renderMesh(meshList[GEO_ASTEROID], false);
 		modelStack.PopMatrix();

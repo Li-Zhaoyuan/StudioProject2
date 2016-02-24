@@ -10,7 +10,8 @@
 #include "MatrixStack.h"
 #include <vector>
 #include "Missile.h"
-#include "Asteroid.h"
+#include <cmath>
+
 
 class SceneGalaxy : public Scene
 {
@@ -120,6 +121,8 @@ public:
 	virtual void Render();
 	virtual void RenderXwing();
 	virtual void RenderAsteroid();
+	virtual void MovingAsteroid(double dt);
+	int getMagnitude(Vector3 A, Vector3 B);
 	virtual void RenderMissile();
 	virtual void Exit();
 
@@ -129,8 +132,9 @@ private:
 	float LSPEED = 10.f;
 	int fps = 0;
 	bool shootMissile = false;
-	bool shootAsteroid = false;
 	
+	Vector3 Asteroid = Vector3(239, 600, -400);
+	Vector3 Asteroid2 = Vector3(-203, 490, -230);
 
 	int Missiles;
 	int bulletCount = 0;
@@ -152,7 +156,6 @@ private:
 	unsigned m_parameters[U_TOTAL];
 
 	Camera3 camera;
-	Asteroid asteroid;
 
 	float boxX = 0;
 	float boxZ = 0;
