@@ -222,6 +222,41 @@ void SceneMun::Init()
 	meshList[GEO_ORE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ORE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ORE]->material.kShininess = 5.f;
+
+	meshList[GEO_VILLAGER_BODY] = MeshBuilder::GenerateOBJ("body", "OBJ//HeadBody.obj");
+	meshList[GEO_VILLAGER_BODY]->textureID = LoadTGA("Image//HumanCharacter.tga");
+	meshList[GEO_VILLAGER_BODY]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_VILLAGER_BODY]->material.kDiffuse.Set(0, 0, 0);
+	meshList[GEO_VILLAGER_BODY]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_VILLAGER_BODY]->material.kShininess = 1.f;
+				
+	meshList[GEO_VILLAGER_ARMLEFT] = MeshBuilder::GenerateOBJ("leftarm", "OBJ//LeftArm.obj");
+	meshList[GEO_VILLAGER_ARMLEFT]->textureID = LoadTGA("Image//HumanCharacter.tga");
+	meshList[GEO_VILLAGER_ARMLEFT]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_VILLAGER_ARMLEFT]->material.kDiffuse.Set(0, 0, 0);
+	meshList[GEO_VILLAGER_ARMLEFT]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_VILLAGER_ARMLEFT]->material.kShininess = 1.f;
+				 
+	meshList[GEO_VILLAGER_ARMRIGHT] = MeshBuilder::GenerateOBJ("rightarm", "OBJ//RightArm.obj");
+	meshList[GEO_VILLAGER_ARMRIGHT]->textureID = LoadTGA("Image//HumanCharacter.tga");
+	meshList[GEO_VILLAGER_ARMRIGHT]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_VILLAGER_ARMRIGHT]->material.kDiffuse.Set(0, 0, 0);
+	meshList[GEO_VILLAGER_ARMRIGHT]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_VILLAGER_ARMRIGHT]->material.kShininess = 1.f;
+				 
+	meshList[GEO_VILLAGER_LEGLEFT] = MeshBuilder::GenerateOBJ("leftleg", "OBJ//LeftLeg.obj");
+	meshList[GEO_VILLAGER_LEGLEFT]->textureID = LoadTGA("Image//HumanCharacter.tga");
+	meshList[GEO_VILLAGER_LEGLEFT]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_VILLAGER_LEGLEFT]->material.kDiffuse.Set(0, 0, 0);
+	meshList[GEO_VILLAGER_LEGLEFT]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_VILLAGER_LEGLEFT]->material.kShininess = 1.f;
+				 
+	meshList[GEO_VILLAGER_LEGRIGHT] = MeshBuilder::GenerateOBJ("rightleg", "OBJ//RightLeg.obj");
+	meshList[GEO_VILLAGER_LEGRIGHT]->textureID = LoadTGA("Image//HumanCharacter.tga");
+	meshList[GEO_VILLAGER_LEGRIGHT]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_VILLAGER_LEGRIGHT]->material.kDiffuse.Set(0, 0, 0);
+	meshList[GEO_VILLAGER_LEGRIGHT]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_VILLAGER_LEGRIGHT]->material.kShininess = 1.f;
 	//Minimaps
 	//meshList[GEO_SPHERE] = MeshBuilder::GenerateSphere("target", Color(1, 0, 0), 18, 36);
 
@@ -347,12 +382,33 @@ void SceneMun::Update(double dt)
 	}
 
 	static int rotateDir = 1;
-	
+	static int rotateDirLimb = 1;
+	static int translateDir = 1;
 	if (rotateAngle * rotateDir > 5)
 	{
 		rotateDir = -rotateDir;
 	}
 	rotateAngle += (float)(rotateDir * 20 * dt);
+
+	if (rotateLimbs * rotateDirLimb > 30)
+	{
+		rotateDirLimb = -rotateDirLimb;
+	}
+	rotateLimbs += (float)(rotateDirLimb * 25 * dt);
+
+	if (translatingChar * translateDir > 10)
+	{
+		translateDir = -translateDir;
+		if (rotateWhole == 0)
+		{
+			rotateWhole = 180;
+		}
+		else if (rotateWhole == 180)
+		{
+			rotateWhole = 0;
+		}
+	}
+	translatingChar += (float)(translateDir * 2.5 * dt);
 
 	npcRotate();
 	interactions();
@@ -663,6 +719,30 @@ void SceneMun::Render()
 	modelStack.PopMatrix();
 	
 	modelStack.PushMatrix();
+	modelStack.Translate(CalefareACoord.x, CalefareACoord.y, CalefareACoord.z);
+	modelStack.Translate(translatingChar, 0, 0);
+	modelStack.Rotate(rotateWhole, 0, 1, 0);
+	RenderCalefare();
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(CalefareBCoord.x, CalefareBCoord.y, CalefareBCoord.z);
+	modelStack.Translate(-translatingChar, 0, 0);
+	modelStack.Rotate(rotateWhole-180, 0, 1, 0);
+	RenderCalefare();
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(CalefareCCoord.x, CalefareCCoord.y, CalefareCCoord.z);
+	modelStack.Rotate(90, 0, 1, 0);
+	modelStack.Translate(translatingChar, 0, 0);
+	modelStack.Rotate(rotateWhole, 0, 1, 0);
+	
+	RenderCalefare();
+	modelStack.PopMatrix();
+	
+
+	modelStack.PushMatrix();
 	modelStack.Translate(minerandplusCoord.x, minerandplusCoord.y, minerandplusCoord.z);
 	modelStack.Rotate(rotateminer, 0, 1, 0);
 	modelStack.PushMatrix();
@@ -707,12 +787,12 @@ void SceneMun::Render()
 	}
 	RenderLetterOnScreen();
 	Renderpicturetoscreen();
-	if (((interact >> MINING) & (1 > 0)))
+	if ((((interact >> MINING) & 1) > 0))
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "M ining", Color(0, 1, 0), 3, 11, 15);
 		RenderLoadingBarOnScreen();
 	}
-	if (((interact >> REPAIRING) & 1 > 0) && (((interact >> MINED) & 1) > 0))
+	if ((((interact >> REPAIRING) & 1) > 0) && (((interact >> MINED) & 1) > 0))
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Repairing", Color(0, 1, 0), 3, 11, 15);
 		RenderLoadingBarOnScreen();
@@ -869,7 +949,7 @@ void SceneMun::interactions()
 		interact &= ~(1 << TALKING_TO_QUEST_DUDE);
 	}
 	if (RadiusFromMiner < 6.0f
-		&& ((interact >> TALKED_QUEST_DUDE) & 1 > 0)
+		&& (((interact >> TALKED_QUEST_DUDE) & 1) > 0)
 		&& Application::IsKeyPressed(VK_RBUTTON))
 	{
 		interact |= 1 << MINER_GET_LETTER;
@@ -988,7 +1068,7 @@ void SceneMun::RenderOreOnScreen()
 		modelStack.PopMatrix();
 		glEnable(GL_DEPTH_TEST);
 	}
-	else if ((((interact >> REPAIRING) & 1 > 0)))
+	else if (((((interact >> REPAIRING) & 1) > 0)))
 	{
 		Mtx44 ortho;
 		glDisable(GL_DEPTH_TEST);
@@ -1116,7 +1196,7 @@ void SceneMun::RenderTextBoxOnScreen()
 
 void SceneMun::RenderLetterOnScreen()
 {
-	if (((interact >> TALKED_QUEST_DUDE) & 1 > 0) && (((interact >> MINER_GET_LETTER) & 1) < 1))
+	if ((((interact >> TALKED_QUEST_DUDE) & 1) > 0) && (((interact >> MINER_GET_LETTER) & 1) < 1))
 	{
 		Mtx44 ortho;
 		glDisable(GL_DEPTH_TEST);
@@ -1136,6 +1216,7 @@ void SceneMun::RenderLetterOnScreen()
 		viewStack.PopMatrix();
 		modelStack.PopMatrix();
 		glEnable(GL_DEPTH_TEST);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Letter", Color(1, 0, 0), 2, 33.5, 5);
 	}
 	
 }
@@ -1143,4 +1224,35 @@ void SceneMun::RenderLetterOnScreen()
 void SceneMun::RenderInfomationOnScreen()
 {
 
+}
+
+void SceneMun::RenderCalefare()
+{
+	modelStack.PushMatrix();
+	modelStack.Translate(0, -4.62, 0);
+	renderMesh(meshList[GEO_VILLAGER_BODY], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Rotate(rotateLimbs, 0, 0, 1);
+	renderMesh(meshList[GEO_VILLAGER_ARMLEFT], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Rotate(-rotateLimbs, 0, 0, 1);
+	renderMesh(meshList[GEO_VILLAGER_ARMRIGHT], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(0, -2.1, 0);
+	modelStack.PushMatrix();
+	modelStack.Rotate(-rotateLimbs, 0, 0, 1);
+	renderMesh(meshList[GEO_VILLAGER_LEGLEFT], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Rotate(rotateLimbs, 0, 0, 1);
+	renderMesh(meshList[GEO_VILLAGER_LEGRIGHT], true);
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
 }

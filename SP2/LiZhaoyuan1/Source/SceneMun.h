@@ -41,6 +41,11 @@ class SceneMun : public Scene
 		GEO_MALE,
 		GEO_PROTAGANIST,
 		GEO_CAVE,
+		GEO_VILLAGER_LEGLEFT,
+		GEO_VILLAGER_LEGRIGHT,
+		GEO_VILLAGER_ARMLEFT,
+		GEO_VILLAGER_ARMRIGHT,
+		GEO_VILLAGER_BODY,
 		NUM_GEOMETRY,
 	};
 
@@ -132,6 +137,7 @@ private:
 	void RenderTextBoxOnScreen();
 	void RenderLetterOnScreen();
 	void RenderInfomationOnScreen();
+	void RenderCalefare();
 	unsigned m_vertexArrayID;
 	Mesh *meshList[NUM_GEOMETRY];
 
@@ -151,6 +157,7 @@ private:
 	
 	int interact = 0;
 
+
 	Vector3 crashedplaneCoord = Vector3(-36.f,4.9f,-34.f);
 	Vector3 planecoord = Vector3(-36.f, -2.9f, -45.f);
 	Vector3 questdudehouseCoord = Vector3(33, -5, 20);
@@ -160,6 +167,9 @@ private:
 	Vector3 minerandplusCoord = Vector3(-19, 0, 25);
 	Vector3 caveCoord = Vector3(-35, -5, 35);
 	Vector3 oreCoord = Vector3(-42, -2.75, 35);
+	Vector3 CalefareACoord = Vector3(26, -0.9, -21);
+	Vector3 CalefareBCoord = Vector3(26, -0.9, -10);
+	Vector3 CalefareCCoord = Vector3(15, -0.9, 25);
 	Vector3 tempview;
 	Vector3 viewAtOre;
 	Vector3 viewAtLady;
@@ -187,6 +197,9 @@ private:
 	float RadiusFromMiner;
 	float RadiusFromCrashedPlane;
 	float rotateAngle = 0;
+	float rotateLimbs = 0;
+	float rotateWhole = 0;
+	float translatingChar = 0;
 
 	MS modelStack, viewStack, projectionStack;
 };
