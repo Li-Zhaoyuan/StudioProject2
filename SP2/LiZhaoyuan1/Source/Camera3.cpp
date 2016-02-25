@@ -402,7 +402,7 @@ void Camera3::XWingCamera(double dt, float bounds)
 	}
 	if (mousecursor.x<800 / 2)
 	{
-		if (target.x >(position.x - 0.1))
+		if (target.x >(position.x - 0.4))
 		{
 			float yaw = (float)(CAMERA_SPEED * 0.5 * dt*(800 / 2 - mousecursor.x));
 			rotateChar += yaw;
@@ -417,7 +417,7 @@ void Camera3::XWingCamera(double dt, float bounds)
 	}
 	if (mousecursor.x>800 / 2)
 	{
-		if (target.x < (position.x + 0.1))
+		if (target.x < (position.x + 0.4))
 		{
 			float yaw = (float)(-CAMERA_SPEED* 0.5 * dt*(mousecursor.x - 800 / 2));
 			rotateChar += yaw;
@@ -432,7 +432,7 @@ void Camera3::XWingCamera(double dt, float bounds)
 	}
 	if (mousecursor.y<600 / 2)
 	{
-		if (target.y < (position.y + 0.2))
+		if (target.y < (position.y + 0.4))
 		{
 			float pitch = (float)(CAMERA_SPEED * 0.5* dt*(600 / 2 - mousecursor.y));
 			Vector3 view = (target - position).Normalized();
@@ -450,7 +450,7 @@ void Camera3::XWingCamera(double dt, float bounds)
 	}
 	if (mousecursor.y>600 / 2)
 	{
-		if (target.y > (position.y - 0.2))
+		if (target.y > (position.y - 0.4))
 		{
 			float pitch = (float)(-CAMERA_SPEED * 0.5 * 2 * dt*(mousecursor.y - 600 / 2));
 			Vector3 view = (target - position).Normalized();

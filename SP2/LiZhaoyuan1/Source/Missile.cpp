@@ -2,22 +2,22 @@
 
 Missile::Missile()
 {
-	position = Vector3(0, -10, 0);
 }
 
 Missile::Missile(const int &AmmoInMag)
-{
+{	
 	Missiles = AmmoInMag;
 	Capacity = new Missile[AmmoInMag];
 }
 
 Missile::~Missile()
 {
-	
 }
 void Missile::updatePosition(const Vector3 &pos)
 {
-	position = pos;
+	position.x = 0;
+	position.y = 490;
+	position.z = 0;
 }
 
 Vector3 Missile::getPositionOfMissile()
@@ -30,7 +30,7 @@ void Missile::setView(const Vector3 &view)
 }
 void Missile::Animation(double dt)
 {
-	float speed = 750.f;
+	float speed = 250.f;
 	position += view * speed * dt;
 	if (position.x > 750 || position.y > 750 || position.z > 750|| position.x < -750 || position.y < -750 || position.z < -750)
 	{
@@ -43,15 +43,16 @@ void Missile::init(Camera3 *target)
 }
 void Missile::Firing()
 {
-	if (MissileCounts < Missiles)
+	if (MissileUsed < Missiles)
 	{
-		Capacity[MissileCounts].updatePosition(camera->target);
-		Capacity[MissileCounts].setView(camera->view);
-		MissileCounts++;
+		Capacity[MissileUsed].updatePosition(camera->target);
+		Capacity[MissileUsed].setView(camera->view);
+		MissileUsed++;
+
 	}
 	else
 	{
-		MissileCounts = 0;
+		MissileUsed = 0;
 	}
 }
 void Missile::update(double dt)

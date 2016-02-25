@@ -41,6 +41,12 @@ class SceneMun : public Scene
 		GEO_MALE,
 		GEO_PROTAGANIST,
 		GEO_CAVE,
+		GEO_VILLAGER_LEGLEFT,
+		GEO_VILLAGER_LEGRIGHT,
+		GEO_VILLAGER_ARMLEFT,
+		GEO_VILLAGER_ARMRIGHT,
+		GEO_VILLAGER_BODY,
+		GEO_CRATE,
 		NUM_GEOMETRY,
 	};
 
@@ -113,7 +119,7 @@ private:
 	Light light[2];
 	bool enableLight = false;
 	float LSPEED = 10.f;
-	double fps = 0;
+	int fps = 0;
 
 	void renderMesh(Mesh *mesh, bool enableLight);
 	void lighting();
@@ -132,24 +138,24 @@ private:
 	void RenderTextBoxOnScreen();
 	void RenderLetterOnScreen();
 	void RenderInfomationOnScreen();
+	void RenderCalefare();
+	void RenderSceneOBJ();
 	unsigned m_vertexArrayID;
 	Mesh *meshList[NUM_GEOMETRY];
 
 	unsigned m_programID;
 	unsigned m_parameters[U_TOTAL];
 
-	/*float rotateAngle;
-	float planet1RevAngle, planet1RotAngle, moon1RotAngle;*/
-
 	Camera3 camera;
 
 	float boxX = 0;
 	float boxZ = 0;
-	float camPosX = 0;
-	float camPosY = 0;
-	float camPosz = 0;
+	int camPosX = 0;
+	int camPosY = 0;
+	int camPosz = 0;
 	
 	int interact = 0;
+
 
 	Vector3 crashedplaneCoord = Vector3(-36.f,4.9f,-34.f);
 	Vector3 planecoord = Vector3(-36.f, -2.9f, -45.f);
@@ -159,7 +165,10 @@ private:
 	Vector3 questdudeCoord = Vector3(33, -4, 3);
 	Vector3 minerandplusCoord = Vector3(-19, 0, 25);
 	Vector3 caveCoord = Vector3(-35, -5, 35);
-	Vector3 oreCoord = Vector3(-42, -2.75, 35);
+	Vector3 oreCoord = Vector3(-42, -2.75f, 35);
+	Vector3 CalefareACoord = Vector3(26, -0.9f, -21);
+	Vector3 CalefareBCoord = Vector3(26, -0.9f, -10);
+	Vector3 CalefareCCoord = Vector3(15, -0.9f, 25);
 	Vector3 tempview;
 	Vector3 viewAtOre;
 	Vector3 viewAtLady;
@@ -187,6 +196,9 @@ private:
 	float RadiusFromMiner;
 	float RadiusFromCrashedPlane;
 	float rotateAngle = 0;
+	float rotateLimbs = 0;
+	float rotateWhole = 0;
+	float translatingChar = 0;
 
 	MS modelStack, viewStack, projectionStack;
 };
