@@ -14,6 +14,7 @@ public:
 	void updatePosition(const Vector3 &pos);
 	void setView(const Vector3 &view);
 
+	Vector3 position;
 	Vector3 missilePosition;
 
 	void Animation(double dt);
@@ -22,13 +23,11 @@ public:
 	void update(double dt);
 
 	int Missiles;
-	int MissileCounts = 0;
+	int MissileUsed = 100;
 	Missile* Capacity;
 
 
 private:
-
-	Vector3 position;
 	Vector3 view;
 	Camera3 *camera;
 
