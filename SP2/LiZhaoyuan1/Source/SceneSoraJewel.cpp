@@ -321,10 +321,8 @@ void SceneSoraJewel::Init()
 
 	ReadFromTxt("TextFiles//Test.txt", Textstuffs);
 	position = Textstuffs.begin();
-	for (; position != Textstuffs.end(); position++)
-	{
-		
-	}
+	sDialogue = *position;
+	ssDialogue << sDialogue[0];
 
 	camera.SceneGalaxy = false;
 	camera.SceneMun = false;
@@ -520,6 +518,43 @@ void SceneSoraJewel::Engineeranimation(float dt)
 		{
 			rotationlegmaxright = true;
 		}
+	}
+
+	if (endofline)
+	{
+		timer += 1 * dt;
+		if (timer >= 0.5f)
+		{
+			if (i < sDialogue.size())
+			{
+				ssDialogue << sDialogue[i];
+				i++;
+				timer = 0;
+			}
+			else if (i == sDialogue.size())
+			{
+				if (position != Textstuffs.end())
+				{
+					ssDialogue.str("");
+					sDialogue = "";
+
+					sDialogue = *position;
+					ssDialogue << sDialogue[0];
+
+					timer = 0;
+					i = 1;
+					position++;
+				}
+				else
+				{
+					endofline = false;
+				}
+			}
+		}
+	}
+	else
+	{
+		ssDialogue.str("");
 	}
 }
 void SceneSoraJewel::lighting()
@@ -867,6 +902,8 @@ void SceneSoraJewel::Render()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The Quest For Sora Jewel", (0, 1, 0), 5, 4, 10);
 	}*/
+	RenderTextOnScreen(meshList[GEO_TEXT], ssDialogue.str(), Color(0, 1, 0), 2, 3, 10);
+
 	std::stringstream playerPos;
 	playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosZ;
 	std::stringstream ss;
