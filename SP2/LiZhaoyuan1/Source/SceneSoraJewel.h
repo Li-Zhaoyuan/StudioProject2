@@ -11,6 +11,7 @@
 #include "MatrixStack.h"
 #include "Physics.h"
 #include "ReadTextFile.h"
+#include <sstream>
 
 class SceneSoraJewel : public Scene
 {
@@ -129,11 +130,18 @@ private:
 
 	Camera3 camera;
 
+	bool endofline;
+
+	std::stringstream ssDialogue;
+
+	std::string sDialogue;
 	std::vector<std::string> Textstuffs;
-	std::vector<std::string> Dialogue;
 	std::vector<std::string>::iterator position;
 
-	float timer = 0;
+
+
+	int i = 1;
+	float timer = 0.f;
 	bool timercheck = false;
 
 	float boxX = 0;

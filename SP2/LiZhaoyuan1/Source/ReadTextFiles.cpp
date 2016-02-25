@@ -1,8 +1,8 @@
 #include "ReadTextFile.h"
 
-bool ReadFromTxt(const char* file_path, std::vector<std::string> Text)
+bool ReadFromTxt(const char* file_path, std::vector<std::string> &Text)
 {
-	std::ifstream myfile(file_path);
+	std::ifstream myfile(file_path, std::ios::binary);
 	if (myfile.is_open())
 	{
 		while (!myfile.eof())
@@ -14,5 +14,9 @@ bool ReadFromTxt(const char* file_path, std::vector<std::string> Text)
 		myfile.close();
 		return true;
 	}
-	return false;
+	else
+	{
+		std::cout << "cannot read" << std::endl;
+		return false;
+	}
 }

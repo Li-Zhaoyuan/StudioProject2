@@ -4,7 +4,8 @@
 #include <fstream>
 #include <vector>
 #include <string>
+#include <iostream>
 
-bool ReadFromTxt(const char* file_path, std::vector<std::string> Text);
+bool ReadFromTxt(const char* file_path, std::vector<std::string> &Text);
 
 #endif

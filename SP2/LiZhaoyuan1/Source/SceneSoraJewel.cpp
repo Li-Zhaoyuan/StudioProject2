@@ -1,5 +1,3 @@
-#include <sstream>
-
 #include "SceneSoraJewel.h"
 #include "GL\glew.h"
 #include "GLFW\glfw3.h"
@@ -321,10 +319,10 @@ void SceneSoraJewel::Init()
 
 	ReadFromTxt("TextFiles//Test.txt", Textstuffs);
 	position = Textstuffs.begin();
-	for (; position != Textstuffs.end(); position++)
-	{
-		
-	}
+	sDialogue = *position;
+	ssDialogue << sDialogue[0];
+
+	endofline = true;
 
 	camera.SceneGalaxy = false;
 	camera.SceneMun = false;
@@ -426,7 +424,6 @@ void SceneSoraJewel::Update(double dt)
 		}
 		if (Engineerpositionx >= -25)
 		{
-
 			characterismoving = false;
 		}
 		if (Engineerpositionz >= 53)
@@ -510,7 +507,40 @@ void SceneSoraJewel::Update(double dt)
 			rotationlegmaxright = true;
 		}
 	}
-	
+	if (endofline)
+	{
+		timer += 1 * dt;
+		if (timer >= 0.5f)
+		{
+			if (i < sDialogue.size())
+			{
+				ssDialogue << sDialogue[i];
+				i++;
+				timer = 0;
+			}
+		}
+		if ((i == sDialogue.size()))
+		{
+			if (position != Textstuffs.end())
+			{
+				
+				ssDialogue.str("");
+				sDialogue = "";
+
+				sDialogue = *position;
+				ssDialogue << sDialogue[0];
+
+				timer = 0;
+				i = 1;
+				position++;
+
+			}
+			else
+			{
+				endofline = false;
+			}
+		}
+	}
 }
 void SceneSoraJewel::lighting()
 {
@@ -843,6 +873,8 @@ void SceneSoraJewel::Render()
 	
 	renderLast();
 	renderminimaptoscreen();
+
+	RenderTextOnScreen(meshList[GEO_TEXT], ssDialogue.str(), Color(0, 1, 0), 2, 3, 10);
 
 	if (QuestsDone == true)
 	{
