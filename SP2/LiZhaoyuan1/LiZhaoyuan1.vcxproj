@@ -103,6 +103,7 @@
     <ClCompile Include="Source\MeshBuilder.cpp" />
     <ClCompile Include="Source\Missile.cpp" />
     <ClCompile Include="Source\Physics.cpp" />
+    <ClCompile Include="Source\ReadTextFiles.cpp" />
     <ClCompile Include="Source\SceneGalaxy.cpp" />
     <ClCompile Include="Source\SceneMun.cpp" />
     <ClCompile Include="Source\SceneSoraJewel.cpp" />
@@ -125,6 +126,7 @@
     <ClInclude Include="Source\MeshBuilder.h" />
     <ClInclude Include="Source\Missile.h" />
     <ClInclude Include="Source\Physics.h" />
+    <ClInclude Include="Source\ReadTextFile.h" />
     <ClInclude Include="Source\Scene.h" />
     <ClInclude Include="Source\SceneGalaxy.h" />
     <ClInclude Include="Source\SceneMun.h" />

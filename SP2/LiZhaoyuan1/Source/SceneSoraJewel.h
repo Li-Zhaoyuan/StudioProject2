@@ -10,6 +10,7 @@
 #include "Camera4.h"
 #include "MatrixStack.h"
 #include "Physics.h"
+#include "ReadTextFile.h"
 
 class SceneSoraJewel : public Scene
 {
@@ -127,6 +128,13 @@ private:
 	float planet1RevAngle, planet1RotAngle, moon1RotAngle;*/
 
 	Camera3 camera;
+
+	std::vector<std::string> Textstuffs;
+	std::vector<std::string> Dialogue;
+	std::vector<std::string>::iterator position;
+
+	float timer = 0;
+	bool timercheck = false;
 
 	float boxX = 0;
 	float boxZ = 0;
