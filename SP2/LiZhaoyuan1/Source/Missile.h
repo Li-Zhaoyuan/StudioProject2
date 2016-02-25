@@ -13,14 +13,16 @@ public:
 	Vector3 getPositionOfMissile();
 	void updatePosition(const Vector3 &pos);
 	void setView(const Vector3 &view);
+
 	Vector3 missilePosition;
+
 	void Animation(double dt);
 	void init(Camera3 *target);
 	void Firing();
 	void update(double dt);
 
 	int Missiles;
-	int bulletCount = 0;
+	int MissileCounts = 0;
 	Missile* Capacity;
 
 

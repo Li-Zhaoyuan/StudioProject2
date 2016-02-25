@@ -39,19 +39,19 @@ void Missile::Animation(double dt)
 }
 void Missile::init(Camera3 *target)
 {
-	this->camera = target;
+	camera = target;
 }
 void Missile::Firing()
 {
-	if (bulletCount < Missiles)
+	if (MissileCounts < Missiles)
 	{
-		Capacity[bulletCount].updatePosition(camera->target);
-		Capacity[bulletCount].setView(camera->view);
-		bulletCount++;
+		Capacity[MissileCounts].updatePosition(camera->target);
+		Capacity[MissileCounts].setView(camera->view);
+		MissileCounts++;
 	}
 	else
 	{
-		bulletCount = 0;
+		MissileCounts = 0;
 	}
 }
 void Missile::update(double dt)

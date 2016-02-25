@@ -131,16 +131,14 @@ private:
 	bool enableLight = false;
 	float LSPEED = 10.f;
 	int fps = 0;
-	bool shootMissile = false;
+	bool shootMissile = false; 
 	
-	Vector3 Asteroid = Vector3(239, 600, -400);
+	Vector3 target;
+	Vector3 position;
+	Vector3 XWing = Vector3(0, 490, -30);
+	Vector3 Asteroid = Vector3(0, 600, -400);
 	Vector3 Asteroid2 = Vector3(-203, 490, -230);
 	Vector3 Asteroid3 = Vector3(-279, 900, -300);
-
-	int Missiles;
-	int bulletCount = 0;
-	Missile* Capacity;
-
 
 	void renderMesh(Mesh *mesh, bool enableLight);
 	void lighting();
@@ -160,9 +158,9 @@ private:
 
 	float boxX = 0;
 	float boxZ = 0;
-	int camPosX = 0;
-	int camPosY = 0;
-	int camPosz = 0;
+	float camPosX = 0;
+	float camPosY = 0;
+	float camPosz = 0;
 
 	void MunInit();
 	void MunRender();
