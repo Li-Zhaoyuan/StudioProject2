@@ -195,42 +195,21 @@ void SceneGalaxy::Init()
 static float rotateXWing = 0.f;
 static int Health = 100;
 bool rotateXWing_Limit;
+bool renderAsteroid = true;
 
 void SceneGalaxy::MovingAsteroid(double dt)
 {
-	float speed = 10.f * dt;
-	if (getMagnitude(camera.position, Asteroid) > 0)
+	float speed = 0.1f;
+	if (getMagnitude(XWing, Asteroid) > 1)
 	{
-		if (Asteroid != Vector3 (0, 500, 1))
-		{
-			Asteroid -= 2.5 * speed;
-		}
-		else if (Asteroid == (0, 0, 0))
-			return;
+		Asteroid -= (Asteroid - XWing) * speed * dt;
 	}
-	if (getMagnitude(camera.position, Asteroid2) > 0)
+	if (getMagnitude(XWing, Asteroid) < 10)
 	{
-		if (Asteroid2.x == 0)
-			return;
-		else if (Asteroid2.x < 0)
-			Asteroid2.x += 1.5 * speed;
-		if (Asteroid2.z == 0)
-			return;
-		else if (Asteroid2.z > -30)
-			Asteroid2.z -= 2.5 * speed;
+		renderAsteroid = false;
 	}
 
-	if (getMagnitude(camera.position, Asteroid3) > 0)
-	{
-		if (Asteroid3.x == 0)
-			return;
-		else if (Asteroid3.x < 0)
-			Asteroid3.x += 1.5 * speed;
-		if (Asteroid3.z == 0)
-			return;
-		else if (Asteroid3.z > -30)
-			Asteroid3.z -= 2.5 * speed;
-	}
+
 }
 
 int SceneGalaxy::getMagnitude(Vector3 A, Vector3 B)
@@ -239,14 +218,14 @@ int SceneGalaxy::getMagnitude(Vector3 A, Vector3 B)
 	int totalX = (A.x - B.x) * (A.x - B.x);
 	int totalY = (A.y - B.y) * (A.y - B.y);
 	int totalZ = (A.z - B.z) * (A.z - B.z);
-	int mag = totalX + totalY + totalZ;
-	return sqrt(mag);
+	int magnitude = totalX + totalY + totalZ;
+	return sqrt(magnitude);
 }
 
 void SceneGalaxy::Update(double dt)
 {
-	camera.Update(dt, 100);
-	fps = 1 / dt;
+	camera.XWingCamera(dt, 100);
+	fps = 1.f / dt;
 
 	if (Application::IsKeyPressed('E'))
 	{
@@ -323,7 +302,7 @@ void SceneGalaxy::Update(double dt)
 
 	//
 	missile.update(dt);
-	if (Application::IsKeyPressed(VK_LBUTTON))
+	if (Application::IsKeyPressed(VK_LBUTTON)) 
 	{
 		shootMissile = true;
 		if (shootMissile == true)
@@ -333,8 +312,9 @@ void SceneGalaxy::Update(double dt)
 	}
 	//
 	MovingAsteroid(dt);
+	
 
-	std::cout << camera.target - camera.position << std::endl;
+	std::cout << " " << std::endl;
 	camPosX = camera.position.x;
 	camPosY = camera.position.y;
 	camPosz = camera.position.z;
@@ -583,17 +563,14 @@ void SceneGalaxy::RenderXwing()
 
 void SceneGalaxy::RenderAsteroid()
 {
+	if (renderAsteroid == true)
+	{
 		modelStack.PushMatrix();
 		modelStack.Translate(Asteroid.x, Asteroid.y, Asteroid.z);
 		modelStack.Scale(2.2f, 2.2f, 2.2f);
 		renderMesh(meshList[GEO_ASTEROID], false);
 		modelStack.PopMatrix();
-
-		modelStack.PushMatrix();
-		modelStack.Translate(Asteroid2.x, Asteroid2.y, Asteroid2.z);
-		modelStack.Scale(2.2f, 2.2f, 2.2f);
-		renderMesh(meshList[GEO_ASTEROID], false);
-		modelStack.PopMatrix();
+	}
 
 }
 
@@ -612,10 +589,6 @@ void SceneGalaxy::RenderMissile()
 			renderMesh(meshList[GEO_MISSILE], false);
 			modelStack.PopMatrix();
 		}
-	}
-
-	if (shootMissile == true)
-	{
 		for (int i = 0; i < missile.Missiles; i++)
 		{
 			modelStack.PushMatrix();
