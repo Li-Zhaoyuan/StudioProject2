@@ -252,35 +252,35 @@ void SceneSoraJewel::Init()
 	meshList[GEO_ENGINEER]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
 	meshList[GEO_ENGINEER]->material.kShininess = 1.f;
 
-	meshList[GEO_ENGINEER_BODY] = MeshBuilder::GenerateOBJ("Counter", "OBJ//HeadBody.obj");
+	meshList[GEO_ENGINEER_BODY] = MeshBuilder::GenerateOBJ("Engineer's Body", "OBJ//HeadBody.obj");
 	meshList[GEO_ENGINEER_BODY]->textureID = LoadTGA("Image//mainCharacterY.tga");
 	meshList[GEO_ENGINEER_BODY]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ENGINEER_BODY]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
 	meshList[GEO_ENGINEER_BODY]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
 	meshList[GEO_ENGINEER_BODY]->material.kShininess = 1.f;
 
-	meshList[GEO_ENGINEER_ARMLEFT] = MeshBuilder::GenerateOBJ("Counter", "OBJ//LeftArm.obj");
+	meshList[GEO_ENGINEER_ARMLEFT] = MeshBuilder::GenerateOBJ("Engineer left arm", "OBJ//LeftArm.obj");
 	meshList[GEO_ENGINEER_ARMLEFT]->textureID = LoadTGA("Image//mainCharacterY.tga");
 	meshList[GEO_ENGINEER_ARMLEFT]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ENGINEER_ARMLEFT]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
 	meshList[GEO_ENGINEER_ARMLEFT]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
 	meshList[GEO_ENGINEER_ARMLEFT]->material.kShininess = 1.f;
 
-	meshList[GEO_ENGINEER_ARMRIGHT] = MeshBuilder::GenerateOBJ("Counter", "OBJ//RightArm.obj");
+	meshList[GEO_ENGINEER_ARMRIGHT] = MeshBuilder::GenerateOBJ("Engineer right arm", "OBJ//RightArm.obj");
 	meshList[GEO_ENGINEER_ARMRIGHT]->textureID = LoadTGA("Image//mainCharacterY.tga");
 	meshList[GEO_ENGINEER_ARMRIGHT]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ENGINEER_ARMRIGHT]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
 	meshList[GEO_ENGINEER_ARMRIGHT]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
 	meshList[GEO_ENGINEER_ARMRIGHT]->material.kShininess = 1.f;
 
-	meshList[GEO_ENGINEER_LEGLEFT] = MeshBuilder::GenerateOBJ("Counter", "OBJ//LeftLeg.obj");
+	meshList[GEO_ENGINEER_LEGLEFT] = MeshBuilder::GenerateOBJ("Engineer left leg", "OBJ//LeftLeg.obj");
 	meshList[GEO_ENGINEER_LEGLEFT]->textureID = LoadTGA("Image//mainCharacterY.tga");
 	meshList[GEO_ENGINEER_LEGLEFT]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ENGINEER_LEGLEFT]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
 	meshList[GEO_ENGINEER_LEGLEFT]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
 	meshList[GEO_ENGINEER_LEGLEFT]->material.kShininess = 1.f;
 
-	meshList[GEO_ENGINEER_LEGRIGHT] = MeshBuilder::GenerateOBJ("Counter", "OBJ//RightLeg.obj");
+	meshList[GEO_ENGINEER_LEGRIGHT] = MeshBuilder::GenerateOBJ("Engineer right leg", "OBJ//RightLeg.obj");
 	meshList[GEO_ENGINEER_LEGRIGHT]->textureID = LoadTGA("Image//mainCharacterY.tga");
 	meshList[GEO_ENGINEER_LEGRIGHT]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_ENGINEER_LEGRIGHT]->material.kDiffuse.Set(0.1f, 0.1f, 0.1f);
@@ -322,7 +322,7 @@ void SceneSoraJewel::Init()
 	camera.SceneMun = false;
 	camera.SceneSoraJewel = true;
 
-	Engineerpositionx = -78.f, Engineerpositiony = 10.f, Engineerpositionz = -45.5f; Engineerrotationarmleft = 45; Engineerrotationarmright = -45; Engineerrotationlegleft = -45; Engineerrotationlegright = 45;
+	Engineerpositionx = -78.f, Engineerpositiony = -2.f , Engineerpositionz = -45.5f; Engineerrotationarmleft = 45; Engineerrotationarmright = -45; Engineerrotationlegleft = -45; Engineerrotationlegright = 45;
 	//Engineerrotationy = 280;
 }
 
@@ -404,29 +404,40 @@ void SceneSoraJewel::Update(double dt)
 	camPosY = camera.position.y;
 	camPosZ = camera.position.z;
 
-	if (QuestsDone ==true)
+	Engineeranimation(dt);
+	
+}
+void SceneSoraJewel::Engineeranimation(float dt)
+{
+	engineerhasteleported = 0;
+	float playermovementx = 0.33f, playermovementz = 1 * 0.6f; dt = 0.04f;
+	if (QuestsDone == true)
 	{
-		if (Engineerpositionx < -25.f)
+		if ((Engineerpositionx < -25.f))
 		{
-			Engineerpositionx += (0.33f);
+			Engineerpositionx += playermovementx;
 			characterismoving = true;
 		}
-		if (Engineerpositionz < 53.f)
+		if ((Engineerpositionz < 53.f))
 		{
 			characterismoving = true;
-			Engineerpositionz += 1 * 0.6f;
+			Engineerpositionz += playermovementz;
 		}
-		if (Engineerpositionx >= -25)
+		if ((Engineerpositionx <= -23) && (Engineerpositionx >= -25) && (Engineerpositionz >= 53) && (Engineerpositionz <= 56))
 		{
-
+			
 			characterismoving = false;
+			engineerhasteleported = 1;
 		}
-		if (Engineerpositionz >= 53)
-		{
-			characterismoving = false;
-		}
+	}
+	if (engineerhasteleported==1)
+	{
+		playermovementx = 0, playermovementz = 0;
+		characterismoving = false;
+		Engineerpositionx = -96, Engineerpositiony = 13, Engineerpositionz = 82;
 
 	}
+	//The rotation of limbs
 	if (characterismoving == true)
 	{
 		if ((Engineerrotationarmleft >= -45) && (rotationarmmax == true))
@@ -502,7 +513,6 @@ void SceneSoraJewel::Update(double dt)
 			rotationlegmaxright = true;
 		}
 	}
-	
 }
 void SceneSoraJewel::lighting()
 {
@@ -779,7 +789,7 @@ void SceneSoraJewel::Render()
 
 	modelStack.PushMatrix();
 	
-	modelStack.Translate(Engineerpositionx, -2, Engineerpositionz);
+	modelStack.Translate(Engineerpositionx, Engineerpositiony , Engineerpositionz);
 	modelStack.Rotate(280, 0, 1, 0);
 	modelStack.Scale(2.4f, 2.4f, 2.4f);
 	renderMesh(meshList[GEO_ENGINEER_BODY], false);

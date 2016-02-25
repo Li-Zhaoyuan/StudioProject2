@@ -178,7 +178,7 @@ void SP2::Init()
 
 void SP2::Update(double dt)
 {
-	camera.Update(dt,100);
+	//camera.Update(dt,100);
 	fps = 1 / dt;
 
 	if (camera.position.x >= 50 && camera.position.z >= 50 && Application::IsKeyPressed('E'))
@@ -443,11 +443,7 @@ void SP2::Render()
 	RenderSkybox();
 	modelStack.PopMatrix();
 
-	modelStack.PushMatrix();
-	modelStack.Translate(0,0,0);
-	//modelStack.Rotate(camera., 1.0f, 0.f, 0.f);
-	renderMesh(meshList[GEO_CUBE], false);
-	modelStack.PopMatrix();
+	
 
 	
 
@@ -462,7 +458,10 @@ void SP2::Render()
 
 
 }
+void SP2::Rendermainmenutoscreen()
+{
 
+}
 void SP2::RenderSkybox()
 {
 	modelStack.PushMatrix();
