@@ -10,6 +10,7 @@
 #include "Camera4.h"
 #include "MatrixStack.h"
 #include "Physics.h"
+#include "ReadTextFile.h"
 
 class SceneSoraJewel : public Scene
 {
@@ -128,6 +129,13 @@ private:
 
 	Camera3 camera;
 
+	std::vector<std::string> Textstuffs;
+	std::vector<std::string> Dialogue;
+	std::vector<std::string>::iterator position;
+
+	float timer = 0;
+	bool timercheck = false;
+
 	float boxX = 0;
 	float boxZ = 0;
 	float camPosX = 0;
@@ -145,6 +153,9 @@ private:
 	void SoraJewelInit();
 	void SoraJewelRender();
 
+
+	void Engineeranimation(float dt);
+
 	bool Quest1;
 	bool Quest1Done;
 	bool Quest2;
@@ -159,6 +170,7 @@ private:
 
 	float Engineerpositionx, Engineerpositiony, Engineerpositionz;
 	bool characterismoving = false; bool rotationarmmax = true; bool rotationarmmax2 = true, rotationlegmaxleft = true, rotationlegmaxright = true;
+	int engineerhasteleported;
 	float Engineerrotationarmleft, Engineerrotationarmright, Engineerrotationlegleft, Engineerrotationlegright;
 
 	MS modelStack, viewStack, projectionStack;
