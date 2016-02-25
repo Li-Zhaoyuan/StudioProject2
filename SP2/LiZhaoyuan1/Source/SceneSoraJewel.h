@@ -161,6 +161,9 @@ private:
 	void SoraJewelInit();
 	void SoraJewelRender();
 
+
+	void Engineeranimation(float dt);
+
 	bool Quest1;
 	bool Quest1Done;
 	bool Quest2;
@@ -175,6 +178,7 @@ private:
 
 	float Engineerpositionx, Engineerpositiony, Engineerpositionz;
 	bool characterismoving = false; bool rotationarmmax = true; bool rotationarmmax2 = true, rotationlegmaxleft = true, rotationlegmaxright = true;
+	int engineerhasteleported;
 	float Engineerrotationarmleft, Engineerrotationarmright, Engineerrotationlegleft, Engineerrotationlegright;
 
 	MS modelStack, viewStack, projectionStack;

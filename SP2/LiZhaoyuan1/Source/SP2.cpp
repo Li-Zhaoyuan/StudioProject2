@@ -12,7 +12,7 @@
 #include "Light.h"
 #include "Material.h"
 #include "Utility.h"
-
+#include "ReadTextFile.h"
 #include "LoadTGA.h"
 //#include "RenderMun.h"
 //#include "LoadOBJ.h"
@@ -152,18 +152,7 @@ void SP2::Init()
 	meshList[GEO_QUAD] = MeshBuilder::GenerateQuad("quad", Color(0, 0, 0));
 	meshList[GEO_QUAD]->textureID = LoadTGA("Image//Pikachu2.tga");
 
-	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("front", Color(0,0,0));
-	meshList[GEO_FRONT]->textureID = LoadTGA("Image//NebulaFront.tga");
-	meshList[GEO_BACK] = MeshBuilder::GenerateQuad("back", Color(0,0,0));
-	meshList[GEO_BACK]->textureID = LoadTGA("Image//NebulaLeft.tga");
-	meshList[GEO_TOP] = MeshBuilder::GenerateQuad("top", Color(0,0,0));
-	meshList[GEO_TOP]->textureID = LoadTGA("Image//NebulaTop.tga");
-	meshList[GEO_BOTTOM] = MeshBuilder::GenerateQuad("bottom", Color(0,0,0));
-	meshList[GEO_BOTTOM]->textureID = LoadTGA("Image//NebulaBottom_Kai.tga");
-	meshList[GEO_LEFT] = MeshBuilder::GenerateQuad("left", Color(0,0,0));
-	meshList[GEO_LEFT]->textureID = LoadTGA("Image//NebulaBack.tga");
-	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("right", Color(0,0,0));
-	meshList[GEO_RIGHT]->textureID = LoadTGA("Image//NebulaRight.tga");
+	meshList[GEO_CUBE2] = MeshBuilder::GenerateCube("Cube", Color(0,0,0));
 	
 	
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
@@ -173,12 +162,12 @@ void SP2::Init()
 	Mtx44 projection;
 	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 10000.f);
 	projectionStack.LoadMatrix(projection);
+	arrowpositiony = 7;
 }
-
 
 void SP2::Update(double dt)
 {
-	camera.Update(dt,100);
+	//camera.Update(dt,100);
 	fps = 1 / dt;
 
 	if (camera.position.x >= 50 && camera.position.z >= 50 && Application::IsKeyPressed('E'))
@@ -231,6 +220,33 @@ void SP2::Update(double dt)
 	camPosY = camera.position.y;
 	camPosz = camera.position.z;
 
+	if (arrowpositiony > 4 && arrowpositiony < 8)
+	{
+		if (Application::IsKeyPressed(VK_UP) && arrowpositiony==6)
+		{
+			arrowpositiony += 1;
+		}
+		if (Application::IsKeyPressed(VK_UP) && arrowpositiony == 5)
+		{
+			arrowpositiony += 1;
+		}
+		if (Application::IsKeyPressed(VK_DOWN)&& arrowpositiony==7)
+		{
+			arrowpositiony -= 1;
+		}
+		if (Application::IsKeyPressed(VK_DOWN) && arrowpositiony == 6)
+		{
+			arrowpositiony -= 1;
+		}
+	}
+	if ((arrowpositiony == 7) && (Application::IsKeyPressed(VK_RETURN)))
+	{
+		Gamemode::getinstance()->currentgamestate = 2;
+	}
+	if ((arrowpositiony == 5) && (Application::IsKeyPressed(VK_RETURN)))
+	{
+		application.Exit();
+	}
 	
 	
 }
@@ -350,7 +366,26 @@ void SP2::RenderText(Mesh* mesh, std::string text, Color color)
 	glUniform1i(m_parameters[U_TEXT_ENABLED], 0);
 	glEnable(GL_DEPTH_TEST);
 }
-
+void SP2::Rendermainmenutoscreen()
+{
+	Mtx44 ortho;
+	glDisable(GL_DEPTH_TEST);
+	ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+	projectionStack.PushMatrix();
+	projectionStack.LoadMatrix(ortho);
+	viewStack.PushMatrix();
+	viewStack.LoadIdentity(); //No need camera for ortho mode
+	modelStack.PushMatrix();
+	modelStack.LoadIdentity(); //Reset modelStack
+	modelStack.Translate(40, 30, 0);
+	modelStack.Scale(90, 60, 10);
+	modelStack.Rotate(90, 1, 0, 0);
+	renderMesh(meshList[GEO_CUBE2], false);
+	projectionStack.PopMatrix();
+	viewStack.PopMatrix();
+	modelStack.PopMatrix();
+	glEnable(GL_DEPTH_TEST);
+}
 void SP2::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
@@ -439,80 +474,20 @@ void SP2::Render()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(0.f, 496.9f, 0.f);
-	RenderSkybox();
+	Rendermainmenutoscreen();
 	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(0,0,0);
-	//modelStack.Rotate(camera., 1.0f, 0.f, 0.f);
-	renderMesh(meshList[GEO_CUBE], false);
-	modelStack.PopMatrix();
-
-	
-
 
 	std::stringstream playerPos;
-	playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosz;
 	//RenderTextOnScreen(meshList[GEO_TEXT], playerPos.str(), Color(1, 0, 0), 2, 0, 18);
 	std::stringstream ss;
-	ss << "FPS:" << fps << "         " << playerPos.str();
+	ss << "FPS:" << fps << "         ";
 	RenderTextOnScreen(meshList[GEO_TEXT], ss.str(), Color(0, 1, 0), 3, 0, 19);
+
+	RenderTextOnScreen(meshList[GEO_TEXT], "=>", Color(0, 1, 0), 3, 3.5, arrowpositiony);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Start", Color(0, 1, 0), 3, 5, 7);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Options", Color(0, 1, 0), 3, 5, 6);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Exit", Color(0, 1, 0), 3, 5, 5);
 	
-
-
-}
-
-void SP2::RenderSkybox()
-{
-	modelStack.PushMatrix();
-	modelStack.Translate(0, 0, -498);
-	modelStack.Rotate(90, 1, 0, 0);
-	modelStack.Rotate(180, 0, 1, 0);
-	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_BACK], false);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(0, 498, 0);
-	modelStack.Rotate(-90, 0, 1, 0);
-	modelStack.Rotate(180, 1, 0, 0);
-	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_TOP], false);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-498, 0, 0);
-	modelStack.Rotate(-90, 0, 0, 1);
-	modelStack.Rotate(90, 0, 1, 0);
-	modelStack.Rotate(180, 0, 1, 0);
-	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_LEFT], false);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(498, 0, 0);
-	modelStack.Rotate(90, 0, 0, 1);
-	modelStack.Rotate(90, 0, 1, 0);
-	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_FRONT], false);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(0, -498, 0);
-	modelStack.Rotate(-90, 0, 1, 0);
-	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_BOTTOM], false);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(0, 0, 498);
-	modelStack.Rotate(180, 0, 1, 0);
-	modelStack.Rotate(90, 1, 0, 0);
-	modelStack.Rotate(180, 0, 1, 0);
-	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_RIGHT], false);
-	modelStack.PopMatrix();
 }
 
 void SP2::Exit()
