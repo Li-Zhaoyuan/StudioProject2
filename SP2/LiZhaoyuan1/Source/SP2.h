@@ -125,6 +125,7 @@ private:
 	void lighting();
 	void lighting2();
 	void RenderSkybox();
+	void Rendermainmenutoscreen();
 	void interactionWithRobby();
 	void interactionWithSnowBalls();
 	void RenderText(Mesh* mesh, std::string text, Color color);
