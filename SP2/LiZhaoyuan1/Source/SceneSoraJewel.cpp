@@ -15,6 +15,7 @@
 #include "Physics.h"
 
 #include "LoadTGA.h"
+#include "ReadTextFile.h"
 
 SceneSoraJewel::SceneSoraJewel()
 {
@@ -140,7 +141,7 @@ void SceneSoraJewel::Init()
 	
 	//Initialize camera settings
 
-	camera.Init(Vector3(0, 10, 30), Vector3(0, 10, 0), Vector3(0, 1, 0));
+	camera.Init(Vector3(0, 5, 50), Vector3(0, 5, 0), Vector3(0, 1, 0));
 
 	//camera.Init(Vector3(0, 350, 1), Vector3(0, 7, 0), Vector3(0, 1, 0));
 
@@ -318,6 +319,13 @@ void SceneSoraJewel::Init()
 	EmptyinHand = false;
 	BeerinHand = false;
 
+	ReadFromTxt("TextFiles//Test.txt", Textstuffs);
+	position = Textstuffs.begin();
+	for (; position != Textstuffs.end(); position++)
+	{
+		
+	}
+
 	camera.SceneGalaxy = false;
 	camera.SceneMun = false;
 	camera.SceneSoraJewel = true;
@@ -366,7 +374,7 @@ void SceneSoraJewel::Update(double dt)
 		camera.position.x = -96;
 		camera.position.y = 25;
 		camera.position.z = 82;
-		camera.up.Normalized();
+		camera.up.y = 1;
 	}
 	if (Application::IsKeyPressed('E') && (camera.position.x >= -13 && camera.position.z >= -60) && (camera.position.x <= -1 && camera.position.z <= -46))
 	{
@@ -845,6 +853,7 @@ void SceneSoraJewel::Render()
 	
 	renderLast();
 	renderminimaptoscreen();
+
 	if (QuestsDone == true)
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The Quest For Sora Jewel", Color(0, 1, 0), 2, 2, 10);
