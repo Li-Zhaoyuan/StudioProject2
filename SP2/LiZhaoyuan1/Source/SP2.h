@@ -15,15 +15,10 @@ class SP2 : public Scene
 	{
 		GEO_AXES,
 		GEO_QUAD,
+		GEO_CUBE2,
 		GEO_CUBE,
 		GEO_SPHERE,
 		GEO_LIGHTBALL,
-		GEO_LEFT,
-		GEO_RIGHT,
-		GEO_TOP,
-		GEO_BOTTOM,
-		GEO_FRONT,
-		GEO_BACK,
 		GEO_TEXT,
 		GEO_MUNLEFT,
 		GEO_MUNRIGHT,
@@ -124,7 +119,6 @@ private:
 	void renderMesh(Mesh *mesh, bool enableLight);
 	void lighting();
 	void lighting2();
-	void RenderSkybox();
 	void Rendermainmenutoscreen();
 	void interactionWithRobby();
 	void interactionWithSnowBalls();
@@ -160,6 +154,9 @@ private:
 	void renderMunSkybox();
 	void renderGalaxySkybox();
 	void renderSoraJewelSkybox();
+
+	float arrowpositiony;
+	Application application;
 
 	MS modelStack, viewStack, projectionStack;
 };

@@ -1,4 +1,4 @@
-﻿Build started 2/25/2016 1:55:15 PM.
+﻿Build started 2/25/2016 3:56:46 PM.
      1>Project "C:\Users\n1507\Desktop\CompG Project\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\n1507\Desktop\CompG Project\SP2\\Common\Source" /I"C:\Users\n1507\Desktop\CompG Project\SP2\\glfw\include" /I"C:\Users\n1507\Desktop\CompG Project\SP2\\glew\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\SP2.cpp
@@ -16,6 +16,7 @@
          Debug\MeshBuilder.obj
          Debug\Missile.obj
          Debug\Physics.obj
+         Debug\ReadTextFiles.obj
          Debug\SceneGalaxy.obj
          Debug\SceneMun.obj
          Debug\SceneSoraJewel.obj
@@ -27,4 +28,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.83
+Time Elapsed 00:00:01.17
