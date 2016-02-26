@@ -1,43 +1,10 @@
-<<<<<<< HEAD
-﻿Build started 2/26/2016 3:31:58 PM.
-     1>Project "C:\Users\n1507\Desktop\CoconutPapa\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\n1507\Desktop\CoconutPapa\SP2\\Common\Source /IC:\Users\n1507\Desktop\CoconutPapa\SP2\\glfw\include /IC:\Users\n1507\Desktop\CoconutPapa\SP2\\glew\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\SceneGalaxy.cpp
-         SceneGalaxy.cpp
-     1>c:\users\n1507\desktop\coconutpapa\sp2\lizhaoyuan1\source\scenegalaxy.cpp(206): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\coconutpapa\sp2\lizhaoyuan1\source\scenegalaxy.cpp(221): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\coconutpapa\sp2\lizhaoyuan1\source\scenegalaxy.cpp(236): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\coconutpapa\sp2\lizhaoyuan1\source\scenegalaxy.cpp(257): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\coconutpapa\sp2\lizhaoyuan1\source\scenegalaxy.cpp(272): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\coconutpapa\sp2\lizhaoyuan1\source\scenegalaxy.cpp(287): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\coconutpapa\sp2\lizhaoyuan1\source\scenegalaxy.cpp(306): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\coconutpapa\sp2\lizhaoyuan1\source\scenegalaxy.cpp(321): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\coconutpapa\sp2\lizhaoyuan1\source\scenegalaxy.cpp(336): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\coconutpapa\sp2\lizhaoyuan1\source\scenegalaxy.cpp(351): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\n1507\desktop\coconutpapa\sp2\lizhaoyuan1\source\scenegalaxy.cpp(405): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\n1507\desktop\coconutpapa\sp2\lizhaoyuan1\source\scenegalaxy.cpp(406): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\n1507\desktop\coconutpapa\sp2\lizhaoyuan1\source\scenegalaxy.cpp(407): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
-     1>c:\users\n1507\desktop\coconutpapa\sp2\lizhaoyuan1\source\scenegalaxy.cpp(409): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\n1507\desktop\coconutpapa\sp2\lizhaoyuan1\source\scenegalaxy.cpp(417): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\n1507\desktop\coconutpapa\sp2\lizhaoyuan1\source\scenegalaxy.cpp(735): warning C4305: 'argument' : truncation from 'double' to 'float'
-       Link:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\n1507\Desktop\CoconutPapa\SP2\Debug\LiZhaoyuan1.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\n1507\Desktop\CoconutPapa\SP2\\glew\lib /LIBPATH:C:\Users\n1507\Desktop\CoconutPapa\SP2\Debug /LIBPATH:"C:\Users\n1507\Desktop\CoconutPapa\SP2\\glfw\lib-msvc120" glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\n1507\Desktop\CoconutPapa\SP2\Debug\LiZhaoyuan1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\n1507\Desktop\CoconutPapa\SP2\Debug\LiZhaoyuan1.lib" /MACHINE:X86 Debug\Application.obj
-=======
-<<<<<<< HEAD
-﻿Build started 26/2/2016 2:46:14 PM.
-     1>Project "E:\School stuff\2015S2\Computer Graphics Project\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
-     1>Link:
-         E:\Programs\Visual Studio 2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\LiZhaoyuan1.exe" /INCREMENTAL /NOLOGO /LIBPATH:"E:\School stuff\2015S2\Computer Graphics Project\SP2\\glew\lib" /LIBPATH:"E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug" /LIBPATH:"E:\School stuff\2015S2\Computer Graphics Project\SP2\\glfw\lib-msvc120" glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\LiZhaoyuan1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\LiZhaoyuan1.lib" /MACHINE:X86 Debug\Application.obj
-=======
-﻿Build started 2/26/2016 2:49:02 PM.
+﻿Build started 2/26/2016 5:01:00 PM.
      1>Project "C:\Users\n1507\Desktop\SP2_1\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\n1507\Desktop\SP2_1\SP2\\Common\Source /IC:\Users\n1507\Desktop\SP2_1\SP2\\glfw\include /IC:\Users\n1507\Desktop\SP2_1\SP2\\glew\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\SceneMun.cpp
          SceneMun.cpp
        Link:
          D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\n1507\Desktop\SP2_1\SP2\Debug\LiZhaoyuan1.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\n1507\Desktop\SP2_1\SP2\\glew\lib /LIBPATH:C:\Users\n1507\Desktop\SP2_1\SP2\Debug /LIBPATH:"C:\Users\n1507\Desktop\SP2_1\SP2\\glfw\lib-msvc120" glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\n1507\Desktop\SP2_1\SP2\Debug\LiZhaoyuan1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\n1507\Desktop\SP2_1\SP2\Debug\LiZhaoyuan1.lib" /MACHINE:X86 Debug\Application.obj
->>>>>>> 20e09acf55383fba9206af1861e91c524d91d185
->>>>>>> f35545ebabc3719a5b28b084651f15b2ffc2b1d0
          Debug\Camera.obj
          Debug\Camera2.obj
          Debug\Camera3.obj
@@ -56,28 +23,9 @@
          Debug\shader.obj
          Debug\SP2.obj
          Debug\Utility.obj
-<<<<<<< HEAD
-         LiZhaoyuan1.vcxproj -> C:\Users\n1507\Desktop\CoconutPapa\SP2\Debug\LiZhaoyuan1.exe
-     1>Done Building Project "C:\Users\n1507\Desktop\CoconutPapa\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:00.87
-=======
-<<<<<<< HEAD
-     1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-         LiZhaoyuan1.vcxproj -> E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\LiZhaoyuan1.exe
-     1>Done Building Project "E:\School stuff\2015S2\Computer Graphics Project\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:00.39
-=======
          LiZhaoyuan1.vcxproj -> C:\Users\n1507\Desktop\SP2_1\SP2\Debug\LiZhaoyuan1.exe
      1>Done Building Project "C:\Users\n1507\Desktop\SP2_1\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.92
->>>>>>> 20e09acf55383fba9206af1861e91c524d91d185
->>>>>>> f35545ebabc3719a5b28b084651f15b2ffc2b1d0
+Time Elapsed 00:00:00.89

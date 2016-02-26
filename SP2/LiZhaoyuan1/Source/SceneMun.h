@@ -32,6 +32,7 @@ class SceneMun : public Scene
 		GEO_PICKAXE,
 		GEO_CRASHEDPLANE,
 		GEO_PLANE,
+		GEO_PLANE_TAKEOFF,
 		GEO_MUN,
 		GEO_MINIMAP,
 		GEO_MAINICON,
@@ -201,6 +202,9 @@ private:
 	float rotateLimbs = 0;
 	float rotateWhole = 0;
 	float translatingChar = 0;
+	float hoverheight = 0;
+	float rotateplane = 0;
+	float translateplane = 0;
 
 	MS modelStack, viewStack, projectionStack;
 };
