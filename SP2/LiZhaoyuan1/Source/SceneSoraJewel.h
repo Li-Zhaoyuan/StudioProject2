@@ -160,6 +160,7 @@ private:
 
 	void SoraJewelInit();
 	void SoraJewelRender();
+	void Renderengineers();
 
 
 	void Engineeranimation(float dt);
@@ -177,9 +178,11 @@ private:
 	bool BeerinHand;
 
 	float Engineerpositionx, Engineerpositiony, Engineerpositionz;
-	bool characterismoving = false; bool rotationarmmax = true; bool rotationarmmax2 = true, rotationlegmaxleft = true, rotationlegmaxright = true;
-	int engineerhasteleported;
-	float Engineerrotationarmleft, Engineerrotationarmright, Engineerrotationlegleft, Engineerrotationlegright;
+	bool characterismoving = false, rotationarmmax = true; 
+	bool rotationarmmax2 = true, rotationlegmaxleft = true, rotationlegmaxright = true;
+	bool engineer1maxy = false;
+	float Engineerrotationarmleft, Engineerrotationarmright, Engineerrotationlegleft, Engineerrotationlegright, Engineerrotationy;
+	float Engineerpositionx2, Engineerpositiony2, Engineerpositionz2, Engineerrotationy2;
 
 	MS modelStack, viewStack, projectionStack;
 };

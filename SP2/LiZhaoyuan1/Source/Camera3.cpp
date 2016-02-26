@@ -23,8 +23,8 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 	this->up = defaultUp = right.Cross(view).Normalized();
 	translateChar = 0;
 	rotateChar = 0;
-	minimapcoords = (60.f, 10.f, -1.f);
-	minimapsoracoords = (78.f, 55.f, -1.f);
+	minimapcoords = (78.f, 55.f, -1.f);
+	minimapsoracoords = (58.85f, 42.f, -1.f);;
 	SetCursorPos( 800 / 2, 600 / 2);
 	mass = 70;
 	Force = 1000;
@@ -104,7 +104,7 @@ void Camera3::Update(double dt, float bounds)
 			
 	}
 
-	if (Application::IsKeyPressed('A'))
+	if (Application::IsKeyPressed('A')) /////
 	{
 		float speed = 5.0f;
 		Vector3 view = (target - position).Normalized();
@@ -133,7 +133,7 @@ void Camera3::Update(double dt, float bounds)
 			}
 		}
 	}
-	if (Application::IsKeyPressed('D'))
+	if (Application::IsKeyPressed('D'))  ///////
 	{
 		float speed = 5.0f;
 		Vector3 view = (target - position).Normalized();
@@ -306,7 +306,7 @@ void Camera3::Reset()
 void Camera3::UpdateCollision(float bounds, double dt)
 {
 	static const float CAMERA_SPEED = 25.f;
-	if (Application::IsKeyPressed('A'))
+	if (Application::IsKeyPressed('A'))  /////
 	{
 		Vector3 view = (target - position).Normalized();
 		Vector3 right = view.Cross(up);
@@ -329,7 +329,7 @@ void Camera3::UpdateCollision(float bounds, double dt)
 		}
 
 	}
-	if (Application::IsKeyPressed('D'))
+	if (Application::IsKeyPressed('D'))  ///////
 	{
 		Vector3 view = (target - position).Normalized();
 		Vector3 right = view.Cross(up);
@@ -596,12 +596,25 @@ bool Camera3::AllGalaxyBoundaryZ(Vector3 Testvalue)
 bool Camera3::AllMunBoundaryX(Vector3 Testvalue)
 {
 	//women's house
-	if (!boundaryCheckerX(2, 4, -50, -26, Testvalue))
+	if (!boundaryCheckerX(0, 50, -50, -26, Testvalue))
 		return true;
-	if (!boundaryCheckerX(48, 50, -50, -26, Testvalue))
+	//crashed plane
+	if (!boundaryCheckerX(-39, -32, -51, -44, Testvalue))
 		return true;
-	//women's house
-	if (!boundaryCheckerX(-39, -32, -37.5, -27.5, Testvalue))
+	//quest dude house
+	if (!boundaryCheckerX(20, 44, 0, 48, Testvalue))
+		return true;
+	//cave left wall
+	if (!boundaryCheckerX(-47, -18, 22, 29, Testvalue))
+		return true;
+	//cave center wall
+	if (!boundaryCheckerX(-48, -40.5, 26, 45, Testvalue))
+		return true;
+	////ore
+	//if (!boundaryCheckerX(-49, -40.5, 33, 36, Testvalue))
+	//	return true;
+	//cave right wall
+	if (!boundaryCheckerX(-48, -20, 41, 48, Testvalue))
 		return true;
 	return false;
 }
@@ -609,12 +622,25 @@ bool Camera3::AllMunBoundaryX(Vector3 Testvalue)
 bool Camera3::AllMunBoundaryZ(Vector3 Testvalue)
 {
 	//women's house
-	if (!boundaryCheckerZ(2, 50, -26, -24, Testvalue))
-		return true;
-	if (!boundaryCheckerZ(2, 50, -50, -48, Testvalue))
+	if (!boundaryCheckerZ(0, 50, -50, -26, Testvalue))
 		return true; 
-	//women's house
-	if (!boundaryCheckerZ(-39.5, -31.5, -38, -28, Testvalue))
+	//crashed plane
+	if (!boundaryCheckerZ(-39, -32, -51, -44, Testvalue))
+		return true;
+	//quest dude house
+	if (!boundaryCheckerZ(20, 44, 0, 48, Testvalue))
+		return true;
+	//cave left wall
+	if (!boundaryCheckerZ(-47, -18, 22, 29, Testvalue))
+		return true;
+	//cave center wall
+	if (!boundaryCheckerZ(-48, -40.5, 26, 45, Testvalue))
+		return true;
+	////ore
+	//if (!boundaryCheckerZ(-49, -40.5, 34, 35, Testvalue))
+	//	return true;
+	//cave right wall
+	if (!boundaryCheckerZ(-48, -20, 41, 48, Testvalue))
 		return true;
 	return false;
 }
@@ -652,7 +678,7 @@ void Camera3::SJUpdate(double dt, float bounds)
 		up = rotation * up;
 	}
 
-	if (Application::IsKeyPressed('A'))
+	if (Application::IsKeyPressed('A')) /////
 	{
 		Vector3 view = (target - position).Normalized();
 		Vector3 right = view.Cross(up);
@@ -684,7 +710,7 @@ void Camera3::SJUpdate(double dt, float bounds)
 				position.z -= right.z * (float)(CAMERA_SPEED * dt);
 				target.z -= right.z * (float)(CAMERA_SPEED * dt);
 				minimapcoords.x += (right.z*(float)(CAMERA_SPEED*dt*0.1)); //
-				minimapsoracoords.y -= (right.z*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.y += (right.z*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
 
@@ -703,7 +729,7 @@ void Camera3::SJUpdate(double dt, float bounds)
 
 	}
 
-	if (Application::IsKeyPressed('D'))
+	if (Application::IsKeyPressed('D')) ///////
 	{
 		Vector3 view = (target - position).Normalized();
 		Vector3 right = view.Cross(up);
@@ -847,8 +873,8 @@ void Camera3::SJUpdate(double dt, float bounds)
 	{
 		minimapcoords.x = 75;
 		minimapcoords.y = 55;
-		minimapsoracoords.x = 78;
-		minimapsoracoords.y = 55;
+		minimapsoracoords.x = 73.65f; 
+		minimapsoracoords.y = 44.f;
 		Reset();
 	}
 
