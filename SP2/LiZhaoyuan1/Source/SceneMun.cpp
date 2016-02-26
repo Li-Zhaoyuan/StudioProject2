@@ -142,7 +142,7 @@ void SceneMun::Init()
 
 
 	//Initialize camera settings
-	camera.Init(Vector3(0, 0, 1), Vector3(0, 0, 0), Vector3(0, 1, 0));
+	camera.Init(Vector3(-49, 0, -39), Vector3(-48, 0, -39), Vector3(0, 1, 0));
 	camera.minimapcoords.y = 55;
 	camera.minimapcoords.x = 75;
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
@@ -174,6 +174,12 @@ void SceneMun::Init()
 	meshList[GEO_CRASHEDPLANE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_CRASHEDPLANE]->material.kShininess = 5.f;
 	
+	meshList[GEO_PLANE] = MeshBuilder::GenerateOBJ("plane", "OBJ//XWingLand.obj");
+	meshList[GEO_PLANE]->textureID = LoadTGA("Image//XWing_Texture.tga");
+	meshList[GEO_PLANE]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_PLANE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_PLANE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_PLANE]->material.kShininess = 5.f;
 	//Houses
 	meshList[GEO_HOUSE] = MeshBuilder::GenerateOBJ("house", "OBJ//house.obj");
 	meshList[GEO_HOUSE]->textureID = LoadTGA("Image//house.tga");
@@ -319,9 +325,13 @@ void SceneMun::Update(double dt)
 {
 	if ((((interact >> REPAIRED) & 1) < 1))
 	{
-		camera.Update(dt, 100);
+		camera.Update(dt, 50);
 	}
-	
+	if ((((interact >> REPAIRED) & 1) > 0))
+	{
+		camera.Init(Vector3(-35, 0, -27), Vector3(-35, 0, -28), Vector3(0, 1, 0));
+	}
+
 	fps = (int)(1 / dt);
 
 	if (Application::IsKeyPressed('5'))
@@ -803,6 +813,7 @@ void SceneMun::Render()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "M ining", Color(0, 1, 0), 3, 11, 15);
 		RenderLoadingBarOnScreen();
+
 	}
 	if ((((interact >> REPAIRING) & 1) > 0) && (((interact >> MINED) & 1) > 0))
 	{

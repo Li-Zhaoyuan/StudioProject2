@@ -115,6 +115,8 @@ public:
 	virtual void Render();
 	virtual void Exit();
 
+
+
 private:
 	Light light[2];
 	bool enableLight = false;
@@ -157,8 +159,8 @@ private:
 	int interact = 0;
 
 
-	Vector3 crashedplaneCoord = Vector3(-36.f,4.9f,-34.f);
-	Vector3 planecoord = Vector3(-36.f, -2.9f, -45.f);
+	Vector3 crashedplaneCoord = Vector3(-36.f,4.9f,-49.f);
+	Vector3 planecoord = Vector3(-36.f, -2.9f, -49.f);
 	Vector3 questdudehouseCoord = Vector3(33, -5, 20);
 	Vector3 worriedladyhouseCoord = Vector3(20, -5, -38);
 	Vector3 worriedladyCoord = Vector3(2, -4, -38);

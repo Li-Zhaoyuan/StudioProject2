@@ -597,12 +597,25 @@ bool Camera3::AllGalaxyBoundaryZ(Vector3 Testvalue)
 bool Camera3::AllMunBoundaryX(Vector3 Testvalue)
 {
 	//women's house
-	if (!boundaryCheckerX(2, 4, -50, -26, Testvalue))
+	if (!boundaryCheckerX(0, 50, -50, -26, Testvalue))
 		return true;
-	if (!boundaryCheckerX(48, 50, -50, -26, Testvalue))
+	//crashed plane
+	if (!boundaryCheckerX(-39, -32, -51, -44, Testvalue))
 		return true;
-	//women's house
-	if (!boundaryCheckerX(-39, -32, -37.5, -27.5, Testvalue))
+	//quest dude house
+	if (!boundaryCheckerX(20, 44, 0, 48, Testvalue))
+		return true;
+	//cave left wall
+	if (!boundaryCheckerX(-47, -18, 22, 29, Testvalue))
+		return true;
+	//cave center wall
+	if (!boundaryCheckerX(-48, -40.5, 26, 45, Testvalue))
+		return true;
+	////ore
+	//if (!boundaryCheckerX(-49, -40.5, 33, 36, Testvalue))
+	//	return true;
+	//cave right wall
+	if (!boundaryCheckerX(-48, -20, 41, 48, Testvalue))
 		return true;
 	return false;
 }
@@ -610,12 +623,25 @@ bool Camera3::AllMunBoundaryX(Vector3 Testvalue)
 bool Camera3::AllMunBoundaryZ(Vector3 Testvalue)
 {
 	//women's house
-	if (!boundaryCheckerZ(2, 50, -26, -24, Testvalue))
-		return true;
-	if (!boundaryCheckerZ(2, 50, -50, -48, Testvalue))
+	if (!boundaryCheckerZ(0, 50, -50, -26, Testvalue))
 		return true; 
-	//women's house
-	if (!boundaryCheckerZ(-39.5, -31.5, -38, -28, Testvalue))
+	//crashed plane
+	if (!boundaryCheckerZ(-39, -32, -51, -44, Testvalue))
+		return true;
+	//quest dude house
+	if (!boundaryCheckerZ(20, 44, 0, 48, Testvalue))
+		return true;
+	//cave left wall
+	if (!boundaryCheckerZ(-47, -18, 22, 29, Testvalue))
+		return true;
+	//cave center wall
+	if (!boundaryCheckerZ(-48, -40.5, 26, 45, Testvalue))
+		return true;
+	////ore
+	//if (!boundaryCheckerZ(-49, -40.5, 34, 35, Testvalue))
+	//	return true;
+	//cave right wall
+	if (!boundaryCheckerZ(-48, -20, 41, 48, Testvalue))
 		return true;
 	return false;
 }
