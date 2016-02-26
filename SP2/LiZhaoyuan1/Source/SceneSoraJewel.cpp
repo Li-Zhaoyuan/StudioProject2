@@ -329,12 +329,13 @@ void SceneSoraJewel::Init()
 	camera.SceneSoraJewel = true;
 
 	Engineerpositionx = -78.f, Engineerpositiony = -2.f , Engineerpositionz = -45.5f; Engineerrotationarmleft = 45; Engineerrotationarmright = -45; Engineerrotationlegleft = -45; Engineerrotationlegright = 45;
-	//Engineerrotationy = 280;
+	Engineerrotationy = 280;
+	Engineerpositionx2 = -65, Engineerpositiony2 = 100, Engineerpositionz2 = 56,Engineerrotationy2=180.f;
 }
 
 void SceneSoraJewel::Update(double dt)
 {
-	camera.SJUpdate(dt, 1000);
+	camera.SJUpdate(dt, 110);
 	fps = 1 / dt;
 	if (camera.position.x >= 50 && camera.position.z >= 50 && Application::IsKeyPressed('E'))
 	{
@@ -415,7 +416,6 @@ void SceneSoraJewel::Update(double dt)
 }
 void SceneSoraJewel::Engineeranimation(float dt)
 {
-	engineerhasteleported = 0;
 	float playermovementx = 0.33f, playermovementz = 1 * 0.6f; dt = 0.04f;
 	if (QuestsDone == true)
 	{
@@ -431,17 +431,16 @@ void SceneSoraJewel::Engineeranimation(float dt)
 		}
 		if ((Engineerpositionx <= -23) && (Engineerpositionx >= -25) && (Engineerpositionz >= 53) && (Engineerpositionz <= 56))
 		{
-			
-			characterismoving = false;
-			engineerhasteleported = 1;
+			Engineerrotationy += (float)(800 * dt);
+			if (Engineerrotationy != 280)
+			{
+				Engineerpositiony += (float)(80 * dt);
+			}
+			if (Engineerpositiony >= 100)
+			{
+				engineer1maxy = true;
+			}
 		}
-	}
-	if (engineerhasteleported==1)
-	{
-		playermovementx = 0, playermovementz = 0;
-		characterismoving = false;
-		Engineerpositionx = -96, Engineerpositiony = 13, Engineerpositionz = 82;
-
 	}
 	//The rotation of limbs
 	if (characterismoving == true)
@@ -518,6 +517,10 @@ void SceneSoraJewel::Engineeranimation(float dt)
 		{
 			rotationlegmaxright = true;
 		}
+	}
+	if (Engineerpositiony >= 200 && Engineerpositiony2 >= 15.2f && engineer1maxy==true)
+	{
+		Engineerpositiony2 -= (float)(80 * dt);
 	}
 
 	if (endofline)
@@ -830,39 +833,7 @@ void SceneSoraJewel::Render()
 	renderMesh(meshList[GEO_QUESTLADY], false);
 	modelStack.PopMatrix();
 
-	modelStack.PushMatrix();
-	
-	modelStack.Translate(Engineerpositionx, Engineerpositiony , Engineerpositionz);
-	modelStack.Rotate(280, 0, 1, 0);
-	modelStack.Scale(2.4f, 2.4f, 2.4f);
-	renderMesh(meshList[GEO_ENGINEER_BODY], false);
-	
-	modelStack.PushMatrix();
-	modelStack.Translate(0, 4.6f, 0);
-	modelStack.Rotate(Engineerrotationarmleft, 0, 0, 1);
-	modelStack.Scale(1.f, 1.f, 1.f);
-	renderMesh(meshList[GEO_ENGINEER_ARMLEFT], false);
-	modelStack.PopMatrix();
-	modelStack.PushMatrix();
-	modelStack.Translate(0, 4.6f, 0);
-	modelStack.Rotate(Engineerrotationarmright, 0, 0, 1);
-	modelStack.Scale(1.f, 1.f, 1.f);
-	renderMesh(meshList[GEO_ENGINEER_ARMRIGHT], false);
-	modelStack.PopMatrix();
-	modelStack.PushMatrix();
-	modelStack.Translate(0.f, 2.6f, 0.f);
-	modelStack.Rotate(Engineerrotationlegleft, 0, 0, 1);
-	modelStack.Scale(1.f, 1.f, 1.f);
-	renderMesh(meshList[GEO_ENGINEER_LEGLEFT], false);
-	modelStack.PopMatrix();
-	modelStack.PushMatrix();
-	modelStack.Translate(0.f, 2.6f, 0.f);
-	modelStack.Rotate(Engineerrotationlegright, 0, 0, 1);
-	modelStack.Scale(1.f, 1.f, 1.f);
-	renderMesh(meshList[GEO_ENGINEER_LEGRIGHT], false);
-	modelStack.PopMatrix();
-	//Body Parent
-	modelStack.PopMatrix();
+	Renderengineers();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(-96, 5, -40);
@@ -894,14 +865,14 @@ void SceneSoraJewel::Render()
 		RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The Quest For Sora Jewel", Color(0, 1, 0), 2, 2, 10);
 	}
 
-	/*if (Quest1 == true && Quest2 == false && QuestsDone == false && !Application::IsKeyPressed('W') && !Application::IsKeyPressed('A') && !Application::IsKeyPressed('S') && !Application::IsKeyPressed('D'))
+	if (Quest1 == true && Quest2 == false && QuestsDone == false && !Application::IsKeyPressed('W') && !Application::IsKeyPressed('A') && !Application::IsKeyPressed('S') && !Application::IsKeyPressed('D'))
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The Quest For Sora Jewel", (0, 1, 0), 5, 4, 10);
+		RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The 1st Quest For Sora Jewel", (0, 1, 0), 5, 4, 10);
 	}
 	if (Quest2 == true && QuestsDone == false && !Application::IsKeyPressed('W') && !Application::IsKeyPressed('A') && !Application::IsKeyPressed('S') && !Application::IsKeyPressed('D'))
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The Quest For Sora Jewel", (0, 1, 0), 5, 4, 10);
-	}*/
+		RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The 2nd Quest For Sora Jewel", (0, 1, 0), 5, 4, 10);
+	}
 	RenderTextOnScreen(meshList[GEO_TEXT], ssDialogue.str(), Color(0, 1, 0), 2, 3, 10);
 
 	std::stringstream playerPos;
@@ -967,6 +938,81 @@ void SceneSoraJewel::renderLast()
 		glEnable(GL_DEPTH_TEST);
 	}
 }
+void SceneSoraJewel::Renderengineers()
+{
+	modelStack.PushMatrix();
+	modelStack.Translate(Engineerpositionx, Engineerpositiony, Engineerpositionz);
+	modelStack.Rotate(Engineerrotationy, 0, 1, 0);
+	modelStack.Scale(2.4f, 2.4f, 2.4f);
+	renderMesh(meshList[GEO_ENGINEER_BODY], false);
+
+	modelStack.PushMatrix();
+	modelStack.Translate(0, 4.6f, 0);
+	modelStack.Rotate(Engineerrotationarmleft, 0, 0, 1);
+	modelStack.Scale(1.f, 1.f, 1.f);
+	renderMesh(meshList[GEO_ENGINEER_ARMLEFT], false);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(0, 4.6f, 0);
+	modelStack.Rotate(Engineerrotationarmright, 0, 0, 1);
+	modelStack.Scale(1.f, 1.f, 1.f);
+	renderMesh(meshList[GEO_ENGINEER_ARMRIGHT], false);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(0.f, 2.6f, 0.f);
+	modelStack.Rotate(Engineerrotationlegleft, 0, 0, 1);
+	modelStack.Scale(1.f, 1.f, 1.f);
+	renderMesh(meshList[GEO_ENGINEER_LEGLEFT], false);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(0.f, 2.6f, 0.f);
+	modelStack.Rotate(Engineerrotationlegright, 0, 0, 1);
+	modelStack.Scale(1.f, 1.f, 1.f);
+	renderMesh(meshList[GEO_ENGINEER_LEGRIGHT], false);
+	modelStack.PopMatrix();
+	//Body Parent
+	modelStack.PopMatrix();
+
+	//Engineer after teleportin
+	modelStack.PushMatrix();
+	modelStack.Translate(Engineerpositionx2, Engineerpositiony2, Engineerpositionz2);
+	modelStack.Rotate(Engineerrotationy2, 0, 1, 0);
+	modelStack.Scale(2.4f, 2.4f, 2.4f);
+	renderMesh(meshList[GEO_ENGINEER_BODY], false);
+
+	modelStack.PushMatrix();
+	modelStack.Translate(0, 4.6f, 0);
+	//modelStack.Rotate(Engineerrotationarmleft, 0, 0, 1);
+	modelStack.Scale(1.f, 1.f, 1.f);
+	renderMesh(meshList[GEO_ENGINEER_ARMLEFT], false);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(0, 4.6f, 0);
+	//modelStack.Rotate(Engineerrotationarmright, 0, 0, 1);
+	modelStack.Scale(1.f, 1.f, 1.f);
+	renderMesh(meshList[GEO_ENGINEER_ARMRIGHT], false);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(0.f, 2.6f, 0.f);
+	//modelStack.Rotate(Engineerrotationlegleft, 0, 0, 1);
+	modelStack.Scale(1.f, 1.f, 1.f);
+	renderMesh(meshList[GEO_ENGINEER_LEGLEFT], false);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(0.f, 2.6f, 0.f);
+	//modelStack.Rotate(Engineerrotationlegright, 0, 0, 1);
+	modelStack.Scale(1.f, 1.f, 1.f);
+	renderMesh(meshList[GEO_ENGINEER_LEGRIGHT], false);
+	modelStack.PopMatrix();
+	//Body Parent
+	modelStack.PopMatrix();
+}
 void SceneSoraJewel::renderminimaptoscreen()
 {
 	Mtx44 ortho;
@@ -978,8 +1024,8 @@ void SceneSoraJewel::renderminimaptoscreen()
 	viewStack.LoadIdentity(); //No need camera for ortho mode
 	modelStack.PushMatrix();
 	modelStack.LoadIdentity(); //Reset modelStack
-	modelStack.Translate(75, 55, -2);
-	modelStack.Scale(10, 10, 10);
+	modelStack.Translate(69.85f, 48.35f, -2);
+	modelStack.Scale(20.3f, 23.3f, 10);
 	modelStack.Rotate(90, 1, 0, 0);
 	renderMesh(meshList[GEO_MINIMAPSJ], false);
 	projectionStack.PopMatrix();
