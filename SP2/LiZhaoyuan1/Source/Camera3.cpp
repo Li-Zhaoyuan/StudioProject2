@@ -469,7 +469,6 @@ void Camera3::XWingCamera(double dt, float bounds)
 	SetCursorPos(800 / 2, 600 / 2);
 }
 
-
 bool Camera3::boundaryCheckerX(float smallx, float largex, float smallz, float largez, Vector3 value)
 {
 	if ((value.z > smallz) && (value.z < largez) && (value.x > smallx) && (value.x < smallx + 4)){ return false; }

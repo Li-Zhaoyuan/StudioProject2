@@ -125,6 +125,10 @@ public:
 	int getMagnitude(Vector3 A, Vector3 B);
 	virtual void RenderMissile();
 	bool CheckCollision(Vector3 A, Vector3 B);
+	bool CheckAsteroidStartWave();
+	bool CheckAsteroidWave1();
+	bool CheckAsteroidWave2();
+	void CutScene(double dt);
 	virtual void Exit();
 
 private:
@@ -154,15 +158,15 @@ private:
 	Vector3 position;
 	Vector3 XWing = Vector3(0, 495, -10);
 	Vector3 Asteroid = Vector3(-123, 486, -600);
-	Vector3 Asteroid2 = Vector3(-104, 520, -230);
-	Vector3 Asteroid3 = Vector3(124, 570, -300);
-	Vector3 Asteroid4 = Vector3(110, 600, -238);
-	Vector3 Asteroid5 = Vector3(-153, 467, -374);
-	Vector3 Asteroid6 = Vector3(40, 470, -149);
-	Vector3 Asteroid7 = Vector3(-70, 450, -596);
-	Vector3 Asteroid8 = Vector3(-124, 500, -849);
+	Vector3 Asteroid2 = Vector3(4, 520, -600);
+	Vector3 Asteroid3 = Vector3(124, 570, -600);
+	Vector3 Asteroid4 = Vector3(10, 600, -600);
+	Vector3 Asteroid5 = Vector3(-153, 467, -600);
+	Vector3 Asteroid6 = Vector3(40, 470, -600);
+	Vector3 Asteroid7 = Vector3(-70, 450, -600);
+	Vector3 Asteroid8 = Vector3(-124, 500, -609);
 	Vector3 Asteroid9 = Vector3(-40, 600, -723);
-	Vector3 Asteroid10 = Vector3(67, 578, -423);
+	Vector3 Asteroid10 = Vector3(67, 578, -600);
 
 	Vector3 missilePos = Vector3(0, 0, 0);
 	Vector3 missileTar = Vector3(0, 0, 0);

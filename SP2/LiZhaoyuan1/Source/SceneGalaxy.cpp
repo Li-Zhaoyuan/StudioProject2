@@ -190,115 +190,208 @@ void SceneGalaxy::Init()
 	missile.init(&camera);
 }
 
+//Asteroid
+
 void SceneGalaxy::MovingAsteroid(double dt)
 {
 	missileView = missilePos + missileTar;
-	float speed = 0.1f;
+	float speed = 0.4f;
+	CheckAsteroidWave1();
+	CheckAsteroidWave2();
 
-	if (getMagnitude(XWing, Asteroid) > 1)
-	{
-		Asteroid -= (Asteroid - XWing) * speed * dt;
-		CheckCollision(missileView, Asteroid);
-		if (CheckCollision(missileView, Asteroid) == true)
+	if (CheckAsteroidStartWave() == false && CheckAsteroidWave1() == false && CheckAsteroidWave2() == false)
 		{
-			renderAsteroid = false;
-		}
-	}
+			if (getMagnitude(XWing, Asteroid) > 1)
+			{
+				Asteroid -= (Asteroid - XWing) * speed * dt;
+				CheckCollision(missileView, Asteroid);
+				if (CheckCollision(missileView, Asteroid) == true)
+				{
+					renderAsteroid = false;
+				}
+			}
+			
+			if (getMagnitude(XWing, Asteroid) < 10)
+			{
+				renderAsteroid = false;
+			}
 
-	if (getMagnitude(XWing, Asteroid2) > 1)
-	{
-		Asteroid2 -= (Asteroid2 - XWing) * speed * dt;
-		CheckCollision(missileView, Asteroid2);
-		if (CheckCollision(missileView, Asteroid2) == true)
-		{
-			renderAsteroid2 = false;
-		}
-	}
+			if (getMagnitude(XWing, Asteroid2) > 1)
+			{
+				Asteroid2 -= (Asteroid2 - XWing) * speed * dt;
+				CheckCollision(missileView, Asteroid2);
+				if (CheckCollision(missileView, Asteroid2) == true)
+				{
+					renderAsteroid2 = false;
+				}
+			}
 
-	if (getMagnitude(XWing, Asteroid3) > 1)
-	{
-		Asteroid3 -= (Asteroid3 - XWing) * speed * dt;
-		CheckCollision(missileView, Asteroid3);
-		if (CheckCollision(missileView, Asteroid3) == true)
-		{
-			renderAsteroid3 = false;
+			if (getMagnitude(XWing, Asteroid2) < 10)
+			{
+				renderAsteroid2 = false;
+			}
+
+			if (getMagnitude(XWing, Asteroid3) > 1)
+			{
+				Asteroid3 -= (Asteroid3 - XWing) * speed * dt;
+				CheckCollision(missileView, Asteroid3);
+				if (CheckCollision(missileView, Asteroid3) == true)
+				{
+					renderAsteroid3 = false;
+				}
+			}
+
+			if (getMagnitude(XWing, Asteroid3) < 10)
+			{
+				renderAsteroid3 = false;
+			}
+			
 		}
-	}
 	
-	if (getMagnitude(XWing, Asteroid4) > 1)
-	{
-		Asteroid4 -= (Asteroid4 - XWing) * speed * dt;
-		CheckCollision(missileView, Asteroid4);
-		if (CheckCollision(missileView, Asteroid4) == true)
+		
+	if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == false && CheckAsteroidWave2() == false)
 		{
-			renderAsteroid4 = false;
-		}
-	}
 
-	if (getMagnitude(XWing, Asteroid5) > 1)
-	{
-		Asteroid5 -= (Asteroid5 - XWing) * speed * dt;
-		CheckCollision(missileView, Asteroid5);
-		if (CheckCollision(missileView, Asteroid5) == true)
-		{
-			renderAsteroid5 = false;
-		}
-	}
+			if (getMagnitude(XWing, Asteroid4) > 1)
+			{
+				Asteroid4 -= (Asteroid4 - XWing) * speed * dt;
+				CheckCollision(missileView, Asteroid4);
+				if (CheckCollision(missileView, Asteroid4) == true)
+				{
+					renderAsteroid4 = false;
+				}
+			}
 
-	if (getMagnitude(XWing, Asteroid6) > 1)
-	{
-		Asteroid6 -= (Asteroid6 - XWing) * speed * dt;
-		CheckCollision(missileView, Asteroid6);
-		if (CheckCollision(missileView, Asteroid6) == true)
-		{
-			renderAsteroid6 = false;
-		}
-	}
+			if (getMagnitude(XWing, Asteroid4) < 10)
+			{
+				renderAsteroid4 = false;
+			}
 
-	if (getMagnitude(XWing, Asteroid7) > 1)
-	{
-		Asteroid7 -= (Asteroid7 - XWing) * speed * dt;
-		CheckCollision(missileView, Asteroid7);
-		if (CheckCollision(missileView, Asteroid7) == true)
-		{
-			renderAsteroid7 = false;
-		}
-	}
+			if (getMagnitude(XWing, Asteroid5) > 1)
+			{
+				Asteroid5 -= (Asteroid5 - XWing) * speed * dt;
+				CheckCollision(missileView, Asteroid5);
+				if (CheckCollision(missileView, Asteroid5) == true)
+				{
+					renderAsteroid5 = false;
+				}
+			}
 
-	if (getMagnitude(XWing, Asteroid8) > 1)
-	{
-		Asteroid8 -= (Asteroid8 - XWing) * speed * dt;
-		CheckCollision(missileView, Asteroid8);
-		if (CheckCollision(missileView, Asteroid8) == true)
-		{
-			renderAsteroid8 = false;
-		}
-	}
+			if (getMagnitude(XWing, Asteroid5) < 10)
+			{
+				renderAsteroid5 = false;
+			}
 
-	if (getMagnitude(XWing, Asteroid9) > 1)
-	{
-		Asteroid9 -= (Asteroid9 - XWing) * speed * dt;
-		CheckCollision(missileView, Asteroid9);
-		if (CheckCollision(missileView, Asteroid9) == true)
-		{
-			renderAsteroid9 = false;
-		}
-	}
+			if (getMagnitude(XWing, Asteroid6) > 1)
+			{
+				Asteroid6 -= (Asteroid6 - XWing) * speed * dt;
+				CheckCollision(missileView, Asteroid6);
+				if (CheckCollision(missileView, Asteroid6) == true)
+				{
+					renderAsteroid6 = false;
+				}
+			}
 
-	if (getMagnitude(XWing, Asteroid10) > 1)
-	{
-		Asteroid10 -= (Asteroid10 - XWing) * speed * dt;
-		CheckCollision(missileView, Asteroid10);
-		if (CheckCollision(missileView, Asteroid10) == true)
-		{
-			renderAsteroid10 = false;
+			if (getMagnitude(XWing, Asteroid6) < 10)
+			{
+				renderAsteroid6 = false;
+			}
 		}
-	}
+
+		
+	if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == true && CheckAsteroidWave2() == false)
+		{
+			if (getMagnitude(XWing, Asteroid7) > 1)
+			{
+				Asteroid7 -= (Asteroid7 - XWing) * speed * dt;
+				CheckCollision(missileView, Asteroid7);
+				if (CheckCollision(missileView, Asteroid7) == true)
+				{
+					renderAsteroid7 = false;
+				}
+			}
+
+			if (getMagnitude(XWing, Asteroid7) < 10)
+			{
+				renderAsteroid7 = false;
+			}
+
+			if (getMagnitude(XWing, Asteroid8) > 1)
+			{
+				Asteroid8 -= (Asteroid8 - XWing) * speed * dt;
+				CheckCollision(missileView, Asteroid8);
+				if (CheckCollision(missileView, Asteroid8) == true)
+				{
+					renderAsteroid8 = false;
+				}
+			}
+
+			if (getMagnitude(XWing, Asteroid8) < 10)
+			{
+				renderAsteroid8 = false;
+			}
+
+			if (getMagnitude(XWing, Asteroid9) > 1)
+			{
+				Asteroid9 -= (Asteroid9 - XWing) * speed * dt;
+				CheckCollision(missileView, Asteroid9);
+				if (CheckCollision(missileView, Asteroid9) == true)
+				{
+					renderAsteroid9 = false;
+				}
+			}
+
+			if (getMagnitude(XWing, Asteroid9) < 10)
+			{
+				renderAsteroid9 = false;
+			}
+
+			if (getMagnitude(XWing, Asteroid10) > 1)
+			{
+				Asteroid10 -= (Asteroid10 - XWing) * speed * dt;
+				CheckCollision(missileView, Asteroid10);
+				if (CheckCollision(missileView, Asteroid10) == true)
+				{
+					renderAsteroid10 = false;
+				}
+			}
+
+			if (getMagnitude(XWing, Asteroid10) < 10)
+			{
+				renderAsteroid10 = false;
+			}
+		}
+
 }
+
+bool SceneGalaxy::CheckAsteroidStartWave()
+{
+	if (renderAsteroid == false && renderAsteroid2 == false && renderAsteroid3 == false)
+		return true;
+	return false;
+}
+
+bool SceneGalaxy::CheckAsteroidWave1()
+{	
+	if (renderAsteroid4 == false && renderAsteroid5 == false && renderAsteroid6 == false)
+		return true;
+	return false;
+}
+
+bool SceneGalaxy::CheckAsteroidWave2()
+{
+	if (renderAsteroid7 == false && renderAsteroid8 == false && renderAsteroid9 == false && renderAsteroid10 == false)
+		return true;
+	return false;
+}
+
+//Asteroid
+
+//Formula
 
 bool SceneGalaxy::CheckCollision(Vector3 A, Vector3 B)
 {
-	float x = 15.f, y = 15.f, z = 15.f;
+	float x = 10.f, y = 10.f, z = 10.f;
 	if (A.x + 10 > B.x - x && A.x + 10 < B.x + x
 		&& A.y + 10 > B.y - y && A.y + 10 < B.y + y
 		&& A.z + 10> B.z - z && A.z + 10 < B.z + z)
@@ -315,6 +408,8 @@ int SceneGalaxy::getMagnitude(Vector3 A, Vector3 B)
 	int magnitude = totalX + totalY + totalZ;
 	return sqrt(magnitude);
 }
+
+//Formula
 
 void SceneGalaxy::Update(double dt)
 {
@@ -407,12 +502,17 @@ void SceneGalaxy::Update(double dt)
 	}
 	//
 	MovingAsteroid(dt);
+	CutScene(dt);
+
+	std::cout << CheckAsteroidStartWave() << CheckAsteroidWave1() << CheckAsteroidWave2() << std::endl;
 
 	camPosX = camera.position.x;
 	camPosY = camera.position.y;
 	camPosz = camera.position.z;
 	
 } 
+
+//Lighting
 
 void SceneGalaxy::lighting()
 {
@@ -460,6 +560,10 @@ void SceneGalaxy::lighting2()
 	}
 
 }
+
+//Lighting
+
+//Render Functions
 
 void SceneGalaxy::renderMesh(Mesh *mesh, bool enableLight)
 {
@@ -638,6 +742,10 @@ void SceneGalaxy::Render()
 
 }
 
+//Render Functions
+
+//Rendering 
+
 void SceneGalaxy::RenderXwing()
 {
 	modelStack.PushMatrix();
@@ -755,7 +863,7 @@ void SceneGalaxy::RenderMissile()
 			modelStack.PushMatrix();
 			missilePos = missile.Capacity[i].getPositionOfMissile();
 			modelStack.Translate((missilePos.x) , (missilePos.y), (missilePos.z));
-			modelStack.Scale(2.f, 2.f, 2.f);
+			modelStack.Scale(4.f, 4.f, 4.f);
 			modelStack.Rotate(rotateXWing, 0, 0, 1);
 			renderMesh(meshList[GEO_MISSILE], false);
 			modelStack.PopMatrix();
@@ -815,10 +923,18 @@ void SceneGalaxy::RenderSkybox()
 	modelStack.PopMatrix();
 }
 
+//Rendering
+
+void SceneGalaxy::CutScene(double dt)
+{
+	if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == true && CheckAsteroidWave2() == true)
+	{
+		camera.Init(Vector3(-100, 570, -200), Vector3(0, 500, 0), Vector3(0, 1, 0));
+	}
+}
+
 void SceneGalaxy::Exit()
 {
 	glDeleteVertexArrays(1, &m_vertexArrayID);
 	glDeleteProgram(m_programID);
 }
-
-

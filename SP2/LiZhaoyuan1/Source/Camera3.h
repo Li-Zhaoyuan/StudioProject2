@@ -28,6 +28,7 @@ public:
 	virtual void SJUpdate(double dt, float bounds);
 	virtual void Reset();
 
+	
 	void XWingCamera(double dt, float bounds);
 	void UpdateCollision(float bounds, double dt);
 
