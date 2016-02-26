@@ -48,6 +48,7 @@ public:
 	bool OnGround();
 
 	bool jump = false;
+	bool wherecube = true;
 
 	float rotateChar;
 	float translateChar;
@@ -57,6 +58,7 @@ public:
 	float gravity;
 	float acceleration;
 	float speed;
+
 };
 
 #endif
