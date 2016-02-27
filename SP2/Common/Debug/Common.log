@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+﻿Build started 26/2/2016 3:42:26 PM.
+     1>Project "E:\School stuff\2015S2\Computer Graphics Project\SP2\Common\Common.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         E:\Programs\Visual Studio 2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\MatrixStack.cpp Source\Mtx44.cpp Source\timer.cpp Source\Vector3.cpp
+         Vector3.cpp
+         timer.cpp
+         Mtx44.cpp
+         MatrixStack.cpp
+         Generating Code...
+       Lib:
+         E:\Programs\Visual Studio 2013\VC\bin\Lib.exe /OUT:"E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\Common.lib" /NOLOGO Debug\MatrixStack.obj
+         Debug\Mtx44.obj
+         Debug\timer.obj
+         Debug\Vector3.obj
+         Common.vcxproj -> E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\Common.lib
+     1>Done Building Project "E:\School stuff\2015S2\Computer Graphics Project\SP2\Common\Common.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.64
+=======
 ﻿Build started 2/26/2016 4:32:30 PM.
      1>Project "C:\Users\n1507\Desktop\SP2_1\SP2\Common\Common.vcxproj" on node 2 (Build target(s)).
      1>Lib:
@@ -7,3 +29,4 @@
 Build succeeded.
 
 Time Elapsed 00:00:00.03
+>>>>>>> 5f48918c667fd084e034a020d84061ace62faff5

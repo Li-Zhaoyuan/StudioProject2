@@ -143,8 +143,8 @@ void SceneMun::Init()
 
 	//Initialize camera settings
 	camera.Init(Vector3(-49, 0, -39), Vector3(-48, 0, -39), Vector3(0, 1, 0));
-	camera.minimapcoords.y = 55;
-	camera.minimapcoords.x = 75;
+	camera.minimapcoords.y = 59.9f;
+	camera.minimapcoords.x = 78.9f;
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
 
 	meshList[GEO_CUBE] = MeshBuilder::GenerateCube("reference", Color(0, 1, 0));
