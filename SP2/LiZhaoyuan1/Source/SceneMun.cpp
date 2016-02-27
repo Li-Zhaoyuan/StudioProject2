@@ -149,8 +149,8 @@ void SceneMun::Init()
 
 	meshList[GEO_CUBE] = MeshBuilder::GenerateCube("reference", Color(0, 1, 0));
 
-	meshList[GEO_QUAD] = MeshBuilder::GenerateQuad("quad", Color(1, 1, 1));
-
+	meshList[GEO_QUAD] = MeshBuilder::GenerateQuad("quad", Color(1, 0, 1));
+	meshList[GEO_QUAD]->textureID = LoadTGA("Image//Textbox.tga");
 	//Skybox
 	meshList[GEO_MUNFRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
 	meshList[GEO_MUNFRONT]->textureID = LoadTGA("Image//MunFront.tga");
@@ -411,11 +411,11 @@ void SceneMun::Update(double dt)
 	static int rotateDir = 1;
 	static int rotateDirLimb = 1;
 	static int translateDir = 1;
-	if (rotateAngle * rotateDir > 5)
+	if (rotateAngle * rotateDir > 30)
 	{
 		rotateDir = -rotateDir;
 	}
-	rotateAngle += (float)(rotateDir * 20 * dt);
+	rotateAngle += (float)(rotateDir * 100 * dt);
 
 	if (rotateLimbs * rotateDirLimb > 30)
 	{
@@ -732,32 +732,12 @@ void SceneMun::Render()
 	}
 	if ((((interact >> REPAIRED) & 1) > 0))
 	{
-		if (hoverheight < 5)
-		{
-			modelStack.PushMatrix();
-			modelStack.Translate(planecoord.x, planecoord.y + hoverheight, planecoord.z);
-			modelStack.Scale(2.2f, 2.2f, 2.2f);
-			renderMesh(meshList[GEO_PLANE], true);
-			modelStack.PopMatrix();
-		}
-		else if (hoverheight >= 5 && rotateplane < 180)
-		{
-			modelStack.PushMatrix();
-			modelStack.Translate(planecoord.x, planecoord.y + hoverheight, planecoord.z);
-			modelStack.Scale(2.2f, 2.2f, 2.2f);
-			modelStack.Rotate(rotateplane, 0, 1, 0);
-			renderMesh(meshList[GEO_PLANE_TAKEOFF], true);
-			modelStack.PopMatrix();
-		}
-		else if (rotateplane >= 180)
-		{
-			modelStack.PushMatrix();
-			modelStack.Translate(planecoord.x, planecoord.y + hoverheight, planecoord.z - translateplane);
-			modelStack.Scale(2.2f, 2.2f, 2.2f);
-			modelStack.Rotate(rotateplane, 0, 1, 0);
-			renderMesh(meshList[GEO_PLANE_TAKEOFF], true);
-			modelStack.PopMatrix();
-		}
+		modelStack.PushMatrix();
+		modelStack.Translate(planecoord.x, planecoord.y + hoverheight, planecoord.z - translateplane);
+		modelStack.Scale(2.2f, 2.2f, 2.2f);
+		modelStack.Rotate(rotateplane, 0, 1, 0);
+		renderMesh(meshList[GEO_PLANE_TAKEOFF], true);
+		modelStack.PopMatrix();
 	}
 
 	modelStack.PushMatrix();
@@ -1054,8 +1034,8 @@ void SceneMun::RenderPickaxeOnScreen()
 		viewStack.LoadIdentity(); //No need camera for ortho mode
 		modelStack.PushMatrix();
 		modelStack.LoadIdentity(); //Reset modelStack
-		modelStack.Rotate(rotateAngle, 0, 0, 1);
 		modelStack.Translate(60, 10, -5);
+		modelStack.Rotate(rotateAngle, 0, 0, 1);
 		modelStack.Scale(6.5, 6.5, 6.5);
 		modelStack.Rotate(-90, 0, 1, 0);
 		//modelStack.Rotate(-45, 1, 0, 0);
@@ -1176,9 +1156,9 @@ void SceneMun::RenderTextBoxOnScreen()
 		modelStack.Translate(40, 10, -1);
 		/*modelStack.Rotate(45, 0, 1, 0);
 		modelStack.Rotate(45, 0, 0, 1);*/
-		modelStack.Scale(45, 15, 1);
+		modelStack.Scale(60, 60, 1);
 		modelStack.Rotate(90, 1, 0, 0);
-		renderMesh(meshList[GEO_QUAD], true);
+		renderMesh(meshList[GEO_QUAD], false);
 		projectionStack.PopMatrix();
 		viewStack.PopMatrix();
 		modelStack.PopMatrix();
@@ -1201,9 +1181,9 @@ void SceneMun::RenderTextBoxOnScreen()
 		modelStack.Translate(40, 10, -1);
 		/*modelStack.Rotate(45, 0, 1, 0);
 		modelStack.Rotate(45, 0, 0, 1);*/
-		modelStack.Scale(45, 15, 1);
+		modelStack.Scale(60, 60, 1);
 		modelStack.Rotate(90, 1, 0, 0);
-		renderMesh(meshList[GEO_QUAD], true);
+		renderMesh(meshList[GEO_QUAD], false);
 		projectionStack.PopMatrix();
 		viewStack.PopMatrix();
 		modelStack.PopMatrix();
@@ -1227,9 +1207,9 @@ void SceneMun::RenderTextBoxOnScreen()
 		modelStack.Translate(40, 10, -1);
 		/*modelStack.Rotate(45, 0, 1, 0);
 		modelStack.Rotate(45, 0, 0, 1);*/
-		modelStack.Scale(45, 15, 1);
+		modelStack.Scale(60, 60, 1);
 		modelStack.Rotate(90, 1, 0, 0);
-		renderMesh(meshList[GEO_QUAD], true);
+		renderMesh(meshList[GEO_QUAD], false);
 		projectionStack.PopMatrix();
 		viewStack.PopMatrix();
 		modelStack.PopMatrix();
@@ -1250,9 +1230,9 @@ void SceneMun::RenderTextBoxOnScreen()
 		modelStack.Translate(40, 10, -1);
 		/*modelStack.Rotate(45, 0, 1, 0);
 		modelStack.Rotate(45, 0, 0, 1);*/
-		modelStack.Scale(45, 15, 1);
+		modelStack.Scale(60, 60, 1);
 		modelStack.Rotate(90, 1, 0, 0);
-		renderMesh(meshList[GEO_QUAD], true);
+		renderMesh(meshList[GEO_QUAD], false);
 		projectionStack.PopMatrix();
 		viewStack.PopMatrix();
 		modelStack.PopMatrix();
@@ -1306,9 +1286,9 @@ void SceneMun::RenderInfomationOnScreen()
 		modelStack.Translate(40, 10, -1);
 		/*modelStack.Rotate(45, 0, 1, 0);
 		modelStack.Rotate(45, 0, 0, 1);*/
-		modelStack.Scale(45, 15, 1);
+		modelStack.Scale(60, 60, 1);
 		modelStack.Rotate(90, 1, 0, 0);
-		renderMesh(meshList[GEO_QUAD], true);
+		renderMesh(meshList[GEO_QUAD], false);
 		projectionStack.PopMatrix();
 		viewStack.PopMatrix();
 		modelStack.PopMatrix();
