@@ -231,5 +231,8 @@
     <Image Include="Image\Munmap.tga">
       <Filter>Image</Filter>
     </Image>
+    <Image Include="Image\snake.tga">
+      <Filter>Image</Filter>
+    </Image>
   </ItemGroup>
 </Project>
