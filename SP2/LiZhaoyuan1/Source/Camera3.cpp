@@ -508,7 +508,7 @@ bool Camera3::OBJboundaryZ(Vector3 Testvalue)
 	}
 	if (SceneMun == true)
 	{
-		if (AllGalaxyBoundaryZ(Testvalue)){ return false; }
+		if (AllMunBoundaryZ(Testvalue)){ return false; }
 	}
 	if (SceneSoraJewel == true)
 	{
