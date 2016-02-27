@@ -180,6 +180,13 @@ void SceneMun::Init()
 	meshList[GEO_PLANE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_PLANE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_PLANE]->material.kShininess = 5.f;
+
+	meshList[GEO_PLANE_TAKEOFF] = MeshBuilder::GenerateOBJ("planefortakeoff", "OBJ//XWing.obj");
+	meshList[GEO_PLANE_TAKEOFF]->textureID = LoadTGA("Image//XWing_Texture.tga");
+	meshList[GEO_PLANE_TAKEOFF]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_PLANE_TAKEOFF]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_PLANE_TAKEOFF]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_PLANE_TAKEOFF]->material.kShininess = 5.f;
 	//Houses
 	meshList[GEO_HOUSE] = MeshBuilder::GenerateOBJ("house", "OBJ//house.obj");
 	meshList[GEO_HOUSE]->textureID = LoadTGA("Image//house.tga");
@@ -329,7 +336,7 @@ void SceneMun::Update(double dt)
 	}
 	if ((((interact >> REPAIRED) & 1) > 0))
 	{
-		camera.Init(Vector3(-35, 0, -27), Vector3(-35, 0, -28), Vector3(0, 1, 0));
+		camera.Init(Vector3(-60, 100, -35), Vector3(-35, 0, -40), Vector3(0, 1, 0));
 	}
 
 	fps = (int)(1 / dt);
@@ -426,6 +433,18 @@ void SceneMun::Update(double dt)
 	}
 	translatingChar += (float)(translateDir * 2.5 * dt);
 
+	if (hoverheight < 5 && (((interact >> REPAIRED) & 1) > 0))
+	{
+		hoverheight += (float)(2.f * dt);
+	}
+	else if (hoverheight >= 5 && (((interact >> REPAIRED) & 1) > 0) && rotateplane < 180)
+	{
+		rotateplane += (float)(50.f * dt);
+	}
+	else if (rotateplane >= 180)
+	{
+		translateplane += (float)(100.f * dt);
+	}
 	npcRotate();
 	interactions();
 	camera.target;
@@ -703,11 +722,32 @@ void SceneMun::Render()
 	}
 	if ((((interact >> REPAIRED) & 1) > 0))
 	{
-		modelStack.PushMatrix();
-		modelStack.Translate(planecoord.x, planecoord.y, planecoord.z);
-		modelStack.Scale(2.2f, 2.2f, 2.2f);
-		renderMesh(meshList[GEO_PLANE], true);
-		modelStack.PopMatrix();
+		if (hoverheight < 5)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(planecoord.x, planecoord.y + hoverheight, planecoord.z);
+			modelStack.Scale(2.2f, 2.2f, 2.2f);
+			renderMesh(meshList[GEO_PLANE], true);
+			modelStack.PopMatrix();
+		}
+		else if (hoverheight >= 5 && rotateplane < 180)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(planecoord.x, planecoord.y + hoverheight, planecoord.z);
+			modelStack.Scale(2.2f, 2.2f, 2.2f);
+			modelStack.Rotate(rotateplane, 0, 1, 0);
+			renderMesh(meshList[GEO_PLANE_TAKEOFF], true);
+			modelStack.PopMatrix();
+		}
+		else if (rotateplane >= 180)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(planecoord.x, planecoord.y + hoverheight, planecoord.z - translateplane);
+			modelStack.Scale(2.2f, 2.2f, 2.2f);
+			modelStack.Rotate(rotateplane, 0, 1, 0);
+			renderMesh(meshList[GEO_PLANE_TAKEOFF], true);
+			modelStack.PopMatrix();
+		}
 	}
 
 	modelStack.PushMatrix();

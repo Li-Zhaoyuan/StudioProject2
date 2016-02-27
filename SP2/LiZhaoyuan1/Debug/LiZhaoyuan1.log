@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 ﻿Build started 26/2/2016 5:03:15 PM.
      1>Project "E:\School stuff\2015S2\Computer Graphics Project\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
+=======
+﻿Build started 2/26/2016 5:01:00 PM.
+     1>Project "C:\Users\n1507\Desktop\SP2_1\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
+>>>>>>> 5f48918c667fd084e034a020d84061ace62faff5
      1>ClCompile:
          E:\Programs\Visual Studio 2013\VC\bin\CL.exe /c /I"E:\School stuff\2015S2\Computer Graphics Project\SP2\\Common\Source" /I"E:\School stuff\2015S2\Computer Graphics Project\SP2\\glfw\include" /I"E:\School stuff\2015S2\Computer Graphics Project\SP2\\glew\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\Camera3.cpp
          Camera3.cpp
@@ -37,7 +42,11 @@
      1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(946): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
      1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(951): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
        Link:
+<<<<<<< HEAD
          E:\Programs\Visual Studio 2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\LiZhaoyuan1.exe" /INCREMENTAL /NOLOGO /LIBPATH:"E:\School stuff\2015S2\Computer Graphics Project\SP2\\glew\lib" /LIBPATH:"E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug" /LIBPATH:"E:\School stuff\2015S2\Computer Graphics Project\SP2\\glfw\lib-msvc120" glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\LiZhaoyuan1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\LiZhaoyuan1.lib" /MACHINE:X86 Debug\Application.obj
+=======
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\n1507\Desktop\SP2_1\SP2\Debug\LiZhaoyuan1.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\n1507\Desktop\SP2_1\SP2\\glew\lib /LIBPATH:C:\Users\n1507\Desktop\SP2_1\SP2\Debug /LIBPATH:"C:\Users\n1507\Desktop\SP2_1\SP2\\glfw\lib-msvc120" glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\n1507\Desktop\SP2_1\SP2\Debug\LiZhaoyuan1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\n1507\Desktop\SP2_1\SP2\Debug\LiZhaoyuan1.lib" /MACHINE:X86 Debug\Application.obj
+>>>>>>> 5f48918c667fd084e034a020d84061ace62faff5
          Debug\Camera.obj
          Debug\Camera2.obj
          Debug\Camera3.obj
@@ -56,9 +65,18 @@
          Debug\shader.obj
          Debug\SP2.obj
          Debug\Utility.obj
+<<<<<<< HEAD
          LiZhaoyuan1.vcxproj -> E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\LiZhaoyuan1.exe
      1>Done Building Project "E:\School stuff\2015S2\Computer Graphics Project\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
 
 Build succeeded.
 
 Time Elapsed 00:00:00.86
+=======
+         LiZhaoyuan1.vcxproj -> C:\Users\n1507\Desktop\SP2_1\SP2\Debug\LiZhaoyuan1.exe
+     1>Done Building Project "C:\Users\n1507\Desktop\SP2_1\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.89
+>>>>>>> 5f48918c667fd084e034a020d84061ace62faff5
