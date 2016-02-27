@@ -13,6 +13,7 @@
 
 
 #include "SP2.h"
+#include "LoadingScreen.h"
 #include "SceneMun.h"
 #include "SceneGalaxy.h"
 #include "SceneSoraJewel.h"
@@ -119,6 +120,7 @@ void Application::Run()
 	Scene *scene1 = new SceneSoraJewel();
 	Scene *scene2 = new SceneGalaxy();
 	Scene *scene3 = new SceneMun();
+	Scene *loading = new LoadingScreen();
 	currscene->Init();
 	/*scene1->Init();
 	scene2->Init();

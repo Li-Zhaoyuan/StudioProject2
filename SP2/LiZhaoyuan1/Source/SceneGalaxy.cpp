@@ -195,11 +195,13 @@ void SceneGalaxy::Init()
 void SceneGalaxy::MovingAsteroid(double dt)
 {
 	missileView = missilePos + missileTar;
-	float speed = 0.4f;
+	float speed = 0.1f;
+	CheckAsteroidStartWave();
 	CheckAsteroidWave1();
 	CheckAsteroidWave2();
+	CheckLargeAsteroid();
 
-	if (CheckAsteroidStartWave() == false && CheckAsteroidWave1() == false && CheckAsteroidWave2() == false)
+	if (CheckAsteroidStartWave() == false && CheckAsteroidWave1() == false && CheckAsteroidWave2() == false && CheckLargeAsteroid() == false)
 		{
 			if (getMagnitude(XWing, Asteroid) > 1)
 			{
@@ -249,7 +251,7 @@ void SceneGalaxy::MovingAsteroid(double dt)
 		}
 	
 		
-	if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == false && CheckAsteroidWave2() == false)
+	if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == false && CheckAsteroidWave2() == false && CheckLargeAsteroid() == false)
 		{
 
 			if (getMagnitude(XWing, Asteroid4) > 1)
@@ -299,7 +301,7 @@ void SceneGalaxy::MovingAsteroid(double dt)
 		}
 
 		
-	if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == true && CheckAsteroidWave2() == false)
+	if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == true && CheckAsteroidWave2() == false && CheckLargeAsteroid() == false)
 		{
 			if (getMagnitude(XWing, Asteroid7) > 1)
 			{
@@ -362,6 +364,17 @@ void SceneGalaxy::MovingAsteroid(double dt)
 			}
 		}
 
+	if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == true && CheckAsteroidWave2() == true && CheckLargeAsteroid() == false)
+	{
+		if (getMagnitude(XWing, LAsteroid) > 10)
+		{
+			LAsteroid -= (LAsteroid - XWing) * 0.3f * dt;
+		}
+		if (getMagnitude(XWing, LAsteroid) < 10)
+		{
+			renderAsteroidLarge = false;
+		}
+	}
 }
 
 bool SceneGalaxy::CheckAsteroidStartWave()
@@ -385,13 +398,20 @@ bool SceneGalaxy::CheckAsteroidWave2()
 	return false;
 }
 
+bool SceneGalaxy::CheckLargeAsteroid()
+{
+	if (renderAsteroidLarge == false)
+		return true;
+	return false;
+}
+
 //Asteroid
 
 //Formula
 
 bool SceneGalaxy::CheckCollision(Vector3 A, Vector3 B)
 {
-	float x = 10.f, y = 10.f, z = 10.f;
+	float x = 10.f, y = 10.f, z = 50.f;
 	if (A.x + 10 > B.x - x && A.x + 10 < B.x + x
 		&& A.y + 10 > B.y - y && A.y + 10 < B.y + y
 		&& A.z + 10> B.z - z && A.z + 10 < B.z + z)
@@ -488,8 +508,6 @@ void SceneGalaxy::Update(double dt)
 		
 	}
 
-	//
-
 
 	missile.update(dt);
 	if (Application::IsKeyPressed(VK_LBUTTON)) 
@@ -500,15 +518,14 @@ void SceneGalaxy::Update(double dt)
 			missile.Firing();
 		}
 	}
-	//
+	
 	MovingAsteroid(dt);
 	CutScene(dt);
-
-	std::cout << CheckAsteroidStartWave() << CheckAsteroidWave1() << CheckAsteroidWave2() << std::endl;
 
 	camPosX = camera.position.x;
 	camPosY = camera.position.y;
 	camPosz = camera.position.z;
+	
 	
 } 
 
@@ -752,6 +769,7 @@ void SceneGalaxy::RenderXwing()
 	modelStack.Translate(XWing.x, XWing.y, XWing.z);
 	modelStack.Rotate(180, 0, 1, 0);
 	modelStack.Rotate(rotateXWing, 0, 0, 1);
+	modelStack.Rotate(camera.rotateChar, 0, 1, 0);
 	modelStack.Scale(2.2f, 2.2f, 2.2f);
 	renderMesh(meshList[GEO_XWING], false);
 	modelStack.PopMatrix();
@@ -850,6 +868,14 @@ void SceneGalaxy::RenderAsteroid()
 		modelStack.PopMatrix();
 	}
 
+	if (renderAsteroidLarge == true)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(LAsteroid.x, LAsteroid.y, LAsteroid.z);
+		modelStack.Scale(22.2f, 22.2f, 22.2f);
+		renderMesh(meshList[GEO_ASTEROID], false);
+		modelStack.PopMatrix();
+	}
 
 }
 
@@ -864,7 +890,7 @@ void SceneGalaxy::RenderMissile()
 			missilePos = missile.Capacity[i].getPositionOfMissile();
 			modelStack.Translate((missilePos.x) , (missilePos.y), (missilePos.z));
 			modelStack.Scale(4.f, 4.f, 4.f);
-			modelStack.Rotate(rotateXWing, 0, 0, 1);
+			modelStack.Rotate(camera.rotateChar, 0, 1, 0);
 			renderMesh(meshList[GEO_MISSILE], false);
 			modelStack.PopMatrix();
 		}
@@ -927,9 +953,11 @@ void SceneGalaxy::RenderSkybox()
 
 void SceneGalaxy::CutScene(double dt)
 {
-	if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == true && CheckAsteroidWave2() == true)
+	if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == true && CheckAsteroidWave2() == true && CheckLargeAsteroid() == false)
 	{
-		camera.Init(Vector3(-100, 570, -200), Vector3(0, 500, 0), Vector3(0, 1, 0));
+		camera.Init(Vector3(100, 570, 200), Vector3(0, 500, -50), Vector3(0, 1, 0));
+		shootMissile = false;
+
 	}
 }
 

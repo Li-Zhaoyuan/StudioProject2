@@ -485,10 +485,6 @@ bool Camera3::boundaryCheckerZ(float smallx, float largex, float smallz, float l
 
 bool Camera3::OBJboundaryX(Vector3 Testvalue)
 {
-	if (SceneGalaxy == true)
-	{
-		if (AllGalaxyBoundaryX(Testvalue)){ return false; }
-	}
 	if (SceneMun == true)
 	{
 		if (AllMunBoundaryX(Testvalue)){ return false; }
@@ -502,10 +498,6 @@ bool Camera3::OBJboundaryX(Vector3 Testvalue)
 
 bool Camera3::OBJboundaryZ(Vector3 Testvalue)
 {
-	if (SceneGalaxy == true)
-	{
-		if (AllGalaxyBoundaryZ(Testvalue)){ return false; }
-	}
 	if (SceneMun == true)
 	{
 		if (AllMunBoundaryZ(Testvalue)){ return false; }
@@ -519,26 +511,6 @@ bool Camera3::OBJboundaryZ(Vector3 Testvalue)
 
 bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 {
-	if (SceneGalaxy == true)
-	{
-		if (Testvalue.y <= 100)
-		{
-			if (XZ == 1)
-			{
-				if (AllGalaxyBoundaryX(Testvalue))
-				{
-					return false;
-				}
-			}
-			else if (XZ == 2)
-			{
-				if (AllGalaxyBoundaryZ(Testvalue))
-				{
-					return false;
-				}
-			}
-		}
-	}
 	if (SceneMun == true)
 	{
 		if (Testvalue.y <= 100)
@@ -581,16 +553,6 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 		}
 	}
 	return true;
-}
-
-bool Camera3::AllGalaxyBoundaryX(Vector3 Testvalue)
-{
-	return false;
-}
-
-bool Camera3::AllGalaxyBoundaryZ(Vector3 Testvalue)
-{
-	return false;
 }
 
 bool Camera3::AllMunBoundaryX(Vector3 Testvalue)
