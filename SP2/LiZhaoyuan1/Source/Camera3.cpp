@@ -23,7 +23,7 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 	this->up = defaultUp = right.Cross(view).Normalized();
 	translateChar = 0;
 	rotateChar = 0;
-	minimapcoords = (78.f, 55.f, -1.f);
+	//minimapcoords = (78.f, 55.f, -1.f);
 	minimapsoracoords = (58.85f, 42.f, -1.f);;
 	SetCursorPos( 800 / 2, 600 / 2);
 	mass = 70;
@@ -833,8 +833,8 @@ void Camera3::SJUpdate(double dt, float bounds)
 
 	if (Application::IsKeyPressed('R'))
 	{
-		minimapcoords.x = 75;
-		minimapcoords.y = 55;
+		minimapcoords.x = 78.9;
+		minimapcoords.y = 59.9;
 		minimapsoracoords.x = 73.65f; 
 		minimapsoracoords.y = 44.f;
 		Reset();
