@@ -29,7 +29,7 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 	mass = 70;
 	Force = 1000;
 	speed = 0.f;
-	gravity = -1.f;
+	gravity = -2.f;
 }
 
 void Camera3::Update(double dt, float bounds)

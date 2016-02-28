@@ -18,6 +18,7 @@ class SceneSoraJewel : public Scene
 	enum GEOMETRY_TYPE
 	{
 		GEO_AXES,
+		GEO_QUAD,
 		GEO_LIGHTBALL,
 		GEO_TEXT,
 		GEO_SORAJEWELLEFT,
@@ -97,6 +98,7 @@ public:
 
 	void skybox();
 	void renderLast();
+	void renderText();
 	void renderNPCAnimations();
 
 	virtual void Init();
@@ -125,22 +127,25 @@ private:
 	unsigned m_programID;
 	unsigned m_parameters[U_TOTAL];
 
-	/*float rotateAngle;
-	float planet1RevAngle, planet1RotAngle, moon1RotAngle;*/
-
 	Camera3 camera;
 
-	bool endofline;
-
 	std::stringstream ssDialogue;
+	std::stringstream ssEngiDialogue;
 
 	std::string sDialogue;
+	std::string sEngiDialogue;
+	
 	std::vector<std::string> Textstuffs;
+	std::vector<std::string> TextEngi;
+
 	std::vector<std::string>::iterator position;
+	std::vector<std::string>::iterator Engipos;
 
+	bool talkwithQL;
+	bool talkwithEngi1;
+	bool talkwithEngi2;
 
-
-	int i = 1;
+	size_t i = 1;
 	float timer = 0.f;
 	bool timercheck = false;
 

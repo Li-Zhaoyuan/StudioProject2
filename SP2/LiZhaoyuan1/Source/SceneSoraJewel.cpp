@@ -155,6 +155,9 @@ void SceneSoraJewel::Init()
 
 	meshList[GEO_MAINICONSJ] = MeshBuilder::GenerateQuad("front", Color(0.f, 1.f, 0.f));
 
+	meshList[GEO_QUAD] = MeshBuilder::GenerateQuad("quad", Color(1, 0, 1));
+	meshList[GEO_QUAD]->textureID = LoadTGA("Image//Textbox.tga");
+
 	meshList[GEO_SORAJEWELFRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
 	meshList[GEO_SORAJEWELFRONT]->textureID = LoadTGA("Image//SoraJewelFront.tga");
 	meshList[GEO_SORAJEWELBACK] = MeshBuilder::GenerateQuad("back", Color(1, 1, 1));
@@ -316,10 +319,12 @@ void SceneSoraJewel::Init()
 	Quest2Done = false;
 	QuestsDone = false;
 
+	talkwithQL = false;
+
 	EmptyinHand = false;
 	BeerinHand = false;
 
-	ReadFromTxt("TextFiles//Test.txt", Textstuffs);
+	ReadFromTxt("TextFiles//Quest_Lady.txt", Textstuffs);
 	position = Textstuffs.begin();
 	sDialogue = *position;
 	ssDialogue << sDialogue[0];
@@ -337,7 +342,7 @@ void SceneSoraJewel::Update(double dt)
 {
 	camera.SJUpdate(dt, 110);
 	fps = 1 / dt;
-	if (camera.position.x >= 50 && camera.position.z >= 50 && Application::IsKeyPressed('E'))
+	if (camera.position.x >= 50 && camera.position.z >= 50 && Application::IsKeyPressed('E') && QuestsDone)
 	{
 		Gamemode::getinstance()->currentgamestate = 3;
 	}
@@ -378,6 +383,7 @@ void SceneSoraJewel::Update(double dt)
 	if (Application::IsKeyPressed('E') && (camera.position.x >= -13 && camera.position.z >= -60) && (camera.position.x <= -1 && camera.position.z <= -46))
 	{
 		Quest1 = true;
+		talkwithQL = true;
 	}
 	if (Application::IsKeyPressed('E') && Quest1 == true && (camera.position.x >= -96.2f && camera.position.z >= 45) && (camera.position.x <= -90	 && camera.position.z <= 51) && camera.position.y >= 14)
 	{
@@ -412,7 +418,74 @@ void SceneSoraJewel::Update(double dt)
 	camPosZ = camera.position.z;
 
 	Engineeranimation(dt);
-	
+
+	if (talkwithQL)
+	{
+		timer += 1 * dt;
+		if (timer >= 0.5f)
+		{
+			if (i < sDialogue.size())
+			{
+				ssDialogue << sDialogue[i];
+				i++;
+				timer = 0;
+			}
+			else if (i == sDialogue.size() && Application::IsKeyPressed(VK_LBUTTON))
+			{
+				if (position != Textstuffs.end())
+				{
+					ssDialogue.str("");
+					sDialogue = "";
+
+					sDialogue = *position;
+					ssDialogue << sDialogue[0];
+
+					timer = 0;
+					i = 1;
+					position++;
+				}
+				else
+				{
+					if (Application::IsKeyPressed(VK_LBUTTON))
+						ssDialogue.str("");
+				}
+			}
+		}
+	}
+
+	if (talkwithEngi1)
+	{
+		timer += 1 * dt;
+		if (timer >= 0.5f)
+		{
+			if (i < sEngiDialogue.size())
+			{
+				ssEngiDialogue << sEngiDialogue[i];
+				i++;
+				timer = 0;
+			}
+			else if (i == sEngiDialogue.size() && Application::IsKeyPressed(VK_LBUTTON))
+			{
+				if (position != Textstuffs.end())
+				{
+					ssEngiDialogue.str("");
+					sEngiDialogue = "";
+
+					ssEngiDialogue = *position;
+					ssDialogue << sEngiDialogue[0];
+
+					timer = 0;
+					i = 1;
+					position++;
+				}
+				else
+				{
+					if (Application::IsKeyPressed(VK_LBUTTON))
+						ssEngiDialogue.str("");
+				}
+			}
+		}
+	}
 }
 void SceneSoraJewel::Engineeranimation(float dt)
 {
@@ -521,43 +594,6 @@ void SceneSoraJewel::Engineeranimation(float dt)
 	if (Engineerpositiony >= 200 && Engineerpositiony2 >= 15.2f && engineer1maxy==true)
 	{
 		Engineerpositiony2 -= (float)(80 * dt);
-	}
-
-	if (endofline)
-	{
-		timer += 1 * dt;
-		if (timer >= 0.5f)
-		{
-			if (i < sDialogue.size())
-			{
-				ssDialogue << sDialogue[i];
-				i++;
-				timer = 0;
-			}
-			else if (i == sDialogue.size())
-			{
-				if (position != Textstuffs.end())
-				{
-					ssDialogue.str("");
-					sDialogue = "";
-
-					sDialogue = *position;
-					ssDialogue << sDialogue[0];
-
-					timer = 0;
-					i = 1;
-					position++;
-				}
-				else
-				{
-					endofline = false;
-				}
-			}
-		}
-	}
-	else
-	{
-		ssDialogue.str("");
 	}
 }
 void SceneSoraJewel::lighting()
@@ -865,16 +901,18 @@ void SceneSoraJewel::Render()
 		RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The Quest For Sora Jewel", Color(0, 1, 0), 2, 2, 10);
 	}
 
-	if (Quest1 == true && Quest2 == false && QuestsDone == false && !Application::IsKeyPressed('W') && !Application::IsKeyPressed('A') && !Application::IsKeyPressed('S') && !Application::IsKeyPressed('D'))
-	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The 1st Quest For Sora Jewel", (0, 1, 0), 5, 4, 10);
-	}
-	if (Quest2 == true && QuestsDone == false && !Application::IsKeyPressed('W') && !Application::IsKeyPressed('A') && !Application::IsKeyPressed('S') && !Application::IsKeyPressed('D'))
-	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The 2nd Quest For Sora Jewel", (0, 1, 0), 5, 4, 10);
-	}
-	RenderTextOnScreen(meshList[GEO_TEXT], ssDialogue.str(), Color(0, 1, 0), 2, 3, 10);
+	//if (Quest1 == true && Quest2 == false && QuestsDone == false && !Application::IsKeyPressed('W') && !Application::IsKeyPressed('A') && !Application::IsKeyPressed('S') && !Application::IsKeyPressed('D'))
+	//{
+	//	RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The 1st Quest For Sora Jewel", (0, 1, 0), 5, 4, 10);
+	//}
+	//if (Quest2 == true && QuestsDone == false && !Application::IsKeyPressed('W') && !Application::IsKeyPressed('A') && !Application::IsKeyPressed('S') && !Application::IsKeyPressed('D'))
+	//{
+	//	RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The 2nd Quest For Sora Jewel", (0, 1, 0), 5, 4, 10);
+	//}
+	renderText();
+	
 
+	
 	std::stringstream playerPos;
 	playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosZ;
 	std::stringstream ss;
@@ -936,6 +974,31 @@ void SceneSoraJewel::renderLast()
 		viewStack.PopMatrix();
 		modelStack.PopMatrix();
 		glEnable(GL_DEPTH_TEST);
+	}
+}
+void SceneSoraJewel::renderText()
+{
+	Mtx44 ortho;
+	glDisable(GL_DEPTH_TEST);
+	ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+	projectionStack.PushMatrix();
+	projectionStack.LoadMatrix(ortho);
+	viewStack.PushMatrix();
+	viewStack.LoadIdentity(); //No need camera for ortho mode
+	modelStack.PushMatrix();
+	modelStack.LoadIdentity(); //Reset modelStack
+	modelStack.Translate(40, 10, -1);
+	modelStack.Scale(85, 60, 1);
+	modelStack.Rotate(90, 1, 0, 0);
+	renderMesh(meshList[GEO_QUAD], false);
+	projectionStack.PopMatrix();
+	viewStack.PopMatrix();
+	modelStack.PopMatrix();
+	glEnable(GL_DEPTH_TEST);
+
+	if (talkwithQL)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], ssDialogue.str(), Color(0, 1, 0), 2.f, 5, 4);
 	}
 }
 void SceneSoraJewel::Renderengineers()
