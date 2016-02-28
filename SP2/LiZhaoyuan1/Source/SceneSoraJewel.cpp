@@ -1,5 +1,5 @@
 #include <sstream>
-
+#include <iostream>
 #include "SceneSoraJewel.h"
 #include "GL\glew.h"
 #include "GLFW\glfw3.h"
@@ -620,6 +620,7 @@ void SceneSoraJewel::Engineeranimation(float dt)
 	{
 		Engineerpositiony2 -= (float)(80 * dt);
 	}
+	interactions();
 }
 void SceneSoraJewel::lighting()
 {
@@ -1201,34 +1202,81 @@ void SceneSoraJewel::Exit()
 void SceneSoraJewel::interactions()
 {
 	tempview = (camera.target - camera.position); // your camera view
+	viewAtQuestLady = (QuestLady - camera.position);
+	viewAtEngineer = (Engineer - camera.position);
+	viewAtCommando = (Commando - camera.position);
+	viewAtKeg = (Keg - camera.position);
+	viewAtXwing = (Xwing - camera.position);
+	viewAtBeer = (Beer - camera.position);
+
+	RadiusFromQuestLady = (viewAtQuestLady - tempview).Length();//<17
+	RadiusFromEngineer = (viewAtEngineer - tempview).Length();//<15
+	RadiusFromCommando = (viewAtCommando - tempview).Length();//<15
+	RadiusFromKeg = (viewAtKeg - tempview).Length();//<15
+	RadiusFromXwing = (viewAtXwing - tempview).Length();//<15
+	RadiusFromBeer = (viewAtBeer - tempview).Length();//<7
+
+	//std::cout << RadiusFromBeer << std::endl;
 	
-	//calculate view at npc, npc coord - cam pos
-
-	/*viewAtOre = (oreCoord - camera.position);
-	viewAtLady = (worriedladyCoord - camera.position);
-	viewAtDude = (questdudeCoord - camera.position);
-	viewAtMiner = (minerandplusCoord - camera.position);
-	viewAtCrashedPlane = (crashedplaneCoord - camera.position);*/
-
-	//Get distance from npc you want to interact, length of view at npc - cam view
-	//examples lol
-	/*RadiusFromOre = (viewAtOre - tempview).Length();
-	RadiusFromLady = (viewAtLady - tempview).Length();
-	RadiusFromDude = (viewAtDude - tempview).Length();
-	RadiusFromMiner = (viewAtMiner - tempview).Length();
-	RadiusFromCrashedPlane = (viewAtCrashedPlane - tempview).Length();*/
-
-	//to interact, first fill the enum in this example will be TALKING_TO_LADY
-	/*if (RadiusFromLady < 6.0f
-		&& Application::IsKeyPressed(VK_RBUTTON))
+	if (RadiusFromQuestLady < 17.0f
+		&& Application::IsKeyPressed('E'))
 	{
-		interact |= 1 << TALKING_TO_LADY; // same as bool talkingtolady = true; assigning
+		interact |= 1 << INTERACT_QUESTLADY; 
 	}
-	else if (RadiusFromLady > 6.0f)
+	else if (RadiusFromQuestLady > 17.0f)
 	{
-		interact &= ~(1 << TALKING_TO_LADY); // same as bool talkingtolady = false; assigning
-	}*/
+		interact &= ~(1 << INTERACT_QUESTLADY); 
+	}
 
+	if (RadiusFromEngineer < 15.0f
+		&& Application::IsKeyPressed('E'))
+	{
+		interact |= 1 << INTERACT_ENGINEER;
+	}
+	else if (RadiusFromEngineer > 15.0f)
+	{
+		interact &= ~(1 << INTERACT_ENGINEER);
+	}
+
+	if (RadiusFromCommando < 15.0f
+		&& Application::IsKeyPressed('E'))
+	{
+		interact |= 1 << INTERACT_COMMANDO;
+	}
+	else if (RadiusFromCommando > 15.0f)
+	{
+		interact &= ~(1 << INTERACT_COMMANDO);
+	}
+
+	if (RadiusFromKeg < 15.0f
+		&& Application::IsKeyPressed('E'))
+	{
+		interact |= 1 << INTERACT_KEG;
+	}
+	else if (RadiusFromKeg > 15.0f)
+	{
+		interact &= ~(1 << INTERACT_KEG);
+	}
+
+	if (RadiusFromXwing < 15.0f
+		&& Application::IsKeyPressed('E'))
+	{
+		interact |= 1 << INTERACT_XWING;
+	}
+	else if (RadiusFromXwing > 15.0f)
+	{
+		interact &= ~(1 << INTERACT_XWING);
+	}
+
+	if (RadiusFromBeer < 7.0f
+		&& Application::IsKeyPressed('E'))
+	{
+		interact |= 1 << INTERACT_BEER;
+	}
+	else if (RadiusFromBeer > 7.0f)
+	{
+		interact &= ~(1 << INTERACT_BEER);
+	}
 	//use the below to render your text :V
 	//((((interact >> TALKING_TO_LADY) & 1) > 0)) // same as talkingtolady == true, Checking
 	//((((interact >> TALKING_TO_LADY) & 1) < 1)) // same as talkingtolady == false, Checking
