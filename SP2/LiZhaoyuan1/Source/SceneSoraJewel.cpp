@@ -329,6 +329,11 @@ void SceneSoraJewel::Init()
 	sDialogue = *position;
 	ssDialogue << sDialogue[0];
 
+	ReadFromTxt("TextFiles//Engineer1.txt", TextEngi);
+	Engipos = TextEngi.begin();
+	sEngiDialogue = *Engipos;
+	ssEngiDialogue << sEngiDialogue[0];
+
 	camera.SceneGalaxy = false;
 	camera.SceneMun = false;
 	camera.SceneSoraJewel = true;
@@ -399,11 +404,15 @@ void SceneSoraJewel::Update(double dt)
 		EmptyinHand = false;
 		BeerinHand = true;
 	}
-	if (Application::IsKeyPressed('E') && (camera.position.x >= -80 && camera.position.z >= -42) && (camera.position.x <= -72 && camera.position.z <= -30))
+	if (Application::IsKeyPressed('E') && BeerinHand && (camera.position.x >= -80 && camera.position.z >= -42) && (camera.position.x <= -72 && camera.position.z <= -30))
 	{
 		Quest1Done = true;
 		Quest2Done = true;
 		BeerinHand = false;
+	}
+	if (Application::IsKeyPressed('E') && !BeerinHand && (camera.position.x >= -80 && camera.position.z >= -42) && (camera.position.x <= -72 && camera.position.z <= -30))
+	{
+		talkwithEngi1 = true;
 	}
 	if (Quest1Done == true && Quest2Done == true)
 	{
@@ -447,7 +456,10 @@ void SceneSoraJewel::Update(double dt)
 				else
 				{
 					if (Application::IsKeyPressed(VK_LBUTTON))
+					{
 						ssDialogue.str("");
+						talkwithQL = false;
+					}
 				}
 			}
 		}
@@ -458,30 +470,33 @@ void SceneSoraJewel::Update(double dt)
 		timer += 1 * dt;
 		if (timer >= 0.5f)
 		{
-			if (i < sEngiDialogue.size())
+			if (j < sEngiDialogue.size())
 			{
-				ssEngiDialogue << sEngiDialogue[i];
-				i++;
+				ssEngiDialogue << sEngiDialogue[j];
+				j++;
 				timer = 0;
 			}
-			else if (i == sEngiDialogue.size() && Application::IsKeyPressed(VK_LBUTTON))
+			else if (j == sEngiDialogue.size() && Application::IsKeyPressed(VK_LBUTTON))
 			{
-				if (position != Textstuffs.end())
+				if (Engipos != TextEngi.end())
 				{
 					ssEngiDialogue.str("");
 					sEngiDialogue = "";
 
-					ssEngiDialogue = *position;
-					ssDialogue << sEngiDialogue[0];
+					sEngiDialogue = *Engipos;
+					ssEngiDialogue << sEngiDialogue[0];
 
 					timer = 0;
-					i = 1;
-					position++;
+					j = 1;
+					Engipos++;
 				}
 				else
 				{
 					if (Application::IsKeyPressed(VK_LBUTTON))
+					{
 						ssEngiDialogue.str("");
+						talkwithEngi1 = false;
+					}
 				}
 			}
 		}
@@ -978,28 +993,33 @@ void SceneSoraJewel::renderLast()
 }
 void SceneSoraJewel::renderText()
 {
-	Mtx44 ortho;
-	glDisable(GL_DEPTH_TEST);
-	ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
-	projectionStack.PushMatrix();
-	projectionStack.LoadMatrix(ortho);
-	viewStack.PushMatrix();
-	viewStack.LoadIdentity(); //No need camera for ortho mode
-	modelStack.PushMatrix();
-	modelStack.LoadIdentity(); //Reset modelStack
-	modelStack.Translate(40, 10, -1);
-	modelStack.Scale(85, 60, 1);
-	modelStack.Rotate(90, 1, 0, 0);
-	renderMesh(meshList[GEO_QUAD], false);
-	projectionStack.PopMatrix();
-	viewStack.PopMatrix();
-	modelStack.PopMatrix();
-	glEnable(GL_DEPTH_TEST);
+	if (talkwithQL || talkwithEngi1 || talkwithEngi2)
+	{
+		Mtx44 ortho;
+		glDisable(GL_DEPTH_TEST);
+		ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+		projectionStack.PushMatrix();
+		projectionStack.LoadMatrix(ortho);
+		viewStack.PushMatrix();
+		viewStack.LoadIdentity(); //No need camera for ortho mode
+		modelStack.PushMatrix();
+		modelStack.LoadIdentity(); //Reset modelStack
+		modelStack.Translate(40, 10, -1);
+		modelStack.Scale(85, 60, 1);
+		modelStack.Rotate(90, 1, 0, 0);
+		renderMesh(meshList[GEO_QUAD], false);
+		projectionStack.PopMatrix();
+		viewStack.PopMatrix();
+		modelStack.PopMatrix();
+		glEnable(GL_DEPTH_TEST);
+	}
 
 	if (talkwithQL)
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], ssDialogue.str(), Color(0, 1, 0), 2.f, 5, 4);
 	}
+	if (talkwithEngi1)
+		RenderTextOnScreen(meshList[GEO_TEXT], ssEngiDialogue.str(), Color(0, 1, 0), 2.f, 5, 4);
 }
 void SceneSoraJewel::Renderengineers()
 {

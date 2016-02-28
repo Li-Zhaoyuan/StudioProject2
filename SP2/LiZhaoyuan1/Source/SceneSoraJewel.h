@@ -146,6 +146,7 @@ private:
 	bool talkwithEngi2;
 
 	size_t i = 1;
+	size_t j = 1;
 	float timer = 0.f;
 	bool timercheck = false;
 
