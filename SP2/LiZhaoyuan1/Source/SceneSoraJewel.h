@@ -191,6 +191,9 @@ private:
 	float Engineerpositionx2, Engineerpositiony2, Engineerpositionz2, Engineerrotationy2;
 
 	MS modelStack, viewStack, projectionStack;
+
+	Vector3 QuestLady = Vector3(13, -1, -53);
+	Vector3 Engineer = Vector3(-96, 5, -40);
 };
 
 #endif

@@ -320,6 +320,8 @@ void SceneSoraJewel::Init()
 	QuestsDone = false;
 
 	talkwithQL = false;
+	talkwithEngi1 = false;
+	talkwithEngi2 = false;
 
 	EmptyinHand = false;
 	BeerinHand = false;
@@ -430,7 +432,7 @@ void SceneSoraJewel::Update(double dt)
 
 	if (talkwithQL)
 	{
-		timer += 1 * dt;
+		timer += (float)(1 * dt);
 		if (timer >= 0.5f)
 		{
 			if (i < sDialogue.size())
@@ -459,6 +461,10 @@ void SceneSoraJewel::Update(double dt)
 					{
 						ssDialogue.str("");
 						talkwithQL = false;
+						position = Textstuffs.begin();
+						sDialogue = *position;
+						ssDialogue << sDialogue[0];
+						i = 1;
 					}
 				}
 			}
@@ -467,7 +473,7 @@ void SceneSoraJewel::Update(double dt)
 
 	if (talkwithEngi1)
 	{
-		timer += 1 * dt;
+		timer += (float)(1 * dt);
 		if (timer >= 0.5f)
 		{
 			if (j < sEngiDialogue.size())
@@ -496,6 +502,10 @@ void SceneSoraJewel::Update(double dt)
 					{
 						ssEngiDialogue.str("");
 						talkwithEngi1 = false;
+						Engipos = TextEngi.begin();
+						sEngiDialogue = *Engipos;
+						ssEngiDialogue << sEngiDialogue[0];
+						j = 1;
 					}
 				}
 			}
@@ -878,7 +888,7 @@ void SceneSoraJewel::Render()
 
 	//NPC Rendering
 	modelStack.PushMatrix();
-	modelStack.Translate(13, -1, -53);
+	modelStack.Translate(QuestLady.x, QuestLady.y, QuestLady.z);
 	modelStack.Rotate(180, 0, 1, 0);
 	modelStack.Scale(2.4f, 2.4f, 2.4f);
 	renderMesh(meshList[GEO_QUESTLADY], false);
@@ -887,7 +897,7 @@ void SceneSoraJewel::Render()
 	Renderengineers();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-96, 5, -40);
+	modelStack.Translate(Engineer.x, Engineer.y, Engineer.z);
 	modelStack.Rotate(180, 0, 1, 0);
 	modelStack.Rotate(90, 0, 0, 1);
 	modelStack.Scale(2.4f, 2.4f, 2.4f);
@@ -1016,10 +1026,10 @@ void SceneSoraJewel::renderText()
 
 	if (talkwithQL)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], ssDialogue.str(), Color(0, 1, 0), 2.f, 5, 4);
+		RenderTextOnScreen(meshList[GEO_TEXT], ssDialogue.str(), Color(0, 1, 0), 2.5f, 5, 4);
 	}
 	if (talkwithEngi1)
-		RenderTextOnScreen(meshList[GEO_TEXT], ssEngiDialogue.str(), Color(0, 1, 0), 2.f, 5, 4);
+		RenderTextOnScreen(meshList[GEO_TEXT], ssEngiDialogue.str(), Color(0, 1, 0), 2.5f, 5, 4);
 }
 void SceneSoraJewel::Renderengineers()
 {
