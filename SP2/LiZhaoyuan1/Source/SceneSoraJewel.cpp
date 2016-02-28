@@ -1187,3 +1187,39 @@ void SceneSoraJewel::Exit()
 	glDeleteVertexArrays(1, &m_vertexArrayID);
 	glDeleteProgram(m_programID);
 }
+
+void SceneSoraJewel::interactions()
+{
+	tempview = (camera.target - camera.position); // your camera view
+	
+	//calculate view at npc, npc coord - cam pos
+
+	/*viewAtOre = (oreCoord - camera.position);
+	viewAtLady = (worriedladyCoord - camera.position);
+	viewAtDude = (questdudeCoord - camera.position);
+	viewAtMiner = (minerandplusCoord - camera.position);
+	viewAtCrashedPlane = (crashedplaneCoord - camera.position);*/
+
+	//Get distance from npc you want to interact, length of view at npc - cam view
+	//examples lol
+	/*RadiusFromOre = (viewAtOre - tempview).Length();
+	RadiusFromLady = (viewAtLady - tempview).Length();
+	RadiusFromDude = (viewAtDude - tempview).Length();
+	RadiusFromMiner = (viewAtMiner - tempview).Length();
+	RadiusFromCrashedPlane = (viewAtCrashedPlane - tempview).Length();*/
+
+	//to interact, first fill the enum in this example will be TALKING_TO_LADY
+	/*if (RadiusFromLady < 6.0f
+		&& Application::IsKeyPressed(VK_RBUTTON))
+	{
+		interact |= 1 << TALKING_TO_LADY; // same as bool talkingtolady = true; assigning
+	}
+	else if (RadiusFromLady > 6.0f)
+	{
+		interact &= ~(1 << TALKING_TO_LADY); // same as bool talkingtolady = false; assigning
+	}*/
+
+	//use the below to render your text :V
+	//((((interact >> TALKING_TO_LADY) & 1) > 0)) // same as talkingtolady == true, Checking
+	//((((interact >> TALKING_TO_LADY) & 1) < 1)) // same as talkingtolady == false, Checking
+}
