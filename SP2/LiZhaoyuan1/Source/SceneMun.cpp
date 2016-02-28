@@ -272,6 +272,10 @@ void SceneMun::Init()
 	meshList[GEO_CRATE]->material.kDiffuse.Set(0, 0, 0);
 	meshList[GEO_CRATE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_CRATE]->material.kShininess = 1.f;
+
+	meshList[GEO_SNAKE] = MeshBuilder::GenerateOBJ("SolidSnake", "OBJ//CharacterModel.obj");
+	meshList[GEO_SNAKE]->textureID = LoadTGA("Image//snake.tga");
+
 	//Minimaps
 	//meshList[GEO_SPHERE] = MeshBuilder::GenerateSphere("target", Color(1, 0, 0), 18, 36);
 
@@ -710,6 +714,12 @@ void SceneMun::Render()
 	modelStack.Translate(0, -5, 0);
 	modelStack.Scale(100, 100, 100);
 	renderMesh(meshList[GEO_MUNGROUND], false);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(0, 0, 0);
+	modelStack.Scale(1.f, 1.f, 1.f);
+	renderMesh(meshList[GEO_SNAKE], false);
 	modelStack.PopMatrix();
 
 	if ((((interact >> REPAIRED) & 1) < 1))

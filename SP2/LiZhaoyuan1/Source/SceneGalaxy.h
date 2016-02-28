@@ -11,6 +11,7 @@
 #include <vector>
 #include "Missile.h"
 #include <cmath>
+#include "SP2.h"
 
 
 class SceneGalaxy : public Scene
@@ -128,6 +129,7 @@ public:
 	bool CheckAsteroidStartWave();
 	bool CheckAsteroidWave1();
 	bool CheckAsteroidWave2();
+	bool CheckLargeAsteroid();
 	void CutScene(double dt);
 	virtual void Exit();
 
@@ -153,6 +155,7 @@ private:
 	bool renderAsteroid8 = true;
 	bool renderAsteroid9 = true;
 	bool renderAsteroid10 = true;
+	bool renderAsteroidLarge = true;
 	
 	Vector3 target;
 	Vector3 position;
@@ -167,6 +170,7 @@ private:
 	Vector3 Asteroid8 = Vector3(-124, 500, -609);
 	Vector3 Asteroid9 = Vector3(-40, 600, -723);
 	Vector3 Asteroid10 = Vector3(67, 578, -600);
+	Vector3 LAsteroid = Vector3(0, 700, -600);
 
 	Vector3 missilePos = Vector3(0, 0, 0);
 	Vector3 missileTar = Vector3(0, 0, 0);
@@ -195,6 +199,7 @@ private:
 	float camPosX = 0;
 	float camPosY = 0;
 	float camPosz = 0;
+	float camView = 0;
 
 	void MunInit();
 	void MunRender();

@@ -110,6 +110,9 @@
     <ClCompile Include="Source\ReadTextFiles.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\LoadingScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Application.h">
@@ -181,6 +184,9 @@
     <ClInclude Include="Source\ReadTextFile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Source\LoadingScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Image\color2.tga">
@@ -229,6 +235,9 @@
       <Filter>Image</Filter>
     </Image>
     <Image Include="Image\Munmap.tga">
+      <Filter>Image</Filter>
+    </Image>
+    <Image Include="Image\snake.tga">
       <Filter>Image</Filter>
     </Image>
   </ItemGroup>

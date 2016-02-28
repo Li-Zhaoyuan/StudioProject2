@@ -96,6 +96,7 @@
     <ClCompile Include="Source\Camera2.cpp" />
     <ClCompile Include="Source\Camera3.cpp" />
     <ClCompile Include="source\Camera4.cpp" />
+    <ClCompile Include="Source\LoadingScreen.cpp" />
     <ClCompile Include="Source\LoadOBJ.cpp" />
     <ClCompile Include="Source\LoadTGA.cpp" />
     <ClCompile Include="Source\main.cpp" />
@@ -119,6 +120,7 @@
     <ClInclude Include="source\Camera4.h" />
     <ClInclude Include="Source\CurrentGameState.h" />
     <ClInclude Include="Source\Light.h" />
+    <ClInclude Include="Source\LoadingScreen.h" />
     <ClInclude Include="Source\LoadOBJ.h" />
     <ClInclude Include="Source\LoadTGA.h" />
     <ClInclude Include="Source\Material.h" />
@@ -151,6 +153,7 @@
     <Image Include="Image\Pikachu2.tga" />
     <Image Include="Image\right.tga" />
     <Image Include="Image\shoe.tga" />
+    <Image Include="Image\snake.tga" />
     <Image Include="Image\top.tga" />
     <Image Include="Image\winebottle.tga" />
   </ItemGroup>
