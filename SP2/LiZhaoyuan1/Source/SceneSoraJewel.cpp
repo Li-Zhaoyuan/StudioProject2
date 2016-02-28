@@ -824,7 +824,7 @@ void SceneSoraJewel::Render()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-85, 19, 65);
+	modelStack.Translate(Xwing.x, Xwing.y, Xwing.z);
 	modelStack.Rotate(90, 0, 1, 0);
 	modelStack.Scale(5.f, 5.f, 5.f);
 	renderMesh(meshList[GEO_XWING], true);
@@ -862,7 +862,7 @@ void SceneSoraJewel::Render()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-50, 0, -104);
+	modelStack.Translate(Keg.x, Keg.y, Keg.z);
 	modelStack.Scale(5, 5, 5);
 	renderMesh(meshList[GEO_KEG], true);
 	modelStack.PopMatrix();
@@ -912,7 +912,7 @@ void SceneSoraJewel::Render()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-93, 13, 41);
+	modelStack.Translate(Commando.x, Commando.y, Commando.z);
 	modelStack.Rotate(90, 0, 1, 0);
 	modelStack.Scale(2.4f, 2.4f, 2.4f);
 	renderMesh(meshList[GEO_COMMANDER], false);

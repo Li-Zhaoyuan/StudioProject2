@@ -206,6 +206,9 @@ private:
 
 	Vector3 QuestLady = Vector3(13, -1, -53);
 	Vector3 Engineer = Vector3(-96, 5, -40);
+	Vector3 Commando = Vector3(-93, 13, 41);
+	Vector3 Keg = Vector3(-50, 0, -104);
+	Vector3 Xwing = Vector3(-85, 19, 65);
 };
 
 #endif
