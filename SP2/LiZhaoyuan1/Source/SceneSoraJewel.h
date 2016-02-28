@@ -92,6 +92,10 @@ class SceneSoraJewel : public Scene
 		U_TOTAL,
 	};
 
+	enum Interactions
+	{
+
+	};
 public:
 	SceneSoraJewel();
 	~SceneSoraJewel();
@@ -100,6 +104,7 @@ public:
 	void renderLast();
 	void renderText();
 	void renderNPCAnimations();
+	void interactions();
 
 	virtual void Init();
 	virtual void Update(double dt);
@@ -189,6 +194,13 @@ private:
 	bool engineer1maxy = false;
 	float Engineerrotationarmleft, Engineerrotationarmright, Engineerrotationlegleft, Engineerrotationlegright, Engineerrotationy;
 	float Engineerpositionx2, Engineerpositiony2, Engineerpositionz2, Engineerrotationy2;
+
+	Vector3 tempview;
+	/*Vector3 viewAtOre;
+	Vector3 viewAtLady;
+	Vector3 viewAtDude;
+	Vector3 viewAtMiner;
+	Vector3 viewAtCrashedPlane;*/
 
 	MS modelStack, viewStack, projectionStack;
 
