@@ -209,6 +209,7 @@ private:
 	Vector3 Commando = Vector3(-93, 13, 41);
 	Vector3 Keg = Vector3(-50, 0, -104);
 	Vector3 Xwing = Vector3(-85, 19, 65);
+	Vector3 Beer = Vector3(18, 8, -33);
 };
 
 #endif

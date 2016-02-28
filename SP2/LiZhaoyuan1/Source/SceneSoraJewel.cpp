@@ -950,7 +950,7 @@ void SceneSoraJewel::renderLast()
 	if (EmptyinHand == false && BeerinHand == false)
 	{
 		modelStack.PushMatrix();
-		modelStack.Translate(18, 8, -33);
+		modelStack.Translate(Beer.x, Beer.y, Beer.z);
 		modelStack.Rotate(-90, 0, 1, 0);
 		modelStack.Scale(1, 1, 1);
 		renderMesh(meshList[GEO_BEEREMPTY], true);
