@@ -572,9 +572,6 @@ bool Camera3::AllMunBoundaryX(Vector3 Testvalue)
 	//cave center wall
 	if (!boundaryCheckerX(-48, -40.5, 26, 45, Testvalue))
 		return true;
-	////ore
-	//if (!boundaryCheckerX(-49, -40.5, 33, 36, Testvalue))
-	//	return true;
 	//cave right wall
 	if (!boundaryCheckerX(-48, -20, 41, 48, Testvalue))
 		return true;
@@ -598,9 +595,6 @@ bool Camera3::AllMunBoundaryZ(Vector3 Testvalue)
 	//cave center wall
 	if (!boundaryCheckerZ(-48, -40.5, 26, 45, Testvalue))
 		return true;
-	////ore
-	//if (!boundaryCheckerZ(-49, -40.5, 34, 35, Testvalue))
-	//	return true;
 	//cave right wall
 	if (!boundaryCheckerZ(-48, -20, 41, 48, Testvalue))
 		return true;
@@ -609,14 +603,14 @@ bool Camera3::AllMunBoundaryZ(Vector3 Testvalue)
 
 bool Camera3::AllSoraJewelBoundaryX(Vector3 Testvalue)
 {
-	if (!boundaryCheckerX(-0.4f, 50, -79, -27, Testvalue))
+	if (!boundaryCheckerX(0.2f, 50, -78, -28, Testvalue))
 		return true;
 	return false;
 }
 
 bool Camera3::AllSoraJewelBoundaryZ(Vector3 Testvalue)
 {
-	if (!boundaryCheckerZ(-0.4f, 50, -79, -27, Testvalue))
+	if (!boundaryCheckerZ(0.2f, 50, -78, -28, Testvalue))
 		return true;
 	return false;
 }
@@ -923,7 +917,7 @@ bool Camera3::OnGround()
 {
 	if (position.y <= 25 && (position.x >= -117 && position.z >= 30) && (position.x <= -51 && position.z <= 100))
 		return true;
-	if (position.y <= 5 && (position.x >= -140 && position.z >= 20) && (position.x <= 61 && position.z <= 113))
+	if (position.y <= 5 && (position.x >= -140 && position.z >= 0) && (position.x <= 61 && position.z <= 113))
 		return true;
 	else if (position.y <= 10 && (position.x >= -140 && position.z >= -112) && (position.x <= 62 && position.z <= 0))
 		return true;
