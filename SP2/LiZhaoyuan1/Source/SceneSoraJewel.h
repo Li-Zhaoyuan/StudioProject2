@@ -94,7 +94,12 @@ class SceneSoraJewel : public Scene
 
 	enum Interactions
 	{
-
+		INTERACT_QUESTLADY,
+		INTERACT_ENGINEER,
+		INTERACT_COMMANDO,
+		INTERACT_KEG,
+		INTERACT_XWING,
+		INTERACT_BEER,
 	};
 public:
 	SceneSoraJewel();
@@ -208,7 +213,22 @@ private:
 	float Engineerrotationarmleft, Engineerrotationarmright, Engineerrotationlegleft, Engineerrotationlegright, Engineerrotationy;
 	float Engineerpositionx2, Engineerpositiony2, Engineerpositionz2, Engineerrotationy2;
 
+	int interact = 0;
+
 	Vector3 tempview;
+	Vector3 viewAtQuestLady;
+	Vector3 viewAtEngineer;
+	Vector3 viewAtCommando;
+	Vector3 viewAtKeg;
+	Vector3 viewAtXwing;
+	Vector3 viewAtBeer;
+
+	float RadiusFromQuestLady;
+	float RadiusFromEngineer;
+	float RadiusFromCommando;
+	float RadiusFromKeg;
+	float RadiusFromXwing;
+	float RadiusFromBeer;
 	/*Vector3 viewAtOre;
 	Vector3 viewAtLady;
 	Vector3 viewAtDude;
