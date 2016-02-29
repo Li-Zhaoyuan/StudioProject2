@@ -173,7 +173,7 @@ void Application::Run()
 			playmusic.musicSoraJewel();
 			loadingitonceSoraJewel += 1;
 		}
-		else if (Gamemode::getinstance()->currentgamestate == 4 && loadingitonceSoraJewel == 1)
+		else if (Gamemode::getinstance()->currentgamestate == 4 && loadingitonceSoraJewel == 2)
 		{
 			currscene = loading;
 			currscene->Init();
@@ -187,7 +187,7 @@ void Application::Run()
 				playmusic.musicGalaxy();
 				loadingitonceGalaxy += 1;
 			}
-		else if (Gamemode::getinstance()->currentgamestate == 6 && loadingitonceSoraJewel == 1)
+		else if (Gamemode::getinstance()->currentgamestate == 6 && loadingitonceMun == 1)
 		{
 			currscene = loading;
 			currscene->Init();
