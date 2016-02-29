@@ -12,6 +12,7 @@
 #include "Missile.h"
 #include <cmath>
 #include "SP2.h"
+#include "CurrentGameState.h"
 
 
 class SceneGalaxy : public Scene
