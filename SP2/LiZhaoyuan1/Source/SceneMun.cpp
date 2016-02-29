@@ -417,7 +417,7 @@ void SceneMun::Update(double dt)
 	{
 		ssWLady.str("");
 		Ladypos = TextLady.begin();
-		sWLady = *QuestDudepos;
+		sWLady = *Ladypos;
 		ssWLady << sWLady[0];
 		a = 1;
 	}
@@ -633,6 +633,10 @@ void SceneMun::Update(double dt)
 	else if (rotateplane >= 180)
 	{
 		translateplane += (float)(100.f * dt);
+	}
+	if (translateplane >= 50)
+	{
+		Gamemode::getinstance()->currentgamestate = 1;
 	}
 	npcRotate();
 	interactions();

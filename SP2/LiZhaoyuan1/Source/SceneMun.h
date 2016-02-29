@@ -18,7 +18,7 @@ class for the scene at Mun
 #include "Camera3.h"
 #include "Camera4.h"
 #include "MatrixStack.h"
-
+#include "CurrentGameState.h"
 #include "ReadTextFile.h"
 
 #include <sstream>

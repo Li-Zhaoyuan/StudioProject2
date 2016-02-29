@@ -157,7 +157,11 @@ void Application::Run()
 		if (Gamemode::getinstance()->currentgamestate == 1)
 		{
 			currscene = new SP2();
-			//currscene->Init();
+			loadingitonceSoraJewel = 1;
+			loadingitonceGalaxy = 1;
+			loadingitonceMun = 1;
+			currscene->Init();
+			playmusic.musicMainMenu();
 		}
 		else if (Gamemode::getinstance()->currentgamestate == 2 && loadingitonceSoraJewel == 1)
 			{

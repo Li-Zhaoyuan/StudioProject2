@@ -35,6 +35,7 @@ public:
 	void musicSoraJewel();
 	void musicGalaxy();
 	void musicMun();
+	void musicMainMenu();
 
 	ISoundEngine* se;
 	ISoundSource* MusicSoraJewel;
