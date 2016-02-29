@@ -298,7 +298,6 @@ void SceneMun::Init()
 	camera.SceneMun = true;
 	camera.SceneSoraJewel = false;
 
-<<<<<<< HEAD
 	ReadFromTxt("TextFiles//Worried_Lady.txt", TextLady);
 	Ladypos = TextLady.begin();
 	sWLady = *Ladypos;
@@ -323,7 +322,7 @@ void SceneMun::Init()
 	textQD = false;
 	textminer1 = false;
 	textminer2 = false;
-=======
+
 	interact = 0;
 
 
@@ -361,7 +360,6 @@ void SceneMun::Init()
 	hoverheight = 0;
 	rotateplane = 0;
 	translateplane = 0;
->>>>>>> ee484254225a680199b8773ad712f99ca8449a57
 }
 
 void SceneMun::Update(double dt)
