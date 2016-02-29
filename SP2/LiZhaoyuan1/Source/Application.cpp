@@ -17,6 +17,7 @@
 #include "SceneMun.h"
 #include "SceneGalaxy.h"
 #include "SceneSoraJewel.h"
+#include "Music.h"
 GLFWwindow* m_window;
 GLFWmonitor* primary;
 const unsigned char FPS = 60; // FPS of this game
@@ -138,11 +139,13 @@ void Application::Run()
 			currscene = scene1;
 			//currscene->Init();
 			sceneischanged = true;
+			playmusic.musicSoraJewel();
 		}
 		else if (IsKeyPressed('X'))
 		{
 			currscene = scene2;
 			currscene->Init();
+			playmusic.musicGalaxy();
 		}
 		else if (IsKeyPressed('C'))
 		{
@@ -160,6 +163,7 @@ void Application::Run()
 				currscene = scene1;
 				//currscene->Init();
 				sceneischanged = true;
+				playmusic.musicSoraJewel();
 				loadingitonceSoraJewel += 1;
 		}
 		else if (Gamemode::getinstance()->currentgamestate == 3 && loadingitonceGalaxy == 1)
@@ -167,6 +171,7 @@ void Application::Run()
 				currscene = scene2;
 				//currscene->Init();
 				sceneischanged = true;
+				playmusic.musicGalaxy();
 				loadingitonceGalaxy += 1;
 			}
 		else if (Gamemode::getinstance()->currentgamestate == 4 && loadingitonceMun==1)

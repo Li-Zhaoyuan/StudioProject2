@@ -322,9 +322,11 @@ void SceneSoraJewel::Init()
 	talkwithQL = false;
 	talkwithEngi1 = false;
 	talkwithEngi2 = false;
+	talkwithCommando = false;
 
 	EmptyinHand = false;
 	BeerinHand = false;
+	givenBeer = false;
 
 	ReadFromTxt("TextFiles//Quest_Lady.txt", Textstuffs);
 	position = Textstuffs.begin();
@@ -335,6 +337,16 @@ void SceneSoraJewel::Init()
 	Engipos = TextEngi.begin();
 	sEngiDialogue = *Engipos;
 	ssEngiDialogue << sEngiDialogue[0];
+
+	ReadFromTxt("TextFiles//Engineer2.txt", TextEngi2);
+	Engi2pos = TextEngi2.begin();
+	sEngiDialogue2 = *Engi2pos;
+	ssEngiDialogue2 << sEngiDialogue2[0];
+
+	ReadFromTxt("TextFiles//Commando.txt", TextCommando);
+	Commandopos = TextCommando.begin();
+	sCommandoDialogue = *Commandopos;
+	ssCommandoDialogue << sCommandoDialogue[0];
 
 	camera.SceneGalaxy = false;
 	camera.SceneMun = false;
@@ -392,9 +404,10 @@ void SceneSoraJewel::Update(double dt)
 		Quest1 = true;
 		talkwithQL = true;
 	}
-	if (Application::IsKeyPressed('E') && Quest1 == true && (camera.position.x >= -96.2f && camera.position.z >= 45) && (camera.position.x <= -90	 && camera.position.z <= 51) && camera.position.y >= 14)
+	if (Application::IsKeyPressed('E') && Quest1 == true && (camera.position.x >= -96.2f && camera.position.z >= 45) && (camera.position.x <= -90 && camera.position.z <= 51) && camera.position.y >= 14)
 	{
 		Quest2 = true;
+		talkwithCommando = true;
 	}
 	if (Application::IsKeyPressed('E') && Quest2 == true && (camera.position.x >= 13 && camera.position.z >= -27) && (camera.position.x <= 20 && camera.position.z <= -20))
 	{
@@ -408,11 +421,13 @@ void SceneSoraJewel::Update(double dt)
 	}
 	if (Application::IsKeyPressed('E') && BeerinHand && (camera.position.x >= -80 && camera.position.z >= -42) && (camera.position.x <= -72 && camera.position.z <= -30))
 	{
+		talkwithEngi2 = true;
 		Quest1Done = true;
 		Quest2Done = true;
 		BeerinHand = false;
+		givenBeer = true;
 	}
-	if (Application::IsKeyPressed('E') && !BeerinHand && (camera.position.x >= -80 && camera.position.z >= -42) && (camera.position.x <= -72 && camera.position.z <= -30))
+	if (Application::IsKeyPressed('E') && !givenBeer && (camera.position.x >= -80 && camera.position.z >= -42) && (camera.position.x <= -72 && camera.position.z <= -30))
 	{
 		talkwithEngi1 = true;
 	}
@@ -429,7 +444,7 @@ void SceneSoraJewel::Update(double dt)
 	camPosZ = camera.position.z;
 
 	Engineeranimation(dt);
-
+	//Quest Lady conversation
 	if (talkwithQL)
 	{
 		timer += (float)(1 * dt);
@@ -470,7 +485,7 @@ void SceneSoraJewel::Update(double dt)
 			}
 		}
 	}
-
+	//Conversation with Engi before giving his beer
 	if (talkwithEngi1)
 	{
 		timer += (float)(1 * dt);
@@ -506,6 +521,88 @@ void SceneSoraJewel::Update(double dt)
 						sEngiDialogue = *Engipos;
 						ssEngiDialogue << sEngiDialogue[0];
 						j = 1;
+					}
+				}
+			}
+		}
+	}
+
+	if (talkwithEngi2)
+	{
+		timer += (float)(1 * dt);
+		if (timer >= 0.5f)
+		{
+			if (k < sEngiDialogue2.size())
+			{
+				ssEngiDialogue2 << sEngiDialogue2[k];
+				k++;
+				timer = 0;
+			}
+			else if (k == sEngiDialogue2.size() && Application::IsKeyPressed(VK_LBUTTON))
+			{
+				if (Engi2pos != TextEngi2.end())
+				{
+					ssEngiDialogue2.str("");
+					sEngiDialogue2 = "";
+
+					sEngiDialogue2 = *Engi2pos;
+					ssEngiDialogue2 << sEngiDialogue2[0];
+
+					timer = 0;
+					k = 1;
+					Engi2pos++;
+				}
+				else
+				{
+					if (Application::IsKeyPressed(VK_LBUTTON))
+					{
+						ssEngiDialogue2.str("");
+						talkwithEngi2 = false;
+						Engi2pos = TextEngi2.begin();
+						sEngiDialogue2 = *Engi2pos;
+						ssEngiDialogue2 << sEngiDialogue2[0];
+						k = 1;
+					}
+				}
+			}
+		}
+	}
+
+	if (talkwithCommando)
+	{
+		timer += (float)(1 * dt);
+		if (timer >= 0.5f)
+		{
+			if (l < sCommandoDialogue.size())
+			{
+				ssCommandoDialogue << sCommandoDialogue[l];
+				l++;
+				timer = 0;
+			}
+			else if (l == sCommandoDialogue.size() && Application::IsKeyPressed(VK_LBUTTON))
+			{
+				if (Commandopos != TextCommando.end())
+				{
+					ssCommandoDialogue.str("");
+					sCommandoDialogue = "";
+
+					sCommandoDialogue = *Commandopos;
+					ssCommandoDialogue << sCommandoDialogue[0];
+
+					timer = 0;
+					l = 1;
+					Commandopos++;
+				}
+				else
+				{
+					if (Application::IsKeyPressed(VK_LBUTTON))
+					{
+						ssDialogue.str("");
+						talkwithCommando = false;
+						Commandopos = TextCommando.begin();
+						sCommandoDialogue = *Commandopos;
+						ssCommandoDialogue << sCommandoDialogue[0];
+						l = 1;
 					}
 				}
 			}
@@ -1004,7 +1101,7 @@ void SceneSoraJewel::renderLast()
 }
 void SceneSoraJewel::renderText()
 {
-	if (talkwithQL || talkwithEngi1 || talkwithEngi2)
+	if (talkwithQL || talkwithEngi1 || talkwithEngi2 || talkwithCommando)
 	{
 		Mtx44 ortho;
 		glDisable(GL_DEPTH_TEST);
@@ -1026,11 +1123,13 @@ void SceneSoraJewel::renderText()
 	}
 
 	if (talkwithQL)
-	{
-		RenderTextOnScreen(meshList[GEO_TEXT], ssDialogue.str(), Color(0, 1, 0), 2.5f, 5, 4);
-	}
+		RenderTextOnScreen(meshList[GEO_TEXT], ssDialogue.str(), Color(0, 1, 0), 2.3f, 4.7f, 4);
 	if (talkwithEngi1)
 		RenderTextOnScreen(meshList[GEO_TEXT], ssEngiDialogue.str(), Color(0, 1, 0), 2.5f, 5, 4);
+	if (talkwithEngi2)
+		RenderTextOnScreen(meshList[GEO_TEXT], ssEngiDialogue2.str(), Color(0, 1, 0), 2.5f, 5, 4);
+	if (talkwithCommando)
+		RenderTextOnScreen(meshList[GEO_TEXT], ssCommandoDialogue.str(), Color(0, 1, 0), 2.5f, 5, 4);
 }
 void SceneSoraJewel::Renderengineers()
 {
