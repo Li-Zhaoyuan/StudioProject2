@@ -69,6 +69,7 @@ class SceneGalaxy : public Scene
 		GEO_PROTAGANIST,
 		GEO_CAVE,
 		GEO_MISSILE,
+		GEO_BLACKSCREEN,
 		NUM_GEOMETRY,
 	};
 
@@ -157,6 +158,8 @@ private:
 	bool renderAsteroid9 = true;
 	bool renderAsteroid10 = true;
 	bool renderAsteroidLarge = true;
+	bool renderXWing = true;
+	bool renderSkybox = true;
 	
 	Vector3 target;
 	Vector3 position;

@@ -356,14 +356,13 @@ void SceneSoraJewel::Init()
 	Engineerrotationy = 280;
 	Engineerpositionx2 = -65, Engineerpositiony2 = 100, Engineerpositionz2 = 56,Engineerrotationy2=180.f;
 }
-
 void SceneSoraJewel::Update(double dt)
 {
 	camera.SJUpdate(dt, 110);
 	fps = 1 / dt;
 	if (camera.position.x >= 50 && camera.position.z >= 50 && Application::IsKeyPressed('E') && QuestsDone)
 	{
-		Gamemode::getinstance()->currentgamestate = 3;
+		Gamemode::getinstance()->currentgamestate = 4;
 	}
 	if (Application::IsKeyPressed('1')) //enable back face culling
 		glEnable(GL_CULL_FACE);
@@ -447,7 +446,7 @@ void SceneSoraJewel::Update(double dt)
 	//Quest Lady conversation
 	if (talkwithQL)
 	{
-		timer += (float)(1 * dt);
+		timer += (float)(10 * dt);
 		if (timer >= 0.5f)
 		{
 			if (i < sDialogue.size())
@@ -488,7 +487,7 @@ void SceneSoraJewel::Update(double dt)
 	//Conversation with Engi before giving his beer
 	if (talkwithEngi1)
 	{
-		timer += (float)(1 * dt);
+		timer += (float)(10 * dt);
 		if (timer >= 0.5f)
 		{
 			if (j < sEngiDialogue.size())
@@ -529,7 +528,7 @@ void SceneSoraJewel::Update(double dt)
 
 	if (talkwithEngi2)
 	{
-		timer += (float)(1 * dt);
+		timer += (float)(10 * dt);
 		if (timer >= 0.5f)
 		{
 			if (k < sEngiDialogue2.size())
@@ -570,7 +569,7 @@ void SceneSoraJewel::Update(double dt)
 
 	if (talkwithCommando)
 	{
-		timer += (float)(1 * dt);
+		timer += (float)(10 * dt);
 		if (timer >= 0.5f)
 		{
 			if (l < sCommandoDialogue.size())
@@ -611,6 +610,7 @@ void SceneSoraJewel::Update(double dt)
 }
 void SceneSoraJewel::Engineeranimation(float dt)
 {
+
 	float playermovementx = 0.33f, playermovementz = 1 * 0.6f; dt = 0.04f;
 	if (QuestsDone == true)
 	{
