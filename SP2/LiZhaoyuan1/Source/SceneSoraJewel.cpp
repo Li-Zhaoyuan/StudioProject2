@@ -365,6 +365,30 @@ void SceneSoraJewel::Update(double dt)
 	{
 		Gamemode::getinstance()->currentgamestate = 4;
 	}
+
+	if (((((interact >> INTERACT_XWING) & 1) > 0)) && QuestsDone)
+	{
+		cutscene = true;
+	}
+
+	if (cutscene)
+	{
+		camera.position.x = -20;
+		camera.position.y = 9;
+		camera.position.z = -109;
+		camera.target.x = -20;
+		camera.target.y = 12;
+		camera.target.z = 1;
+		camera.up.y = 1;
+		if (Xwing.y < 35)
+			Xwing.y += (float)(3 * dt);
+		if (Xwing.x < 61)
+			Xwing.x += (float)(15 * dt);
+		if (Xwing.x > 60)
+		{
+			Gamemode::getinstance()->currentgamestate = 4;
+		}
+	}
 	if (Application::IsKeyPressed('1')) //enable back face culling
 		glEnable(GL_CULL_FACE);
 	if (Application::IsKeyPressed('2')) //disable back face culling
