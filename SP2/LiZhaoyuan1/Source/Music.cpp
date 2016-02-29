@@ -27,4 +27,7 @@ void music::musicGalaxy()
 
 void music::musicMun()
 {
+	se->stopAllSounds();
+	MusicMun = se->addSoundSourceFromFile("Music//calm1.mp3");
+	se->play2D(MusicMun);
 }

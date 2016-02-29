@@ -165,6 +165,7 @@ void SceneMun::Init()
 	meshList[GEO_MUNRIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1));
 	meshList[GEO_MUNRIGHT]->textureID = LoadTGA("Image//MunRight.tga");
 	meshList[GEO_MUNGROUND] = MeshBuilder::GenerateQuad("ground", Color(0.2f, 0.2f, 0.2f));
+	meshList[GEO_MUNGROUND]->textureID = LoadTGA("Image//munFloorTexture.tga");
 
 	//Objs -Xwing
 	meshList[GEO_CRASHEDPLANE] = MeshBuilder::GenerateOBJ("crashedplane", "OBJ//XWingCrash.obj");

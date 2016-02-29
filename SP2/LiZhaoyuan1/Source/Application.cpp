@@ -152,6 +152,7 @@ void Application::Run()
 			currscene = scene3;
 			//currscene->Init();
 			sceneischanged = true;
+			playmusic.musicMun();
 		}
 		if (Gamemode::getinstance()->currentgamestate == 1)
 		{
@@ -197,6 +198,7 @@ void Application::Run()
 				currscene = scene3;
 				//currscene->Init();
 				sceneischanged = true;
+				playmusic.musicMun();
 				loadingitonceMun += 1;
 			}
 		if (sceneischanged == true)
