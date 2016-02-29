@@ -1,3 +1,13 @@
+/****************************************************************************/
+/*!
+\file SceneSoraJewel.h
+\author Li Zhaoyuan, Nathan Chia Shi-Lin, Terence Tan Ming Jie, Muhammad Nurhidayat Bin Suderman
+\par email: lizhaoyuan123@hotmail.com
+\brief
+class for the scene at SoraJewel
+*/
+/****************************************************************************/
+
 #ifndef SCENESORAJEWEL_H_
 #define SCENESORAJEWEL_H_
 
@@ -13,6 +23,13 @@
 #include "ReadTextFile.h"
 #include <sstream>
 #include "Music.h"
+
+/******************************************************************************/
+/*!
+Class SceneSoraJewel:
+\brief	Defines the scene Sora Jewel and its methods
+*/
+/******************************************************************************/
 class SceneSoraJewel : public Scene
 {
 	enum GEOMETRY_TYPE

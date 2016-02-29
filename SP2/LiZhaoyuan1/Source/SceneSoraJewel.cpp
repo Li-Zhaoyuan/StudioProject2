@@ -992,15 +992,21 @@ void SceneSoraJewel::Render()
 	renderMesh(meshList[GEO_QUESTLADY], false);
 	modelStack.PopMatrix();
 
-	Renderengineers();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(Engineer.x, Engineer.y, Engineer.z);
-	modelStack.Rotate(180, 0, 1, 0);
-	modelStack.Rotate(90, 0, 0, 1);
-	modelStack.Scale(2.4f, 2.4f, 2.4f);
-	renderMesh(meshList[GEO_ENGINEER], false);
-	modelStack.PopMatrix();
+	if (QuestsDone == true)
+	{
+		Renderengineers();
+	}
+	else
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(Engineer.x, Engineer.y, Engineer.z);
+		modelStack.Rotate(180, 0, 1, 0);
+		modelStack.Rotate(90, 0, 0, 1);
+		modelStack.Scale(2.4f, 2.4f, 2.4f);
+		renderMesh(meshList[GEO_ENGINEER], false);
+		modelStack.PopMatrix();
+	}
+	
 
 	modelStack.PushMatrix();
 	modelStack.Translate(25, -1, -40);
