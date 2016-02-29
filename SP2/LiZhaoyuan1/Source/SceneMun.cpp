@@ -297,22 +297,22 @@ void SceneMun::Init()
 	camera.SceneMun = true;
 	camera.SceneSoraJewel = false;
 
-	/*boxX = 0;
-	boxZ = 0;
-	camPosX = 0;
-	camPosY = 0;
-	camPosz = 0;
+	interact = 0;
 
-	crashedplaneCoord = Vector3(-36.f, 4.9f, -34.f);
-	planecoord = Vector3(-36.f, -2.9f, -45.f);
+
+	crashedplaneCoord = Vector3(-36.f, 4.9f, -49.f);
+	planecoord = Vector3(-36.f, -2.9f, -49.f);
 	questdudehouseCoord = Vector3(33, -5, 20);
 	worriedladyhouseCoord = Vector3(20, -5, -38);
 	worriedladyCoord = Vector3(2, -4, -38);
 	questdudeCoord = Vector3(33, -4, 3);
 	minerandplusCoord = Vector3(-19, 0, 25);
 	caveCoord = Vector3(-35, -5, 35);
-	oreCoord = Vector3(-42, -2.75, 35);
-
+	oreCoord = Vector3(-42, -2.75f, 35);
+	CalefareACoord = Vector3(26, -0.9f, -21);
+	CalefareBCoord = Vector3(26, -0.9f, -10);
+	CalefareCCoord = Vector3(15, -0.9f, 25);
+	
 	worriedladytempx = 0;
 	worriedladytempz = 0;
 
@@ -328,8 +328,12 @@ void SceneMun::Init()
 
 	loadingbar = 0.01f;
 
-	mining = false;
-	isMined = false;*/
+	rotateAngle = 0;
+	
+	translatingChar = 0;
+	hoverheight = 0;
+	rotateplane = 0;
+	translateplane = 0;
 }
 
 

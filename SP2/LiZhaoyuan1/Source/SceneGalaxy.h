@@ -1,3 +1,13 @@
+/****************************************************************************/
+/*!
+\file SceneGalaxy.h
+\author Li Zhaoyuan, Nathan Chia Shi-Lin, Terence Tan Ming Jie, Muhammad Nurhidayat Bin Suderman
+\par email: lizhaoyuan123@hotmail.com
+\brief
+class for the scene at Galaxy
+*/
+/****************************************************************************/
+
 #ifndef SceneGalaxy_H_
 #define SceneGalaxy_H_
 
@@ -14,6 +24,12 @@
 #include "SP2.h"
 #include "CurrentGameState.h"
 
+/******************************************************************************/
+/*!
+Class SceneGalaxy:
+\brief	Defines the scene Galaxy and its methods
+*/
+/******************************************************************************/
 
 class SceneGalaxy : public Scene
 {

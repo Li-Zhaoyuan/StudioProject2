@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file SceneMun.h
+\author Li Zhaoyuan
+\par email: lizhaoyuan123@hotmail.com
+\brief
+class for the scene while Loading
+*/
+/****************************************************************************/
 #ifndef LOADINGSCREEN_H_
 #define LOADINGSCREEN_H_
 
