@@ -358,7 +358,8 @@ void SceneSoraJewel::Init()
 }
 void SceneSoraJewel::Update(double dt)
 {
-	camera.SJUpdate(dt, 60, -140, -110, 110);
+	if (!cutscene)
+		camera.SJUpdate(dt, 60, -140, -110, 110);
 	fps = 1 / dt;
 
 	if (camera.position.x >= 50 && camera.position.z >= 50 && Application::IsKeyPressed('E') && QuestsDone)
@@ -373,13 +374,7 @@ void SceneSoraJewel::Update(double dt)
 
 	if (cutscene)
 	{
-		camera.position.x = -20;
-		camera.position.y = 9;
-		camera.position.z = -109;
-		camera.target.x = -20;
-		camera.target.y = 12;
-		camera.target.z = 1;
-		camera.up.y = 1;
+		camera.Init(Vector3(-20, 9, -109), Vector3(-20, 12, 1), Vector3(0, 1, 0));
 		if (Xwing.y < 35)
 			Xwing.y += (float)(3 * dt);
 		if (Xwing.x < 61)
