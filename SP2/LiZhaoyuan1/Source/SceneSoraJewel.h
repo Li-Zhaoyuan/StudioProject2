@@ -141,22 +141,34 @@ private:
 	
 	std::stringstream ssDialogue;
 	std::stringstream ssEngiDialogue;
-
+	std::stringstream ssEngiDialogue2;
+	std::stringstream ssCommandoDialogue;
+	
 	std::string sDialogue;
 	std::string sEngiDialogue;
+	std::string sEngiDialogue2;
+	std::string sCommandoDialogue;
 	
 	std::vector<std::string> Textstuffs;
 	std::vector<std::string> TextEngi;
+	std::vector<std::string> TextEngi2;
+	std::vector<std::string> TextCommando;
 
 	std::vector<std::string>::iterator position;
 	std::vector<std::string>::iterator Engipos;
+	std::vector<std::string>::iterator Engi2pos;
+	std::vector<std::string>::iterator Commandopos;
 
 	bool talkwithQL;
 	bool talkwithEngi1;
 	bool talkwithEngi2;
+	bool talkwithCommando;
 
 	size_t i = 1;
 	size_t j = 1;
+	size_t k = 1;
+	size_t l = 1;
+
 	float timer = 0.f;
 	bool timercheck = false;
 
@@ -189,7 +201,8 @@ private:
 
 	bool TextQ1Activated;
 	bool TextQ2Activated;
-
+	
+	bool givenBeer;
 	bool EmptyinHand;
 	bool BeerinHand;
 
