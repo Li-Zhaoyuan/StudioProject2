@@ -526,7 +526,7 @@ void SceneSoraJewel::Update(double dt)
 			}
 		}
 	}
-
+	//After Giving beer
 	if (talkwithEngi2)
 	{
 		timer += (float)(1 * dt);
@@ -567,7 +567,7 @@ void SceneSoraJewel::Update(double dt)
 			}
 		}
 	}
-
+	//To activate Quest 2
 	if (talkwithCommando)
 	{
 		timer += (float)(1 * dt);
