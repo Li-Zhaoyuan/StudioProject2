@@ -191,9 +191,9 @@ private:
 
 	float boxX = 0;
 	float boxZ = 0;
-	float camPosX = 0;
-	float camPosY = 0;
-	float camPosZ = 0;
+	int camPosX = 0;
+	int camPosY = 0;
+	int camPosZ = 0;
 
 	float rotateGlobeY = 0;
 

@@ -542,10 +542,28 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 				{
 					return false;
 				}
-			}
+			} 
 			else if (XZ == 2)
 			{
 				if (AllSoraJewelBoundaryZ(Testvalue))
+				{
+					return false;
+				}
+			}
+		}
+
+		if (Testvalue.y <= 7)
+		{
+			if (XZ == 1)
+			{
+				if (!boundaryCheckerX(-110, 59, -1, 0, Testvalue))
+				{
+					return false;
+				}
+			}
+			else if (XZ == 2)
+			{
+				if (!boundaryCheckerZ(-110, 59, -1, 0, Testvalue))
 				{
 					return false;
 				}
@@ -603,22 +621,22 @@ bool Camera3::AllMunBoundaryZ(Vector3 Testvalue)
 
 bool Camera3::AllSoraJewelBoundaryX(Vector3 Testvalue)
 {
-<<<<<<< HEAD
 	if (!boundaryCheckerX(0.2f, 50, -78, -28, Testvalue))
-=======
-	if (!boundaryCheckerX(-0.4, 50, -79, -27, Testvalue))
->>>>>>> bed9f395d3b0ab0a1279c20d4f548bd00a63a888
+		return true;
+	if (!boundaryCheckerX(-57, -43, -111, -97, Testvalue))
+		return true;
+	if (!boundaryCheckerX(-111, -75, -111, -85, Testvalue))
 		return true;
 	return false;
 }
 
 bool Camera3::AllSoraJewelBoundaryZ(Vector3 Testvalue)
 {
-<<<<<<< HEAD
 	if (!boundaryCheckerZ(0.2f, 50, -78, -28, Testvalue))
-=======
-	if (!boundaryCheckerZ(-0.4, 50, -79, -27, Testvalue))
->>>>>>> bed9f395d3b0ab0a1279c20d4f548bd00a63a888
+		return true;
+	if (!boundaryCheckerZ(-57, -43, -111, -97, Testvalue))
+		return true;
+	if (!boundaryCheckerZ(-111, -75, -111, -85, Testvalue))
 		return true;
 	return false;
 }

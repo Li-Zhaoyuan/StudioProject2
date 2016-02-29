@@ -179,7 +179,7 @@ void SceneGalaxy::Init()
 
 
 	//Initialize camera settings
-	camera.Init(Vector3(0, 500, 1), Vector3(0, 500, -20), Vector3(0, 1, 0));
+	camera.Init(Vector3(0, 500, 0), Vector3(0, 500, -600), Vector3(0, 1, 0));
 
 
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
@@ -1209,7 +1209,6 @@ void SceneGalaxy::CutScene(double dt)
 	{
 		camera.Init(Vector3(100, 570, 200), Vector3(0, 500, -50), Vector3(0, 1, 0));
 		shootMissile = false;
-
 	}
 
 	if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == true && CheckAsteroidWave2() == true && CheckLargeAsteroid() == true)

@@ -359,7 +359,7 @@ void SceneSoraJewel::Init()
 void SceneSoraJewel::Update(double dt)
 {
 	camera.SJUpdate(dt, 110);
-	fps = 1 / dt;
+	fps = (int)(1 / dt);
 	if (camera.position.x >= 50 && camera.position.z >= 50 && Application::IsKeyPressed('E') && QuestsDone)
 	{
 		Gamemode::getinstance()->currentgamestate = 4;
@@ -438,9 +438,9 @@ void SceneSoraJewel::Update(double dt)
 	if (rotateGlobeY >= 360)
 		rotateGlobeY = 0;
 
-	camPosX = camera.position.x;
-	camPosY = camera.position.y;
-	camPosZ = camera.position.z;
+	camPosX = (int)camera.position.x;
+	camPosY = (int)camera.position.y;
+	camPosZ = (int)camera.position.z;
 
 	Engineeranimation(dt);
 	//Quest Lady conversation
