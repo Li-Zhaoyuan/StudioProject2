@@ -668,14 +668,10 @@ void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minb
 
 		Vector3 Testvalue;
 		Testvalue = (position + right * dt * -CAMERA_SPEED);
-
-<<<<<<< HEAD
 		if (position.x - (right.x * (float)(CAMERA_SPEED * dt)) > minboundsx
 			&& position.x - (right.x * (float)(CAMERA_SPEED * dt)) < maxboundsx
 			&& OBJboundaryX(Testvalue) == true)
-=======
-		if ((position + right * dt * -CAMERA_SPEED).x < bounds && (position + right * dt * -CAMERA_SPEED).x > -bounds && OBJboundaryX(Testvalue) == true)
->>>>>>> ad8d79f1b92155eb5a3ca96453af75d758bffe8f
+		if ((position + right * dt * -CAMERA_SPEED).x < maxboundsx && (position + right * dt * -CAMERA_SPEED).x > minboundsx && OBJboundaryX(Testvalue) == true)
 		{
 			if (OBJboundaryY(Testvalue, 1) == true)
 			{
@@ -685,13 +681,10 @@ void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minb
 				minimapsoracoords.x -= (right.x*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
-<<<<<<< HEAD
 		if (position.z - (right.z * (float)(CAMERA_SPEED * dt)) > minboundsz
 			&& position.z - (right.z * (float)(CAMERA_SPEED * dt)) < maxboundsz
 			&& OBJboundaryZ(Testvalue) == true)
-=======
-		if ((position + right * dt * -CAMERA_SPEED).z < bounds && (position + right * dt * -CAMERA_SPEED).z > -bounds && OBJboundaryZ(Testvalue) == true)
->>>>>>> ad8d79f1b92155eb5a3ca96453af75d758bffe8f
+		if ((position + right * dt * -CAMERA_SPEED).z < maxboundsz && (position + right * dt * -CAMERA_SPEED).z > minboundsz && OBJboundaryZ(Testvalue) == true)
 		{
 			if (OBJboundaryY(Testvalue, 2) == true)
 			{
@@ -725,14 +718,10 @@ void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minb
 
 		Vector3 Testvalue;
 		Testvalue = (position + right * dt * CAMERA_SPEED);
-
-<<<<<<< HEAD
 		if (position.x + (right.x * (float)(CAMERA_SPEED * dt)) > minboundsx
 			&& position.x + (right.x * (float)(CAMERA_SPEED * dt)) < maxboundsx
 			&& OBJboundaryX(Testvalue) == true)
-=======
-		if ((position + right * dt * CAMERA_SPEED).x < bounds && (position + right * dt * CAMERA_SPEED).x > -bounds && OBJboundaryX(Testvalue) == true)
->>>>>>> ad8d79f1b92155eb5a3ca96453af75d758bffe8f
+		if ((position + right * dt * CAMERA_SPEED).x < maxboundsx && (position + right * dt * CAMERA_SPEED).x > minboundsx && OBJboundaryX(Testvalue) == true)
 		{
 			if (OBJboundaryY(Testvalue, 1) == true)
 			{
@@ -742,13 +731,10 @@ void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minb
 				minimapsoracoords.x += (right.x*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
-<<<<<<< HEAD
 		if (position.z + (right.z * (float)(CAMERA_SPEED * dt)) > minboundsz
 			&& position.z + (right.z * (float)(CAMERA_SPEED * dt)) < maxboundsz
 			&& OBJboundaryZ(Testvalue) == true)
-=======
-		if ((position + right * dt * CAMERA_SPEED).z < bounds && (position + right * dt * CAMERA_SPEED).z > -bounds && OBJboundaryZ(Testvalue) == true)
->>>>>>> ad8d79f1b92155eb5a3ca96453af75d758bffe8f
+		if ((position + right * dt * CAMERA_SPEED).z < maxboundsz && (position + right * dt * CAMERA_SPEED).z > minboundsz && OBJboundaryZ(Testvalue) == true)
 		{
 			if (OBJboundaryY(Testvalue, 2) == true)
 			{
@@ -789,14 +775,10 @@ void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minb
 
 		Vector3 Testvalue;
 		Testvalue = (position + view * dt * CAMERA_SPEED);
-
-<<<<<<< HEAD
 		if (position.x + (view.x * (float)(CAMERA_SPEED * dt)) > minboundsx
 			&& position.x + (view.x * (float)(CAMERA_SPEED * dt)) < maxboundsx
 			&& OBJboundaryX(Testvalue) == true)
-=======
-		if ((position + view * dt * CAMERA_SPEED).x < bounds && (position + view * dt * CAMERA_SPEED).x > -bounds && OBJboundaryX(Testvalue) == true)
->>>>>>> ad8d79f1b92155eb5a3ca96453af75d758bffe8f
+		if ((position + view * dt * CAMERA_SPEED).x < maxboundsx && (position + view * dt * CAMERA_SPEED).x > minboundsx && OBJboundaryX(Testvalue) == true)
 		{
 			if (OBJboundaryY(Testvalue, 1) == true)
 			{
@@ -806,13 +788,10 @@ void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minb
 				minimapsoracoords.x += (view.x*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
-<<<<<<< HEAD
 		if (position.z + (view.z * (float)(CAMERA_SPEED * dt)) > minboundsz
 			&& position.z + (view.z * (float)(CAMERA_SPEED * dt)) < maxboundsz
 			&& OBJboundaryZ(Testvalue) == true)
-=======
-		if ((position + view * dt * CAMERA_SPEED).z < bounds && (position + view * dt * CAMERA_SPEED).z > -bounds && OBJboundaryZ(Testvalue) == true)
->>>>>>> ad8d79f1b92155eb5a3ca96453af75d758bffe8f
+		if ((position + view * dt * CAMERA_SPEED).z < maxboundsz && (position + view * dt * CAMERA_SPEED).z > minboundsz && OBJboundaryZ(Testvalue) == true)
 		{
 			if (OBJboundaryY(Testvalue, 2) == true)
 			{
@@ -850,14 +829,10 @@ void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minb
 
 		Vector3 Testvalue;
 		Testvalue = (position + view * dt * -CAMERA_SPEED);
-
-<<<<<<< HEAD
 		if (position.x - (view.x * (float)(CAMERA_SPEED * dt)) > minboundsx
 			&& position.x - (view.x * (float)(CAMERA_SPEED * dt)) < maxboundsx
 			&& OBJboundaryX(Testvalue) == true)
-=======
-		if ((position + view * dt * -CAMERA_SPEED).x < bounds && (position + view * dt * -CAMERA_SPEED).x > -bounds && OBJboundaryX(Testvalue) == true)
->>>>>>> ad8d79f1b92155eb5a3ca96453af75d758bffe8f
+		if ((position + view * dt * -CAMERA_SPEED).x < maxboundsx && (position + view * dt * -CAMERA_SPEED).x > minboundsx && OBJboundaryX(Testvalue) == true)
 		{
 			if (OBJboundaryY(Testvalue, 1) == true)
 			{
@@ -867,13 +842,10 @@ void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minb
 				minimapsoracoords.x += (view.x*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
-<<<<<<< HEAD
 		if (position.z - (view.z * (float)(CAMERA_SPEED * dt)) > minboundsz
 			&& position.z - (view.z * (float)(CAMERA_SPEED * dt)) < maxboundsz
 			&& OBJboundaryZ(Testvalue) == true)
-=======
-		if ((position + view * dt * -CAMERA_SPEED).z < bounds && (position + view * dt * -CAMERA_SPEED).z > -bounds && OBJboundaryZ(Testvalue) == true)
->>>>>>> ad8d79f1b92155eb5a3ca96453af75d758bffe8f
+		if ((position + view * dt * -CAMERA_SPEED).z < maxboundsz && (position + view * dt * -CAMERA_SPEED).z > minboundsz && OBJboundaryZ(Testvalue) == true)
 		{
 			if (OBJboundaryY(Testvalue, 2) == true)
 			{
