@@ -1,4 +1,19 @@
+<<<<<<< HEAD
 ﻿Build started 1/3/2016 01:36:29.
+=======
+<<<<<<< HEAD
+﻿Build started 1/3/2016 12:42:04 AM.
+     1>Project "C:\Users\-\Documents\StudioProject2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         LiZhaoyuan1.vcxproj -> C:\Users\-\Documents\StudioProject2\SP2\Debug\LiZhaoyuan1.exe
+     1>Done Building Project "C:\Users\-\Documents\StudioProject2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.05
+=======
+﻿Build started 1/3/2016 01:20:18.
+>>>>>>> 7ccc9e5c57e8016aebe68be7afe333d7c1966874
      1>Project "C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
      1>Link:
          LiZhaoyuan1.vcxproj -> C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Debug\LiZhaoyuan1.exe
@@ -6,4 +21,9 @@
 
 Build succeeded.
 
+<<<<<<< HEAD
 Time Elapsed 00:00:00.17
+=======
+Time Elapsed 00:00:02.09
+>>>>>>> f913f9cc26557970ecfc15bd2ebd797605f8d2a4
+>>>>>>> 7ccc9e5c57e8016aebe68be7afe333d7c1966874

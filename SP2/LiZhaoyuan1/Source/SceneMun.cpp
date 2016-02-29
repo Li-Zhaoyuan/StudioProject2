@@ -285,7 +285,7 @@ void SceneMun::Init()
 	meshList[GEO_MINIMAP]->textureID = LoadTGA("Image//Munmap.tga");
 	
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
-	meshList[GEO_TEXT]->textureID = LoadTGA("Image//TimesNewRoman.tga");
+	meshList[GEO_TEXT]->textureID = LoadTGA("Image//minecraft.tga");
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("lightball", Color(1, 1, 1), 18, 36);
 
 	meshList[GEO_MAINICON] = MeshBuilder::GenerateCube("mainicon for map", Color(1, 0, 0));
