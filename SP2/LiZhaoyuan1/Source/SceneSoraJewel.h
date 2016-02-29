@@ -137,7 +137,7 @@ private:
 	Light light[2];
 	bool enableLight = false;
 	float LSPEED = 10.f;
-	double fps = 0;
+	int fps = 0;
 
 	void renderMesh(Mesh *mesh, bool enableLight);
 	void lighting();

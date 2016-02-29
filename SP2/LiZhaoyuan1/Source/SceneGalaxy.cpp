@@ -1,3 +1,13 @@
+/******************************************************************************/
+/*!
+\file	MatrixStack.cpp
+\author Wen Sheng Tang
+\par	email: tang_wen_sheng\@nyp.edu.sg
+\brief
+Matrix Stack to replace openGL math function
+*/
+/******************************************************************************/
+
 #include <sstream>
 
 #include "SceneGalaxy.h"
@@ -17,14 +27,38 @@
 
 Missile missile(100);
 
+/****************************************************************************/
+/*!
+\brief
+	constructor for the .cpp file
+*/
+/****************************************************************************/
 SceneGalaxy::SceneGalaxy()
 {
 }
 
+/****************************************************************************/
+/*!
+\brief
+	deconstructor for the .cpp file
+*/
+/****************************************************************************/
 SceneGalaxy::~SceneGalaxy()
 {
 }
 
+/****************************************************************************/
+/*!
+\brief
+
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneGalaxy::Init()
 {
 
@@ -206,6 +240,14 @@ void SceneGalaxy::Init()
 
 //Asteroid
 
+/****************************************************************************/
+/*!
+\brief
+	to move the Asteroids in waves towards the plane
+\param
+	double dt
+*/
+/****************************************************************************/
 void SceneGalaxy::MovingAsteroid(double dt)
 {
 	missileView = missilePos + missileTar;
@@ -393,6 +435,14 @@ void SceneGalaxy::MovingAsteroid(double dt)
 	}
 }
 
+/****************************************************************************/
+/*!
+\brief
+	boolean function to check if First Wave of Asteroids have passed
+\return
+	return whether this wave have been ran
+*/
+/****************************************************************************/
 bool SceneGalaxy::CheckAsteroidStartWave()
 {
 	if (renderAsteroid == false && renderAsteroid2 == false && renderAsteroid3 == false)
@@ -400,6 +450,14 @@ bool SceneGalaxy::CheckAsteroidStartWave()
 	return false;
 }
 
+/****************************************************************************/
+/*!
+\brief
+	boolean function to check if Second Wave of Asteroids have passed
+\return
+	return whether this wave have been ran
+*/
+/****************************************************************************/
 bool SceneGalaxy::CheckAsteroidWave1()
 {	
 	if (renderAsteroid4 == false && renderAsteroid5 == false && renderAsteroid6 == false)
@@ -407,6 +465,14 @@ bool SceneGalaxy::CheckAsteroidWave1()
 	return false;
 }
 
+/****************************************************************************/
+/*!
+\brief
+	boolean function to check if Third Wave of Asteroids have passed
+\return
+	return whether this wave have been ran
+*/
+/****************************************************************************/
 bool SceneGalaxy::CheckAsteroidWave2()
 {
 	if (renderAsteroid7 == false && renderAsteroid8 == false && renderAsteroid9 == false && renderAsteroid10 == false)
@@ -414,6 +480,14 @@ bool SceneGalaxy::CheckAsteroidWave2()
 	return false;
 }
 
+/****************************************************************************/
+/*!
+\brief
+	boolean function to check if Last Asteroid have passed
+\return
+	return whether this wave have been ran
+*/
+/****************************************************************************/
 bool SceneGalaxy::CheckLargeAsteroid()
 {
 	if (renderAsteroidLarge == false)
@@ -425,6 +499,16 @@ bool SceneGalaxy::CheckLargeAsteroid()
 
 //Formula
 
+/****************************************************************************/
+/*!
+\brief
+	check collision between 2 objects using hitbox
+\param
+	Vector of object A and B, B for the object that we are going to collide
+\return
+	return true or false whether the collision is met between 2 objects
+*/
+/****************************************************************************/
 bool SceneGalaxy::CheckCollision(Vector3 A, Vector3 B)
 {
 	float x = 20.f, y = 15.f, z = 500.f;
@@ -435,6 +519,16 @@ bool SceneGalaxy::CheckCollision(Vector3 A, Vector3 B)
 	return false;
 }
 
+/****************************************************************************/
+/*!
+\brief
+	find the magnitude between 2 objects
+\param
+	Vector of object A and B
+\return
+	the magnitude between 2 objects
+*/
+/****************************************************************************/
 int SceneGalaxy::getMagnitude(Vector3 A, Vector3 B)
 {
 	// A camera, B target
@@ -447,6 +541,14 @@ int SceneGalaxy::getMagnitude(Vector3 A, Vector3 B)
 
 //Formula
 
+/****************************************************************************/
+/*!
+\brief
+	running functions, checks, keypress in the .cpp file every frame
+\param
+	double dt
+*/
+/****************************************************************************/
 void SceneGalaxy::Update(double dt)
 {
 	camera.XWingCamera(dt, 100);
@@ -547,6 +649,18 @@ void SceneGalaxy::Update(double dt)
 
 //Lighting
 
+/****************************************************************************/
+/*!
+\brief
+	the lighting 
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneGalaxy::lighting()
 {
 	if (light[0].type == Light::LIGHT_DIRECTIONAL)
@@ -570,6 +684,18 @@ void SceneGalaxy::lighting()
 	}
 }
 
+/****************************************************************************/
+/*!
+\brief
+
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneGalaxy::lighting2()
 {
 	if (light[1].type == Light::LIGHT_DIRECTIONAL)
@@ -598,6 +724,14 @@ void SceneGalaxy::lighting2()
 
 //Render Functions
 
+/****************************************************************************/
+/*!
+\brief
+	to render meshes
+\param
+	the type of mesh and boolean for switch on or off lighting
+*/
+/****************************************************************************/
 void SceneGalaxy::renderMesh(Mesh *mesh, bool enableLight)
 {
 	Mtx44 MVP, modelView, modelView_inverse_transpose;
@@ -643,6 +777,18 @@ void SceneGalaxy::renderMesh(Mesh *mesh, bool enableLight)
 
 }
 
+/****************************************************************************/
+/*!
+\brief
+
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneGalaxy::RenderText(Mesh* mesh, std::string text, Color color)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
@@ -670,6 +816,18 @@ void SceneGalaxy::RenderText(Mesh* mesh, std::string text, Color color)
 	glEnable(GL_DEPTH_TEST);
 }
 
+/****************************************************************************/
+/*!
+\brief
+
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneGalaxy::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
@@ -713,6 +871,18 @@ void SceneGalaxy::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, 
 
 }
 
+/****************************************************************************/
+/*!
+\brief
+
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneGalaxy::Render()
 {
 	// Render VBO here
@@ -779,6 +949,18 @@ void SceneGalaxy::Render()
 
 //Rendering 
 
+/****************************************************************************/
+/*!
+\brief
+
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneGalaxy::RenderXwing()
 {
 	if (renderXWing == true)
@@ -795,6 +977,18 @@ void SceneGalaxy::RenderXwing()
 
 }
 
+/****************************************************************************/
+/*!
+\brief
+
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneGalaxy::RenderAsteroid()
 {
 	if (renderAsteroid == true)
@@ -898,6 +1092,18 @@ void SceneGalaxy::RenderAsteroid()
 
 }
 
+/****************************************************************************/
+/*!
+\brief
+
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneGalaxy::RenderMissile()
 {
 
@@ -916,6 +1122,18 @@ void SceneGalaxy::RenderMissile()
 	}
 }
 
+/****************************************************************************/
+/*!
+\brief
+
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneGalaxy::RenderSkybox()
 {
 	if (renderSkybox == true)
@@ -973,6 +1191,18 @@ void SceneGalaxy::RenderSkybox()
 
 //Rendering
 
+/****************************************************************************/
+/*!
+\brief
+
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneGalaxy::CutScene(double dt)
 {
 	if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == true && CheckAsteroidWave2() == true && CheckLargeAsteroid() == false)
@@ -988,6 +1218,18 @@ void SceneGalaxy::CutScene(double dt)
 	}
 }
 
+/****************************************************************************/
+/*!
+\brief
+
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneGalaxy::Exit()
 {
 	glDeleteVertexArrays(1, &m_vertexArrayID);
