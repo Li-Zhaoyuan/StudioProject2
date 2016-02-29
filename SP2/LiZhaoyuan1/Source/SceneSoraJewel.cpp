@@ -171,7 +171,7 @@ void SceneSoraJewel::Init()
 	meshList[GEO_SORAJEWELRIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1));
 	meshList[GEO_SORAJEWELRIGHT]->textureID = LoadTGA("Image//SoraJewelRight.tga");
 
-	meshList[GEO_SORAJEWEL] = MeshBuilder::GenerateOBJ("BASE", "OBJ//SoraJewelBase_Kaii.obj");
+	meshList[GEO_SORAJEWEL] = MeshBuilder::GenerateOBJ("BASE", "OBJ//SoraJewelBase_Kaiii.obj");
 	meshList[GEO_SORAJEWEL]->textureID = LoadTGA("Image//SoraJewelBase_Texture.tga");
 	meshList[GEO_SORAJEWEL]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_SORAJEWEL]->material.kDiffuse.Set(0.3f, 0.3f, 0.3f);
