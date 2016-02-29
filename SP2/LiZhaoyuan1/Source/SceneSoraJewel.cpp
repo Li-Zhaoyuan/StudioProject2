@@ -359,7 +359,7 @@ void SceneSoraJewel::Init()
 
 void SceneSoraJewel::Update(double dt)
 {
-	camera.SJUpdate(dt, 110);
+	camera.SJUpdate(dt, 60, -140, -110, 110);
 	fps = 1 / dt;
 	if (camera.position.x >= 50 && camera.position.z >= 50 && Application::IsKeyPressed('E') && QuestsDone)
 	{
@@ -1217,8 +1217,8 @@ void SceneSoraJewel::renderminimaptoscreen()
 	viewStack.LoadIdentity(); //No need camera for ortho mode
 	modelStack.PushMatrix();
 	modelStack.LoadIdentity(); //Reset modelStack
-	modelStack.Translate(69.85f, 48.35f, -2);
-	modelStack.Scale(20.3f, 23.3f, 10);
+	modelStack.Translate(75.f, 55.f, -2);
+	modelStack.Scale(10.f, 10.f, 10.f);
 	modelStack.Rotate(90, 1, 0, 0);
 	renderMesh(meshList[GEO_MINIMAPSJ], false);
 	projectionStack.PopMatrix();

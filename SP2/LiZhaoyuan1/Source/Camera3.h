@@ -27,7 +27,7 @@ public:
 	~Camera3();
 	virtual void Init(const Vector3& pos, const Vector3& target, const Vector3& up);
 	virtual void Update(double dt, float bounds);
-	virtual void SJUpdate(double dt, float bounds);
+	virtual void SJUpdate(double dt, float minboundsx, float maxboundsx, float minboundsz, float maxboundsz);
 	virtual void Reset();
 
 	
