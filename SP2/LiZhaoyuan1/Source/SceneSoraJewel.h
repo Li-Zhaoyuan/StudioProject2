@@ -12,7 +12,7 @@
 #include "Physics.h"
 #include "ReadTextFile.h"
 #include <sstream>
-
+#include "Music.h"
 class SceneSoraJewel : public Scene
 {
 	enum GEOMETRY_TYPE
@@ -138,7 +138,7 @@ private:
 	unsigned m_parameters[U_TOTAL];
 
 	Camera3 camera;
-
+	
 	std::stringstream ssDialogue;
 	std::stringstream ssEngiDialogue;
 

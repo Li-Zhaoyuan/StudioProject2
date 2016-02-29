@@ -957,7 +957,9 @@ void SceneGalaxy::CutScene(double dt)
 	{
 		camera.Init(Vector3(100, 570, 200), Vector3(0, 500, -50), Vector3(0, 1, 0));
 		shootMissile = false;
-
+	}
+	if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == true && CheckAsteroidWave2() == true && CheckLargeAsteroid() == true)
+	{
 	}
 }
 

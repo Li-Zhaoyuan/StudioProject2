@@ -3,7 +3,7 @@
 
 #include "timer.h"
 #include "Currentgamestate.h"
-
+#include "Music.h"
 class Application
 {
 public:
@@ -18,6 +18,6 @@ public:
 private:
 	//Declare a window object
 	StopWatch m_timer;
-
+	music playmusic;
 };
 #endif

@@ -14,12 +14,17 @@ using namespace irrklang;
 class music
 {
 public:
+	music();
+	~music();
 
 	void musicInit();
 	void musicSoraJewel();
 	void musicGalaxy();
 	void musicMun();
+
 	ISoundEngine* se;
+	ISoundSource* MusicSoraJewel;
+	ISoundSource* MusicGalaxy;
 };
 
 
