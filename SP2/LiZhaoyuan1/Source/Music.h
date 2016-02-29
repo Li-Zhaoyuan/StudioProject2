@@ -25,6 +25,7 @@ public:
 	ISoundEngine* se;
 	ISoundSource* MusicSoraJewel;
 	ISoundSource* MusicGalaxy;
+	ISoundSource* MusicMun;
 };
 
 
