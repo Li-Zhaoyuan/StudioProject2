@@ -1,3 +1,13 @@
+/****************************************************************************/
+/*!
+\file SceneSoraJewel.h
+\author Li Zhaoyuan, Nathan Chia Shi-Lin, Terence Tan Ming Jie, Muhammad Nurhidayat Bin Suderman
+\par email: lizhaoyuan123@hotmail.com
+\brief
+class for the scene at SoraJewel
+*/
+/****************************************************************************/
+
 #ifndef SCENESORAJEWEL_H_
 #define SCENESORAJEWEL_H_
 
@@ -13,6 +23,13 @@
 #include "ReadTextFile.h"
 #include <sstream>
 #include "Music.h"
+
+/******************************************************************************/
+/*!
+Class SceneSoraJewel:
+\brief	Defines the scene Sora Jewel and its methods
+*/
+/******************************************************************************/
 class SceneSoraJewel : public Scene
 {
 	enum GEOMETRY_TYPE
@@ -120,7 +137,7 @@ private:
 	Light light[2];
 	bool enableLight = false;
 	float LSPEED = 10.f;
-	double fps = 0;
+	int fps = 0;
 
 	void renderMesh(Mesh *mesh, bool enableLight);
 	void lighting();
@@ -174,9 +191,9 @@ private:
 
 	float boxX = 0;
 	float boxZ = 0;
-	float camPosX = 0;
-	float camPosY = 0;
-	float camPosZ = 0;
+	int camPosX = 0;
+	int camPosY = 0;
+	int camPosZ = 0;
 
 	float rotateGlobeY = 0;
 

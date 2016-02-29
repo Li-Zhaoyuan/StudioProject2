@@ -14,6 +14,7 @@
 #include "Utility.h"
 
 #include "LoadTGA.h"
+#include "ReadTextFile.h"
 //#include "RenderMun.h"
 //#include "LoadOBJ.h"
 SceneMun::SceneMun()
@@ -297,22 +298,48 @@ void SceneMun::Init()
 	camera.SceneMun = true;
 	camera.SceneSoraJewel = false;
 
-	/*boxX = 0;
-	boxZ = 0;
-	camPosX = 0;
-	camPosY = 0;
-	camPosz = 0;
+<<<<<<< HEAD
+	ReadFromTxt("TextFiles//Worried_Lady.txt", TextLady);
+	Ladypos = TextLady.begin();
+	sWLady = *Ladypos;
+	ssWLady << sWLady[0];
 
-	crashedplaneCoord = Vector3(-36.f, 4.9f, -34.f);
-	planecoord = Vector3(-36.f, -2.9f, -45.f);
+	ReadFromTxt("TextFiles//Quest_Dude.txt", TextQuestDude);
+	QuestDudepos = TextQuestDude.begin();
+	sQuestDude = *QuestDudepos;
+	ssQuestDude << sQuestDude[0];
+
+	ReadFromTxt("TextFiles//Miner1.txt", TextMiner);
+	Minerpos = TextMiner.begin();
+	sMiner = *Minerpos;
+	ssMiner << sMiner[0];
+
+	ReadFromTxt("TextFiles//Miner2.txt", TextMiner2);
+	Minerpos2 = TextMiner2.begin();
+	sMiner2 = *Minerpos2;
+	ssMiner2 << sMiner2[0];
+
+	textWL = false;
+	textQD = false;
+	textminer1 = false;
+	textminer2 = false;
+=======
+	interact = 0;
+
+
+	crashedplaneCoord = Vector3(-36.f, 4.9f, -49.f);
+	planecoord = Vector3(-36.f, -2.9f, -49.f);
 	questdudehouseCoord = Vector3(33, -5, 20);
 	worriedladyhouseCoord = Vector3(20, -5, -38);
 	worriedladyCoord = Vector3(2, -4, -38);
 	questdudeCoord = Vector3(33, -4, 3);
 	minerandplusCoord = Vector3(-19, 0, 25);
 	caveCoord = Vector3(-35, -5, 35);
-	oreCoord = Vector3(-42, -2.75, 35);
-
+	oreCoord = Vector3(-42, -2.75f, 35);
+	CalefareACoord = Vector3(26, -0.9f, -21);
+	CalefareBCoord = Vector3(26, -0.9f, -10);
+	CalefareCCoord = Vector3(15, -0.9f, 25);
+	
 	worriedladytempx = 0;
 	worriedladytempz = 0;
 
@@ -328,10 +355,14 @@ void SceneMun::Init()
 
 	loadingbar = 0.01f;
 
-	mining = false;
-	isMined = false;*/
+	rotateAngle = 0;
+	
+	translatingChar = 0;
+	hoverheight = 0;
+	rotateplane = 0;
+	translateplane = 0;
+>>>>>>> ee484254225a680199b8773ad712f99ca8449a57
 }
-
 
 void SceneMun::Update(double dt)
 {
@@ -342,6 +373,202 @@ void SceneMun::Update(double dt)
 	if ((((interact >> REPAIRED) & 1) > 0))
 	{
 		camera.Init(Vector3(-60, 100, -35), Vector3(-35, 0, -40), Vector3(0, 1, 0));
+	}
+
+	if (((((interact >> TALKING_TO_LADY) & 1) > 0)) && textWL)
+	{
+		timing += (float)(10 * dt);
+		if (timing >= 0.5f)
+		{
+			if (a < sWLady.size())
+			{
+				ssWLady << sWLady[a];
+				a++;
+				timing = 0;
+			}
+			else if (a == sWLady.size() && Application::IsKeyPressed(VK_LBUTTON))
+			{
+				if (Ladypos != TextLady.end())
+				{
+					ssWLady.str("");
+					sWLady = "";
+
+					sWLady = *Ladypos;
+					ssWLady << sWLady[0];
+
+					timing = 0;
+					a = 1;
+					Ladypos++;
+				}
+				else
+				{
+					if (Application::IsKeyPressed(VK_LBUTTON))
+					{
+						ssWLady.str("");
+						textWL = false;
+						Ladypos = TextLady.begin();
+						sWLady = *Ladypos;
+						ssWLady << sWLady[0];
+						a = 1;
+					}
+				}
+			}
+		}
+	}
+	else
+	{
+		ssWLady.str("");
+		Ladypos = TextLady.begin();
+		sWLady = *Ladypos;
+		ssWLady << sWLady[0];
+		a = 1;
+	}
+
+	if (((((interact >> TALKING_TO_QUEST_DUDE) & 1) > 0)) && textQD)
+	{
+		timing += (float)(10 * dt);
+		if (timing >= 0.5f)
+		{
+			if (b < sQuestDude.size())
+			{
+				ssQuestDude << sQuestDude[b];
+				b++;
+				timing = 0;
+			}
+			else if (b == sQuestDude.size() && Application::IsKeyPressed(VK_LBUTTON))
+			{
+				if (QuestDudepos != TextQuestDude.end())
+				{
+					ssQuestDude.str("");
+					sQuestDude = "";
+
+					sQuestDude = *QuestDudepos;
+					ssQuestDude << sQuestDude[0];
+
+					timing = 0;
+					b = 1;
+					QuestDudepos++;
+				}
+				else
+				{
+					if (Application::IsKeyPressed(VK_LBUTTON))
+					{
+						ssQuestDude.str("");
+						textQD = false;
+						QuestDudepos = TextQuestDude.begin();
+						sQuestDude = *QuestDudepos;
+						ssQuestDude << sQuestDude[0];
+						b = 1;
+					}
+				}
+			}
+		}
+	}
+	else
+	{
+		ssQuestDude.str("");
+		QuestDudepos = TextQuestDude.begin();
+		sQuestDude = *QuestDudepos;
+		ssQuestDude << sQuestDude[0];
+		b = 1;
+	}
+
+	if (((((interact >> TALKING_TO_MINER_CASE_1) & 1) > 0)) && textminer1)
+	{
+		timing += (float)(10 * dt);
+		if (timing >= 0.5f)
+		{
+			if (c < sMiner.size())
+			{
+				ssMiner << sMiner[c];
+				c++;
+				timing = 0;
+			}
+			else if (c == sMiner.size() && Application::IsKeyPressed(VK_LBUTTON))
+			{
+				if (Minerpos != TextMiner.end())
+				{
+					ssMiner.str("");
+					sMiner = "";
+
+					sMiner = *Minerpos;
+					ssMiner << sMiner[0];
+
+					timing = 0;
+					c = 1;
+					Minerpos++;
+				}
+				else
+				{
+					if (Application::IsKeyPressed(VK_LBUTTON))
+					{
+						ssMiner.str("");
+						textminer1 = false;
+						Minerpos = TextMiner.begin();
+						sMiner = *Minerpos;
+						ssMiner << sMiner[0];
+						c = 1;
+					}
+				}
+			}
+		}
+	}
+	else
+	{
+		ssMiner.str("");
+		Minerpos = TextMiner.begin();
+		sMiner = *Minerpos;
+		ssMiner << sMiner[0];
+		c = 1;
+	}
+
+	if (((((interact >> TALKING_TO_MINER_CASE_2) & 1) > 0)) && textminer2)
+	{
+		timing += (float)(10 * dt);
+		if (timing >= 0.5f)
+		{
+			if (d < sMiner2.size())
+			{
+				ssMiner2 << sMiner2[d];
+				d++;
+				timing = 0;
+			}
+			else if (d == sMiner2.size() && Application::IsKeyPressed(VK_LBUTTON))
+			{
+				if (Minerpos2 != TextMiner2.end())
+				{
+					ssMiner2.str("");
+					sMiner2 = "";
+
+					sMiner2 = *Minerpos2;
+					ssMiner2 << sMiner2[0];
+
+					timing = 0;
+					d = 1;
+					Minerpos2++;
+				}
+				else
+				{
+					if (Application::IsKeyPressed(VK_LBUTTON))
+					{
+						ssMiner2.str("");
+						textminer2 = false;
+						Minerpos2 = TextMiner2.begin();
+						sMiner2 = *Minerpos2;
+						ssMiner2 << sMiner2[0];
+						a = 1;
+					}
+				}
+			}
+		}
+	}
+	else
+	{
+		ssMiner2.str("");
+		Minerpos2 = TextMiner2.begin();
+		sMiner2 = *Minerpos2;
+		ssMiner2 << sMiner2[0];
+		a = 1;
 	}
 
 	fps = (int)(1 / dt);
@@ -853,8 +1080,6 @@ void SceneMun::Render()
 	}
 	RenderTextBoxOnScreen();
 	RenderInfomationOnScreen();
-	
-	
 }
 
 void SceneMun::RenderSkybox()
@@ -978,46 +1203,54 @@ void SceneMun::interactions()
 	}
 
 	if (RadiusFromLady < 6.0f
-		&& Application::IsKeyPressed(VK_RBUTTON))
+		&& Application::IsKeyPressed('E'))
 	{
 		interact |= 1 << TALKING_TO_LADY;
+		textWL = true;
 	}
 	else if (RadiusFromLady > 6.0f)
 	{
 		interact &= ~(1 << TALKING_TO_LADY);
+		textWL = false;
 	}
 
 	if (RadiusFromDude < 6.0f
-		&& Application::IsKeyPressed(VK_RBUTTON))
+		&& Application::IsKeyPressed('E'))
 	{
 		interact |= 1 << TALKED_QUEST_DUDE;
 		interact |= 1 << TALKING_TO_QUEST_DUDE;
+		textQD = true;
 	}
 	else if (RadiusFromDude > 6.0f)
 	{
 		interact &= ~(1 << TALKING_TO_QUEST_DUDE);
+		textQD = false;
 	}
 	if (RadiusFromMiner < 6.0f
 		&& (((interact >> TALKED_QUEST_DUDE) & 1) > 0)
-		&& Application::IsKeyPressed(VK_RBUTTON))
+		&& Application::IsKeyPressed('E'))
 	{
 		interact |= 1 << MINER_GET_LETTER;
 		interact |= 1 << PLAYER_GET_PICKAXE;
 		interact |= 1 << TALKING_TO_MINER_CASE_2;
+		textminer2 = true;
 	}
 	else if (RadiusFromMiner > 6.0f)
 	{
 		interact &= ~(1 << TALKING_TO_MINER_CASE_2);
+		textminer2 = false;
 	}
 	if (RadiusFromMiner < 6.0f
 		&& (((interact >> TALKED_QUEST_DUDE) & 1)< 1)
-		&& Application::IsKeyPressed(VK_RBUTTON))
+		&& Application::IsKeyPressed('E'))
 	{
 		interact |= 1 << TALKING_TO_MINER_CASE_1;
+		textminer1 = true;
 	}
 	else if (RadiusFromMiner > 6.0f)
 	{
 		interact &= ~(1 << TALKING_TO_MINER_CASE_1);
+		textminer1 = false;
 	}
 }
 
@@ -1155,8 +1388,6 @@ void SceneMun::RenderTextBoxOnScreen()
 		modelStack.PushMatrix();
 		modelStack.LoadIdentity(); //Reset modelStack
 		modelStack.Translate(40, 10, -1);
-		/*modelStack.Rotate(45, 0, 1, 0);
-		modelStack.Rotate(45, 0, 0, 1);*/
 		modelStack.Scale(60, 60, 1);
 		modelStack.Rotate(90, 1, 0, 0);
 		renderMesh(meshList[GEO_QUAD], false);
@@ -1164,8 +1395,7 @@ void SceneMun::RenderTextBoxOnScreen()
 		viewStack.PopMatrix();
 		modelStack.PopMatrix();
 		glEnable(GL_DEPTH_TEST);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Oh Lord! Are you okayyyyy?", Color(0, 0, 0), 3, 7, 4);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Welcome to Mun~", Color(0, 0, 0), 3, 7, 3);
+		RenderTextOnScreen(meshList[GEO_TEXT], ssWLady.str(), Color(0, 0, 0), 3, 7, 4);
 	}
 
 	if (((((interact >> TALKING_TO_QUEST_DUDE) & 1) > 0)))
@@ -1189,10 +1419,7 @@ void SceneMun::RenderTextBoxOnScreen()
 		viewStack.PopMatrix();
 		modelStack.PopMatrix();
 		glEnable(GL_DEPTH_TEST);
-		RenderTextOnScreen(meshList[GEO_TEXT], "I see you need some materials", Color(0, 0, 0), 3, 6, 4);
-		RenderTextOnScreen(meshList[GEO_TEXT], "to fix your ship. G ive this", Color(0, 0, 0), 3, 6, 3);
-		RenderTextOnScreen(meshList[GEO_TEXT], "letter to the M iner near the", Color(0, 0, 0), 3, 6, 2);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Cave.", Color(0, 0, 0), 3, 6, 1);
+		RenderTextOnScreen(meshList[GEO_TEXT], ssQuestDude.str(), Color(0, 0, 0), 3, 6, 4);
 	}
 	if (((((interact >> TALKING_TO_MINER_CASE_1) & 1) > 0)))
 	{
@@ -1215,7 +1442,7 @@ void SceneMun::RenderTextBoxOnScreen()
 		viewStack.PopMatrix();
 		modelStack.PopMatrix();
 		glEnable(GL_DEPTH_TEST);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Go Away, Im busy", Color(0, 0, 0), 3, 7, 4);
+		RenderTextOnScreen(meshList[GEO_TEXT], ssMiner.str(), Color(0, 0, 0), 3, 7, 4);
 	}
 	if (((((interact >> TALKING_TO_MINER_CASE_2) & 1) > 0)))
 	{
@@ -1238,9 +1465,7 @@ void SceneMun::RenderTextBoxOnScreen()
 		viewStack.PopMatrix();
 		modelStack.PopMatrix();
 		glEnable(GL_DEPTH_TEST);
-		RenderTextOnScreen(meshList[GEO_TEXT], "I see the chief wants me to", Color(0, 0, 0), 3, 6, 4);
-		RenderTextOnScreen(meshList[GEO_TEXT], "help you, use my pickaxe to ", Color(0, 0, 0), 3, 6, 3);
-		RenderTextOnScreen(meshList[GEO_TEXT], "mine your materials.", Color(0, 0, 0), 3, 6, 2);
+		RenderTextOnScreen(meshList[GEO_TEXT], ssMiner2.str(), Color(0, 0, 0), 3, 6, 4);
 	}
 }
 

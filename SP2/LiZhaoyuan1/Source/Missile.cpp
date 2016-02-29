@@ -30,7 +30,7 @@ void Missile::setView(const Vector3 &view)
 }
 void Missile::Animation(double dt)
 {
-	float speed = 250.f;
+	float speed = 500.f;
 	position += view * speed * dt;
 	if (position.x > 750 || position.y > 750 || position.z > 750|| position.x < -750 || position.y < -750 || position.z < -750)
 	{

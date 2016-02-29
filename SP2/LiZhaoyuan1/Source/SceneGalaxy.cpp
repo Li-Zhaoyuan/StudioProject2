@@ -1,3 +1,13 @@
+/******************************************************************************/
+/*!
+\file SceneGalaxy.h
+\author Li Zhaoyuan, Nathan Chia Shi-Lin, Terence Tan Ming Jie, Muhammad Nurhidayat Bin Suderman
+\par email: lizhaoyuan123@hotmail.com
+\brief
+	SceneGalaxy cpp file, everything needed inside the scene, found here
+*/
+/******************************************************************************/
+
 #include <sstream>
 
 #include "SceneGalaxy.h"
@@ -17,14 +27,38 @@
 
 Missile missile(100);
 
+/****************************************************************************/
+/*!
+\brief
+	constructor for the .cpp file
+*/
+/****************************************************************************/
 SceneGalaxy::SceneGalaxy()
 {
 }
 
+/****************************************************************************/
+/*!
+\brief
+	deconstructor for the .cpp file
+*/
+/****************************************************************************/
 SceneGalaxy::~SceneGalaxy()
 {
 }
 
+/****************************************************************************/
+/*!
+\brief
+
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneGalaxy::Init()
 {
 
@@ -145,7 +179,7 @@ void SceneGalaxy::Init()
 
 
 	//Initialize camera settings
-	camera.Init(Vector3(0, 500, 1), Vector3(0, 500, 0), Vector3(0, 1, 0));
+	camera.Init(Vector3(0, 500, 0), Vector3(0, 500, -600), Vector3(0, 1, 0));
 
 
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
@@ -169,12 +203,26 @@ void SceneGalaxy::Init()
 
 	meshList[GEO_XWING] = MeshBuilder::GenerateOBJ("xwing", "OBJ//XWing.obj");
 	meshList[GEO_XWING]->textureID = LoadTGA("Image//XWing_Texture.tga");
+	meshList[GEO_XWING]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_XWING]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_XWING]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_XWING]->material.kShininess = 5.f;
 
 	meshList[GEO_ASTEROID] = MeshBuilder::GenerateOBJ("asteroid", "OBJ//asteroid.obj");
 	meshList[GEO_ASTEROID]->textureID = LoadTGA("Image//asteroid.tga");
+	meshList[GEO_ASTEROID]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_ASTEROID]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_ASTEROID]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_ASTEROID]->material.kShininess = 5.f;
 
 	meshList[GEO_MISSILE] = MeshBuilder::GenerateOBJ("missile", "OBJ//missile.obj");
 	meshList[GEO_MISSILE]->textureID = LoadTGA("Image//missile.tga");
+	meshList[GEO_MISSILE]->material.kAmbient.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_MISSILE]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_MISSILE]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_MISSILE]->material.kShininess = 5.f;
+
+	meshList[GEO_BLACKSCREEN] = MeshBuilder::GenerateQuad("BlackScreen", Color(0, 0, 0));
 
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//TimesNewRoman.tga");
@@ -192,6 +240,14 @@ void SceneGalaxy::Init()
 
 //Asteroid
 
+/****************************************************************************/
+/*!
+\brief
+	to move the Asteroids in waves towards the plane
+\param
+	double dt
+*/
+/****************************************************************************/
 void SceneGalaxy::MovingAsteroid(double dt)
 {
 	missileView = missilePos + missileTar;
@@ -373,10 +429,20 @@ void SceneGalaxy::MovingAsteroid(double dt)
 		if (getMagnitude(XWing, LAsteroid) == 100)
 		{
 			renderAsteroidLarge = false;
+			renderXWing = false;
+			renderSkybox = false;
 		}
 	}
 }
 
+/****************************************************************************/
+/*!
+\brief
+	boolean function to check if First Wave of Asteroids have passed
+\return
+	return whether this wave have been ran
+*/
+/****************************************************************************/
 bool SceneGalaxy::CheckAsteroidStartWave()
 {
 	if (renderAsteroid == false && renderAsteroid2 == false && renderAsteroid3 == false)
@@ -384,6 +450,14 @@ bool SceneGalaxy::CheckAsteroidStartWave()
 	return false;
 }
 
+/****************************************************************************/
+/*!
+\brief
+	boolean function to check if Second Wave of Asteroids have passed
+\return
+	return whether this wave have been ran
+*/
+/****************************************************************************/
 bool SceneGalaxy::CheckAsteroidWave1()
 {	
 	if (renderAsteroid4 == false && renderAsteroid5 == false && renderAsteroid6 == false)
@@ -391,6 +465,14 @@ bool SceneGalaxy::CheckAsteroidWave1()
 	return false;
 }
 
+/****************************************************************************/
+/*!
+\brief
+	boolean function to check if Third Wave of Asteroids have passed
+\return
+	return whether this wave have been ran
+*/
+/****************************************************************************/
 bool SceneGalaxy::CheckAsteroidWave2()
 {
 	if (renderAsteroid7 == false && renderAsteroid8 == false && renderAsteroid9 == false && renderAsteroid10 == false)
@@ -398,6 +480,14 @@ bool SceneGalaxy::CheckAsteroidWave2()
 	return false;
 }
 
+/****************************************************************************/
+/*!
+\brief
+	boolean function to check if Last Asteroid have passed
+\return
+	return whether this wave have been ran
+*/
+/****************************************************************************/
 bool SceneGalaxy::CheckLargeAsteroid()
 {
 	if (renderAsteroidLarge == false)
@@ -409,16 +499,36 @@ bool SceneGalaxy::CheckLargeAsteroid()
 
 //Formula
 
+/****************************************************************************/
+/*!
+\brief
+	check collision between 2 objects using hitbox
+\param
+	Vector of object A and B, B for the object that we are going to collide
+\return
+	return true or false whether the collision is met between 2 objects
+*/
+/****************************************************************************/
 bool SceneGalaxy::CheckCollision(Vector3 A, Vector3 B)
 {
-	float x = 10.f, y = 15.f, z = 50.f;
-	if (A.x + 10 > B.x - x && A.x + 10 < B.x + x
-		&& A.y + 10 > B.y && A.y + 10 < B.y + y
-		&& A.z + 10> B.z - z && A.z + 10 < B.z + z)
+	float x = 20.f, y = 15.f, z = 500.f;
+	if (A.x > B.x - x && A.x < B.x + x
+		&& A.y > B.y && A.y < B.y + y
+		&& A.z> B.z - z && A.z < B.z + z)
 		return true;
 	return false;
 }
 
+/****************************************************************************/
+/*!
+\brief
+	find the magnitude between 2 objects
+\param
+	Vector of object A and B
+\return
+	the magnitude between 2 objects
+*/
+/****************************************************************************/
 int SceneGalaxy::getMagnitude(Vector3 A, Vector3 B)
 {
 	// A camera, B target
@@ -431,6 +541,14 @@ int SceneGalaxy::getMagnitude(Vector3 A, Vector3 B)
 
 //Formula
 
+/****************************************************************************/
+/*!
+\brief
+	running functions, checks, keypress in the .cpp file every frame
+\param
+	double dt
+*/
+/****************************************************************************/
 void SceneGalaxy::Update(double dt)
 {
 	camera.XWingCamera(dt, 100);
@@ -531,6 +649,18 @@ void SceneGalaxy::Update(double dt)
 
 //Lighting
 
+/****************************************************************************/
+/*!
+\brief
+
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneGalaxy::lighting()
 {
 	if (light[0].type == Light::LIGHT_DIRECTIONAL)
@@ -554,6 +684,18 @@ void SceneGalaxy::lighting()
 	}
 }
 
+/****************************************************************************/
+/*!
+\brief
+
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneGalaxy::lighting2()
 {
 	if (light[1].type == Light::LIGHT_DIRECTIONAL)
@@ -582,6 +724,14 @@ void SceneGalaxy::lighting2()
 
 //Render Functions
 
+/****************************************************************************/
+/*!
+\brief
+	function to render meshes
+\param
+	the type of mesh and boolean for switch on or off lighting
+*/
+/****************************************************************************/
 void SceneGalaxy::renderMesh(Mesh *mesh, bool enableLight)
 {
 	Mtx44 MVP, modelView, modelView_inverse_transpose;
@@ -627,6 +777,14 @@ void SceneGalaxy::renderMesh(Mesh *mesh, bool enableLight)
 
 }
 
+/****************************************************************************/
+/*!
+\brief
+	function to render text
+\param
+	the type of mesh, the text string, the color of text
+*/
+/****************************************************************************/
 void SceneGalaxy::RenderText(Mesh* mesh, std::string text, Color color)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
@@ -654,6 +812,14 @@ void SceneGalaxy::RenderText(Mesh* mesh, std::string text, Color color)
 	glEnable(GL_DEPTH_TEST);
 }
 
+/****************************************************************************/
+/*!
+\brief
+	function to render text on screen
+\param
+	the type of mesh, the text string, the color of text, font size of text, position x and position y of text
+*/
+/****************************************************************************/
 void SceneGalaxy::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
@@ -697,6 +863,12 @@ void SceneGalaxy::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, 
 
 }
 
+/****************************************************************************/
+/*!
+\brief
+	function to render obj into the scene
+*/
+/****************************************************************************/
 void SceneGalaxy::Render()
 {
 	// Render VBO here
@@ -763,19 +935,34 @@ void SceneGalaxy::Render()
 
 //Rendering 
 
+/****************************************************************************/
+/*!
+\brief
+	render XWing
+*/
+/****************************************************************************/
 void SceneGalaxy::RenderXwing()
 {
-	modelStack.PushMatrix();
-	modelStack.Translate(XWing.x, XWing.y, XWing.z);
-	modelStack.Rotate(180, 0, 1, 0);
-	modelStack.Rotate(rotateXWing, 0, 0, 1);
-	modelStack.Rotate(camera.rotateChar, 0, 1, 0);
-	modelStack.Scale(2.2f, 2.2f, 2.2f);
-	renderMesh(meshList[GEO_XWING], false);
-	modelStack.PopMatrix();
+	if (renderXWing == true)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(XWing.x, XWing.y, XWing.z);
+		modelStack.Rotate(180, 0, 1, 0);
+		modelStack.Rotate(rotateXWing, 0, 0, 1);
+		modelStack.Rotate(camera.rotateChar, 0, 1, 0);
+		modelStack.Scale(2.2f, 2.2f, 2.2f);
+		renderMesh(meshList[GEO_XWING], true);
+		modelStack.PopMatrix();
+	}
 
 }
 
+/****************************************************************************/
+/*!
+\brief
+	render numbers of Asteroid
+*/
+/****************************************************************************/
 void SceneGalaxy::RenderAsteroid()
 {
 	if (renderAsteroid == true)
@@ -783,7 +970,7 @@ void SceneGalaxy::RenderAsteroid()
 		modelStack.PushMatrix();
 		modelStack.Translate(Asteroid.x, Asteroid.y, Asteroid.z);
 		modelStack.Scale(2.2f, 2.2f, 2.2f);
-		renderMesh(meshList[GEO_ASTEROID], false);
+		renderMesh(meshList[GEO_ASTEROID], true);
 		modelStack.PopMatrix();
 	}
 
@@ -792,7 +979,7 @@ void SceneGalaxy::RenderAsteroid()
 		modelStack.PushMatrix();
 		modelStack.Translate(Asteroid2.x, Asteroid2.y, Asteroid2.z);
 		modelStack.Scale(2.2f, 2.2f, 2.2f);
-		renderMesh(meshList[GEO_ASTEROID], false);
+		renderMesh(meshList[GEO_ASTEROID], true);
 		modelStack.PopMatrix();
 	}
 
@@ -801,7 +988,7 @@ void SceneGalaxy::RenderAsteroid()
 		modelStack.PushMatrix();
 		modelStack.Translate(Asteroid3.x, Asteroid3.y, Asteroid3.z);
 		modelStack.Scale(2.2f, 2.2f, 2.2f);
-		renderMesh(meshList[GEO_ASTEROID], false);
+		renderMesh(meshList[GEO_ASTEROID], true);
 		modelStack.PopMatrix();
 	}
 
@@ -810,7 +997,7 @@ void SceneGalaxy::RenderAsteroid()
 		modelStack.PushMatrix();
 		modelStack.Translate(Asteroid4.x, Asteroid4.y, Asteroid4.z);
 		modelStack.Scale(2.2f, 2.2f, 2.2f);
-		renderMesh(meshList[GEO_ASTEROID], false);
+		renderMesh(meshList[GEO_ASTEROID], true);
 		modelStack.PopMatrix();
 	}
 
@@ -819,7 +1006,7 @@ void SceneGalaxy::RenderAsteroid()
 		modelStack.PushMatrix();
 		modelStack.Translate(Asteroid5.x, Asteroid5.y, Asteroid5.z);
 		modelStack.Scale(2.2f, 2.2f, 2.2f);
-		renderMesh(meshList[GEO_ASTEROID], false);
+		renderMesh(meshList[GEO_ASTEROID], true);
 		modelStack.PopMatrix();
 	}
 
@@ -828,7 +1015,7 @@ void SceneGalaxy::RenderAsteroid()
 		modelStack.PushMatrix();
 		modelStack.Translate(Asteroid6.x, Asteroid6.y, Asteroid6.z);
 		modelStack.Scale(2.2f, 2.2f, 2.2f);
-		renderMesh(meshList[GEO_ASTEROID], false);
+		renderMesh(meshList[GEO_ASTEROID], true);
 		modelStack.PopMatrix();
 	}
 
@@ -837,7 +1024,7 @@ void SceneGalaxy::RenderAsteroid()
 		modelStack.PushMatrix();
 		modelStack.Translate(Asteroid7.x, Asteroid7.y, Asteroid7.z);
 		modelStack.Scale(2.2f, 2.2f, 2.2f);
-		renderMesh(meshList[GEO_ASTEROID], false);
+		renderMesh(meshList[GEO_ASTEROID], true);
 		modelStack.PopMatrix();
 	}
 
@@ -846,7 +1033,7 @@ void SceneGalaxy::RenderAsteroid()
 		modelStack.PushMatrix();
 		modelStack.Translate(Asteroid8.x, Asteroid8.y, Asteroid8.z);
 		modelStack.Scale(2.2f, 2.2f, 2.2f);
-		renderMesh(meshList[GEO_ASTEROID], false);
+		renderMesh(meshList[GEO_ASTEROID], true);
 		modelStack.PopMatrix();
 	}
 
@@ -855,7 +1042,7 @@ void SceneGalaxy::RenderAsteroid()
 		modelStack.PushMatrix();
 		modelStack.Translate(Asteroid9.x, Asteroid9.y, Asteroid9.z);
 		modelStack.Scale(2.2f, 2.2f, 2.2f);
-		renderMesh(meshList[GEO_ASTEROID], false);
+		renderMesh(meshList[GEO_ASTEROID], true);
 		modelStack.PopMatrix();
 	}
 
@@ -864,7 +1051,7 @@ void SceneGalaxy::RenderAsteroid()
 		modelStack.PushMatrix();
 		modelStack.Translate(Asteroid10.x, Asteroid10.y, Asteroid10.z);
 		modelStack.Scale(2.2f, 2.2f, 2.2f);
-		renderMesh(meshList[GEO_ASTEROID], false);
+		renderMesh(meshList[GEO_ASTEROID], true);
 		modelStack.PopMatrix();
 	}
 
@@ -873,12 +1060,18 @@ void SceneGalaxy::RenderAsteroid()
 		modelStack.PushMatrix();
 		modelStack.Translate(LAsteroid.x, LAsteroid.y, LAsteroid.z);
 		modelStack.Scale(22.2f, 22.2f, 22.2f);
-		renderMesh(meshList[GEO_ASTEROID], false);
+		renderMesh(meshList[GEO_ASTEROID], true);
 		modelStack.PopMatrix();
 	}
 
 }
 
+/****************************************************************************/
+/*!
+\brief
+	render missile
+*/
+/****************************************************************************/
 void SceneGalaxy::RenderMissile()
 {
 
@@ -891,81 +1084,103 @@ void SceneGalaxy::RenderMissile()
 			modelStack.Translate((missilePos.x) , (missilePos.y), (missilePos.z));
 			modelStack.Scale(4.f, 4.f, 4.f);
 			modelStack.Rotate(camera.rotateChar, 0, 1, 0);
-			renderMesh(meshList[GEO_MISSILE], false);
+			renderMesh(meshList[GEO_MISSILE], true);
 			modelStack.PopMatrix();
 		}
 	}
 }
 
+/****************************************************************************/
+/*!
+\brief
+	render skybox
+*/
+/****************************************************************************/
 void SceneGalaxy::RenderSkybox()
 {
-	modelStack.PushMatrix();
-	modelStack.Translate(0, 0, -498);
-	modelStack.Rotate(90, 1, 0, 0);
-	modelStack.Rotate(180, 0, 1, 0);
-	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_GALAXYBACK], false);
-	modelStack.PopMatrix();
+	if (renderSkybox == true)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(0, 0, -498);
+		modelStack.Rotate(90, 1, 0, 0);
+		modelStack.Rotate(180, 0, 1, 0);
+		modelStack.Scale(1000, 1000, 1000);
+		renderMesh(meshList[GEO_GALAXYBACK], false);
+		modelStack.PopMatrix();
 
-	modelStack.PushMatrix();
-	modelStack.Translate(0, 498, 0);
-	modelStack.Rotate(-90, 0, 1, 0);
-	modelStack.Rotate(180, 1, 0, 0);
-	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_GALAXYTOP], false);
-	modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		modelStack.Translate(0, 498, 0);
+		modelStack.Rotate(-90, 0, 1, 0);
+		modelStack.Rotate(180, 1, 0, 0);
+		modelStack.Scale(1000, 1000, 1000);
+		renderMesh(meshList[GEO_GALAXYTOP], false);
+		modelStack.PopMatrix();
 
-	modelStack.PushMatrix();
-	modelStack.Translate(-498, 0, 0);
-	modelStack.Rotate(-90, 0, 0, 1);
-	modelStack.Rotate(90, 0, 1, 0);
-	modelStack.Rotate(180, 0, 1, 0);
-	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_GALAXYLEFT], false);
-	modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		modelStack.Translate(-498, 0, 0);
+		modelStack.Rotate(-90, 0, 0, 1);
+		modelStack.Rotate(90, 0, 1, 0);
+		modelStack.Rotate(180, 0, 1, 0);
+		modelStack.Scale(1000, 1000, 1000);
+		renderMesh(meshList[GEO_GALAXYLEFT], false);
+		modelStack.PopMatrix();
 
-	modelStack.PushMatrix();
-	modelStack.Translate(498, 0, 0);
-	modelStack.Rotate(90, 0, 0, 1);
-	modelStack.Rotate(90, 0, 1, 0);
-	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_GALAXYFRONT], false);
-	modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		modelStack.Translate(498, 0, 0);
+		modelStack.Rotate(90, 0, 0, 1);
+		modelStack.Rotate(90, 0, 1, 0);
+		modelStack.Scale(1000, 1000, 1000);
+		renderMesh(meshList[GEO_GALAXYFRONT], false);
+		modelStack.PopMatrix();
 
-	modelStack.PushMatrix();
-	modelStack.Translate(0, -498, 0);
-	modelStack.Rotate(-90, 0, 1, 0);
-	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_GALAXYBOTTOM], false);
-	modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		modelStack.Translate(0, -498, 0);
+		modelStack.Rotate(-90, 0, 1, 0);
+		modelStack.Scale(1000, 1000, 1000);
+		renderMesh(meshList[GEO_GALAXYBOTTOM], false);
+		modelStack.PopMatrix();
 
-	modelStack.PushMatrix();
-	modelStack.Translate(0, 0, 498);
-	modelStack.Rotate(180, 0, 1, 0);
-	modelStack.Rotate(90, 1, 0, 0);
-	modelStack.Rotate(180, 0, 1, 0);
-	modelStack.Scale(1000, 1000, 1000);
-	renderMesh(meshList[GEO_GALAXYRIGHT], false);
-	modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		modelStack.Translate(0, 0, 498);
+		modelStack.Rotate(180, 0, 1, 0);
+		modelStack.Rotate(90, 1, 0, 0);
+		modelStack.Rotate(180, 0, 1, 0);
+		modelStack.Scale(1000, 1000, 1000);
+		renderMesh(meshList[GEO_GALAXYRIGHT], false);
+		modelStack.PopMatrix();
+	}
 }
 
 //Rendering
 
+/****************************************************************************/
+/*!
+\brief
+	cutscene && switching scene
+\param
+	doublt dt
+*/
+/****************************************************************************/
 void SceneGalaxy::CutScene(double dt)
 {
 	if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == true && CheckAsteroidWave2() == true && CheckLargeAsteroid() == false)
 	{
 		camera.Init(Vector3(100, 570, 200), Vector3(0, 500, -50), Vector3(0, 1, 0));
 		shootMissile = false;
-
 	}
 
 	if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == true && CheckAsteroidWave2() == true && CheckLargeAsteroid() == true)
 	{
-		Gamemode::getinstance()->currentgamestate = 4;
+		Gamemode::getinstance()->currentgamestate = 6;
 	}
 }
 
+/****************************************************************************/
+/*!
+\brief
+	exiting 
+*/
+/****************************************************************************/
 void SceneGalaxy::Exit()
 {
 	glDeleteVertexArrays(1, &m_vertexArrayID);

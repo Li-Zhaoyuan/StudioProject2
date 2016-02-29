@@ -1,9 +1,23 @@
+/****************************************************************************/
+/*!
+\file SceneGalaxy.h
+\author Li Zhaoyuan, Nathan Chia Shi-Lin, Terence Tan Ming Jie, Muhammad Nurhidayat Bin Suderman
+\par email: lizhaoyuan123@hotmail.com
+\brief
+class for the camera used in the various scenes
+*/
+/****************************************************************************/
 #ifndef CAMERA_3_H
 #define CAMERA_3_H
 
 #include "Camera.h"
 #include "Application.h"
-
+/******************************************************************************/
+/*!
+Class Camera3:
+\brief	Defines the camera and its methods
+*/
+/******************************************************************************/
 class Camera3 : public Camera
 {
 public:

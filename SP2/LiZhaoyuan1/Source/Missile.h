@@ -1,3 +1,13 @@
+/****************************************************************************/
+/*!
+\file Missile.h
+\author Li Zhaoyuan, Nathan Chia Shi-Lin, Terence Tan Ming Jie, Muhammad Nurhidayat Bin Suderman
+\par email: lizhaoyuan123@hotmail.com
+\brief
+	class for the shooting of missile
+*/
+/****************************************************************************/
+
 #ifndef MISSILE_H
 #define MISSILE_H
 
