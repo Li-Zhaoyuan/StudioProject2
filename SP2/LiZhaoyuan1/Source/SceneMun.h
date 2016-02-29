@@ -127,6 +127,7 @@ class SceneMun : public Scene
 		TALKING_TO_MINER_CASE_2,
 		MINED,
 		REPAIRED,
+		CAN_INTERACT,
 	};
 public:
 	SceneMun();
