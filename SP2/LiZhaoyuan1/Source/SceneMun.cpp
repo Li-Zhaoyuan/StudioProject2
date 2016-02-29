@@ -417,7 +417,7 @@ void SceneMun::Update(double dt)
 	{
 		ssWLady.str("");
 		Ladypos = TextLady.begin();
-		sWLady = *Ladypos;
+		sWLady = *QuestDudepos;
 		ssWLady << sWLady[0];
 		a = 1;
 	}
