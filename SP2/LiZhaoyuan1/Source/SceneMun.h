@@ -18,6 +18,11 @@ class for the scene at Mun
 #include "Camera3.h"
 #include "Camera4.h"
 #include "MatrixStack.h"
+<<<<<<< HEAD
+#include "ReadTextFile.h"
+
+#include <sstream>
+=======
 
 /******************************************************************************/
 /*!
@@ -25,6 +30,7 @@ Class SceneMun:
 \brief	Defines the scene Mun and its methods
 */
 /******************************************************************************/
+>>>>>>> ee484254225a680199b8773ad712f99ca8449a57
 class SceneMun : public Scene
 {
 
@@ -175,6 +181,38 @@ private:
 	int camPosz = 0;
 	
 	int interact = 0;
+
+	float timing = 0;
+
+	bool textWL = false;
+	bool textQD = false;
+	bool textminer1 = false;
+	bool textminer2 = false;
+
+	size_t a = 1;
+	size_t b = 1;
+	size_t c = 1;
+	size_t d = 1;
+
+	std::stringstream ssWLady;
+	std::stringstream ssQuestDude;
+	std::stringstream ssMiner;
+	std::stringstream ssMiner2;
+
+	std::string sWLady;
+	std::string sQuestDude;
+	std::string sMiner;
+	std::string sMiner2;
+
+	std::vector<std::string> TextLady;
+	std::vector<std::string> TextQuestDude;
+	std::vector<std::string> TextMiner;
+	std::vector<std::string> TextMiner2;
+
+	std::vector<std::string>::iterator Ladypos;
+	std::vector<std::string>::iterator QuestDudepos;
+	std::vector<std::string>::iterator Minerpos;
+	std::vector<std::string>::iterator Minerpos2;
 
 
 	Vector3 crashedplaneCoord = Vector3(-36.f,4.9f,-49.f);
