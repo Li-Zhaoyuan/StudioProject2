@@ -188,9 +188,20 @@ void LoadingScreen::Update(double dt)
 	{
 		loadingbar += (float)(2.5 * dt);
 	}
-	else if ( (loadingbar >= 20))
+	else if ( (loadingbar >= 20) && Gamemode::getinstance()->currentgamestate==2)
 	{
 		//put condition to change scene
+		Gamemode::getinstance()->currentgamestate = 3;
+	}
+	else if ((loadingbar >= 20) && Gamemode::getinstance()->currentgamestate == 4)
+	{
+		//put condition to change scene
+		Gamemode::getinstance()->currentgamestate = 5;
+	}
+	else if ((loadingbar >= 20) && Gamemode::getinstance()->currentgamestate == 6)
+	{
+		//put condition to change scene
+		Gamemode::getinstance()->currentgamestate = 7;
 	}
 
 	static int rotateDirLimb = 1;
