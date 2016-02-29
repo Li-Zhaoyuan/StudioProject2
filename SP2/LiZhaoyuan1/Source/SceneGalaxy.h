@@ -12,7 +12,8 @@
 #include "Missile.h"
 #include <cmath>
 #include "SP2.h"
-#include "Music.h"
+#include "CurrentGameState.h"
+
 
 class SceneGalaxy : public Scene
 {
@@ -193,7 +194,7 @@ private:
 	unsigned m_parameters[U_TOTAL];
 
 	Camera3 camera;
-	
+
 	float boxX = 0;
 	float boxZ = 0;
 	float camPosX = 0;

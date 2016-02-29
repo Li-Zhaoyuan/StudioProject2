@@ -1,4 +1,20 @@
+<<<<<<< HEAD
 ﻿Build started 2/29/2016 12:58:44 PM.
+=======
+<<<<<<< HEAD
+﻿Build started 29/2/2016 11:28:29 AM.
+     1>Project "C:\Users\mingj\Desktop\SP2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         LiZhaoyuan1.vcxproj -> C:\Users\mingj\Desktop\SP2\SP2\Debug\LiZhaoyuan1.exe
+     1>Done Building Project "C:\Users\mingj\Desktop\SP2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.06
+=======
+<<<<<<< HEAD
+﻿Build started 2/29/2016 10:50:04 AM.
+>>>>>>> 5f0731cebee339287144ea86ce20152af9812eca
      1>Project "C:\Users\n1507\Desktop\StudioProject2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\n1507\Desktop\StudioProject2\SP2\\Common\Source /IC:\Users\n1507\Desktop\StudioProject2\SP2\\glfw\include /IC:\Users\n1507\Desktop\StudioProject2\SP2\\glew\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\Application.cpp
@@ -30,4 +46,17 @@
 
 Build succeeded.
 
+<<<<<<< HEAD
 Time Elapsed 00:00:00.87
+=======
+Time Elapsed 00:00:01.36
+=======
+         LiZhaoyuan1.vcxproj -> C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Debug\LiZhaoyuan1.exe
+     1>Done Building Project "C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.29
+>>>>>>> b7d6aa1732dfc824231b96b79cef072521bfc88d
+>>>>>>> 3c40477595e24c9a91eeacc4f178a10074676997
+>>>>>>> 5f0731cebee339287144ea86ce20152af9812eca

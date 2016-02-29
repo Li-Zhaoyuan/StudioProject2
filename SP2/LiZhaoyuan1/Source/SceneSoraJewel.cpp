@@ -306,7 +306,7 @@ void SceneSoraJewel::Init()
 	meshList[GEO_COMMANDER]->material.kShininess = 1.f;
 
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
-	meshList[GEO_TEXT]->textureID = LoadTGA("Image//TimesNewRoman.tga");
+	meshList[GEO_TEXT]->textureID = LoadTGA("Image//minecraft.tga");
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("lightball", Color(1, 1, 1), 18, 36);
 
 	Mtx44 projection;
@@ -1297,7 +1297,6 @@ void SceneSoraJewel::Exit()
 	glDeleteVertexArrays(1, &m_vertexArrayID);
 	glDeleteProgram(m_programID);
 }
-
 void SceneSoraJewel::interactions()
 {
 	tempview = (camera.target - camera.position); // your camera view

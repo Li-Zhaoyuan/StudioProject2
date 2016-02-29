@@ -366,11 +366,11 @@ void SceneGalaxy::MovingAsteroid(double dt)
 
 	if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == true && CheckAsteroidWave2() == true && CheckLargeAsteroid() == false)
 	{
-		if (getMagnitude(XWing, LAsteroid) > 10)
+		if (getMagnitude(XWing, LAsteroid) > 100)
 		{
 			LAsteroid -= (LAsteroid - XWing) * 0.3f * dt;
 		}
-		if (getMagnitude(XWing, LAsteroid) < 10)
+		if (getMagnitude(XWing, LAsteroid) == 100)
 		{
 			renderAsteroidLarge = false;
 		}
@@ -411,9 +411,9 @@ bool SceneGalaxy::CheckLargeAsteroid()
 
 bool SceneGalaxy::CheckCollision(Vector3 A, Vector3 B)
 {
-	float x = 10.f, y = 10.f, z = 50.f;
+	float x = 10.f, y = 15.f, z = 50.f;
 	if (A.x + 10 > B.x - x && A.x + 10 < B.x + x
-		&& A.y + 10 > B.y - y && A.y + 10 < B.y + y
+		&& A.y + 10 > B.y && A.y + 10 < B.y + y
 		&& A.z + 10> B.z - z && A.z + 10 < B.z + z)
 		return true;
 	return false;
@@ -957,9 +957,12 @@ void SceneGalaxy::CutScene(double dt)
 	{
 		camera.Init(Vector3(100, 570, 200), Vector3(0, 500, -50), Vector3(0, 1, 0));
 		shootMissile = false;
+
 	}
+
 	if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == true && CheckAsteroidWave2() == true && CheckLargeAsteroid() == true)
 	{
+		Gamemode::getinstance()->currentgamestate = 4;
 	}
 }
 
