@@ -1,10 +1,10 @@
 /******************************************************************************/
 /*!
-\file	MatrixStack.cpp
-\author Wen Sheng Tang
-\par	email: tang_wen_sheng\@nyp.edu.sg
+\file SceneGalaxy.h
+\author Li Zhaoyuan, Nathan Chia Shi-Lin, Terence Tan Ming Jie, Muhammad Nurhidayat Bin Suderman
+\par email: lizhaoyuan123@hotmail.com
 \brief
-Matrix Stack to replace openGL math function
+	SceneGalaxy cpp file, everything needed inside the scene, found here
 */
 /******************************************************************************/
 
@@ -652,7 +652,7 @@ void SceneGalaxy::Update(double dt)
 /****************************************************************************/
 /*!
 \brief
-	the lighting 
+
 \param
 
 \exception
@@ -727,7 +727,7 @@ void SceneGalaxy::lighting2()
 /****************************************************************************/
 /*!
 \brief
-	to render meshes
+	function to render meshes
 \param
 	the type of mesh and boolean for switch on or off lighting
 */
@@ -780,13 +780,9 @@ void SceneGalaxy::renderMesh(Mesh *mesh, bool enableLight)
 /****************************************************************************/
 /*!
 \brief
-
+	function to render text
 \param
-
-\exception
-
-\return
-
+	the type of mesh, the text string, the color of text
 */
 /****************************************************************************/
 void SceneGalaxy::RenderText(Mesh* mesh, std::string text, Color color)
@@ -819,13 +815,9 @@ void SceneGalaxy::RenderText(Mesh* mesh, std::string text, Color color)
 /****************************************************************************/
 /*!
 \brief
-
+	function to render text on screen
 \param
-
-\exception
-
-\return
-
+	the type of mesh, the text string, the color of text, font size of text, position x and position y of text
 */
 /****************************************************************************/
 void SceneGalaxy::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
@@ -874,13 +866,7 @@ void SceneGalaxy::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, 
 /****************************************************************************/
 /*!
 \brief
-
-\param
-
-\exception
-
-\return
-
+	function to render obj into the scene
 */
 /****************************************************************************/
 void SceneGalaxy::Render()
@@ -952,13 +938,7 @@ void SceneGalaxy::Render()
 /****************************************************************************/
 /*!
 \brief
-
-\param
-
-\exception
-
-\return
-
+	render XWing
 */
 /****************************************************************************/
 void SceneGalaxy::RenderXwing()
@@ -980,13 +960,7 @@ void SceneGalaxy::RenderXwing()
 /****************************************************************************/
 /*!
 \brief
-
-\param
-
-\exception
-
-\return
-
+	render numbers of Asteroid
 */
 /****************************************************************************/
 void SceneGalaxy::RenderAsteroid()
@@ -1095,13 +1069,7 @@ void SceneGalaxy::RenderAsteroid()
 /****************************************************************************/
 /*!
 \brief
-
-\param
-
-\exception
-
-\return
-
+	render missile
 */
 /****************************************************************************/
 void SceneGalaxy::RenderMissile()
@@ -1125,13 +1093,7 @@ void SceneGalaxy::RenderMissile()
 /****************************************************************************/
 /*!
 \brief
-
-\param
-
-\exception
-
-\return
-
+	render skybox
 */
 /****************************************************************************/
 void SceneGalaxy::RenderSkybox()
@@ -1194,13 +1156,9 @@ void SceneGalaxy::RenderSkybox()
 /****************************************************************************/
 /*!
 \brief
-
+	cutscene && switching scene
 \param
-
-\exception
-
-\return
-
+	doublt dt
 */
 /****************************************************************************/
 void SceneGalaxy::CutScene(double dt)
@@ -1209,7 +1167,6 @@ void SceneGalaxy::CutScene(double dt)
 	{
 		camera.Init(Vector3(100, 570, 200), Vector3(0, 500, -50), Vector3(0, 1, 0));
 		shootMissile = false;
-
 	}
 
 	if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == true && CheckAsteroidWave2() == true && CheckLargeAsteroid() == true)
@@ -1221,13 +1178,7 @@ void SceneGalaxy::CutScene(double dt)
 /****************************************************************************/
 /*!
 \brief
-
-\param
-
-\exception
-
-\return
-
+	exiting 
 */
 /****************************************************************************/
 void SceneGalaxy::Exit()

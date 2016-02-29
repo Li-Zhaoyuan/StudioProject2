@@ -534,7 +534,6 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 	if (SceneSoraJewel == true)
 	{
 		if (Testvalue.y <= 100)
-
 		{
 			if (XZ == 1)
 			{
