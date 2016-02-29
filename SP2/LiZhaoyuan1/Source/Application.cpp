@@ -161,13 +161,25 @@ void Application::Run()
 		}
 		else if (Gamemode::getinstance()->currentgamestate == 2 && loadingitonceSoraJewel == 1)
 			{
-				currscene = scene1;
-				//currscene->Init();
+				currscene = loading;
+				currscene->Init();
 				sceneischanged = true;
-				playmusic.musicSoraJewel();
-				loadingitonceSoraJewel += 1;
 		}
-		else if (Gamemode::getinstance()->currentgamestate == 3 && loadingitonceGalaxy == 1)
+		else if (Gamemode::getinstance()->currentgamestate == 3 && loadingitonceSoraJewel == 1)
+		{
+			currscene = scene1;
+			//currscene->Init();
+			sceneischanged = true;
+			playmusic.musicSoraJewel();
+			loadingitonceSoraJewel += 1;
+		}
+		else if (Gamemode::getinstance()->currentgamestate == 4 && loadingitonceSoraJewel == 1)
+		{
+			currscene = loading;
+			currscene->Init();
+			sceneischanged = true;
+		}
+		else if (Gamemode::getinstance()->currentgamestate == 5 && loadingitonceGalaxy == 1)
 			{
 				currscene = scene2;
 				//currscene->Init();
@@ -175,7 +187,13 @@ void Application::Run()
 				playmusic.musicGalaxy();
 				loadingitonceGalaxy += 1;
 			}
-		else if (Gamemode::getinstance()->currentgamestate == 4 && loadingitonceMun==1)
+		else if (Gamemode::getinstance()->currentgamestate == 6 && loadingitonceSoraJewel == 1)
+		{
+			currscene = loading;
+			currscene->Init();
+			sceneischanged = true;
+		}
+		else if (Gamemode::getinstance()->currentgamestate == 7 && loadingitonceMun==1)
 			{
 				currscene = scene3;
 				//currscene->Init();
