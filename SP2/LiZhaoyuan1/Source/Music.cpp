@@ -1,29 +1,33 @@
-#include <iostream>
-#include <string>
-#include <Windows.h>
-#include "include/irrKlang.h"
 #include "Music.h"
 
-using namespace std;
-using namespace irrklang;
-
-#pragma comment(lib,"irrKlang.lib")
-
-void music::musicInit()
+music::music()
 {
 	se = createIrrKlangDevice();
+	
+}
+
+music::~music()
+{
+	se->drop();
 }
 
 void music::musicSoraJewel()
 {
-	se->play2D("Music//bensound-theelevatorbossanova.mp3");
+	se->stopAllSounds();
+	MusicSoraJewel = se->addSoundSourceFromFile("Music//bensound-theelevatorbossanova.mp3");
+	se->play2D(MusicSoraJewel);
 }
 
 void music::musicGalaxy()
 {
-
+	se->stopAllSounds();
+	MusicGalaxy = se->addSoundSourceFromFile("Music//Star_Wars_Imperial_March_FULL.mp3");
+	se->play2D(MusicGalaxy);
 }
 
 void music::musicMun()
 {
+	se->stopAllSounds();
+	MusicMun = se->addSoundSourceFromFile("Music//calm1.mp3");
+	se->play2D(MusicMun);
 }

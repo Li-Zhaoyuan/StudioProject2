@@ -17,6 +17,7 @@
 #include "SceneMun.h"
 #include "SceneGalaxy.h"
 #include "SceneSoraJewel.h"
+#include "Music.h"
 GLFWwindow* m_window;
 GLFWmonitor* primary;
 const unsigned char FPS = 60; // FPS of this game
@@ -138,17 +139,20 @@ void Application::Run()
 			currscene = scene1;
 			//currscene->Init();
 			sceneischanged = true;
+			playmusic.musicSoraJewel();
 		}
 		else if (IsKeyPressed('X'))
 		{
 			currscene = scene2;
 			currscene->Init();
+			playmusic.musicGalaxy();
 		}
 		else if (IsKeyPressed('C'))
 		{
 			currscene = scene3;
 			//currscene->Init();
 			sceneischanged = true;
+			playmusic.musicMun();
 		}
 		if (Gamemode::getinstance()->currentgamestate == 1)
 		{
@@ -157,23 +161,44 @@ void Application::Run()
 		}
 		else if (Gamemode::getinstance()->currentgamestate == 2 && loadingitonceSoraJewel == 1)
 			{
-				currscene = scene1;
-				//currscene->Init();
+				currscene = loading;
+				currscene->Init();
 				sceneischanged = true;
-				loadingitonceSoraJewel += 1;
 		}
-		else if (Gamemode::getinstance()->currentgamestate == 3 && loadingitonceGalaxy == 1)
+		else if (Gamemode::getinstance()->currentgamestate == 3 && loadingitonceSoraJewel == 1)
+		{
+			currscene = scene1;
+			//currscene->Init();
+			sceneischanged = true;
+			playmusic.musicSoraJewel();
+			loadingitonceSoraJewel += 1;
+		}
+		else if (Gamemode::getinstance()->currentgamestate == 4 && loadingitonceSoraJewel == 1)
+		{
+			currscene = loading;
+			currscene->Init();
+			sceneischanged = true;
+		}
+		else if (Gamemode::getinstance()->currentgamestate == 5 && loadingitonceGalaxy == 1)
 			{
 				currscene = scene2;
 				//currscene->Init();
 				sceneischanged = true;
+				playmusic.musicGalaxy();
 				loadingitonceGalaxy += 1;
 			}
-		else if (Gamemode::getinstance()->currentgamestate == 4 && loadingitonceMun==1)
+		else if (Gamemode::getinstance()->currentgamestate == 6 && loadingitonceSoraJewel == 1)
+		{
+			currscene = loading;
+			currscene->Init();
+			sceneischanged = true;
+		}
+		else if (Gamemode::getinstance()->currentgamestate == 7 && loadingitonceMun==1)
 			{
 				currscene = scene3;
 				//currscene->Init();
 				sceneischanged = true;
+				playmusic.musicMun();
 				loadingitonceMun += 1;
 			}
 		if (sceneischanged == true)

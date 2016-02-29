@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file SceneMun.h
+\author Li Zhaoyuan, Nathan Chia Shi-Lin, Terence Tan Ming Jie, Muhammad Nurhidayat Bin Suderman
+\par email: lizhaoyuan123@hotmail.com
+\brief
+class for the scene at Mun
+*/
+/****************************************************************************/
 #ifndef SCENEMUN_H_
 #define SCENEMUN_H_
 
@@ -9,9 +18,19 @@
 #include "Camera3.h"
 #include "Camera4.h"
 #include "MatrixStack.h"
+<<<<<<< HEAD
 #include "ReadTextFile.h"
 
 #include <sstream>
+=======
+
+/******************************************************************************/
+/*!
+Class SceneMun:
+\brief	Defines the scene Mun and its methods
+*/
+/******************************************************************************/
+>>>>>>> ee484254225a680199b8773ad712f99ca8449a57
 class SceneMun : public Scene
 {
 

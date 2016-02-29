@@ -471,15 +471,15 @@ void Camera3::XWingCamera(double dt, float bounds)
 
 bool Camera3::boundaryCheckerX(float smallx, float largex, float smallz, float largez, Vector3 value)
 {
-	if ((value.z > smallz) && (value.z < largez) && (value.x > smallx) && (value.x < smallx + 4)){ return false; }
-	if ((value.z > smallz) && (value.z < largez) && (value.x < largex) && (value.x > largex - 4)){ return false; }
+	if ((value.z > smallz) && (value.z < largez) && (value.x > smallx) && (value.x < smallx + 6)){ return false; }
+	if ((value.z > smallz) && (value.z < largez) && (value.x < largex) && (value.x > largex - 6)){ return false; }
 	return true;
 }
 
 bool Camera3::boundaryCheckerZ(float smallx, float largex, float smallz, float largez, Vector3 value)
 {
-	if ((value.x > smallx) && (value.x < largex) && (value.z > smallz) && (value.z < smallz + 4)){ return false; }
-	if ((value.x > smallx) && (value.x < largex) && (value.z < largez) && (value.z > largez - 4)){ return false; }
+	if ((value.x > smallx) && (value.x < largex) && (value.z > smallz) && (value.z < smallz + 6)){ return false; }
+	if ((value.x > smallx) && (value.x < largex) && (value.z < largez) && (value.z > largez - 6)){ return false; }
 	return true;
 }
 
@@ -534,7 +534,6 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 	if (SceneSoraJewel == true)
 	{
 		if (Testvalue.y <= 100)
-
 		{
 			if (XZ == 1)
 			{
@@ -572,9 +571,6 @@ bool Camera3::AllMunBoundaryX(Vector3 Testvalue)
 	//cave center wall
 	if (!boundaryCheckerX(-48, -40.5, 26, 45, Testvalue))
 		return true;
-	////ore
-	//if (!boundaryCheckerX(-49, -40.5, 33, 36, Testvalue))
-	//	return true;
 	//cave right wall
 	if (!boundaryCheckerX(-48, -20, 41, 48, Testvalue))
 		return true;
@@ -598,9 +594,6 @@ bool Camera3::AllMunBoundaryZ(Vector3 Testvalue)
 	//cave center wall
 	if (!boundaryCheckerZ(-48, -40.5, 26, 45, Testvalue))
 		return true;
-	////ore
-	//if (!boundaryCheckerZ(-49, -40.5, 34, 35, Testvalue))
-	//	return true;
 	//cave right wall
 	if (!boundaryCheckerZ(-48, -20, 41, 48, Testvalue))
 		return true;
@@ -609,14 +602,22 @@ bool Camera3::AllMunBoundaryZ(Vector3 Testvalue)
 
 bool Camera3::AllSoraJewelBoundaryX(Vector3 Testvalue)
 {
-	if (!boundaryCheckerX(-0.4f, 50, -79, -27, Testvalue))
+<<<<<<< HEAD
+	if (!boundaryCheckerX(0.2f, 50, -78, -28, Testvalue))
+=======
+	if (!boundaryCheckerX(-0.4, 50, -79, -27, Testvalue))
+>>>>>>> bed9f395d3b0ab0a1279c20d4f548bd00a63a888
 		return true;
 	return false;
 }
 
 bool Camera3::AllSoraJewelBoundaryZ(Vector3 Testvalue)
 {
-	if (!boundaryCheckerZ(-0.4f, 50, -79, -27, Testvalue))
+<<<<<<< HEAD
+	if (!boundaryCheckerZ(0.2f, 50, -78, -28, Testvalue))
+=======
+	if (!boundaryCheckerZ(-0.4, 50, -79, -27, Testvalue))
+>>>>>>> bed9f395d3b0ab0a1279c20d4f548bd00a63a888
 		return true;
 	return false;
 }
@@ -642,40 +643,34 @@ void Camera3::SJUpdate(double dt, float bounds)
 
 	if (Application::IsKeyPressed('A')) /////
 	{
+		float speed = 5.0f;
 		Vector3 view = (target - position).Normalized();
 		Vector3 right = view.Cross(up);
-		right.y = 0;
-		right.Normalize();
-		up = right.Cross(view).Normalized();
+		view.y = 0;
 
 		Vector3 Testvalue;
-		Testvalue = (position - view * dt * CAMERA_SPEED);
+		Testvalue = (position + right * dt * -CAMERA_SPEED);
 
-		if (position.x - (right.x * (float)(CAMERA_SPEED * dt)) > -bounds
-			&& position.x - (right.x * (float)(CAMERA_SPEED * dt)) < bounds
-			&& OBJboundaryX(Testvalue) == true)
+		if ((position + right * dt * -CAMERA_SPEED).x < bounds && (position + right * dt * -CAMERA_SPEED).x > -bounds && OBJboundaryX(Testvalue) == true)
 		{
 			if (OBJboundaryY(Testvalue, 1) == true)
 			{
 				position.x -= right.x * (float)(CAMERA_SPEED * dt);
 				target.x -= right.x * (float)(CAMERA_SPEED * dt);
-				minimapcoords.y += (right.x*(float)(CAMERA_SPEED*dt*0.1)); //A
+				minimapcoords.y += (right.x*(float)(CAMERA_SPEED*dt*0.1)); //A x
 				minimapsoracoords.x -= (right.x*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
-		if (position.z - (right.z * (float)(CAMERA_SPEED * dt)) > -bounds
-			&& position.z - (right.z * (float)(CAMERA_SPEED * dt)) < bounds
-			&& OBJboundaryZ(Testvalue) == true)
+		if ((position + right * dt * -CAMERA_SPEED).z < bounds && (position + right * dt * -CAMERA_SPEED).z > -bounds && OBJboundaryZ(Testvalue) == true)
 		{
 			if (OBJboundaryY(Testvalue, 2) == true)
 			{
-				position.z -= right.z * (float)(CAMERA_SPEED * dt);
-				target.z -= right.z * (float)(CAMERA_SPEED * dt);
-				minimapcoords.x += (right.z*(float)(CAMERA_SPEED*dt*0.1)); //
+				position.z += (float)(right.z * dt * -CAMERA_SPEED);
+				target.z += right.z * dt * -CAMERA_SPEED;
+				minimapcoords.x += (right.z*(float)(CAMERA_SPEED*dt*0.1)); //A z
 				minimapsoracoords.y += (right.z*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
-
 	}
 	if (Application::IsKeyPressed(VK_RIGHT))
 	{
@@ -691,38 +686,33 @@ void Camera3::SJUpdate(double dt, float bounds)
 
 	}
 
-	if (Application::IsKeyPressed('D')) ///////
+	if (Application::IsKeyPressed('D'))  ///////
 	{
+		float speed = 5.0f;
 		Vector3 view = (target - position).Normalized();
 		Vector3 right = view.Cross(up);
-		right.y = 0;
-		right.Normalize();
-		up = right.Cross(view).Normalized();
+		view.y = 0;
 
 		Vector3 Testvalue;
-		Testvalue = (position - view * dt * CAMERA_SPEED);
+		Testvalue = (position + right * dt * CAMERA_SPEED);
 
-		if (position.x + (right.x * (float)(CAMERA_SPEED * dt)) > -bounds
-			&& position.x + (right.x * (float)(CAMERA_SPEED * dt)) < bounds
-			&& OBJboundaryX(Testvalue) == true)
+		if ((position + right * dt * CAMERA_SPEED).x < bounds && (position + right * dt * CAMERA_SPEED).x > -bounds && OBJboundaryX(Testvalue) == true)
 		{
 			if (OBJboundaryY(Testvalue, 1) == true)
 			{
-				position.x += right.x * (float)(CAMERA_SPEED * dt);
-				target.x += right.x * (float)(CAMERA_SPEED * dt);
-				minimapcoords.y -= (right.x*(float)(CAMERA_SPEED*dt*0.1));
+				position.x += right.x * dt * CAMERA_SPEED;
+				target.x += right.x * dt * CAMERA_SPEED;
+				minimapcoords.y -= (right.x*(float)(CAMERA_SPEED*dt*0.1)); //D x
 				minimapsoracoords.x += (right.x*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
-		if (position.z + (right.z * (float)(CAMERA_SPEED * dt)) > -bounds
-			&& position.z + (right.z * (float)(CAMERA_SPEED * dt)) < bounds
-			&& OBJboundaryZ(Testvalue) == true)
+		if ((position + right * dt * CAMERA_SPEED).z < bounds && (position + right * dt * CAMERA_SPEED).z > -bounds && OBJboundaryZ(Testvalue) == true)
 		{
 			if (OBJboundaryY(Testvalue, 2) == true)
 			{
-				position.z += right.z * (float)(CAMERA_SPEED * dt);
-				target.z += right.z * (float)(CAMERA_SPEED * dt);
-				minimapcoords.x -= (right.z*(float)(CAMERA_SPEED*dt*0.1)); //
+				position.z += right.z * dt * CAMERA_SPEED;
+				target.z += right.z * dt * CAMERA_SPEED;
+				minimapcoords.x -= (right.z*(float)(CAMERA_SPEED*dt*0.1)); //D z
 				minimapsoracoords.y -= (right.z*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
@@ -750,35 +740,35 @@ void Camera3::SJUpdate(double dt, float bounds)
 
 	if (Application::IsKeyPressed('W'))
 	{
+		float speed = 20.0f;
 		Vector3 view = (target - position).Normalized();
+		Vector3 right = view.Cross(up);
+		view.y = 0;
 
 		Vector3 Testvalue;
 		Testvalue = (position + view * dt * CAMERA_SPEED);
 
-		if (position.x + (view.x * (float)(CAMERA_SPEED * dt)) > -bounds
-			&& position.x + (view.x * (float)(CAMERA_SPEED * dt)) < bounds
-			&& OBJboundaryX(Testvalue) == true)
+		if ((position + view * dt * CAMERA_SPEED).x < bounds && (position + view * dt * CAMERA_SPEED).x > -bounds && OBJboundaryX(Testvalue) == true)
 		{
 			if (OBJboundaryY(Testvalue, 1) == true)
 			{
-				position.x += view.x * (float)(CAMERA_SPEED * dt);
-				target.x += view.x * (float)(CAMERA_SPEED * dt);
-				minimapcoords.y -= (view.x*(float)(CAMERA_SPEED*dt*0.1));//
+				position.x += view.x * dt * CAMERA_SPEED;
+				target.x += view.x * dt * CAMERA_SPEED;
+				minimapcoords.y -= (view.x*(float)(CAMERA_SPEED*dt*0.1));//W x
 				minimapsoracoords.x += (view.x*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
-		if (position.z + (view.z * (float)(CAMERA_SPEED * dt)) > -bounds
-			&& position.z + (view.z * (float)(CAMERA_SPEED * dt)) < bounds
-			&& OBJboundaryZ(Testvalue) == true)
+		if ((position + view * dt * CAMERA_SPEED).z < bounds && (position + view * dt * CAMERA_SPEED).z > -bounds && OBJboundaryZ(Testvalue) == true)
 		{
 			if (OBJboundaryY(Testvalue, 2) == true)
 			{
-				position.z += view.z * (float)(CAMERA_SPEED * dt);
-				target.z += view.z * (float)(CAMERA_SPEED * dt);
-				minimapcoords.x -= (view.z*(float)(CAMERA_SPEED*dt*0.1)); //
+				position.z += view.z * dt * CAMERA_SPEED;
+				target.z += view.z * dt * CAMERA_SPEED;
+				minimapcoords.x -= (view.z*(float)(CAMERA_SPEED*dt*0.1)); //W z
 				minimapsoracoords.y -= (view.z*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
+
 	}
 	if (Application::IsKeyPressed(VK_DOWN))
 	{
@@ -799,34 +789,32 @@ void Camera3::SJUpdate(double dt, float bounds)
 	}
 	if (Application::IsKeyPressed('S'))
 	{
+		float speed = -20.0f;
 		Vector3 view = (target - position).Normalized();
+		Vector3 right = view.Cross(up);
+		view.y = 0;
 
 		Vector3 Testvalue;
-		Testvalue = (position - view * dt * CAMERA_SPEED);
+		Testvalue = (position + view * dt * -CAMERA_SPEED);
 
-		if (position.x - (view.x * (float)(CAMERA_SPEED * dt)) > -bounds
-			&& position.x - (view.x * (float)(CAMERA_SPEED * dt)) < bounds
-			&& OBJboundaryX(Testvalue) == true)
+		if ((position + view * dt * -CAMERA_SPEED).x < bounds && (position + view * dt * -CAMERA_SPEED).x > -bounds && OBJboundaryX(Testvalue) == true)
 		{
 			if (OBJboundaryY(Testvalue, 1) == true)
 			{
-				position.x -= view.x * (float)(CAMERA_SPEED * dt);
-				target.x -= view.x * (float)(CAMERA_SPEED * dt);
-				minimapcoords.y += (view.x*(float)(CAMERA_SPEED*dt*0.1));//
+				position.x += view.x * dt * -CAMERA_SPEED;
+				target.x += view.x * dt * -CAMERA_SPEED;
+				minimapcoords.y += (view.x*(float)(CAMERA_SPEED*dt*0.1));//S x
 				minimapsoracoords.x += (view.x*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
-		if (position.z - (view.z * (float)(CAMERA_SPEED * dt)) > -bounds
-			&& position.z - (view.z * (float)(CAMERA_SPEED * dt)) < bounds
-			&& OBJboundaryZ(Testvalue) == true)
+		if ((position + view * dt * -CAMERA_SPEED).z < bounds && (position + view * dt * -CAMERA_SPEED).z > -bounds && OBJboundaryZ(Testvalue) == true)
 		{
 			if (OBJboundaryY(Testvalue, 2) == true)
 			{
-				position.z -= view.z * (float)(CAMERA_SPEED * dt);
-				target.z -= view.z * (float)(CAMERA_SPEED * dt);
-				minimapcoords.x += (view.z*(float)(CAMERA_SPEED*dt*0.1));
-				minimapsoracoords.y += (view.z*(float)(CAMERA_SPEED*dt*0.1));
-
+				position.z += view.z * dt * -CAMERA_SPEED;
+				target.z += view.z * dt * -CAMERA_SPEED;
+				minimapcoords.x += (view.z*(float)(CAMERA_SPEED*dt*0.1));// S z
+					minimapsoracoords.y += (view.z*(float)(CAMERA_SPEED*dt*0.1));
 			}
 		}
 	}
@@ -923,7 +911,7 @@ bool Camera3::OnGround()
 {
 	if (position.y <= 25 && (position.x >= -117 && position.z >= 30) && (position.x <= -51 && position.z <= 100))
 		return true;
-	if (position.y <= 5 && (position.x >= -140 && position.z >= 20) && (position.x <= 61 && position.z <= 113))
+	if (position.y <= 5 && (position.x >= -140 && position.z >= 0) && (position.x <= 61 && position.z <= 113))
 		return true;
 	else if (position.y <= 10 && (position.x >= -140 && position.z >= -112) && (position.x <= 62 && position.z <= 0))
 		return true;

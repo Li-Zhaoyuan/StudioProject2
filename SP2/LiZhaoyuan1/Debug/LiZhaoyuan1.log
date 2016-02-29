@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿Build started 29/2/2016 17:40:19.
      1>Project "C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
@@ -5,6 +6,110 @@
          SceneMun.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Debug\LiZhaoyuan1.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\\glew\lib" /LIBPATH:"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Debug" /LIBPATH:"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\\glfw\lib-msvc120" glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Debug\LiZhaoyuan1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Debug\LiZhaoyuan1.lib" /MACHINE:X86 Debug\Application.obj
+=======
+<<<<<<< HEAD
+﻿Build started 29/2/2016 5:35:25 PM.
+=======
+<<<<<<< HEAD
+﻿Build started 2/29/2016 4:38:19 PM.
+     1>Project "C:\Users\n1507\Desktop\StudioProject2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         LiZhaoyuan1.vcxproj -> C:\Users\n1507\Desktop\StudioProject2\SP2\Debug\LiZhaoyuan1.exe
+     1>Done Building Project "C:\Users\n1507\Desktop\StudioProject2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.04
+=======
+﻿Build started 29/2/2016 4:41:47 PM.
+>>>>>>> fc6031cddb1b51f8e6d40fe8632f816768bb7e0a
+     1>Project "C:\Users\mingj\Desktop\SP2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\mingj\Desktop\SP2\SP2\\Common\Source /IC:\Users\mingj\Desktop\SP2\SP2\\glfw\include /IC:\Users\mingj\Desktop\SP2\SP2\\glew\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\Application.cpp Source\Camera3.cpp Source\Missile.cpp Source\SceneGalaxy.cpp
+         SceneGalaxy.cpp
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\scenegalaxy.cpp(264): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\scenegalaxy.cpp(279): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\scenegalaxy.cpp(294): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\scenegalaxy.cpp(315): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\scenegalaxy.cpp(330): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\scenegalaxy.cpp(345): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\scenegalaxy.cpp(364): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\scenegalaxy.cpp(379): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\scenegalaxy.cpp(394): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\scenegalaxy.cpp(409): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\scenegalaxy.cpp(427): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\scenegalaxy.cpp(535): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\scenegalaxy.cpp(536): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\scenegalaxy.cpp(537): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\scenegalaxy.cpp(539): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\scenegalaxy.cpp(555): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\scenegalaxy.cpp(924): warning C4305: 'argument' : truncation from 'double' to 'float'
+         Missile.cpp
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\missile.cpp(34): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         Camera3.cpp
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(115): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(117): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(126): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(131): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(144): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(146): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(150): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(151): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(155): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(159): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(160): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(173): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(175): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(179): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(180): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(184): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(188): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(189): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(203): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(205): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(209): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(210): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(214): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(218): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(219): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(629): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(636): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(668): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(670): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(680): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(685): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(713): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(715): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(719): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(720): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(725): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(729): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(730): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(765): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(767): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(771): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(772): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(777): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(781): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(782): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(814): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(816): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(820): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(821): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(826): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(830): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(831): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(840): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(841): warning C4305: '=' : truncation from 'double' to 'float'
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(912): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\mingj\desktop\sp2\sp2\lizhaoyuan1\source\camera3.cpp(917): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+         Generating Code...
+         Compiling...
+         Application.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\mingj\Desktop\SP2\SP2\Debug\LiZhaoyuan1.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\mingj\Desktop\SP2\SP2\\glew\lib /LIBPATH:C:\Users\mingj\Desktop\SP2\SP2\Debug /LIBPATH:"C:\Users\mingj\Desktop\SP2\SP2\\glfw\lib-msvc120" glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\mingj\Desktop\SP2\SP2\Debug\LiZhaoyuan1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\mingj\Desktop\SP2\SP2\Debug\LiZhaoyuan1.lib" /MACHINE:X86 Debug\Application.obj
+>>>>>>> ee484254225a680199b8773ad712f99ca8449a57
          Debug\Camera.obj
          Debug\Camera2.obj
          Debug\Camera3.obj
@@ -25,9 +130,19 @@
          Debug\shader.obj
          Debug\SP2.obj
          Debug\Utility.obj
-         LiZhaoyuan1.vcxproj -> C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Debug\LiZhaoyuan1.exe
-     1>Done Building Project "C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
+     1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+         LiZhaoyuan1.vcxproj -> C:\Users\mingj\Desktop\SP2\SP2\Debug\LiZhaoyuan1.exe
+     1>Done Building Project "C:\Users\mingj\Desktop\SP2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
 
 Build succeeded.
 
+<<<<<<< HEAD
 Time Elapsed 00:00:04.97
+=======
+<<<<<<< HEAD
+Time Elapsed 00:00:03.72
+=======
+Time Elapsed 00:00:01.03
+>>>>>>> bed9f395d3b0ab0a1279c20d4f548bd00a63a888
+>>>>>>> fc6031cddb1b51f8e6d40fe8632f816768bb7e0a
+>>>>>>> ee484254225a680199b8773ad712f99ca8449a57

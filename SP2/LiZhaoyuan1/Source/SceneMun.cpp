@@ -166,6 +166,7 @@ void SceneMun::Init()
 	meshList[GEO_MUNRIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1));
 	meshList[GEO_MUNRIGHT]->textureID = LoadTGA("Image//MunRight.tga");
 	meshList[GEO_MUNGROUND] = MeshBuilder::GenerateQuad("ground", Color(0.2f, 0.2f, 0.2f));
+	meshList[GEO_MUNGROUND]->textureID = LoadTGA("Image//munFloorTexture.tga");
 
 	//Objs -Xwing
 	meshList[GEO_CRASHEDPLANE] = MeshBuilder::GenerateOBJ("crashedplane", "OBJ//XWingCrash.obj");
@@ -297,6 +298,7 @@ void SceneMun::Init()
 	camera.SceneMun = true;
 	camera.SceneSoraJewel = false;
 
+<<<<<<< HEAD
 	ReadFromTxt("TextFiles//Worried_Lady.txt", TextLady);
 	Ladypos = TextLady.begin();
 	sWLady = *Ladypos;
@@ -321,6 +323,45 @@ void SceneMun::Init()
 	textQD = false;
 	textminer1 = false;
 	textminer2 = false;
+=======
+	interact = 0;
+
+
+	crashedplaneCoord = Vector3(-36.f, 4.9f, -49.f);
+	planecoord = Vector3(-36.f, -2.9f, -49.f);
+	questdudehouseCoord = Vector3(33, -5, 20);
+	worriedladyhouseCoord = Vector3(20, -5, -38);
+	worriedladyCoord = Vector3(2, -4, -38);
+	questdudeCoord = Vector3(33, -4, 3);
+	minerandplusCoord = Vector3(-19, 0, 25);
+	caveCoord = Vector3(-35, -5, 35);
+	oreCoord = Vector3(-42, -2.75f, 35);
+	CalefareACoord = Vector3(26, -0.9f, -21);
+	CalefareBCoord = Vector3(26, -0.9f, -10);
+	CalefareCCoord = Vector3(15, -0.9f, 25);
+	
+	worriedladytempx = 0;
+	worriedladytempz = 0;
+
+	minerandplusx = 0;
+	minerandplusz = 0;
+
+	questdudex = 0;
+	questdudez = 0;
+
+	rotateworriedlady = 0;
+	rotateminer = 0;
+	rotatequestdude = 0;
+
+	loadingbar = 0.01f;
+
+	rotateAngle = 0;
+	
+	translatingChar = 0;
+	hoverheight = 0;
+	rotateplane = 0;
+	translateplane = 0;
+>>>>>>> ee484254225a680199b8773ad712f99ca8449a57
 }
 
 void SceneMun::Update(double dt)

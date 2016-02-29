@@ -171,7 +171,7 @@ void SceneSoraJewel::Init()
 	meshList[GEO_SORAJEWELRIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1));
 	meshList[GEO_SORAJEWELRIGHT]->textureID = LoadTGA("Image//SoraJewelRight.tga");
 
-	meshList[GEO_SORAJEWEL] = MeshBuilder::GenerateOBJ("BASE", "OBJ//SoraJewelBase_Kaii.obj");
+	meshList[GEO_SORAJEWEL] = MeshBuilder::GenerateOBJ("BASE", "OBJ//SoraJewelBase_Kaiii.obj");
 	meshList[GEO_SORAJEWEL]->textureID = LoadTGA("Image//SoraJewelBase_Texture.tga");
 	meshList[GEO_SORAJEWEL]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
 	meshList[GEO_SORAJEWEL]->material.kDiffuse.Set(0.3f, 0.3f, 0.3f);
@@ -306,7 +306,7 @@ void SceneSoraJewel::Init()
 	meshList[GEO_COMMANDER]->material.kShininess = 1.f;
 
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
-	meshList[GEO_TEXT]->textureID = LoadTGA("Image//TimesNewRoman.tga");
+	meshList[GEO_TEXT]->textureID = LoadTGA("Image//minecraft.tga");
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("lightball", Color(1, 1, 1), 18, 36);
 
 	Mtx44 projection;
@@ -356,14 +356,13 @@ void SceneSoraJewel::Init()
 	Engineerrotationy = 280;
 	Engineerpositionx2 = -65, Engineerpositiony2 = 100, Engineerpositionz2 = 56,Engineerrotationy2=180.f;
 }
-
 void SceneSoraJewel::Update(double dt)
 {
 	camera.SJUpdate(dt, 110);
 	fps = 1 / dt;
 	if (camera.position.x >= 50 && camera.position.z >= 50 && Application::IsKeyPressed('E') && QuestsDone)
 	{
-		Gamemode::getinstance()->currentgamestate = 3;
+		Gamemode::getinstance()->currentgamestate = 4;
 	}
 	if (Application::IsKeyPressed('1')) //enable back face culling
 		glEnable(GL_CULL_FACE);
@@ -447,7 +446,7 @@ void SceneSoraJewel::Update(double dt)
 	//Quest Lady conversation
 	if (talkwithQL)
 	{
-		timer += (float)(1 * dt);
+		timer += (float)(10 * dt);
 		if (timer >= 0.5f)
 		{
 			if (i < sDialogue.size())
@@ -488,7 +487,7 @@ void SceneSoraJewel::Update(double dt)
 	//Conversation with Engi before giving his beer
 	if (talkwithEngi1)
 	{
-		timer += (float)(1 * dt);
+		timer += (float)(10 * dt);
 		if (timer >= 0.5f)
 		{
 			if (j < sEngiDialogue.size())
@@ -529,7 +528,7 @@ void SceneSoraJewel::Update(double dt)
 	//After Giving beer
 	if (talkwithEngi2)
 	{
-		timer += (float)(1 * dt);
+		timer += (float)(10 * dt);
 		if (timer >= 0.5f)
 		{
 			if (k < sEngiDialogue2.size())
@@ -570,7 +569,7 @@ void SceneSoraJewel::Update(double dt)
 	//To activate Quest 2
 	if (talkwithCommando)
 	{
-		timer += (float)(1 * dt);
+		timer += (float)(10 * dt);
 		if (timer >= 0.5f)
 		{
 			if (l < sCommandoDialogue.size())
@@ -611,6 +610,7 @@ void SceneSoraJewel::Update(double dt)
 }
 void SceneSoraJewel::Engineeranimation(float dt)
 {
+
 	float playermovementx = 0.33f, playermovementz = 1 * 0.6f; dt = 0.04f;
 	if (QuestsDone == true)
 	{
@@ -992,15 +992,21 @@ void SceneSoraJewel::Render()
 	renderMesh(meshList[GEO_QUESTLADY], false);
 	modelStack.PopMatrix();
 
-	Renderengineers();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(Engineer.x, Engineer.y, Engineer.z);
-	modelStack.Rotate(180, 0, 1, 0);
-	modelStack.Rotate(90, 0, 0, 1);
-	modelStack.Scale(2.4f, 2.4f, 2.4f);
-	renderMesh(meshList[GEO_ENGINEER], false);
-	modelStack.PopMatrix();
+	if (QuestsDone == true)
+	{
+		Renderengineers();
+	}
+	else
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(Engineer.x, Engineer.y, Engineer.z);
+		modelStack.Rotate(180, 0, 1, 0);
+		modelStack.Rotate(90, 0, 0, 1);
+		modelStack.Scale(2.4f, 2.4f, 2.4f);
+		renderMesh(meshList[GEO_ENGINEER], false);
+		modelStack.PopMatrix();
+	}
+	
 
 	modelStack.PushMatrix();
 	modelStack.Translate(25, -1, -40);
@@ -1297,7 +1303,6 @@ void SceneSoraJewel::Exit()
 	glDeleteVertexArrays(1, &m_vertexArrayID);
 	glDeleteProgram(m_programID);
 }
-
 void SceneSoraJewel::interactions()
 {
 	tempview = (camera.target - camera.position); // your camera view
