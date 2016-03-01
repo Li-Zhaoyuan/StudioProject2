@@ -332,7 +332,7 @@ void SceneMun::Init()
 
 
 	crashedplaneCoord = Vector3(-36.f, 4.9f, -49.f);
-	planecoord = Vector3(-36.f, -2.9f, -49.f);
+	planecoord = Vector3(-36.f, -2.9f, -35.f);
 	questdudehouseCoord = Vector3(33, -5, 20);
 	worriedladyhouseCoord = Vector3(20, -5, -38);
 	worriedladyCoord = Vector3(2, -4, -38);
@@ -378,7 +378,7 @@ void SceneMun::Update(double dt)
 	}
 	if ((((interact >> REPAIRED) & 1) > 0))
 	{
-		camera.Init(Vector3(-60, 100, -35), Vector3(-35, 0, -40), Vector3(0, 1, 0));
+		camera.Init(Vector3(15, 10, 45), Vector3(-35, 0, -40), Vector3(0, 1, 0));
 	}
 
 	if (((((interact >> TALKING_TO_LADY) & 1) > 0)) && textWL)
@@ -647,7 +647,9 @@ void SceneMun::Update(double dt)
 		Gamemode::getinstance()->currentgamestate = 1;
 	}
 
-
+	TranslateCalefareA = (translatingChar, 0.f, 0.f);
+	TranslateCalefareB = (translatingChar, 0.f, 0.f);;
+	TranslateCalefareC = (0.f , 0.f, translatingChar);
 	npcRotate();
 	interactions();
 	camera.target;
@@ -1145,13 +1147,19 @@ void SceneMun::interactions()
 	viewAtMiner = (minerandplusCoord - camera.position);
 	viewAtCrashedPlane = (crashedplaneCoord - camera.position);
 	viewatSNAKE = (SNAKEcoords - camera.position);
+	viewatCalefareA = (CalefareACoord + TranslateCalefareA - camera.position);
+	viewatCalefareB = (CalefareBCoord + TranslateCalefareB - camera.position);
+	viewatCalefareC = (CalefareCCoord + TranslateCalefareC - camera.position);
 	RadiusFromOre = (viewAtOre - tempview).Length();
 	RadiusFromLady = (viewAtLady - tempview).Length();
 	RadiusFromDude = (viewAtDude - tempview).Length();
 	RadiusFromMiner = (viewAtMiner - tempview).Length();
 	RadiusFromCrashedPlane = (viewAtCrashedPlane - tempview).Length();
 	RadiusFromSnake = (viewatSNAKE-tempview).Length();
-	
+	// Add Calafare Radius Here  translatingChar-> this is the movement
+	RadiusFromCalafareA = (viewatCalefareA - tempview).Length();
+	RadiusFromCalafareB = (viewatCalefareB - tempview).Length();
+	RadiusFromCalafareC = (viewatCalefareC - tempview).Length();
 	if ((RadiusFromOre < 2.5f && (((interact >> MINED) & 1) < 1) && (((interact >> PLAYER_GET_PICKAXE) & 1) > 0))
 		|| (RadiusFromCrashedPlane < 7.5f && (((interact >> REPAIRED) & 1) < 1))
 		|| RadiusFromLady < 6.0f
@@ -1556,6 +1564,10 @@ void SceneMun::RenderInfomationOnScreen()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to interact", Color(0, 1, 0), 3, 8, 17);
 	}
+	RenderTextOnScreen(meshList[GEO_TEXT], "WASD to move", Color(0, 1, 0), 1, 65, 49);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse to move Camera", Color(0, 1, 0), 1, 65, 48);
+	RenderTextOnScreen(meshList[GEO_TEXT], "E to interact when available", Color(0, 1, 0), 1, 65, 47);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Left click when textbox appear", Color(0, 1, 0), 1, 65, 46);
 	std::stringstream playerPos;
 	playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosz;
 	//RenderTextOnScreen(meshList[GEO_TEXT], playerPos.str(), Color(1, 0, 0), 2, 0, 18);
