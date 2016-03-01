@@ -1,21 +1,37 @@
-<<<<<<< HEAD
-﻿Build started 3/1/2016 3:35:38 PM.
-     1>Project "C:\Users\n1507\Desktop\StudioProject2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
-     1>Link:
-         LiZhaoyuan1.vcxproj -> C:\Users\n1507\Desktop\StudioProject2\SP2\Debug\LiZhaoyuan1.exe
-     1>Done Building Project "C:\Users\n1507\Desktop\StudioProject2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:00.04
-=======
-﻿Build started 1/3/2016 15:34:06.
+﻿Build started 2/3/2016 02:56:47.
      1>Project "C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
-     1>Link:
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\\Common\Source" /I"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\\glfw\include" /I"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\\glew\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\SceneSoraJewel.cpp
+         SceneSoraJewel.cpp
+     1>c:\users\user\desktop\studio project\sp2\sp2ggnathanneedshelp\sp2\lizhaoyuan1\source\scenesorajewel.cpp(422): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\user\desktop\studio project\sp2\sp2ggnathanneedshelp\sp2\lizhaoyuan1\source\scenesorajewel.cpp(497): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\user\desktop\studio project\sp2\sp2ggnathanneedshelp\sp2\lizhaoyuan1\source\scenesorajewel.cpp(1038): warning C4244: 'argument' : conversion from 'double' to 'GLenum', possible loss of data
+     1>c:\users\user\desktop\studio project\sp2\sp2ggnathanneedshelp\sp2\lizhaoyuan1\source\scenesorajewel.cpp(1047): warning C4244: 'argument' : conversion from 'double' to 'GLenum', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Debug\LiZhaoyuan1.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\\glew\lib" /LIBPATH:"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Debug" /LIBPATH:"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\\glfw\lib-msvc120" glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Debug\LiZhaoyuan1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Debug\LiZhaoyuan1.lib" /MACHINE:X86 Debug\Application.obj
+         Debug\Camera.obj
+         Debug\Camera2.obj
+         Debug\Camera3.obj
+         Debug\Camera4.obj
+         Debug\LoadingScreen.obj
+         Debug\LoadOBJ.obj
+         Debug\LoadTGA.obj
+         Debug\main.obj
+         Debug\Mesh.obj
+         Debug\MeshBuilder.obj
+         Debug\Missile.obj
+         Debug\Music.obj
+         Debug\Physics.obj
+         Debug\ReadTextFiles.obj
+         Debug\SceneGalaxy.obj
+         Debug\SceneMun.obj
+         Debug\SceneSoraJewel.obj
+         Debug\shader.obj
+         Debug\SP2.obj
+         Debug\Utility.obj
          LiZhaoyuan1.vcxproj -> C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Debug\LiZhaoyuan1.exe
      1>Done Building Project "C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.12
->>>>>>> 406ea627b33e1f6ecb7288d31b58c85d351a8abb
+Time Elapsed 00:00:02.87

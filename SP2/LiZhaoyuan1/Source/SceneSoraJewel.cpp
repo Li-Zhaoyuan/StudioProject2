@@ -82,6 +82,18 @@ void SceneSoraJewel::Init()
 	m_parameters[U_LIGHT1_COSINNER] = glGetUniformLocation(m_programID, "lights[1].cosInner");
 	m_parameters[U_LIGHT1_EXPONENT] = glGetUniformLocation(m_programID, "lights[1].exponent");
 
+	m_parameters[U_LIGHT2_POSITION] = glGetUniformLocation(m_programID, "lights[2].position_cameraspace");
+	m_parameters[U_LIGHT2_COLOR] = glGetUniformLocation(m_programID, "lights[2].color");
+	m_parameters[U_LIGHT2_POWER] = glGetUniformLocation(m_programID, "lights[2].power");
+	m_parameters[U_LIGHT2_KC] = glGetUniformLocation(m_programID, "lights[2].kC");
+	m_parameters[U_LIGHT2_KL] = glGetUniformLocation(m_programID, "lights[2].kL");
+	m_parameters[U_LIGHT2_KQ] = glGetUniformLocation(m_programID, "lights[2].kQ");
+	m_parameters[U_LIGHT2_TYPE] = glGetUniformLocation(m_programID, "lights[2].type");
+	m_parameters[U_LIGHT2_SPOTDIRECTION] = glGetUniformLocation(m_programID, "lights[2].spotDirection");
+	m_parameters[U_LIGHT2_COSCUTOFF] = glGetUniformLocation(m_programID, "lights[2].cosCutoff");
+	m_parameters[U_LIGHT2_COSINNER] = glGetUniformLocation(m_programID, "lights[2].cosInner");
+	m_parameters[U_LIGHT2_EXPONENT] = glGetUniformLocation(m_programID, "lights[2].exponent");
+
 	// Get a handle for our "colorTexture" uniform
 	m_parameters[U_COLOR_TEXTURE_ENABLED] = glGetUniformLocation(m_programID, "colorTextureEnabled");
 	m_parameters[U_COLOR_TEXTURE] = glGetUniformLocation(m_programID, "colorTexture");
@@ -93,12 +105,12 @@ void SceneSoraJewel::Init()
 
 	glUseProgram(m_programID);
 
-	glUniform1i(m_parameters[U_NUMLIGHTS], 2);
+	glUniform1i(m_parameters[U_NUMLIGHTS], 3);
 
 	light[0].type = Light::LIGHT_DIRECTIONAL;
-	light[0].position.Set(0, 100, -100);
+	light[0].position.Set(0, 80, 5);
 	light[0].color.Set(1, 1, 1);
-	light[0].power = 1;
+	light[0].power = 1.5f;
 	light[0].kC = 1.f;
 	light[0].kL = 0.01f;
 	light[0].kQ = 0.001f;
@@ -107,10 +119,10 @@ void SceneSoraJewel::Init()
 	light[0].exponent = 3.f;
 	light[0].spotDirection.Set(0.f, 1.f, 0.f);
 
-	light[1].type = Light::LIGHT_DIRECTIONAL;
-	light[1].position.Set(0, 100, 100);
+	light[1].type = Light::LIGHT_POINT;
+	light[1].position.Set(25, 45, -53);
 	light[1].color.Set(1, 1, 1);
-	light[1].power = 1;
+	light[1].power = 1.f;
 	light[1].kC = 1.f;
 	light[1].kL = 0.01f;
 	light[1].kQ = 0.001f;
@@ -118,6 +130,18 @@ void SceneSoraJewel::Init()
 	light[1].cosInner = cos(Math::DegreeToRadian(30));
 	light[1].exponent = 3.f;
 	light[1].spotDirection.Set(0.f, 1.f, 0.f);
+
+	light[2].type = Light::LIGHT_POINT;
+	light[2].position.Set(-25, -10, 53);
+	light[2].color.Set(1, 1, 1);
+	light[2].power = 1.f;
+	light[2].kC = 1.f;
+	light[2].kL = 0.01f;
+	light[2].kQ = 0.001f;
+	light[2].cosCutoff = cos(Math::DegreeToRadian(45));
+	light[2].cosInner = cos(Math::DegreeToRadian(30));
+	light[2].exponent = 3.f;
+	light[2].spotDirection.Set(0.f, 1.f, 0.f);
 
 	glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
 	glUniform3fv(m_parameters[U_LIGHT0_COLOR], 1, &light[0].color.r);
@@ -138,6 +162,16 @@ void SceneSoraJewel::Init()
 	glUniform1f(m_parameters[U_LIGHT1_COSCUTOFF], light[1].cosCutoff);
 	glUniform1f(m_parameters[U_LIGHT1_COSINNER], light[1].cosInner);
 	glUniform1f(m_parameters[U_LIGHT1_EXPONENT], light[1].exponent);
+
+	glUniform1i(m_parameters[U_LIGHT2_TYPE], light[1].type);
+	glUniform3fv(m_parameters[U_LIGHT2_COLOR], 1, &light[1].color.r);
+	glUniform1f(m_parameters[U_LIGHT2_POWER], light[1].power);
+	glUniform1f(m_parameters[U_LIGHT2_KC], light[1].kC);
+	glUniform1f(m_parameters[U_LIGHT2_KL], light[1].kL);
+	glUniform1f(m_parameters[U_LIGHT2_KQ], light[1].kQ);
+	glUniform1f(m_parameters[U_LIGHT2_COSCUTOFF], light[1].cosCutoff);
+	glUniform1f(m_parameters[U_LIGHT2_COSINNER], light[1].cosInner);
+	glUniform1f(m_parameters[U_LIGHT2_EXPONENT], light[1].exponent);
 	
 	//Initialize camera settings
 
@@ -305,6 +339,27 @@ void SceneSoraJewel::Init()
 	meshList[GEO_COMMANDER]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
 	meshList[GEO_COMMANDER]->material.kShininess = 1.f;
 
+	meshList[GEO_XWINGBODY] = MeshBuilder::GenerateOBJ("XwingBody", "OBJ//XwingBody.obj");
+	meshList[GEO_XWINGBODY]->textureID = LoadTGA("Image//XWing_Texture.tga");
+	meshList[GEO_XWINGBODY]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_XWINGBODY]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_XWINGBODY]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_XWINGBODY]->material.kShininess = 1.f;
+
+	meshList[GEO_XWING1] = MeshBuilder::GenerateOBJ("XwingRight", "OBJ//XwingRightWing.obj");
+	meshList[GEO_XWING1]->textureID = LoadTGA("Image//XWing_Texture.tga");
+	meshList[GEO_XWING1]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_XWING1]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_XWING1]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_XWING1]->material.kShininess = 1.f;
+
+	meshList[GEO_XWING2] = MeshBuilder::GenerateOBJ("XwingLeft", "OBJ//XwingLeftWing.obj");
+	meshList[GEO_XWING2]->textureID = LoadTGA("Image//XWing_Texture.tga");
+	meshList[GEO_XWING2]->material.kSpecular.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_XWING2]->material.kDiffuse.Set(0.5f, 0.5f, 0.5f);
+	meshList[GEO_XWING2]->material.kAmbient.Set(0.1f, 0.1f, 0.1f);
+	meshList[GEO_XWING2]->material.kShininess = 1.f;
+
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//minecraft.tga");
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("lightball", Color(1, 1, 1), 18, 36);
@@ -348,10 +403,14 @@ void SceneSoraJewel::Init()
 	sCommandoDialogue = *Commandopos;
 	ssCommandoDialogue << sCommandoDialogue[0];
 
+	cutscene = false;
+
 	camera.SceneGalaxy = false;
 	camera.SceneMun = false;
 	camera.SceneSoraJewel = true;
 
+	RotationWings1 = 5;
+	RotationWings2 = -5;
 	Engineerpositionx = -78.f, Engineerpositiony = -2.f , Engineerpositionz = -45.5f; Engineerrotationarmleft = 45; Engineerrotationarmright = -45; Engineerrotationlegleft = -45; Engineerrotationlegright = 45;
 	Engineerrotationy = 280;
 	Engineerpositionx2 = -65, Engineerpositiony2 = 100, Engineerpositionz2 = 56,Engineerrotationy2=180.f;
@@ -375,6 +434,10 @@ void SceneSoraJewel::Update(double dt)
 	if (cutscene)
 	{
 		camera.Init(Vector3(-20, 9, -109), Vector3(-20, 12, 1), Vector3(0, 1, 0));
+		if (RotationWings1 > 0 && Xwing.y >= 35)
+			RotationWings1 -= (float)(1 * dt);
+		if (RotationWings2 < 0 && Xwing.y >= 35)
+			RotationWings2 += (float)(1 * dt);
 		if (Xwing.y < 35)
 			Xwing.y += (float)(3 * dt);
 		if (Xwing.x < 61)
@@ -419,38 +482,6 @@ void SceneSoraJewel::Update(double dt)
 		camera.position.z = 82;
 		camera.up.y = 1;
 	}
-	/*if (Application::IsKeyPressed('E') && (camera.position.x >= -13 && camera.position.z >= -60) && (camera.position.x <= -1 && camera.position.z <= -46))
-	{
-		Quest1 = true;
-		talkwithQL = true;
-	}
-	if (Application::IsKeyPressed('E') && Quest1 == true && (camera.position.x >= -96.2f && camera.position.z >= 45) && (camera.position.x <= -90 && camera.position.z <= 51) && camera.position.y >= 14)
-	{
-		Quest2 = true;
-		talkwithCommando = true;
-	}
-	if (Application::IsKeyPressed('E') && Quest2 == true && (camera.position.x >= 13 && camera.position.z >= -27) && (camera.position.x <= 20 && camera.position.z <= -20))
-	{
-		EmptyinHand = true;
-		BeerinHand = false;
-	}
-	if (Application::IsKeyPressed('E') && EmptyinHand && Quest2 == true && (camera.position.x >= -57 && camera.position.z >= -95) && (camera.position.x <= -45 && camera.position.z <= -83))
-	{
-		EmptyinHand = false;
-		BeerinHand = true;
-	}
-	if (Application::IsKeyPressed('E') && BeerinHand && (camera.position.x >= -80 && camera.position.z >= -42) && (camera.position.x <= -72 && camera.position.z <= -30))
-	{
-		talkwithEngi2 = true;
-		Quest1Done = true;
-		Quest2Done = true;
-		BeerinHand = false;
-		givenBeer = true;
-	}
-	if (Application::IsKeyPressed('E') && !givenBeer && (camera.position.x >= -80 && camera.position.z >= -42) && (camera.position.x <= -72 && camera.position.z <= -30))
-	{
-		talkwithEngi1 = true;
-	}*/
 	if (Quest1Done == true && Quest2Done == true)
 	{
 		QuestsDone = true;
@@ -942,11 +973,28 @@ void SceneSoraJewel::Render()
 	renderMesh(meshList[GEO_SORAJEWEL], true);
 	modelStack.PopMatrix();
 
+	//modelStack.PushMatrix();
+	//modelStack.Translate(-85, 19, 65);
+	//modelStack.Rotate(90, 0, 1, 0);
+	//modelStack.Scale(5.f, 5.f, 5.f);
+	//renderMesh(meshList[GEO_XWING], true);
+	//modelStack.PopMatrix();
+
 	modelStack.PushMatrix();
 	modelStack.Translate(Xwing.x, Xwing.y, Xwing.z);
 	modelStack.Rotate(90, 0, 1, 0);
 	modelStack.Scale(5.f, 5.f, 5.f);
-	renderMesh(meshList[GEO_XWING], true);
+	renderMesh(meshList[GEO_XWINGBODY], true);
+
+	modelStack.PushMatrix();
+	modelStack.Rotate(RotationWings1, 0, 0, 1);
+	renderMesh(meshList[GEO_XWING1], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Rotate(RotationWings2, 0, 0, 1);
+	renderMesh(meshList[GEO_XWING2], true);
+	modelStack.PopMatrix();
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
@@ -1149,13 +1197,13 @@ void SceneSoraJewel::renderText()
 	}
 
 	if (talkwithQL)
-		RenderTextOnScreen(meshList[GEO_TEXT], ssDialogue.str(), Color(0, 1, 0), 2.3f, 4.7f, 4);
+		RenderTextOnScreen(meshList[GEO_TEXT], ssDialogue.str(), Color(0, 0, 0), 2.3f, 4.7f, 4);
 	if (talkwithEngi1)
-		RenderTextOnScreen(meshList[GEO_TEXT], ssEngiDialogue.str(), Color(0, 1, 0), 2.5f, 5, 4);
+		RenderTextOnScreen(meshList[GEO_TEXT], ssEngiDialogue.str(), Color(0, 0, 0), 2.5f, 5, 4);
 	if (talkwithEngi2)
-		RenderTextOnScreen(meshList[GEO_TEXT], ssEngiDialogue2.str(), Color(0, 1, 0), 2.5f, 5, 4);
+		RenderTextOnScreen(meshList[GEO_TEXT], ssEngiDialogue2.str(), Color(0, 0, 0), 2.5f, 5, 4);
 	if (talkwithCommando)
-		RenderTextOnScreen(meshList[GEO_TEXT], ssCommandoDialogue.str(), Color(0, 1, 0), 2.5f, 5, 4);
+		RenderTextOnScreen(meshList[GEO_TEXT], ssCommandoDialogue.str(), Color(0, 0, 0), 2.5f, 5, 4);
 }
 void SceneSoraJewel::Renderengineers()
 {
@@ -1349,33 +1397,34 @@ void SceneSoraJewel::interactions()
 		Quest1 = true;
 		talkwithQL = true;
 	}
-	else if (RadiusFromQuestLady > 10.0f)
+	else if (RadiusFromQuestLady > 17.0f)
 	{
 		interact &= ~(1 << INTERACT_QUESTLADY);
 		talkwithQL = false;
 	}
 
-	if (RadiusFromEngineer < 15.0f
-		&& Application::IsKeyPressed('E'))
+	if (RadiusFromEngineer < 20.0f
+		&& Application::IsKeyPressed('E') && !BeerinHand && !QuestsDone)
 	{
 		interact |= 1 << INTERACT_ENGINEER1;
 		talkwithEngi1 = true;
 	}
-	else if (RadiusFromEngineer > 15.0f)
+	else if (RadiusFromEngineer > 20.0f)
 	{
 		interact &= ~(1 << INTERACT_ENGINEER1);
 		talkwithEngi1 = false;
 	}
 
-	if (RadiusFromEngineer < 15.0f
+	if (RadiusFromEngineer < 20.0f
 		&& Application::IsKeyPressed('E') && BeerinHand)
 	{
 		interact |= 1 << INTERACT_ENGINEER2;
+		BeerinHand = false;
 		Quest1Done = true;
 		Quest2Done = true;
 		talkwithEngi2 = true;
 	}
-	else if (RadiusFromEngineer > 15.0f)
+	else if (RadiusFromEngineer > 20.0f)
 	{
 		interact &= ~(1 << INTERACT_ENGINEER2);
 		talkwithEngi2 = false;
@@ -1395,9 +1444,10 @@ void SceneSoraJewel::interactions()
 	}
 
 	if (RadiusFromKeg < 15.0f
-		&& Application::IsKeyPressed('E') && EmptyinHand && Quest2)
+		&& Application::IsKeyPressed('E') && EmptyinHand)
 	{
 		interact |= 1 << INTERACT_KEG;
+		EmptyinHand = false;
 		BeerinHand = true;
 	}
 	else if (RadiusFromKeg > 15.0f)
@@ -1420,6 +1470,7 @@ void SceneSoraJewel::interactions()
 		&& Application::IsKeyPressed('E') && Quest2)
 	{
 		interact |= 1 << INTERACT_BEER;
+		BeerinHand = false;
 		EmptyinHand = true;
 	}
 	else if (RadiusFromBeer > 7.0f)
