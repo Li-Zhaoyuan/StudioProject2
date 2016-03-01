@@ -558,10 +558,6 @@ void SceneGalaxy::Update(double dt)
 	camera.XWingCamera(dt, 100);
 	fps = 1.f / dt;
 
-	if (Application::IsKeyPressed('E'))
-	{
-		Gamemode::getinstance()->currentgamestate = 4;
-	}
 	if (Application::IsKeyPressed('5'))
 	{
 		light[0].type = Light::LIGHT_SPOT;
@@ -924,7 +920,6 @@ void SceneGalaxy::Render()
 	RenderXwing();
 	RenderAsteroid();
 	RenderMissile();
-	QuestDetail();
 
 	RenderTextOnScreen(meshList[GEO_TEXT], "+", Color(0, 1, 0), 3, 13.1, 9);
 	std::stringstream playerPos;
