@@ -115,7 +115,7 @@ private:
 	float camPosX = 0;
 	float camPosY = 0;
 	float camPosz = 0;
-	float loadingbar = 0.01f;
+	float loadingbar = 0;
 	float rotateLimbs = 0;
 	MS modelStack, viewStack, projectionStack;
 };
