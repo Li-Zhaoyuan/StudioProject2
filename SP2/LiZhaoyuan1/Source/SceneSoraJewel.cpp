@@ -145,8 +145,8 @@ void SceneSoraJewel::Init()
 
 	//camera.Init(Vector3(0, 350, 1), Vector3(0, 7, 0), Vector3(0, 1, 0));
 
-	camera.minimapsoracoords.x = 78.f;
-	camera.minimapsoracoords = 55.f;
+	camera.minimapsoracoords.x = 78.f; //
+	camera.minimapsoracoords.y = 55.f; //
 
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
 

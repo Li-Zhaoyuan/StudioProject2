@@ -318,6 +318,11 @@ void SceneMun::Init()
 	sMiner2 = *Minerpos2;
 	ssMiner2 << sMiner2[0];
 
+	a = 1;
+	b = 1;
+	c = 1;
+	d = 1;
+
 	textWL = false;
 	textQD = false;
 	textminer1 = false;
@@ -554,7 +559,7 @@ void SceneMun::Update(double dt)
 						Minerpos2 = TextMiner2.begin();
 						sMiner2 = *Minerpos2;
 						ssMiner2 << sMiner2[0];
-						a = 1;
+						d = 1;
 					}
 				}
 			}
@@ -566,7 +571,7 @@ void SceneMun::Update(double dt)
 		Minerpos2 = TextMiner2.begin();
 		sMiner2 = *Minerpos2;
 		ssMiner2 << sMiner2[0];
-		a = 1;
+		d = 1;
 	}
 
 	fps = (int)(1 / dt);
@@ -905,11 +910,11 @@ void SceneMun::Render()
 	renderMesh(meshList[GEO_MUNGROUND], false);
 	modelStack.PopMatrix();
 
-	modelStack.PushMatrix();
+	/*modelStack.PushMatrix();
 	modelStack.Translate(0, 0, 0);
 	modelStack.Scale(1.f, 1.f, 1.f);
 	renderMesh(meshList[GEO_SNAKE], false);
-	modelStack.PopMatrix();
+	modelStack.PopMatrix();*/
 
 	if ((((interact >> REPAIRED) & 1) < 1))
 	{
