@@ -134,26 +134,26 @@ void Application::Run()
 		{
 			currscene->Init();
 		}
-		else if (IsKeyPressed('Z'))
-		{
-			currscene = scene1;
-			//currscene->Init();
-			sceneischanged = true;
-			playmusic.musicSoraJewel();
-		}
-		else if (IsKeyPressed('X'))
-		{
-			currscene = scene2;
-			currscene->Init();
-			playmusic.musicGalaxy();
-		}
-		else if (IsKeyPressed('C'))
-		{
-			currscene = scene3;
-			//currscene->Init();
-			sceneischanged = true;
-			playmusic.musicMun();
-		}
+		//else if (IsKeyPressed('Z'))
+		//{
+		//	currscene = scene1;
+		//	//currscene->Init();
+		//	sceneischanged = true;
+		//	playmusic.musicSoraJewel();
+		//}
+		//else if (IsKeyPressed('X'))
+		//{
+		//	currscene = scene2;
+		//	currscene->Init();
+		//	playmusic.musicGalaxy();
+		//}
+		//else if (IsKeyPressed('C'))
+		//{
+		//	currscene = scene3;
+		//	//currscene->Init();
+		//	sceneischanged = true;
+		//	playmusic.musicMun();
+		//}
 		if (Gamemode::getinstance()->currentgamestate == 1)
 		{
 			currscene = new SP2();

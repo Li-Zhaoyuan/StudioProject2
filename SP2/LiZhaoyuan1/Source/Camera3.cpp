@@ -785,7 +785,7 @@ void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minb
 				position.x += view.x * dt * CAMERA_SPEED;
 				target.x += view.x * dt * CAMERA_SPEED;
 				minimapcoords.y -= (view.x*(float)(CAMERA_SPEED*dt*0.1));//W x
-				minimapsoracoords.x += (view.x*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.x += (view.x*(float)(CAMERA_SPEED*dt*0.05f));
 			}
 		}
 		if (position.z + (view.z * (float)(CAMERA_SPEED * dt)) > minboundsz
@@ -798,7 +798,7 @@ void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minb
 				position.z += view.z * dt * CAMERA_SPEED;
 				target.z += view.z * dt * CAMERA_SPEED;
 				minimapcoords.x -= (view.z*(float)(CAMERA_SPEED*dt*0.1)); //W z
-				minimapsoracoords.y -= (view.z*(float)(CAMERA_SPEED*dt*0.05f*(10/11)));
+				minimapsoracoords.y -= (view.z*(float)(CAMERA_SPEED*dt*0.05f*(10.f / 11.f)));
 			}
 		}
 

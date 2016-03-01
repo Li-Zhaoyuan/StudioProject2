@@ -163,7 +163,7 @@ private:
 	bool rotateXWing_Limit;
 
 	bool shootMissile = false; 
-	bool QuestDetailShown = false;
+	bool QuestDetailShown = true;
 	bool renderAsteroid = true;
 	bool renderAsteroid2 = true;
 	bool renderAsteroid3 = true;
