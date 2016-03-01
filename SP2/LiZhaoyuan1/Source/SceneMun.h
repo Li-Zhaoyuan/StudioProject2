@@ -235,6 +235,9 @@ private:
 	Vector3 CalefareBCoord = Vector3(26, -0.9f, -10);
 	Vector3 CalefareCCoord = Vector3(15, -0.9f, 25);
 	Vector3 SNAKEcoords = Vector3(47.f, -5.5f, 46.f);
+	Vector3 TranslateCalefareA;
+	Vector3 TranslateCalefareB;
+	Vector3 TranslateCalefareC;
 	Vector3 tempview;
 	Vector3 viewAtOre;
 	Vector3 viewAtLady;
@@ -242,6 +245,9 @@ private:
 	Vector3 viewAtMiner;
 	Vector3 viewAtCrashedPlane;
 	Vector3 viewatSNAKE;
+	Vector3 viewatCalefareA;
+	Vector3 viewatCalefareB;
+	Vector3 viewatCalefareC;
 	float worriedladytempx = 0;
 	float worriedladytempz = 0;
 
@@ -263,6 +269,9 @@ private:
 	float RadiusFromMiner;
 	float RadiusFromCrashedPlane;
 	float RadiusFromSnake;
+	float RadiusFromCalafareA;
+	float RadiusFromCalafareB;
+	float RadiusFromCalafareC;
 	float rotateAngle = 0;
 	float rotateLimbs = 0;
 	float rotateWhole = 0;

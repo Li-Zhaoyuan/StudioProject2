@@ -647,7 +647,9 @@ void SceneMun::Update(double dt)
 		Gamemode::getinstance()->currentgamestate = 1;
 	}
 
-
+	TranslateCalefareA = (translatingChar, 0.f, 0.f);
+	TranslateCalefareB = (translatingChar, 0.f, 0.f);;
+	TranslateCalefareC = (0.f , 0.f, translatingChar);
 	npcRotate();
 	interactions();
 	camera.target;
@@ -1145,13 +1147,19 @@ void SceneMun::interactions()
 	viewAtMiner = (minerandplusCoord - camera.position);
 	viewAtCrashedPlane = (crashedplaneCoord - camera.position);
 	viewatSNAKE = (SNAKEcoords - camera.position);
+	viewatCalefareA = (CalefareACoord + TranslateCalefareA - camera.position);
+	viewatCalefareB = (CalefareBCoord + TranslateCalefareB - camera.position);
+	viewatCalefareC = (CalefareCCoord + TranslateCalefareC - camera.position);
 	RadiusFromOre = (viewAtOre - tempview).Length();
 	RadiusFromLady = (viewAtLady - tempview).Length();
 	RadiusFromDude = (viewAtDude - tempview).Length();
 	RadiusFromMiner = (viewAtMiner - tempview).Length();
 	RadiusFromCrashedPlane = (viewAtCrashedPlane - tempview).Length();
 	RadiusFromSnake = (viewatSNAKE-tempview).Length();
-	
+	// Add Calafare Radius Here  translatingChar-> this is the movement
+	RadiusFromCalafareA = (viewatCalefareA - tempview).Length();
+	RadiusFromCalafareB = (viewatCalefareB - tempview).Length();
+	RadiusFromCalafareC = (viewatCalefareC - tempview).Length();
 	if ((RadiusFromOre < 2.5f && (((interact >> MINED) & 1) < 1) && (((interact >> PLAYER_GET_PICKAXE) & 1) > 0))
 		|| (RadiusFromCrashedPlane < 7.5f && (((interact >> REPAIRED) & 1) < 1))
 		|| RadiusFromLady < 6.0f
