@@ -280,6 +280,11 @@ private:
 	float rotateplane = 0;
 	float translateplane = 0;
 
+	bool LadyCaptured = false, VillageChiefCaptured = true, MinerCaptured = true;
+	bool CalefareACaptured = true, CalefareBCaptured = true, CalefareCCaptured = true;
+	bool Allcaptured;
+
+
 	MS modelStack, viewStack, projectionStack;
 };
 
