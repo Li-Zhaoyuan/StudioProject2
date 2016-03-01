@@ -332,7 +332,7 @@ void SceneMun::Init()
 
 
 	crashedplaneCoord = Vector3(-36.f, 4.9f, -49.f);
-	planecoord = Vector3(-36.f, -2.9f, -49.f);
+	planecoord = Vector3(-36.f, -2.9f, -35.f);
 	questdudehouseCoord = Vector3(33, -5, 20);
 	worriedladyhouseCoord = Vector3(20, -5, -38);
 	worriedladyCoord = Vector3(2, -4, -38);
@@ -378,7 +378,7 @@ void SceneMun::Update(double dt)
 	}
 	if ((((interact >> REPAIRED) & 1) > 0))
 	{
-		camera.Init(Vector3(-60, 100, -35), Vector3(-35, 0, -40), Vector3(0, 1, 0));
+		camera.Init(Vector3(15, 10, 45), Vector3(-35, 0, -40), Vector3(0, 1, 0));
 	}
 
 	if (((((interact >> TALKING_TO_LADY) & 1) > 0)) && textWL)
@@ -1556,6 +1556,10 @@ void SceneMun::RenderInfomationOnScreen()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to interact", Color(0, 1, 0), 3, 8, 17);
 	}
+	RenderTextOnScreen(meshList[GEO_TEXT], "WASD to move", Color(0, 1, 0), 1, 65, 49);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse to move Camera", Color(0, 1, 0), 1, 65, 48);
+	RenderTextOnScreen(meshList[GEO_TEXT], "E to interact when available", Color(0, 1, 0), 1, 65, 47);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Left click when textbox appear", Color(0, 1, 0), 1, 65, 46);
 	std::stringstream playerPos;
 	playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosz;
 	//RenderTextOnScreen(meshList[GEO_TEXT], playerPos.str(), Color(1, 0, 0), 2, 0, 18);
