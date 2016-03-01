@@ -318,6 +318,11 @@ void SceneMun::Init()
 	sMiner2 = *Minerpos2;
 	ssMiner2 << sMiner2[0];
 
+	a = 1;
+	b = 1;
+	c = 1;
+	d = 1;
+
 	textWL = false;
 	textQD = false;
 	textminer1 = false;
@@ -554,7 +559,7 @@ void SceneMun::Update(double dt)
 						Minerpos2 = TextMiner2.begin();
 						sMiner2 = *Minerpos2;
 						ssMiner2 << sMiner2[0];
-						a = 1;
+						d = 1;
 					}
 				}
 			}
@@ -566,7 +571,7 @@ void SceneMun::Update(double dt)
 		Minerpos2 = TextMiner2.begin();
 		sMiner2 = *Minerpos2;
 		ssMiner2 << sMiner2[0];
-		a = 1;
+		d = 1;
 	}
 
 	fps = (int)(1 / dt);
