@@ -143,6 +143,7 @@ public:
 	virtual void MovingAsteroid(double dt);
 	int getMagnitude(Vector3 A, Vector3 B);
 	virtual void RenderMissile();
+	void QuestDetail();
 	bool CheckCollision(Vector3 A, Vector3 B);
 	bool CheckAsteroidStartWave();
 	bool CheckAsteroidWave1();
@@ -162,7 +163,7 @@ private:
 	bool rotateXWing_Limit;
 
 	bool shootMissile = false; 
-
+	bool QuestDetailShown = false;
 	bool renderAsteroid = true;
 	bool renderAsteroid2 = true;
 	bool renderAsteroid3 = true;

@@ -223,6 +223,7 @@ void SceneGalaxy::Init()
 	meshList[GEO_MISSILE]->material.kShininess = 5.f;
 
 	meshList[GEO_BLACKSCREEN] = MeshBuilder::GenerateQuad("BlackScreen", Color(0, 0, 0));
+	meshList[GEO_BLACKSCREEN]->textureID = LoadTGA("Image//QuestShown.tga");
 
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//TimesNewRoman.tga");
@@ -257,7 +258,9 @@ void SceneGalaxy::MovingAsteroid(double dt)
 	CheckAsteroidWave2();
 	CheckLargeAsteroid();
 
-	if (CheckAsteroidStartWave() == false && CheckAsteroidWave1() == false && CheckAsteroidWave2() == false && CheckLargeAsteroid() == false)
+	if (QuestDetailShown == true)
+	{
+		if (CheckAsteroidStartWave() == false && CheckAsteroidWave1() == false && CheckAsteroidWave2() == false && CheckLargeAsteroid() == false)
 		{
 			if (getMagnitude(XWing, Asteroid) > 1)
 			{
@@ -268,7 +271,7 @@ void SceneGalaxy::MovingAsteroid(double dt)
 					renderAsteroid = false;
 				}
 			}
-			
+
 			if (getMagnitude(XWing, Asteroid) < 10)
 			{
 				renderAsteroid = false;
@@ -303,11 +306,11 @@ void SceneGalaxy::MovingAsteroid(double dt)
 			{
 				renderAsteroid3 = false;
 			}
-			
+
 		}
-	
-		
-	if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == false && CheckAsteroidWave2() == false && CheckLargeAsteroid() == false)
+
+
+		if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == false && CheckAsteroidWave2() == false && CheckLargeAsteroid() == false)
 		{
 
 			if (getMagnitude(XWing, Asteroid4) > 1)
@@ -356,8 +359,8 @@ void SceneGalaxy::MovingAsteroid(double dt)
 			}
 		}
 
-		
-	if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == true && CheckAsteroidWave2() == false && CheckLargeAsteroid() == false)
+
+		if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == true && CheckAsteroidWave2() == false && CheckLargeAsteroid() == false)
 		{
 			if (getMagnitude(XWing, Asteroid7) > 1)
 			{
@@ -420,17 +423,18 @@ void SceneGalaxy::MovingAsteroid(double dt)
 			}
 		}
 
-	if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == true && CheckAsteroidWave2() == true && CheckLargeAsteroid() == false)
-	{
-		if (getMagnitude(XWing, LAsteroid) > 100)
+		if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == true && CheckAsteroidWave2() == true && CheckLargeAsteroid() == false)
 		{
-			LAsteroid -= (LAsteroid - XWing) * 0.3f * dt;
-		}
-		if (getMagnitude(XWing, LAsteroid) == 100)
-		{
-			renderAsteroidLarge = false;
-			renderXWing = false;
-			renderSkybox = false;
+			if (getMagnitude(XWing, LAsteroid) > 100)
+			{
+				LAsteroid -= (LAsteroid - XWing) * 0.3f * dt;
+			}
+			if (getMagnitude(XWing, LAsteroid) == 100)
+			{
+				renderAsteroidLarge = false;
+				renderXWing = false;
+				renderSkybox = false;
+			}
 		}
 	}
 }
@@ -920,6 +924,7 @@ void SceneGalaxy::Render()
 	RenderXwing();
 	RenderAsteroid();
 	RenderMissile();
+	QuestDetail();
 
 	RenderTextOnScreen(meshList[GEO_TEXT], "+", Color(0, 1, 0), 3, 13.1, 9);
 	std::stringstream playerPos;
@@ -1172,6 +1177,43 @@ void SceneGalaxy::CutScene(double dt)
 	if (CheckAsteroidStartWave() == true && CheckAsteroidWave1() == true && CheckAsteroidWave2() == true && CheckLargeAsteroid() == true)
 	{
 		Gamemode::getinstance()->currentgamestate = 6;
+	}
+}
+
+/****************************************************************************/
+/*!
+\brief
+cutscene && switching scene
+\param
+doublt dt
+*/
+/****************************************************************************/
+void SceneGalaxy::QuestDetail()
+{
+	if (QuestDetailShown == false)
+	{
+		Mtx44 ortho;
+		glDisable(GL_DEPTH_TEST);
+		ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+		projectionStack.PushMatrix();
+		projectionStack.LoadMatrix(ortho);
+		viewStack.PushMatrix();
+		viewStack.LoadIdentity(); //No need camera for ortho mode
+		modelStack.PushMatrix();
+		modelStack.LoadIdentity(); //Reset modelStack
+		modelStack.Translate(37.5, 27.5, -2);
+		modelStack.Scale(30, 50, 10);
+		modelStack.Rotate(90, 1, 0, 0);
+		renderMesh(meshList[GEO_BLACKSCREEN], false);
+		projectionStack.PopMatrix();
+		viewStack.PopMatrix();
+		modelStack.PopMatrix();
+		glEnable(GL_DEPTH_TEST);
+
+		if (Application::IsKeyPressed('E'))
+		{
+			QuestDetailShown = true;
+		}
 	}
 }
 
