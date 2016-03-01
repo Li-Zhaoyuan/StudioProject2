@@ -172,6 +172,7 @@ void LoadingScreen::Init()
 	Mtx44 projection;
 	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 10000.f);
 	projectionStack.LoadMatrix(projection);
+
 }
 
 void LoadingScreen::Update(double dt)
@@ -191,16 +192,19 @@ void LoadingScreen::Update(double dt)
 	else if ( (loadingbar >= 20) && Gamemode::getinstance()->currentgamestate==2)
 	{
 		//put condition to change scene
+		loadingbar = 0.01f;
 		Gamemode::getinstance()->currentgamestate = 3;
 	}
 	else if ((loadingbar >= 20) && Gamemode::getinstance()->currentgamestate == 4)
 	{
 		//put condition to change scene
+		loadingbar = 0.01f;
 		Gamemode::getinstance()->currentgamestate = 5;
 	}
 	else if ((loadingbar >= 20) && Gamemode::getinstance()->currentgamestate == 6)
 	{
 		//put condition to change scene
+		loadingbar = 0.01f;
 		Gamemode::getinstance()->currentgamestate = 7;
 	}
 

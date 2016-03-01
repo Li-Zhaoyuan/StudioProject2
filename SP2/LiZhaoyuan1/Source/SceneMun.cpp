@@ -285,7 +285,7 @@ void SceneMun::Init()
 	meshList[GEO_MINIMAP]->textureID = LoadTGA("Image//Munmap.tga");
 	
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
-	meshList[GEO_TEXT]->textureID = LoadTGA("Image//TimesNewRoman.tga");
+	meshList[GEO_TEXT]->textureID = LoadTGA("Image//minecraft.tga");
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("lightball", Color(1, 1, 1), 18, 36);
 
 	meshList[GEO_MAINICON] = MeshBuilder::GenerateCube("mainicon for map", Color(1, 0, 0));
@@ -571,47 +571,6 @@ void SceneMun::Update(double dt)
 
 	fps = (int)(1 / dt);
 
-	if (Application::IsKeyPressed('5'))
-	{
-		light[0].type = Light::LIGHT_SPOT;
-		glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
-	}
-	else if (Application::IsKeyPressed('6'))
-	{
-		light[0].type = Light::LIGHT_POINT;
-		glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
-	}
-	else if (Application::IsKeyPressed('7'))
-	{
-		light[0].type = Light::LIGHT_DIRECTIONAL;
-		glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
-	}
-
-	if (Application::IsKeyPressed('1')) //enable back face culling
-		glEnable(GL_CULL_FACE);
-	if (Application::IsKeyPressed('2')) //disable back face culling
-		glDisable(GL_CULL_FACE);
-	if (Application::IsKeyPressed('3'))
-		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); //default fill mode
-	if (Application::IsKeyPressed('4'))
-		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
-
-	if (Application::IsKeyPressed('I'))
-		light[0].position.z -= (float)(LSPEED * dt);
-	if (Application::IsKeyPressed('K'))
-		light[0].position.z += (float)(LSPEED * dt);
-	if (Application::IsKeyPressed('J'))
-		light[0].position.x -= (float)(LSPEED * dt);
-	if (Application::IsKeyPressed('L'))
-		light[0].position.x += (float)(LSPEED * dt);
-	if (Application::IsKeyPressed('O'))
-		light[0].position.y -= (float)(LSPEED * dt);
-	if (Application::IsKeyPressed('P'))
-		light[0].position.y += (float)(LSPEED * dt);
-	if (Application::IsKeyPressed('X'))
-		enableLight = true;
-	if (Application::IsKeyPressed('Z'))
-		enableLight = false;
 
 	camPosX = (int)camera.position.x;
 	camPosY = (int)camera.position.y;
@@ -674,6 +633,10 @@ void SceneMun::Update(double dt)
 	else if (rotateplane >= 180)
 	{
 		translateplane += (float)(100.f * dt);
+	}
+	if (translateplane >= 50)
+	{
+		Gamemode::getinstance()->currentgamestate = 1;
 	}
 	npcRotate();
 	interactions();
@@ -1176,10 +1139,22 @@ void SceneMun::interactions()
 	RadiusFromMiner = (viewAtMiner - tempview).Length();
 	RadiusFromCrashedPlane = (viewAtCrashedPlane - tempview).Length();
 	
-	
+	if ((RadiusFromOre < 2.5f && (((interact >> MINED) & 1) < 1) && (((interact >> PLAYER_GET_PICKAXE) & 1) > 0))
+		|| (RadiusFromCrashedPlane < 7.5f && (((interact >> REPAIRED) & 1) < 1))
+		|| RadiusFromLady < 6.0f
+		|| RadiusFromDude < 6.0f
+		|| (RadiusFromMiner < 6.0f && (((interact >> TALKED_QUEST_DUDE) & 1) > 0))
+		|| (RadiusFromMiner < 6.0f && (((interact >> TALKED_QUEST_DUDE) & 1) < 1)))
+	{
+		interact |= 1 << CAN_INTERACT;
+	}
+	else
+	{
+		interact &= ~(1 << CAN_INTERACT);
+	}
 	if (RadiusFromOre < 2.5f
 		&& (((interact >> PLAYER_GET_PICKAXE) & 1) > 0)
-		&& Application::IsKeyPressed(VK_LBUTTON)
+		&& Application::IsKeyPressed(('E'))
 		&& (((interact >> MINED) & 1) < 1))
 	{
 		interact |= 1 << MINING;
@@ -1190,7 +1165,7 @@ void SceneMun::interactions()
 	}
 
 	if (RadiusFromCrashedPlane < 7.5f
-		&& Application::IsKeyPressed(VK_LBUTTON)
+		&& Application::IsKeyPressed('E')
 		&& (((interact >> REPAIRED) & 1) < 1))
 	{
 		interact |= 1 << REPAIRING;
@@ -1255,7 +1230,7 @@ void SceneMun::interactions()
 void SceneMun::RenderPickaxeOnScreen()
 {
 
-	if (Application::IsKeyPressed(VK_LBUTTON) )
+	if (Application::IsKeyPressed('E') )
 	{
 		Mtx44 ortho;
 		glDisable(GL_DEPTH_TEST);
@@ -1520,6 +1495,10 @@ void SceneMun::RenderInfomationOnScreen()
 		RenderTextOnScreen(meshList[GEO_TEXT], "Your plane is Fixed! You can", Color(0, 0, 0), 3, 6, 5);
 		RenderTextOnScreen(meshList[GEO_TEXT], "continue with your journey.", Color(0, 0, 0), 3, 6, 4);
 		RenderTextOnScreen(meshList[GEO_TEXT], "THE END", Color(0, 0, 0), 3, 6, 3);
+	}
+	if ((((interact >> CAN_INTERACT) & 1) > 0))
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to interact", Color(0, 1, 0), 3, 8, 17);
 	}
 	std::stringstream playerPos;
 	playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosz;

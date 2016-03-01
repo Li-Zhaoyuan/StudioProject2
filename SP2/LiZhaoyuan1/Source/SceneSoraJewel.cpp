@@ -358,12 +358,31 @@ void SceneSoraJewel::Init()
 }
 void SceneSoraJewel::Update(double dt)
 {
-	camera.SJUpdate(dt, 60, -140, -110, 110);
+	if (!cutscene)
+		camera.SJUpdate(dt, 60, -140, -110, 110);
 	fps = 1 / dt;
 
 	if (camera.position.x >= 50 && camera.position.z >= 50 && Application::IsKeyPressed('E') && QuestsDone)
 	{
 		Gamemode::getinstance()->currentgamestate = 4;
+	}
+
+	if (((((interact >> INTERACT_XWING) & 1) > 0)) && QuestsDone)
+	{
+		cutscene = true;
+	}
+
+	if (cutscene)
+	{
+		camera.Init(Vector3(-20, 9, -109), Vector3(-20, 12, 1), Vector3(0, 1, 0));
+		if (Xwing.y < 35)
+			Xwing.y += (float)(3 * dt);
+		if (Xwing.x < 61)
+			Xwing.x += (float)(15 * dt);
+		if (Xwing.x > 60)
+		{
+			Gamemode::getinstance()->currentgamestate = 4;
+		}
 	}
 	if (Application::IsKeyPressed('1')) //enable back face culling
 		glEnable(GL_CULL_FACE);

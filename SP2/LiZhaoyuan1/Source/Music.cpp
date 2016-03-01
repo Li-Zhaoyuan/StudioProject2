@@ -31,3 +31,8 @@ void music::musicMun()
 	MusicMun = se->addSoundSourceFromFile("Music//calm1.mp3");
 	se->play2D(MusicMun);
 }
+
+void music::musicMainMenu()
+{
+	se->stopAllSounds();
+}

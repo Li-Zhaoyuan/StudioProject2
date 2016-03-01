@@ -18,7 +18,7 @@ class for the scene at Mun
 #include "Camera3.h"
 #include "Camera4.h"
 #include "MatrixStack.h"
-
+#include "CurrentGameState.h"
 #include "ReadTextFile.h"
 
 #include <sstream>
@@ -127,6 +127,7 @@ class SceneMun : public Scene
 		TALKING_TO_MINER_CASE_2,
 		MINED,
 		REPAIRED,
+		CAN_INTERACT,
 	};
 public:
 	SceneMun();

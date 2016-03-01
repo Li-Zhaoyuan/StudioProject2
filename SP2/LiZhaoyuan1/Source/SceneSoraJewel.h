@@ -187,6 +187,7 @@ private:
 	size_t l = 1;
 
 	float timer = 0.f;
+	bool cutscene = false;
 	bool timercheck = false;
 
 	float boxX = 0;
