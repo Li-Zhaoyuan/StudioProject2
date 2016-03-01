@@ -910,11 +910,11 @@ void SceneMun::Render()
 	renderMesh(meshList[GEO_MUNGROUND], false);
 	modelStack.PopMatrix();
 
-	modelStack.PushMatrix();
+	/*modelStack.PushMatrix();
 	modelStack.Translate(0, 0, 0);
 	modelStack.Scale(1.f, 1.f, 1.f);
 	renderMesh(meshList[GEO_SNAKE], false);
-	modelStack.PopMatrix();
+	modelStack.PopMatrix();*/
 
 	if ((((interact >> REPAIRED) & 1) < 1))
 	{

@@ -24,7 +24,7 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 	translateChar = 0;
 	rotateChar = 0;
 	//minimapcoords = (78.f, 55.f, -1.f);
-	minimapsoracoords = (58.85f, 42.f, -1.f);;
+	minimapsoracoords = (78.f,55.f, -1.f);;
 	SetCursorPos( 800 / 2, 600 / 2);
 	mass = 70;
 	Force = 1000;
@@ -678,7 +678,7 @@ void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minb
 				position.x -= right.x * (float)(CAMERA_SPEED * dt);
 				target.x -= right.x * (float)(CAMERA_SPEED * dt);
 				minimapcoords.y += (right.x*(float)(CAMERA_SPEED*dt*0.1)); //A x
-				minimapsoracoords.x -= (right.x*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.x -= (right.x*(float)(CAMERA_SPEED*dt*0.05f));
 			}
 		}
 		if (position.z - (right.z * (float)(CAMERA_SPEED * dt)) > minboundsz
@@ -691,7 +691,7 @@ void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minb
 				position.z += (float)(right.z * dt * -CAMERA_SPEED);
 				target.z += right.z * dt * -CAMERA_SPEED;
 				minimapcoords.x += (right.z*(float)(CAMERA_SPEED*dt*0.1)); //A z
-				minimapsoracoords.y += (right.z*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.y += (right.z*(float)(CAMERA_SPEED*dt*0.05f*(10.f / 11.f)));
 			}
 		}
 	}
@@ -728,7 +728,7 @@ void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minb
 				position.x += right.x * dt * CAMERA_SPEED;
 				target.x += right.x * dt * CAMERA_SPEED;
 				minimapcoords.y -= (right.x*(float)(CAMERA_SPEED*dt*0.1)); //D x
-				minimapsoracoords.x += (right.x*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.x += (right.x*(float)(CAMERA_SPEED*dt*0.05f));
 			}
 		}
 		if (position.z + (right.z * (float)(CAMERA_SPEED * dt)) > minboundsz
@@ -741,7 +741,7 @@ void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minb
 				position.z += right.z * dt * CAMERA_SPEED;
 				target.z += right.z * dt * CAMERA_SPEED;
 				minimapcoords.x -= (right.z*(float)(CAMERA_SPEED*dt*0.1)); //D z
-				minimapsoracoords.y -= (right.z*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.y -= (right.z*(float)(CAMERA_SPEED*dt*0.05f*(10.f / 11.f)));
 			}
 		}
 	}
@@ -798,7 +798,7 @@ void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minb
 				position.z += view.z * dt * CAMERA_SPEED;
 				target.z += view.z * dt * CAMERA_SPEED;
 				minimapcoords.x -= (view.z*(float)(CAMERA_SPEED*dt*0.1)); //W z
-				minimapsoracoords.y -= (view.z*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.y -= (view.z*(float)(CAMERA_SPEED*dt*0.05f*(10/11)));
 			}
 		}
 
@@ -839,7 +839,7 @@ void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minb
 				position.x += view.x * dt * -CAMERA_SPEED;
 				target.x += view.x * dt * -CAMERA_SPEED;
 				minimapcoords.y += (view.x*(float)(CAMERA_SPEED*dt*0.1));//S x
-				minimapsoracoords.x += (view.x*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.x += (view.x*(float)(CAMERA_SPEED*dt*0.05f));
 			}
 		}
 		if (position.z - (view.z * (float)(CAMERA_SPEED * dt)) > minboundsz
@@ -852,7 +852,7 @@ void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minb
 				position.z += view.z * dt * -CAMERA_SPEED;
 				target.z += view.z * dt * -CAMERA_SPEED;
 				minimapcoords.x += (view.z*(float)(CAMERA_SPEED*dt*0.1));// S z
-					minimapsoracoords.y += (view.z*(float)(CAMERA_SPEED*dt*0.1));
+				minimapsoracoords.y += (view.z*(float)(CAMERA_SPEED*dt*0.05f*(10.f / 11.f)));
 			}
 		}
 	}
@@ -861,8 +861,8 @@ void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minb
 	{
 		minimapcoords.x = 78.9;
 		minimapcoords.y = 59.9;
-		minimapsoracoords.x = 73.65f; 
-		minimapsoracoords.y = 44.f;
+		minimapsoracoords.x = 78.9f; 
+		minimapsoracoords.y = 53.9f;
 		Reset();
 	}
 
