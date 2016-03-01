@@ -920,6 +920,7 @@ void SceneGalaxy::Render()
 	RenderXwing();
 	RenderAsteroid();
 	RenderMissile();
+	QuestDetail();
 
 	RenderTextOnScreen(meshList[GEO_TEXT], "+", Color(0, 1, 0), 3, 13.1, 9);
 	std::stringstream playerPos;
