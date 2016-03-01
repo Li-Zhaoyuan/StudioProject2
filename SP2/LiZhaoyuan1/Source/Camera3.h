@@ -33,7 +33,7 @@ public:
 	Vector3 displacement = (0.f, 0.f, 0.f);
 
 	Vector3 minimapcoords;
-	Vector3 minimapsoracoords;
+	Vector3 minimapsoracoords = (78.f, 55.f, -1.f);
 
 
 
