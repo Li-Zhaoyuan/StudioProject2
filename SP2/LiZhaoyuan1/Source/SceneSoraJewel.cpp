@@ -410,6 +410,7 @@ void SceneSoraJewel::Update(double dt)
 	if (Application::IsKeyPressed('Z'))
 		enableLight = false;
 
+	//interactions();
 
 	if (camera.position.x >= -28 && camera.position.z >= 49 && camera.position.x <= -18 && camera.position.z <= 60)
 	{
@@ -418,7 +419,7 @@ void SceneSoraJewel::Update(double dt)
 		camera.position.z = 82;
 		camera.up.y = 1;
 	}
-	if (Application::IsKeyPressed('E') && (camera.position.x >= -13 && camera.position.z >= -60) && (camera.position.x <= -1 && camera.position.z <= -46))
+	/*if (Application::IsKeyPressed('E') && (camera.position.x >= -13 && camera.position.z >= -60) && (camera.position.x <= -1 && camera.position.z <= -46))
 	{
 		Quest1 = true;
 		talkwithQL = true;
@@ -433,7 +434,7 @@ void SceneSoraJewel::Update(double dt)
 		EmptyinHand = true;
 		BeerinHand = false;
 	}
-	if (Application::IsKeyPressed('E') && Quest2 == true && (camera.position.x >= -57 && camera.position.z >= -95) && (camera.position.x <= -45 && camera.position.z <= -83))
+	if (Application::IsKeyPressed('E') && EmptyinHand && Quest2 == true && (camera.position.x >= -57 && camera.position.z >= -95) && (camera.position.x <= -45 && camera.position.z <= -83))
 	{
 		EmptyinHand = false;
 		BeerinHand = true;
@@ -449,7 +450,7 @@ void SceneSoraJewel::Update(double dt)
 	if (Application::IsKeyPressed('E') && !givenBeer && (camera.position.x >= -80 && camera.position.z >= -42) && (camera.position.x <= -72 && camera.position.z <= -30))
 	{
 		talkwithEngi1 = true;
-	}
+	}*/
 	if (Quest1Done == true && Quest2Done == true)
 	{
 		QuestsDone = true;
@@ -1059,7 +1060,6 @@ void SceneSoraJewel::Render()
 	//	RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The 2nd Quest For Sora Jewel", (0, 1, 0), 5, 4, 10);
 	//}
 	renderText();
-	
 
 	
 	std::stringstream playerPos;
@@ -1345,37 +1345,60 @@ void SceneSoraJewel::interactions()
 	if (RadiusFromQuestLady < 17.0f
 		&& Application::IsKeyPressed('E'))
 	{
-		interact |= 1 << INTERACT_QUESTLADY; 
+		interact |= 1 << INTERACT_QUESTLADY;
+		Quest1 = true;
+		talkwithQL = true;
 	}
-	else if (RadiusFromQuestLady > 17.0f)
+	else if (RadiusFromQuestLady > 10.0f)
 	{
-		interact &= ~(1 << INTERACT_QUESTLADY); 
+		interact &= ~(1 << INTERACT_QUESTLADY);
+		talkwithQL = false;
 	}
 
 	if (RadiusFromEngineer < 15.0f
 		&& Application::IsKeyPressed('E'))
 	{
-		interact |= 1 << INTERACT_ENGINEER;
+		interact |= 1 << INTERACT_ENGINEER1;
+		talkwithEngi1 = true;
 	}
 	else if (RadiusFromEngineer > 15.0f)
 	{
-		interact &= ~(1 << INTERACT_ENGINEER);
+		interact &= ~(1 << INTERACT_ENGINEER1);
+		talkwithEngi1 = false;
+	}
+
+	if (RadiusFromEngineer < 15.0f
+		&& Application::IsKeyPressed('E') && BeerinHand)
+	{
+		interact |= 1 << INTERACT_ENGINEER2;
+		Quest1Done = true;
+		Quest2Done = true;
+		talkwithEngi2 = true;
+	}
+	else if (RadiusFromEngineer > 15.0f)
+	{
+		interact &= ~(1 << INTERACT_ENGINEER2);
+		talkwithEngi2 = false;
 	}
 
 	if (RadiusFromCommando < 15.0f
-		&& Application::IsKeyPressed('E'))
+		&& Application::IsKeyPressed('E') && Quest1)
 	{
 		interact |= 1 << INTERACT_COMMANDO;
+		Quest2 = true;
+		talkwithCommando = true;
 	}
 	else if (RadiusFromCommando > 15.0f)
 	{
 		interact &= ~(1 << INTERACT_COMMANDO);
+		talkwithCommando = false;
 	}
 
 	if (RadiusFromKeg < 15.0f
-		&& Application::IsKeyPressed('E'))
+		&& Application::IsKeyPressed('E') && EmptyinHand && Quest2)
 	{
 		interact |= 1 << INTERACT_KEG;
+		BeerinHand = true;
 	}
 	else if (RadiusFromKeg > 15.0f)
 	{
@@ -1383,9 +1406,10 @@ void SceneSoraJewel::interactions()
 	}
 
 	if (RadiusFromXwing < 15.0f
-		&& Application::IsKeyPressed('E'))
+		&& Application::IsKeyPressed('E') && QuestsDone)
 	{
 		interact |= 1 << INTERACT_XWING;
+		cutscene = true;
 	}
 	else if (RadiusFromXwing > 15.0f)
 	{
@@ -1393,9 +1417,10 @@ void SceneSoraJewel::interactions()
 	}
 
 	if (RadiusFromBeer < 7.0f
-		&& Application::IsKeyPressed('E'))
+		&& Application::IsKeyPressed('E') && Quest2)
 	{
 		interact |= 1 << INTERACT_BEER;
+		EmptyinHand = true;
 	}
 	else if (RadiusFromBeer > 7.0f)
 	{
