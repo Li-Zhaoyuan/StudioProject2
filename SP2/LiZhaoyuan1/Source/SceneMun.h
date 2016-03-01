@@ -128,6 +128,7 @@ class SceneMun : public Scene
 		MINED,
 		REPAIRED,
 		CAN_INTERACT,
+		TALKING_TO_SNAKE,
 	};
 public:
 	SceneMun();
@@ -167,6 +168,7 @@ private:
 	void RenderInfomationOnScreen();
 	void RenderCalefare();
 	void RenderSceneOBJ();
+	void fultoninteraction();
 	unsigned m_vertexArrayID;
 	Mesh *meshList[NUM_GEOMETRY];
 
@@ -183,12 +185,15 @@ private:
 	
 	int interact = 0;
 
+	int fultonleft;
+
 	float timing = 0;
 
 	bool textWL = false;
 	bool textQD = false;
 	bool textminer1 = false;
 	bool textminer2 = false;
+	bool fultonreceived = false;
 
 	size_t a = 1;
 	size_t b = 1;
@@ -199,6 +204,7 @@ private:
 	std::stringstream ssQuestDude;
 	std::stringstream ssMiner;
 	std::stringstream ssMiner2;
+	std::stringstream thisisastring;
 
 	std::string sWLady;
 	std::string sQuestDude;
@@ -228,12 +234,14 @@ private:
 	Vector3 CalefareACoord = Vector3(26, -0.9f, -21);
 	Vector3 CalefareBCoord = Vector3(26, -0.9f, -10);
 	Vector3 CalefareCCoord = Vector3(15, -0.9f, 25);
+	Vector3 SNAKEcoords = Vector3(47.f, -5.5f, 46.f);
 	Vector3 tempview;
 	Vector3 viewAtOre;
 	Vector3 viewAtLady;
 	Vector3 viewAtDude;
 	Vector3 viewAtMiner;
 	Vector3 viewAtCrashedPlane;
+	Vector3 viewatSNAKE;
 	float worriedladytempx = 0;
 	float worriedladytempz = 0;
 
@@ -254,6 +262,7 @@ private:
 	float RadiusFromDude;
 	float RadiusFromMiner;
 	float RadiusFromCrashedPlane;
+	float RadiusFromSnake;
 	float rotateAngle = 0;
 	float rotateLimbs = 0;
 	float rotateWhole = 0;
