@@ -1,6 +1,6 @@
 /****************************************************************************/
 /*!
-\file SceneGalaxy.h
+\file Camera3.h
 \author Li Zhaoyuan, Nathan Chia Shi-Lin, Terence Tan Ming Jie, Muhammad Nurhidayat Bin Suderman
 \par email: lizhaoyuan123@hotmail.com
 \brief

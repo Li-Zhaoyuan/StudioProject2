@@ -29,8 +29,7 @@ Missile missile(30);
 
 /****************************************************************************/
 /*!
-\brief
-	constructor for the SceneGalaxy.cpp file
+\brief	SceneGalaxy constructor
 */
 /****************************************************************************/
 SceneGalaxy::SceneGalaxy()
@@ -39,8 +38,7 @@ SceneGalaxy::SceneGalaxy()
 
 /****************************************************************************/
 /*!
-\brief
-	deconstructor for the SceneGalaxy.cpp file
+\brief	SceneGalaxy destructor
 */
 /****************************************************************************/
 SceneGalaxy::~SceneGalaxy()
@@ -50,7 +48,7 @@ SceneGalaxy::~SceneGalaxy()
 /****************************************************************************/
 /*!
 \brief
-	Scene Galaxy initializer
+	Scene Galaxy main initializer function
 */
 /****************************************************************************/
 void SceneGalaxy::Init()
@@ -237,10 +235,9 @@ void SceneGalaxy::Init()
 
 /****************************************************************************/
 /*!
-\brief
-	to move the Asteroids in waves towards the plane
+\brief	SceneGalaxy MovingAsteroid function
 \param
-	double dt
+	delta time
 */
 /****************************************************************************/
 void SceneGalaxy::MovingAsteroid(double dt)
@@ -435,10 +432,9 @@ void SceneGalaxy::MovingAsteroid(double dt)
 
 /****************************************************************************/
 /*!
-\brief
-	boolean function to check if First Wave of Asteroids have passed
+\brief	SceneGalaxy CheckAsteroidStartWave function
 \return
-	return whether this wave have been ran
+	true/false
 */
 /****************************************************************************/
 bool SceneGalaxy::CheckAsteroidStartWave()
@@ -450,10 +446,9 @@ bool SceneGalaxy::CheckAsteroidStartWave()
 
 /****************************************************************************/
 /*!
-\brief
-	boolean function to check if Second Wave of Asteroids have passed
+\brief	SceneGalaxy CheckAsteroidWave1 function
 \return
-	return whether this wave have been ran
+	true/false
 */
 /****************************************************************************/
 bool SceneGalaxy::CheckAsteroidWave1()
@@ -465,10 +460,9 @@ bool SceneGalaxy::CheckAsteroidWave1()
 
 /****************************************************************************/
 /*!
-\brief
-	boolean function to check if Third Wave of Asteroids have passed
+\brief	SceneGalaxy CheckAsteoidWave2 function
 \return
-	return whether this wave have been ran
+	true/false
 */
 /****************************************************************************/
 bool SceneGalaxy::CheckAsteroidWave2()
@@ -480,10 +474,9 @@ bool SceneGalaxy::CheckAsteroidWave2()
 
 /****************************************************************************/
 /*!
-\brief
-	boolean function to check if Last Asteroid have passed
+\brief	SceneGalaxy CheckLargeAsteroid function
 \return
-	return whether this wave have been ran
+	true/false
 */
 /****************************************************************************/
 bool SceneGalaxy::CheckLargeAsteroid()
@@ -499,12 +492,12 @@ bool SceneGalaxy::CheckLargeAsteroid()
 
 /****************************************************************************/
 /*!
-\brief
-	check collision between 2 objects using hitbox
+\brief	SceneGalaxy CheckCollision function
 \param
-	Vector of object A and B, B for the object that we are going to collide
+	Vector3 A
+	Vector3 B
 \return
-	return true or false whether the collision is met between 2 objects
+	true/false
 */
 /****************************************************************************/
 bool SceneGalaxy::CheckCollision(Vector3 A, Vector3 B)
@@ -519,12 +512,12 @@ bool SceneGalaxy::CheckCollision(Vector3 A, Vector3 B)
 
 /****************************************************************************/
 /*!
-\brief
-	find the magnitude between 2 objects
+\brief	SceneGalaxy getMagnitude function
 \param
-	Vector of object A and B
+	Vector3 A
+	Vector3 B
 \return
-	the magnitude between 2 objects
+	Magnitude
 */
 /****************************************************************************/
 int SceneGalaxy::getMagnitude(Vector3 A, Vector3 B)
@@ -541,10 +534,9 @@ int SceneGalaxy::getMagnitude(Vector3 A, Vector3 B)
 
 /****************************************************************************/
 /*!
-\brief
-	running functions, checks, keypress in the .cpp file every frame
+\brief SceneGalaxy main update function
 \param
-	double dt
+	delta time
 */
 /****************************************************************************/
 void SceneGalaxy::Update(double dt)
@@ -634,10 +626,10 @@ void SceneGalaxy::Update(double dt)
 
 /****************************************************************************/
 /*!
-\brief
-	function to render meshes
+\brief SceneGalaxy renderMesh function
 \param
-	the type of mesh and boolean for switch on or off lighting
+	The mesh that is rendering
+	Determine if the OBJ allows light to affect it
 */
 /****************************************************************************/
 void SceneGalaxy::renderMesh(Mesh *mesh, bool enableLight)
@@ -687,10 +679,11 @@ void SceneGalaxy::renderMesh(Mesh *mesh, bool enableLight)
 
 /****************************************************************************/
 /*!
-\brief
-	function to render text
+\brief	SceneGalaxy RenderText function
 \param
-	the type of mesh, the text string, the color of text
+	The mesh that is rendering
+	The text that is being render
+	Color of the Text
 */
 /****************************************************************************/
 void SceneGalaxy::RenderText(Mesh* mesh, std::string text, Color color)
@@ -722,10 +715,14 @@ void SceneGalaxy::RenderText(Mesh* mesh, std::string text, Color color)
 
 /****************************************************************************/
 /*!
-\brief
-	function to render text on screen
+\brief	SceneGalaxy RenderTextOnScreen function
 \param
-	the type of mesh, the text string, the color of text, font size of text, position x and position y of text
+	The mesh that is rendering
+	The text that is being render
+	Color of the text
+	Size of the text
+	x Coord of the text
+	z Coord of the text
 */
 /****************************************************************************/
 void SceneGalaxy::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
@@ -773,8 +770,7 @@ void SceneGalaxy::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, 
 
 /****************************************************************************/
 /*!
-\brief
-	function to render obj into the scene
+\brief	SceneGalaxy Render function
 */
 /****************************************************************************/
 void SceneGalaxy::Render()
@@ -844,8 +840,7 @@ void SceneGalaxy::Render()
 
 /****************************************************************************/
 /*!
-\brief
-	render XWing
+\brief	SceneGalaxy RenderXWing function
 */
 /****************************************************************************/
 void SceneGalaxy::RenderXwing()
@@ -866,8 +861,7 @@ void SceneGalaxy::RenderXwing()
 
 /****************************************************************************/
 /*!
-\brief
-	render numbers of Asteroid
+\brief	SceneGalaxy RenderAsteroid function
 */
 /****************************************************************************/
 void SceneGalaxy::RenderAsteroid()
@@ -975,8 +969,7 @@ void SceneGalaxy::RenderAsteroid()
 
 /****************************************************************************/
 /*!
-\brief
-	render missile
+\brief	SceneGalaxy RenderMissile function
 */
 /****************************************************************************/
 void SceneGalaxy::RenderMissile()
@@ -999,8 +992,7 @@ void SceneGalaxy::RenderMissile()
 
 /****************************************************************************/
 /*!
-\brief
-	render skybox
+\brief	SceneGalaxy RenderSkybox function
 */
 /****************************************************************************/
 void SceneGalaxy::RenderSkybox()
@@ -1062,10 +1054,9 @@ void SceneGalaxy::RenderSkybox()
 
 /****************************************************************************/
 /*!
-\brief
-	cutscene && switching scene
+\brief	SceneGalaxy CutScene function
 \param
-	doublt dt
+	delta time
 */
 /****************************************************************************/
 void SceneGalaxy::CutScene(double dt)
@@ -1084,10 +1075,7 @@ void SceneGalaxy::CutScene(double dt)
 
 /****************************************************************************/
 /*!
-\brief
-cutscene && switching scene
-\param
-doublt dt
+\brief	SceneGalaxy QuestDetail function
 */
 /****************************************************************************/
 void SceneGalaxy::QuestDetail()
@@ -1121,8 +1109,7 @@ void SceneGalaxy::QuestDetail()
 
 /****************************************************************************/
 /*!
-\brief
-	exiting 
+\brief SceneGalaxy Exit function
 */
 /****************************************************************************/
 void SceneGalaxy::Exit()
