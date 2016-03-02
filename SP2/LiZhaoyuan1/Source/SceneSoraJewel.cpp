@@ -477,6 +477,9 @@ void SceneSoraJewel::Update(double dt)
 		camera.position.y = 25;
 		camera.position.z = 82;
 		camera.up.y = 1;
+		camera.minimapsoracoords.x = 73.4f;
+		camera.minimapsoracoords.y = 52.f;
+
 	}
 	if (Quest1Done == true && Quest2Done == true)
 	{
