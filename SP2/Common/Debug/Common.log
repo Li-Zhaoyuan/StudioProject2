@@ -1,32 +1,71 @@
 <<<<<<< HEAD
-﻿Build started 3/2/2016 12:14:57 PM.
-     1>Project "C:\Users\n1507\Desktop\StudioProject2\SP2\Common\Common.vcxproj" on node 2 (Build target(s)).
+﻿Build started 2/3/2016 13:52:27.
+     1>Project "C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Common\Common.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\MatrixStack.cpp Source\Mtx44.cpp Source\timer.cpp Source\Vector3.cpp
+=======
+<<<<<<< HEAD
+﻿Build started 2/3/2016 1:54:00 PM.
+     1>Project "E:\School stuff\2015S2\Computer Graphics Project\SP2\Common\Common.vcxproj" on node 2 (Rebuild target(s)).
+=======
+<<<<<<< HEAD
+﻿Build started 3/2/2016 12:19:50 PM.
+=======
+<<<<<<< HEAD
+﻿Build started 2/3/2016 10:44:50.
+     1>Project "C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Common\Common.vcxproj" on node 2 (Build target(s)).
      1>Lib:
-         Common.vcxproj -> C:\Users\n1507\Desktop\StudioProject2\SP2\Debug\Common.lib
-     1>Done Building Project "C:\Users\n1507\Desktop\StudioProject2\SP2\Common\Common.vcxproj" (Build target(s)).
+         Common.vcxproj -> C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Debug\Common.lib
+     1>Done Building Project "C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Common\Common.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.17
+Time Elapsed 00:00:00.10
 =======
-﻿Build started 2/3/2016 10:57:35 AM.
-     1>Project "E:\School stuff\2015S2\Computer Graphics Project\SP2\Common\Common.vcxproj" on node 2 (Rebuild target(s)).
+<<<<<<< HEAD
+﻿Build started 3/2/2016 12:14:57 PM.
+>>>>>>> 3886595df89a592d109b3d67ee0a11d4a7291c12
+     1>Project "C:\Users\n1507\Desktop\StudioProject2\SP2\Common\Common.vcxproj" on node 2 (Build target(s)).
+>>>>>>> 9b3bef26e31dc6e2f161c45229758f11fb846bc2
      1>ClCompile:
-         E:\Programs\Visual Studio 2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\MatrixStack.cpp Source\Mtx44.cpp Source\timer.cpp Source\Vector3.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\MatrixStack.cpp Source\Mtx44.cpp Source\timer.cpp Source\Vector3.cpp
+>>>>>>> 4bba1944be315e4b92ef74edb68168cdd18c1e31
          Vector3.cpp
          timer.cpp
          Mtx44.cpp
          MatrixStack.cpp
          Generating Code...
        Lib:
-         E:\Programs\Visual Studio 2013\VC\bin\Lib.exe /OUT:"E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\Common.lib" /NOLOGO Debug\MatrixStack.obj
+<<<<<<< HEAD
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Debug\Common.lib" /NOLOGO Debug\MatrixStack.obj
          Debug\Mtx44.obj
          Debug\timer.obj
          Debug\Vector3.obj
-         Common.vcxproj -> E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\Common.lib
-     1>Done Building Project "E:\School stuff\2015S2\Computer Graphics Project\SP2\Common\Common.vcxproj" (Rebuild target(s)).
+         Common.vcxproj -> C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Debug\Common.lib
+     1>Done Building Project "C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Common\Common.vcxproj" (Build target(s)).
 
 Build succeeded.
 
+Time Elapsed 00:00:04.75
+=======
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\n1507\Desktop\StudioProject2\SP2\Debug\Common.lib" /NOLOGO Debug\MatrixStack.obj
+         Debug\Mtx44.obj
+         Debug\timer.obj
+         Debug\Vector3.obj
+         Common.vcxproj -> C:\Users\n1507\Desktop\StudioProject2\SP2\Debug\Common.lib
+     1>Done Building Project "C:\Users\n1507\Desktop\StudioProject2\SP2\Common\Common.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+<<<<<<< HEAD
+Time Elapsed 00:00:01.45
+=======
+<<<<<<< HEAD
+Time Elapsed 00:00:01.20
+=======
 Time Elapsed 00:00:01.23
 >>>>>>> 6a71ece362eb279190717dd758784b10b5655bae
+>>>>>>> b32474076947ee23adbea25da0777289e4ded4b9
+>>>>>>> 3886595df89a592d109b3d67ee0a11d4a7291c12
+>>>>>>> 9b3bef26e31dc6e2f161c45229758f11fb846bc2
+>>>>>>> 4bba1944be315e4b92ef74edb68168cdd18c1e31

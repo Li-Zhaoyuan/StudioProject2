@@ -14,9 +14,14 @@ class for the scene while Loading
 #include "Mesh.h"
 #include "Light.h"
 #include "Camera.h"
-#include "Camera2.h"
 #include "Camera3.h"
 #include "MatrixStack.h"
+/******************************************************************************/
+/*!
+Class LoadingScreen:
+\brief	Defines the Loading screens and its methods
+*/
+/******************************************************************************/
 class LoadingScreen : public Scene
 {
 

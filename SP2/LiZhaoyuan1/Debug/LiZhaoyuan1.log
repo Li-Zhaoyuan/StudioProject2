@@ -1,31 +1,54 @@
 <<<<<<< HEAD
-﻿Build started 2/3/2016 1:10:52 PM.
-     1>Project "E:\School stuff\2015S2\Computer Graphics Project\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
-     1>Link:
-=======
-<<<<<<< HEAD
-﻿Build started 3/2/2016 12:14:57 PM.
-     1>Project "C:\Users\n1507\Desktop\StudioProject2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
+﻿Build started 2/3/2016 15:26:02.
+     1>Project "C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\n1507\Desktop\StudioProject2\SP2\\Common\Source /IC:\Users\n1507\Desktop\StudioProject2\SP2\\glfw\include /IC:\Users\n1507\Desktop\StudioProject2\SP2\\glew\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\Application.cpp Source\Music.cpp
-         Music.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\\Common\Source" /I"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\\glfw\include" /I"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\\glew\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\SceneSoraJewel.cpp
+         SceneSoraJewel.cpp
+     1>c:\users\user\desktop\studio project\sp2\sp2ggnathanneedshelp\sp2\lizhaoyuan1\source\scenesorajewel.cpp(458): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\user\desktop\studio project\sp2\sp2ggnathanneedshelp\sp2\lizhaoyuan1\source\scenesorajewel.cpp(533): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\user\desktop\studio project\sp2\sp2ggnathanneedshelp\sp2\lizhaoyuan1\source\scenesorajewel.cpp(1156): warning C4244: 'argument' : conversion from 'double' to 'GLenum', possible loss of data
+     1>c:\users\user\desktop\studio project\sp2\sp2ggnathanneedshelp\sp2\lizhaoyuan1\source\scenesorajewel.cpp(1165): warning C4244: 'argument' : conversion from 'double' to 'GLenum', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Debug\LiZhaoyuan1.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\\glew\lib" /LIBPATH:"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Debug" /LIBPATH:"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\\glfw\lib-msvc120" glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Debug\LiZhaoyuan1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Debug\LiZhaoyuan1.lib" /MACHINE:X86 Debug\Application.obj
+=======
+﻿Build started 2/3/2016 2:18:18 PM.
+     1>Project "E:\School stuff\2015S2\Computer Graphics Project\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         E:\Programs\Visual Studio 2013\VC\bin\CL.exe /c /I"E:\School stuff\2015S2\Computer Graphics Project\SP2\\Common\Source" /I"E:\School stuff\2015S2\Computer Graphics Project\SP2\\glfw\include" /I"E:\School stuff\2015S2\Computer Graphics Project\SP2\\glew\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\Application.cpp Source\SP2.cpp Source\SceneGalaxy.cpp Source\SceneMun.cpp Source\SceneSoraJewel.cpp
+         SceneSoraJewel.cpp
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenesorajewel.cpp(457): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenesorajewel.cpp(531): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenesorajewel.cpp(1154): warning C4244: 'argument' : conversion from 'double' to 'GLenum', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenesorajewel.cpp(1163): warning C4244: 'argument' : conversion from 'double' to 'GLenum', possible loss of data
+         SceneMun.cpp
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenemun.cpp(1456): warning C4552: '-' : operator has no effect; expected operator with side-effect
+         SceneGalaxy.cpp
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenegalaxy.cpp(261): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenegalaxy.cpp(276): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenegalaxy.cpp(291): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenegalaxy.cpp(312): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenegalaxy.cpp(327): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenegalaxy.cpp(342): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenegalaxy.cpp(361): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenegalaxy.cpp(376): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenegalaxy.cpp(391): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenegalaxy.cpp(406): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenegalaxy.cpp(424): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenegalaxy.cpp(533): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenegalaxy.cpp(534): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenegalaxy.cpp(535): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenegalaxy.cpp(537): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenegalaxy.cpp(553): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenegalaxy.cpp(601): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenegalaxy.cpp(831): warning C4305: 'argument' : truncation from 'double' to 'float'
+         SP2.cpp
          Application.cpp
          Generating Code...
-=======
-﻿Build started 2/3/2016 11:10:12 AM.
-     1>Project "E:\School stuff\2015S2\Computer Graphics Project\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         E:\Programs\Visual Studio 2013\VC\bin\CL.exe /c /I"E:\School stuff\2015S2\Computer Graphics Project\SP2\\Common\Source" /I"E:\School stuff\2015S2\Computer Graphics Project\SP2\\glfw\include" /I"E:\School stuff\2015S2\Computer Graphics Project\SP2\\glew\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\SceneMun.cpp
-         SceneMun.cpp
-     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\scenemun.cpp(1291): warning C4552: '-' : operator has no effect; expected operator with side-effect
->>>>>>> 6a71ece362eb279190717dd758784b10b5655bae
        Link:
->>>>>>> 123fa00ecbd590cb162f6feca588e0a39a2ddc9e
          E:\Programs\Visual Studio 2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\LiZhaoyuan1.exe" /INCREMENTAL /NOLOGO /LIBPATH:"E:\School stuff\2015S2\Computer Graphics Project\SP2\\glew\lib" /LIBPATH:"E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug" /LIBPATH:"E:\School stuff\2015S2\Computer Graphics Project\SP2\\glfw\lib-msvc120" glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\LiZhaoyuan1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\LiZhaoyuan1.lib" /MACHINE:X86 Debug\Application.obj
+>>>>>>> 4bba1944be315e4b92ef74edb68168cdd18c1e31
          Debug\Camera.obj
-         Debug\Camera2.obj
          Debug\Camera3.obj
-         Debug\Camera4.obj
          Debug\LoadingScreen.obj
          Debug\LoadOBJ.obj
          Debug\LoadTGA.obj
@@ -34,7 +57,6 @@
          Debug\MeshBuilder.obj
          Debug\Missile.obj
          Debug\Music.obj
-         Debug\Physics.obj
          Debug\ReadTextFiles.obj
          Debug\SceneGalaxy.obj
          Debug\SceneMun.obj
@@ -43,25 +65,19 @@
          Debug\SP2.obj
          Debug\Utility.obj
 <<<<<<< HEAD
-     1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-=======
-<<<<<<< HEAD
-         LiZhaoyuan1.vcxproj -> C:\Users\n1507\Desktop\StudioProject2\SP2\Debug\LiZhaoyuan1.exe
-     1>Done Building Project "C:\Users\n1507\Desktop\StudioProject2\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
+         LiZhaoyuan1.vcxproj -> C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Debug\LiZhaoyuan1.exe
+     1>Done Building Project "C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.68
+Time Elapsed 00:00:02.47
 =======
->>>>>>> 123fa00ecbd590cb162f6feca588e0a39a2ddc9e
+         LINK : E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\LiZhaoyuan1.exe not found or not built by the last incremental link; performing full link
+     1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
          LiZhaoyuan1.vcxproj -> E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\LiZhaoyuan1.exe
      1>Done Building Project "E:\School stuff\2015S2\Computer Graphics Project\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-<<<<<<< HEAD
-Time Elapsed 00:00:00.32
-=======
-Time Elapsed 00:00:01.02
->>>>>>> 6a71ece362eb279190717dd758784b10b5655bae
->>>>>>> 123fa00ecbd590cb162f6feca588e0a39a2ddc9e
+Time Elapsed 00:00:04.17
+>>>>>>> 4bba1944be315e4b92ef74edb68168cdd18c1e31

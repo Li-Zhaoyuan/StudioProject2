@@ -1,3 +1,13 @@
+/******************************************************************************/
+/*!
+\file SceneGalaxy.h
+\author Li Zhaoyuan, Nathan Chia Shi-Lin, Terence Tan Ming Jie, Muhammad Nurhidayat Bin Suderman
+\par email: lizhaoyuan123@hotmail.com
+\brief
+SceneMun cpp file, everything needed inside the scene, found here
+*/
+/******************************************************************************/
+
 #include <sstream>
 
 #include "SceneMun.h"
@@ -17,12 +27,36 @@
 #include "ReadTextFile.h"
 //#include "RenderMun.h"
 //#include "LoadOBJ.h"
+/****************************************************************************/
+/*!
+\brief
+constructor for the .cpp file
+*/
+/****************************************************************************/
 SceneMun::SceneMun()
 {
 }
+/****************************************************************************/
+/*!
+\brief
+Destructor for the .cpp file
+*/
+/****************************************************************************/
 SceneMun::~SceneMun()
 {
 }
+/****************************************************************************/
+/*!
+\brief
+		Main initialiser function for SceneMun
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneMun::Init()
 {
 
@@ -369,7 +403,18 @@ void SceneMun::Init()
 	fultonleft = 6;
 	thisisastring << fultonleft;
 }
+/****************************************************************************/
+/*!
+\brief
+		SceneMun main update Function
+\param
 
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneMun::Update(double dt)
 {
 	if ((((interact >> REPAIRED) & 1) < 1))
@@ -736,6 +781,18 @@ void SceneMun::Update(double dt)
 		CalefareBCoord.y += (float)(80 * dt);
 	}
 }
+/****************************************************************************/
+/*!
+\brief
+	
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneMun::lighting()
 {
 	if (light[0].type == Light::LIGHT_DIRECTIONAL)
@@ -758,6 +815,19 @@ void SceneMun::lighting()
 		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
 	}
 }
+
+/****************************************************************************/
+/*!
+\brief
+
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneMun::lighting2()
 {
 	if (light[1].type == Light::LIGHT_DIRECTIONAL)
@@ -781,6 +851,21 @@ void SceneMun::lighting2()
 	}
 
 }
+
+/****************************************************************************/
+/*!
+\brief
+		RenderMesh function
+\param mesh
+	mesh that is rendering
+\param enablelight
+	to determine if light affects the object
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneMun::renderMesh(Mesh *mesh, bool enableLight)
 {
 	Mtx44 MVP, modelView, modelView_inverse_transpose;
@@ -826,6 +911,23 @@ void SceneMun::renderMesh(Mesh *mesh, bool enableLight)
 
 }
 
+/****************************************************************************/
+/*!
+\brief
+	Renders text 
+\param mesh
+	the mesh that is rendering
+\param text
+	the text that should be rendered
+\param color
+	the color of the text
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneMun::RenderText(Mesh* mesh, std::string text, Color color)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
@@ -853,6 +955,25 @@ void SceneMun::RenderText(Mesh* mesh, std::string text, Color color)
 	glEnable(GL_DEPTH_TEST);
 }
 
+/****************************************************************************/
+/*!
+\brief	
+	 To render the texts on screen
+
+\param	mesh
+	the mesh that is rendered
+
+\param text
+	the text that should be rendered
+
+\param color
+	the color of the text
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneMun::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
@@ -896,6 +1017,18 @@ void SceneMun::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, flo
 
 }
 
+/****************************************************************************/
+/*!
+\brief
+	to render the minimap to screen
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneMun::Renderpicturetoscreen()
 {
 	Mtx44 ortho;
@@ -935,6 +1068,18 @@ void SceneMun::Renderpicturetoscreen()
 
 }
 
+/****************************************************************************/
+/*!
+\brief
+		SceneMun's main render function
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneMun::Render()
 {
 	// Render VBO here
@@ -1143,6 +1288,12 @@ void SceneMun::Render()
 	fultoninteraction();
 }
 
+/****************************************************************************/
+/*!
+\brief
+		Renders the Skybox of the scene
+*/
+/****************************************************************************/
 void SceneMun::RenderSkybox()
 {
 	modelStack.PushMatrix();
@@ -1201,6 +1352,13 @@ void SceneMun::Exit()
 	glDeleteProgram(m_programID);
 }
 
+/****************************************************************************/
+/*!
+\brief
+	Function that allows NPCs to follow your view
+
+*/
+/****************************************************************************/
 void SceneMun::npcRotate()
 {
 	if (camera.position.x < worriedladyCoord.x)
@@ -1225,6 +1383,13 @@ void SceneMun::npcRotate()
 	}
 }
 
+/****************************************************************************/
+/*!
+\brief
+	Function that keeps interactions with NPCs
+
+*/
+/****************************************************************************/
 void SceneMun::interactions()
 {
 	tempview = (camera.target - camera.position);
@@ -1371,11 +1536,20 @@ void SceneMun::interactions()
 		interact &= ~(1 << TALKING_TO_SNAKE);
 	}
 }
+
+/****************************************************************************/
+/*!
+\brief
+	Function that allows the extraction of NPCs from the map, sending them into the air
+
+*/
+/****************************************************************************/
 void SceneMun::fultoninteraction()
 {
 	if (fultonreceived == true)
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], thisisastring.str() , Color(0, 0, 0), 2, 1, 18);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press Q to Capture", Color(0, 0, 0), 2, 1, 17);
 		RenderTextOnScreen(meshList[GEO_TEXT], "Captured", Color(0, 0, 0), 2, 1, 16);
 		if (LadyCaptured == true)
 		{
@@ -1412,6 +1586,13 @@ void SceneMun::fultoninteraction()
 	}
 
 }
+
+/****************************************************************************/
+/*!
+\brief
+	Function To render the Pickaxe of one of the interactions onto the screen
+*/
+/****************************************************************************/
 void SceneMun::RenderPickaxeOnScreen()
 {
 
@@ -1461,7 +1642,13 @@ void SceneMun::RenderPickaxeOnScreen()
 	}
 	
 }
+/****************************************************************************/
+/*!
+\brief
+	Function that renders the loading bar when certain interactions are made
 
+*/
+/****************************************************************************/
 void SceneMun::RenderLoadingBarOnScreen()
 {
 	Mtx44 ortho;
@@ -1485,6 +1672,13 @@ void SceneMun::RenderLoadingBarOnScreen()
 	glEnable(GL_DEPTH_TEST);
 }
 
+/****************************************************************************/
+/*!
+\brief
+	Function that Renders the Ore onto the screen when certain ore is mined interaction occurs
+
+*/
+/****************************************************************************/
 void SceneMun::RenderOreOnScreen()
 {
 	if ((((interact >> REPAIRING) & 1) < 1) && (((interact >> REPAIRED) & 1) < 1))
@@ -1532,6 +1726,12 @@ void SceneMun::RenderOreOnScreen()
 	}
 }
 
+/****************************************************************************/
+/*!
+\brief
+	Function that renders the textbox around the Texts
+*/
+/****************************************************************************/
 void SceneMun::RenderTextBoxOnScreen()
 {
 	if (((((interact >> TALKING_TO_LADY) & 1) > 0)))
@@ -1651,7 +1851,12 @@ void SceneMun::RenderTextBoxOnScreen()
 		RenderTextOnScreen(meshList[GEO_TEXT], "Extract All the villagers for better rewards", Color(0, 0, 0), 2, 9.2f, 2);
 	}
 }
-
+/****************************************************************************/
+/*!
+\brief
+	Function that renders the letter on screen when the interaction of recieving a letter
+*/
+/****************************************************************************/
 void SceneMun::RenderLetterOnScreen()
 {
 	if ((((interact >> TALKED_QUEST_DUDE) & 1) > 0) && (((interact >> MINER_GET_LETTER) & 1) < 1))
@@ -1678,7 +1883,13 @@ void SceneMun::RenderLetterOnScreen()
 	}
 	
 }
+/****************************************************************************/
+/*!
+\brief
+	Function that renders some texts when certain interactions are done
 
+*/
+/****************************************************************************/
 void SceneMun::RenderInfomationOnScreen()
 {
 	if ((((interact >> REPAIRED) & 1) > 0))
@@ -1748,7 +1959,13 @@ void SceneMun::RenderInfomationOnScreen()
 	ss << "FPS:" << fps << "         " << playerPos.str();
 	RenderTextOnScreen(meshList[GEO_TEXT], ss.str(), Color(0, 1, 0), 3, 0, 19);
 }
+/****************************************************************************/
+/*!
+\brief
+		Function To render out the workers in the scene, Renders only the body
 
+*/
+/****************************************************************************/
 void SceneMun::RenderCalefare()
 {
 	modelStack.PushMatrix();
@@ -1784,9 +2001,4 @@ void SceneMun::RenderCalefare()
 	modelStack.Scale(2, 2, 2);
 	renderMesh(meshList[GEO_CRATE], true);
 	modelStack.PopMatrix();
-}
-
-void SceneMun::RenderSceneOBJ()
-{
-
 }

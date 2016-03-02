@@ -10,7 +10,6 @@ Camera
 #include "Camera3.h"
 #include "Application.h"
 #include "Mtx44.h"
-#include "Physics.h"
 
 /****************************************************************************/
 /*!
