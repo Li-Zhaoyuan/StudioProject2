@@ -1251,8 +1251,10 @@ void SceneMun::interactions()
 		|| (RadiusFromCrashedPlane < 7.5f && (((interact >> REPAIRED) & 1) < 1))
 		|| RadiusFromLady < 6.0f
 		|| RadiusFromDude < 6.0f
+		|| RadiusFromSnake < 6.0f
 		|| (RadiusFromMiner < 6.0f && (((interact >> TALKED_QUEST_DUDE) & 1) > 0))
-		|| (RadiusFromMiner < 6.0f && (((interact >> TALKED_QUEST_DUDE) & 1) < 1)))
+		|| (RadiusFromMiner < 6.0f && (((interact >> TALKED_QUEST_DUDE) & 1) < 1))
+		|| (fultonreceived == true && RadiusFromCalafareA < 10.0f && RadiusFromCalafareB < 10.0f && RadiusFromCalafareC < 10.0f))
 	{
 		interact |= 1 << CAN_INTERACT;
 	}
@@ -1736,6 +1738,13 @@ void SceneMun::RenderInfomationOnScreen()
 	if ((((interact >> CAN_INTERACT) & 1) > 0))
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to interact", Color(0, 1, 0), 3, 8, 17);
+	}
+	if ((fultonreceived == true && (((interact >> CAN_INTERACT) & 1) > 0) && (((interact >> TALKING_TO_SNAKE) & 1) < 1))
+		|| (RadiusFromCalafareA < 10.0f && fultonreceived == true)
+		|| (RadiusFromCalafareB < 10.0f && fultonreceived == true)
+		|| (RadiusFromCalafareC < 10.0f && fultonreceived == true))
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'Q' to capture", Color(0, 1, 0), 3, 8, 18);
 	}
 	RenderTextOnScreen(meshList[GEO_TEXT], "WASD to move", Color(0, 1, 0), 1, 65, 49);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse to move Camera", Color(0, 1, 0), 1, 65, 48);
