@@ -1647,8 +1647,8 @@ void SceneMun::RenderTextBoxOnScreen()
 		viewStack.PopMatrix();
 		modelStack.PopMatrix();
 		glEnable(GL_DEPTH_TEST);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Here is some Fulton Extraction Ballons", Color(0, 0, 0), 2, 6, 4);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Extract All the villagers for better rewards", Color(0, 0, 0), 2, 6, 2);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Here is some Fulton Extraction Ballons", Color(0, 0, 0), 2, 9.2f, 4);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Extract All the villagers for better rewards", Color(0, 0, 0), 2, 9.2f, 2);
 	}
 }
 
