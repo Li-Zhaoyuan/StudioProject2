@@ -485,7 +485,6 @@ void SP2::Render()
 
 	RenderTextOnScreen(meshList[GEO_TEXT], "=>", Color(0, 1, 0), 3, 3.5, arrowpositiony);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Start", Color(0, 1, 0), 3, 5, 7);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Options", Color(0, 1, 0), 3, 5, 6);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Exit", Color(0, 1, 0), 3, 5, 5);
 	
 }

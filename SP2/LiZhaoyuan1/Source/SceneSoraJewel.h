@@ -66,6 +66,9 @@ class SceneSoraJewel : public Scene
 		GEO_BEEREMPTY,
 		GEO_MAINICONSJ,
 		GEO_MINIMAPSJ,
+		GEO_XWINGBODY,
+		GEO_XWING1,
+		GEO_XWING2,
 		NUM_GEOMETRY,
 	};
 
@@ -101,6 +104,17 @@ class SceneSoraJewel : public Scene
 		U_LIGHT1_COSCUTOFF,
 		U_LIGHT1_COSINNER,
 		U_LIGHT1_EXPONENT,
+		U_LIGHT2_POSITION,
+		U_LIGHT2_COLOR,
+		U_LIGHT2_POWER,
+		U_LIGHT2_KC,
+		U_LIGHT2_KL,
+		U_LIGHT2_KQ,
+		U_LIGHT2_TYPE,
+		U_LIGHT2_SPOTDIRECTION,
+		U_LIGHT2_COSCUTOFF,
+		U_LIGHT2_COSINNER,
+		U_LIGHT2_EXPONENT,
 		U_NUMLIGHTS,
 		U_COLOR_TEXTURE_ENABLED,
 		U_COLOR_TEXTURE,
@@ -112,7 +126,8 @@ class SceneSoraJewel : public Scene
 	enum Interactions
 	{
 		INTERACT_QUESTLADY,
-		INTERACT_ENGINEER,
+		INTERACT_ENGINEER1,
+		INTERACT_ENGINEER2,
 		INTERACT_COMMANDO,
 		INTERACT_KEG,
 		INTERACT_XWING,
@@ -187,7 +202,7 @@ private:
 	size_t l = 1;
 
 	float timer = 0.f;
-	bool cutscene = false;
+	bool cutscene;
 	bool timercheck = false;
 
 	float boxX = 0;
@@ -247,6 +262,11 @@ private:
 	float RadiusFromKeg;
 	float RadiusFromXwing;
 	float RadiusFromBeer;
+
+	float RotationWings1;
+	float RotationWings2;
+
+
 	/*Vector3 viewAtOre;
 	Vector3 viewAtLady;
 	Vector3 viewAtDude;

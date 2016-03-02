@@ -128,6 +128,7 @@ class SceneMun : public Scene
 		MINED,
 		REPAIRED,
 		CAN_INTERACT,
+		TALKING_TO_SNAKE,
 	};
 public:
 	SceneMun();
@@ -167,6 +168,7 @@ private:
 	void RenderInfomationOnScreen();
 	void RenderCalefare();
 	void RenderSceneOBJ();
+	void fultoninteraction();
 	unsigned m_vertexArrayID;
 	Mesh *meshList[NUM_GEOMETRY];
 
@@ -183,12 +185,15 @@ private:
 	
 	int interact = 0;
 
+	int fultonleft;
+
 	float timing = 0;
 
 	bool textWL = false;
 	bool textQD = false;
 	bool textminer1 = false;
 	bool textminer2 = false;
+	bool fultonreceived = false;
 
 	size_t a = 1;
 	size_t b = 1;
@@ -199,6 +204,7 @@ private:
 	std::stringstream ssQuestDude;
 	std::stringstream ssMiner;
 	std::stringstream ssMiner2;
+	std::stringstream thisisastring;
 
 	std::string sWLady;
 	std::string sQuestDude;
@@ -217,7 +223,7 @@ private:
 
 
 	Vector3 crashedplaneCoord = Vector3(-36.f,4.9f,-49.f);
-	Vector3 planecoord = Vector3(-36.f, -2.9f, -49.f);
+	Vector3 planecoord = Vector3(-36.f, -2.9f, -35.f);
 	Vector3 questdudehouseCoord = Vector3(33, -5, 20);
 	Vector3 worriedladyhouseCoord = Vector3(20, -5, -38);
 	Vector3 worriedladyCoord = Vector3(2, -4, -38);
@@ -228,12 +234,20 @@ private:
 	Vector3 CalefareACoord = Vector3(26, -0.9f, -21);
 	Vector3 CalefareBCoord = Vector3(26, -0.9f, -10);
 	Vector3 CalefareCCoord = Vector3(15, -0.9f, 25);
+	Vector3 SNAKEcoords = Vector3(47.f, -5.5f, 46.f);
+	Vector3 TranslateCalefareA;
+	Vector3 TranslateCalefareB;
+	Vector3 TranslateCalefareC;
 	Vector3 tempview;
 	Vector3 viewAtOre;
 	Vector3 viewAtLady;
 	Vector3 viewAtDude;
 	Vector3 viewAtMiner;
 	Vector3 viewAtCrashedPlane;
+	Vector3 viewatSNAKE;
+	Vector3 viewatCalefareA;
+	Vector3 viewatCalefareB;
+	Vector3 viewatCalefareC;
 	float worriedladytempx = 0;
 	float worriedladytempz = 0;
 
@@ -254,6 +268,10 @@ private:
 	float RadiusFromDude;
 	float RadiusFromMiner;
 	float RadiusFromCrashedPlane;
+	float RadiusFromSnake;
+	float RadiusFromCalafareA;
+	float RadiusFromCalafareB;
+	float RadiusFromCalafareC;
 	float rotateAngle = 0;
 	float rotateLimbs = 0;
 	float rotateWhole = 0;
@@ -261,6 +279,11 @@ private:
 	float hoverheight = 0;
 	float rotateplane = 0;
 	float translateplane = 0;
+
+	bool LadyCaptured = false, VillageChiefCaptured = true, MinerCaptured = true;
+	bool CalefareACaptured = true, CalefareBCaptured = true, CalefareCCaptured = true;
+	bool Allcaptured;
+
 
 	MS modelStack, viewStack, projectionStack;
 };

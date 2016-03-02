@@ -332,7 +332,7 @@ void SceneMun::Init()
 
 
 	crashedplaneCoord = Vector3(-36.f, 4.9f, -49.f);
-	planecoord = Vector3(-36.f, -2.9f, -49.f);
+	planecoord = Vector3(-36.f, -2.9f, -35.f);
 	questdudehouseCoord = Vector3(33, -5, 20);
 	worriedladyhouseCoord = Vector3(20, -5, -38);
 	worriedladyCoord = Vector3(2, -4, -38);
@@ -365,6 +365,9 @@ void SceneMun::Init()
 	hoverheight = 0;
 	rotateplane = 0;
 	translateplane = 0;
+	thisisastring << "fulton left: ";
+	fultonleft = 6;
+	thisisastring << fultonleft;
 }
 
 void SceneMun::Update(double dt)
@@ -375,7 +378,7 @@ void SceneMun::Update(double dt)
 	}
 	if ((((interact >> REPAIRED) & 1) > 0))
 	{
-		camera.Init(Vector3(-60, 100, -35), Vector3(-35, 0, -40), Vector3(0, 1, 0));
+		camera.Init(Vector3(15, 10, 45), Vector3(-35, 0, -40), Vector3(0, 1, 0));
 	}
 
 	if (((((interact >> TALKING_TO_LADY) & 1) > 0)) && textWL)
@@ -643,6 +646,10 @@ void SceneMun::Update(double dt)
 	{
 		Gamemode::getinstance()->currentgamestate = 1;
 	}
+
+	TranslateCalefareA = (translatingChar, 0.f, 0.f);
+	TranslateCalefareB = (translatingChar, 0.f, 0.f);;
+	TranslateCalefareC = (0.f , 0.f, translatingChar);
 	npcRotate();
 	interactions();
 	camera.target;
@@ -910,11 +917,11 @@ void SceneMun::Render()
 	renderMesh(meshList[GEO_MUNGROUND], false);
 	modelStack.PopMatrix();
 
-	/*modelStack.PushMatrix();
-	modelStack.Translate(0, 0, 0);
+	modelStack.PushMatrix();
+	modelStack.Translate(SNAKEcoords.x, SNAKEcoords.y, SNAKEcoords.z);
 	modelStack.Scale(1.f, 1.f, 1.f);
 	renderMesh(meshList[GEO_SNAKE], false);
-	modelStack.PopMatrix();*/
+	modelStack.PopMatrix();
 
 	if ((((interact >> REPAIRED) & 1) < 1))
 	{
@@ -1046,6 +1053,7 @@ void SceneMun::Render()
 	}
 	RenderTextBoxOnScreen();
 	RenderInfomationOnScreen();
+	fultoninteraction();
 }
 
 void SceneMun::RenderSkybox()
@@ -1138,12 +1146,20 @@ void SceneMun::interactions()
 	viewAtDude = (questdudeCoord - camera.position);
 	viewAtMiner = (minerandplusCoord - camera.position);
 	viewAtCrashedPlane = (crashedplaneCoord - camera.position);
+	viewatSNAKE = (SNAKEcoords - camera.position);
+	viewatCalefareA = (CalefareACoord + TranslateCalefareA - camera.position);
+	viewatCalefareB = (CalefareBCoord + TranslateCalefareB - camera.position);
+	viewatCalefareC = (CalefareCCoord + TranslateCalefareC - camera.position);
 	RadiusFromOre = (viewAtOre - tempview).Length();
 	RadiusFromLady = (viewAtLady - tempview).Length();
 	RadiusFromDude = (viewAtDude - tempview).Length();
 	RadiusFromMiner = (viewAtMiner - tempview).Length();
 	RadiusFromCrashedPlane = (viewAtCrashedPlane - tempview).Length();
-	
+	RadiusFromSnake = (viewatSNAKE-tempview).Length();
+	// Add Calafare Radius Here  translatingChar-> this is the movement
+	RadiusFromCalafareA = (viewatCalefareA - tempview).Length();
+	RadiusFromCalafareB = (viewatCalefareB - tempview).Length();
+	RadiusFromCalafareC = (viewatCalefareC - tempview).Length();
 	if ((RadiusFromOre < 2.5f && (((interact >> MINED) & 1) < 1) && (((interact >> PLAYER_GET_PICKAXE) & 1) > 0))
 		|| (RadiusFromCrashedPlane < 7.5f && (((interact >> REPAIRED) & 1) < 1))
 		|| RadiusFromLady < 6.0f
@@ -1185,11 +1201,17 @@ void SceneMun::interactions()
 	{
 		interact |= 1 << TALKING_TO_LADY;
 		textWL = true;
+		LadyCaptured = true;
 	}
 	else if (RadiusFromLady > 6.0f)
 	{
 		interact &= ~(1 << TALKING_TO_LADY);
 		textWL = false;
+	}
+	else if ((RadiusFromLady < 3.0f) && (fultonreceived == true) && (fultonleft>0) &&(LadyCaptured==false))
+	{
+		LadyCaptured =2;
+
 	}
 
 	if (RadiusFromDude < 6.0f
@@ -1230,8 +1252,59 @@ void SceneMun::interactions()
 		interact &= ~(1 << TALKING_TO_MINER_CASE_1);
 		textminer1 = false;
 	}
-}
 
+	if (RadiusFromSnake < 6.0f
+		&& Application::IsKeyPressed('E'))
+	{
+		interact |= 1 << TALKING_TO_SNAKE;
+		fultonreceived = true;
+	}
+	else if (RadiusFromSnake > 6.0f)
+	{
+		interact &= ~(1 << TALKING_TO_SNAKE);
+	}
+}
+void SceneMun::fultoninteraction()
+{
+	if (fultonreceived == true)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], thisisastring.str() , Color(0, 0, 0), 2, 1, 18);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Captured", Color(0, 0, 0), 2, 1, 16);
+		if (LadyCaptured == true)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Lady", Color(0, 0, 0), 2, 1, 15);
+		}
+		if (VillageChiefCaptured == true)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Village Chief", Color(0, 0, 0), 2, 1, 14);
+		}
+		if (MinerCaptured == true)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Miner", Color(0, 0, 0), 2, 1, 13);
+		}
+		if (CalefareACaptured == true)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Worker No.1", Color(0, 0, 0), 2, 1, 12);
+		}
+		if (CalefareBCaptured == true)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Worker No.2", Color(0, 0, 0), 2, 1, 11);
+		}
+		if (CalefareCCaptured == true)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Worker No.3", Color(0, 0, 0), 2, 1, 10);
+		}
+		if ((LadyCaptured == true) && (VillageChiefCaptured == true) && (MinerCaptured == true) && (CalefareACaptured == true) && (CalefareBCaptured == true) && (CalefareCCaptured == true))
+		{
+			Allcaptured = true;
+			if (Allcaptured == true)
+			{
+				RenderTextOnScreen(meshList[GEO_TEXT], "All Captured", Color(0, 0, 0), 2, 1, 9);
+			}
+		}
+	}
+
+}
 void SceneMun::RenderPickaxeOnScreen()
 {
 
@@ -1445,6 +1518,31 @@ void SceneMun::RenderTextBoxOnScreen()
 		glEnable(GL_DEPTH_TEST);
 		RenderTextOnScreen(meshList[GEO_TEXT], ssMiner2.str(), Color(0, 0, 0), 3, 6, 4);
 	}
+
+	if (((((interact >> TALKING_TO_SNAKE) & 1) > 0)))
+	{
+		Mtx44 ortho;
+		glDisable(GL_DEPTH_TEST);
+		ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+		projectionStack.PushMatrix();
+		projectionStack.LoadMatrix(ortho);
+		viewStack.PushMatrix();
+		viewStack.LoadIdentity(); //No need camera for ortho mode
+		modelStack.PushMatrix();
+		modelStack.LoadIdentity(); //Reset modelStack
+		modelStack.Translate(40, 10, -1);
+		/*modelStack.Rotate(45, 0, 1, 0);
+		modelStack.Rotate(45, 0, 0, 1);*/
+		modelStack.Scale(60, 60, 1);
+		modelStack.Rotate(90, 1, 0, 0);
+		renderMesh(meshList[GEO_QUAD], false);
+		projectionStack.PopMatrix();
+		viewStack.PopMatrix();
+		modelStack.PopMatrix();
+		glEnable(GL_DEPTH_TEST);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Here is some Fulton Extraction Ballons", Color(0, 0, 0), 2, 6, 4);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Extract All the villagers for better rewards", Color(0, 0, 0), 2, 6, 2);
+	}
 }
 
 void SceneMun::RenderLetterOnScreen()
@@ -1505,6 +1603,10 @@ void SceneMun::RenderInfomationOnScreen()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to interact", Color(0, 1, 0), 3, 8, 17);
 	}
+	RenderTextOnScreen(meshList[GEO_TEXT], "WASD to move", Color(0, 1, 0), 1, 65, 49);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse to move Camera", Color(0, 1, 0), 1, 65, 48);
+	RenderTextOnScreen(meshList[GEO_TEXT], "E to interact when available", Color(0, 1, 0), 1, 65, 47);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Left click when textbox appear", Color(0, 1, 0), 1, 65, 46);
 	std::stringstream playerPos;
 	playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosz;
 	//RenderTextOnScreen(meshList[GEO_TEXT], playerPos.str(), Color(1, 0, 0), 2, 0, 18);
