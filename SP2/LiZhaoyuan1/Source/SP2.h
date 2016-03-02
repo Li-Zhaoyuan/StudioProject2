@@ -21,7 +21,7 @@ class for the Main Menu
 
 /******************************************************************************/
 /*!
-Class SceneMun:
+Class SP2:
 \brief	Defines the scene main menu and its methods
 */
 /******************************************************************************/
