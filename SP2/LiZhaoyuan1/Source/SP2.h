@@ -1,3 +1,13 @@
+/****************************************************************************/
+/*!
+\file SP2.h
+\author Li Zhaoyuan, Nathan Chia Shi-Lin, Terence Tan Ming Jie, Muhammad Nurhidayat Bin Suderman
+\par email: lizhaoyuan123@hotmail.com
+\brief
+class for the Main Menu
+*/
+/****************************************************************************/
+
 #ifndef SP2_H_
 #define SP2_H_
 
@@ -8,6 +18,13 @@
 #include "Camera2.h"
 #include "Camera3.h"
 #include "MatrixStack.h"
+
+/******************************************************************************/
+/*!
+Class SceneMun:
+\brief	Defines the scene main menu and its methods
+*/
+/******************************************************************************/
 class SP2 : public Scene
 {
 
@@ -18,44 +35,7 @@ class SP2 : public Scene
 		GEO_CUBE2,
 		GEO_CUBE,
 		GEO_SPHERE,
-		GEO_LIGHTBALL,
 		GEO_TEXT,
-		GEO_MUNLEFT,
-		GEO_MUNRIGHT,
-		GEO_MUNTOP,
-		GEO_MUNBOTTOM,
-		GEO_MUNFRONT,
-		GEO_MUNBACK,
-		GEO_MUNGROUND,
-		GEO_GALAXYLEFT,
-		GEO_GALAXYRIGHT,
-		GEO_GALAXYTOP,
-		GEO_GALAXYBOTTOM,
-		GEO_GALAXYFRONT,
-		GEO_GALAXYBACK,
-		GEO_GALAXYGROUND,
-		GEO_SORAJEWELLEFT,
-		GEO_SORAJEWELRIGHT,
-		GEO_SORAJEWELTOP,
-		GEO_SORAJEWELBOTTOM,
-		GEO_SORAJEWELFRONT,
-		GEO_SORAJEWELBACK,
-		GEO_SORAJEWEL,
-		GEO_ASTEROID,
-		GEO_GLOBE,
-		GEO_PROJECTOR,
-		GEO_SOFA,
-		GEO_HOUSE,
-		GEO_ORE,
-		GEO_PICKAXE,
-		GEO_CRASHEDPLANE,
-		GEO_MUN,
-		GEO_FEMALEA,
-		GEO_FEMALEB,
-		GEO_ALIEN,
-		GEO_MALE,
-		GEO_PROTAGANIST,
-		GEO_CAVE,
 		NUM_GEOMETRY,
 	};
 
@@ -68,34 +48,11 @@ class SP2 : public Scene
 		U_MATERIAL_DIFFUSE,
 		U_MATERIAL_SPECULAR,
 		U_MATERIAL_SHININESS,
-		U_LIGHT0_POSITION,
-		U_LIGHT0_COLOR,
-		U_LIGHT0_POWER,
-		U_LIGHT0_KC,
-		U_LIGHT0_KL,
-		U_LIGHT0_KQ,
-		U_LIGHTENABLED,
-		U_LIGHT0_TYPE,
-		U_LIGHT0_SPOTDIRECTION,
-		U_LIGHT0_COSCUTOFF,
-		U_LIGHT0_COSINNER,
-		U_LIGHT0_EXPONENT,
-		U_LIGHT1_POSITION,
-		U_LIGHT1_COLOR,
-		U_LIGHT1_POWER,
-		U_LIGHT1_KC,
-		U_LIGHT1_KL,
-		U_LIGHT1_KQ,
-		U_LIGHT1_TYPE,
-		U_LIGHT1_SPOTDIRECTION,
-		U_LIGHT1_COSCUTOFF,
-		U_LIGHT1_COSINNER,
-		U_LIGHT1_EXPONENT,
-		U_NUMLIGHTS,
 		U_COLOR_TEXTURE_ENABLED,
 		U_COLOR_TEXTURE,
 		U_TEXT_ENABLED,
 		U_TEXT_COLOR,
+		U_LIGHTENABLED,
 		U_TOTAL,
 	};
 
@@ -111,14 +68,11 @@ public:
 	virtual void Exit();
 
 private:
-	Light light[2];
 	bool enableLight = false;
 	float LSPEED = 10.f;
 	double fps = 0;
 
 	void renderMesh(Mesh *mesh, bool enableLight);
-	void lighting();
-	void lighting2();
 	void Rendermainmenutoscreen();
 	void interactionWithRobby();
 	void interactionWithSnowBalls();
@@ -131,8 +85,6 @@ private:
 	unsigned m_programID;
 	unsigned m_parameters[U_TOTAL];
 
-	/*float rotateAngle;
-	float planet1RevAngle, planet1RotAngle, moon1RotAngle;*/
 
 	Camera3 camera;
 
@@ -145,15 +97,6 @@ private:
 	void MunInit();
 	void MunRender();
 
-	void GalaxyInit();
-	void GalaxyRender();
-	
-	void SoraJewelInit();
-	void SoraJewelRender();
-
-	void renderMunSkybox();
-	void renderGalaxySkybox();
-	void renderSoraJewelSkybox();
 
 	float arrowpositiony;
 	Application application;

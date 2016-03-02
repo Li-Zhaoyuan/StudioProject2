@@ -1,6 +1,6 @@
 /****************************************************************************/
 /*!
-\file SceneMun.h
+\file LoadingScreen.h
 \author Li Zhaoyuan
 \par email: lizhaoyuan123@hotmail.com
 \brief
@@ -43,30 +43,7 @@ class LoadingScreen : public Scene
 		U_MATERIAL_DIFFUSE,
 		U_MATERIAL_SPECULAR,
 		U_MATERIAL_SHININESS,
-		U_LIGHT0_POSITION,
-		U_LIGHT0_COLOR,
-		U_LIGHT0_POWER,
-		U_LIGHT0_KC,
-		U_LIGHT0_KL,
-		U_LIGHT0_KQ,
 		U_LIGHTENABLED,
-		U_LIGHT0_TYPE,
-		U_LIGHT0_SPOTDIRECTION,
-		U_LIGHT0_COSCUTOFF,
-		U_LIGHT0_COSINNER,
-		U_LIGHT0_EXPONENT,
-		U_LIGHT1_POSITION,
-		U_LIGHT1_COLOR,
-		U_LIGHT1_POWER,
-		U_LIGHT1_KC,
-		U_LIGHT1_KL,
-		U_LIGHT1_KQ,
-		U_LIGHT1_TYPE,
-		U_LIGHT1_SPOTDIRECTION,
-		U_LIGHT1_COSCUTOFF,
-		U_LIGHT1_COSINNER,
-		U_LIGHT1_EXPONENT,
-		U_NUMLIGHTS,
 		U_COLOR_TEXTURE_ENABLED,
 		U_COLOR_TEXTURE,
 		U_TEXT_ENABLED,
@@ -86,14 +63,11 @@ public:
 	virtual void Exit();
 
 private:
-	Light light[2];
 	bool enableLight = false;
 	float LSPEED = 10.f;
 	double fps = 0;
 
 	void renderMesh(Mesh *mesh, bool enableLight);
-	void lighting();
-	void lighting2();
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
 	void RenderLoadingBarOnScreen();
@@ -105,8 +79,6 @@ private:
 	unsigned m_programID;
 	unsigned m_parameters[U_TOTAL];
 
-	/*float rotateAngle;
-	float planet1RevAngle, planet1RotAngle, moon1RotAngle;*/
 
 	Camera3 camera;
 
