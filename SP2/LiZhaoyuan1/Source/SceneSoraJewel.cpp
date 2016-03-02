@@ -421,10 +421,6 @@ void SceneSoraJewel::Update(double dt)
 		camera.SJUpdate(dt, 60, -140, -110, 110);
 	fps = 1 / dt;
 
-	if (camera.position.x >= 50 && camera.position.z >= 50 && Application::IsKeyPressed('E') && QuestsDone)
-	{
-		Gamemode::getinstance()->currentgamestate = 4;
-	}
 
 	if (((((interact >> INTERACT_XWING) & 1) > 0)) && QuestsDone)
 	{

@@ -1,12 +1,19 @@
+/****************************************************************************/
+/*!
+\file LoadingScreen.cpp
+\author Li Zhaoyuan
+\par email: lizhaoyuan123@hotmail.com
+\brief
+class for the scene while Loading
+*/
+/****************************************************************************/
 #include <sstream>
 
 #include "LoadingScreen.h"
 #include "GL\glew.h"
 #include "GLFW\glfw3.h"
-
 #include "shader.hpp"
 #include "Mtx44.h"
-
 #include "Application.h"
 #include "MeshBuilder.h"
 #include "Light.h"
@@ -14,14 +21,27 @@
 #include "Utility.h"
 #include "ReadTextFile.h"
 #include "LoadTGA.h"
-//#include "RenderMun.h"
-//#include "LoadOBJ.h"
+/******************************************************************************/
+/*!
+\brief	LoadingScreen constructor
+*/
+/******************************************************************************/
 LoadingScreen::LoadingScreen()
 {
 }
+/******************************************************************************/
+/*!
+\brief	LoadingScreen destructor
+*/
+/******************************************************************************/
 LoadingScreen::~LoadingScreen()
 {
 }
+/******************************************************************************/
+/*!
+\brief	LoadingScreen main initializer function
+*/
+/******************************************************************************/
 void LoadingScreen::Init()
 {
 
@@ -49,7 +69,6 @@ void LoadingScreen::Init()
 
 	//Load vertex and fragment shaders
 	m_programID = LoadShaders("Shader//Texture.vertexshader", "Shader//Text.fragmentshader");
-	m_parameters[U_NUMLIGHTS] = glGetUniformLocation(m_programID, "numLights");
 	m_parameters[U_MVP] = glGetUniformLocation(m_programID, "MVP");
 	m_parameters[U_MODELVIEW] = glGetUniformLocation(m_programID, "MV");
 	m_parameters[U_MODELVIEW_INVERSE_TRANSPOSE] = glGetUniformLocation(m_programID, "MV_inverse_transpose");
@@ -57,31 +76,8 @@ void LoadingScreen::Init()
 	m_parameters[U_MATERIAL_DIFFUSE] = glGetUniformLocation(m_programID, "material.kDiffuse");
 	m_parameters[U_MATERIAL_SPECULAR] = glGetUniformLocation(m_programID, "material.kSpecular");
 	m_parameters[U_MATERIAL_SHININESS] = glGetUniformLocation(m_programID, "material.kShininess");
-	m_parameters[U_LIGHT0_POSITION] = glGetUniformLocation(m_programID, "lights[0].position_cameraspace");
-	m_parameters[U_LIGHT0_COLOR] = glGetUniformLocation(m_programID, "lights[0].color");
-	m_parameters[U_LIGHT0_POWER] = glGetUniformLocation(m_programID, "lights[0].power");
-	m_parameters[U_LIGHT0_KC] = glGetUniformLocation(m_programID, "lights[0].kC");
-	m_parameters[U_LIGHT0_KL] = glGetUniformLocation(m_programID, "lights[0].kL");
-	m_parameters[U_LIGHT0_KQ] = glGetUniformLocation(m_programID, "lights[0].kQ");
 	m_parameters[U_LIGHTENABLED] = glGetUniformLocation(m_programID, "lightEnabled");
-	m_parameters[U_LIGHT0_TYPE] = glGetUniformLocation(m_programID, "lights[0].type");
-	m_parameters[U_LIGHT0_SPOTDIRECTION] = glGetUniformLocation(m_programID, "lights[0].spotDirection");
-	m_parameters[U_LIGHT0_COSCUTOFF] = glGetUniformLocation(m_programID, "lights[0].cosCutoff");
-	m_parameters[U_LIGHT0_COSINNER] = glGetUniformLocation(m_programID, "lights[0].cosInner");
-	m_parameters[U_LIGHT0_EXPONENT] = glGetUniformLocation(m_programID, "lights[0].exponent");
 
-	m_parameters[U_LIGHT1_POSITION] = glGetUniformLocation(m_programID, "lights[1].position_cameraspace");
-	m_parameters[U_LIGHT1_COLOR] = glGetUniformLocation(m_programID, "lights[1].color");
-	m_parameters[U_LIGHT1_POWER] = glGetUniformLocation(m_programID, "lights[1].power");
-	m_parameters[U_LIGHT1_KC] = glGetUniformLocation(m_programID, "lights[1].kC");
-	m_parameters[U_LIGHT1_KL] = glGetUniformLocation(m_programID, "lights[1].kL");
-	m_parameters[U_LIGHT1_KQ] = glGetUniformLocation(m_programID, "lights[1].kQ");
-
-	m_parameters[U_LIGHT1_TYPE] = glGetUniformLocation(m_programID, "lights[1].type");
-	m_parameters[U_LIGHT1_SPOTDIRECTION] = glGetUniformLocation(m_programID, "lights[1].spotDirection");
-	m_parameters[U_LIGHT1_COSCUTOFF] = glGetUniformLocation(m_programID, "lights[1].cosCutoff");
-	m_parameters[U_LIGHT1_COSINNER] = glGetUniformLocation(m_programID, "lights[1].cosInner");
-	m_parameters[U_LIGHT1_EXPONENT] = glGetUniformLocation(m_programID, "lights[1].exponent");
 
 	// Get a handle for our "colorTexture" uniform
 	m_parameters[U_COLOR_TEXTURE_ENABLED] = glGetUniformLocation(m_programID, "colorTextureEnabled");
@@ -93,8 +89,6 @@ void LoadingScreen::Init()
 
 
 	glUseProgram(m_programID);
-
-	glUniform1i(m_parameters[U_NUMLIGHTS], 2);
 
 
 	//Initialize camera settings
@@ -130,15 +124,17 @@ void LoadingScreen::Init()
 	projectionStack.LoadMatrix(projection);
 
 }
+/******************************************************************************/
+/*!
+\brief	LoadingScreen main Update function
 
+\param	dt
+	delta time
+*/
+/******************************************************************************/
 void LoadingScreen::Update(double dt)
 {
-	//camera.Update(dt,100);
 	fps = 1 / dt;
-
-	camPosX = camera.position.x;
-	camPosY = camera.position.y;
-	camPosz = camera.position.z;
 
 
 	if ((loadingbar <= 20))
@@ -172,7 +168,16 @@ void LoadingScreen::Update(double dt)
 	}
 	rotateLimbs += (float)(rotateDirLimb * 25 * dt);
 }
+/******************************************************************************/
+/*!
+\brief	Render Mesh
 
+\param	mesh
+	The mesh that is rendering
+\param	enableLight
+	To determine if the Obj allows light to affect it
+*/
+/******************************************************************************/
 void LoadingScreen::renderMesh(Mesh *mesh, bool enableLight)
 {
 	Mtx44 MVP, modelView, modelView_inverse_transpose;
@@ -213,7 +218,18 @@ void LoadingScreen::renderMesh(Mesh *mesh, bool enableLight)
 	}
 
 }
+/******************************************************************************/
+/*!
+\brief	Render Text Mesh
 
+\param	mesh
+	The mesh that is rendering
+\param	text
+	The text you want to render
+\param	color
+	Color of the text
+*/
+/******************************************************************************/
 void LoadingScreen::RenderText(Mesh* mesh, std::string text, Color color)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
@@ -240,7 +256,24 @@ void LoadingScreen::RenderText(Mesh* mesh, std::string text, Color color)
 	glUniform1i(m_parameters[U_TEXT_ENABLED], 0);
 	glEnable(GL_DEPTH_TEST);
 }
+/******************************************************************************/
+/*!
+\brief	Render Text Mesh on screen
 
+\param	mesh
+The mesh that is rendering
+\param	text
+The text you want to render
+\param	color
+Color of the text
+\param size
+Size of the text
+\param x
+x coordinate of the text
+\param y
+y coordinate of the text
+*/
+/******************************************************************************/
 void LoadingScreen::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
@@ -284,7 +317,11 @@ void LoadingScreen::RenderTextOnScreen(Mesh* mesh, std::string text, Color color
 
 }
 
-
+/******************************************************************************/
+/*!
+\brief	LoadingScreen main render function to render everything
+*/
+/******************************************************************************/
 void LoadingScreen::Render()
 {
 	// Render VBO here
@@ -325,13 +362,21 @@ void LoadingScreen::Render()
 
 
 }
-
+/******************************************************************************/
+/*!
+\brief	LoadingScreen Exiting the program
+*/
+/******************************************************************************/
 void LoadingScreen::Exit()
 {
 	glDeleteVertexArrays(1, &m_vertexArrayID);
 	glDeleteProgram(m_programID);
 }
-
+/******************************************************************************/
+/*!
+\brief	Function to render the loading bar on screen
+*/
+/******************************************************************************/
 void LoadingScreen::RenderLoadingBarOnScreen()
 {
 	Mtx44 ortho;
@@ -354,7 +399,11 @@ void LoadingScreen::RenderLoadingBarOnScreen()
 	modelStack.PopMatrix();
 	glEnable(GL_DEPTH_TEST);
 }
-
+/******************************************************************************/
+/*!
+\brief	Function to render the moaving character
+*/
+/******************************************************************************/
 void LoadingScreen::RenderCharacter()
 {
 	modelStack.PushMatrix();
