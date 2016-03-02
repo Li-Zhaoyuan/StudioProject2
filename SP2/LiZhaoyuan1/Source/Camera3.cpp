@@ -1,17 +1,43 @@
+/******************************************************************************/
+/*!
+\file Camera3.cpp
+\author Li Zhaoyuan, Nathan Chia Shi-Lin, Terence Tan Ming Jie, Muhammad Nurhidayat Bin Suderman
+\par email: lizhaoyuan123@hotmail.com
+\brief
+Camera
+*/
+/******************************************************************************/
 #include "Camera3.h"
 #include "Application.h"
 #include "Mtx44.h"
 #include "Physics.h"
 
-
+/****************************************************************************/
+/*!
+\brief
+	constructor for Camera3.cpp file
+*/
+/****************************************************************************/
 Camera3::Camera3()
 {
 }
 
+/****************************************************************************/
+/*!
+\brief
+	deconstructor for Camera3.cpp file
+*/
+/****************************************************************************/
 Camera3::~Camera3()
 {
 }
 
+/****************************************************************************/
+/*!
+\brief
+	Camera3 initializer
+*/
+/****************************************************************************/
 void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 {
 	this->position = defaultPosition = pos;
@@ -32,6 +58,12 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 	gravity = -2.f;
 }
 
+/****************************************************************************/
+/*!
+\brief
+	running functions, checks, keypress in the .cpp file every frame
+*/
+/****************************************************************************/
 void Camera3::Update(double dt, float bounds)
 {
 	POINT mousecursor;
@@ -295,6 +327,12 @@ void Camera3::Update(double dt, float bounds)
 	SetCursorPos(800 / 2, 600 / 2);
 }
 
+/****************************************************************************/
+/*!
+\brief
+	reset the camera settings to default
+*/
+/****************************************************************************/
 void Camera3::Reset()
 {
 	position = defaultPosition;
@@ -303,6 +341,14 @@ void Camera3::Reset()
 	view = (target - position).Normalized();
 }
 
+/****************************************************************************/
+/*!
+\brief
+	
+\param
+	boundary, double dt
+*/
+/****************************************************************************/
 void Camera3::UpdateCollision(float bounds, double dt)
 {
 	static const float CAMERA_SPEED = 25.f;
@@ -390,6 +436,14 @@ void Camera3::UpdateCollision(float bounds, double dt)
 
 }
 
+/****************************************************************************/
+/*!
+\brief
+	XWing Camera with the limitation view angle
+\param
+	double dt, boundary
+*/
+/****************************************************************************/
 void Camera3::XWingCamera(double dt, float bounds)
 {
 	POINT mousecursor;
@@ -469,6 +523,16 @@ void Camera3::XWingCamera(double dt, float bounds)
 	SetCursorPos(800 / 2, 600 / 2);
 }
 
+/****************************************************************************/
+/*!
+\brief
+	formula for X checker
+\param
+	minimum x, maximum x, minimum z, maximum z, vector3 value
+\return
+	true/false
+*/
+/****************************************************************************/
 bool Camera3::boundaryCheckerX(float smallx, float largex, float smallz, float largez, Vector3 value)
 {
 	if ((value.z > smallz) && (value.z < largez) && (value.x > smallx) && (value.x < smallx + 6)){ return false; }
@@ -476,6 +540,16 @@ bool Camera3::boundaryCheckerX(float smallx, float largex, float smallz, float l
 	return true;
 }
 
+/****************************************************************************/
+/*!
+\brief
+	formula for Z checker
+\param
+	minimum x, maximum x, minimum z, maximum z, vector3 value
+\return
+	true/false
+*/
+/****************************************************************************/
 bool Camera3::boundaryCheckerZ(float smallx, float largex, float smallz, float largez, Vector3 value)
 {
 	if ((value.x > smallx) && (value.x < largex) && (value.z > smallz) && (value.z < smallz + 6)){ return false; }
@@ -483,6 +557,16 @@ bool Camera3::boundaryCheckerZ(float smallx, float largex, float smallz, float l
 	return true;
 }
 
+/****************************************************************************/
+/*!
+\brief
+	X Coord Boundary
+\param
+	Testvalue (value of current camera.position)
+\return
+	true/false
+*/
+/****************************************************************************/
 bool Camera3::OBJboundaryX(Vector3 Testvalue)
 {
 	if (SceneMun == true)
@@ -496,6 +580,16 @@ bool Camera3::OBJboundaryX(Vector3 Testvalue)
 	return true;
 }
 
+/****************************************************************************/
+/*!
+\brief
+	Z Coord Boundary
+\param
+	Testvalue (value of current camera.position)
+\return
+	true/false
+*/
+/****************************************************************************/
 bool Camera3::OBJboundaryZ(Vector3 Testvalue)
 {
 	if (SceneMun == true)
@@ -509,6 +603,16 @@ bool Camera3::OBJboundaryZ(Vector3 Testvalue)
 	return true;
 }
 
+/****************************************************************************/
+/*!
+\brief
+	Y Coord Boundary
+\param
+	Testvalue (value of current camera.position) and int XZ
+\return
+	true/false
+*/
+/****************************************************************************/
 bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 {
 	if (SceneMun == true)
@@ -572,6 +676,16 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 	return true;
 }
 
+/****************************************************************************/
+/*!
+\brief
+	inputting Mun Coord for X checker
+\param
+	Testvalue (value of current camera.position)
+\return
+	true/false
+*/
+/****************************************************************************/
 bool Camera3::AllMunBoundaryX(Vector3 Testvalue)
 {
 	//women's house
@@ -595,6 +709,16 @@ bool Camera3::AllMunBoundaryX(Vector3 Testvalue)
 	return false;
 }
 
+/****************************************************************************/
+/*!
+\brief
+	inputting Mun Coord for Z checker
+\param
+	Testvalue (value of current camera.position)
+\return
+	true/false
+*/
+/****************************************************************************/
 bool Camera3::AllMunBoundaryZ(Vector3 Testvalue)
 {
 	//women's house
@@ -618,6 +742,16 @@ bool Camera3::AllMunBoundaryZ(Vector3 Testvalue)
 	return false;
 }
 
+/****************************************************************************/
+/*!
+\brief
+	inputting SoraJewel Coord for X checker
+\param
+	Testvalue (value of current camera.position)
+\return
+	true/false
+*/
+/****************************************************************************/
 bool Camera3::AllSoraJewelBoundaryX(Vector3 Testvalue)
 {
 	if (!boundaryCheckerX(0.2f, 50, -78, -28, Testvalue))
@@ -629,6 +763,16 @@ bool Camera3::AllSoraJewelBoundaryX(Vector3 Testvalue)
 	return false;
 }
 
+/****************************************************************************/
+/*!
+\brief
+	inputting SoraJewel Coord for Z checker
+\param
+	Testvalue (value of current camera.position)
+\return
+	true/false
+*/
+/****************************************************************************/
 bool Camera3::AllSoraJewelBoundaryZ(Vector3 Testvalue)
 {
 	if (!boundaryCheckerZ(0.2f, 50, -78, -28, Testvalue))
@@ -640,6 +784,16 @@ bool Camera3::AllSoraJewelBoundaryZ(Vector3 Testvalue)
 	return false;
 }
 
+/****************************************************************************/
+/*!
+\brief
+
+\param
+
+\return
+
+*/
+/****************************************************************************/
 void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minboundsz, float maxboundsz)
 {
 	POINT mousecursor;
@@ -945,6 +1099,16 @@ void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minb
 	OnGround();
 }
 
+/****************************************************************************/
+/*!
+\brief
+
+\param
+
+\return
+
+*/
+/****************************************************************************/
 bool Camera3::OnGround()
 {
 	if (position.y <= 25 && (position.x >= -117 && position.z >= 30) && (position.x <= -51 && position.z <= 100))
