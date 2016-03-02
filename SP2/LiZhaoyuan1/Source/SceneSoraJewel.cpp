@@ -179,13 +179,13 @@ void SceneSoraJewel::Init()
 
 	//camera.Init(Vector3(0, 350, 1), Vector3(0, 7, 0), Vector3(0, 1, 0));
 
-	camera.minimapsoracoords.x = 78.f; //
-	camera.minimapsoracoords.y = 55.f; //
+	camera.minimapsoracoords.x = 77.5f; //
+	camera.minimapsoracoords.y = 52.6f; //
 
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
 
 	meshList[GEO_MINIMAPSJ] = MeshBuilder::GenerateQuad("Minimap for Sora Jewel", Color(1, 1, 1));
-	meshList[GEO_MINIMAPSJ]->textureID = LoadTGA("Image//SoraJewelMap.tga");
+	meshList[GEO_MINIMAPSJ]->textureID = LoadTGA("Image//SoraJewelMapNew.tga");
 
 	meshList[GEO_MAINICONSJ] = MeshBuilder::GenerateQuad("front", Color(0.f, 1.f, 0.f));
 
@@ -421,10 +421,6 @@ void SceneSoraJewel::Update(double dt)
 		camera.SJUpdate(dt, 60, -140, -110, 110);
 	fps = 1 / dt;
 
-	if (camera.position.x >= 50 && camera.position.z >= 50 && Application::IsKeyPressed('E') && QuestsDone)
-	{
-		Gamemode::getinstance()->currentgamestate = 4;
-	}
 
 	if (((((interact >> INTERACT_XWING) & 1) > 0)) && QuestsDone)
 	{
@@ -481,6 +477,9 @@ void SceneSoraJewel::Update(double dt)
 		camera.position.y = 25;
 		camera.position.z = 82;
 		camera.up.y = 1;
+		camera.minimapsoracoords.x = 73.4f;
+		camera.minimapsoracoords.y = 52.f;
+
 	}
 	if (Quest1Done == true && Quest2Done == true)
 	{
@@ -960,9 +959,6 @@ void SceneSoraJewel::Render()
 	modelStack.PopMatrix();
 
 	//
-	modelStack.PushMatrix();
-	renderMesh(meshList[GEO_AXES], false);
-	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	RenderSkybox();
@@ -972,13 +968,6 @@ void SceneSoraJewel::Render()
 	modelStack.Scale(20, 20, 20);
 	renderMesh(meshList[GEO_SORAJEWEL], true);
 	modelStack.PopMatrix();
-
-	//modelStack.PushMatrix();
-	//modelStack.Translate(-85, 19, 65);
-	//modelStack.Rotate(90, 0, 1, 0);
-	//modelStack.Scale(5.f, 5.f, 5.f);
-	//renderMesh(meshList[GEO_XWING], true);
-	//modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(Xwing.x, Xwing.y, Xwing.z);
@@ -1098,18 +1087,8 @@ void SceneSoraJewel::Render()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The Quest For Sora Jewel", Color(0, 1, 0), 2, 2, 10);
 	}
-
-	//if (Quest1 == true && Quest2 == false && QuestsDone == false && !Application::IsKeyPressed('W') && !Application::IsKeyPressed('A') && !Application::IsKeyPressed('S') && !Application::IsKeyPressed('D'))
-	//{
-	//	RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The 1st Quest For Sora Jewel", (0, 1, 0), 5, 4, 10);
-	//}
-	//if (Quest2 == true && QuestsDone == false && !Application::IsKeyPressed('W') && !Application::IsKeyPressed('A') && !Application::IsKeyPressed('S') && !Application::IsKeyPressed('D'))
-	//{
-	//	RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The 2nd Quest For Sora Jewel", (0, 1, 0), 5, 4, 10);
-	//}
 	renderText();
 
-	
 	std::stringstream playerPos;
 	playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosZ;
 	std::stringstream ss;

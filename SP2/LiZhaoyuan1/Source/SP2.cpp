@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file SP2.cpp
+\author Li Zhaoyuan, Nathan Chia Shi-Lin, Terence Tan Ming Jie, Muhammad Nurhidayat Bin Suderman
+\par email: lizhaoyuan123@hotmail.com
+\brief
+class for the Main Menu
+*/
+/****************************************************************************/
 #include <sstream>
 
 #include "SP2.h"
@@ -14,14 +23,29 @@
 #include "Utility.h"
 #include "ReadTextFile.h"
 #include "LoadTGA.h"
-//#include "RenderMun.h"
-//#include "LoadOBJ.h"
+
+/******************************************************************************/
+/*!
+\brief	SP2 constructor
+*/
+/******************************************************************************/
 SP2::SP2()
 {
 }
+
+/******************************************************************************/
+/*!
+\brief	SP2 destructor
+*/
+/******************************************************************************/
 SP2::~SP2()
 {
 }
+/******************************************************************************/
+/*!
+\brief	SP2 main initializer function
+*/
+/******************************************************************************/
 void SP2::Init()
 {
 
@@ -49,7 +73,6 @@ void SP2::Init()
 
 	//Load vertex and fragment shaders
 	m_programID = LoadShaders("Shader//Texture.vertexshader", "Shader//Text.fragmentshader");
-	m_parameters[U_NUMLIGHTS] = glGetUniformLocation(m_programID, "numLights");
 	m_parameters[U_MVP] = glGetUniformLocation(m_programID, "MVP");
 	m_parameters[U_MODELVIEW] = glGetUniformLocation(m_programID, "MV");
 	m_parameters[U_MODELVIEW_INVERSE_TRANSPOSE] = glGetUniformLocation(m_programID, "MV_inverse_transpose");
@@ -57,32 +80,7 @@ void SP2::Init()
 	m_parameters[U_MATERIAL_DIFFUSE] = glGetUniformLocation(m_programID, "material.kDiffuse");
 	m_parameters[U_MATERIAL_SPECULAR] = glGetUniformLocation(m_programID, "material.kSpecular");
 	m_parameters[U_MATERIAL_SHININESS] = glGetUniformLocation(m_programID, "material.kShininess");
-	m_parameters[U_LIGHT0_POSITION] = glGetUniformLocation(m_programID, "lights[0].position_cameraspace");
-	m_parameters[U_LIGHT0_COLOR] = glGetUniformLocation(m_programID, "lights[0].color");
-	m_parameters[U_LIGHT0_POWER] = glGetUniformLocation(m_programID, "lights[0].power");
-	m_parameters[U_LIGHT0_KC] = glGetUniformLocation(m_programID, "lights[0].kC");
-	m_parameters[U_LIGHT0_KL] = glGetUniformLocation(m_programID, "lights[0].kL");
-	m_parameters[U_LIGHT0_KQ] = glGetUniformLocation(m_programID, "lights[0].kQ");
 	m_parameters[U_LIGHTENABLED] = glGetUniformLocation(m_programID, "lightEnabled");
-	m_parameters[U_LIGHT0_TYPE] = glGetUniformLocation(m_programID, "lights[0].type");
-	m_parameters[U_LIGHT0_SPOTDIRECTION] = glGetUniformLocation(m_programID, "lights[0].spotDirection");
-	m_parameters[U_LIGHT0_COSCUTOFF] = glGetUniformLocation(m_programID, "lights[0].cosCutoff");
-	m_parameters[U_LIGHT0_COSINNER] = glGetUniformLocation(m_programID, "lights[0].cosInner");
-	m_parameters[U_LIGHT0_EXPONENT] = glGetUniformLocation(m_programID, "lights[0].exponent");
-
-	m_parameters[U_LIGHT1_POSITION] = glGetUniformLocation(m_programID, "lights[1].position_cameraspace");
-	m_parameters[U_LIGHT1_COLOR] = glGetUniformLocation(m_programID, "lights[1].color");
-	m_parameters[U_LIGHT1_POWER] = glGetUniformLocation(m_programID, "lights[1].power");
-	m_parameters[U_LIGHT1_KC] = glGetUniformLocation(m_programID, "lights[1].kC");
-	m_parameters[U_LIGHT1_KL] = glGetUniformLocation(m_programID, "lights[1].kL");
-	m_parameters[U_LIGHT1_KQ] = glGetUniformLocation(m_programID, "lights[1].kQ");
-
-	m_parameters[U_LIGHT1_TYPE] = glGetUniformLocation(m_programID, "lights[1].type");
-	m_parameters[U_LIGHT1_SPOTDIRECTION] = glGetUniformLocation(m_programID, "lights[1].spotDirection");
-	m_parameters[U_LIGHT1_COSCUTOFF] = glGetUniformLocation(m_programID, "lights[1].cosCutoff");
-	m_parameters[U_LIGHT1_COSINNER] = glGetUniformLocation(m_programID, "lights[1].cosInner");
-	m_parameters[U_LIGHT1_EXPONENT] = glGetUniformLocation(m_programID, "lights[1].exponent");
-
 	// Get a handle for our "colorTexture" uniform
 	m_parameters[U_COLOR_TEXTURE_ENABLED] = glGetUniformLocation(m_programID, "colorTextureEnabled");
 	m_parameters[U_COLOR_TEXTURE] = glGetUniformLocation(m_programID, "colorTexture");
@@ -94,51 +92,6 @@ void SP2::Init()
 
 	glUseProgram(m_programID);
 
-	glUniform1i(m_parameters[U_NUMLIGHTS], 2);
-
-	light[0].type = Light::LIGHT_SPOT;
-	light[0].position.Set(-5, 2, -10);
-	light[0].color.Set(1, 1, 1);
-	light[0].power = 1;
-	light[0].kC = 1.f;
-	light[0].kL = 0.01f;
-	light[0].kQ = 0.01f;
-	light[0].cosCutoff = cos(Math::DegreeToRadian(45));
-	light[0].cosInner = cos(Math::DegreeToRadian(30));
-	light[0].exponent = 3.f;
-	light[0].spotDirection.Set(0.f, 1.f, 0.f);
-
-	light[1].type = Light::LIGHT_DIRECTIONAL;
-	light[1].position.Set(2, 2, 0);
-	light[1].color.Set(1, 1, 1);
-	light[1].power = 1;
-	light[1].kC = 1.f;
-	light[1].kL = 0.01f;
-	light[1].kQ = 0.01f;
-	light[1].cosCutoff = cos(Math::DegreeToRadian(45));
-	light[1].cosInner = cos(Math::DegreeToRadian(30));
-	light[1].exponent = 3.f;
-	light[1].spotDirection.Set(0.f, 1.f, 0.f);
-
-	glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
-	glUniform3fv(m_parameters[U_LIGHT0_COLOR], 1, &light[0].color.r);
-	glUniform1f(m_parameters[U_LIGHT0_POWER], light[0].power);
-	glUniform1f(m_parameters[U_LIGHT0_KC], light[0].kC);
-	glUniform1f(m_parameters[U_LIGHT0_KL], light[0].kL);
-	glUniform1f(m_parameters[U_LIGHT0_KQ], light[0].kQ);
-	glUniform1f(m_parameters[U_LIGHT0_COSCUTOFF], light[0].cosCutoff);
-	glUniform1f(m_parameters[U_LIGHT0_COSINNER], light[0].cosInner);
-	glUniform1f(m_parameters[U_LIGHT0_EXPONENT], light[0].exponent);
-
-	glUniform1i(m_parameters[U_LIGHT1_TYPE], light[1].type);
-	glUniform3fv(m_parameters[U_LIGHT1_COLOR], 1, &light[1].color.r);
-	glUniform1f(m_parameters[U_LIGHT1_POWER], light[1].power);
-	glUniform1f(m_parameters[U_LIGHT1_KC], light[1].kC);
-	glUniform1f(m_parameters[U_LIGHT1_KL], light[1].kL);
-	glUniform1f(m_parameters[U_LIGHT1_KQ], light[1].kQ);
-	glUniform1f(m_parameters[U_LIGHT1_COSCUTOFF], light[1].cosCutoff);
-	glUniform1f(m_parameters[U_LIGHT1_COSINNER], light[1].cosInner);
-	glUniform1f(m_parameters[U_LIGHT1_EXPONENT], light[1].exponent);
 
 
 	//Initialize camera settings
@@ -156,15 +109,21 @@ void SP2::Init()
 	
 	
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
-	meshList[GEO_TEXT]->textureID = LoadTGA("Image//TimesNewRoman.tga");
-	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("lightball", Color(1, 1, 1), 18, 36);
+	meshList[GEO_TEXT]->textureID = LoadTGA("Image//minecraft.tga");
 	
 	Mtx44 projection;
 	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 10000.f);
 	projectionStack.LoadMatrix(projection);
 	arrowpositiony = 7;
 }
+/******************************************************************************/
+/*!
+\brief	SP2 main Update function
 
+\param	dt
+	delta time
+*/
+/******************************************************************************/
 void SP2::Update(double dt)
 {
 	//camera.Update(dt,100);
@@ -174,47 +133,8 @@ void SP2::Update(double dt)
 	{
 		Gamemode::getinstance()->currentgamestate = 2;
 	}
-	if (Application::IsKeyPressed('5'))
-	{
-		light[0].type = Light::LIGHT_SPOT;
-		glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
-	}
-	else if (Application::IsKeyPressed('6'))
-	{
-		light[0].type = Light::LIGHT_POINT;
-		glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
-	}
-	else if (Application::IsKeyPressed('7'))
-	{
-		light[0].type = Light::LIGHT_DIRECTIONAL;
-		glUniform1i(m_parameters[U_LIGHT0_TYPE], light[0].type);
-	}
+	
 
-	if (Application::IsKeyPressed('1')) //enable back face culling
-		glEnable(GL_CULL_FACE);
-	if (Application::IsKeyPressed('2')) //disable back face culling
-		glDisable(GL_CULL_FACE);
-	if (Application::IsKeyPressed('3'))
-		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); //default fill mode
-	if (Application::IsKeyPressed('4'))
-		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
-
-	if (Application::IsKeyPressed('I'))
-		light[0].position.z -= (float)(LSPEED * dt);
-	if (Application::IsKeyPressed('K'))
-		light[0].position.z += (float)(LSPEED * dt);
-	if (Application::IsKeyPressed('J'))
-		light[0].position.x -= (float)(LSPEED * dt);
-	if (Application::IsKeyPressed('L'))
-		light[0].position.x += (float)(LSPEED * dt);
-	if (Application::IsKeyPressed('O'))
-		light[0].position.y -= (float)(LSPEED * dt);
-	if (Application::IsKeyPressed('P'))
-		light[0].position.y += (float)(LSPEED * dt);
-	if (Application::IsKeyPressed('X'))
-		enableLight = true;
-	if (Application::IsKeyPressed('Z'))
-		enableLight = false;
 	
 	camPosX = camera.position.x;
 	camPosY = camera.position.y;
@@ -250,51 +170,16 @@ void SP2::Update(double dt)
 	
 	
 }
-void SP2::lighting()
-{
-	if (light[0].type == Light::LIGHT_DIRECTIONAL)
-	{
-		Vector3 lightDir(light[0].position.x, light[0].position.y, light[0].position.z);
-		Vector3 lightDirection_cameraspace = viewStack.Top() * lightDir;
-		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightDirection_cameraspace.x);
-	}
-	else if (light[0].type == Light::LIGHT_SPOT)
-	{
-		Position lightPosition_cameraspace = viewStack.Top()* light[0].position;
-		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
-		Vector3 spotDirection_cameraspace = viewStack.Top() *light[0].spotDirection;
-		glUniform3fv(m_parameters[U_LIGHT0_SPOTDIRECTION], 1, &spotDirection_cameraspace.x);
-	}
-	else if (light[0].type == Light::LIGHT_POINT)
-	{
+/******************************************************************************/
+/*!
+\brief	Render Mesh
 
-		Position lightPosition_cameraspace = viewStack.Top() * light[0].position;
-		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
-	}
-}
-void SP2::lighting2()
-{
-	if (light[1].type == Light::LIGHT_DIRECTIONAL)
-	{
-		Vector3 lightDir(light[1].position.x, light[1].position.y, light[1].position.z);
-		Vector3 lightDirection_cameraspace = viewStack.Top() * lightDir;
-		glUniform3fv(m_parameters[U_LIGHT1_POSITION], 1, &lightDirection_cameraspace.x);
-	}
-	else if (light[1].type == Light::LIGHT_SPOT)
-	{
-		Position lightPosition_cameraspace = viewStack.Top()* light[1].position;
-		glUniform3fv(m_parameters[U_LIGHT1_POSITION], 1, &lightPosition_cameraspace.x);
-		Vector3 spotDirection_cameraspace = viewStack.Top() *light[1].spotDirection;
-		glUniform3fv(m_parameters[U_LIGHT1_SPOTDIRECTION], 1, &spotDirection_cameraspace.x);
-	}
-	else if (light[1].type == Light::LIGHT_POINT)
-	{
-
-		Position lightPosition_cameraspace = viewStack.Top() * light[1].position;
-		glUniform3fv(m_parameters[U_LIGHT1_POSITION], 1, &lightPosition_cameraspace.x);
-	}
-
-}
+\param	mesh
+	The mesh that is rendering
+\param	enableLight
+	To determine if the Obj allows light to affect it
+*/
+/******************************************************************************/
 void SP2::renderMesh(Mesh *mesh, bool enableLight)
 {
 	Mtx44 MVP, modelView, modelView_inverse_transpose;
@@ -339,7 +224,18 @@ void SP2::renderMesh(Mesh *mesh, bool enableLight)
 	}
 
 }
+/******************************************************************************/
+/*!
+\brief	Render Text Mesh
 
+\param	mesh
+	The mesh that is rendering
+\param	text
+	The text you want to render
+\param	color
+	Color of the text
+*/
+/******************************************************************************/
 void SP2::RenderText(Mesh* mesh, std::string text, Color color)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
@@ -366,6 +262,11 @@ void SP2::RenderText(Mesh* mesh, std::string text, Color color)
 	glUniform1i(m_parameters[U_TEXT_ENABLED], 0);
 	glEnable(GL_DEPTH_TEST);
 }
+/******************************************************************************/
+/*!
+\brief	Render black screen
+*/
+/******************************************************************************/
 void SP2::Rendermainmenutoscreen()
 {
 	Mtx44 ortho;
@@ -386,6 +287,24 @@ void SP2::Rendermainmenutoscreen()
 	modelStack.PopMatrix();
 	glEnable(GL_DEPTH_TEST);
 }
+/******************************************************************************/
+/*!
+\brief	Render Text Mesh on screen
+
+\param	mesh
+	The mesh that is rendering
+\param	text
+	The text you want to render
+\param	color
+	Color of the text
+\param size
+	Size of the text
+\param x
+	x coordinate of the text
+\param y
+	y coordinate of the text
+*/
+/******************************************************************************/
 void SP2::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
@@ -429,7 +348,11 @@ void SP2::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float si
 
 }
 
-
+/******************************************************************************/
+/*!
+\brief	SP2 main render function to render everything
+*/
+/******************************************************************************/
 void SP2::Render()
 {
 	// Render VBO here
@@ -460,18 +383,7 @@ void SP2::Render()
 
 	//Set projection matrix to perspective mode
 	projection.SetToPerspective(45.0f, 4.0f / 3.0f, 0.1f, 10000.0f); //FOV, Aspect Ratio, Near plane, Far plane
-	lighting();
-	lighting2();
-	modelStack.PushMatrix();
-	modelStack.Translate(light[0].position.x, light[0].position.y, light[0].position.z);
-	modelStack.Scale(0.1f, 0.1f, 0.1f);
-	renderMesh(meshList[GEO_LIGHTBALL], false);
-	modelStack.PopMatrix();
 
-	
-	modelStack.PushMatrix();
-	renderMesh(meshList[GEO_AXES], false);
-	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	Rendermainmenutoscreen();
@@ -487,8 +399,13 @@ void SP2::Render()
 	RenderTextOnScreen(meshList[GEO_TEXT], "Start", Color(0, 1, 0), 3, 5, 7);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Exit", Color(0, 1, 0), 3, 5, 5);
 	
+	RenderTextOnScreen(meshList[GEO_TEXT], "The Adventures Of Yalam", Color(1, 1, 1), 5, 3, 7);
 }
-
+/******************************************************************************/
+/*!
+\brief	SP2 Exiting the program
+*/
+/******************************************************************************/
 void SP2::Exit()
 {
 	glDeleteVertexArrays(1, &m_vertexArrayID);

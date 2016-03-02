@@ -360,7 +360,7 @@ void SceneMun::Init()
 	loadingbar = 0.01f;
 
 	rotateAngle = 0;
-	
+	Allcaptured = false;
 	translatingChar = 0;
 	hoverheight = 0;
 	rotateplane = 0;
@@ -377,6 +377,10 @@ void SceneMun::Update(double dt)
 		camera.Update(dt, 50);
 	}
 	if ((((interact >> REPAIRED) & 1) > 0))
+	{
+		camera.Init(Vector3(15, 10, 45), Vector3(-35, 0, -40), Vector3(0, 1, 0));
+	}
+	if (Allcaptured == true)
 	{
 		camera.Init(Vector3(15, 10, 45), Vector3(-35, 0, -40), Vector3(0, 1, 0));
 	}
@@ -653,6 +657,84 @@ void SceneMun::Update(double dt)
 	npcRotate();
 	interactions();
 	camera.target;
+	if ((LadyCaptured == true)&& (CaptureLadyCap==0))
+	{
+		
+		fultonleft -= 1;
+		CaptureLadyCap += 1;
+		thisisastring.seekp(-1, thisisastring.cur);
+		thisisastring << fultonleft;
+
+	}
+	if (LadyCaptured == true)
+	{
+		worriedladyCoord.y += (float)(80 * dt);
+	}
+	if ((VillageChiefCaptured == true) && (CaptureVChiefCap == 0))
+	{
+
+		fultonleft -= 1;
+		CaptureVChiefCap += 1;
+		thisisastring.seekp(-1, thisisastring.cur);
+		thisisastring << fultonleft;
+		
+
+	}
+	if (VillageChiefCaptured == true)
+	{
+		questdudeCoord.y += (float)(80 * dt);
+	}
+	if ((MinerCaptured == true) && (CaptureMinerCap == 0))
+	{
+
+		fultonleft -= 1;
+		CaptureMinerCap += 1;
+		thisisastring.seekp(-1, thisisastring.cur);
+		thisisastring << fultonleft;
+	}
+	if (MinerCaptured == true)
+	{
+		minerandplusCoord.y += (float)(80 * dt);
+	}
+	if ((CalefareACaptured == true) && (CalefareACap == 0))
+	{
+
+		fultonleft -= 1;
+		CalefareACap += 1;
+		thisisastring.seekp(-1, thisisastring.cur);
+		thisisastring << fultonleft;
+
+	}
+	if ((CalefareACaptured == true))
+	{
+		CalefareACoord.y += (float)(80 * dt);
+	}
+	if ((CalefareCCaptured == true) && (CalefareCCap == 0))
+	{
+
+		fultonleft -= 1;
+		CalefareCCap += 1;
+		thisisastring.seekp(-1, thisisastring.cur);
+		thisisastring << fultonleft;
+	}
+	if (CalefareCCaptured == true)
+	{
+		CalefareCCoord.y += (float)(80 * dt);
+	}
+	if ((CalefareBCaptured == true) && (CalefareBCap == 0))
+	{
+
+		fultonleft -= 1;
+		CalefareBCap += 1;
+		thisisastring.seekp(-1, thisisastring.cur);
+		thisisastring << fultonleft;
+		CalefareBCoord.y += (float)(80 * dt);
+
+	}
+	if ((CalefareBCaptured == true))
+	{
+		CalefareBCoord.y += (float)(80 * dt);
+	}
 }
 void SceneMun::lighting()
 {
@@ -919,6 +1001,7 @@ void SceneMun::Render()
 
 	modelStack.PushMatrix();
 	modelStack.Translate(SNAKEcoords.x, SNAKEcoords.y, SNAKEcoords.z);
+	modelStack.Rotate(90, 0, 1, 0);
 	modelStack.Scale(1.f, 1.f, 1.f);
 	renderMesh(meshList[GEO_SNAKE], false);
 	modelStack.PopMatrix();
@@ -930,6 +1013,10 @@ void SceneMun::Render()
 		modelStack.Scale(2.2f, 2.2f, 2.2f);
 		renderMesh(meshList[GEO_CRASHEDPLANE], true);
 		modelStack.PopMatrix();
+	}
+	if ((Allcaptured == true))
+	{
+		interact |= 1 << REPAIRED;
 	}
 	if ((((interact >> REPAIRED) & 1) > 0))
 	{
@@ -1201,16 +1288,16 @@ void SceneMun::interactions()
 	{
 		interact |= 1 << TALKING_TO_LADY;
 		textWL = true;
-		LadyCaptured = true;
+		fultonleft - 1;
 	}
 	else if (RadiusFromLady > 6.0f)
 	{
 		interact &= ~(1 << TALKING_TO_LADY);
 		textWL = false;
 	}
-	else if ((RadiusFromLady < 3.0f) && (fultonreceived == true) && (fultonleft>0) &&(LadyCaptured==false))
+	else if ((RadiusFromLady < 6.0f) && (fultonreceived == true) && (fultonleft>0) &&(LadyCaptured==false)&&(Application::IsKeyPressed('Q')))
 	{
-		LadyCaptured =2;
+		LadyCaptured =true;
 
 	}
 
@@ -1225,6 +1312,10 @@ void SceneMun::interactions()
 	{
 		interact &= ~(1 << TALKING_TO_QUEST_DUDE);
 		textQD = false;
+	}
+	else if ((RadiusFromDude < 6.0f) && (fultonreceived == true) && (fultonleft>0) && (VillageChiefCaptured == false) && (Application::IsKeyPressed('Q')))
+	{
+		VillageChiefCaptured = true;
 	}
 	if (RadiusFromMiner < 6.0f
 		&& (((interact >> TALKED_QUEST_DUDE) & 1) > 0)
@@ -1251,6 +1342,22 @@ void SceneMun::interactions()
 	{
 		interact &= ~(1 << TALKING_TO_MINER_CASE_1);
 		textminer1 = false;
+	}
+	else if ((RadiusFromMiner < 6.0f) && (fultonreceived == true) && (fultonleft>0) && (MinerCaptured == false) && (Application::IsKeyPressed('Q')))
+	{
+		MinerCaptured = true;
+	}
+	if ((RadiusFromCalafareA < 10.0f) && (fultonreceived == true) && (fultonleft>0) && (CalefareACaptured == false) && (Application::IsKeyPressed('Q')))
+	{
+		CalefareACaptured = true;
+	}
+	if ((RadiusFromCalafareB < 10.0f) && (fultonreceived == true) && (fultonleft>0) && (CalefareBCaptured == false) && (Application::IsKeyPressed('Q')))
+	{
+		CalefareBCaptured = true;
+	}
+	if ((RadiusFromCalafareC < 10.0f) && (fultonreceived == true) && (fultonleft>0) && (CalefareCCaptured == false) && (Application::IsKeyPressed('Q')))
+	{
+		CalefareCCaptured = true;
 	}
 
 	if (RadiusFromSnake < 6.0f
@@ -1540,8 +1647,8 @@ void SceneMun::RenderTextBoxOnScreen()
 		viewStack.PopMatrix();
 		modelStack.PopMatrix();
 		glEnable(GL_DEPTH_TEST);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Here is some Fulton Extraction Ballons", Color(0, 0, 0), 2, 6, 4);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Extract All the villagers for better rewards", Color(0, 0, 0), 2, 6, 2);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Here is some Fulton Extraction Ballons", Color(0, 0, 0), 2, 9.2f, 4);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Extract All the villagers for better rewards", Color(0, 0, 0), 2, 9.2f, 2);
 	}
 }
 
@@ -1599,6 +1706,33 @@ void SceneMun::RenderInfomationOnScreen()
 		RenderTextOnScreen(meshList[GEO_TEXT], "continue with your journey.", Color(0, 0, 0), 3, 6, 4);
 		RenderTextOnScreen(meshList[GEO_TEXT], "THE END", Color(0, 0, 0), 3, 6, 3);
 	}
+
+	if (Allcaptured==true)
+	{
+		Mtx44 ortho;
+		glDisable(GL_DEPTH_TEST);
+		ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+		projectionStack.PushMatrix();
+		projectionStack.LoadMatrix(ortho);
+		viewStack.PushMatrix();
+		viewStack.LoadIdentity(); //No need camera for ortho mode
+		modelStack.PushMatrix();
+		modelStack.LoadIdentity(); //Reset modelStack
+		modelStack.Translate(40, 10, -1);
+		/*modelStack.Rotate(45, 0, 1, 0);
+		modelStack.Rotate(45, 0, 0, 1);*/
+		modelStack.Scale(60, 60, 1);
+		modelStack.Rotate(90, 1, 0, 0);
+		renderMesh(meshList[GEO_QUAD], false);
+		projectionStack.PopMatrix();
+		viewStack.PopMatrix();
+		modelStack.PopMatrix();
+		glEnable(GL_DEPTH_TEST);              //                            //
+		RenderTextOnScreen(meshList[GEO_TEXT], "You Captured All the Villagers!", Color(0, 0, 0), 2.5, 7, 5);
+		RenderTextOnScreen(meshList[GEO_TEXT], "You Forced them to repair your ship.", Color(0, 0, 0), 2.5, 7, 4);
+		RenderTextOnScreen(meshList[GEO_TEXT], "THE END", Color(0, 0, 0), 2.5, 7, 3);
+	}
+
 	if ((((interact >> CAN_INTERACT) & 1) > 0))
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to interact", Color(0, 1, 0), 3, 8, 17);
