@@ -15,9 +15,7 @@ class for the scene at SoraJewel
 #include "Mesh.h"
 #include "Light.h"
 #include "Camera.h"
-#include "Camera2.h"
 #include "Camera3.h"
-#include "Camera4.h"
 #include "MatrixStack.h"
 #include "ReadTextFile.h"
 #include <sstream>
@@ -189,6 +187,8 @@ private:
 	std::vector<std::string>::iterator Engipos;
 	std::vector<std::string>::iterator Engi2pos;
 	std::vector<std::string>::iterator Commandopos;
+
+	bool pressE;
 
 	bool talkwithQL;
 	bool talkwithEngi1;

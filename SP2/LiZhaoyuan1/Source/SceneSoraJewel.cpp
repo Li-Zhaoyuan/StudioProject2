@@ -427,6 +427,7 @@ void SceneSoraJewel::Init()
 	ssCommandoDialogue << sCommandoDialogue[0];
 
 	cutscene = false;
+	pressE = false;
 
 	camera.SceneGalaxy = false;
 	camera.SceneMun = false;
@@ -459,6 +460,7 @@ void SceneSoraJewel::Update(double dt)
 
 	if (((((interact >> INTERACT_XWING) & 1) > 0)) && QuestsDone)
 	{
+		pressE = true;
 		cutscene = true;
 	}
 
@@ -1216,6 +1218,9 @@ void SceneSoraJewel::Render()
 	}
 	renderText();
 
+	if (pressE)
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to interact", Color(0, 1, 0), 3, 8, 17);
+
 	std::stringstream playerPos;
 	playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosZ;
 	std::stringstream ss;
@@ -1334,6 +1339,11 @@ void SceneSoraJewel::renderText()
 		RenderTextOnScreen(meshList[GEO_TEXT], ssEngiDialogue2.str(), Color(0, 0, 0), 2.5f, 5, 4);
 	if (talkwithCommando)
 		RenderTextOnScreen(meshList[GEO_TEXT], ssCommandoDialogue.str(), Color(0, 0, 0), 2.5f, 5, 4);
+
+	RenderTextOnScreen(meshList[GEO_TEXT], "WASD to move", Color(0, 1, 0), 1, 65, 49);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Mouse to move Camera", Color(0, 1, 0), 1, 65, 48);
+	RenderTextOnScreen(meshList[GEO_TEXT], "E to interact when near NPC", Color(0, 1, 0), 1, 65, 47);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Left click when textbox appear", Color(0, 1, 0), 1, 65, 46);
 }
 /****************************************************************************/
 /*!
@@ -1667,6 +1677,11 @@ void SceneSoraJewel::interactions()
 	{
 		interact &= ~(1 << INTERACT_BEER);
 	}
+
+	if (RadiusFromQuestLady < 17.0f || RadiusFromEngineer < 20.0f || RadiusFromCommando < 15.0f || (RadiusFromKeg < 15.0f && EmptyinHand) || (RadiusFromBeer < 7.0f && Quest2) || (RadiusFromXwing < 15.0f && QuestsDone))
+		pressE = true;
+	else
+		pressE = false;
 	//use the below to render your text :V
 	//((((interact >> TALKING_TO_LADY) & 1) > 0)) // same as talkingtolady == true, Checking
 	//((((interact >> TALKING_TO_LADY) & 1) < 1)) // same as talkingtolady == false, Checking

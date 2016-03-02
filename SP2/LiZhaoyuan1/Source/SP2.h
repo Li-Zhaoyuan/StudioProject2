@@ -15,7 +15,6 @@ class for the Main Menu
 #include "Mesh.h"
 #include "Light.h"
 #include "Camera.h"
-#include "Camera2.h"
 #include "Camera3.h"
 #include "MatrixStack.h"
 

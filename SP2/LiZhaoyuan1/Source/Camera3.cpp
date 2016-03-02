@@ -13,8 +13,7 @@ Camera
 
 /****************************************************************************/
 /*!
-\brief
-	constructor for Camera3.cpp file
+\brief	Camera3 constructor
 */
 /****************************************************************************/
 Camera3::Camera3()
@@ -23,8 +22,7 @@ Camera3::Camera3()
 
 /****************************************************************************/
 /*!
-\brief
-	deconstructor for Camera3.cpp file
+\brief	Camera3 destructor
 */
 /****************************************************************************/
 Camera3::~Camera3()
@@ -33,8 +31,7 @@ Camera3::~Camera3()
 
 /****************************************************************************/
 /*!
-\brief
-	Camera3 initializer
+\brief	Camera3 initializer
 */
 /****************************************************************************/
 void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
@@ -59,8 +56,7 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 
 /****************************************************************************/
 /*!
-\brief
-	running functions, checks, keypress in the .cpp file every frame
+\brief	Camera3 Update function
 */
 /****************************************************************************/
 void Camera3::Update(double dt, float bounds)
@@ -328,8 +324,7 @@ void Camera3::Update(double dt, float bounds)
 
 /****************************************************************************/
 /*!
-\brief
-	reset the camera settings to default
+\brief	Camera3 Reset function
 */
 /****************************************************************************/
 void Camera3::Reset()
@@ -342,8 +337,7 @@ void Camera3::Reset()
 
 /****************************************************************************/
 /*!
-\brief
-	
+\brief	Camera3 UpdateCollision function
 \param
 	boundary, double dt
 */
@@ -437,8 +431,7 @@ void Camera3::UpdateCollision(float bounds, double dt)
 
 /****************************************************************************/
 /*!
-\brief
-	XWing Camera with the limitation view angle
+\brief	Camera3 XWingCamera function
 \param
 	double dt, boundary
 */
@@ -524,8 +517,7 @@ void Camera3::XWingCamera(double dt, float bounds)
 
 /****************************************************************************/
 /*!
-\brief
-	formula for X checker
+\brief	Camera3 boundaryCheckerX function
 \param
 	minimum x, maximum x, minimum z, maximum z, vector3 value
 \return
@@ -541,8 +533,7 @@ bool Camera3::boundaryCheckerX(float smallx, float largex, float smallz, float l
 
 /****************************************************************************/
 /*!
-\brief
-	formula for Z checker
+\brief	Camera3 boundaryCheckerZ function
 \param
 	minimum x, maximum x, minimum z, maximum z, vector3 value
 \return
@@ -558,8 +549,7 @@ bool Camera3::boundaryCheckerZ(float smallx, float largex, float smallz, float l
 
 /****************************************************************************/
 /*!
-\brief
-	X Coord Boundary
+\brief	Camera3 OBJboundaryX function
 \param
 	Testvalue (value of current camera.position)
 \return
@@ -581,8 +571,7 @@ bool Camera3::OBJboundaryX(Vector3 Testvalue)
 
 /****************************************************************************/
 /*!
-\brief
-	Z Coord Boundary
+\brief	Camera3 OBJboundaryZ function
 \param
 	Testvalue (value of current camera.position)
 \return
@@ -604,8 +593,7 @@ bool Camera3::OBJboundaryZ(Vector3 Testvalue)
 
 /****************************************************************************/
 /*!
-\brief
-	Y Coord Boundary
+\brief	Camera3 OBJboundaryY function
 \param
 	Testvalue (value of current camera.position) and int XZ
 \return
@@ -677,8 +665,7 @@ bool Camera3::OBJboundaryY(Vector3 Testvalue, int XZ)
 
 /****************************************************************************/
 /*!
-\brief
-	inputting Mun Coord for X checker
+\brief	Camera3 AllMunBoundaryX function
 \param
 	Testvalue (value of current camera.position)
 \return
@@ -710,8 +697,7 @@ bool Camera3::AllMunBoundaryX(Vector3 Testvalue)
 
 /****************************************************************************/
 /*!
-\brief
-	inputting Mun Coord for Z checker
+\brief	Camera3 AllMunBoundaryZ function
 \param
 	Testvalue (value of current camera.position)
 \return
@@ -743,8 +729,7 @@ bool Camera3::AllMunBoundaryZ(Vector3 Testvalue)
 
 /****************************************************************************/
 /*!
-\brief
-	inputting SoraJewel Coord for X checker
+\brief	Camera3 AllSoraJewelBoundaryX function
 \param
 	Testvalue (value of current camera.position)
 \return
@@ -764,8 +749,7 @@ bool Camera3::AllSoraJewelBoundaryX(Vector3 Testvalue)
 
 /****************************************************************************/
 /*!
-\brief
-	inputting SoraJewel Coord for Z checker
+\brief	Camera3 AllSoraJewelBoundaryZ function
 \param
 	Testvalue (value of current camera.position)
 \return
@@ -785,12 +769,9 @@ bool Camera3::AllSoraJewelBoundaryZ(Vector3 Testvalue)
 
 /****************************************************************************/
 /*!
-\brief
-
+\brief	Camera3 SJUpdate funcion
 \param
-
-\return
-
+	delta time, maxboundsx, minboundsx, minboundsz, maxboundsz
 */
 /****************************************************************************/
 void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minboundsz, float maxboundsz)
@@ -1100,12 +1081,9 @@ void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minb
 
 /****************************************************************************/
 /*!
-\brief
-
-\param
-
+\brief	Camera3 OnGround function
 \return
-
+	true/false
 */
 /****************************************************************************/
 bool Camera3::OnGround()

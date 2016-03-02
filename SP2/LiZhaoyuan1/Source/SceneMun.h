@@ -14,9 +14,7 @@ class for the scene at Mun
 #include "Mesh.h"
 #include "Light.h"
 #include "Camera.h"
-#include "Camera2.h"
 #include "Camera3.h"
-#include "Camera4.h"
 #include "MatrixStack.h"
 #include "CurrentGameState.h"
 #include "ReadTextFile.h"
@@ -167,7 +165,6 @@ private:
 	void RenderLetterOnScreen();
 	void RenderInfomationOnScreen();
 	void RenderCalefare();
-	void RenderSceneOBJ();
 	void fultoninteraction();
 	unsigned m_vertexArrayID;
 	Mesh *meshList[NUM_GEOMETRY];
