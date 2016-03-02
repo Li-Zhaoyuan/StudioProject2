@@ -190,6 +190,8 @@ private:
 	std::vector<std::string>::iterator Engi2pos;
 	std::vector<std::string>::iterator Commandopos;
 
+	bool pressE;
+
 	bool talkwithQL;
 	bool talkwithEngi1;
 	bool talkwithEngi2;
