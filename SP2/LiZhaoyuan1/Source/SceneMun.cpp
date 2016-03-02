@@ -666,6 +666,10 @@ void SceneMun::Update(double dt)
 		thisisastring << fultonleft;
 
 	}
+	if (LadyCaptured == true)
+	{
+		worriedladyCoord.y += (float)(80 * dt);
+	}
 	if ((VillageChiefCaptured == true) && (CaptureVChiefCap == 0))
 	{
 
@@ -673,7 +677,12 @@ void SceneMun::Update(double dt)
 		CaptureVChiefCap += 1;
 		thisisastring.seekp(-1, thisisastring.cur);
 		thisisastring << fultonleft;
+		
 
+	}
+	if (VillageChiefCaptured == true)
+	{
+		questdudeCoord.y += (float)(80 * dt);
 	}
 	if ((MinerCaptured == true) && (CaptureMinerCap == 0))
 	{
@@ -682,7 +691,10 @@ void SceneMun::Update(double dt)
 		CaptureMinerCap += 1;
 		thisisastring.seekp(-1, thisisastring.cur);
 		thisisastring << fultonleft;
-
+	}
+	if (MinerCaptured == true)
+	{
+		minerandplusCoord.y += (float)(80 * dt);
 	}
 	if ((CalefareACaptured == true) && (CalefareACap == 0))
 	{
@@ -693,6 +705,10 @@ void SceneMun::Update(double dt)
 		thisisastring << fultonleft;
 
 	}
+	if ((CalefareACaptured == true))
+	{
+		CalefareACoord.y += (float)(80 * dt);
+	}
 	if ((CalefareCCaptured == true) && (CalefareCCap == 0))
 	{
 
@@ -700,7 +716,10 @@ void SceneMun::Update(double dt)
 		CalefareCCap += 1;
 		thisisastring.seekp(-1, thisisastring.cur);
 		thisisastring << fultonleft;
-
+	}
+	if (CalefareCCaptured == true)
+	{
+		CalefareCCoord.y += (float)(80 * dt);
 	}
 	if ((CalefareBCaptured == true) && (CalefareBCap == 0))
 	{
@@ -709,7 +728,12 @@ void SceneMun::Update(double dt)
 		CalefareBCap += 1;
 		thisisastring.seekp(-1, thisisastring.cur);
 		thisisastring << fultonleft;
+		CalefareBCoord.y += (float)(80 * dt);
 
+	}
+	if ((CalefareBCaptured == true))
+	{
+		CalefareBCoord.y += (float)(80 * dt);
 	}
 }
 void SceneMun::lighting()
@@ -1623,8 +1647,8 @@ void SceneMun::RenderTextBoxOnScreen()
 		viewStack.PopMatrix();
 		modelStack.PopMatrix();
 		glEnable(GL_DEPTH_TEST);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Here is some Fulton Extraction Ballons", Color(0, 0, 0), 2, 6, 4);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Extract All the villagers for better rewards", Color(0, 0, 0), 2, 6, 2);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Here is some Fulton Extraction Ballons", Color(0, 0, 0), 2, 9.2f, 4);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Extract All the villagers for better rewards", Color(0, 0, 0), 2, 9.2f, 2);
 	}
 }
 
@@ -1704,9 +1728,9 @@ void SceneMun::RenderInfomationOnScreen()
 		viewStack.PopMatrix();
 		modelStack.PopMatrix();
 		glEnable(GL_DEPTH_TEST);              //                            //
-		RenderTextOnScreen(meshList[GEO_TEXT], "You Captured All the Villagers!", Color(0, 0, 0), 3, 6, 5);
-		RenderTextOnScreen(meshList[GEO_TEXT], "You Forced them to repair your ship.", Color(0, 0, 0), 3, 6, 4);
-		RenderTextOnScreen(meshList[GEO_TEXT], "THE END", Color(0, 0, 0), 3, 6, 3);
+		RenderTextOnScreen(meshList[GEO_TEXT], "You Captured All the Villagers!", Color(0, 0, 0), 2.5, 7, 5);
+		RenderTextOnScreen(meshList[GEO_TEXT], "You Forced them to repair your ship.", Color(0, 0, 0), 2.5, 7, 4);
+		RenderTextOnScreen(meshList[GEO_TEXT], "THE END", Color(0, 0, 0), 2.5, 7, 3);
 	}
 
 	if ((((interact >> CAN_INTERACT) & 1) > 0))

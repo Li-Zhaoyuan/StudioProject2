@@ -134,6 +134,12 @@ void Application::Run()
 		{
 			currscene->Init();
 		}
+		else if (IsKeyPressed('O'))
+		{
+			loadingitonceSoraJewel = 1;
+			loadingitonceGalaxy = 1;
+			loadingitonceMun = 1;
+		}
 		else if (IsKeyPressed('Z'))
 		{
 			currscene = scene1;
@@ -164,10 +170,10 @@ void Application::Run()
 			playmusic.musicMainMenu();
 		}
 		else if (Gamemode::getinstance()->currentgamestate == 2 && loadingitonceSoraJewel == 1)
-			{
-				currscene = loading;
-				currscene->Init();
-				sceneischanged = true;
+		{
+			currscene = loading;
+			currscene->Init();
+			sceneischanged = true;
 		}
 		else if (Gamemode::getinstance()->currentgamestate == 3 && loadingitonceSoraJewel == 1)
 		{
@@ -178,6 +184,12 @@ void Application::Run()
 			loadingitonceSoraJewel += 1;
 		}
 		else if (Gamemode::getinstance()->currentgamestate == 4 && loadingitonceSoraJewel == 2)
+		{
+			currscene = loading;
+			currscene->Init();
+			sceneischanged = true;
+		}
+		else if (Gamemode::getinstance()->currentgamestate == 4 && loadingitonceSoraJewel == 1)
 		{
 			currscene = loading;
 			currscene->Init();

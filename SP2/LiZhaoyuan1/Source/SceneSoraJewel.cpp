@@ -202,8 +202,8 @@ void SceneSoraJewel::Init()
 
 	//camera.Init(Vector3(0, 350, 1), Vector3(0, 7, 0), Vector3(0, 1, 0));
 
-	camera.minimapsoracoords.x = 78.f; //
-	camera.minimapsoracoords.y = 55.f; //
+	camera.minimapsoracoords.x = 77.5f; //
+	camera.minimapsoracoords.y = 52.6f; //
 
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
 
@@ -456,10 +456,6 @@ void SceneSoraJewel::Update(double dt)
 		camera.SJUpdate(dt, 60, -140, -110, 110);
 	fps = 1 / dt;
 
-	if (camera.position.x >= 50 && camera.position.z >= 50 && Application::IsKeyPressed('E') && QuestsDone)
-	{
-		Gamemode::getinstance()->currentgamestate = 4;
-	}
 
 	if (((((interact >> INTERACT_XWING) & 1) > 0)) && QuestsDone)
 	{
@@ -516,6 +512,9 @@ void SceneSoraJewel::Update(double dt)
 		camera.position.y = 25;
 		camera.position.z = 82;
 		camera.up.y = 1;
+		camera.minimapsoracoords.x = 73.4f;
+		camera.minimapsoracoords.y = 52.f;
+
 	}
 	if (Quest1Done == true && Quest2Done == true)
 	{
@@ -1447,7 +1446,7 @@ void SceneSoraJewel::renderminimaptoscreen()
 	modelStack.PushMatrix();
 	modelStack.LoadIdentity(); //Reset modelStack
 	modelStack.Translate(75.f, 55.f, -2);
-	modelStack.Scale(17.f, 17.f, 17.f);
+	modelStack.Scale(10.f, 10.f, 10.f);
 	modelStack.Rotate(90, 1, 0, 0);
 	renderMesh(meshList[GEO_MINIMAPSJ], false);
 	projectionStack.PopMatrix();

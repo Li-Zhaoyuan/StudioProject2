@@ -14,6 +14,12 @@
 #include "Vector3.h"
 #include "Camera3.h"
 
+/******************************************************************************/
+/*!
+Class Missile:
+\brief	Defines Missile and its methods
+*/
+/******************************************************************************/
 class Missile
 {
 public:
@@ -34,6 +40,7 @@ public:
 
 	int Missiles;
 	int MissileUsed = 100;
+	int delay = 0;
 	Missile* Capacity;
 
 
