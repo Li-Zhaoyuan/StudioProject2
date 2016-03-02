@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+﻿Build started 3/2/2016 12:14:57 PM.
+     1>Project "C:\Users\n1507\Desktop\StudioProject2\SP2\Common\Common.vcxproj" on node 2 (Build target(s)).
+     1>Lib:
+         Common.vcxproj -> C:\Users\n1507\Desktop\StudioProject2\SP2\Debug\Common.lib
+     1>Done Building Project "C:\Users\n1507\Desktop\StudioProject2\SP2\Common\Common.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.17
+=======
 ﻿Build started 2/3/2016 10:57:35 AM.
      1>Project "E:\School stuff\2015S2\Computer Graphics Project\SP2\Common\Common.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
@@ -18,3 +29,4 @@
 Build succeeded.
 
 Time Elapsed 00:00:01.23
+>>>>>>> 6a71ece362eb279190717dd758784b10b5655bae

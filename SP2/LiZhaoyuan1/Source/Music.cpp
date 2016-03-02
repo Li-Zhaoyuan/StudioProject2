@@ -21,14 +21,14 @@ void music::musicSoraJewel()
 void music::musicGalaxy()
 {
 	se->stopAllSounds();
-	MusicGalaxy = se->addSoundSourceFromFile("Music//Star_Wars_Imperial_March_FULL.mp3");
+	MusicGalaxy = se->addSoundSourceFromFile("Music//MusicGalaxy.mp3");
 	se->play2D(MusicGalaxy);
 }
 
 void music::musicMun()
 {
 	se->stopAllSounds();
-	MusicMun = se->addSoundSourceFromFile("Music//calm1.mp3");
+	MusicMun = se->addSoundSourceFromFile("Music//MusicMun.mp3");
 	se->play2D(MusicMun);
 }
 
