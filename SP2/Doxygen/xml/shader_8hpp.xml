@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="shader_8hpp" kind="file" language="C++">
+    <compoundname>shader.hpp</compoundname>
+    <includedby refid="LoadingScreen_8cpp" local="yes">LiZhaoyuan1/Source/LoadingScreen.cpp</includedby>
+    <includedby refid="SceneGalaxy_8cpp" local="yes">LiZhaoyuan1/Source/SceneGalaxy.cpp</includedby>
+    <includedby refid="SceneMun_8cpp" local="yes">LiZhaoyuan1/Source/SceneMun.cpp</includedby>
+    <includedby refid="SceneSoraJewel_8cpp" local="yes">LiZhaoyuan1/Source/SceneSoraJewel.cpp</includedby>
+    <includedby refid="shader_8cpp" local="yes">LiZhaoyuan1/Source/shader.cpp</includedby>
+    <includedby refid="SP2_8cpp" local="yes">LiZhaoyuan1/Source/SP2.cpp</includedby>
+    <invincdepgraph>
+      <node id="4098">
+        <label>LiZhaoyuan1/Source/shader.cpp</label>
+        <link refid="shader_8cpp"/>
+      </node>
+      <node id="4096">
+        <label>LiZhaoyuan1/Source/SceneMun.cpp</label>
+        <link refid="SceneMun_8cpp"/>
+      </node>
+      <node id="4094">
+        <label>LiZhaoyuan1/Source/LoadingScreen.cpp</label>
+        <link refid="LoadingScreen_8cpp"/>
+      </node>
+      <node id="4095">
+        <label>LiZhaoyuan1/Source/SceneGalaxy.cpp</label>
+        <link refid="SceneGalaxy_8cpp"/>
+      </node>
+      <node id="4099">
+        <label>LiZhaoyuan1/Source/SP2.cpp</label>
+        <link refid="SP2_8cpp"/>
+      </node>
+      <node id="4093">
+        <label>LiZhaoyuan1/Source/shader.hpp</label>
+        <link refid="shader.hpp"/>
+        <childnode refid="4094" relation="include">
+        </childnode>
+        <childnode refid="4095" relation="include">
+        </childnode>
+        <childnode refid="4096" relation="include">
+        </childnode>
+        <childnode refid="4097" relation="include">
+        </childnode>
+        <childnode refid="4098" relation="include">
+        </childnode>
+        <childnode refid="4099" relation="include">
+        </childnode>
+      </node>
+      <node id="4097">
+        <label>LiZhaoyuan1/Source/SceneSoraJewel.cpp</label>
+        <link refid="SceneSoraJewel_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="shader_8hpp_1a833f10cca6a76fe34ae9efa23ac5e73c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GLuint</type>
+        <definition>GLuint LoadShaders</definition>
+        <argsstring>(const char *vertex_file_path, const char *fragment_file_path)</argsstring>
+        <name>LoadShaders</name>
+        <param>
+          <type>const char *</type>
+          <declname>vertex_file_path</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fragment_file_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/shader.hpp" line="4" column="1" bodyfile="LiZhaoyuan1/Source/shader.cpp" bodystart="16" bodyend="107"/>
+        <referencedby refid="classSP2_1a8669c489b6a968f367a4610b254ac992" compoundref="SP2_8cpp" startline="49" endline="118">SP2::Init</referencedby>
+        <referencedby refid="classLoadingScreen_1a7fa77cff0af874a23c6043a80af09da3" compoundref="LoadingScreen_8cpp" startline="45" endline="126">LoadingScreen::Init</referencedby>
+        <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SHADER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHADER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">GLuint<sp/><ref refid="shader_8hpp_1a833f10cca6a76fe34ae9efa23ac5e73c" kindref="member">LoadShaders</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>vertex_file_path,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>fragment_file_path);</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="LiZhaoyuan1/Source/shader.hpp"/>
+  </compounddef>
+</doxygen>

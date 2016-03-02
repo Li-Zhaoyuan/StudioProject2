@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classScene" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Scene</compoundname>
+    <derivedcompoundref refid="classLoadingScreen" prot="public" virt="non-virtual">LoadingScreen</derivedcompoundref>
+    <derivedcompoundref refid="classSceneGalaxy" prot="public" virt="non-virtual">SceneGalaxy</derivedcompoundref>
+    <derivedcompoundref refid="classSceneMun" prot="public" virt="non-virtual">SceneMun</derivedcompoundref>
+    <derivedcompoundref refid="classSceneSoraJewel" prot="public" virt="non-virtual">SceneSoraJewel</derivedcompoundref>
+    <derivedcompoundref refid="classSP2" prot="public" virt="non-virtual">SP2</derivedcompoundref>
+    <includes refid="Scene_8h" local="no">Scene.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classScene_1ad10176d75a9cc0da56626f682d083507" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Scene::Scene</definition>
+        <argsstring>()</argsstring>
+        <name>Scene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Scene.h" line="7" column="1" bodyfile="LiZhaoyuan1/Source/Scene.h" bodystart="7" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classScene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Scene::~Scene</definition>
+        <argsstring>()</argsstring>
+        <name>~Scene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Scene.h" line="8" column="1" bodyfile="LiZhaoyuan1/Source/Scene.h" bodystart="8" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Scene::Init</definition>
+        <argsstring>()=0</argsstring>
+        <name>Init</name>
+        <reimplementedby refid="classSP2_1a8669c489b6a968f367a4610b254ac992">Init</reimplementedby>
+        <reimplementedby refid="classLoadingScreen_1a7fa77cff0af874a23c6043a80af09da3">Init</reimplementedby>
+        <reimplementedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8">Init</reimplementedby>
+        <reimplementedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2">Init</reimplementedby>
+        <reimplementedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c">Init</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Scene.h" line="10" column="1"/>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="112" endline="237">Application::Run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Scene::Update</definition>
+        <argsstring>(double dt)=0</argsstring>
+        <name>Update</name>
+        <reimplementedby refid="classSP2_1a075edf39d3102610bf7f404ae3b8d38c">Update</reimplementedby>
+        <reimplementedby refid="classLoadingScreen_1aadba6b28a70c39e25c9892f93dbff465">Update</reimplementedby>
+        <reimplementedby refid="classSceneGalaxy_1a20f9275f7788921a7cd843219b9bdeff">Update</reimplementedby>
+        <reimplementedby refid="classSceneMun_1ac31a057e66f46bb4d9a7b3fb1c2cfbb9">Update</reimplementedby>
+        <reimplementedby refid="classSceneSoraJewel_1a581a47998e6133291289306656463cb6">Update</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Scene.h" line="11" column="1"/>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="112" endline="237">Application::Run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classScene_1ae24d21e12b34839994ad265662ea24d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Scene::Render</definition>
+        <argsstring>()=0</argsstring>
+        <name>Render</name>
+        <reimplementedby refid="classSP2_1a90159ea511cadcc99364c6f75d108a71">Render</reimplementedby>
+        <reimplementedby refid="classLoadingScreen_1a9325ad1fb08d5103eceefefe7cb1d316">Render</reimplementedby>
+        <reimplementedby refid="classSceneGalaxy_1a08eb5a414e64d7dca3a14f1d6d48855a">Render</reimplementedby>
+        <reimplementedby refid="classSceneMun_1aa953e0eaad928335a38aefe9df1021a6">Render</reimplementedby>
+        <reimplementedby refid="classSceneSoraJewel_1a5609b1a03e5d60a01ac655e2f10bcfc9">Render</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Scene.h" line="12" column="1"/>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="112" endline="237">Application::Run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classScene_1aae8e24654ef98c79961c2b804b12852c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Scene::Exit</definition>
+        <argsstring>()=0</argsstring>
+        <name>Exit</name>
+        <reimplementedby refid="classSP2_1a5b606cdfc77b243631fc130483527333">Exit</reimplementedby>
+        <reimplementedby refid="classLoadingScreen_1aac98339073bd6c44f912eca975201839">Exit</reimplementedby>
+        <reimplementedby refid="classSceneGalaxy_1a3e3e297bdc598d41fc0dd3a1404d177c">Exit</reimplementedby>
+        <reimplementedby refid="classSceneMun_1adc96833a1ce74ee1ac5b05407ee20976">Exit</reimplementedby>
+        <reimplementedby refid="classSceneSoraJewel_1a8a199545b949b789f0746a0e732d589c">Exit</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Scene.h" line="13" column="1"/>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="112" endline="237">Application::Run</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="493">
+        <label>SceneGalaxy</label>
+        <link refid="classSceneGalaxy"/>
+        <childnode refid="491" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="495">
+        <label>SceneSoraJewel</label>
+        <link refid="classSceneSoraJewel"/>
+        <childnode refid="491" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="491">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+      <node id="496">
+        <label>SP2</label>
+        <link refid="classSP2"/>
+        <childnode refid="491" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="494">
+        <label>SceneMun</label>
+        <link refid="classSceneMun"/>
+        <childnode refid="491" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="492">
+        <label>LoadingScreen</label>
+        <link refid="classLoadingScreen"/>
+        <childnode refid="491" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="LiZhaoyuan1/Source/Scene.h" line="5" column="1" bodyfile="LiZhaoyuan1/Source/Scene.h" bodystart="4" bodyend="14"/>
+    <listofallmembers>
+      <member refid="classScene_1aae8e24654ef98c79961c2b804b12852c" prot="public" virt="pure-virtual"><scope>Scene</scope><name>Exit</name></member>
+      <member refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478" prot="public" virt="pure-virtual"><scope>Scene</scope><name>Init</name></member>
+      <member refid="classScene_1ae24d21e12b34839994ad265662ea24d7" prot="public" virt="pure-virtual"><scope>Scene</scope><name>Render</name></member>
+      <member refid="classScene_1ad10176d75a9cc0da56626f682d083507" prot="public" virt="non-virtual"><scope>Scene</scope><name>Scene</name></member>
+      <member refid="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91" prot="public" virt="pure-virtual"><scope>Scene</scope><name>Update</name></member>
+      <member refid="classScene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" virt="non-virtual"><scope>Scene</scope><name>~Scene</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

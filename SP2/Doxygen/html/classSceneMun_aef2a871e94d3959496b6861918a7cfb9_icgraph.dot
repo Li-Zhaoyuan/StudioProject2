@@ -1,0 +1,22 @@
+digraph "SceneMun::RenderTextOnScreen"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="SceneMun::RenderTextOnScreen",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="SceneMun::fultoninteraction",height=0.2,width=0.4,color="black",URL="$classSceneMun.html#aad2e9cc76f3cf7ae6c8c54288177b798",tooltip="Function that allows the extraction of NPCs from the map, sending them into the air. "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="SceneMun::Render",height=0.2,width=0.4,color="black",URL="$classSceneMun.html#aa953e0eaad928335a38aefe9df1021a6",tooltip="SceneMun&#39;s main render function. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="SceneMun::RenderInfomation\lOnScreen",height=0.2,width=0.4,color="black",URL="$classSceneMun.html#a44fda537867e6ffe37a62e3c376dcaca",tooltip="Function that renders some texts when certain interactions are done. "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="SceneMun::RenderLetterOn\lScreen",height=0.2,width=0.4,color="black",URL="$classSceneMun.html#aa829350a783d56e436ccc3bd6354637d",tooltip="Function that renders the letter on screen when the interaction of recieving a letter. "];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="SceneMun::RenderTextBoxOn\lScreen",height=0.2,width=0.4,color="black",URL="$classSceneMun.html#a39f4e2b8b18cd27b652e194e62a2e813",tooltip="Function that renders the textbox around the Texts. "];
+  Node6 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

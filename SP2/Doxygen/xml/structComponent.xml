@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structComponent" kind="struct" language="C++" prot="public">
+    <compoundname>Component</compoundname>
+    <includes refid="Material_8h" local="no">Material.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structComponent_1a490db57cde183ef5a233b6ff3386ef6f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Component::r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Material.h" line="6" column="1" bodyfile="LiZhaoyuan1/Source/Material.h" bodystart="6" bodyend="-1"/>
+        <referencedby refid="classSP2_1acf9cd6642d16e15f0ca2e43e9d266070" compoundref="SP2_8cpp" startline="183" endline="226">SP2::renderMesh</referencedby>
+        <referencedby refid="classLoadingScreen_1a8249bb27253ebc256119a0e22a141e3d" compoundref="LoadingScreen_8cpp" startline="181" endline="220">LoadingScreen::renderMesh</referencedby>
+        <referencedby refid="classSceneMun_1a11909a41ec144a7765752429a8a4552c" compoundref="SceneMun_8cpp" startline="869" endline="912">SceneMun::renderMesh</referencedby>
+        <referencedby refid="classSceneSoraJewel_1adfb31a31ca298111a9792551c242d25f" compoundref="SceneSoraJewel_8cpp" startline="903" endline="941">SceneSoraJewel::renderMesh</referencedby>
+        <referencedby refid="classSceneGalaxy_1a987d0a5971bb07f2b8770ef11147dfd8" compoundref="SceneGalaxy_8cpp" startline="635" endline="678">SceneGalaxy::renderMesh</referencedby>
+        <referencedby refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="8" endline="8">Set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structComponent_1a6cf7bfac62ac8aa4a8aa8c3f847428d8" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Component::g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Material.h" line="6" column="1" bodyfile="LiZhaoyuan1/Source/Material.h" bodystart="6" bodyend="-1"/>
+        <referencedby refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="8" endline="8">Set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structComponent_1abd55184abe2aaf269b38f5913721821c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Component::b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Material.h" line="6" column="1" bodyfile="LiZhaoyuan1/Source/Material.h" bodystart="6" bodyend="-1"/>
+        <referencedby refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="8" endline="8">Set</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structComponent_1a99b70cf0291f272bf8e94882f68b38d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Component::Component</definition>
+        <argsstring>(float r=0.1f, float g=0.1f, float b=1.0f)</argsstring>
+        <name>Component</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+          <defval>0.1f</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+          <defval>0.1f</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+          <defval>1.0f</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Material.h" line="7" column="1" bodyfile="LiZhaoyuan1/Source/Material.h" bodystart="7" bodyend="7"/>
+        <references refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="8" endline="8">Set</references>
+      </memberdef>
+      <memberdef kind="function" id="structComponent_1a85f599b839327709953f0115dc5dfd49" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Component::Set</definition>
+        <argsstring>(float r, float g, float b)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Material.h" line="8" column="1" bodyfile="LiZhaoyuan1/Source/Material.h" bodystart="8" bodyend="8"/>
+        <references refid="structComponent_1abd55184abe2aaf269b38f5913721821c" compoundref="Material_8h" startline="6">b</references>
+        <references refid="structComponent_1a6cf7bfac62ac8aa4a8aa8c3f847428d8" compoundref="Material_8h" startline="6">g</references>
+        <references refid="structComponent_1a490db57cde183ef5a233b6ff3386ef6f" compoundref="Material_8h" startline="6">r</references>
+        <referencedby refid="structComponent_1a99b70cf0291f272bf8e94882f68b38d7" compoundref="Material_8h" startline="7" endline="7">Component</referencedby>
+        <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="340">
+        <label>Component</label>
+        <link refid="structComponent"/>
+        <childnode refid="341" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="341">
+        <label>float</label>
+      </node>
+    </collaborationgraph>
+    <location file="LiZhaoyuan1/Source/Material.h" line="5" column="1" bodyfile="LiZhaoyuan1/Source/Material.h" bodystart="4" bodyend="9"/>
+    <listofallmembers>
+      <member refid="structComponent_1abd55184abe2aaf269b38f5913721821c" prot="public" virt="non-virtual"><scope>Component</scope><name>b</name></member>
+      <member refid="structComponent_1a99b70cf0291f272bf8e94882f68b38d7" prot="public" virt="non-virtual"><scope>Component</scope><name>Component</name></member>
+      <member refid="structComponent_1a6cf7bfac62ac8aa4a8aa8c3f847428d8" prot="public" virt="non-virtual"><scope>Component</scope><name>g</name></member>
+      <member refid="structComponent_1a490db57cde183ef5a233b6ff3386ef6f" prot="public" virt="non-virtual"><scope>Component</scope><name>r</name></member>
+      <member refid="structComponent_1a85f599b839327709953f0115dc5dfd49" prot="public" virt="non-virtual"><scope>Component</scope><name>Set</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

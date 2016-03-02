@@ -1,0 +1,1051 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classCamera3" kind="class" language="C++" prot="public">
+    <compoundname>Camera3</compoundname>
+    <basecompoundref refid="classCamera" prot="public" virt="non-virtual">Camera</basecompoundref>
+    <includes refid="Camera3_8h" local="no">Camera3.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classCamera3_1a0befffc59212bf28cffddc24f2b31e67" prot="public" static="no" mutable="no">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Camera3::defaultPosition</definition>
+        <argsstring></argsstring>
+        <name>defaultPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="28" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classCamera3_1a19ed99e698e764c1da3a985cf75eb93f" compoundref="Camera3_8cpp" startline="37" endline="55">Init</referencedby>
+        <referencedby refid="classCamera3_1a4b10106bcd89f21e3cf3e39f04d8c1cb" compoundref="Camera3_8cpp" startline="330" endline="336">Reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCamera3_1a0c65c81ec5c614828b140c8125cf79da" prot="public" static="no" mutable="no">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Camera3::defaultTarget</definition>
+        <argsstring></argsstring>
+        <name>defaultTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="29" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classCamera3_1a19ed99e698e764c1da3a985cf75eb93f" compoundref="Camera3_8cpp" startline="37" endline="55">Init</referencedby>
+        <referencedby refid="classCamera3_1a4b10106bcd89f21e3cf3e39f04d8c1cb" compoundref="Camera3_8cpp" startline="330" endline="336">Reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCamera3_1a089366725666df811a969aca24168cb6" prot="public" static="no" mutable="no">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Camera3::defaultUp</definition>
+        <argsstring></argsstring>
+        <name>defaultUp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="30" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="classCamera3_1a19ed99e698e764c1da3a985cf75eb93f" compoundref="Camera3_8cpp" startline="37" endline="55">Init</referencedby>
+        <referencedby refid="classCamera3_1a4b10106bcd89f21e3cf3e39f04d8c1cb" compoundref="Camera3_8cpp" startline="330" endline="336">Reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCamera3_1a3c24358d47debe16d7fbf039fed8f829" prot="public" static="no" mutable="no">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Camera3::currentV</definition>
+        <argsstring></argsstring>
+        <name>currentV</name>
+        <initializer>= (0.f, 0.f, 0.f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="32" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCamera3_1a1480a84f3c197eec69d73776da76bcc4" prot="public" static="no" mutable="no">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Camera3::displacement</definition>
+        <argsstring></argsstring>
+        <name>displacement</name>
+        <initializer>= (0.f, 0.f, 0.f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="33" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCamera3_1a1d71de0c35d1f368c6ab9c388aeab63c" prot="public" static="no" mutable="no">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Camera3::minimapcoords</definition>
+        <argsstring></argsstring>
+        <name>minimapcoords</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="35" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneMun_1a3ab723079e46daa91d6c4ce5e5c2a611" compoundref="SceneMun_8cpp" startline="1032" endline="1069">SceneMun::Renderpicturetoscreen</referencedby>
+        <referencedby refid="classCamera3_1a9b14833d93a40442a53edf635837045c" compoundref="Camera3_8cpp" startline="777" endline="1080">SJUpdate</referencedby>
+        <referencedby refid="classCamera3_1a1325eb6c97194791fb8da473e2560add" compoundref="Camera3_8cpp" startline="62" endline="323">Update</referencedby>
+        <referencedby refid="classCamera3_1a9cae806b6aeb0cef0650ddbcc73b465c" compoundref="Camera3_8cpp" startline="345" endline="430">UpdateCollision</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCamera3_1a7429427bccf6c3ad2fd867167aa89a7a" prot="public" static="no" mutable="no">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Camera3::minimapsoracoords</definition>
+        <argsstring></argsstring>
+        <name>minimapsoracoords</name>
+        <initializer>= (78.f, 55.f, -1.f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="36" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classCamera3_1a19ed99e698e764c1da3a985cf75eb93f" compoundref="Camera3_8cpp" startline="37" endline="55">Init</referencedby>
+        <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
+        <referencedby refid="classSceneSoraJewel_1a09e3c2a9ccddfd4990ec6f4756165835" compoundref="SceneSoraJewel_8cpp" startline="1447" endline="1483">SceneSoraJewel::renderminimaptoscreen</referencedby>
+        <referencedby refid="classCamera3_1a9b14833d93a40442a53edf635837045c" compoundref="Camera3_8cpp" startline="777" endline="1080">SJUpdate</referencedby>
+        <referencedby refid="classCamera3_1a1325eb6c97194791fb8da473e2560add" compoundref="Camera3_8cpp" startline="62" endline="323">Update</referencedby>
+        <referencedby refid="classSceneSoraJewel_1a581a47998e6133291289306656463cb6" compoundref="SceneSoraJewel_8cpp" startline="454" endline="698">SceneSoraJewel::Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCamera3_1a1abb21f4c4959cc0b72b8a58ea5ac634" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Camera3::SceneSoraJewel</definition>
+        <argsstring></argsstring>
+        <name>SceneSoraJewel</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="51" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.h" bodystart="51" bodyend="-1"/>
+        <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCamera3_1a484b1bd523d92cf0bb4b1b42acc68631" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Camera3::SceneMun</definition>
+        <argsstring></argsstring>
+        <name>SceneMun</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="52" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCamera3_1a2340eefc0792f4b0485ecc3af7eb2992" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Camera3::SceneGalaxy</definition>
+        <argsstring></argsstring>
+        <name>SceneGalaxy</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="53" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.h" bodystart="53" bodyend="-1"/>
+        <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCamera3_1ac62c7576203d53ba1b82faf3657d7191" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Camera3::jump</definition>
+        <argsstring></argsstring>
+        <name>jump</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="65" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCamera3_1aacefea14ced6999d753e79bee81e0956" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Camera3::wherecube</definition>
+        <argsstring></argsstring>
+        <name>wherecube</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="66" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCamera3_1a0a45a993a2bae51ac66cb82d0a5f17ee" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Camera3::rotateChar</definition>
+        <argsstring></argsstring>
+        <name>rotateChar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="68" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.h" bodystart="68" bodyend="-1"/>
+        <referencedby refid="classCamera3_1a19ed99e698e764c1da3a985cf75eb93f" compoundref="Camera3_8cpp" startline="37" endline="55">Init</referencedby>
+        <referencedby refid="classSceneGalaxy_1ab4e4c417fbebf427e3e781b0192d4b28" compoundref="SceneGalaxy_8cpp" startline="975" endline="991">SceneGalaxy::RenderMissile</referencedby>
+        <referencedby refid="classSceneGalaxy_1a367ab19038c3d53cc2c00a37c1bfdc90" compoundref="SceneGalaxy_8cpp" startline="846" endline="860">SceneGalaxy::RenderXwing</referencedby>
+        <referencedby refid="classCamera3_1a9b14833d93a40442a53edf635837045c" compoundref="Camera3_8cpp" startline="777" endline="1080">SJUpdate</referencedby>
+        <referencedby refid="classCamera3_1a1325eb6c97194791fb8da473e2560add" compoundref="Camera3_8cpp" startline="62" endline="323">Update</referencedby>
+        <referencedby refid="classCamera3_1a94a1b58131f6af3e0f46152c6928921a" compoundref="Camera3_8cpp" startline="439" endline="516">XWingCamera</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCamera3_1a032426ae014d19b59f5a880455138563" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Camera3::translateChar</definition>
+        <argsstring></argsstring>
+        <name>translateChar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="69" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.h" bodystart="69" bodyend="-1"/>
+        <referencedby refid="classCamera3_1a19ed99e698e764c1da3a985cf75eb93f" compoundref="Camera3_8cpp" startline="37" endline="55">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCamera3_1aa26b8e1365282ec44384cdadeb489ba1" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Camera3::Force</definition>
+        <argsstring></argsstring>
+        <name>Force</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="71" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.h" bodystart="71" bodyend="-1"/>
+        <referencedby refid="classCamera3_1a19ed99e698e764c1da3a985cf75eb93f" compoundref="Camera3_8cpp" startline="37" endline="55">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCamera3_1a778b7c91debb163912510217d6075c47" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Camera3::mass</definition>
+        <argsstring></argsstring>
+        <name>mass</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="72" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.h" bodystart="72" bodyend="-1"/>
+        <referencedby refid="classCamera3_1a19ed99e698e764c1da3a985cf75eb93f" compoundref="Camera3_8cpp" startline="37" endline="55">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCamera3_1a1d5082c7e3c5607815bd3141e1fa854a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Camera3::gravity</definition>
+        <argsstring></argsstring>
+        <name>gravity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="73" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.h" bodystart="73" bodyend="-1"/>
+        <referencedby refid="classCamera3_1a19ed99e698e764c1da3a985cf75eb93f" compoundref="Camera3_8cpp" startline="37" endline="55">Init</referencedby>
+        <referencedby refid="classCamera3_1a9b14833d93a40442a53edf635837045c" compoundref="Camera3_8cpp" startline="777" endline="1080">SJUpdate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCamera3_1af14a87a007888770820b8901ec64e6ef" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Camera3::acceleration</definition>
+        <argsstring></argsstring>
+        <name>acceleration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="74" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCamera3_1afe01f7fed4b7c79b2e802311d8938733" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Camera3::speed</definition>
+        <argsstring></argsstring>
+        <name>speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="75" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.h" bodystart="75" bodyend="-1"/>
+        <referencedby refid="classCamera3_1a19ed99e698e764c1da3a985cf75eb93f" compoundref="Camera3_8cpp" startline="37" endline="55">Init</referencedby>
+        <referencedby refid="classCamera3_1a9b14833d93a40442a53edf635837045c" compoundref="Camera3_8cpp" startline="777" endline="1080">SJUpdate</referencedby>
+        <referencedby refid="classCamera3_1a1325eb6c97194791fb8da473e2560add" compoundref="Camera3_8cpp" startline="62" endline="323">Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCamera3_1aef7409cbc80ffd21a658c7055653b0ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Camera3::Camera3</definition>
+        <argsstring>()</argsstring>
+        <name>Camera3</name>
+        <briefdescription>
+<para><ref refid="classCamera3" kindref="compound">Camera3</ref> constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="40" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.cpp" bodystart="19" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classCamera3_1a386fa089e2507622ef79675cd95efd69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Camera3::~Camera3</definition>
+        <argsstring>()</argsstring>
+        <name>~Camera3</name>
+        <briefdescription>
+<para><ref refid="classCamera3" kindref="compound">Camera3</ref> destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="41" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.cpp" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classCamera3_1a19ed99e698e764c1da3a985cf75eb93f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Camera3::Init</definition>
+        <argsstring>(const Vector3 &amp;pos, const Vector3 &amp;target, const Vector3 &amp;up)</argsstring>
+        <name>Init</name>
+        <reimplements refid="classCamera_1a609775f7ec4cd936ad7add808cd7354c">Init</reimplements>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>up</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classCamera3" kindref="compound">Camera3</ref> initializer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="42" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.cpp" bodystart="37" bodyend="55"/>
+        <references refid="structVector3_1aa1cdc5357009b47fe585ddd61e263aad" compoundref="Vector3_8cpp" startline="319" endline="322">Vector3::Cross</references>
+        <references refid="classCamera3_1a0befffc59212bf28cffddc24f2b31e67" compoundref="Camera3_8h" startline="28">defaultPosition</references>
+        <references refid="classCamera3_1a0c65c81ec5c614828b140c8125cf79da" compoundref="Camera3_8h" startline="29">defaultTarget</references>
+        <references refid="classCamera3_1a089366725666df811a969aca24168cb6" compoundref="Camera3_8h" startline="30">defaultUp</references>
+        <references refid="classCamera3_1aa26b8e1365282ec44384cdadeb489ba1" compoundref="Camera3_8h" startline="71">Force</references>
+        <references refid="classCamera3_1a1d5082c7e3c5607815bd3141e1fa854a" compoundref="Camera3_8h" startline="73">gravity</references>
+        <references refid="classCamera3_1a778b7c91debb163912510217d6075c47" compoundref="Camera3_8h" startline="72">mass</references>
+        <references refid="classCamera3_1a7429427bccf6c3ad2fd867167aa89a7a" compoundref="Camera3_8h" startline="36">minimapsoracoords</references>
+        <references refid="structVector3_1aaef4f25a38878a640ab4a48002a7eff8" compoundref="Vector3_8cpp" startline="358" endline="367">Vector3::Normalize</references>
+        <references refid="structVector3_1a2da0f00c5529bced69763320dac9c414" compoundref="Vector3_8cpp" startline="337" endline="343">Vector3::Normalized</references>
+        <references refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" compoundref="Camera_8h" startline="9">Camera::position</references>
+        <references refid="classCamera3_1a0a45a993a2bae51ac66cb82d0a5f17ee" compoundref="Camera3_8h" startline="68">rotateChar</references>
+        <references refid="classCamera3_1afe01f7fed4b7c79b2e802311d8938733" compoundref="Camera3_8h" startline="75">speed</references>
+        <references refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" compoundref="Camera_8h" startline="10">Camera::target</references>
+        <references refid="classCamera3_1a032426ae014d19b59f5a880455138563" compoundref="Camera3_8h" startline="69">translateChar</references>
+        <references refid="classCamera_1a6af395199ecb1db9e1083d542b4fb013" compoundref="Camera_8h" startline="12">Camera::view</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+        <referencedby refid="classSceneGalaxy_1a6423b415bf29060d3be4598d74f7335f" compoundref="SceneGalaxy_8cpp" startline="1062" endline="1074">SceneGalaxy::CutScene</referencedby>
+        <referencedby refid="classSP2_1a8669c489b6a968f367a4610b254ac992" compoundref="SP2_8cpp" startline="49" endline="118">SP2::Init</referencedby>
+        <referencedby refid="classLoadingScreen_1a7fa77cff0af874a23c6043a80af09da3" compoundref="LoadingScreen_8cpp" startline="45" endline="126">LoadingScreen::Init</referencedby>
+        <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
+        <referencedby refid="classSceneMun_1ac31a057e66f46bb4d9a7b3fb1c2cfbb9" compoundref="SceneMun_8cpp" startline="418" endline="783">SceneMun::Update</referencedby>
+        <referencedby refid="classSceneSoraJewel_1a581a47998e6133291289306656463cb6" compoundref="SceneSoraJewel_8cpp" startline="454" endline="698">SceneSoraJewel::Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCamera3_1a1325eb6c97194791fb8da473e2560add" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Camera3::Update</definition>
+        <argsstring>(double dt, float bounds)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>bounds</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classCamera3" kindref="compound">Camera3</ref> Update function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="43" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.cpp" bodystart="62" bodyend="323"/>
+        <references refid="structVector3_1aa1cdc5357009b47fe585ddd61e263aad" compoundref="Vector3_8cpp" startline="319" endline="322">Vector3::Cross</references>
+        <references refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" compoundref="Application_8cpp" startline="40" endline="43">Application::IsKeyPressed</references>
+        <references refid="classCamera3_1a1d71de0c35d1f368c6ab9c388aeab63c" compoundref="Camera3_8h" startline="35">minimapcoords</references>
+        <references refid="classCamera3_1a7429427bccf6c3ad2fd867167aa89a7a" compoundref="Camera3_8h" startline="36">minimapsoracoords</references>
+        <references refid="structVector3_1aaef4f25a38878a640ab4a48002a7eff8" compoundref="Vector3_8cpp" startline="358" endline="367">Vector3::Normalize</references>
+        <references refid="structVector3_1a2da0f00c5529bced69763320dac9c414" compoundref="Vector3_8cpp" startline="337" endline="343">Vector3::Normalized</references>
+        <references refid="classCamera3_1aaa26b06935fed4c855d2dd456121a702" compoundref="Camera3_8cpp" startline="559" endline="570">OBJboundaryX</references>
+        <references refid="classCamera3_1ac2263d661658db8abcb97df54cb09c16" compoundref="Camera3_8cpp" startline="603" endline="664">OBJboundaryY</references>
+        <references refid="classCamera3_1aa26ef7e7f4b7f981404cb3e8ba6d29cc" compoundref="Camera3_8cpp" startline="581" endline="592">OBJboundaryZ</references>
+        <references refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" compoundref="Camera_8h" startline="9">Camera::position</references>
+        <references refid="classCamera3_1a4b10106bcd89f21e3cf3e39f04d8c1cb" compoundref="Camera3_8cpp" startline="330" endline="336">Reset</references>
+        <references refid="classCamera3_1a0a45a993a2bae51ac66cb82d0a5f17ee" compoundref="Camera3_8h" startline="68">rotateChar</references>
+        <references refid="classMtx44_1ac0587ffb5ff9fd58ad5768d28fc06574" compoundref="Mtx44_8cpp" startline="320" endline="342">Mtx44::SetToRotation</references>
+        <references refid="classCamera3_1afe01f7fed4b7c79b2e802311d8938733" compoundref="Camera3_8h" startline="75">speed</references>
+        <references refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" compoundref="Camera_8h" startline="10">Camera::target</references>
+        <references refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" compoundref="Camera_8h" startline="11">Camera::up</references>
+        <references refid="classCamera_1a6af395199ecb1db9e1083d542b4fb013" compoundref="Camera_8h" startline="12">Camera::view</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
+        <referencedby refid="classSceneMun_1ac31a057e66f46bb4d9a7b3fb1c2cfbb9" compoundref="SceneMun_8cpp" startline="418" endline="783">SceneMun::Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCamera3_1a9b14833d93a40442a53edf635837045c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Camera3::SJUpdate</definition>
+        <argsstring>(double dt, float minboundsx, float maxboundsx, float minboundsz, float maxboundsz)</argsstring>
+        <name>SJUpdate</name>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>minboundsx</declname>
+          <defname>maxboundsx</defname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>maxboundsx</declname>
+          <defname>minboundsx</defname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>minboundsz</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>maxboundsz</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classCamera3" kindref="compound">Camera3</ref> SJUpdate funcion. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>time, maxboundsx, minboundsx, minboundsz, maxboundsz </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="44" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.cpp" bodystart="777" bodyend="1080"/>
+        <references refid="structVector3_1aa1cdc5357009b47fe585ddd61e263aad" compoundref="Vector3_8cpp" startline="319" endline="322">Vector3::Cross</references>
+        <references refid="classCamera3_1a1d5082c7e3c5607815bd3141e1fa854a" compoundref="Camera3_8h" startline="73">gravity</references>
+        <references refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" compoundref="Application_8cpp" startline="40" endline="43">Application::IsKeyPressed</references>
+        <references refid="classCamera3_1a1d71de0c35d1f368c6ab9c388aeab63c" compoundref="Camera3_8h" startline="35">minimapcoords</references>
+        <references refid="classCamera3_1a7429427bccf6c3ad2fd867167aa89a7a" compoundref="Camera3_8h" startline="36">minimapsoracoords</references>
+        <references refid="structVector3_1aaef4f25a38878a640ab4a48002a7eff8" compoundref="Vector3_8cpp" startline="358" endline="367">Vector3::Normalize</references>
+        <references refid="structVector3_1a2da0f00c5529bced69763320dac9c414" compoundref="Vector3_8cpp" startline="337" endline="343">Vector3::Normalized</references>
+        <references refid="classCamera3_1aaa26b06935fed4c855d2dd456121a702" compoundref="Camera3_8cpp" startline="559" endline="570">OBJboundaryX</references>
+        <references refid="classCamera3_1ac2263d661658db8abcb97df54cb09c16" compoundref="Camera3_8cpp" startline="603" endline="664">OBJboundaryY</references>
+        <references refid="classCamera3_1aa26ef7e7f4b7f981404cb3e8ba6d29cc" compoundref="Camera3_8cpp" startline="581" endline="592">OBJboundaryZ</references>
+        <references refid="classCamera3_1a18c6741c2dc48ba6d12debe48d76923c" compoundref="Camera3_8cpp" startline="1089" endline="1099">OnGround</references>
+        <references refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" compoundref="Camera_8h" startline="9">Camera::position</references>
+        <references refid="classCamera3_1a4b10106bcd89f21e3cf3e39f04d8c1cb" compoundref="Camera3_8cpp" startline="330" endline="336">Reset</references>
+        <references refid="classCamera3_1a0a45a993a2bae51ac66cb82d0a5f17ee" compoundref="Camera3_8h" startline="68">rotateChar</references>
+        <references refid="classMtx44_1ac0587ffb5ff9fd58ad5768d28fc06574" compoundref="Mtx44_8cpp" startline="320" endline="342">Mtx44::SetToRotation</references>
+        <references refid="classCamera3_1afe01f7fed4b7c79b2e802311d8938733" compoundref="Camera3_8h" startline="75">speed</references>
+        <references refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" compoundref="Camera_8h" startline="10">Camera::target</references>
+        <references refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" compoundref="Camera_8h" startline="11">Camera::up</references>
+        <references refid="classCamera_1a6af395199ecb1db9e1083d542b4fb013" compoundref="Camera_8h" startline="12">Camera::view</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
+        <referencedby refid="classSceneSoraJewel_1a581a47998e6133291289306656463cb6" compoundref="SceneSoraJewel_8cpp" startline="454" endline="698">SceneSoraJewel::Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCamera3_1a4b10106bcd89f21e3cf3e39f04d8c1cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Camera3::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <reimplements refid="classCamera_1aa46f58b32270a571ab56dde4caca46db">Reset</reimplements>
+        <briefdescription>
+<para><ref refid="classCamera3" kindref="compound">Camera3</ref> Reset function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="45" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.cpp" bodystart="330" bodyend="336"/>
+        <references refid="classCamera3_1a0befffc59212bf28cffddc24f2b31e67" compoundref="Camera3_8h" startline="28">defaultPosition</references>
+        <references refid="classCamera3_1a0c65c81ec5c614828b140c8125cf79da" compoundref="Camera3_8h" startline="29">defaultTarget</references>
+        <references refid="classCamera3_1a089366725666df811a969aca24168cb6" compoundref="Camera3_8h" startline="30">defaultUp</references>
+        <references refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" compoundref="Camera_8h" startline="9">Camera::position</references>
+        <references refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" compoundref="Camera_8h" startline="10">Camera::target</references>
+        <references refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" compoundref="Camera_8h" startline="11">Camera::up</references>
+        <references refid="classCamera_1a6af395199ecb1db9e1083d542b4fb013" compoundref="Camera_8h" startline="12">Camera::view</references>
+        <referencedby refid="classCamera3_1a9b14833d93a40442a53edf635837045c" compoundref="Camera3_8cpp" startline="777" endline="1080">SJUpdate</referencedby>
+        <referencedby refid="classCamera3_1a1325eb6c97194791fb8da473e2560add" compoundref="Camera3_8cpp" startline="62" endline="323">Update</referencedby>
+        <referencedby refid="classCamera3_1a94a1b58131f6af3e0f46152c6928921a" compoundref="Camera3_8cpp" startline="439" endline="516">XWingCamera</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCamera3_1a94a1b58131f6af3e0f46152c6928921a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Camera3::XWingCamera</definition>
+        <argsstring>(double dt, float bounds)</argsstring>
+        <name>XWingCamera</name>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>bounds</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classCamera3" kindref="compound">Camera3</ref> XWingCamera function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>double</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>dt, boundary </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="48" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.cpp" bodystart="439" bodyend="516"/>
+        <references refid="structVector3_1aa1cdc5357009b47fe585ddd61e263aad" compoundref="Vector3_8cpp" startline="319" endline="322">Vector3::Cross</references>
+        <references refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" compoundref="Application_8cpp" startline="40" endline="43">Application::IsKeyPressed</references>
+        <references refid="structVector3_1aaef4f25a38878a640ab4a48002a7eff8" compoundref="Vector3_8cpp" startline="358" endline="367">Vector3::Normalize</references>
+        <references refid="structVector3_1a2da0f00c5529bced69763320dac9c414" compoundref="Vector3_8cpp" startline="337" endline="343">Vector3::Normalized</references>
+        <references refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" compoundref="Camera_8h" startline="9">Camera::position</references>
+        <references refid="classCamera3_1a4b10106bcd89f21e3cf3e39f04d8c1cb" compoundref="Camera3_8cpp" startline="330" endline="336">Reset</references>
+        <references refid="classCamera3_1a0a45a993a2bae51ac66cb82d0a5f17ee" compoundref="Camera3_8h" startline="68">rotateChar</references>
+        <references refid="classMtx44_1ac0587ffb5ff9fd58ad5768d28fc06574" compoundref="Mtx44_8cpp" startline="320" endline="342">Mtx44::SetToRotation</references>
+        <references refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" compoundref="Camera_8h" startline="10">Camera::target</references>
+        <references refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" compoundref="Camera_8h" startline="11">Camera::up</references>
+        <references refid="classCamera_1a6af395199ecb1db9e1083d542b4fb013" compoundref="Camera_8h" startline="12">Camera::view</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
+        <referencedby refid="classSceneGalaxy_1a20f9275f7788921a7cd843219b9bdeff" compoundref="SceneGalaxy_8cpp" startline="542" endline="623">SceneGalaxy::Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCamera3_1a9cae806b6aeb0cef0650ddbcc73b465c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Camera3::UpdateCollision</definition>
+        <argsstring>(float bounds, double dt)</argsstring>
+        <name>UpdateCollision</name>
+        <param>
+          <type>float</type>
+          <declname>bounds</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classCamera3" kindref="compound">Camera3</ref> UpdateCollision function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>boundary</parametername>
+<parametername>double</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>dt </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="49" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.cpp" bodystart="345" bodyend="430"/>
+        <references refid="structVector3_1aa1cdc5357009b47fe585ddd61e263aad" compoundref="Vector3_8cpp" startline="319" endline="322">Vector3::Cross</references>
+        <references refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" compoundref="Application_8cpp" startline="40" endline="43">Application::IsKeyPressed</references>
+        <references refid="classCamera3_1a1d71de0c35d1f368c6ab9c388aeab63c" compoundref="Camera3_8h" startline="35">minimapcoords</references>
+        <references refid="structVector3_1aaef4f25a38878a640ab4a48002a7eff8" compoundref="Vector3_8cpp" startline="358" endline="367">Vector3::Normalize</references>
+        <references refid="structVector3_1a2da0f00c5529bced69763320dac9c414" compoundref="Vector3_8cpp" startline="337" endline="343">Vector3::Normalized</references>
+        <references refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" compoundref="Camera_8h" startline="9">Camera::position</references>
+        <references refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" compoundref="Camera_8h" startline="10">Camera::target</references>
+        <references refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" compoundref="Camera_8h" startline="11">Camera::up</references>
+        <references refid="classCamera_1a6af395199ecb1db9e1083d542b4fb013" compoundref="Camera_8h" startline="12">Camera::view</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
+      </memberdef>
+      <memberdef kind="function" id="classCamera3_1a0a24a8f97532c60f7652662fe7ea9011" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Camera3::boundaryCheckerX</definition>
+        <argsstring>(float smallx, float largex, float smallz, float largez, Vector3 value)</argsstring>
+        <name>boundaryCheckerX</name>
+        <param>
+          <type>float</type>
+          <declname>smallx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>largex</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>smallz</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>largez</declname>
+        </param>
+        <param>
+          <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classCamera3" kindref="compound">Camera3</ref> boundaryCheckerX function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>minimum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x, maximum x, minimum z, maximum z, vector3 value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true/false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="54" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.cpp" bodystart="527" bodyend="532"/>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
+        <referencedby refid="classCamera3_1a47536550c550e38ce70a127d6041d238" compoundref="Camera3_8cpp" startline="675" endline="696">AllMunBoundaryX</referencedby>
+        <referencedby refid="classCamera3_1aa21841d30a266e7685ca9b7c88acef27" compoundref="Camera3_8cpp" startline="739" endline="748">AllSoraJewelBoundaryX</referencedby>
+        <referencedby refid="classCamera3_1ac2263d661658db8abcb97df54cb09c16" compoundref="Camera3_8cpp" startline="603" endline="664">OBJboundaryY</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCamera3_1acf520274a349d1766551356738f2aa3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Camera3::boundaryCheckerZ</definition>
+        <argsstring>(float smallx, float largex, float smallz, float largez, Vector3 value)</argsstring>
+        <name>boundaryCheckerZ</name>
+        <param>
+          <type>float</type>
+          <declname>smallx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>largex</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>smallz</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>largez</declname>
+        </param>
+        <param>
+          <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classCamera3" kindref="compound">Camera3</ref> boundaryCheckerZ function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>minimum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x, maximum x, minimum z, maximum z, vector3 value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true/false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="55" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.cpp" bodystart="543" bodyend="548"/>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
+        <referencedby refid="classCamera3_1a101dfa0d89e28196116fdc240cfac418" compoundref="Camera3_8cpp" startline="707" endline="728">AllMunBoundaryZ</referencedby>
+        <referencedby refid="classCamera3_1a62cd60c19e1bab7d201ff93bd23cca25" compoundref="Camera3_8cpp" startline="759" endline="768">AllSoraJewelBoundaryZ</referencedby>
+        <referencedby refid="classCamera3_1ac2263d661658db8abcb97df54cb09c16" compoundref="Camera3_8cpp" startline="603" endline="664">OBJboundaryY</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCamera3_1aaa26b06935fed4c855d2dd456121a702" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Camera3::OBJboundaryX</definition>
+        <argsstring>(Vector3 Testvalue)</argsstring>
+        <name>OBJboundaryX</name>
+        <param>
+          <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+          <declname>Testvalue</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classCamera3" kindref="compound">Camera3</ref> OBJboundaryX function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Testvalue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(value of current camera.position) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true/false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="56" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.cpp" bodystart="559" bodyend="570"/>
+        <references refid="classCamera3_1a47536550c550e38ce70a127d6041d238" compoundref="Camera3_8cpp" startline="675" endline="696">AllMunBoundaryX</references>
+        <references refid="classCamera3_1aa21841d30a266e7685ca9b7c88acef27" compoundref="Camera3_8cpp" startline="739" endline="748">AllSoraJewelBoundaryX</references>
+        <referencedby refid="classCamera3_1a9b14833d93a40442a53edf635837045c" compoundref="Camera3_8cpp" startline="777" endline="1080">SJUpdate</referencedby>
+        <referencedby refid="classCamera3_1a1325eb6c97194791fb8da473e2560add" compoundref="Camera3_8cpp" startline="62" endline="323">Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCamera3_1aa26ef7e7f4b7f981404cb3e8ba6d29cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Camera3::OBJboundaryZ</definition>
+        <argsstring>(Vector3 Testvalue)</argsstring>
+        <name>OBJboundaryZ</name>
+        <param>
+          <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+          <declname>Testvalue</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classCamera3" kindref="compound">Camera3</ref> OBJboundaryZ function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Testvalue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(value of current camera.position) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true/false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="57" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.cpp" bodystart="581" bodyend="592"/>
+        <references refid="classCamera3_1a101dfa0d89e28196116fdc240cfac418" compoundref="Camera3_8cpp" startline="707" endline="728">AllMunBoundaryZ</references>
+        <references refid="classCamera3_1a62cd60c19e1bab7d201ff93bd23cca25" compoundref="Camera3_8cpp" startline="759" endline="768">AllSoraJewelBoundaryZ</references>
+        <referencedby refid="classCamera3_1a9b14833d93a40442a53edf635837045c" compoundref="Camera3_8cpp" startline="777" endline="1080">SJUpdate</referencedby>
+        <referencedby refid="classCamera3_1a1325eb6c97194791fb8da473e2560add" compoundref="Camera3_8cpp" startline="62" endline="323">Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCamera3_1ac2263d661658db8abcb97df54cb09c16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Camera3::OBJboundaryY</definition>
+        <argsstring>(Vector3 Testvalue, int XZ)</argsstring>
+        <name>OBJboundaryY</name>
+        <param>
+          <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+          <declname>Testvalue</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>XZ</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classCamera3" kindref="compound">Camera3</ref> OBJboundaryY function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Testvalue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(value of current camera.position) and int XZ </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true/false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="58" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.cpp" bodystart="603" bodyend="664"/>
+        <references refid="classCamera3_1a47536550c550e38ce70a127d6041d238" compoundref="Camera3_8cpp" startline="675" endline="696">AllMunBoundaryX</references>
+        <references refid="classCamera3_1a101dfa0d89e28196116fdc240cfac418" compoundref="Camera3_8cpp" startline="707" endline="728">AllMunBoundaryZ</references>
+        <references refid="classCamera3_1aa21841d30a266e7685ca9b7c88acef27" compoundref="Camera3_8cpp" startline="739" endline="748">AllSoraJewelBoundaryX</references>
+        <references refid="classCamera3_1a62cd60c19e1bab7d201ff93bd23cca25" compoundref="Camera3_8cpp" startline="759" endline="768">AllSoraJewelBoundaryZ</references>
+        <references refid="classCamera3_1a0a24a8f97532c60f7652662fe7ea9011" compoundref="Camera3_8cpp" startline="527" endline="532">boundaryCheckerX</references>
+        <references refid="classCamera3_1acf520274a349d1766551356738f2aa3a" compoundref="Camera3_8cpp" startline="543" endline="548">boundaryCheckerZ</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+        <referencedby refid="classCamera3_1a9b14833d93a40442a53edf635837045c" compoundref="Camera3_8cpp" startline="777" endline="1080">SJUpdate</referencedby>
+        <referencedby refid="classCamera3_1a1325eb6c97194791fb8da473e2560add" compoundref="Camera3_8cpp" startline="62" endline="323">Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCamera3_1a47536550c550e38ce70a127d6041d238" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Camera3::AllMunBoundaryX</definition>
+        <argsstring>(Vector3 Testvalue)</argsstring>
+        <name>AllMunBoundaryX</name>
+        <param>
+          <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+          <declname>Testvalue</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classCamera3" kindref="compound">Camera3</ref> AllMunBoundaryX function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Testvalue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(value of current camera.position) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true/false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="59" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.cpp" bodystart="675" bodyend="696"/>
+        <references refid="classCamera3_1a0a24a8f97532c60f7652662fe7ea9011" compoundref="Camera3_8cpp" startline="527" endline="532">boundaryCheckerX</references>
+        <referencedby refid="classCamera3_1aaa26b06935fed4c855d2dd456121a702" compoundref="Camera3_8cpp" startline="559" endline="570">OBJboundaryX</referencedby>
+        <referencedby refid="classCamera3_1ac2263d661658db8abcb97df54cb09c16" compoundref="Camera3_8cpp" startline="603" endline="664">OBJboundaryY</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCamera3_1a101dfa0d89e28196116fdc240cfac418" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Camera3::AllMunBoundaryZ</definition>
+        <argsstring>(Vector3 Testvalue)</argsstring>
+        <name>AllMunBoundaryZ</name>
+        <param>
+          <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+          <declname>Testvalue</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classCamera3" kindref="compound">Camera3</ref> AllMunBoundaryZ function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Testvalue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(value of current camera.position) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true/false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="60" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.cpp" bodystart="707" bodyend="728"/>
+        <references refid="classCamera3_1acf520274a349d1766551356738f2aa3a" compoundref="Camera3_8cpp" startline="543" endline="548">boundaryCheckerZ</references>
+        <referencedby refid="classCamera3_1ac2263d661658db8abcb97df54cb09c16" compoundref="Camera3_8cpp" startline="603" endline="664">OBJboundaryY</referencedby>
+        <referencedby refid="classCamera3_1aa26ef7e7f4b7f981404cb3e8ba6d29cc" compoundref="Camera3_8cpp" startline="581" endline="592">OBJboundaryZ</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCamera3_1aa21841d30a266e7685ca9b7c88acef27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Camera3::AllSoraJewelBoundaryX</definition>
+        <argsstring>(Vector3 Testvalue)</argsstring>
+        <name>AllSoraJewelBoundaryX</name>
+        <param>
+          <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+          <declname>Testvalue</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classCamera3" kindref="compound">Camera3</ref> AllSoraJewelBoundaryX function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Testvalue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(value of current camera.position) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true/false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="61" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.cpp" bodystart="739" bodyend="748"/>
+        <references refid="classCamera3_1a0a24a8f97532c60f7652662fe7ea9011" compoundref="Camera3_8cpp" startline="527" endline="532">boundaryCheckerX</references>
+        <referencedby refid="classCamera3_1aaa26b06935fed4c855d2dd456121a702" compoundref="Camera3_8cpp" startline="559" endline="570">OBJboundaryX</referencedby>
+        <referencedby refid="classCamera3_1ac2263d661658db8abcb97df54cb09c16" compoundref="Camera3_8cpp" startline="603" endline="664">OBJboundaryY</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCamera3_1a62cd60c19e1bab7d201ff93bd23cca25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Camera3::AllSoraJewelBoundaryZ</definition>
+        <argsstring>(Vector3 Testvalue)</argsstring>
+        <name>AllSoraJewelBoundaryZ</name>
+        <param>
+          <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+          <declname>Testvalue</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classCamera3" kindref="compound">Camera3</ref> AllSoraJewelBoundaryZ function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Testvalue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(value of current camera.position) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true/false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="62" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.cpp" bodystart="759" bodyend="768"/>
+        <references refid="classCamera3_1acf520274a349d1766551356738f2aa3a" compoundref="Camera3_8cpp" startline="543" endline="548">boundaryCheckerZ</references>
+        <referencedby refid="classCamera3_1ac2263d661658db8abcb97df54cb09c16" compoundref="Camera3_8cpp" startline="603" endline="664">OBJboundaryY</referencedby>
+        <referencedby refid="classCamera3_1aa26ef7e7f4b7f981404cb3e8ba6d29cc" compoundref="Camera3_8cpp" startline="581" endline="592">OBJboundaryZ</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCamera3_1a18c6741c2dc48ba6d12debe48d76923c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Camera3::OnGround</definition>
+        <argsstring>()</argsstring>
+        <name>OnGround</name>
+        <briefdescription>
+<para><ref refid="classCamera3" kindref="compound">Camera3</ref> OnGround function. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true/false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Camera3.h" line="63" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.cpp" bodystart="1089" bodyend="1099"/>
+        <references refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" compoundref="Camera_8h" startline="9">Camera::position</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
+        <referencedby refid="classCamera3_1a9b14833d93a40442a53edf635837045c" compoundref="Camera3_8cpp" startline="777" endline="1080">SJUpdate</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines the camera and its methods. </para>    </briefdescription>
+    <detaileddescription>
+<para>Class <ref refid="classCamera3" kindref="compound">Camera3</ref>: </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="330">
+        <label>Camera</label>
+        <link refid="classCamera"/>
+      </node>
+      <node id="329">
+        <label>Camera3</label>
+        <link refid="classCamera3"/>
+        <childnode refid="330" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="332">
+        <label>Camera</label>
+        <link refid="classCamera"/>
+        <childnode refid="333" relation="usage">
+          <edgelabel>target</edgelabel>
+          <edgelabel>view</edgelabel>
+          <edgelabel>position</edgelabel>
+          <edgelabel>up</edgelabel>
+        </childnode>
+      </node>
+      <node id="334">
+        <label>float</label>
+      </node>
+      <node id="331">
+        <label>Camera3</label>
+        <link refid="classCamera3"/>
+        <childnode refid="332" relation="public-inheritance">
+        </childnode>
+        <childnode refid="334" relation="usage">
+          <edgelabel>translateChar</edgelabel>
+          <edgelabel>speed</edgelabel>
+          <edgelabel>rotateChar</edgelabel>
+          <edgelabel>acceleration</edgelabel>
+          <edgelabel>mass</edgelabel>
+          <edgelabel>Force</edgelabel>
+          <edgelabel>gravity</edgelabel>
+        </childnode>
+        <childnode refid="333" relation="usage">
+          <edgelabel>defaultTarget</edgelabel>
+          <edgelabel>minimapsoracoords</edgelabel>
+          <edgelabel>defaultPosition</edgelabel>
+          <edgelabel>currentV</edgelabel>
+          <edgelabel>defaultUp</edgelabel>
+          <edgelabel>displacement</edgelabel>
+          <edgelabel>minimapcoords</edgelabel>
+        </childnode>
+        <childnode refid="335" relation="usage">
+          <edgelabel>SceneMun</edgelabel>
+          <edgelabel>wherecube</edgelabel>
+          <edgelabel>SceneGalaxy</edgelabel>
+          <edgelabel>jump</edgelabel>
+          <edgelabel>SceneSoraJewel</edgelabel>
+        </childnode>
+      </node>
+      <node id="335">
+        <label>bool</label>
+      </node>
+      <node id="333">
+        <label>Vector3</label>
+        <link refid="structVector3"/>
+        <childnode refid="334" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="LiZhaoyuan1/Source/Camera3.h" line="22" column="1" bodyfile="LiZhaoyuan1/Source/Camera3.h" bodystart="21" bodyend="77"/>
+    <listofallmembers>
+      <member refid="classCamera3_1af14a87a007888770820b8901ec64e6ef" prot="public" virt="non-virtual"><scope>Camera3</scope><name>acceleration</name></member>
+      <member refid="classCamera3_1a47536550c550e38ce70a127d6041d238" prot="public" virt="non-virtual"><scope>Camera3</scope><name>AllMunBoundaryX</name></member>
+      <member refid="classCamera3_1a101dfa0d89e28196116fdc240cfac418" prot="public" virt="non-virtual"><scope>Camera3</scope><name>AllMunBoundaryZ</name></member>
+      <member refid="classCamera3_1aa21841d30a266e7685ca9b7c88acef27" prot="public" virt="non-virtual"><scope>Camera3</scope><name>AllSoraJewelBoundaryX</name></member>
+      <member refid="classCamera3_1a62cd60c19e1bab7d201ff93bd23cca25" prot="public" virt="non-virtual"><scope>Camera3</scope><name>AllSoraJewelBoundaryZ</name></member>
+      <member refid="classCamera3_1a0a24a8f97532c60f7652662fe7ea9011" prot="public" virt="non-virtual"><scope>Camera3</scope><name>boundaryCheckerX</name></member>
+      <member refid="classCamera3_1acf520274a349d1766551356738f2aa3a" prot="public" virt="non-virtual"><scope>Camera3</scope><name>boundaryCheckerZ</name></member>
+      <member refid="classCamera_1a01f94c3543f56ede7af49dc778f19331" prot="public" virt="non-virtual"><scope>Camera3</scope><name>Camera</name></member>
+      <member refid="classCamera3_1aef7409cbc80ffd21a658c7055653b0ab" prot="public" virt="non-virtual"><scope>Camera3</scope><name>Camera3</name></member>
+      <member refid="classCamera3_1a3c24358d47debe16d7fbf039fed8f829" prot="public" virt="non-virtual"><scope>Camera3</scope><name>currentV</name></member>
+      <member refid="classCamera3_1a0befffc59212bf28cffddc24f2b31e67" prot="public" virt="non-virtual"><scope>Camera3</scope><name>defaultPosition</name></member>
+      <member refid="classCamera3_1a0c65c81ec5c614828b140c8125cf79da" prot="public" virt="non-virtual"><scope>Camera3</scope><name>defaultTarget</name></member>
+      <member refid="classCamera3_1a089366725666df811a969aca24168cb6" prot="public" virt="non-virtual"><scope>Camera3</scope><name>defaultUp</name></member>
+      <member refid="classCamera3_1a1480a84f3c197eec69d73776da76bcc4" prot="public" virt="non-virtual"><scope>Camera3</scope><name>displacement</name></member>
+      <member refid="classCamera3_1aa26b8e1365282ec44384cdadeb489ba1" prot="public" virt="non-virtual"><scope>Camera3</scope><name>Force</name></member>
+      <member refid="classCamera3_1a1d5082c7e3c5607815bd3141e1fa854a" prot="public" virt="non-virtual"><scope>Camera3</scope><name>gravity</name></member>
+      <member refid="classCamera3_1a19ed99e698e764c1da3a985cf75eb93f" prot="public" virt="virtual"><scope>Camera3</scope><name>Init</name></member>
+      <member refid="classCamera3_1ac62c7576203d53ba1b82faf3657d7191" prot="public" virt="non-virtual"><scope>Camera3</scope><name>jump</name></member>
+      <member refid="classCamera3_1a778b7c91debb163912510217d6075c47" prot="public" virt="non-virtual"><scope>Camera3</scope><name>mass</name></member>
+      <member refid="classCamera3_1a1d71de0c35d1f368c6ab9c388aeab63c" prot="public" virt="non-virtual"><scope>Camera3</scope><name>minimapcoords</name></member>
+      <member refid="classCamera3_1a7429427bccf6c3ad2fd867167aa89a7a" prot="public" virt="non-virtual"><scope>Camera3</scope><name>minimapsoracoords</name></member>
+      <member refid="classCamera3_1aaa26b06935fed4c855d2dd456121a702" prot="public" virt="non-virtual"><scope>Camera3</scope><name>OBJboundaryX</name></member>
+      <member refid="classCamera3_1ac2263d661658db8abcb97df54cb09c16" prot="public" virt="non-virtual"><scope>Camera3</scope><name>OBJboundaryY</name></member>
+      <member refid="classCamera3_1aa26ef7e7f4b7f981404cb3e8ba6d29cc" prot="public" virt="non-virtual"><scope>Camera3</scope><name>OBJboundaryZ</name></member>
+      <member refid="classCamera3_1a18c6741c2dc48ba6d12debe48d76923c" prot="public" virt="non-virtual"><scope>Camera3</scope><name>OnGround</name></member>
+      <member refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" prot="public" virt="non-virtual"><scope>Camera3</scope><name>position</name></member>
+      <member refid="classCamera3_1a4b10106bcd89f21e3cf3e39f04d8c1cb" prot="public" virt="virtual"><scope>Camera3</scope><name>Reset</name></member>
+      <member refid="classCamera3_1a0a45a993a2bae51ac66cb82d0a5f17ee" prot="public" virt="non-virtual"><scope>Camera3</scope><name>rotateChar</name></member>
+      <member refid="classCamera3_1a2340eefc0792f4b0485ecc3af7eb2992" prot="public" virt="non-virtual"><scope>Camera3</scope><name>SceneGalaxy</name></member>
+      <member refid="classCamera3_1a484b1bd523d92cf0bb4b1b42acc68631" prot="public" virt="non-virtual"><scope>Camera3</scope><name>SceneMun</name></member>
+      <member refid="classCamera3_1a1abb21f4c4959cc0b72b8a58ea5ac634" prot="public" virt="non-virtual"><scope>Camera3</scope><name>SceneSoraJewel</name></member>
+      <member refid="classCamera3_1a9b14833d93a40442a53edf635837045c" prot="public" virt="virtual"><scope>Camera3</scope><name>SJUpdate</name></member>
+      <member refid="classCamera3_1afe01f7fed4b7c79b2e802311d8938733" prot="public" virt="non-virtual"><scope>Camera3</scope><name>speed</name></member>
+      <member refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" prot="public" virt="non-virtual"><scope>Camera3</scope><name>target</name></member>
+      <member refid="classCamera3_1a032426ae014d19b59f5a880455138563" prot="public" virt="non-virtual"><scope>Camera3</scope><name>translateChar</name></member>
+      <member refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" prot="public" virt="non-virtual"><scope>Camera3</scope><name>up</name></member>
+      <member refid="classCamera3_1a1325eb6c97194791fb8da473e2560add" prot="public" virt="virtual"><scope>Camera3</scope><name>Update</name></member>
+      <member refid="classCamera_1acc1741feb6d9da849ea4b6c12e0711e6" prot="public" virt="virtual" ambiguityscope="Camera::"><scope>Camera3</scope><name>Update</name></member>
+      <member refid="classCamera3_1a9cae806b6aeb0cef0650ddbcc73b465c" prot="public" virt="non-virtual"><scope>Camera3</scope><name>UpdateCollision</name></member>
+      <member refid="classCamera_1a6af395199ecb1db9e1083d542b4fb013" prot="public" virt="non-virtual"><scope>Camera3</scope><name>view</name></member>
+      <member refid="classCamera3_1aacefea14ced6999d753e79bee81e0956" prot="public" virt="non-virtual"><scope>Camera3</scope><name>wherecube</name></member>
+      <member refid="classCamera3_1a94a1b58131f6af3e0f46152c6928921a" prot="public" virt="non-virtual"><scope>Camera3</scope><name>XWingCamera</name></member>
+      <member refid="classCamera_1ad1897942d0ccf91052386388a497349f" prot="public" virt="non-virtual"><scope>Camera3</scope><name>~Camera</name></member>
+      <member refid="classCamera3_1a386fa089e2507622ef79675cd95efd69" prot="public" virt="non-virtual"><scope>Camera3</scope><name>~Camera3</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

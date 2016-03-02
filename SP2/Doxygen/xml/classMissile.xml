@@ -1,0 +1,478 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classMissile" kind="class" language="C++" prot="public">
+    <compoundname>Missile</compoundname>
+    <includes refid="Missile_8h" local="no">Missile.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classMissile_1a526031c614c9e9b7b468c03e723050a4" prot="public" static="no" mutable="no">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Missile::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Missile.h" line="33" column="1" bodyfile="LiZhaoyuan1/Source/Missile.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="classMissile_1a4792ac160be43b65cc4f598c35431815" compoundref="Missile_8cpp" startline="88" endline="96">Animation</referencedby>
+        <referencedby refid="classMissile_1a0c22c399884f55d2110c2c65c96f9963" compoundref="Missile_8cpp" startline="64" endline="67">getPositionOfMissile</referencedby>
+        <referencedby refid="classMissile_1a1027d18cbf316fc3af3b0c5cc4bcea91" compoundref="Missile_8cpp" startline="50" endline="55">updatePosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classMissile_1a3675a09a5ba0bc748140fd64c1e9e4f1" prot="public" static="no" mutable="no">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Missile::missilePosition</definition>
+        <argsstring></argsstring>
+        <name>missilePosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Missile.h" line="34" column="1" bodyfile="LiZhaoyuan1/Source/Missile.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMissile_1a895f62306ed21f8f5659b1430dcfdb14" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Missile::Missiles</definition>
+        <argsstring></argsstring>
+        <name>Missiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Missile.h" line="41" column="1" bodyfile="LiZhaoyuan1/Source/Missile.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classMissile_1a552d9709b8149b33be43dbebbf754674" compoundref="Missile_8cpp" startline="115" endline="128">Firing</referencedby>
+        <referencedby refid="classMissile_1ad64e8bc002a8833518dda0969a1d1dfe" compoundref="Missile_8cpp" startline="28" endline="32">Missile</referencedby>
+        <referencedby refid="classSceneGalaxy_1ab4e4c417fbebf427e3e781b0192d4b28" compoundref="SceneGalaxy_8cpp" startline="975" endline="991">SceneGalaxy::RenderMissile</referencedby>
+        <referencedby refid="classMissile_1a81e0e5ddb4f60ee988c97ec5518b9bfa" compoundref="Missile_8cpp" startline="137" endline="146">update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classMissile_1a1d6ace8655c8366c10c82355fc80adc3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Missile::MissileUsed</definition>
+        <argsstring></argsstring>
+        <name>MissileUsed</name>
+        <initializer>= 100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Missile.h" line="42" column="1" bodyfile="LiZhaoyuan1/Source/Missile.h" bodystart="42" bodyend="-1"/>
+        <referencedby refid="classMissile_1a552d9709b8149b33be43dbebbf754674" compoundref="Missile_8cpp" startline="115" endline="128">Firing</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classMissile_1ae216d96286954831ac23b4827b950280" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Missile::delay</definition>
+        <argsstring></argsstring>
+        <name>delay</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Missile.h" line="43" column="1" bodyfile="LiZhaoyuan1/Source/Missile.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMissile_1a96e9652c6a71e8f419cd927447d071dc" prot="public" static="no" mutable="no">
+        <type><ref refid="classMissile" kindref="compound">Missile</ref> *</type>
+        <definition>Missile* Missile::Capacity</definition>
+        <argsstring></argsstring>
+        <name>Capacity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Missile.h" line="44" column="1" bodyfile="LiZhaoyuan1/Source/Missile.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="classMissile_1a552d9709b8149b33be43dbebbf754674" compoundref="Missile_8cpp" startline="115" endline="128">Firing</referencedby>
+        <referencedby refid="classMissile_1ad64e8bc002a8833518dda0969a1d1dfe" compoundref="Missile_8cpp" startline="28" endline="32">Missile</referencedby>
+        <referencedby refid="classSceneGalaxy_1ab4e4c417fbebf427e3e781b0192d4b28" compoundref="SceneGalaxy_8cpp" startline="975" endline="991">SceneGalaxy::RenderMissile</referencedby>
+        <referencedby refid="classMissile_1a81e0e5ddb4f60ee988c97ec5518b9bfa" compoundref="Missile_8cpp" startline="137" endline="146">update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classMissile_1a31fbd0cf1ff22f920619f17a49be8abf" prot="private" static="no" mutable="no">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Missile::view</definition>
+        <argsstring></argsstring>
+        <name>view</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Missile.h" line="48" column="1" bodyfile="LiZhaoyuan1/Source/Missile.h" bodystart="48" bodyend="-1"/>
+        <referencedby refid="classMissile_1a4792ac160be43b65cc4f598c35431815" compoundref="Missile_8cpp" startline="88" endline="96">Animation</referencedby>
+        <referencedby refid="classMissile_1aa206c3f11f2baf8c60df1d34125165cb" compoundref="Missile_8cpp" startline="76" endline="79">setView</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classMissile_1a870f6b4cb1a68e92b058ce0f2a3d9f2e" prot="private" static="no" mutable="no">
+        <type><ref refid="classCamera3" kindref="compound">Camera3</ref> *</type>
+        <definition>Camera3* Missile::camera</definition>
+        <argsstring></argsstring>
+        <name>camera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Missile.h" line="49" column="1" bodyfile="LiZhaoyuan1/Source/Missile.h" bodystart="49" bodyend="-1"/>
+        <referencedby refid="classMissile_1a552d9709b8149b33be43dbebbf754674" compoundref="Missile_8cpp" startline="115" endline="128">Firing</referencedby>
+        <referencedby refid="classMissile_1ab8b981d855db52a5b5195387e1aab159" compoundref="Missile_8cpp" startline="105" endline="108">init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMissile_1aa5ce8791a8e7ebd4ea0afab390b73a1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Missile::Missile</definition>
+        <argsstring>()</argsstring>
+        <name>Missile</name>
+        <briefdescription>
+<para><ref refid="classMissile" kindref="compound">Missile</ref> Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Missile.h" line="26" column="1" bodyfile="LiZhaoyuan1/Source/Missile.cpp" bodystart="17" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classMissile_1ad64e8bc002a8833518dda0969a1d1dfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Missile::Missile</definition>
+        <argsstring>(const int &amp;AmmoInMag)</argsstring>
+        <name>Missile</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>AmmoInMag</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classMissile" kindref="compound">Missile</ref> Copy Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>int reference AmmoInMag </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Missile.h" line="27" column="1" bodyfile="LiZhaoyuan1/Source/Missile.cpp" bodystart="28" bodyend="32"/>
+        <references refid="classMissile_1a96e9652c6a71e8f419cd927447d071dc" compoundref="Missile_8h" startline="44">Capacity</references>
+        <references refid="classMissile_1a895f62306ed21f8f5659b1430dcfdb14" compoundref="Missile_8h" startline="41">Missiles</references>
+      </memberdef>
+      <memberdef kind="function" id="classMissile_1ad42379e48a46ec3556056f98ce8bd912" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Missile::~Missile</definition>
+        <argsstring>()</argsstring>
+        <name>~Missile</name>
+        <briefdescription>
+<para><ref refid="classMissile" kindref="compound">Missile</ref> destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Missile.h" line="28" column="1" bodyfile="LiZhaoyuan1/Source/Missile.cpp" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classMissile_1a0c22c399884f55d2110c2c65c96f9963" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Missile::getPositionOfMissile</definition>
+        <argsstring>()</argsstring>
+        <name>getPositionOfMissile</name>
+        <briefdescription>
+<para><ref refid="classMissile" kindref="compound">Missile</ref> getPositionOfMissile function. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>return position from update </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Missile.h" line="29" column="1" bodyfile="LiZhaoyuan1/Source/Missile.cpp" bodystart="64" bodyend="67"/>
+        <references refid="classMissile_1a526031c614c9e9b7b468c03e723050a4" compoundref="Missile_8h" startline="33">position</references>
+        <referencedby refid="classSceneGalaxy_1ab4e4c417fbebf427e3e781b0192d4b28" compoundref="SceneGalaxy_8cpp" startline="975" endline="991">SceneGalaxy::RenderMissile</referencedby>
+        <referencedby refid="classMissile_1a81e0e5ddb4f60ee988c97ec5518b9bfa" compoundref="Missile_8cpp" startline="137" endline="146">update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMissile_1a1027d18cbf316fc3af3b0c5cc4bcea91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Missile::updatePosition</definition>
+        <argsstring>(const Vector3 &amp;pos)</argsstring>
+        <name>updatePosition</name>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classMissile" kindref="compound">Missile</ref> updatePosition function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structVector3" kindref="compound">Vector3</ref> reference position </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Missile.h" line="30" column="1" bodyfile="LiZhaoyuan1/Source/Missile.cpp" bodystart="50" bodyend="55"/>
+        <references refid="classMissile_1a526031c614c9e9b7b468c03e723050a4" compoundref="Missile_8h" startline="33">position</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
+        <referencedby refid="classMissile_1a552d9709b8149b33be43dbebbf754674" compoundref="Missile_8cpp" startline="115" endline="128">Firing</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMissile_1aa206c3f11f2baf8c60df1d34125165cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Missile::setView</definition>
+        <argsstring>(const Vector3 &amp;view)</argsstring>
+        <name>setView</name>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>view</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classMissile" kindref="compound">Missile</ref> setView function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>const</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structVector3" kindref="compound">Vector3</ref> reference view </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Missile.h" line="31" column="1" bodyfile="LiZhaoyuan1/Source/Missile.cpp" bodystart="76" bodyend="79"/>
+        <references refid="classMissile_1a31fbd0cf1ff22f920619f17a49be8abf" compoundref="Missile_8h" startline="48">view</references>
+        <referencedby refid="classMissile_1a552d9709b8149b33be43dbebbf754674" compoundref="Missile_8cpp" startline="115" endline="128">Firing</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMissile_1a4792ac160be43b65cc4f598c35431815" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Missile::Animation</definition>
+        <argsstring>(double dt)</argsstring>
+        <name>Animation</name>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classMissile" kindref="compound">Missile</ref> Animation function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>double</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>dt </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Missile.h" line="36" column="1" bodyfile="LiZhaoyuan1/Source/Missile.cpp" bodystart="88" bodyend="96"/>
+        <references refid="classMissile_1a526031c614c9e9b7b468c03e723050a4" compoundref="Missile_8h" startline="33">position</references>
+        <references refid="classMissile_1a31fbd0cf1ff22f920619f17a49be8abf" compoundref="Missile_8h" startline="48">view</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
+        <referencedby refid="classMissile_1a81e0e5ddb4f60ee988c97ec5518b9bfa" compoundref="Missile_8cpp" startline="137" endline="146">update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMissile_1ab8b981d855db52a5b5195387e1aab159" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Missile::init</definition>
+        <argsstring>(Camera3 *target)</argsstring>
+        <name>init</name>
+        <param>
+          <type><ref refid="classCamera3" kindref="compound">Camera3</ref> *</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classCamera3" kindref="compound">Camera3</ref> initializer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classCamera3" kindref="compound">Camera3</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Missile.h" line="37" column="1" bodyfile="LiZhaoyuan1/Source/Missile.cpp" bodystart="105" bodyend="108"/>
+        <references refid="classMissile_1a870f6b4cb1a68e92b058ce0f2a3d9f2e" compoundref="Missile_8h" startline="49">camera</references>
+        <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMissile_1a552d9709b8149b33be43dbebbf754674" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Missile::Firing</definition>
+        <argsstring>()</argsstring>
+        <name>Firing</name>
+        <briefdescription>
+<para><ref refid="classMissile" kindref="compound">Missile</ref> Firing function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Missile.h" line="38" column="1" bodyfile="LiZhaoyuan1/Source/Missile.cpp" bodystart="115" bodyend="128"/>
+        <references refid="classMissile_1a870f6b4cb1a68e92b058ce0f2a3d9f2e" compoundref="Missile_8h" startline="49">camera</references>
+        <references refid="classMissile_1a96e9652c6a71e8f419cd927447d071dc" compoundref="Missile_8h" startline="44">Capacity</references>
+        <references refid="classMissile_1a895f62306ed21f8f5659b1430dcfdb14" compoundref="Missile_8h" startline="41">Missiles</references>
+        <references refid="classMissile_1a1d6ace8655c8366c10c82355fc80adc3" compoundref="Missile_8h" startline="42">MissileUsed</references>
+        <references refid="classMissile_1aa206c3f11f2baf8c60df1d34125165cb" compoundref="Missile_8cpp" startline="76" endline="79">setView</references>
+        <references refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" compoundref="Camera_8h" startline="10">Camera::target</references>
+        <references refid="classMissile_1a1027d18cbf316fc3af3b0c5cc4bcea91" compoundref="Missile_8cpp" startline="50" endline="55">updatePosition</references>
+        <references refid="classCamera_1a6af395199ecb1db9e1083d542b4fb013" compoundref="Camera_8h" startline="12">Camera::view</references>
+        <referencedby refid="classSceneGalaxy_1a20f9275f7788921a7cd843219b9bdeff" compoundref="SceneGalaxy_8cpp" startline="542" endline="623">SceneGalaxy::Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMissile_1a81e0e5ddb4f60ee988c97ec5518b9bfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Missile::update</definition>
+        <argsstring>(double dt)</argsstring>
+        <name>update</name>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classMissile" kindref="compound">Missile</ref> update function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>double</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>dt </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Missile.h" line="39" column="1" bodyfile="LiZhaoyuan1/Source/Missile.cpp" bodystart="137" bodyend="146"/>
+        <references refid="classMissile_1a4792ac160be43b65cc4f598c35431815" compoundref="Missile_8cpp" startline="88" endline="96">Animation</references>
+        <references refid="classMissile_1a96e9652c6a71e8f419cd927447d071dc" compoundref="Missile_8h" startline="44">Capacity</references>
+        <references refid="classMissile_1a0c22c399884f55d2110c2c65c96f9963" compoundref="Missile_8cpp" startline="64" endline="67">getPositionOfMissile</references>
+        <references refid="classMissile_1a895f62306ed21f8f5659b1430dcfdb14" compoundref="Missile_8h" startline="41">Missiles</references>
+        <referencedby refid="classSceneGalaxy_1a20f9275f7788921a7cd843219b9bdeff" compoundref="SceneGalaxy_8cpp" startline="542" endline="623">SceneGalaxy::Update</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines <ref refid="classMissile" kindref="compound">Missile</ref> and its methods. </para>    </briefdescription>
+    <detaileddescription>
+<para>Class <ref refid="classMissile" kindref="compound">Missile</ref>: </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="460">
+        <label>Camera</label>
+        <link refid="classCamera"/>
+        <childnode refid="461" relation="usage">
+          <edgelabel>target</edgelabel>
+          <edgelabel>view</edgelabel>
+          <edgelabel>position</edgelabel>
+          <edgelabel>up</edgelabel>
+        </childnode>
+      </node>
+      <node id="462">
+        <label>float</label>
+      </node>
+      <node id="459">
+        <label>Camera3</label>
+        <link refid="classCamera3"/>
+        <childnode refid="460" relation="public-inheritance">
+        </childnode>
+        <childnode refid="462" relation="usage">
+          <edgelabel>translateChar</edgelabel>
+          <edgelabel>speed</edgelabel>
+          <edgelabel>rotateChar</edgelabel>
+          <edgelabel>acceleration</edgelabel>
+          <edgelabel>mass</edgelabel>
+          <edgelabel>Force</edgelabel>
+          <edgelabel>gravity</edgelabel>
+        </childnode>
+        <childnode refid="461" relation="usage">
+          <edgelabel>defaultTarget</edgelabel>
+          <edgelabel>minimapsoracoords</edgelabel>
+          <edgelabel>defaultPosition</edgelabel>
+          <edgelabel>currentV</edgelabel>
+          <edgelabel>defaultUp</edgelabel>
+          <edgelabel>displacement</edgelabel>
+          <edgelabel>minimapcoords</edgelabel>
+        </childnode>
+        <childnode refid="463" relation="usage">
+          <edgelabel>SceneMun</edgelabel>
+          <edgelabel>wherecube</edgelabel>
+          <edgelabel>SceneGalaxy</edgelabel>
+          <edgelabel>jump</edgelabel>
+          <edgelabel>SceneSoraJewel</edgelabel>
+        </childnode>
+      </node>
+      <node id="458">
+        <label>Missile</label>
+        <link refid="classMissile"/>
+        <childnode refid="458" relation="usage">
+          <edgelabel>Capacity</edgelabel>
+        </childnode>
+        <childnode refid="459" relation="usage">
+          <edgelabel>camera</edgelabel>
+        </childnode>
+        <childnode refid="464" relation="usage">
+          <edgelabel>MissileUsed</edgelabel>
+          <edgelabel>Missiles</edgelabel>
+          <edgelabel>delay</edgelabel>
+        </childnode>
+        <childnode refid="461" relation="usage">
+          <edgelabel>view</edgelabel>
+          <edgelabel>missilePosition</edgelabel>
+          <edgelabel>position</edgelabel>
+        </childnode>
+      </node>
+      <node id="464">
+        <label>int</label>
+      </node>
+      <node id="463">
+        <label>bool</label>
+      </node>
+      <node id="461">
+        <label>Vector3</label>
+        <link refid="structVector3"/>
+        <childnode refid="462" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="LiZhaoyuan1/Source/Missile.h" line="24" column="1" bodyfile="LiZhaoyuan1/Source/Missile.h" bodystart="23" bodyend="51"/>
+    <listofallmembers>
+      <member refid="classMissile_1a4792ac160be43b65cc4f598c35431815" prot="public" virt="non-virtual"><scope>Missile</scope><name>Animation</name></member>
+      <member refid="classMissile_1a870f6b4cb1a68e92b058ce0f2a3d9f2e" prot="private" virt="non-virtual"><scope>Missile</scope><name>camera</name></member>
+      <member refid="classMissile_1a96e9652c6a71e8f419cd927447d071dc" prot="public" virt="non-virtual"><scope>Missile</scope><name>Capacity</name></member>
+      <member refid="classMissile_1ae216d96286954831ac23b4827b950280" prot="public" virt="non-virtual"><scope>Missile</scope><name>delay</name></member>
+      <member refid="classMissile_1a552d9709b8149b33be43dbebbf754674" prot="public" virt="non-virtual"><scope>Missile</scope><name>Firing</name></member>
+      <member refid="classMissile_1a0c22c399884f55d2110c2c65c96f9963" prot="public" virt="non-virtual"><scope>Missile</scope><name>getPositionOfMissile</name></member>
+      <member refid="classMissile_1ab8b981d855db52a5b5195387e1aab159" prot="public" virt="non-virtual"><scope>Missile</scope><name>init</name></member>
+      <member refid="classMissile_1aa5ce8791a8e7ebd4ea0afab390b73a1a" prot="public" virt="non-virtual"><scope>Missile</scope><name>Missile</name></member>
+      <member refid="classMissile_1ad64e8bc002a8833518dda0969a1d1dfe" prot="public" virt="non-virtual"><scope>Missile</scope><name>Missile</name></member>
+      <member refid="classMissile_1a3675a09a5ba0bc748140fd64c1e9e4f1" prot="public" virt="non-virtual"><scope>Missile</scope><name>missilePosition</name></member>
+      <member refid="classMissile_1a895f62306ed21f8f5659b1430dcfdb14" prot="public" virt="non-virtual"><scope>Missile</scope><name>Missiles</name></member>
+      <member refid="classMissile_1a1d6ace8655c8366c10c82355fc80adc3" prot="public" virt="non-virtual"><scope>Missile</scope><name>MissileUsed</name></member>
+      <member refid="classMissile_1a526031c614c9e9b7b468c03e723050a4" prot="public" virt="non-virtual"><scope>Missile</scope><name>position</name></member>
+      <member refid="classMissile_1aa206c3f11f2baf8c60df1d34125165cb" prot="public" virt="non-virtual"><scope>Missile</scope><name>setView</name></member>
+      <member refid="classMissile_1a81e0e5ddb4f60ee988c97ec5518b9bfa" prot="public" virt="non-virtual"><scope>Missile</scope><name>update</name></member>
+      <member refid="classMissile_1a1027d18cbf316fc3af3b0c5cc4bcea91" prot="public" virt="non-virtual"><scope>Missile</scope><name>updatePosition</name></member>
+      <member refid="classMissile_1a31fbd0cf1ff22f920619f17a49be8abf" prot="private" virt="non-virtual"><scope>Missile</scope><name>view</name></member>
+      <member refid="classMissile_1ad42379e48a46ec3556056f98ce8bd912" prot="public" virt="non-virtual"><scope>Missile</scope><name>~Missile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

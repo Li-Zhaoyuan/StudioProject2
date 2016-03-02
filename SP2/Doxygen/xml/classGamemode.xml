@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classGamemode" kind="class" language="C++" prot="public">
+    <compoundname>Gamemode</compoundname>
+    <includes refid="CurrentGameState_8h" local="no">CurrentGameState.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classGamemode_1ab70449e9046886b958f6493c5f04fe77" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Gamemode::currentgamestate</definition>
+        <argsstring></argsstring>
+        <name>currentgamestate</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/CurrentGameState.h" line="27" column="1" bodyfile="LiZhaoyuan1/Source/CurrentGameState.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classSceneGalaxy_1a6423b415bf29060d3be4598d74f7335f" compoundref="SceneGalaxy_8cpp" startline="1062" endline="1074">SceneGalaxy::CutScene</referencedby>
+        <referencedby refid="classSP2_1a075edf39d3102610bf7f404ae3b8d38c" compoundref="SP2_8cpp" startline="127" endline="172">SP2::Update</referencedby>
+        <referencedby refid="classLoadingScreen_1aadba6b28a70c39e25c9892f93dbff465" compoundref="LoadingScreen_8cpp" startline="135" endline="170">LoadingScreen::Update</referencedby>
+        <referencedby refid="classSceneMun_1ac31a057e66f46bb4d9a7b3fb1c2cfbb9" compoundref="SceneMun_8cpp" startline="418" endline="783">SceneMun::Update</referencedby>
+        <referencedby refid="classSceneSoraJewel_1a581a47998e6133291289306656463cb6" compoundref="SceneSoraJewel_8cpp" startline="454" endline="698">SceneSoraJewel::Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classGamemode_1af47c19fec76ecf68cf2b13933572ec19" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classGamemode" kindref="compound">Gamemode</ref> *</type>
+        <definition>static Gamemode* Gamemode::getinstance</definition>
+        <argsstring>()</argsstring>
+        <name>getinstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/CurrentGameState.h" line="22" column="1" bodyfile="LiZhaoyuan1/Source/CurrentGameState.h" bodystart="22" bodyend="26"/>
+        <referencedby refid="classSceneGalaxy_1a6423b415bf29060d3be4598d74f7335f" compoundref="SceneGalaxy_8cpp" startline="1062" endline="1074">SceneGalaxy::CutScene</referencedby>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="112" endline="237">Application::Run</referencedby>
+        <referencedby refid="classSP2_1a075edf39d3102610bf7f404ae3b8d38c" compoundref="SP2_8cpp" startline="127" endline="172">SP2::Update</referencedby>
+        <referencedby refid="classLoadingScreen_1aadba6b28a70c39e25c9892f93dbff465" compoundref="LoadingScreen_8cpp" startline="135" endline="170">LoadingScreen::Update</referencedby>
+        <referencedby refid="classSceneMun_1ac31a057e66f46bb4d9a7b3fb1c2cfbb9" compoundref="SceneMun_8cpp" startline="418" endline="783">SceneMun::Update</referencedby>
+        <referencedby refid="classSceneSoraJewel_1a581a47998e6133291289306656463cb6" compoundref="SceneSoraJewel_8cpp" startline="454" endline="698">SceneSoraJewel::Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classGamemode_1a329507c8ab6adec7a4aceb210f9683f9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Gamemode::Gamemode</definition>
+        <argsstring>()</argsstring>
+        <name>Gamemode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/CurrentGameState.h" line="29" column="1" bodyfile="LiZhaoyuan1/Source/CurrentGameState.h" bodystart="29" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines the <ref refid="classGamemode" kindref="compound">Gamemode</ref> and its methods. </para>    </briefdescription>
+    <detaileddescription>
+<para>Class <ref refid="classGamemode" kindref="compound">Gamemode</ref>: </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="347">
+        <label>Gamemode</label>
+        <link refid="classGamemode"/>
+        <childnode refid="348" relation="usage">
+          <edgelabel>currentgamestate</edgelabel>
+        </childnode>
+      </node>
+      <node id="348">
+        <label>int</label>
+      </node>
+    </collaborationgraph>
+    <location file="LiZhaoyuan1/Source/CurrentGameState.h" line="20" column="1" bodyfile="LiZhaoyuan1/Source/CurrentGameState.h" bodystart="19" bodyend="30"/>
+    <listofallmembers>
+      <member refid="classGamemode_1ab70449e9046886b958f6493c5f04fe77" prot="public" virt="non-virtual"><scope>Gamemode</scope><name>currentgamestate</name></member>
+      <member refid="classGamemode_1a329507c8ab6adec7a4aceb210f9683f9" prot="private" virt="non-virtual"><scope>Gamemode</scope><name>Gamemode</name></member>
+      <member refid="classGamemode_1af47c19fec76ecf68cf2b13933572ec19" prot="public" virt="non-virtual"><scope>Gamemode</scope><name>getinstance</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

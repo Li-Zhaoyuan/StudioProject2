@@ -1,0 +1,25 @@
+digraph "SceneSoraJewel::renderMesh"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="SceneSoraJewel::renderMesh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="SceneSoraJewel::Render",height=0.2,width=0.4,color="black",URL="$classSceneSoraJewel.html#a5609b1a03e5d60a01ac655e2f10bcfc9",tooltip="This function is the main and is responsible for getting the OBJ and or mesh to the sccene..."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="SceneSoraJewel::Renderengineers",height=0.2,width=0.4,color="black",URL="$classSceneSoraJewel.html#a6ad88963e5a112a0b76a8fef584498fa",tooltip="Renders engineer, this function is placed in the Render() "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="SceneSoraJewel::renderLast",height=0.2,width=0.4,color="black",URL="$classSceneSoraJewel.html#af5fa247ec16f76ecd7b0ced03709a8e5",tooltip="This function is placed in the Render() near the end so that we can avoid depth problems. "];
+  Node4 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="SceneSoraJewel::renderminimaptoscreen",height=0.2,width=0.4,color="black",URL="$classSceneSoraJewel.html#a09e3c2a9ccddfd4990ec6f4756165835",tooltip="Renders minimap to the top right of screen. "];
+  Node5 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="SceneSoraJewel::RenderSkybox",height=0.2,width=0.4,color="black",URL="$classSceneSoraJewel.html#ae79e80f601a34fb22b0fc26eef81a832",tooltip="Renders skybox and is placed separately to prevent confusion. "];
+  Node6 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="SceneSoraJewel::renderText",height=0.2,width=0.4,color="black",URL="$classSceneSoraJewel.html#ac312f866a381cefeb0459b514a09af31",tooltip="This function renders the textbox and the chat. "];
+  Node7 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

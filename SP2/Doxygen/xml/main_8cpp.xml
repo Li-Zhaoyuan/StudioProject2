@@ -1,0 +1,298 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="main_8cpp" kind="file" language="C++">
+    <compoundname>main.cpp</compoundname>
+    <includes refid="Application_8h" local="yes">Application.h</includes>
+    <incdepgraph>
+      <node id="3425">
+        <label>Currentgamestate.h</label>
+        <link refid="CurrentGameState_8h"/>
+      </node>
+      <node id="3447">
+        <label>ik_IAudioStream.h</label>
+        <link refid="ik__IAudioStream_8h"/>
+        <childnode refid="3435" relation="include">
+        </childnode>
+        <childnode refid="3440" relation="include">
+        </childnode>
+      </node>
+      <node id="3424">
+        <label>windows.h</label>
+      </node>
+      <node id="3429">
+        <label>Windows.h</label>
+      </node>
+      <node id="3428">
+        <label>string</label>
+      </node>
+      <node id="3439">
+        <label>ik_EStreamModes.h</label>
+        <link refid="ik__EStreamModes_8h"/>
+      </node>
+      <node id="3421">
+        <label>LiZhaoyuan1/Source/main.cpp</label>
+        <link refid="main.cpp"/>
+        <childnode refid="3422" relation="include">
+        </childnode>
+      </node>
+      <node id="3442">
+        <label>ik_ISoundSource.h</label>
+        <link refid="ik__ISoundSource_8h"/>
+        <childnode refid="3436" relation="include">
+        </childnode>
+        <childnode refid="3433" relation="include">
+        </childnode>
+        <childnode refid="3439" relation="include">
+        </childnode>
+        <childnode refid="3440" relation="include">
+        </childnode>
+      </node>
+      <node id="3431">
+        <label>ik_irrKlangTypes.h</label>
+        <link refid="ik__irrKlangTypes_8h"/>
+        <childnode refid="3432" relation="include">
+        </childnode>
+      </node>
+      <node id="3441">
+        <label>ik_ISoundEngine.h</label>
+        <link refid="ik__ISoundEngine_8h"/>
+        <childnode refid="3435" relation="include">
+        </childnode>
+        <childnode refid="3433" relation="include">
+        </childnode>
+        <childnode refid="3442" relation="include">
+        </childnode>
+        <childnode refid="3443" relation="include">
+        </childnode>
+        <childnode refid="3439" relation="include">
+        </childnode>
+        <childnode refid="3445" relation="include">
+        </childnode>
+        <childnode refid="3446" relation="include">
+        </childnode>
+      </node>
+      <node id="3440">
+        <label>ik_SAudioStreamFormat.h</label>
+        <link refid="ik__SAudioStreamFormat_8h"/>
+        <childnode refid="3435" relation="include">
+        </childnode>
+      </node>
+      <node id="3432">
+        <label>wchar.h</label>
+      </node>
+      <node id="3430">
+        <label>include/irrKlang.h</label>
+        <link refid="irrKlang_8h"/>
+        <childnode refid="3431" relation="include">
+        </childnode>
+        <childnode refid="3433" relation="include">
+        </childnode>
+        <childnode refid="3435" relation="include">
+        </childnode>
+        <childnode refid="3436" relation="include">
+        </childnode>
+        <childnode refid="3437" relation="include">
+        </childnode>
+        <childnode refid="3438" relation="include">
+        </childnode>
+        <childnode refid="3439" relation="include">
+        </childnode>
+        <childnode refid="3440" relation="include">
+        </childnode>
+        <childnode refid="3441" relation="include">
+        </childnode>
+        <childnode refid="3442" relation="include">
+        </childnode>
+        <childnode refid="3443" relation="include">
+        </childnode>
+        <childnode refid="3447" relation="include">
+        </childnode>
+        <childnode refid="3448" relation="include">
+        </childnode>
+        <childnode refid="3444" relation="include">
+        </childnode>
+        <childnode refid="3450" relation="include">
+        </childnode>
+        <childnode refid="3445" relation="include">
+        </childnode>
+        <childnode refid="3449" relation="include">
+        </childnode>
+        <childnode refid="3451" relation="include">
+        </childnode>
+        <childnode refid="3452" relation="include">
+        </childnode>
+        <childnode refid="3446" relation="include">
+        </childnode>
+      </node>
+      <node id="3438">
+        <label>ik_ESoundEngineOptions.h</label>
+        <link refid="ik__ESoundEngineOptions_8h"/>
+      </node>
+      <node id="3450">
+        <label>ik_ISoundStopEventReceiver.h</label>
+        <link refid="ik__ISoundStopEventReceiver_8h"/>
+        <childnode refid="3435" relation="include">
+        </childnode>
+        <childnode refid="3440" relation="include">
+        </childnode>
+      </node>
+      <node id="3426">
+        <label>Music.h</label>
+        <link refid="Music_8h"/>
+        <childnode refid="3427" relation="include">
+        </childnode>
+        <childnode refid="3428" relation="include">
+        </childnode>
+        <childnode refid="3429" relation="include">
+        </childnode>
+        <childnode refid="3430" relation="include">
+        </childnode>
+      </node>
+      <node id="3423">
+        <label>timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="3424" relation="include">
+        </childnode>
+      </node>
+      <node id="3446">
+        <label>ik_ISoundMixedOutputReceiver.h</label>
+        <link refid="ik__ISoundMixedOutputReceiver_8h"/>
+        <childnode refid="3435" relation="include">
+        </childnode>
+        <childnode refid="3440" relation="include">
+        </childnode>
+      </node>
+      <node id="3434">
+        <label>math.h</label>
+      </node>
+      <node id="3427">
+        <label>iostream</label>
+      </node>
+      <node id="3452">
+        <label>ik_IAudioRecorder.h</label>
+        <link refid="ik__IAudioRecorder_8h"/>
+        <childnode refid="3435" relation="include">
+        </childnode>
+        <childnode refid="3442" relation="include">
+        </childnode>
+      </node>
+      <node id="3444">
+        <label>ik_ISoundEffectControl.h</label>
+        <link refid="ik__ISoundEffectControl_8h"/>
+        <childnode refid="3436" relation="include">
+        </childnode>
+        <childnode refid="3433" relation="include">
+        </childnode>
+      </node>
+      <node id="3451">
+        <label>ik_ISoundDeviceList.h</label>
+        <link refid="ik__ISoundDeviceList_8h"/>
+        <childnode refid="3435" relation="include">
+        </childnode>
+      </node>
+      <node id="3449">
+        <label>ik_IFileReader.h</label>
+        <link refid="ik__IFileReader_8h"/>
+        <childnode refid="3435" relation="include">
+        </childnode>
+      </node>
+      <node id="3436">
+        <label>ik_IVirtualRefCounted.h</label>
+        <link refid="ik__IVirtualRefCounted_8h"/>
+        <childnode refid="3431" relation="include">
+        </childnode>
+      </node>
+      <node id="3445">
+        <label>ik_IFileFactory.h</label>
+        <link refid="ik__IFileFactory_8h"/>
+        <childnode refid="3435" relation="include">
+        </childnode>
+      </node>
+      <node id="3443">
+        <label>ik_ISound.h</label>
+        <link refid="ik__ISound_8h"/>
+        <childnode refid="3436" relation="include">
+        </childnode>
+        <childnode refid="3444" relation="include">
+        </childnode>
+        <childnode refid="3433" relation="include">
+        </childnode>
+      </node>
+      <node id="3437">
+        <label>ik_ESoundOutputDrivers.h</label>
+        <link refid="ik__ESoundOutputDrivers_8h"/>
+      </node>
+      <node id="3448">
+        <label>ik_IAudioStreamLoader.h</label>
+        <link refid="ik__IAudioStreamLoader_8h"/>
+        <childnode refid="3435" relation="include">
+        </childnode>
+        <childnode refid="3449" relation="include">
+        </childnode>
+      </node>
+      <node id="3435">
+        <label>ik_IRefCounted.h</label>
+        <link refid="ik__IRefCounted_8h"/>
+        <childnode refid="3431" relation="include">
+        </childnode>
+      </node>
+      <node id="3433">
+        <label>ik_vec3d.h</label>
+        <link refid="ik__vec3d_8h"/>
+        <childnode refid="3434" relation="include">
+        </childnode>
+        <childnode refid="3431" relation="include">
+        </childnode>
+      </node>
+      <node id="3422">
+        <label>Application.h</label>
+        <link refid="Application_8h"/>
+        <childnode refid="3423" relation="include">
+        </childnode>
+        <childnode refid="3425" relation="include">
+        </childnode>
+        <childnode refid="3426" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(void)</argsstring>
+        <name>main</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/main.cpp" line="5" column="1" bodyfile="LiZhaoyuan1/Source/main.cpp" bodystart="5" bodyend="11"/>
+        <references refid="classApplication_1a9d410604b39b8374a884b1f2a1f2a5ba" compoundref="Application_8cpp" startline="239" endline="245">Application::Exit</references>
+        <references refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" compoundref="Application_8cpp" startline="58" endline="110">Application::Init</references>
+        <references refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="112" endline="237">Application::Run</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Application_8h" kindref="compound">Application.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" kindref="member">main</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication" kindref="compound">Application</ref><sp/>app;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>app.<ref refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>app.<ref refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" kindref="member">Run</ref>();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>app.<ref refid="classApplication_1a9d410604b39b8374a884b1f2a1f2a5ba" kindref="member">Exit</ref>();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="LiZhaoyuan1/Source/main.cpp"/>
+  </compounddef>
+</doxygen>

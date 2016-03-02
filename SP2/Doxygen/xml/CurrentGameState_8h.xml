@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="CurrentGameState_8h" kind="file" language="C++">
+    <compoundname>CurrentGameState.h</compoundname>
+    <includedby refid="Application_8h" local="yes">LiZhaoyuan1/Source/Application.h</includedby>
+    <includedby refid="SceneMun_8h" local="yes">LiZhaoyuan1/Source/SceneMun.h</includedby>
+    <includedby refid="SceneGalaxy_8h" local="yes">LiZhaoyuan1/Source/SceneGalaxy.h</includedby>
+    <invincdepgraph>
+      <node id="2602">
+        <label>LiZhaoyuan1/Source/LoadingScreen.h</label>
+        <link refid="LoadingScreen_8h"/>
+        <childnode refid="2596" relation="include">
+        </childnode>
+        <childnode refid="2603" relation="include">
+        </childnode>
+      </node>
+      <node id="2594">
+        <label>LiZhaoyuan1/Source/CurrentGameState.h</label>
+        <link refid="CurrentGameState.h"/>
+        <childnode refid="2595" relation="include">
+        </childnode>
+        <childnode refid="2604" relation="include">
+        </childnode>
+        <childnode refid="2599" relation="include">
+        </childnode>
+      </node>
+      <node id="2598">
+        <label>LiZhaoyuan1/Source/SP2.h</label>
+        <link refid="SP2_8h"/>
+        <childnode refid="2596" relation="include">
+        </childnode>
+        <childnode refid="2599" relation="include">
+        </childnode>
+        <childnode refid="2601" relation="include">
+        </childnode>
+      </node>
+      <node id="2606">
+        <label>LiZhaoyuan1/Source/Missile.h</label>
+        <link refid="Missile_8h"/>
+        <childnode refid="2599" relation="include">
+        </childnode>
+        <childnode refid="2607" relation="include">
+        </childnode>
+      </node>
+      <node id="2596">
+        <label>LiZhaoyuan1/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="2597">
+        <label>LiZhaoyuan1/Source/Camera3.h</label>
+        <link refid="Camera3_8h"/>
+        <childnode refid="2598" relation="include">
+        </childnode>
+        <childnode refid="2602" relation="include">
+        </childnode>
+        <childnode refid="2604" relation="include">
+        </childnode>
+        <childnode refid="2599" relation="include">
+        </childnode>
+        <childnode refid="2606" relation="include">
+        </childnode>
+        <childnode refid="2608" relation="include">
+        </childnode>
+        <childnode refid="2610" relation="include">
+        </childnode>
+      </node>
+      <node id="2605">
+        <label>LiZhaoyuan1/Source/SceneMun.cpp</label>
+        <link refid="SceneMun_8cpp"/>
+      </node>
+      <node id="2603">
+        <label>LiZhaoyuan1/Source/LoadingScreen.cpp</label>
+        <link refid="LoadingScreen_8cpp"/>
+      </node>
+      <node id="2612">
+        <label>LiZhaoyuan1/Source/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="2599">
+        <label>LiZhaoyuan1/Source/SceneGalaxy.h</label>
+        <link refid="SceneGalaxy_8h"/>
+        <childnode refid="2596" relation="include">
+        </childnode>
+        <childnode refid="2600" relation="include">
+        </childnode>
+      </node>
+      <node id="2611">
+        <label>LiZhaoyuan1/Source/Camera.cpp</label>
+        <link refid="Camera_8cpp"/>
+      </node>
+      <node id="2607">
+        <label>LiZhaoyuan1/Source/Missile.cpp</label>
+        <link refid="Missile_8cpp"/>
+      </node>
+      <node id="2610">
+        <label>LiZhaoyuan1/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="2604">
+        <label>LiZhaoyuan1/Source/SceneMun.h</label>
+        <link refid="SceneMun_8h"/>
+        <childnode refid="2596" relation="include">
+        </childnode>
+        <childnode refid="2605" relation="include">
+        </childnode>
+      </node>
+      <node id="2600">
+        <label>LiZhaoyuan1/Source/SceneGalaxy.cpp</label>
+        <link refid="SceneGalaxy_8cpp"/>
+      </node>
+      <node id="2601">
+        <label>LiZhaoyuan1/Source/SP2.cpp</label>
+        <link refid="SP2_8cpp"/>
+      </node>
+      <node id="2608">
+        <label>LiZhaoyuan1/Source/SceneSoraJewel.h</label>
+        <link refid="SceneSoraJewel_8h"/>
+        <childnode refid="2596" relation="include">
+        </childnode>
+        <childnode refid="2609" relation="include">
+        </childnode>
+      </node>
+      <node id="2595">
+        <label>LiZhaoyuan1/Source/Application.h</label>
+        <link refid="Application_8h"/>
+        <childnode refid="2596" relation="include">
+        </childnode>
+        <childnode refid="2597" relation="include">
+        </childnode>
+        <childnode refid="2611" relation="include">
+        </childnode>
+        <childnode refid="2610" relation="include">
+        </childnode>
+        <childnode refid="2603" relation="include">
+        </childnode>
+        <childnode refid="2612" relation="include">
+        </childnode>
+        <childnode refid="2600" relation="include">
+        </childnode>
+        <childnode refid="2605" relation="include">
+        </childnode>
+        <childnode refid="2609" relation="include">
+        </childnode>
+        <childnode refid="2601" relation="include">
+        </childnode>
+      </node>
+      <node id="2609">
+        <label>LiZhaoyuan1/Source/SceneSoraJewel.cpp</label>
+        <link refid="SceneSoraJewel_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classGamemode" prot="public">Gamemode</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CURRENTGAMESTATE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CURRENTGAMESTATE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classGamemode" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classGamemode" kindref="compound">Gamemode</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22" refid="classGamemode_1af47c19fec76ecf68cf2b13933572ec19" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classGamemode" kindref="compound">Gamemode</ref><sp/>*<ref refid="classGamemode_1af47c19fec76ecf68cf2b13933572ec19" kindref="member">getinstance</ref>()</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classGamemode" kindref="compound">Gamemode</ref><sp/>data;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;data;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27" refid="classGamemode_1ab70449e9046886b958f6493c5f04fe77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classGamemode_1ab70449e9046886b958f6493c5f04fe77" kindref="member">currentgamestate</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29" refid="classGamemode_1a329507c8ab6adec7a4aceb210f9683f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGamemode_1a329507c8ab6adec7a4aceb210f9683f9" kindref="member">Gamemode</ref>(){}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="LiZhaoyuan1/Source/CurrentGameState.h"/>
+  </compounddef>
+</doxygen>

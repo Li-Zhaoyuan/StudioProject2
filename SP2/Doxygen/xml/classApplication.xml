@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classApplication" kind="class" language="C++" prot="public">
+    <compoundname>Application</compoundname>
+    <includes refid="Application_8h" local="no">Application.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classApplication_1a25861747ff2a86fefec4b4fec74d52a3" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Application::sceneischanged</definition>
+        <argsstring></argsstring>
+        <name>sceneischanged</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Application.h" line="17" column="1" bodyfile="LiZhaoyuan1/Source/Application.h" bodystart="17" bodyend="-1"/>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="112" endline="237">Run</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classApplication_1ac81ea1396dc69c6d48b9a701954f53fe" prot="private" static="no" mutable="no">
+        <type><ref refid="classStopWatch" kindref="compound">StopWatch</ref></type>
+        <definition>StopWatch Application::m_timer</definition>
+        <argsstring></argsstring>
+        <name>m_timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Application.h" line="20" column="1" bodyfile="LiZhaoyuan1/Source/Application.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="112" endline="237">Run</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classApplication_1a8b83d4608b51762d3dc504898147ffab" prot="private" static="no" mutable="no">
+        <type><ref refid="classmusic" kindref="compound">music</ref></type>
+        <definition>music Application::playmusic</definition>
+        <argsstring></argsstring>
+        <name>playmusic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Application.h" line="21" column="1" bodyfile="LiZhaoyuan1/Source/Application.h" bodystart="21" bodyend="-1"/>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="112" endline="237">Run</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classApplication_1afa8cc05ce6b6092be5ecdfdae44e05f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Application::Application</definition>
+        <argsstring>()</argsstring>
+        <name>Application</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Application.h" line="10" column="1" bodyfile="LiZhaoyuan1/Source/Application.cpp" bodystart="45" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classApplication_1a748bca84fefb9c12661cfaa2f623748d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Application::~Application</definition>
+        <argsstring>()</argsstring>
+        <name>~Application</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Application.h" line="11" column="1" bodyfile="LiZhaoyuan1/Source/Application.cpp" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Application.h" line="12" column="1" bodyfile="LiZhaoyuan1/Source/Application.cpp" bodystart="58" bodyend="110"/>
+        <references refid="Application_8cpp_1a6e6d1771a9242858811be0a3569838fa" compoundref="Application_8cpp" startline="27" endline="31">error_callback</references>
+        <references refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" compoundref="Application_8cpp" startline="21">m_window</references>
+        <references refid="Application_8cpp_1a920edc284eb96e60ae1494dfd1d3fea2" compoundref="Application_8cpp" startline="22">primary</references>
+        <references refid="Application_8cpp_1aadcee9765075e232ca0720f80a76ad37" compoundref="Application_8cpp" startline="53" endline="56">resize_callback</references>
+        <referencedby refid="main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8cpp" startline="5" endline="11">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application::Run</definition>
+        <argsstring>()</argsstring>
+        <name>Run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Application.h" line="13" column="1" bodyfile="LiZhaoyuan1/Source/Application.cpp" bodystart="112" bodyend="237"/>
+        <references refid="classScene_1aae8e24654ef98c79961c2b804b12852c">Scene::Exit</references>
+        <references refid="Application_8cpp_1ae228418b33873657fa31313fb4189a8f" compoundref="Application_8cpp" startline="24">frameTime</references>
+        <references refid="classStopWatch_1ac8be1626396d1a5ca414f74349d59eb2" compoundref="timer_8cpp" startline="34" endline="41">StopWatch::getElapsedTime</references>
+        <references refid="classGamemode_1af47c19fec76ecf68cf2b13933572ec19" compoundref="CurrentGameState_8h" startline="22" endline="26">Gamemode::getinstance</references>
+        <references refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478">Scene::Init</references>
+        <references refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" compoundref="Application_8cpp" startline="40" endline="43">IsKeyPressed</references>
+        <references refid="classApplication_1ac81ea1396dc69c6d48b9a701954f53fe" compoundref="Application_8h" startline="20">m_timer</references>
+        <references refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" compoundref="Application_8cpp" startline="21">m_window</references>
+        <references refid="classmusic_1a980e490547c2f6a7a7875e58548fce5b" compoundref="Music_8cpp" startline="45" endline="50">music::musicGalaxy</references>
+        <references refid="classmusic_1a2a0b59c8aef55331ccc449f3eb31f1a9" compoundref="Music_8cpp" startline="67" endline="70">music::musicMainMenu</references>
+        <references refid="classmusic_1a3d999425453d51069667bb0be1471e83" compoundref="Music_8cpp" startline="56" endline="61">music::musicMun</references>
+        <references refid="classmusic_1a42a802fd796b8556d64225aa9abd55d3" compoundref="Music_8cpp" startline="34" endline="39">music::musicSoraJewel</references>
+        <references refid="classApplication_1a8b83d4608b51762d3dc504898147ffab" compoundref="Application_8h" startline="21">playmusic</references>
+        <references refid="classScene_1ae24d21e12b34839994ad265662ea24d7">Scene::Render</references>
+        <references refid="classApplication_1a25861747ff2a86fefec4b4fec74d52a3" compoundref="Application_8h" startline="17">sceneischanged</references>
+        <references refid="classStopWatch_1a23301f735a2e3190435e39c9fd70cdf2" compoundref="timer_8cpp" startline="29" endline="32">StopWatch::startTimer</references>
+        <references refid="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91">Scene::Update</references>
+        <references refid="classStopWatch_1a2cd0856fc87a40038edfd66d784be8b4" compoundref="timer_8cpp" startline="43" endline="56">StopWatch::waitUntil</references>
+        <referencedby refid="main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8cpp" startline="5" endline="11">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classApplication_1a9d410604b39b8374a884b1f2a1f2a5ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application::Exit</definition>
+        <argsstring>()</argsstring>
+        <name>Exit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Application.h" line="14" column="1" bodyfile="LiZhaoyuan1/Source/Application.cpp" bodystart="239" bodyend="245"/>
+        <references refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" compoundref="Application_8cpp" startline="21">m_window</references>
+        <referencedby refid="main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8cpp" startline="5" endline="11">main</referencedby>
+        <referencedby refid="classSP2_1a075edf39d3102610bf7f404ae3b8d38c" compoundref="SP2_8cpp" startline="127" endline="172">SP2::Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classApplication_1a18497f66d98aa2d67807619d2c91a186" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application::changescenes</definition>
+        <argsstring>()</argsstring>
+        <name>changescenes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Application.h" line="16" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Application::IsKeyPressed</definition>
+        <argsstring>(unsigned short key)</argsstring>
+        <name>IsKeyPressed</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Application.h" line="15" column="1" bodyfile="LiZhaoyuan1/Source/Application.cpp" bodystart="40" bodyend="43"/>
+        <referencedby refid="classSceneSoraJewel_1a3764e7474c9f2d36bc654c5942fc3cc3" compoundref="SceneSoraJewel_8cpp" startline="1574" endline="1688">SceneSoraJewel::interactions</referencedby>
+        <referencedby refid="classSceneMun_1a3c8a41e0886af6c7cb88174c4c0b34b0" compoundref="SceneMun_8cpp" startline="1393" endline="1540">SceneMun::interactions</referencedby>
+        <referencedby refid="classSceneGalaxy_1a4202af12b97604987c313367fa793ded" compoundref="SceneGalaxy_8cpp" startline="1081" endline="1108">SceneGalaxy::QuestDetail</referencedby>
+        <referencedby refid="classSceneMun_1a4836086356b9848bd3e9debba97c0fa7" compoundref="SceneMun_8cpp" startline="1598" endline="1646">SceneMun::RenderPickaxeOnScreen</referencedby>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="112" endline="237">Run</referencedby>
+        <referencedby refid="classCamera3_1a9b14833d93a40442a53edf635837045c" compoundref="Camera3_8cpp" startline="777" endline="1080">Camera3::SJUpdate</referencedby>
+        <referencedby refid="classCamera_1acc1741feb6d9da849ea4b6c12e0711e6" compoundref="Camera_8cpp" startline="28" endline="51">Camera::Update</referencedby>
+        <referencedby refid="classCamera3_1a1325eb6c97194791fb8da473e2560add" compoundref="Camera3_8cpp" startline="62" endline="323">Camera3::Update</referencedby>
+        <referencedby refid="classSP2_1a075edf39d3102610bf7f404ae3b8d38c" compoundref="SP2_8cpp" startline="127" endline="172">SP2::Update</referencedby>
+        <referencedby refid="classSceneGalaxy_1a20f9275f7788921a7cd843219b9bdeff" compoundref="SceneGalaxy_8cpp" startline="542" endline="623">SceneGalaxy::Update</referencedby>
+        <referencedby refid="classSceneMun_1ac31a057e66f46bb4d9a7b3fb1c2cfbb9" compoundref="SceneMun_8cpp" startline="418" endline="783">SceneMun::Update</referencedby>
+        <referencedby refid="classSceneSoraJewel_1a581a47998e6133291289306656463cb6" compoundref="SceneSoraJewel_8cpp" startline="454" endline="698">SceneSoraJewel::Update</referencedby>
+        <referencedby refid="classCamera3_1a9cae806b6aeb0cef0650ddbcc73b465c" compoundref="Camera3_8cpp" startline="345" endline="430">Camera3::UpdateCollision</referencedby>
+        <referencedby refid="classCamera3_1a94a1b58131f6af3e0f46152c6928921a" compoundref="Camera3_8cpp" startline="439" endline="516">Camera3::XWingCamera</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="323">
+        <label>irrklang::IVirtualRefCounted</label>
+        <link refid="classirrklang_1_1IVirtualRefCounted"/>
+      </node>
+      <node id="319">
+        <label>irrklang::ISoundEngine</label>
+        <link refid="classirrklang_1_1ISoundEngine"/>
+        <childnode refid="320" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="321">
+        <label>int</label>
+      </node>
+      <node id="313">
+        <label>Application</label>
+        <link refid="classApplication"/>
+        <childnode refid="314" relation="usage">
+          <edgelabel>m_timer</edgelabel>
+        </childnode>
+        <childnode refid="317" relation="usage">
+          <edgelabel>sceneischanged</edgelabel>
+        </childnode>
+        <childnode refid="318" relation="usage">
+          <edgelabel>playmusic</edgelabel>
+        </childnode>
+      </node>
+      <node id="318">
+        <label>music</label>
+        <link refid="classmusic"/>
+        <childnode refid="319" relation="usage">
+          <edgelabel>se</edgelabel>
+        </childnode>
+        <childnode refid="322" relation="usage">
+          <edgelabel>MusicSoraJewel</edgelabel>
+          <edgelabel>MusicMun</edgelabel>
+          <edgelabel>MusicGalaxy</edgelabel>
+        </childnode>
+      </node>
+      <node id="322">
+        <label>irrklang::ISoundSource</label>
+        <link refid="classirrklang_1_1ISoundSource"/>
+        <childnode refid="323" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="316">
+        <label>LARGE_INTEGER</label>
+      </node>
+      <node id="314">
+        <label>StopWatch</label>
+        <link refid="classStopWatch"/>
+        <childnode refid="315" relation="usage">
+          <edgelabel>wTimerRes</edgelabel>
+        </childnode>
+        <childnode refid="316" relation="usage">
+          <edgelabel>frequency</edgelabel>
+          <edgelabel>currTime</edgelabel>
+          <edgelabel>prevTime</edgelabel>
+        </childnode>
+      </node>
+      <node id="320">
+        <label>irrklang::IRefCounted</label>
+        <link refid="classirrklang_1_1IRefCounted"/>
+        <childnode refid="321" relation="usage">
+          <edgelabel>ReferenceCounter</edgelabel>
+        </childnode>
+      </node>
+      <node id="317">
+        <label>bool</label>
+      </node>
+      <node id="315">
+        <label>UINT</label>
+      </node>
+    </collaborationgraph>
+    <location file="LiZhaoyuan1/Source/Application.h" line="8" column="1" bodyfile="LiZhaoyuan1/Source/Application.h" bodystart="7" bodyend="22"/>
+    <listofallmembers>
+      <member refid="classApplication_1afa8cc05ce6b6092be5ecdfdae44e05f8" prot="public" virt="non-virtual"><scope>Application</scope><name>Application</name></member>
+      <member refid="classApplication_1a18497f66d98aa2d67807619d2c91a186" prot="public" virt="non-virtual"><scope>Application</scope><name>changescenes</name></member>
+      <member refid="classApplication_1a9d410604b39b8374a884b1f2a1f2a5ba" prot="public" virt="non-virtual"><scope>Application</scope><name>Exit</name></member>
+      <member refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" prot="public" virt="non-virtual"><scope>Application</scope><name>Init</name></member>
+      <member refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" prot="public" virt="non-virtual"><scope>Application</scope><name>IsKeyPressed</name></member>
+      <member refid="classApplication_1ac81ea1396dc69c6d48b9a701954f53fe" prot="private" virt="non-virtual"><scope>Application</scope><name>m_timer</name></member>
+      <member refid="classApplication_1a8b83d4608b51762d3dc504898147ffab" prot="private" virt="non-virtual"><scope>Application</scope><name>playmusic</name></member>
+      <member refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" prot="public" virt="non-virtual"><scope>Application</scope><name>Run</name></member>
+      <member refid="classApplication_1a25861747ff2a86fefec4b4fec74d52a3" prot="public" virt="non-virtual"><scope>Application</scope><name>sceneischanged</name></member>
+      <member refid="classApplication_1a748bca84fefb9c12661cfaa2f623748d" prot="public" virt="non-virtual"><scope>Application</scope><name>~Application</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

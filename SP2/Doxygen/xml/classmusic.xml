@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classmusic" kind="class" language="C++" prot="public">
+    <compoundname>music</compoundname>
+    <includes refid="Music_8h" local="no">Music.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmusic_1a9239ef9dc3f2f41da257dbdd8892bdff" prot="public" static="no" mutable="no">
+        <type><ref refid="classirrklang_1_1ISoundEngine" kindref="compound">ISoundEngine</ref> *</type>
+        <definition>ISoundEngine* music::se</definition>
+        <argsstring></argsstring>
+        <name>se</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Music.h" line="40" column="1" bodyfile="LiZhaoyuan1/Source/Music.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classmusic_1ab273510bbedeada851d022b7f6ad8ccb" compoundref="Music_8cpp" startline="16" endline="19">music</referencedby>
+        <referencedby refid="classmusic_1a980e490547c2f6a7a7875e58548fce5b" compoundref="Music_8cpp" startline="45" endline="50">musicGalaxy</referencedby>
+        <referencedby refid="classmusic_1a2a0b59c8aef55331ccc449f3eb31f1a9" compoundref="Music_8cpp" startline="67" endline="70">musicMainMenu</referencedby>
+        <referencedby refid="classmusic_1a3d999425453d51069667bb0be1471e83" compoundref="Music_8cpp" startline="56" endline="61">musicMun</referencedby>
+        <referencedby refid="classmusic_1a42a802fd796b8556d64225aa9abd55d3" compoundref="Music_8cpp" startline="34" endline="39">musicSoraJewel</referencedby>
+        <referencedby refid="classmusic_1ab2374a8d06e855a208f47a729937d515" compoundref="Music_8cpp" startline="25" endline="28">~music</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmusic_1a1e7d4a632873c626bb04f71ef004afc4" prot="public" static="no" mutable="no">
+        <type><ref refid="classirrklang_1_1ISoundSource" kindref="compound">ISoundSource</ref> *</type>
+        <definition>ISoundSource* music::MusicSoraJewel</definition>
+        <argsstring></argsstring>
+        <name>MusicSoraJewel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Music.h" line="41" column="1" bodyfile="LiZhaoyuan1/Source/Music.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classmusic_1a42a802fd796b8556d64225aa9abd55d3" compoundref="Music_8cpp" startline="34" endline="39">musicSoraJewel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmusic_1af1284d8a6959f4f6d2cd35dab6fabfa4" prot="public" static="no" mutable="no">
+        <type><ref refid="classirrklang_1_1ISoundSource" kindref="compound">ISoundSource</ref> *</type>
+        <definition>ISoundSource* music::MusicGalaxy</definition>
+        <argsstring></argsstring>
+        <name>MusicGalaxy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Music.h" line="42" column="1" bodyfile="LiZhaoyuan1/Source/Music.h" bodystart="42" bodyend="-1"/>
+        <referencedby refid="classmusic_1a980e490547c2f6a7a7875e58548fce5b" compoundref="Music_8cpp" startline="45" endline="50">musicGalaxy</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmusic_1a7d63fd4b1640f922276550f08b5b8794" prot="public" static="no" mutable="no">
+        <type><ref refid="classirrklang_1_1ISoundSource" kindref="compound">ISoundSource</ref> *</type>
+        <definition>ISoundSource* music::MusicMun</definition>
+        <argsstring></argsstring>
+        <name>MusicMun</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Music.h" line="43" column="1" bodyfile="LiZhaoyuan1/Source/Music.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="classmusic_1a3d999425453d51069667bb0be1471e83" compoundref="Music_8cpp" startline="56" endline="61">musicMun</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmusic_1ab273510bbedeada851d022b7f6ad8ccb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>music::music</definition>
+        <argsstring>()</argsstring>
+        <name>music</name>
+        <briefdescription>
+<para>music constructor </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Music.h" line="31" column="1" bodyfile="LiZhaoyuan1/Source/Music.cpp" bodystart="16" bodyend="19"/>
+        <references refid="namespaceirrklang_1ad9829f898bc0665fdd2554a6f5c7ca1c">irrklang::createIrrKlangDevice</references>
+        <references refid="classmusic_1a9239ef9dc3f2f41da257dbdd8892bdff" compoundref="Music_8h" startline="40">se</references>
+      </memberdef>
+      <memberdef kind="function" id="classmusic_1ab2374a8d06e855a208f47a729937d515" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>music::~music</definition>
+        <argsstring>()</argsstring>
+        <name>~music</name>
+        <briefdescription>
+<para>music destructor </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Music.h" line="32" column="1" bodyfile="LiZhaoyuan1/Source/Music.cpp" bodystart="25" bodyend="28"/>
+        <references refid="classirrklang_1_1IRefCounted_1a869fe3adc6e49e8da105e95837a565b1" compoundref="ik__IRefCounted_8h" startline="98" endline="109">irrklang::IRefCounted::drop</references>
+        <references refid="classmusic_1a9239ef9dc3f2f41da257dbdd8892bdff" compoundref="Music_8h" startline="40">se</references>
+      </memberdef>
+      <memberdef kind="function" id="classmusic_1adac71a68def08b407bdc30cc0dee23c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void music::musicInit</definition>
+        <argsstring>()</argsstring>
+        <name>musicInit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Music.h" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classmusic_1a42a802fd796b8556d64225aa9abd55d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void music::musicSoraJewel</definition>
+        <argsstring>()</argsstring>
+        <name>musicSoraJewel</name>
+        <briefdescription>
+<para>music function to play music for Sora Jewel scene </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Music.h" line="35" column="1" bodyfile="LiZhaoyuan1/Source/Music.cpp" bodystart="34" bodyend="39"/>
+        <references refid="classirrklang_1_1ISoundEngine_1a4eed0fa6712872e55003b26462e21005">irrklang::ISoundEngine::addSoundSourceFromFile</references>
+        <references refid="classmusic_1a1e7d4a632873c626bb04f71ef004afc4" compoundref="Music_8h" startline="41">MusicSoraJewel</references>
+        <references refid="classirrklang_1_1ISoundEngine_1a25f612fe6479d3b22dc5bab2a2eaa927">irrklang::ISoundEngine::play2D</references>
+        <references refid="classmusic_1a9239ef9dc3f2f41da257dbdd8892bdff" compoundref="Music_8h" startline="40">se</references>
+        <references refid="classirrklang_1_1ISoundEngine_1a38dbc2f1d49e3127fc4a81a9c1a2f82d">irrklang::ISoundEngine::stopAllSounds</references>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="112" endline="237">Application::Run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmusic_1a980e490547c2f6a7a7875e58548fce5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void music::musicGalaxy</definition>
+        <argsstring>()</argsstring>
+        <name>musicGalaxy</name>
+        <briefdescription>
+<para>music function to play music for Galaxy scene </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Music.h" line="36" column="1" bodyfile="LiZhaoyuan1/Source/Music.cpp" bodystart="45" bodyend="50"/>
+        <references refid="classirrklang_1_1ISoundEngine_1a4eed0fa6712872e55003b26462e21005">irrklang::ISoundEngine::addSoundSourceFromFile</references>
+        <references refid="classmusic_1af1284d8a6959f4f6d2cd35dab6fabfa4" compoundref="Music_8h" startline="42">MusicGalaxy</references>
+        <references refid="classirrklang_1_1ISoundEngine_1a25f612fe6479d3b22dc5bab2a2eaa927">irrklang::ISoundEngine::play2D</references>
+        <references refid="classmusic_1a9239ef9dc3f2f41da257dbdd8892bdff" compoundref="Music_8h" startline="40">se</references>
+        <references refid="classirrklang_1_1ISoundEngine_1a38dbc2f1d49e3127fc4a81a9c1a2f82d">irrklang::ISoundEngine::stopAllSounds</references>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="112" endline="237">Application::Run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmusic_1a3d999425453d51069667bb0be1471e83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void music::musicMun</definition>
+        <argsstring>()</argsstring>
+        <name>musicMun</name>
+        <briefdescription>
+<para>music function to play music for Mun scene </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Music.h" line="37" column="1" bodyfile="LiZhaoyuan1/Source/Music.cpp" bodystart="56" bodyend="61"/>
+        <references refid="classirrklang_1_1ISoundEngine_1a4eed0fa6712872e55003b26462e21005">irrklang::ISoundEngine::addSoundSourceFromFile</references>
+        <references refid="classmusic_1a7d63fd4b1640f922276550f08b5b8794" compoundref="Music_8h" startline="43">MusicMun</references>
+        <references refid="classirrklang_1_1ISoundEngine_1a25f612fe6479d3b22dc5bab2a2eaa927">irrklang::ISoundEngine::play2D</references>
+        <references refid="classmusic_1a9239ef9dc3f2f41da257dbdd8892bdff" compoundref="Music_8h" startline="40">se</references>
+        <references refid="classirrklang_1_1ISoundEngine_1a38dbc2f1d49e3127fc4a81a9c1a2f82d">irrklang::ISoundEngine::stopAllSounds</references>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="112" endline="237">Application::Run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmusic_1a2a0b59c8aef55331ccc449f3eb31f1a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void music::musicMainMenu</definition>
+        <argsstring>()</argsstring>
+        <name>musicMainMenu</name>
+        <briefdescription>
+<para>music function to play music for main menu </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Music.h" line="38" column="1" bodyfile="LiZhaoyuan1/Source/Music.cpp" bodystart="67" bodyend="70"/>
+        <references refid="classmusic_1a9239ef9dc3f2f41da257dbdd8892bdff" compoundref="Music_8h" startline="40">se</references>
+        <references refid="classirrklang_1_1ISoundEngine_1a38dbc2f1d49e3127fc4a81a9c1a2f82d">irrklang::ISoundEngine::stopAllSounds</references>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="112" endline="237">Application::Run</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines the music playing and its methods. </para>    </briefdescription>
+    <detaileddescription>
+<para>Class music: </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="477">
+        <label>irrklang::IVirtualRefCounted</label>
+        <link refid="classirrklang_1_1IVirtualRefCounted"/>
+      </node>
+      <node id="473">
+        <label>irrklang::ISoundEngine</label>
+        <link refid="classirrklang_1_1ISoundEngine"/>
+        <childnode refid="474" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="475">
+        <label>int</label>
+      </node>
+      <node id="472">
+        <label>music</label>
+        <link refid="classmusic"/>
+        <childnode refid="473" relation="usage">
+          <edgelabel>se</edgelabel>
+        </childnode>
+        <childnode refid="476" relation="usage">
+          <edgelabel>MusicSoraJewel</edgelabel>
+          <edgelabel>MusicMun</edgelabel>
+          <edgelabel>MusicGalaxy</edgelabel>
+        </childnode>
+      </node>
+      <node id="476">
+        <label>irrklang::ISoundSource</label>
+        <link refid="classirrklang_1_1ISoundSource"/>
+        <childnode refid="477" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="474">
+        <label>irrklang::IRefCounted</label>
+        <link refid="classirrklang_1_1IRefCounted"/>
+        <childnode refid="475" relation="usage">
+          <edgelabel>ReferenceCounter</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="LiZhaoyuan1/Source/Music.h" line="29" column="1" bodyfile="LiZhaoyuan1/Source/Music.h" bodystart="28" bodyend="44"/>
+    <listofallmembers>
+      <member refid="classmusic_1ab273510bbedeada851d022b7f6ad8ccb" prot="public" virt="non-virtual"><scope>music</scope><name>music</name></member>
+      <member refid="classmusic_1af1284d8a6959f4f6d2cd35dab6fabfa4" prot="public" virt="non-virtual"><scope>music</scope><name>MusicGalaxy</name></member>
+      <member refid="classmusic_1a980e490547c2f6a7a7875e58548fce5b" prot="public" virt="non-virtual"><scope>music</scope><name>musicGalaxy</name></member>
+      <member refid="classmusic_1adac71a68def08b407bdc30cc0dee23c5" prot="public" virt="non-virtual"><scope>music</scope><name>musicInit</name></member>
+      <member refid="classmusic_1a2a0b59c8aef55331ccc449f3eb31f1a9" prot="public" virt="non-virtual"><scope>music</scope><name>musicMainMenu</name></member>
+      <member refid="classmusic_1a7d63fd4b1640f922276550f08b5b8794" prot="public" virt="non-virtual"><scope>music</scope><name>MusicMun</name></member>
+      <member refid="classmusic_1a3d999425453d51069667bb0be1471e83" prot="public" virt="non-virtual"><scope>music</scope><name>musicMun</name></member>
+      <member refid="classmusic_1a1e7d4a632873c626bb04f71ef004afc4" prot="public" virt="non-virtual"><scope>music</scope><name>MusicSoraJewel</name></member>
+      <member refid="classmusic_1a42a802fd796b8556d64225aa9abd55d3" prot="public" virt="non-virtual"><scope>music</scope><name>musicSoraJewel</name></member>
+      <member refid="classmusic_1a9239ef9dc3f2f41da257dbdd8892bdff" prot="public" virt="non-virtual"><scope>music</scope><name>se</name></member>
+      <member refid="classmusic_1ab2374a8d06e855a208f47a729937d515" prot="public" virt="non-virtual"><scope>music</scope><name>~music</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ik__EStreamModes_8h" kind="file" language="C++">
+    <compoundname>ik_EStreamModes.h</compoundname>
+    <includedby refid="irrKlang_8h" local="yes">LiZhaoyuan1/Source/include/irrKlang.h</includedby>
+    <includedby refid="ik__ISoundSource_8h" local="yes">LiZhaoyuan1/Source/include/ik_ISoundSource.h</includedby>
+    <includedby refid="ik__ISoundEngine_8h" local="yes">LiZhaoyuan1/Source/include/ik_ISoundEngine.h</includedby>
+    <invincdepgraph>
+      <node id="2670">
+        <label>LiZhaoyuan1/Source/LoadingScreen.h</label>
+        <link refid="LoadingScreen_8h"/>
+        <childnode refid="2664" relation="include">
+        </childnode>
+        <childnode refid="2671" relation="include">
+        </childnode>
+      </node>
+      <node id="2666">
+        <label>LiZhaoyuan1/Source/SP2.h</label>
+        <link refid="SP2_8h"/>
+        <childnode refid="2664" relation="include">
+        </childnode>
+        <childnode refid="2667" relation="include">
+        </childnode>
+        <childnode refid="2669" relation="include">
+        </childnode>
+      </node>
+      <node id="2674">
+        <label>LiZhaoyuan1/Source/Missile.h</label>
+        <link refid="Missile_8h"/>
+        <childnode refid="2667" relation="include">
+        </childnode>
+        <childnode refid="2675" relation="include">
+        </childnode>
+      </node>
+      <node id="2664">
+        <label>LiZhaoyuan1/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="2665">
+        <label>LiZhaoyuan1/Source/Camera3.h</label>
+        <link refid="Camera3_8h"/>
+        <childnode refid="2666" relation="include">
+        </childnode>
+        <childnode refid="2670" relation="include">
+        </childnode>
+        <childnode refid="2672" relation="include">
+        </childnode>
+        <childnode refid="2667" relation="include">
+        </childnode>
+        <childnode refid="2674" relation="include">
+        </childnode>
+        <childnode refid="2676" relation="include">
+        </childnode>
+        <childnode refid="2678" relation="include">
+        </childnode>
+      </node>
+      <node id="2681">
+        <label>LiZhaoyuan1/Source/Music.cpp</label>
+        <link refid="Music_8cpp"/>
+      </node>
+      <node id="2673">
+        <label>LiZhaoyuan1/Source/SceneMun.cpp</label>
+        <link refid="SceneMun_8cpp"/>
+      </node>
+      <node id="2671">
+        <label>LiZhaoyuan1/Source/LoadingScreen.cpp</label>
+        <link refid="LoadingScreen_8cpp"/>
+      </node>
+      <node id="2660">
+        <label>LiZhaoyuan1/Source/include/ik_EStreamModes.h</label>
+        <link refid="ik_EStreamModes.h"/>
+        <childnode refid="2661" relation="include">
+        </childnode>
+        <childnode refid="2682" relation="include">
+        </childnode>
+        <childnode refid="2683" relation="include">
+        </childnode>
+      </node>
+      <node id="2680">
+        <label>LiZhaoyuan1/Source/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="2667">
+        <label>LiZhaoyuan1/Source/SceneGalaxy.h</label>
+        <link refid="SceneGalaxy_8h"/>
+        <childnode refid="2664" relation="include">
+        </childnode>
+        <childnode refid="2668" relation="include">
+        </childnode>
+      </node>
+      <node id="2682">
+        <label>LiZhaoyuan1/Source/include/ik_ISoundSource.h</label>
+        <link refid="ik__ISoundSource_8h"/>
+        <childnode refid="2683" relation="include">
+        </childnode>
+        <childnode refid="2661" relation="include">
+        </childnode>
+        <childnode refid="2684" relation="include">
+        </childnode>
+      </node>
+      <node id="2679">
+        <label>LiZhaoyuan1/Source/Camera.cpp</label>
+        <link refid="Camera_8cpp"/>
+      </node>
+      <node id="2683">
+        <label>LiZhaoyuan1/Source/include/ik_ISoundEngine.h</label>
+        <link refid="ik__ISoundEngine_8h"/>
+        <childnode refid="2661" relation="include">
+        </childnode>
+      </node>
+      <node id="2675">
+        <label>LiZhaoyuan1/Source/Missile.cpp</label>
+        <link refid="Missile_8cpp"/>
+      </node>
+      <node id="2678">
+        <label>LiZhaoyuan1/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="2661">
+        <label>LiZhaoyuan1/Source/include/irrKlang.h</label>
+        <link refid="irrKlang_8h"/>
+        <childnode refid="2662" relation="include">
+        </childnode>
+      </node>
+      <node id="2672">
+        <label>LiZhaoyuan1/Source/SceneMun.h</label>
+        <link refid="SceneMun_8h"/>
+        <childnode refid="2664" relation="include">
+        </childnode>
+        <childnode refid="2673" relation="include">
+        </childnode>
+      </node>
+      <node id="2668">
+        <label>LiZhaoyuan1/Source/SceneGalaxy.cpp</label>
+        <link refid="SceneGalaxy_8cpp"/>
+      </node>
+      <node id="2662">
+        <label>LiZhaoyuan1/Source/Music.h</label>
+        <link refid="Music_8h"/>
+        <childnode refid="2663" relation="include">
+        </childnode>
+        <childnode refid="2676" relation="include">
+        </childnode>
+        <childnode refid="2664" relation="include">
+        </childnode>
+        <childnode refid="2681" relation="include">
+        </childnode>
+      </node>
+      <node id="2669">
+        <label>LiZhaoyuan1/Source/SP2.cpp</label>
+        <link refid="SP2_8cpp"/>
+      </node>
+      <node id="2684">
+        <label>LiZhaoyuan1/Source/include/ik_IAudioRecorder.h</label>
+        <link refid="ik__IAudioRecorder_8h"/>
+        <childnode refid="2661" relation="include">
+        </childnode>
+      </node>
+      <node id="2676">
+        <label>LiZhaoyuan1/Source/SceneSoraJewel.h</label>
+        <link refid="SceneSoraJewel_8h"/>
+        <childnode refid="2664" relation="include">
+        </childnode>
+        <childnode refid="2677" relation="include">
+        </childnode>
+      </node>
+      <node id="2663">
+        <label>LiZhaoyuan1/Source/Application.h</label>
+        <link refid="Application_8h"/>
+        <childnode refid="2664" relation="include">
+        </childnode>
+        <childnode refid="2665" relation="include">
+        </childnode>
+        <childnode refid="2679" relation="include">
+        </childnode>
+        <childnode refid="2678" relation="include">
+        </childnode>
+        <childnode refid="2671" relation="include">
+        </childnode>
+        <childnode refid="2680" relation="include">
+        </childnode>
+        <childnode refid="2668" relation="include">
+        </childnode>
+        <childnode refid="2673" relation="include">
+        </childnode>
+        <childnode refid="2677" relation="include">
+        </childnode>
+        <childnode refid="2669" relation="include">
+        </childnode>
+      </node>
+      <node id="2677">
+        <label>LiZhaoyuan1/Source/SceneSoraJewel.cpp</label>
+        <link refid="SceneSoraJewel_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceirrklang">irrklang</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2002-2014<sp/>Nikolaus<sp/>Gebhardt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>&quot;irrKlang&quot;<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>For<sp/>conditions<sp/>of<sp/>distribution<sp/>and<sp/>use,<sp/>see<sp/>copyright<sp/>notice<sp/>in<sp/>irrKlang.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__E_IRRKLANG_STREAM_MODES_H_INCLUDED__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__E_IRRKLANG_STREAM_MODES_H_INCLUDED__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceirrklang" kindref="compound">irrklang</ref><sp/><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11" refid="namespaceirrklang_1a6eab873ba387c6a4e05839e6a434d06e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespaceirrklang_1a6eab873ba387c6a4e05839e6a434d06e" kindref="member">E_STREAM_MODE</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14" refid="namespaceirrklang_1a6eab873ba387c6a4e05839e6a434d06ea9ccdf79afdb2961edf97edf4575d1717" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1a6eab873ba387c6a4e05839e6a434d06ea9ccdf79afdb2961edf97edf4575d1717" kindref="member">ESM_AUTO_DETECT</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="namespaceirrklang_1a6eab873ba387c6a4e05839e6a434d06ea2d72368b13fbbb1ce9708d829198a24b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1a6eab873ba387c6a4e05839e6a434d06ea2d72368b13fbbb1ce9708d829198a24b" kindref="member">ESM_STREAMING</ref>,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="namespaceirrklang_1a6eab873ba387c6a4e05839e6a434d06ea415ca3d09a13b086c078de0096430a07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1a6eab873ba387c6a4e05839e6a434d06ea415ca3d09a13b086c078de0096430a07" kindref="member">ESM_NO_STREAMING</ref>,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="namespaceirrklang_1a6eab873ba387c6a4e05839e6a434d06eabbfef2fbcff24a58a55051d9a7ff7b19" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1a6eab873ba387c6a4e05839e6a434d06eabbfef2fbcff24a58a55051d9a7ff7b19" kindref="member">ESM_FORCE_32_BIT</ref><sp/>=<sp/>0x7fffffff</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>irrklang</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="LiZhaoyuan1/Source/include/ik_EStreamModes.h"/>
+  </compounddef>
+</doxygen>
