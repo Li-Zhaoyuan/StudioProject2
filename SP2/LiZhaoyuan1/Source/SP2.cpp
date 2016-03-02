@@ -156,7 +156,7 @@ void SP2::Init()
 	
 	
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
-	meshList[GEO_TEXT]->textureID = LoadTGA("Image//TimesNewRoman.tga");
+	meshList[GEO_TEXT]->textureID = LoadTGA("Image//minecraft.tga");
 	meshList[GEO_LIGHTBALL] = MeshBuilder::GenerateSphere("lightball", Color(1, 1, 1), 18, 36);
 	
 	Mtx44 projection;
@@ -487,6 +487,7 @@ void SP2::Render()
 	RenderTextOnScreen(meshList[GEO_TEXT], "Start", Color(0, 1, 0), 3, 5, 7);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Exit", Color(0, 1, 0), 3, 5, 5);
 	
+	RenderTextOnScreen(meshList[GEO_TEXT], "The Adventures Of Yalam", Color(1, 1, 1), 5, 3, 7);
 }
 
 void SP2::Exit()

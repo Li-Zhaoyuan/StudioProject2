@@ -1201,11 +1201,17 @@ void SceneMun::interactions()
 	{
 		interact |= 1 << TALKING_TO_LADY;
 		textWL = true;
+		LadyCaptured = true;
 	}
 	else if (RadiusFromLady > 6.0f)
 	{
 		interact &= ~(1 << TALKING_TO_LADY);
 		textWL = false;
+	}
+	else if ((RadiusFromLady < 3.0f) && (fultonreceived == true) && (fultonleft>0) &&(LadyCaptured==false))
+	{
+		LadyCaptured =2;
+
 	}
 
 	if (RadiusFromDude < 6.0f
@@ -1262,9 +1268,42 @@ void SceneMun::fultoninteraction()
 {
 	if (fultonreceived == true)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], thisisastring.str() , Color(0, 0, 0), 3, 2, 18);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Captured", Color(0, 0, 0), 3, 2, 18);
+		RenderTextOnScreen(meshList[GEO_TEXT], thisisastring.str() , Color(0, 0, 0), 2, 1, 18);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Captured", Color(0, 0, 0), 2, 1, 16);
+		if (LadyCaptured == true)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Lady", Color(0, 0, 0), 2, 1, 15);
+		}
+		if (VillageChiefCaptured == true)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Village Chief", Color(0, 0, 0), 2, 1, 14);
+		}
+		if (MinerCaptured == true)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Miner", Color(0, 0, 0), 2, 1, 13);
+		}
+		if (CalefareACaptured == true)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Worker No.1", Color(0, 0, 0), 2, 1, 12);
+		}
+		if (CalefareBCaptured == true)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Worker No.2", Color(0, 0, 0), 2, 1, 11);
+		}
+		if (CalefareCCaptured == true)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Worker No.3", Color(0, 0, 0), 2, 1, 10);
+		}
+		if ((LadyCaptured == true) && (VillageChiefCaptured == true) && (MinerCaptured == true) && (CalefareACaptured == true) && (CalefareBCaptured == true) && (CalefareCCaptured == true))
+		{
+			Allcaptured = true;
+			if (Allcaptured == true)
+			{
+				RenderTextOnScreen(meshList[GEO_TEXT], "All Captured", Color(0, 0, 0), 2, 1, 9);
+			}
+		}
 	}
+
 }
 void SceneMun::RenderPickaxeOnScreen()
 {
