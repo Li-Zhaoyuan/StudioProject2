@@ -157,7 +157,7 @@ private:
 	bool enableLight = false;
 	float LSPEED = 10.f;
 	int fps = 0;
-	int destroyedAsteroids = 0;
+	float delaymissile = 0;
 
 	float rotateXWing = 0.f;
 	bool rotateXWing_Limit;
@@ -191,7 +191,7 @@ private:
 	Vector3 Asteroid8 = Vector3(-124, 500, -609);
 	Vector3 Asteroid9 = Vector3(-40, 600, -723);
 	Vector3 Asteroid10 = Vector3(67, 578, -600);
-	Vector3 LAsteroid = Vector3(0, 700, -600);
+	Vector3 LAsteroid = Vector3(-2, 700, 600);
 
 	Vector3 missilePos = Vector3(0, 0, 0);
 	Vector3 missileTar = Vector3(0, 0, 0);
@@ -200,8 +200,6 @@ private:
 	
 
 	void renderMesh(Mesh *mesh, bool enableLight);
-	void lighting();
-	void lighting2();
 	void RenderSkybox();
 
 	void RenderText(Mesh* mesh, std::string text, Color color);

@@ -12,17 +12,40 @@
 #include "Light.h"
 #include "Material.h"
 #include "Utility.h"
-#include "Physics.h"
 
 #include "LoadTGA.h"
 #include "ReadTextFile.h"
 
+/****************************************************************************/
+/*!
+\brief
+constructor for the .cpp file
+*/
+/****************************************************************************/
 SceneSoraJewel::SceneSoraJewel()
 {
 }
+/****************************************************************************/
+/*!
+\brief
+deconstructor for the .cpp file
+*/
+/****************************************************************************/
 SceneSoraJewel::~SceneSoraJewel()
 {
 }
+/****************************************************************************/
+/*!
+\brief
+This function initialises everything needed for the scene
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneSoraJewel::Init()
 {
 	//// Init VBO here
@@ -415,6 +438,18 @@ void SceneSoraJewel::Init()
 	Engineerrotationy = 280;
 	Engineerpositionx2 = -65, Engineerpositiony2 = 100, Engineerpositionz2 = 56,Engineerrotationy2=180.f;
 }
+/****************************************************************************/
+/*!
+\brief
+This function is constantly running to update the scene such as animation and game logics
+\param
+double dt
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneSoraJewel::Update(double dt)
 {
 	if (!cutscene)
@@ -477,6 +512,9 @@ void SceneSoraJewel::Update(double dt)
 		camera.position.y = 25;
 		camera.position.z = 82;
 		camera.up.y = 1;
+		camera.minimapsoracoords.x = 73.4f;
+		camera.minimapsoracoords.y = 52.f;
+
 	}
 	if (Quest1Done == true && Quest2Done == true)
 	{
@@ -656,6 +694,18 @@ void SceneSoraJewel::Update(double dt)
 		}
 	}
 }
+/****************************************************************************/
+/*!
+\brief
+This function is placed in Update(double dt) to run Engineer's animation to walk to ship
+\param
+double dt
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneSoraJewel::Engineeranimation(float dt)
 {
 
@@ -767,6 +817,18 @@ void SceneSoraJewel::Engineeranimation(float dt)
 	}
 	interactions();
 }
+/****************************************************************************/
+/*!
+\brief
+In case of changes to current light, the light will change accordingly 
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneSoraJewel::lighting()
 {
 	if (light[0].type == Light::LIGHT_DIRECTIONAL)
@@ -789,6 +851,18 @@ void SceneSoraJewel::lighting()
 		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
 	}
 }
+/****************************************************************************/
+/*!
+\brief
+In case of changes to current light, the light will change accordingly
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneSoraJewel::lighting2()
 {
 	if (light[1].type == Light::LIGHT_DIRECTIONAL)
@@ -811,6 +885,19 @@ void SceneSoraJewel::lighting2()
 	}
 
 }
+/****************************************************************************/
+/*!
+\brief
+Renders the GEOMETRY or mesh to the Scene
+\param
+Mesh *mesh
+bool enablelight
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneSoraJewel::renderMesh(Mesh *mesh, bool enableLight)
 {
 	Mtx44 MVP, modelView, modelView_inverse_transpose;
@@ -850,6 +937,20 @@ void SceneSoraJewel::renderMesh(Mesh *mesh, bool enableLight)
 		glBindTexture(GL_TEXTURE_2D, mesh->textureID);
 	}
 }
+/****************************************************************************/
+/*!
+\brief
+Render Text in the world space
+\param
+Mesh* mesh
+std::string text
+Color color
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneSoraJewel::RenderText(Mesh* mesh, std::string text, Color color)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
@@ -876,6 +977,23 @@ void SceneSoraJewel::RenderText(Mesh* mesh, std::string text, Color color)
 	glUniform1i(m_parameters[U_TEXT_ENABLED], 0);
 	glEnable(GL_DEPTH_TEST);
 }
+/****************************************************************************/
+/*!
+\brief
+Renders text to the screen
+\param
+Mesh* mesh
+std::string text
+Color color
+float size
+float x
+float y
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneSoraJewel::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
@@ -917,6 +1035,18 @@ void SceneSoraJewel::RenderTextOnScreen(Mesh* mesh, std::string text, Color colo
 	viewStack.PopMatrix();
 	modelStack.PopMatrix();
 }
+/****************************************************************************/
+/*!
+\brief
+This function is the main and is responsible for getting the OBJ and or mesh to the sccene
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneSoraJewel::Render()
 {
 	// Render VBO here
@@ -1092,6 +1222,18 @@ void SceneSoraJewel::Render()
 	ss << "FPS:" << fps << "         " << playerPos.str();
 	RenderTextOnScreen(meshList[GEO_TEXT], ss.str(), Color(0, 1, 0), 3, 0, 19);
 }
+/****************************************************************************/
+/*!
+\brief
+This function is placed in the Render() near the end so that we can avoid depth problems
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneSoraJewel::renderLast()
 {
 	// Beer
@@ -1149,6 +1291,18 @@ void SceneSoraJewel::renderLast()
 		glEnable(GL_DEPTH_TEST);
 	}
 }
+/****************************************************************************/
+/*!
+\brief
+This function renders the textbox and the chat
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneSoraJewel::renderText()
 {
 	if (talkwithQL || talkwithEngi1 || talkwithEngi2 || talkwithCommando)
@@ -1181,6 +1335,18 @@ void SceneSoraJewel::renderText()
 	if (talkwithCommando)
 		RenderTextOnScreen(meshList[GEO_TEXT], ssCommandoDialogue.str(), Color(0, 0, 0), 2.5f, 5, 4);
 }
+/****************************************************************************/
+/*!
+\brief
+Renders engineer, this function is placed in the Render()
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneSoraJewel::Renderengineers()
 {
 	modelStack.PushMatrix();
@@ -1256,6 +1422,18 @@ void SceneSoraJewel::Renderengineers()
 	//Body Parent
 	modelStack.PopMatrix();
 }
+/****************************************************************************/
+/*!
+\brief
+Renders minimap to the top right of screen
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneSoraJewel::renderminimaptoscreen()
 {
 	Mtx44 ortho;
@@ -1293,6 +1471,18 @@ void SceneSoraJewel::renderminimaptoscreen()
 	modelStack.PopMatrix();
 	glEnable(GL_DEPTH_TEST);
 }
+/****************************************************************************/
+/*!
+\brief
+Renders skybox and is placed separately to prevent confusion
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneSoraJewel::RenderSkybox()
 {
 	modelStack.PushMatrix();
@@ -1342,11 +1532,35 @@ void SceneSoraJewel::RenderSkybox()
 	renderMesh(meshList[GEO_SORAJEWELRIGHT], false);
 	modelStack.PopMatrix();
 }
+/****************************************************************************/
+/*!
+\brief
+Clears whatever is done in init, render and update
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneSoraJewel::Exit()
 {
 	glDeleteVertexArrays(1, &m_vertexArrayID);
 	glDeleteProgram(m_programID);
 }
+/****************************************************************************/
+/*!
+\brief
+This function is responsible for using view to do interaction instead of using an area
+\param
+
+\exception
+
+\return
+
+*/
+/****************************************************************************/
 void SceneSoraJewel::interactions()
 {
 	tempview = (camera.target - camera.position); // your camera view

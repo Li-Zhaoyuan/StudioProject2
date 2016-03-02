@@ -1,4 +1,20 @@
+<<<<<<< HEAD
 ﻿Build started 3/2/2016 12:19:50 PM.
+=======
+<<<<<<< HEAD
+﻿Build started 2/3/2016 10:44:50.
+     1>Project "C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Common\Common.vcxproj" on node 2 (Build target(s)).
+     1>Lib:
+         Common.vcxproj -> C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Debug\Common.lib
+     1>Done Building Project "C:\Users\User\Desktop\Studio Project\SP2\SP2GGNATHANNEEDSHELP\SP2\Common\Common.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.10
+=======
+<<<<<<< HEAD
+﻿Build started 3/2/2016 12:14:57 PM.
+>>>>>>> 3886595df89a592d109b3d67ee0a11d4a7291c12
      1>Project "C:\Users\n1507\Desktop\StudioProject2\SP2\Common\Common.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\MatrixStack.cpp Source\Mtx44.cpp Source\timer.cpp Source\Vector3.cpp
@@ -17,4 +33,10 @@
 
 Build succeeded.
 
+<<<<<<< HEAD
 Time Elapsed 00:00:01.20
+=======
+Time Elapsed 00:00:01.23
+>>>>>>> 6a71ece362eb279190717dd758784b10b5655bae
+>>>>>>> b32474076947ee23adbea25da0777289e4ded4b9
+>>>>>>> 3886595df89a592d109b3d67ee0a11d4a7291c12

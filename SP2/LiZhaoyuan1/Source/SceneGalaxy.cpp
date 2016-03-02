@@ -1,6 +1,6 @@
 /******************************************************************************/
 /*!
-\file SceneGalaxy.h
+\file SceneGalaxy.cpp
 \author Li Zhaoyuan, Nathan Chia Shi-Lin, Terence Tan Ming Jie, Muhammad Nurhidayat Bin Suderman
 \par email: lizhaoyuan123@hotmail.com
 \brief
@@ -25,12 +25,12 @@
 
 #include "LoadTGA.h"
 
-Missile missile(100);
+Missile missile(30);
 
 /****************************************************************************/
 /*!
 \brief
-	constructor for the .cpp file
+	constructor for the SceneGalaxy.cpp file
 */
 /****************************************************************************/
 SceneGalaxy::SceneGalaxy()
@@ -40,7 +40,7 @@ SceneGalaxy::SceneGalaxy()
 /****************************************************************************/
 /*!
 \brief
-	deconstructor for the .cpp file
+	deconstructor for the SceneGalaxy.cpp file
 */
 /****************************************************************************/
 SceneGalaxy::~SceneGalaxy()
@@ -50,13 +50,7 @@ SceneGalaxy::~SceneGalaxy()
 /****************************************************************************/
 /*!
 \brief
-
-\param
-
-\exception
-
-\return
-
+	Scene Galaxy initializer
 */
 /****************************************************************************/
 void SceneGalaxy::Init()
@@ -515,7 +509,7 @@ bool SceneGalaxy::CheckLargeAsteroid()
 /****************************************************************************/
 bool SceneGalaxy::CheckCollision(Vector3 A, Vector3 B)
 {
-	float x = 20.f, y = 15.f, z = 500.f;
+	float x = 15.f, y = 15.f, z = 500.f;
 	if (A.x > B.x - x && A.x < B.x + x
 		&& A.y > B.y && A.y < B.y + y
 		&& A.z> B.z - z && A.z < B.z + z)
@@ -602,43 +596,32 @@ void SceneGalaxy::Update(double dt)
 
 	//
 
-	if (rotateXWing_Limit)
+	missile.update(dt);
+
+	delaymissile += dt * 2;
+	if (delaymissile >= 0.1f)
 	{
-		if (Application::IsKeyPressed('D'))
-		{
-			rotateXWing += 5.f;
-		}
-		else if (Application::IsKeyPressed('A'))
-		{
-			rotateXWing -= 5.f;
-		}
+		delaymissile = 0;
+		shootMissile = true;
 	}
 	else
 	{
-		if (Application::IsKeyPressed('A'))
-		{
-			rotateXWing -= 5.f;
-		}
-		else if (Application::IsKeyPressed('D'))
-		{
-			rotateXWing += 5.f;
-		}
-		
+		shootMissile = false;
 	}
 
-
-	missile.update(dt);
 	if (Application::IsKeyPressed(VK_LBUTTON)) 
 	{
-		shootMissile = true;
 		if (shootMissile == true)
 		{
 			missile.Firing();
 		}
+		
 	}
 	
 	MovingAsteroid(dt);
 	CutScene(dt);
+
+	std::cout << delaymissile << std::endl;
 
 	camPosX = camera.position.x;
 	camPosY = camera.position.y;
@@ -646,81 +629,6 @@ void SceneGalaxy::Update(double dt)
 	
 	
 } 
-
-//Lighting
-
-/****************************************************************************/
-/*!
-\brief
-
-\param
-
-\exception
-
-\return
-
-*/
-/****************************************************************************/
-void SceneGalaxy::lighting()
-{
-	if (light[0].type == Light::LIGHT_DIRECTIONAL)
-	{
-		Vector3 lightDir(light[0].position.x, light[0].position.y, light[0].position.z);
-		Vector3 lightDirection_cameraspace = viewStack.Top() * lightDir;
-		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightDirection_cameraspace.x);
-	}
-	else if (light[0].type == Light::LIGHT_SPOT)
-	{
-		Position lightPosition_cameraspace = viewStack.Top()* light[0].position;
-		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
-		Vector3 spotDirection_cameraspace = viewStack.Top() *light[0].spotDirection;
-		glUniform3fv(m_parameters[U_LIGHT0_SPOTDIRECTION], 1, &spotDirection_cameraspace.x);
-	}
-	else if (light[0].type == Light::LIGHT_POINT)
-	{
-
-		Position lightPosition_cameraspace = viewStack.Top() * light[0].position;
-		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
-	}
-}
-
-/****************************************************************************/
-/*!
-\brief
-
-\param
-
-\exception
-
-\return
-
-*/
-/****************************************************************************/
-void SceneGalaxy::lighting2()
-{
-	if (light[1].type == Light::LIGHT_DIRECTIONAL)
-	{
-		Vector3 lightDir(light[1].position.x, light[1].position.y, light[1].position.z);
-		Vector3 lightDirection_cameraspace = viewStack.Top() * lightDir;
-		glUniform3fv(m_parameters[U_LIGHT1_POSITION], 1, &lightDirection_cameraspace.x);
-	}
-	else if (light[1].type == Light::LIGHT_SPOT)
-	{
-		Position lightPosition_cameraspace = viewStack.Top()* light[1].position;
-		glUniform3fv(m_parameters[U_LIGHT1_POSITION], 1, &lightPosition_cameraspace.x);
-		Vector3 spotDirection_cameraspace = viewStack.Top() *light[1].spotDirection;
-		glUniform3fv(m_parameters[U_LIGHT1_SPOTDIRECTION], 1, &spotDirection_cameraspace.x);
-	}
-	else if (light[1].type == Light::LIGHT_POINT)
-	{
-
-		Position lightPosition_cameraspace = viewStack.Top() * light[1].position;
-		glUniform3fv(m_parameters[U_LIGHT1_POSITION], 1, &lightPosition_cameraspace.x);
-	}
-
-}
-
-//Lighting
 
 //Render Functions
 
@@ -899,8 +807,6 @@ void SceneGalaxy::Render()
 
 	//Set projection matrix to perspective mode
 	projection.SetToPerspective(45.0f, 4.0f / 3.0f, 0.1f, 10000.0f); //FOV, Aspect Ratio, Near plane, Far plane
-	lighting();
-	lighting2();
 	modelStack.PushMatrix();
 	modelStack.Translate(light[0].position.x, light[0].position.y, light[0].position.z);
 	modelStack.Scale(0.1f, 0.1f, 0.1f);
