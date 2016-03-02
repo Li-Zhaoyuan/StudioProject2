@@ -666,6 +666,10 @@ void SceneMun::Update(double dt)
 		thisisastring << fultonleft;
 
 	}
+	if (LadyCaptured == true)
+	{
+		worriedladyCoord.y += (float)(80 * dt);
+	}
 	if ((VillageChiefCaptured == true) && (CaptureVChiefCap == 0))
 	{
 
@@ -673,7 +677,12 @@ void SceneMun::Update(double dt)
 		CaptureVChiefCap += 1;
 		thisisastring.seekp(-1, thisisastring.cur);
 		thisisastring << fultonleft;
+		
 
+	}
+	if (VillageChiefCaptured == true)
+	{
+		questdudeCoord.y += (float)(80 * dt);
 	}
 	if ((MinerCaptured == true) && (CaptureMinerCap == 0))
 	{
@@ -682,7 +691,10 @@ void SceneMun::Update(double dt)
 		CaptureMinerCap += 1;
 		thisisastring.seekp(-1, thisisastring.cur);
 		thisisastring << fultonleft;
-
+	}
+	if (MinerCaptured == true)
+	{
+		minerandplusCoord.y += (float)(80 * dt);
 	}
 	if ((CalefareACaptured == true) && (CalefareACap == 0))
 	{
@@ -693,6 +705,10 @@ void SceneMun::Update(double dt)
 		thisisastring << fultonleft;
 
 	}
+	if ((CalefareACaptured == true))
+	{
+		CalefareACoord.y += (float)(80 * dt);
+	}
 	if ((CalefareCCaptured == true) && (CalefareCCap == 0))
 	{
 
@@ -700,7 +716,10 @@ void SceneMun::Update(double dt)
 		CalefareCCap += 1;
 		thisisastring.seekp(-1, thisisastring.cur);
 		thisisastring << fultonleft;
-
+	}
+	if (CalefareCCaptured == true)
+	{
+		CalefareCCoord.y += (float)(80 * dt);
 	}
 	if ((CalefareBCaptured == true) && (CalefareBCap == 0))
 	{
@@ -709,7 +728,12 @@ void SceneMun::Update(double dt)
 		CalefareBCap += 1;
 		thisisastring.seekp(-1, thisisastring.cur);
 		thisisastring << fultonleft;
+		CalefareBCoord.y += (float)(80 * dt);
 
+	}
+	if ((CalefareBCaptured == true))
+	{
+		CalefareBCoord.y += (float)(80 * dt);
 	}
 }
 void SceneMun::lighting()
