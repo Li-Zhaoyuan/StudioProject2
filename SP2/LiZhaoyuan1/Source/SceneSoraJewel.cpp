@@ -185,7 +185,7 @@ void SceneSoraJewel::Init()
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
 
 	meshList[GEO_MINIMAPSJ] = MeshBuilder::GenerateQuad("Minimap for Sora Jewel", Color(1, 1, 1));
-	meshList[GEO_MINIMAPSJ]->textureID = LoadTGA("Image//SoraJewelMap.tga");
+	meshList[GEO_MINIMAPSJ]->textureID = LoadTGA("Image//SoraJewelMapNew.tga");
 
 	meshList[GEO_MAINICONSJ] = MeshBuilder::GenerateQuad("front", Color(0.f, 1.f, 0.f));
 
@@ -956,9 +956,6 @@ void SceneSoraJewel::Render()
 	modelStack.PopMatrix();
 
 	//
-	modelStack.PushMatrix();
-	renderMesh(meshList[GEO_AXES], false);
-	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	RenderSkybox();
@@ -968,13 +965,6 @@ void SceneSoraJewel::Render()
 	modelStack.Scale(20, 20, 20);
 	renderMesh(meshList[GEO_SORAJEWEL], true);
 	modelStack.PopMatrix();
-
-	//modelStack.PushMatrix();
-	//modelStack.Translate(-85, 19, 65);
-	//modelStack.Rotate(90, 0, 1, 0);
-	//modelStack.Scale(5.f, 5.f, 5.f);
-	//renderMesh(meshList[GEO_XWING], true);
-	//modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(Xwing.x, Xwing.y, Xwing.z);
@@ -1094,18 +1084,8 @@ void SceneSoraJewel::Render()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The Quest For Sora Jewel", Color(0, 1, 0), 2, 2, 10);
 	}
-
-	//if (Quest1 == true && Quest2 == false && QuestsDone == false && !Application::IsKeyPressed('W') && !Application::IsKeyPressed('A') && !Application::IsKeyPressed('S') && !Application::IsKeyPressed('D'))
-	//{
-	//	RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The 1st Quest For Sora Jewel", (0, 1, 0), 5, 4, 10);
-	//}
-	//if (Quest2 == true && QuestsDone == false && !Application::IsKeyPressed('W') && !Application::IsKeyPressed('A') && !Application::IsKeyPressed('S') && !Application::IsKeyPressed('D'))
-	//{
-	//	RenderTextOnScreen(meshList[GEO_TEXT], "You Completed The 2nd Quest For Sora Jewel", (0, 1, 0), 5, 4, 10);
-	//}
 	renderText();
 
-	
 	std::stringstream playerPos;
 	playerPos << "X = " << camPosX << " Y = " << camPosY << " Z = " << camPosZ;
 	std::stringstream ss;
@@ -1288,7 +1268,7 @@ void SceneSoraJewel::renderminimaptoscreen()
 	modelStack.PushMatrix();
 	modelStack.LoadIdentity(); //Reset modelStack
 	modelStack.Translate(75.f, 55.f, -2);
-	modelStack.Scale(10.f, 10.f, 10.f);
+	modelStack.Scale(17.f, 17.f, 17.f);
 	modelStack.Rotate(90, 1, 0, 0);
 	renderMesh(meshList[GEO_MINIMAPSJ], false);
 	projectionStack.PopMatrix();
