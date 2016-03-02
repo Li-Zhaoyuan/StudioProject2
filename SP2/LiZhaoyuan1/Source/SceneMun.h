@@ -167,7 +167,6 @@ private:
 	void RenderLetterOnScreen();
 	void RenderInfomationOnScreen();
 	void RenderCalefare();
-	void RenderSceneOBJ();
 	void fultoninteraction();
 	unsigned m_vertexArrayID;
 	Mesh *meshList[NUM_GEOMETRY];
