@@ -280,9 +280,11 @@ private:
 	float rotateplane = 0;
 	float translateplane = 0;
 
-	bool LadyCaptured = false, VillageChiefCaptured = true, MinerCaptured = true;
-	bool CalefareACaptured = true, CalefareBCaptured = true, CalefareCCaptured = true;
-	bool Allcaptured;
+	bool LadyCaptured = false, VillageChiefCaptured = false, MinerCaptured = false;
+	bool CalefareACaptured = false, CalefareBCaptured = false, CalefareCCaptured = false;
+	bool Allcaptured = false;
+	int CaptureLadyCap = 0, CaptureVChiefCap = 0,CaptureMinerCap=0;
+	int CalefareACap = 0, CalefareBCap = 0, CalefareCCap = 0;
 
 
 	MS modelStack, viewStack, projectionStack;
