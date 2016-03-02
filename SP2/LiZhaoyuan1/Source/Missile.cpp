@@ -11,8 +11,7 @@ SceneGalaxy cpp file, everything needed inside the scene, found here
 
 /****************************************************************************/
 /*!
-\brief
-	constructor of Missile.cpp
+\brief	Missile Constructor
 */
 /****************************************************************************/
 Missile::Missile()
@@ -21,8 +20,7 @@ Missile::Missile()
 
 /****************************************************************************/
 /*!
-\brief
-	copy constructor to initialize variables
+\brief	Missile Copy Constructor
 \param
 	const int reference AmmoInMag
 */
@@ -35,8 +33,7 @@ Missile::Missile(const int &AmmoInMag)
 
 /****************************************************************************/
 /*!
-\brief
-	deconstructor of the Missile.cpp
+\brief	Missile destructor
 */
 /****************************************************************************/
 Missile::~Missile()
@@ -45,8 +42,7 @@ Missile::~Missile()
 
 /****************************************************************************/
 /*!
-\brief
-	position set for the missile
+\brief	Missile updatePosition function
 \param
 	const Vector3 reference position
 */
@@ -60,8 +56,7 @@ void Missile::updatePosition(const Vector3 &pos)
 
 /****************************************************************************/
 /*!
-\brief
-	return position
+\brief	Missile getPositionOfMissile function
 \return
 	return position from update
 */
@@ -73,8 +68,7 @@ Vector3 Missile::getPositionOfMissile()
 
 /****************************************************************************/
 /*!
-\brief
-	setting this cpp view as camera.view
+\brief	Missile setView function
 \param
 	const Vector3 reference view
 */
@@ -86,8 +80,7 @@ void Missile::setView(const Vector3 &view)
 
 /****************************************************************************/
 /*!
-\brief
-	animation for the missile
+\brief	Missile Animation function
 \param
 	double dt
 */
@@ -104,8 +97,7 @@ void Missile::Animation(double dt)
 
 /****************************************************************************/
 /*!
-\brief
-
+\brief	Camera3 initializer
 \param
 	Camera3 pointer
 */
@@ -117,8 +109,7 @@ void Missile::init(Camera3 *target)
 
 /****************************************************************************/
 /*!
-\brief
-	missiles will update position and view
+\brief	Missile Firing function
 */
 /****************************************************************************/
 void Missile::Firing()
@@ -138,8 +129,7 @@ void Missile::Firing()
 
 /****************************************************************************/
 /*!
-\brief
-	getting position of the position, missile will update and animate
+\brief	Missile update function
 \param
 	double dt
 */
