@@ -1,9 +1,88 @@
-﻿Build started 2/3/2016 10:52:17 AM.
+﻿Build started 2/3/2016 11:05:52 AM.
      1>Project "E:\School stuff\2015S2\Computer Graphics Project\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" on node 2 (Build target(s)).
-     1>Link:
+     1>ClCompile:
+         E:\Programs\Visual Studio 2013\VC\bin\CL.exe /c /I"E:\School stuff\2015S2\Computer Graphics Project\SP2\\Common\Source" /I"E:\School stuff\2015S2\Computer Graphics Project\SP2\\glfw\include" /I"E:\School stuff\2015S2\Computer Graphics Project\SP2\\glew\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\Camera3.cpp
+         Camera3.cpp
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(115): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(117): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(126): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(131): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(144): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(146): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(150): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(151): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(155): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(159): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(160): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(173): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(175): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(179): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(180): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(184): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(188): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(189): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(203): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(205): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(209): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(210): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(214): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(218): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(219): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(670): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(674): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(687): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(692): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(720): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(724): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(728): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(729): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(737): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(741): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(742): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(777): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(781): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(785): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(786): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(794): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(798): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(799): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(831): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(835): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(839): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(840): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(848): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(852): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(853): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(862): warning C4305: '=' : truncation from 'double' to 'float'
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(863): warning C4305: '=' : truncation from 'double' to 'float'
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(934): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>e:\school stuff\2015s2\computer graphics project\sp2\lizhaoyuan1\source\camera3.cpp(939): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+       Link:
+         E:\Programs\Visual Studio 2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\LiZhaoyuan1.exe" /INCREMENTAL /NOLOGO /LIBPATH:"E:\School stuff\2015S2\Computer Graphics Project\SP2\\glew\lib" /LIBPATH:"E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug" /LIBPATH:"E:\School stuff\2015S2\Computer Graphics Project\SP2\\glfw\lib-msvc120" glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\LiZhaoyuan1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\LiZhaoyuan1.lib" /MACHINE:X86 Debug\Application.obj
+         Debug\Camera.obj
+         Debug\Camera2.obj
+         Debug\Camera3.obj
+         Debug\Camera4.obj
+         Debug\LoadingScreen.obj
+         Debug\LoadOBJ.obj
+         Debug\LoadTGA.obj
+         Debug\main.obj
+         Debug\Mesh.obj
+         Debug\MeshBuilder.obj
+         Debug\Missile.obj
+         Debug\Music.obj
+         Debug\Physics.obj
+         Debug\ReadTextFiles.obj
+         Debug\SceneGalaxy.obj
+         Debug\SceneMun.obj
+         Debug\SceneSoraJewel.obj
+         Debug\shader.obj
+         Debug\SP2.obj
+         Debug\Utility.obj
+     1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
          LiZhaoyuan1.vcxproj -> E:\School stuff\2015S2\Computer Graphics Project\SP2\Debug\LiZhaoyuan1.exe
      1>Done Building Project "E:\School stuff\2015S2\Computer Graphics Project\SP2\LiZhaoyuan1\LiZhaoyuan1.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.04
+Time Elapsed 00:00:01.19

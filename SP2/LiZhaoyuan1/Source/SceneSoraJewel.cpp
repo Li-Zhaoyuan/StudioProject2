@@ -179,8 +179,8 @@ void SceneSoraJewel::Init()
 
 	//camera.Init(Vector3(0, 350, 1), Vector3(0, 7, 0), Vector3(0, 1, 0));
 
-	camera.minimapsoracoords.x = 78.f; //
-	camera.minimapsoracoords.y = 55.f; //
+	camera.minimapsoracoords.x = 77.5f; //
+	camera.minimapsoracoords.y = 52.6f; //
 
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
 
@@ -1272,7 +1272,7 @@ void SceneSoraJewel::renderminimaptoscreen()
 	modelStack.PushMatrix();
 	modelStack.LoadIdentity(); //Reset modelStack
 	modelStack.Translate(75.f, 55.f, -2);
-	modelStack.Scale(17.f, 17.f, 17.f);
+	modelStack.Scale(10.f, 10.f, 10.f);
 	modelStack.Rotate(90, 1, 0, 0);
 	renderMesh(meshList[GEO_MINIMAPSJ], false);
 	projectionStack.PopMatrix();

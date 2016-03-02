@@ -1728,9 +1728,9 @@ void SceneMun::RenderInfomationOnScreen()
 		viewStack.PopMatrix();
 		modelStack.PopMatrix();
 		glEnable(GL_DEPTH_TEST);              //                            //
-		RenderTextOnScreen(meshList[GEO_TEXT], "You Captured All the Villagers!", Color(0, 0, 0), 3, 6, 5);
-		RenderTextOnScreen(meshList[GEO_TEXT], "You Forced them to repair your ship.", Color(0, 0, 0), 3, 6, 4);
-		RenderTextOnScreen(meshList[GEO_TEXT], "THE END", Color(0, 0, 0), 3, 6, 3);
+		RenderTextOnScreen(meshList[GEO_TEXT], "You Captured All the Villagers!", Color(0, 0, 0), 2.5, 7, 5);
+		RenderTextOnScreen(meshList[GEO_TEXT], "You Forced them to repair your ship.", Color(0, 0, 0), 2.5, 7, 4);
+		RenderTextOnScreen(meshList[GEO_TEXT], "THE END", Color(0, 0, 0), 2.5, 7, 3);
 	}
 
 	if ((((interact >> CAN_INTERACT) & 1) > 0))

@@ -24,7 +24,7 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 	translateChar = 0;
 	rotateChar = 0;
 	//minimapcoords = (78.f, 55.f, -1.f);
-	minimapsoracoords = (78.f,55.f, -1.f);;
+	minimapsoracoords = (77.5f, 52.6f, -1.f);
 	SetCursorPos( 800 / 2, 600 / 2);
 	mass = 70;
 	Force = 1000;
@@ -227,8 +227,8 @@ void Camera3::Update(double dt, float bounds)
 	{
 		minimapcoords.x = 75;
 		minimapcoords.y = 55;
-		minimapsoracoords.x = 78;
-		minimapsoracoords.y = 55;
+		minimapsoracoords.x = 77.5f;
+		minimapsoracoords.y = 52.6f;
 		Reset();
 	}
 	
@@ -861,8 +861,8 @@ void Camera3::SJUpdate(double dt, float maxboundsx, float minboundsx, float minb
 	{
 		minimapcoords.x = 78.9;
 		minimapcoords.y = 59.9;
-		minimapsoracoords.x = 78.9f; 
-		minimapsoracoords.y = 53.9f;
+		minimapsoracoords.x = 77.5f;
+		minimapsoracoords.y = 52.6f;
 		Reset();
 	}
 
