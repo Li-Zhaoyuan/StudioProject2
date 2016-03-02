@@ -1,6 +1,6 @@
 /****************************************************************************/
 /*!
-\file SceneSoraJewel.h
+\file Music.h
 \author Li Zhaoyuan
 \par email: lizhaoyuan123@hotmail.com
 \brief

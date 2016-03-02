@@ -16,7 +16,6 @@ class for the scene at Galaxy
 #include "Light.h"
 #include "Camera.h"
 #include "Camera3.h"
-#include "Camera4.h"
 #include "MatrixStack.h"
 #include <vector>
 #include "Missile.h"
