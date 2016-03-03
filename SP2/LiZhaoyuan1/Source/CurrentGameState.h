@@ -28,4 +28,24 @@ public:
 private:
 	Gamemode(){}
 };
+
+enum mainmenu
+{
+	START=0,
+	EXIT,
+};
+
+class mainmenuenum
+{
+public:
+	static mainmenuenum* GetEnum()
+	{
+		static mainmenuenum data;
+		return &data;
+	}
+	mainmenu start = START;
+	bool gameexit = false;
+private:
+	mainmenuenum(){};
+};
 #endif

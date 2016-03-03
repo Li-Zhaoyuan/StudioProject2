@@ -15,7 +15,7 @@ class for the Main Menu
 
 #include "shader.hpp"
 #include "Mtx44.h"
-
+#include "CurrentGameState.h"
 #include "Application.h"
 #include "MeshBuilder.h"
 #include "Light.h"
@@ -115,6 +115,7 @@ void SP2::Init()
 	projectionStack.LoadMatrix(projection);
 	arrowpositiony = 7;
 }
+float ftest = 0.0f;
 /******************************************************************************/
 /*!
 \brief	SP2 main Update function
@@ -125,46 +126,31 @@ void SP2::Init()
 /******************************************************************************/
 void SP2::Update(double dt)
 {
-	//camera.Update(dt,100);
 	fps = 1 / dt;
-
-	if (camera.position.x >= 50 && camera.position.z >= 50 && Application::IsKeyPressed('E'))
-	{
-		Gamemode::getinstance()->currentgamestate = 2;
-	}
-	
-
 	
 	camPosX = camera.position.x;
 	camPosY = camera.position.y;
 	camPosz = camera.position.z;
+	ftest += (10.f * dt);
 
-	if (arrowpositiony > 4 && arrowpositiony < 8)
+	if (Application::IsKeyPressed(VK_UP))
 	{
-		if (Application::IsKeyPressed(VK_UP) && arrowpositiony==6)
-		{
-			arrowpositiony += 1;
-		}
-		if (Application::IsKeyPressed(VK_UP) && arrowpositiony == 5)
-		{
-			arrowpositiony += 1;
-		}
-		if (Application::IsKeyPressed(VK_DOWN)&& arrowpositiony==7)
-		{
-			arrowpositiony -= 1;
-		}
-		if (Application::IsKeyPressed(VK_DOWN) && arrowpositiony == 6)
-		{
-			arrowpositiony -= 1;
-		}
+		if (mainmenuenum::GetEnum()->start != START && ftest > 3.0f)
+		mainmenuenum::GetEnum()->start = static_cast<mainmenu>(mainmenuenum::GetEnum()->start - 1);
 	}
-	if ((arrowpositiony == 7) && (Application::IsKeyPressed(VK_RETURN)))
+	if (Application::IsKeyPressed(VK_DOWN))
+	{
+		if (mainmenuenum::GetEnum()->start != EXIT && ftest > 3.0f)
+		mainmenuenum::GetEnum()->start = static_cast<mainmenu>(mainmenuenum::GetEnum()->start + 1);
+	}
+	
+	if (Application::IsKeyPressed(VK_RETURN) && mainmenuenum::GetEnum()->start == START)
 	{
 		Gamemode::getinstance()->currentgamestate = 2;
 	}
-	if ((arrowpositiony == 5) && (Application::IsKeyPressed(VK_RETURN)))
+	if (Application::IsKeyPressed(VK_RETURN) && mainmenuenum::GetEnum()->start == EXIT)
 	{
-		application.Exit();
+		mainmenuenum::GetEnum()->gameexit = true;
 	}
 	
 	
@@ -393,10 +379,17 @@ void SP2::Render()
 	std::stringstream ss;
 	ss << "FPS:" << fps << "         ";
 	RenderTextOnScreen(meshList[GEO_TEXT], ss.str(), Color(0, 1, 0), 3, 0, 19);
-
-	RenderTextOnScreen(meshList[GEO_TEXT], "=>", Color(0, 1, 0), 3, 3.5, arrowpositiony);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Start", Color(0, 1, 0), 3, 5, 7);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Exit", Color(0, 1, 0), 3, 5, 5);
+	if(mainmenuenum::GetEnum()->start==START)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "=>", Color(0, 1, 0), 3, 3.5, 7);
+	}
+	if (mainmenuenum::GetEnum()->start == EXIT)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "=>", Color(0, 1, 0), 3, 3.5, 5);
+	}
+
 	
 	RenderTextOnScreen(meshList[GEO_TEXT], "The Adventures Of Yalam", Color(1, 1, 1), 5, 3, 7);
 }
