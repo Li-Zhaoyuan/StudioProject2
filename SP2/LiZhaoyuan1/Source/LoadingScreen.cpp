@@ -100,7 +100,6 @@ void LoadingScreen::Init()
 	meshList[GEO_CUBE] = MeshBuilder::GenerateCube("reference", Color(1, 1, 1));
 
 	meshList[GEO_QUAD] = MeshBuilder::GenerateQuad("quad", Color(0, 0, 0));
-	meshList[GEO_QUAD]->textureID = LoadTGA("Image//Pikachu2.tga");
 
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//TimesNewRoman.tga");

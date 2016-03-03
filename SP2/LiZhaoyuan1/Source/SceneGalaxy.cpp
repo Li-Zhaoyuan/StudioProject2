@@ -613,7 +613,6 @@ void SceneGalaxy::Update(double dt)
 	MovingAsteroid(dt);
 	CutScene(dt);
 
-	std::cout << delaymissile << std::endl;
 
 	camPosX = camera.position.x;
 	camPosY = camera.position.y;

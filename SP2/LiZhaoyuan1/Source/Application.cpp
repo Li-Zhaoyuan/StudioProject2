@@ -114,7 +114,9 @@ void Application::Run()
 	int loadingitonceSoraJewel=1;
 	int loadingitonceGalaxy = 1;
 	int loadingitonceMun = 1;
-	
+	int loadingManinMenuOnce = 1;
+	int lodaingitonceLoadingScreen = 1;
+
 	//Main Loop
 	Scene *currscene = new SP2();
 	Scene *scenestart = new SP2();
@@ -160,19 +162,21 @@ void Application::Run()
 			sceneischanged = true;
 			playmusic.musicMun();
 		}
-		if (Gamemode::getinstance()->currentgamestate == 1)
+		if (Gamemode::getinstance()->currentgamestate == 1 && loadingManinMenuOnce == 1)
 		{
 			currscene = new SP2();
 			loadingitonceSoraJewel = 1;
 			loadingitonceGalaxy = 1;
 			loadingitonceMun = 1;
-			currscene->Init();
+			sceneischanged = true;
+			loadingManinMenuOnce += 1;
 			playmusic.musicMainMenu();
 		}
-		else if (Gamemode::getinstance()->currentgamestate == 2 && loadingitonceSoraJewel == 1)
+		else if (Gamemode::getinstance()->currentgamestate == 2 && loadingitonceSoraJewel == 1 && lodaingitonceLoadingScreen == 1)
 		{
 			currscene = loading;
 			currscene->Init();
+			lodaingitonceLoadingScreen += 1;
 			sceneischanged = true;
 		}
 		else if (Gamemode::getinstance()->currentgamestate == 3 && loadingitonceSoraJewel == 1)
@@ -181,18 +185,19 @@ void Application::Run()
 			//currscene->Init();
 			sceneischanged = true;
 			playmusic.musicSoraJewel();
+			lodaingitonceLoadingScreen = 1;
 			loadingitonceSoraJewel += 1;
 		}
-		else if (Gamemode::getinstance()->currentgamestate == 4 && loadingitonceSoraJewel == 2)
+		else if (Gamemode::getinstance()->currentgamestate == 4 && loadingitonceSoraJewel == 2 && lodaingitonceLoadingScreen == 1)
 		{
 			currscene = loading;
-			currscene->Init();
+			lodaingitonceLoadingScreen += 1;
 			sceneischanged = true;
 		}
-		else if (Gamemode::getinstance()->currentgamestate == 4 && loadingitonceSoraJewel == 1)
+		else if (Gamemode::getinstance()->currentgamestate == 4 && loadingitonceSoraJewel == 1 && lodaingitonceLoadingScreen == 1)
 		{
 			currscene = loading;
-			currscene->Init();
+			lodaingitonceLoadingScreen += 1;
 			sceneischanged = true;
 		}
 		else if (Gamemode::getinstance()->currentgamestate == 5 && loadingitonceGalaxy == 1)
@@ -201,12 +206,14 @@ void Application::Run()
 				//currscene->Init();
 				sceneischanged = true;
 				playmusic.musicGalaxy();
+				lodaingitonceLoadingScreen = 1;
 				loadingitonceGalaxy += 1;
 			}
-		else if (Gamemode::getinstance()->currentgamestate == 6 && loadingitonceMun == 1)
+		else if (Gamemode::getinstance()->currentgamestate == 6 && loadingitonceMun == 1 && lodaingitonceLoadingScreen == 1)
 		{
 			currscene = loading;
 			currscene->Init();
+			lodaingitonceLoadingScreen += 1;
 			sceneischanged = true;
 		}
 		else if (Gamemode::getinstance()->currentgamestate == 7 && loadingitonceMun==1)
@@ -215,6 +222,8 @@ void Application::Run()
 				//currscene->Init();
 				sceneischanged = true;
 				playmusic.musicMun();
+				lodaingitonceLoadingScreen = 1;
+				loadingManinMenuOnce = 1;
 				loadingitonceMun += 1;
 			}
 		if (sceneischanged == true)
