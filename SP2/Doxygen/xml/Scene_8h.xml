@@ -8,6 +8,10 @@
     <includedby refid="SceneGalaxy_8h" local="yes">LiZhaoyuan1/Source/SceneGalaxy.h</includedby>
     <includedby refid="SceneSoraJewel_8h" local="yes">LiZhaoyuan1/Source/SceneSoraJewel.h</includedby>
     <invincdepgraph>
+      <node id="3729">
+        <label>LiZhaoyuan1/Source/SP2.cpp</label>
+        <link refid="SP2_8cpp"/>
+      </node>
       <node id="3730">
         <label>LiZhaoyuan1/Source/LoadingScreen.h</label>
         <link refid="LoadingScreen_8h"/>
@@ -15,6 +19,10 @@
         </childnode>
         <childnode refid="3731" relation="include">
         </childnode>
+      </node>
+      <node id="3728">
+        <label>LiZhaoyuan1/Source/SceneGalaxy.cpp</label>
+        <link refid="SceneGalaxy_8cpp"/>
       </node>
       <node id="3724">
         <label>LiZhaoyuan1/Source/Scene.h</label>
@@ -30,15 +38,17 @@
         <childnode refid="3734" relation="include">
         </childnode>
       </node>
-      <node id="3725">
-        <label>LiZhaoyuan1/Source/SP2.h</label>
-        <link refid="SP2_8h"/>
+      <node id="3727">
+        <label>LiZhaoyuan1/Source/SceneGalaxy.h</label>
+        <link refid="SceneGalaxy_8h"/>
         <childnode refid="3726" relation="include">
         </childnode>
-        <childnode refid="3727" relation="include">
+        <childnode refid="3728" relation="include">
         </childnode>
-        <childnode refid="3729" relation="include">
-        </childnode>
+      </node>
+      <node id="3735">
+        <label>LiZhaoyuan1/Source/SceneSoraJewel.cpp</label>
+        <link refid="SceneSoraJewel_8cpp"/>
       </node>
       <node id="3726">
         <label>LiZhaoyuan1/Source/Application.cpp</label>
@@ -52,12 +62,22 @@
         <label>LiZhaoyuan1/Source/LoadingScreen.cpp</label>
         <link refid="LoadingScreen_8cpp"/>
       </node>
-      <node id="3727">
-        <label>LiZhaoyuan1/Source/SceneGalaxy.h</label>
-        <link refid="SceneGalaxy_8h"/>
+      <node id="3734">
+        <label>LiZhaoyuan1/Source/SceneSoraJewel.h</label>
+        <link refid="SceneSoraJewel_8h"/>
         <childnode refid="3726" relation="include">
         </childnode>
-        <childnode refid="3728" relation="include">
+        <childnode refid="3735" relation="include">
+        </childnode>
+      </node>
+      <node id="3725">
+        <label>LiZhaoyuan1/Source/SP2.h</label>
+        <link refid="SP2_8h"/>
+        <childnode refid="3726" relation="include">
+        </childnode>
+        <childnode refid="3727" relation="include">
+        </childnode>
+        <childnode refid="3729" relation="include">
         </childnode>
       </node>
       <node id="3732">
@@ -67,26 +87,6 @@
         </childnode>
         <childnode refid="3733" relation="include">
         </childnode>
-      </node>
-      <node id="3728">
-        <label>LiZhaoyuan1/Source/SceneGalaxy.cpp</label>
-        <link refid="SceneGalaxy_8cpp"/>
-      </node>
-      <node id="3729">
-        <label>LiZhaoyuan1/Source/SP2.cpp</label>
-        <link refid="SP2_8cpp"/>
-      </node>
-      <node id="3734">
-        <label>LiZhaoyuan1/Source/SceneSoraJewel.h</label>
-        <link refid="SceneSoraJewel_8h"/>
-        <childnode refid="3726" relation="include">
-        </childnode>
-        <childnode refid="3735" relation="include">
-        </childnode>
-      </node>
-      <node id="3735">
-        <label>LiZhaoyuan1/Source/SceneSoraJewel.cpp</label>
-        <link refid="SceneSoraJewel_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classScene" prot="public">Scene</innerclass>

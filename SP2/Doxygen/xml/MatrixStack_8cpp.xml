@@ -4,27 +4,11 @@
     <compoundname>MatrixStack.cpp</compoundname>
     <includes refid="MatrixStack_8h" local="yes">MatrixStack.h</includes>
     <incdepgraph>
-      <node id="2136">
-        <label>MatrixStack.h</label>
-        <link refid="MatrixStack_8h"/>
-        <childnode refid="2137" relation="include">
-        </childnode>
-        <childnode refid="2138" relation="include">
-        </childnode>
-      </node>
       <node id="2140">
         <label>cmath</label>
       </node>
       <node id="2141">
         <label>exception</label>
-      </node>
-      <node id="2138">
-        <label>Mtx44.h</label>
-        <link refid="Mtx44_8h"/>
-        <childnode refid="2139" relation="include">
-        </childnode>
-        <childnode refid="2144" relation="include">
-        </childnode>
       </node>
       <node id="2135">
         <label>Common/Source/MatrixStack.cpp</label>
@@ -35,6 +19,9 @@
       <node id="2142">
         <label>ctime</label>
       </node>
+      <node id="2137">
+        <label>stack</label>
+      </node>
       <node id="2144">
         <label>Vector3.h</label>
         <link refid="Vector3_8h"/>
@@ -43,14 +30,19 @@
         <childnode refid="2145" relation="include">
         </childnode>
       </node>
-      <node id="2137">
-        <label>stack</label>
-      </node>
       <node id="2143">
         <label>cstdlib</label>
       </node>
       <node id="2145">
         <label>iostream</label>
+      </node>
+      <node id="2138">
+        <label>Mtx44.h</label>
+        <link refid="Mtx44_8h"/>
+        <childnode refid="2139" relation="include">
+        </childnode>
+        <childnode refid="2144" relation="include">
+        </childnode>
       </node>
       <node id="2139">
         <label>MyMath.h</label>
@@ -62,6 +54,14 @@
         <childnode refid="2142" relation="include">
         </childnode>
         <childnode refid="2143" relation="include">
+        </childnode>
+      </node>
+      <node id="2136">
+        <label>MatrixStack.h</label>
+        <link refid="MatrixStack_8h"/>
+        <childnode refid="2137" relation="include">
+        </childnode>
+        <childnode refid="2138" relation="include">
         </childnode>
       </node>
     </incdepgraph>

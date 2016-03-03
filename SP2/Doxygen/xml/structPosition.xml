@@ -16,9 +16,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/Vertex.h" line="8" column="1" bodyfile="LiZhaoyuan1/Source/Vertex.h" bodystart="8" bodyend="-1"/>
-        <referencedby refid="classSceneMun_1aaec7e417376eacf289ee2501d1ac9c71" compoundref="SceneMun_8cpp" startline="796" endline="817">SceneMun::lighting</referencedby>
+        <referencedby refid="classSceneMun_1aaec7e417376eacf289ee2501d1ac9c71" compoundref="SceneMun_8cpp" startline="811" endline="832">SceneMun::lighting</referencedby>
         <referencedby refid="classSceneSoraJewel_1ac5c92f43b536aa0497507e13d0a56c96" compoundref="SceneSoraJewel_8cpp" startline="834" endline="855">SceneSoraJewel::lighting</referencedby>
-        <referencedby refid="classSceneMun_1abf01514b7e53fbf6ba1d96b42644a1d9" compoundref="SceneMun_8cpp" startline="831" endline="853">SceneMun::lighting2</referencedby>
+        <referencedby refid="classSceneMun_1abf01514b7e53fbf6ba1d96b42644a1d9" compoundref="SceneMun_8cpp" startline="846" endline="868">SceneMun::lighting2</referencedby>
         <referencedby refid="classSceneSoraJewel_1a418548255e756309d8d2c4dfdec40233" compoundref="SceneSoraJewel_8cpp" startline="868" endline="889">SceneSoraJewel::lighting2</referencedby>
         <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="7" endline="121">LoadOBJ</referencedby>
         <referencedby refid="Utility_8h_1adfba271c0b8f223d01dd4f35e62e27af" compoundref="Utility_8cpp" startline="3" endline="9">operator*</referencedby>
@@ -36,9 +36,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/Vertex.h" line="8" column="1" bodyfile="LiZhaoyuan1/Source/Vertex.h" bodystart="8" bodyend="-1"/>
-        <referencedby refid="classSceneMun_1aaec7e417376eacf289ee2501d1ac9c71" compoundref="SceneMun_8cpp" startline="796" endline="817">SceneMun::lighting</referencedby>
+        <referencedby refid="classSceneMun_1aaec7e417376eacf289ee2501d1ac9c71" compoundref="SceneMun_8cpp" startline="811" endline="832">SceneMun::lighting</referencedby>
         <referencedby refid="classSceneSoraJewel_1ac5c92f43b536aa0497507e13d0a56c96" compoundref="SceneSoraJewel_8cpp" startline="834" endline="855">SceneSoraJewel::lighting</referencedby>
-        <referencedby refid="classSceneMun_1abf01514b7e53fbf6ba1d96b42644a1d9" compoundref="SceneMun_8cpp" startline="831" endline="853">SceneMun::lighting2</referencedby>
+        <referencedby refid="classSceneMun_1abf01514b7e53fbf6ba1d96b42644a1d9" compoundref="SceneMun_8cpp" startline="846" endline="868">SceneMun::lighting2</referencedby>
         <referencedby refid="classSceneSoraJewel_1a418548255e756309d8d2c4dfdec40233" compoundref="SceneSoraJewel_8cpp" startline="868" endline="889">SceneSoraJewel::lighting2</referencedby>
         <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="7" endline="121">LoadOBJ</referencedby>
         <referencedby refid="Utility_8h_1adfba271c0b8f223d01dd4f35e62e27af" compoundref="Utility_8cpp" startline="3" endline="9">operator*</referencedby>
@@ -58,9 +58,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/Vertex.h" line="8" column="1" bodyfile="LiZhaoyuan1/Source/Vertex.h" bodystart="8" bodyend="-1"/>
-        <referencedby refid="classSceneMun_1aaec7e417376eacf289ee2501d1ac9c71" compoundref="SceneMun_8cpp" startline="796" endline="817">SceneMun::lighting</referencedby>
+        <referencedby refid="classSceneMun_1aaec7e417376eacf289ee2501d1ac9c71" compoundref="SceneMun_8cpp" startline="811" endline="832">SceneMun::lighting</referencedby>
         <referencedby refid="classSceneSoraJewel_1ac5c92f43b536aa0497507e13d0a56c96" compoundref="SceneSoraJewel_8cpp" startline="834" endline="855">SceneSoraJewel::lighting</referencedby>
-        <referencedby refid="classSceneMun_1abf01514b7e53fbf6ba1d96b42644a1d9" compoundref="SceneMun_8cpp" startline="831" endline="853">SceneMun::lighting2</referencedby>
+        <referencedby refid="classSceneMun_1abf01514b7e53fbf6ba1d96b42644a1d9" compoundref="SceneMun_8cpp" startline="846" endline="868">SceneMun::lighting2</referencedby>
         <referencedby refid="classSceneSoraJewel_1a418548255e756309d8d2c4dfdec40233" compoundref="SceneSoraJewel_8cpp" startline="868" endline="889">SceneSoraJewel::lighting2</referencedby>
         <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="7" endline="121">LoadOBJ</referencedby>
         <referencedby refid="Utility_8h_1adfba271c0b8f223d01dd4f35e62e27af" compoundref="Utility_8cpp" startline="3" endline="9">operator*</referencedby>
@@ -140,7 +140,7 @@
         <referencedby refid="classMeshBuilder_1aac7c87881dbc08f8d41f2068e0f40c76" compoundref="MeshBuilder_8cpp" startline="99" endline="147">MeshBuilder::GenerateText</referencedby>
         <referencedby refid="LoadOBJ_8h_1aa99ef9426a57205ed8acb8f7d41f3bae" compoundref="LoadOBJ_8cpp" startline="149" endline="189">IndexVBO</referencedby>
         <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
-        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="414">SceneMun::Init</referencedby>
         <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
         <referencedby refid="structLight_1aeb5df09a25a32f19fdffa761268ba24f" compoundref="Light_8h" startline="12" endline="18">Light::Light</referencedby>
         <referencedby refid="structPosition_1ab73d81912c4ead48cee5342d7cf5a33b" compoundref="Vertex_8h" startline="9" endline="9">Position</referencedby>

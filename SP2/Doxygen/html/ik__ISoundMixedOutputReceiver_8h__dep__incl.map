@@ -1,0 +1,24 @@
+<map id="LiZhaoyuan1/Source/include/ik_ISoundMixedOutputReceiver.h" name="LiZhaoyuan1/Source/include/ik_ISoundMixedOutputReceiver.h">
+<area shape="rect" id="node2" href="$ik__ISoundEngine_8h.html" title="LiZhaoyuan1/Source\l/include/ik_ISoundEngine.h" alt="" coords="1132,109,1311,151"/>
+<area shape="rect" id="node3" href="$irrKlang_8h.html" title="Main header file of the irrKlang sound library, the only file needed to include. " alt="" coords="1214,199,1354,240"/>
+<area shape="rect" id="node4" href="$Music_8h.html" title="class for the Music class " alt="" coords="1214,288,1354,329"/>
+<area shape="rect" id="node5" href="$Application_8h.html" title="LiZhaoyuan1/Source\l/Application.h" alt="" coords="757,377,897,419"/>
+<area shape="rect" id="node6" href="$Application_8cpp.html" title="LiZhaoyuan1/Source\l/Application.cpp" alt="" coords="804,735,944,776"/>
+<area shape="rect" id="node18" href="$SceneSoraJewel_8h.html" title="class for the scene at SoraJewel " alt="" coords="1052,556,1192,597"/>
+<area shape="rect" id="node23" href="$Music_8cpp.html" title="class for the Music class " alt="" coords="1400,377,1540,419"/>
+<area shape="rect" id="node7" href="$Camera3_8h.html" title="class for the camera used in the various scenes " alt="" coords="510,467,650,508"/>
+<area shape="rect" id="node10" href="$SceneGalaxy_8cpp.html" title="SceneGalaxy cpp file, everything needed inside the scene, found here. " alt="" coords="102,735,242,776"/>
+<area shape="rect" id="node11" href="$SP2_8cpp.html" title="class for the Main Menu " alt="" coords="49,645,189,687"/>
+<area shape="rect" id="node13" href="$LoadingScreen_8cpp.html" title="class for the scene while Loading " alt="" coords="696,645,836,687"/>
+<area shape="rect" id="node15" href="$SceneMun_8cpp.html" title="LiZhaoyuan1/Source\l/SceneMun.cpp" alt="" coords="912,645,1052,687"/>
+<area shape="rect" id="node19" href="$SceneSoraJewel_8cpp.html" title="LiZhaoyuan1/Source\l/SceneSoraJewel.cpp" alt="" coords="1127,645,1274,687"/>
+<area shape="rect" id="node20" href="$Camera3_8cpp.html" title="Camera. " alt="" coords="48,556,188,597"/>
+<area shape="rect" id="node21" href="$Camera_8cpp.html" title="LiZhaoyuan1/Source\l/Camera.cpp" alt="" coords="865,467,1005,508"/>
+<area shape="rect" id="node22" href="$main_8cpp.html" title="LiZhaoyuan1/Source\l/main.cpp" alt="" coords="1029,467,1169,508"/>
+<area shape="rect" id="node8" href="$SP2_8h.html" title="class for the Main Menu " alt="" coords="212,556,352,597"/>
+<area shape="rect" id="node9" href="$SceneGalaxy_8h.html" title="class for the scene at Galaxy " alt="" coords="316,645,456,687"/>
+<area shape="rect" id="node12" href="$LoadingScreen_8h.html" title="Class of the Gamestates of the game. " alt="" coords="592,556,732,597"/>
+<area shape="rect" id="node14" href="$SceneMun_8h.html" title="class for the scene at Mun " alt="" coords="808,556,948,597"/>
+<area shape="rect" id="node16" href="$Missile_8h.html" title="class for the shooting of missile " alt="" coords="428,556,568,597"/>
+<area shape="rect" id="node17" href="$Missile_8cpp.html" title="SceneGalaxy cpp file, everything needed inside the scene, found here. " alt="" coords="480,645,620,687"/>
+</map>

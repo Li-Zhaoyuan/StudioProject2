@@ -1,0 +1,24 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$classApplication.html#a9d410604b39b8374a884b1f2a1f2a5ba" title="Application::Exit" alt="" coords="104,5,221,32"/>
+<area shape="rect" id="node3" href="$classApplication.html#a276388f7090c0a2b1c8b16cf033b969d" title="Application::Init" alt="" coords="107,56,218,83"/>
+<area shape="rect" id="node6" href="$classApplication.html#aaf09cd6cb412086dc039e28cdb059f0d" title="Application::Run" alt="" coords="104,385,221,412"/>
+<area shape="rect" id="node4" href="$Application_8cpp.html#a6e6d1771a9242858811be0a3569838fa" title="error_callback" alt="" coords="312,56,415,83"/>
+<area shape="rect" id="node5" href="$Application_8cpp.html#aadcee9765075e232ca0720f80a76ad37" title="resize_callback" alt="" coords="307,5,419,32"/>
+<area shape="rect" id="node7" href="$classScene.html#ac3c4677dfd702a3ffd5ffadd3f1ac478" title="Scene::Init" alt="" coords="321,411,405,437"/>
+<area shape="rect" id="node8" href="$classStopWatch.html#a23301f735a2e3190435e39c9fd70cdf2" title="StopWatch::startTimer" alt="" coords="287,461,440,488"/>
+<area shape="rect" id="node9" href="$classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe" title="Application::IsKeyPressed" alt="" coords="276,512,451,539"/>
+<area shape="rect" id="node10" href="$classmusic.html#a42a802fd796b8556d64225aa9abd55d3" title="music function to play music for Sora Jewel scene " alt="" coords="284,613,443,640"/>
+<area shape="rect" id="node14" href="$classmusic.html#a980e490547c2f6a7a7875e58548fce5b" title="music function to play music for Galaxy scene " alt="" coords="293,664,434,691"/>
+<area shape="rect" id="node15" href="$classmusic.html#a3d999425453d51069667bb0be1471e83" title="music function to play music for Mun scene " alt="" coords="301,715,426,741"/>
+<area shape="rect" id="node16" href="$classGamemode.html#af47c19fec76ecf68cf2b13933572ec19" title="Gamemode::getinstance" alt="" coords="281,107,445,133"/>
+<area shape="rect" id="node17" href="$classmusic.html#a2a0b59c8aef55331ccc449f3eb31f1a9" title="music function to play music for main menu " alt="" coords="283,563,443,589"/>
+<area shape="rect" id="node18" href="$classScene.html#af5c6bcf2185087fb32c27fb8f6a18d91" title="Scene::Update" alt="" coords="309,157,417,184"/>
+<area shape="rect" id="node19" href="$classStopWatch.html#ac8be1626396d1a5ca414f74349d59eb2" title="StopWatch::getElapsedTime" alt="" coords="269,208,457,235"/>
+<area shape="rect" id="node21" href="$classScene.html#ae24d21e12b34839994ad265662ea24d7" title="Scene::Render" alt="" coords="309,259,417,285"/>
+<area shape="rect" id="node22" href="$classStopWatch.html#a2cd0856fc87a40038edfd66d784be8b4" title="StopWatch::waitUntil" alt="" coords="291,309,435,336"/>
+<area shape="rect" id="node23" href="$classScene.html#aae8e24654ef98c79961c2b804b12852c" title="Scene::Exit" alt="" coords="318,360,409,387"/>
+<area shape="rect" id="node11" href="$classirrklang_1_1ISoundEngine.html#a38dbc2f1d49e3127fc4a81a9c1a2f82d" title="Stops all currently playing sounds. " alt="" coords="519,583,671,625"/>
+<area shape="rect" id="node12" href="$classirrklang_1_1ISoundEngine.html#a4eed0fa6712872e55003b26462e21005" title="Adds sound source into the sound engine as file. " alt="" coords="505,714,685,755"/>
+<area shape="rect" id="node13" href="$classirrklang_1_1ISoundEngine.html#a25f612fe6479d3b22dc5bab2a2eaa927" title="loads a sound source (if not loaded already) from a file and plays it. " alt="" coords="519,649,671,690"/>
+<area shape="rect" id="node20" href="$classStopWatch.html#a2e61acbf46638eb3275cc8a7c1ea768d" title="StopWatch::LIToSecs" alt="" coords="521,208,670,235"/>
+</map>

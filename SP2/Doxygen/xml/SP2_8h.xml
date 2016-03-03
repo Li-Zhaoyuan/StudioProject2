@@ -12,63 +12,52 @@
     <includedby refid="SceneGalaxy_8h" local="yes">LiZhaoyuan1/Source/SceneGalaxy.h</includedby>
     <includedby refid="SP2_8cpp" local="yes">LiZhaoyuan1/Source/SP2.cpp</includedby>
     <incdepgraph>
-      <node id="4179">
-        <label>Currentgamestate.h</label>
-        <link refid="CurrentGameState_8h"/>
-      </node>
-      <node id="4205">
-        <label>MatrixStack.h</label>
-        <link refid="MatrixStack_8h"/>
-        <childnode refid="4206" relation="include">
-        </childnode>
-        <childnode refid="4207" relation="include">
+      <node id="4177">
+        <label>timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="4178" relation="include">
         </childnode>
       </node>
-      <node id="4199">
-        <label>ik_IAudioStream.h</label>
-        <link refid="ik__IAudioStream_8h"/>
+      <node id="4176">
+        <label>Application.h</label>
+        <link refid="Application_8h"/>
+        <childnode refid="4177" relation="include">
+        </childnode>
+        <childnode refid="4179" relation="include">
+        </childnode>
+        <childnode refid="4180" relation="include">
+        </childnode>
+      </node>
+      <node id="4197">
+        <label>ik_IFileFactory.h</label>
+        <link refid="ik__IFileFactory_8h"/>
         <childnode refid="4187" relation="include">
-        </childnode>
-        <childnode refid="4192" relation="include">
         </childnode>
       </node>
       <node id="4178">
         <label>windows.h</label>
       </node>
-      <node id="4166">
-        <label>Vertex.h</label>
-        <link refid="Vertex_8h"/>
-        <childnode refid="4167" relation="include">
+      <node id="4179">
+        <label>Currentgamestate.h</label>
+        <link refid="CurrentGameState_8h"/>
+      </node>
+      <node id="4165">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="4166" relation="include">
         </childnode>
       </node>
-      <node id="4161">
-        <label>Scene.h</label>
-        <link refid="Scene_8h"/>
-      </node>
-      <node id="4160">
-        <label>LiZhaoyuan1/Source/SP2.h</label>
-        <link refid="SP2.h"/>
-        <childnode refid="4161" relation="include">
+      <node id="4196">
+        <label>ik_ISoundEffectControl.h</label>
+        <link refid="ik__ISoundEffectControl_8h"/>
+        <childnode refid="4188" relation="include">
         </childnode>
-        <childnode refid="4162" relation="include">
-        </childnode>
-        <childnode refid="4165" relation="include">
-        </childnode>
-        <childnode refid="4174" relation="include">
-        </childnode>
-        <childnode refid="4175" relation="include">
-        </childnode>
-        <childnode refid="4205" relation="include">
+        <childnode refid="4185" relation="include">
         </childnode>
       </node>
-      <node id="4181">
-        <label>Windows.h</label>
-      </node>
-      <node id="4169">
-        <label>cmath</label>
-      </node>
-      <node id="4163">
-        <label>string</label>
+      <node id="4190">
+        <label>ik_ESoundEngineOptions.h</label>
+        <link refid="ik__ESoundEngineOptions_8h"/>
       </node>
       <node id="4175">
         <label>Camera3.h</label>
@@ -78,12 +67,8 @@
         <childnode refid="4176" relation="include">
         </childnode>
       </node>
-      <node id="4191">
-        <label>ik_EStreamModes.h</label>
-        <link refid="ik__EStreamModes_8h"/>
-      </node>
-      <node id="4170">
-        <label>exception</label>
+      <node id="4181">
+        <label>Windows.h</label>
       </node>
       <node id="4194">
         <label>ik_ISoundSource.h</label>
@@ -97,17 +82,176 @@
         <childnode refid="4192" relation="include">
         </childnode>
       </node>
+      <node id="4169">
+        <label>cmath</label>
+      </node>
+      <node id="4189">
+        <label>ik_ESoundOutputDrivers.h</label>
+        <link refid="ik__ESoundOutputDrivers_8h"/>
+      </node>
+      <node id="4163">
+        <label>string</label>
+      </node>
+      <node id="4192">
+        <label>ik_SAudioStreamFormat.h</label>
+        <link refid="ik__SAudioStreamFormat_8h"/>
+        <childnode refid="4187" relation="include">
+        </childnode>
+      </node>
+      <node id="4170">
+        <label>exception</label>
+      </node>
+      <node id="4162">
+        <label>Mesh.h</label>
+        <link refid="Mesh_8h"/>
+        <childnode refid="4163" relation="include">
+        </childnode>
+        <childnode refid="4164" relation="include">
+        </childnode>
+      </node>
+      <node id="4161">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+      </node>
+      <node id="4199">
+        <label>ik_IAudioStream.h</label>
+        <link refid="ik__IAudioStream_8h"/>
+        <childnode refid="4187" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+      </node>
+      <node id="4201">
+        <label>ik_IFileReader.h</label>
+        <link refid="ik__IFileReader_8h"/>
+        <childnode refid="4187" relation="include">
+        </childnode>
+      </node>
+      <node id="4164">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+      </node>
+      <node id="4187">
+        <label>ik_IRefCounted.h</label>
+        <link refid="ik__IRefCounted_8h"/>
+        <childnode refid="4183" relation="include">
+        </childnode>
+      </node>
+      <node id="4188">
+        <label>ik_IVirtualRefCounted.h</label>
+        <link refid="ik__IVirtualRefCounted_8h"/>
+        <childnode refid="4183" relation="include">
+        </childnode>
+      </node>
+      <node id="4174">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="4167" relation="include">
+        </childnode>
+      </node>
+      <node id="4202">
+        <label>ik_ISoundStopEventReceiver.h</label>
+        <link refid="ik__ISoundStopEventReceiver_8h"/>
+        <childnode refid="4187" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+      </node>
+      <node id="4184">
+        <label>wchar.h</label>
+      </node>
       <node id="4183">
         <label>ik_irrKlangTypes.h</label>
         <link refid="ik__irrKlangTypes_8h"/>
         <childnode refid="4184" relation="include">
         </childnode>
       </node>
-      <node id="4165">
-        <label>Light.h</label>
-        <link refid="Light_8h"/>
-        <childnode refid="4166" relation="include">
+      <node id="4171">
+        <label>ctime</label>
+      </node>
+      <node id="4195">
+        <label>ik_ISound.h</label>
+        <link refid="ik__ISound_8h"/>
+        <childnode refid="4188" relation="include">
         </childnode>
+        <childnode refid="4196" relation="include">
+        </childnode>
+        <childnode refid="4185" relation="include">
+        </childnode>
+      </node>
+      <node id="4206">
+        <label>stack</label>
+      </node>
+      <node id="4167">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="4168" relation="include">
+        </childnode>
+        <childnode refid="4173" relation="include">
+        </childnode>
+      </node>
+      <node id="4203">
+        <label>ik_ISoundDeviceList.h</label>
+        <link refid="ik__ISoundDeviceList_8h"/>
+        <childnode refid="4187" relation="include">
+        </childnode>
+      </node>
+      <node id="4204">
+        <label>ik_IAudioRecorder.h</label>
+        <link refid="ik__IAudioRecorder_8h"/>
+        <childnode refid="4187" relation="include">
+        </childnode>
+        <childnode refid="4194" relation="include">
+        </childnode>
+      </node>
+      <node id="4186">
+        <label>math.h</label>
+      </node>
+      <node id="4180">
+        <label>Music.h</label>
+        <link refid="Music_8h"/>
+        <childnode refid="4173" relation="include">
+        </childnode>
+        <childnode refid="4163" relation="include">
+        </childnode>
+        <childnode refid="4181" relation="include">
+        </childnode>
+        <childnode refid="4182" relation="include">
+        </childnode>
+      </node>
+      <node id="4172">
+        <label>cstdlib</label>
+      </node>
+      <node id="4173">
+        <label>iostream</label>
+      </node>
+      <node id="4200">
+        <label>ik_IAudioStreamLoader.h</label>
+        <link refid="ik__IAudioStreamLoader_8h"/>
+        <childnode refid="4187" relation="include">
+        </childnode>
+        <childnode refid="4201" relation="include">
+        </childnode>
+      </node>
+      <node id="4198">
+        <label>ik_ISoundMixedOutputReceiver.h</label>
+        <link refid="ik__ISoundMixedOutputReceiver_8h"/>
+        <childnode refid="4187" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+      </node>
+      <node id="4207">
+        <label>Mtx44.h</label>
+        <link refid="Mtx44_8h"/>
+        <childnode refid="4168" relation="include">
+        </childnode>
+        <childnode refid="4167" relation="include">
+        </childnode>
+      </node>
+      <node id="4191">
+        <label>ik_EStreamModes.h</label>
+        <link refid="ik__EStreamModes_8h"/>
       </node>
       <node id="4193">
         <label>ik_ISoundEngine.h</label>
@@ -127,22 +271,55 @@
         <childnode refid="4198" relation="include">
         </childnode>
       </node>
-      <node id="4207">
-        <label>Mtx44.h</label>
-        <link refid="Mtx44_8h"/>
-        <childnode refid="4168" relation="include">
+      <node id="4168">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="4169" relation="include">
         </childnode>
+        <childnode refid="4170" relation="include">
+        </childnode>
+        <childnode refid="4171" relation="include">
+        </childnode>
+        <childnode refid="4172" relation="include">
+        </childnode>
+      </node>
+      <node id="4185">
+        <label>ik_vec3d.h</label>
+        <link refid="ik__vec3d_8h"/>
+        <childnode refid="4186" relation="include">
+        </childnode>
+        <childnode refid="4183" relation="include">
+        </childnode>
+      </node>
+      <node id="4160">
+        <label>LiZhaoyuan1/Source/SP2.h</label>
+        <link refid="SP2.h"/>
+        <childnode refid="4161" relation="include">
+        </childnode>
+        <childnode refid="4162" relation="include">
+        </childnode>
+        <childnode refid="4165" relation="include">
+        </childnode>
+        <childnode refid="4174" relation="include">
+        </childnode>
+        <childnode refid="4175" relation="include">
+        </childnode>
+        <childnode refid="4205" relation="include">
+        </childnode>
+      </node>
+      <node id="4166">
+        <label>Vertex.h</label>
+        <link refid="Vertex_8h"/>
         <childnode refid="4167" relation="include">
         </childnode>
       </node>
-      <node id="4192">
-        <label>ik_SAudioStreamFormat.h</label>
-        <link refid="ik__SAudioStreamFormat_8h"/>
-        <childnode refid="4187" relation="include">
+      <node id="4205">
+        <label>MatrixStack.h</label>
+        <link refid="MatrixStack_8h"/>
+        <childnode refid="4206" relation="include">
         </childnode>
-      </node>
-      <node id="4184">
-        <label>wchar.h</label>
+        <childnode refid="4207" relation="include">
+        </childnode>
       </node>
       <node id="4182">
         <label>include/irrKlang.h</label>
@@ -188,198 +365,15 @@
         <childnode refid="4198" relation="include">
         </childnode>
       </node>
-      <node id="4190">
-        <label>ik_ESoundEngineOptions.h</label>
-        <link refid="ik__ESoundEngineOptions_8h"/>
-      </node>
-      <node id="4202">
-        <label>ik_ISoundStopEventReceiver.h</label>
-        <link refid="ik__ISoundStopEventReceiver_8h"/>
-        <childnode refid="4187" relation="include">
-        </childnode>
-        <childnode refid="4192" relation="include">
-        </childnode>
-      </node>
-      <node id="4171">
-        <label>ctime</label>
-      </node>
-      <node id="4180">
-        <label>Music.h</label>
-        <link refid="Music_8h"/>
-        <childnode refid="4173" relation="include">
-        </childnode>
-        <childnode refid="4163" relation="include">
-        </childnode>
-        <childnode refid="4181" relation="include">
-        </childnode>
-        <childnode refid="4182" relation="include">
-        </childnode>
-      </node>
-      <node id="4167">
-        <label>Vector3.h</label>
-        <link refid="Vector3_8h"/>
-        <childnode refid="4168" relation="include">
-        </childnode>
-        <childnode refid="4173" relation="include">
-        </childnode>
-      </node>
-      <node id="4206">
-        <label>stack</label>
-      </node>
-      <node id="4162">
-        <label>Mesh.h</label>
-        <link refid="Mesh_8h"/>
-        <childnode refid="4163" relation="include">
-        </childnode>
-        <childnode refid="4164" relation="include">
-        </childnode>
-      </node>
-      <node id="4177">
-        <label>timer.h</label>
-        <link refid="timer_8h"/>
-        <childnode refid="4178" relation="include">
-        </childnode>
-      </node>
-      <node id="4174">
-        <label>Camera.h</label>
-        <link refid="Camera_8h"/>
-        <childnode refid="4167" relation="include">
-        </childnode>
-      </node>
-      <node id="4198">
-        <label>ik_ISoundMixedOutputReceiver.h</label>
-        <link refid="ik__ISoundMixedOutputReceiver_8h"/>
-        <childnode refid="4187" relation="include">
-        </childnode>
-        <childnode refid="4192" relation="include">
-        </childnode>
-      </node>
-      <node id="4186">
-        <label>math.h</label>
-      </node>
-      <node id="4172">
-        <label>cstdlib</label>
-      </node>
-      <node id="4173">
-        <label>iostream</label>
-      </node>
-      <node id="4204">
-        <label>ik_IAudioRecorder.h</label>
-        <link refid="ik__IAudioRecorder_8h"/>
-        <childnode refid="4187" relation="include">
-        </childnode>
-        <childnode refid="4194" relation="include">
-        </childnode>
-      </node>
-      <node id="4196">
-        <label>ik_ISoundEffectControl.h</label>
-        <link refid="ik__ISoundEffectControl_8h"/>
-        <childnode refid="4188" relation="include">
-        </childnode>
-        <childnode refid="4185" relation="include">
-        </childnode>
-      </node>
-      <node id="4168">
-        <label>MyMath.h</label>
-        <link refid="MyMath_8h"/>
-        <childnode refid="4169" relation="include">
-        </childnode>
-        <childnode refid="4170" relation="include">
-        </childnode>
-        <childnode refid="4171" relation="include">
-        </childnode>
-        <childnode refid="4172" relation="include">
-        </childnode>
-      </node>
-      <node id="4203">
-        <label>ik_ISoundDeviceList.h</label>
-        <link refid="ik__ISoundDeviceList_8h"/>
-        <childnode refid="4187" relation="include">
-        </childnode>
-      </node>
-      <node id="4201">
-        <label>ik_IFileReader.h</label>
-        <link refid="ik__IFileReader_8h"/>
-        <childnode refid="4187" relation="include">
-        </childnode>
-      </node>
-      <node id="4164">
-        <label>Material.h</label>
-        <link refid="Material_8h"/>
-      </node>
-      <node id="4188">
-        <label>ik_IVirtualRefCounted.h</label>
-        <link refid="ik__IVirtualRefCounted_8h"/>
-        <childnode refid="4183" relation="include">
-        </childnode>
-      </node>
-      <node id="4197">
-        <label>ik_IFileFactory.h</label>
-        <link refid="ik__IFileFactory_8h"/>
-        <childnode refid="4187" relation="include">
-        </childnode>
-      </node>
-      <node id="4195">
-        <label>ik_ISound.h</label>
-        <link refid="ik__ISound_8h"/>
-        <childnode refid="4188" relation="include">
-        </childnode>
-        <childnode refid="4196" relation="include">
-        </childnode>
-        <childnode refid="4185" relation="include">
-        </childnode>
-      </node>
-      <node id="4189">
-        <label>ik_ESoundOutputDrivers.h</label>
-        <link refid="ik__ESoundOutputDrivers_8h"/>
-      </node>
-      <node id="4200">
-        <label>ik_IAudioStreamLoader.h</label>
-        <link refid="ik__IAudioStreamLoader_8h"/>
-        <childnode refid="4187" relation="include">
-        </childnode>
-        <childnode refid="4201" relation="include">
-        </childnode>
-      </node>
-      <node id="4187">
-        <label>ik_IRefCounted.h</label>
-        <link refid="ik__IRefCounted_8h"/>
-        <childnode refid="4183" relation="include">
-        </childnode>
-      </node>
-      <node id="4185">
-        <label>ik_vec3d.h</label>
-        <link refid="ik__vec3d_8h"/>
-        <childnode refid="4186" relation="include">
-        </childnode>
-        <childnode refid="4183" relation="include">
-        </childnode>
-      </node>
-      <node id="4176">
-        <label>Application.h</label>
-        <link refid="Application_8h"/>
-        <childnode refid="4177" relation="include">
-        </childnode>
-        <childnode refid="4179" relation="include">
-        </childnode>
-        <childnode refid="4180" relation="include">
-        </childnode>
-      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="4208">
-        <label>LiZhaoyuan1/Source/SP2.h</label>
-        <link refid="SP2.h"/>
-        <childnode refid="4209" relation="include">
-        </childnode>
-        <childnode refid="4210" relation="include">
-        </childnode>
-        <childnode refid="4212" relation="include">
-        </childnode>
+      <node id="4212">
+        <label>LiZhaoyuan1/Source/SP2.cpp</label>
+        <link refid="SP2_8cpp"/>
       </node>
-      <node id="4209">
-        <label>LiZhaoyuan1/Source/Application.cpp</label>
-        <link refid="Application_8cpp"/>
+      <node id="4211">
+        <label>LiZhaoyuan1/Source/SceneGalaxy.cpp</label>
+        <link refid="SceneGalaxy_8cpp"/>
       </node>
       <node id="4210">
         <label>LiZhaoyuan1/Source/SceneGalaxy.h</label>
@@ -389,13 +383,19 @@
         <childnode refid="4211" relation="include">
         </childnode>
       </node>
-      <node id="4211">
-        <label>LiZhaoyuan1/Source/SceneGalaxy.cpp</label>
-        <link refid="SceneGalaxy_8cpp"/>
+      <node id="4209">
+        <label>LiZhaoyuan1/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
       </node>
-      <node id="4212">
-        <label>LiZhaoyuan1/Source/SP2.cpp</label>
-        <link refid="SP2_8cpp"/>
+      <node id="4208">
+        <label>LiZhaoyuan1/Source/SP2.h</label>
+        <link refid="SP2.h"/>
+        <childnode refid="4209" relation="include">
+        </childnode>
+        <childnode refid="4210" relation="include">
+        </childnode>
+        <childnode refid="4212" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="classSP2" prot="public">SP2</innerclass>

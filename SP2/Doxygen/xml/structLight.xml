@@ -51,11 +51,11 @@
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/Light.h" line="8" column="1" bodyfile="LiZhaoyuan1/Source/Light.h" bodystart="8" bodyend="-1"/>
         <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
-        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="414">SceneMun::Init</referencedby>
         <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
-        <referencedby refid="classSceneMun_1aaec7e417376eacf289ee2501d1ac9c71" compoundref="SceneMun_8cpp" startline="796" endline="817">SceneMun::lighting</referencedby>
+        <referencedby refid="classSceneMun_1aaec7e417376eacf289ee2501d1ac9c71" compoundref="SceneMun_8cpp" startline="811" endline="832">SceneMun::lighting</referencedby>
         <referencedby refid="classSceneSoraJewel_1ac5c92f43b536aa0497507e13d0a56c96" compoundref="SceneSoraJewel_8cpp" startline="834" endline="855">SceneSoraJewel::lighting</referencedby>
-        <referencedby refid="classSceneMun_1abf01514b7e53fbf6ba1d96b42644a1d9" compoundref="SceneMun_8cpp" startline="831" endline="853">SceneMun::lighting2</referencedby>
+        <referencedby refid="classSceneMun_1abf01514b7e53fbf6ba1d96b42644a1d9" compoundref="SceneMun_8cpp" startline="846" endline="868">SceneMun::lighting2</referencedby>
         <referencedby refid="classSceneSoraJewel_1a418548255e756309d8d2c4dfdec40233" compoundref="SceneSoraJewel_8cpp" startline="868" endline="889">SceneSoraJewel::lighting2</referencedby>
         <referencedby refid="classSceneGalaxy_1a08eb5a414e64d7dca3a14f1d6d48855a" compoundref="SceneGalaxy_8cpp" startline="776" endline="835">SceneGalaxy::Render</referencedby>
         <referencedby refid="classSceneSoraJewel_1a5609b1a03e5d60a01ac655e2f10bcfc9" compoundref="SceneSoraJewel_8cpp" startline="1052" endline="1229">SceneSoraJewel::Render</referencedby>
@@ -75,7 +75,7 @@
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/Light.h" line="9" column="1" bodyfile="LiZhaoyuan1/Source/Light.h" bodystart="9" bodyend="-1"/>
         <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
-        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="414">SceneMun::Init</referencedby>
         <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structLight_1a6c4c401141c4cdb3b9b9b3bab7dd6fbb" prot="public" static="no" mutable="no">
@@ -91,7 +91,7 @@
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/Light.h" line="10" column="1" bodyfile="LiZhaoyuan1/Source/Light.h" bodystart="10" bodyend="-1"/>
         <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
-        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="414">SceneMun::Init</referencedby>
         <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structLight_1a888f11000d2baf1228d9e5c8d8c90fcb" prot="public" static="no" mutable="no">
@@ -107,7 +107,7 @@
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/Light.h" line="11" column="1" bodyfile="LiZhaoyuan1/Source/Light.h" bodystart="11" bodyend="-1"/>
         <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
-        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="414">SceneMun::Init</referencedby>
         <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structLight_1ab3918c449fb40fa5c6cc5283f2c9687d" prot="public" static="no" mutable="no">
@@ -123,7 +123,7 @@
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/Light.h" line="11" column="1" bodyfile="LiZhaoyuan1/Source/Light.h" bodystart="11" bodyend="-1"/>
         <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
-        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="414">SceneMun::Init</referencedby>
         <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structLight_1a79c8e47de58f131ff5403fc2d823cc21" prot="public" static="no" mutable="no">
@@ -139,7 +139,7 @@
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/Light.h" line="11" column="1" bodyfile="LiZhaoyuan1/Source/Light.h" bodystart="11" bodyend="-1"/>
         <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
-        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="414">SceneMun::Init</referencedby>
         <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structLight_1a5dcdb101afc28979b5aaff0a2ec79ba5" prot="public" static="no" mutable="no">
@@ -155,7 +155,7 @@
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/Light.h" line="25" column="1" bodyfile="LiZhaoyuan1/Source/Light.h" bodystart="25" bodyend="-1"/>
         <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
-        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="414">SceneMun::Init</referencedby>
         <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
         <referencedby refid="classSceneGalaxy_1a20f9275f7788921a7cd843219b9bdeff" compoundref="SceneGalaxy_8cpp" startline="542" endline="623">SceneGalaxy::Update</referencedby>
       </memberdef>
@@ -172,11 +172,11 @@
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/Light.h" line="26" column="1" bodyfile="LiZhaoyuan1/Source/Light.h" bodystart="26" bodyend="-1"/>
         <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
-        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="414">SceneMun::Init</referencedby>
         <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
-        <referencedby refid="classSceneMun_1aaec7e417376eacf289ee2501d1ac9c71" compoundref="SceneMun_8cpp" startline="796" endline="817">SceneMun::lighting</referencedby>
+        <referencedby refid="classSceneMun_1aaec7e417376eacf289ee2501d1ac9c71" compoundref="SceneMun_8cpp" startline="811" endline="832">SceneMun::lighting</referencedby>
         <referencedby refid="classSceneSoraJewel_1ac5c92f43b536aa0497507e13d0a56c96" compoundref="SceneSoraJewel_8cpp" startline="834" endline="855">SceneSoraJewel::lighting</referencedby>
-        <referencedby refid="classSceneMun_1abf01514b7e53fbf6ba1d96b42644a1d9" compoundref="SceneMun_8cpp" startline="831" endline="853">SceneMun::lighting2</referencedby>
+        <referencedby refid="classSceneMun_1abf01514b7e53fbf6ba1d96b42644a1d9" compoundref="SceneMun_8cpp" startline="846" endline="868">SceneMun::lighting2</referencedby>
         <referencedby refid="classSceneSoraJewel_1a418548255e756309d8d2c4dfdec40233" compoundref="SceneSoraJewel_8cpp" startline="868" endline="889">SceneSoraJewel::lighting2</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structLight_1af4ce5bbfbf33af96db9b8a222d073298" prot="public" static="no" mutable="no">
@@ -192,7 +192,7 @@
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/Light.h" line="27" column="1" bodyfile="LiZhaoyuan1/Source/Light.h" bodystart="27" bodyend="-1"/>
         <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
-        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="414">SceneMun::Init</referencedby>
         <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structLight_1a8c843f5d1af5c6f4f4928e9906f5d0db" prot="public" static="no" mutable="no">
@@ -208,7 +208,7 @@
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/Light.h" line="28" column="1" bodyfile="LiZhaoyuan1/Source/Light.h" bodystart="28" bodyend="-1"/>
         <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
-        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="414">SceneMun::Init</referencedby>
         <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structLight_1a4eb4fd0f025fb66d1934675ffff0e661" prot="public" static="no" mutable="no">
@@ -224,7 +224,7 @@
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/Light.h" line="29" column="1" bodyfile="LiZhaoyuan1/Source/Light.h" bodystart="29" bodyend="-1"/>
         <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
-        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="414">SceneMun::Init</referencedby>
         <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
       </memberdef>
       </sectiondef>

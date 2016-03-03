@@ -1,0 +1,5 @@
+<map id="LoadingScreen::renderMesh" name="LoadingScreen::renderMesh">
+<area shape="rect" id="node2" href="$classLoadingScreen.html#a636b226e561fc7327e5ddc51737d990d" title="Function to render the moaving character. " alt="" coords="237,5,451,32"/>
+<area shape="rect" id="node4" href="$classLoadingScreen.html#a1a5ec1ed6785374d8679cd687e5da221" title="Function to render the loading bar on screen. " alt="" coords="243,57,445,98"/>
+<area shape="rect" id="node3" href="$classLoadingScreen.html#a9325ad1fb08d5103eceefefe7cb1d316" title="LoadingScreen main render function to render everything. " alt="" coords="499,35,656,61"/>
+</map>

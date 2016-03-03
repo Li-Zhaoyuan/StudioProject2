@@ -1,0 +1,5 @@
+<map id="SP2::Update" name="SP2::Update">
+<area shape="rect" id="node2" href="$classApplication.html#a9d410604b39b8374a884b1f2a1f2a5ba" title="Application::Exit" alt="" coords="178,5,295,32"/>
+<area shape="rect" id="node3" href="$classGamemode.html#af47c19fec76ecf68cf2b13933572ec19" title="Gamemode::getinstance" alt="" coords="155,56,319,83"/>
+<area shape="rect" id="node4" href="$classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe" title="Application::IsKeyPressed" alt="" coords="149,107,324,133"/>
+</map>

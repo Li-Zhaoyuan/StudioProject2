@@ -1,0 +1,7 @@
+<map id="Scene" name="Scene">
+<area shape="rect" id="node2" href="$classLoadingScreen.html" title="Defines the Loading screens and its methods. " alt="" coords="5,80,113,107"/>
+<area shape="rect" id="node3" href="$classSceneGalaxy.html" title="Defines the scene Galaxy and its methods. " alt="" coords="137,80,237,107"/>
+<area shape="rect" id="node4" href="$classSceneMun.html" title="Defines the scene Mun and its methods. " alt="" coords="261,80,345,107"/>
+<area shape="rect" id="node5" href="$classSceneSoraJewel.html" title="Defines the scene Sora Jewel and its methods. " alt="" coords="369,80,488,107"/>
+<area shape="rect" id="node6" href="$classSP2.html" title="Defines the scene main menu and its methods. " alt="" coords="512,80,559,107"/>
+</map>

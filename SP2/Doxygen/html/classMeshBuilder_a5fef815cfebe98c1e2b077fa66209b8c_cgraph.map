@@ -1,0 +1,10 @@
+<map id="MeshBuilder::GenerateHemiSphere" name="MeshBuilder::GenerateHemiSphere">
+<area shape="rect" id="node2" href="$structVector3.html#aaef4f25a38878a640ab4a48002a7eff8" title="Normalize this vector and return a reference to it. " alt="" coords="239,5,372,32"/>
+<area shape="rect" id="node4" href="$structPosition.html#a2919b2441baf7a2f799791d65a1cfc15" title="Position::Set" alt="" coords="257,56,354,83"/>
+<area shape="rect" id="node5" href="$structVector3.html#a9c25d604bd52b162cfcb56302ef032bb" title="Set the elements of this vector. " alt="" coords="258,107,353,133"/>
+<area shape="rect" id="node6" href="$MeshBuilder_8cpp.html#a42b85724173510abff8489cfe7806c3f" title="sphereX" alt="" coords="271,157,339,184"/>
+<area shape="rect" id="node8" href="$MeshBuilder_8cpp.html#aca2515071d8156673cfaa4b54ae0a558" title="sphereY" alt="" coords="270,208,341,235"/>
+<area shape="rect" id="node9" href="$MeshBuilder_8cpp.html#ad611a1f30697cb26b310c16a493d8c4f" title="sphereZ" alt="" coords="271,259,339,285"/>
+<area shape="rect" id="node3" href="$structVector3.html#a200024a8442329de9a625ed58ffe7075" title="Return length of vector. " alt="" coords="440,5,555,32"/>
+<area shape="rect" id="node7" href="$namespaceMath.html#ac04b987cc6c574a059e68cb58f58c09a" title="Converts from degrees to radians. " alt="" coords="420,208,575,235"/>
+</map>

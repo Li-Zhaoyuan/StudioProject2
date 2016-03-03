@@ -36,6 +36,7 @@ class SceneMun : public Scene
 	{
 		GEO_AXES,
 		GEO_QUAD,
+		GEO_QUAD2,
 		GEO_CUBE,
 		GEO_SPHERE,
 		GEO_LIGHTBALL,
@@ -182,7 +183,9 @@ private:
 	
 	int interact = 0;
 
-	int fultonleft;
+	int initstringonce = 0;
+
+	int fultonleft=6;
 
 	float timing = 0;
 

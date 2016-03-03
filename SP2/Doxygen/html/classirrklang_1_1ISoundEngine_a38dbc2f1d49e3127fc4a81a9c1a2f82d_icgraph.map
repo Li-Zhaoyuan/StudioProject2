@@ -1,0 +1,8 @@
+<map id="irrklang::ISoundEngine::stopAllSounds" name="irrklang::ISoundEngine::stopAllSounds">
+<area shape="rect" id="node2" href="$classmusic.html#a980e490547c2f6a7a7875e58548fce5b" title="music function to play music for Galaxy scene " alt="" coords="215,5,356,32"/>
+<area shape="rect" id="node5" href="$classmusic.html#a2a0b59c8aef55331ccc449f3eb31f1a9" title="music function to play music for main menu " alt="" coords="205,56,365,83"/>
+<area shape="rect" id="node6" href="$classmusic.html#a3d999425453d51069667bb0be1471e83" title="music function to play music for Mun scene " alt="" coords="223,107,348,133"/>
+<area shape="rect" id="node7" href="$classmusic.html#a42a802fd796b8556d64225aa9abd55d3" title="music function to play music for Sora Jewel scene " alt="" coords="206,157,365,184"/>
+<area shape="rect" id="node3" href="$classApplication.html#aaf09cd6cb412086dc039e28cdb059f0d" title="Application::Run" alt="" coords="413,81,531,108"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="579,81,629,108"/>
+</map>

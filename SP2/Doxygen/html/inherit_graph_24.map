@@ -1,0 +1,8 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classScene.html" title="Scene" alt="" coords="5,107,64,133"/>
+<area shape="rect" id="node2" href="$classLoadingScreen.html" title="Defines the Loading screens and its methods. " alt="" coords="117,5,225,32"/>
+<area shape="rect" id="node3" href="$classSceneGalaxy.html" title="Defines the scene Galaxy and its methods. " alt="" coords="121,56,221,83"/>
+<area shape="rect" id="node4" href="$classSceneMun.html" title="Defines the scene Mun and its methods. " alt="" coords="129,107,213,133"/>
+<area shape="rect" id="node5" href="$classSceneSoraJewel.html" title="Defines the scene Sora Jewel and its methods. " alt="" coords="112,157,231,184"/>
+<area shape="rect" id="node6" href="$classSP2.html" title="Defines the scene main menu and its methods. " alt="" coords="148,208,195,235"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="SceneSoraJewel" name="SceneSoraJewel">
+<area shape="rect" id="node2" href="$classScene.html" title="Scene" alt="" coords="673,103,732,129"/>
+<area shape="rect" id="node3" href="$structLight.html" title="Light" alt="" coords="383,279,434,305"/>
+<area shape="rect" id="node6" href="$structVector3.html" title="Defines a 3D vector and its methods. " alt="" coords="128,507,195,533"/>
+<area shape="rect" id="node7" href="$structPosition.html" title="Position" alt="" coords="127,204,196,231"/>
+<area shape="rect" id="node8" href="$structColor.html" title="Color" alt="" coords="135,305,187,332"/>
+<area shape="rect" id="node9" href="$classCamera3.html" title="Defines the camera and its methods. " alt="" coords="665,583,740,609"/>
+<area shape="rect" id="node21" href="$structMaterial.html" title="Material" alt="" coords="375,872,443,899"/>
+<area shape="rect" id="node22" href="$structComponent.html" title="Component" alt="" coords="117,827,205,853"/>
+<area shape="rect" id="node10" href="$classCamera.html" title="Camera" alt="" coords="375,473,442,500"/>
+<area shape="rect" id="node13" href="$classMS.html" title="Matrix Stack class. " alt="" coords="681,1144,724,1171"/>
+<area shape="rect" id="node20" href="$classMesh.html" title="To store VBO (vertex &amp; color buffer) and IBO (index buffer) " alt="" coords="675,949,730,976"/>
+</map>

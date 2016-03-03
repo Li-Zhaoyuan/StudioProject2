@@ -1,0 +1,21 @@
+<map id="Camera3::SJUpdate" name="Camera3::SJUpdate">
+<area shape="rect" id="node2" href="$structVector3.html#aa1cdc5357009b47fe585ddd61e263aad" title="Cross product of 2 vectors. " alt="" coords="225,5,334,32"/>
+<area shape="rect" id="node4" href="$classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe" title="Application::IsKeyPressed" alt="" coords="192,157,367,184"/>
+<area shape="rect" id="node5" href="$structVector3.html#aaef4f25a38878a640ab4a48002a7eff8" title="Normalize this vector and return a reference to it. " alt="" coords="213,107,346,133"/>
+<area shape="rect" id="node7" href="$structVector3.html#a2da0f00c5529bced69763320dac9c414" title="Return a copy of this vector, normalized. " alt="" coords="209,56,349,83"/>
+<area shape="rect" id="node8" href="$classCamera3.html#aaa26b06935fed4c855d2dd456121a702" title="Camera3 OBJboundaryX function. " alt="" coords="196,208,363,235"/>
+<area shape="rect" id="node12" href="$classCamera3.html#ac2263d661658db8abcb97df54cb09c16" title="Camera3 OBJboundaryY function. " alt="" coords="195,259,364,285"/>
+<area shape="rect" id="node16" href="$classCamera3.html#aa26ef7e7f4b7f981404cb3e8ba6d29cc" title="Camera3 OBJboundaryZ function. " alt="" coords="196,309,363,336"/>
+<area shape="rect" id="node17" href="$classCamera3.html#a18c6741c2dc48ba6d12debe48d76923c" title="Camera3 OnGround function. " alt="" coords="209,360,350,387"/>
+<area shape="rect" id="node18" href="$classCamera3.html#a4b10106bcd89f21e3cf3e39f04d8c1cb" title="Camera3 Reset function. " alt="" coords="221,411,337,437"/>
+<area shape="rect" id="node19" href="$classMtx44.html#ac0587ffb5ff9fd58ad5768d28fc06574" title="Set Matrix to a rotation matrix about arbitrary axis. " alt="" coords="205,461,353,488"/>
+<area shape="rect" id="node3" href="$structVector3.html#afa5e0c801fc2c8a820a54ea99302fe08" title="Vector3 default constructor. " alt="" coords="464,12,584,39"/>
+<area shape="rect" id="node6" href="$structVector3.html#a200024a8442329de9a625ed58ffe7075" title="Return length of vector. " alt="" coords="467,88,581,115"/>
+<area shape="rect" id="node9" href="$classCamera3.html#a47536550c550e38ce70a127d6041d238" title="Camera3 AllMunBoundaryX function. " alt="" coords="432,201,616,228"/>
+<area shape="rect" id="node11" href="$classCamera3.html#aa21841d30a266e7685ca9b7c88acef27" title="Camera3 AllSoraJewelBoundaryX function. " alt="" coords="415,151,633,177"/>
+<area shape="rect" id="node10" href="$classCamera3.html#a0a24a8f97532c60f7652662fe7ea9011" title="Camera3 boundaryCheckerX function. " alt="" coords="681,201,872,228"/>
+<area shape="rect" id="node13" href="$classCamera3.html#a101dfa0d89e28196116fdc240cfac418" title="Camera3 AllMunBoundaryZ function. " alt="" coords="432,404,616,431"/>
+<area shape="rect" id="node14" href="$classCamera3.html#acf520274a349d1766551356738f2aa3a" title="Camera3 boundaryCheckerZ function. " alt="" coords="681,353,872,380"/>
+<area shape="rect" id="node15" href="$classCamera3.html#a62cd60c19e1bab7d201ff93bd23cca25" title="Camera3 AllSoraJewelBoundaryZ function. " alt="" coords="415,353,633,380"/>
+<area shape="rect" id="node20" href="$namespaceMath.html#ac91173ab2efdf7313fe7aaeb6cb44cf6" title="Math::FAbs" alt="" coords="479,461,569,488"/>
+</map>

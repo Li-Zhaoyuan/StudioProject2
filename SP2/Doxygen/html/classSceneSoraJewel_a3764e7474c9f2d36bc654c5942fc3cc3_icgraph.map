@@ -1,0 +1,4 @@
+<map id="SceneSoraJewel::interactions" name="SceneSoraJewel::interactions">
+<area shape="rect" id="node2" href="$classSceneSoraJewel.html#ade1c66efbf4d09b53de380245e5fb864" title="This function is placed in Update(double dt) to run Engineer&#39;s animation to walk to ship..." alt="" coords="247,5,480,32"/>
+<area shape="rect" id="node3" href="$classSceneSoraJewel.html#a581a47998e6133291289306656463cb6" title="This function is constantly running to update the scene such as animation and game logics..." alt="" coords="528,5,695,32"/>
+</map>

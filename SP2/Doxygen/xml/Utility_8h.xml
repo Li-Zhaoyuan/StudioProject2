@@ -11,33 +11,11 @@
     <includedby refid="SP2_8cpp" local="yes">LiZhaoyuan1/Source/SP2.cpp</includedby>
     <includedby refid="Utility_8cpp" local="yes">LiZhaoyuan1/Source/Utility.cpp</includedby>
     <incdepgraph>
-      <node id="4226">
-        <label>Vertex.h</label>
-        <link refid="Vertex_8h"/>
-        <childnode refid="4227" relation="include">
-        </childnode>
-      </node>
       <node id="4229">
         <label>cmath</label>
       </node>
       <node id="4230">
         <label>exception</label>
-      </node>
-      <node id="4225">
-        <label>LiZhaoyuan1/Source/Utility.h</label>
-        <link refid="Utility.h"/>
-        <childnode refid="4226" relation="include">
-        </childnode>
-        <childnode refid="4234" relation="include">
-        </childnode>
-      </node>
-      <node id="4234">
-        <label>Mtx44.h</label>
-        <link refid="Mtx44_8h"/>
-        <childnode refid="4228" relation="include">
-        </childnode>
-        <childnode refid="4227" relation="include">
-        </childnode>
       </node>
       <node id="4231">
         <label>ctime</label>
@@ -50,11 +28,27 @@
         <childnode refid="4233" relation="include">
         </childnode>
       </node>
+      <node id="4225">
+        <label>LiZhaoyuan1/Source/Utility.h</label>
+        <link refid="Utility.h"/>
+        <childnode refid="4226" relation="include">
+        </childnode>
+        <childnode refid="4234" relation="include">
+        </childnode>
+      </node>
       <node id="4232">
         <label>cstdlib</label>
       </node>
       <node id="4233">
         <label>iostream</label>
+      </node>
+      <node id="4234">
+        <label>Mtx44.h</label>
+        <link refid="Mtx44_8h"/>
+        <childnode refid="4228" relation="include">
+        </childnode>
+        <childnode refid="4227" relation="include">
+        </childnode>
       </node>
       <node id="4228">
         <label>MyMath.h</label>
@@ -68,19 +62,29 @@
         <childnode refid="4232" relation="include">
         </childnode>
       </node>
+      <node id="4226">
+        <label>Vertex.h</label>
+        <link refid="Vertex_8h"/>
+        <childnode refid="4227" relation="include">
+        </childnode>
+      </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="4240">
+        <label>LiZhaoyuan1/Source/SP2.cpp</label>
+        <link refid="SP2_8cpp"/>
+      </node>
+      <node id="4237">
+        <label>LiZhaoyuan1/Source/SceneGalaxy.cpp</label>
+        <link refid="SceneGalaxy_8cpp"/>
+      </node>
       <node id="4241">
         <label>LiZhaoyuan1/Source/Utility.cpp</label>
         <link refid="Utility_8cpp"/>
       </node>
-      <node id="4238">
-        <label>LiZhaoyuan1/Source/SceneMun.cpp</label>
-        <link refid="SceneMun_8cpp"/>
-      </node>
-      <node id="4236">
-        <label>LiZhaoyuan1/Source/LoadingScreen.cpp</label>
-        <link refid="LoadingScreen_8cpp"/>
+      <node id="4239">
+        <label>LiZhaoyuan1/Source/SceneSoraJewel.cpp</label>
+        <link refid="SceneSoraJewel_8cpp"/>
       </node>
       <node id="4235">
         <label>LiZhaoyuan1/Source/Utility.h</label>
@@ -98,17 +102,13 @@
         <childnode refid="4241" relation="include">
         </childnode>
       </node>
-      <node id="4237">
-        <label>LiZhaoyuan1/Source/SceneGalaxy.cpp</label>
-        <link refid="SceneGalaxy_8cpp"/>
+      <node id="4238">
+        <label>LiZhaoyuan1/Source/SceneMun.cpp</label>
+        <link refid="SceneMun_8cpp"/>
       </node>
-      <node id="4240">
-        <label>LiZhaoyuan1/Source/SP2.cpp</label>
-        <link refid="SP2_8cpp"/>
-      </node>
-      <node id="4239">
-        <label>LiZhaoyuan1/Source/SceneSoraJewel.cpp</label>
-        <link refid="SceneSoraJewel_8cpp"/>
+      <node id="4236">
+        <label>LiZhaoyuan1/Source/LoadingScreen.cpp</label>
+        <link refid="LoadingScreen_8cpp"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="func">

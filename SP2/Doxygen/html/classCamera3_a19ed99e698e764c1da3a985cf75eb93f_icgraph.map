@@ -1,0 +1,11 @@
+<map id="Camera3::Init" name="Camera3::Init">
+<area shape="rect" id="node2" href="$classSceneGalaxy.html#a6423b415bf29060d3be4598d74f7335f" title="SceneGalaxy CutScene function. " alt="" coords="153,5,318,32"/>
+<area shape="rect" id="node4" href="$classSP2.html#a8669c489b6a968f367a4610b254ac992" title="SP2 main initializer function. " alt="" coords="199,56,271,83"/>
+<area shape="rect" id="node5" href="$classLoadingScreen.html#a7fa77cff0af874a23c6043a80af09da3" title="LoadingScreen main initializer function. " alt="" coords="169,107,302,133"/>
+<area shape="rect" id="node6" href="$classSceneGalaxy.html#aee7f7c80c0fcc156b5b6790822cb67e8" title="Scene Galaxy main initializer function. " alt="" coords="173,157,298,184"/>
+<area shape="rect" id="node7" href="$classSceneMun.html#a5eec44c082c3ce5c0aa99c16edebaca2" title="Main initialiser function for SceneMun. " alt="" coords="181,208,290,235"/>
+<area shape="rect" id="node8" href="$classSceneSoraJewel.html#abbbb6e7033bb2bac25db0d27738cbc2c" title="This function initialises everything needed for the scene. " alt="" coords="164,259,307,285"/>
+<area shape="rect" id="node9" href="$classSceneMun.html#ac31a057e66f46bb4d9a7b3fb1c2cfbb9" title="SceneMun main update Function. " alt="" coords="169,309,302,336"/>
+<area shape="rect" id="node10" href="$classSceneSoraJewel.html#a581a47998e6133291289306656463cb6" title="This function is constantly running to update the scene such as animation and game logics..." alt="" coords="152,360,319,387"/>
+<area shape="rect" id="node3" href="$classSceneGalaxy.html#a20f9275f7788921a7cd843219b9bdeff" title="SceneGalaxy main update function. " alt="" coords="367,5,516,32"/>
+</map>

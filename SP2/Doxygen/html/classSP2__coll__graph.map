@@ -1,0 +1,17 @@
+<map id="SP2" name="SP2">
+<area shape="rect" id="node2" href="$classScene.html" title="Scene" alt="" coords="197,623,255,650"/>
+<area shape="rect" id="node4" href="$classCamera3.html" title="Defines the camera and its methods. " alt="" coords="653,623,727,650"/>
+<area shape="rect" id="node5" href="$classCamera.html" title="Camera" alt="" coords="577,429,643,455"/>
+<area shape="rect" id="node6" href="$structVector3.html" title="Defines a 3D vector and its methods. " alt="" coords="658,213,725,240"/>
+<area shape="rect" id="node22" href="$structMaterial.html" title="Material" alt="" coords="1381,429,1449,455"/>
+<area shape="rect" id="node23" href="$structComponent.html" title="Component" alt="" coords="1201,213,1289,240"/>
+<area shape="rect" id="node9" href="$classApplication.html" title="Application" alt="" coords="364,623,451,650"/>
+<area shape="rect" id="node10" href="$classStopWatch.html" title="StopWatch" alt="" coords="141,429,228,455"/>
+<area shape="rect" id="node13" href="$classmusic.html" title="Defines the music playing and its methods. " alt="" coords="283,429,340,455"/>
+<area shape="rect" id="node14" href="$classirrklang_1_1ISoundEngine.html" title="Interface to the sound engine, for playing 3d and 2d sound and music. " alt="" coords="414,213,566,240"/>
+<area shape="rect" id="node15" href="$classirrklang_1_1IRefCounted.html" title="Base class of most objects of the irrKlang. " alt="" coords="424,95,567,121"/>
+<area shape="rect" id="node17" href="$classirrklang_1_1ISoundSource.html" title="A sound source describes an input file (.ogg, .mp3, .wav or similar) and its default settings..." alt="" coords="235,213,388,240"/>
+<area shape="rect" id="node18" href="$classirrklang_1_1IVirtualRefCounted.html" title="Reference counting base class for objects in the Irrlicht Engine similar to IRefCounted. " alt="" coords="221,95,399,121"/>
+<area shape="rect" id="node19" href="$classMS.html" title="Matrix Stack class. " alt="" coords="969,623,1011,650"/>
+<area shape="rect" id="node21" href="$classMesh.html" title="To store VBO (vertex &amp; color buffer) and IBO (index buffer) " alt="" coords="1276,623,1331,650"/>
+</map>

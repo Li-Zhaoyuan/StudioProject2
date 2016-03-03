@@ -1,0 +1,10 @@
+<map id="Gamemode::getinstance" name="Gamemode::getinstance">
+<area shape="rect" id="node2" href="$classSceneGalaxy.html#a6423b415bf29060d3be4598d74f7335f" title="SceneGalaxy CutScene function. " alt="" coords="218,5,383,32"/>
+<area shape="rect" id="node4" href="$classApplication.html#aaf09cd6cb412086dc039e28cdb059f0d" title="Application::Run" alt="" coords="242,56,359,83"/>
+<area shape="rect" id="node6" href="$classSP2.html#a075edf39d3102610bf7f404ae3b8d38c" title="SP2 main Update function. " alt="" coords="253,107,349,133"/>
+<area shape="rect" id="node7" href="$classLoadingScreen.html#aadba6b28a70c39e25c9892f93dbff465" title="LoadingScreen main Update function. " alt="" coords="222,157,379,184"/>
+<area shape="rect" id="node8" href="$classSceneMun.html#ac31a057e66f46bb4d9a7b3fb1c2cfbb9" title="SceneMun main update Function. " alt="" coords="234,208,367,235"/>
+<area shape="rect" id="node9" href="$classSceneSoraJewel.html#a581a47998e6133291289306656463cb6" title="This function is constantly running to update the scene such as animation and game logics..." alt="" coords="217,259,384,285"/>
+<area shape="rect" id="node3" href="$classSceneGalaxy.html#a20f9275f7788921a7cd843219b9bdeff" title="SceneGalaxy main update function. " alt="" coords="432,5,581,32"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="481,56,532,83"/>
+</map>

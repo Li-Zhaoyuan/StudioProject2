@@ -10,14 +10,14 @@
     <includedby refid="ik__ISoundEffectControl_8h" local="yes">LiZhaoyuan1/Source/include/ik_ISoundEffectControl.h</includedby>
     <includedby refid="ik__ISound_8h" local="yes">LiZhaoyuan1/Source/include/ik_ISound.h</includedby>
     <incdepgraph>
+      <node id="3176">
+        <label>wchar.h</label>
+      </node>
       <node id="3175">
         <label>ik_irrKlangTypes.h</label>
         <link refid="ik__irrKlangTypes_8h"/>
         <childnode refid="3176" relation="include">
         </childnode>
-      </node>
-      <node id="3176">
-        <label>wchar.h</label>
       </node>
       <node id="3174">
         <label>math.h</label>
@@ -32,184 +32,6 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3187">
-        <label>LiZhaoyuan1/Source/LoadingScreen.h</label>
-        <link refid="LoadingScreen_8h"/>
-        <childnode refid="3181" relation="include">
-        </childnode>
-        <childnode refid="3188" relation="include">
-        </childnode>
-      </node>
-      <node id="3183">
-        <label>LiZhaoyuan1/Source/SP2.h</label>
-        <link refid="SP2_8h"/>
-        <childnode refid="3181" relation="include">
-        </childnode>
-        <childnode refid="3184" relation="include">
-        </childnode>
-        <childnode refid="3186" relation="include">
-        </childnode>
-      </node>
-      <node id="3191">
-        <label>LiZhaoyuan1/Source/Missile.h</label>
-        <link refid="Missile_8h"/>
-        <childnode refid="3184" relation="include">
-        </childnode>
-        <childnode refid="3192" relation="include">
-        </childnode>
-      </node>
-      <node id="3181">
-        <label>LiZhaoyuan1/Source/Application.cpp</label>
-        <link refid="Application_8cpp"/>
-      </node>
-      <node id="3182">
-        <label>LiZhaoyuan1/Source/Camera3.h</label>
-        <link refid="Camera3_8h"/>
-        <childnode refid="3183" relation="include">
-        </childnode>
-        <childnode refid="3187" relation="include">
-        </childnode>
-        <childnode refid="3189" relation="include">
-        </childnode>
-        <childnode refid="3184" relation="include">
-        </childnode>
-        <childnode refid="3191" relation="include">
-        </childnode>
-        <childnode refid="3193" relation="include">
-        </childnode>
-        <childnode refid="3195" relation="include">
-        </childnode>
-      </node>
-      <node id="3198">
-        <label>LiZhaoyuan1/Source/Music.cpp</label>
-        <link refid="Music_8cpp"/>
-      </node>
-      <node id="3190">
-        <label>LiZhaoyuan1/Source/SceneMun.cpp</label>
-        <link refid="SceneMun_8cpp"/>
-      </node>
-      <node id="3188">
-        <label>LiZhaoyuan1/Source/LoadingScreen.cpp</label>
-        <link refid="LoadingScreen_8cpp"/>
-      </node>
-      <node id="3197">
-        <label>LiZhaoyuan1/Source/main.cpp</label>
-        <link refid="main_8cpp"/>
-      </node>
-      <node id="3184">
-        <label>LiZhaoyuan1/Source/SceneGalaxy.h</label>
-        <link refid="SceneGalaxy_8h"/>
-        <childnode refid="3181" relation="include">
-        </childnode>
-        <childnode refid="3185" relation="include">
-        </childnode>
-      </node>
-      <node id="3200">
-        <label>LiZhaoyuan1/Source/include/ik_ISoundSource.h</label>
-        <link refid="ik__ISoundSource_8h"/>
-        <childnode refid="3199" relation="include">
-        </childnode>
-        <childnode refid="3178" relation="include">
-        </childnode>
-        <childnode refid="3201" relation="include">
-        </childnode>
-      </node>
-      <node id="3196">
-        <label>LiZhaoyuan1/Source/Camera.cpp</label>
-        <link refid="Camera_8cpp"/>
-      </node>
-      <node id="3199">
-        <label>LiZhaoyuan1/Source/include/ik_ISoundEngine.h</label>
-        <link refid="ik__ISoundEngine_8h"/>
-        <childnode refid="3178" relation="include">
-        </childnode>
-      </node>
-      <node id="3192">
-        <label>LiZhaoyuan1/Source/Missile.cpp</label>
-        <link refid="Missile_8cpp"/>
-      </node>
-      <node id="3195">
-        <label>LiZhaoyuan1/Source/Camera3.cpp</label>
-        <link refid="Camera3_8cpp"/>
-      </node>
-      <node id="3178">
-        <label>LiZhaoyuan1/Source/include/irrKlang.h</label>
-        <link refid="irrKlang_8h"/>
-        <childnode refid="3179" relation="include">
-        </childnode>
-      </node>
-      <node id="3189">
-        <label>LiZhaoyuan1/Source/SceneMun.h</label>
-        <link refid="SceneMun_8h"/>
-        <childnode refid="3181" relation="include">
-        </childnode>
-        <childnode refid="3190" relation="include">
-        </childnode>
-      </node>
-      <node id="3185">
-        <label>LiZhaoyuan1/Source/SceneGalaxy.cpp</label>
-        <link refid="SceneGalaxy_8cpp"/>
-      </node>
-      <node id="3179">
-        <label>LiZhaoyuan1/Source/Music.h</label>
-        <link refid="Music_8h"/>
-        <childnode refid="3180" relation="include">
-        </childnode>
-        <childnode refid="3193" relation="include">
-        </childnode>
-        <childnode refid="3181" relation="include">
-        </childnode>
-        <childnode refid="3198" relation="include">
-        </childnode>
-      </node>
-      <node id="3186">
-        <label>LiZhaoyuan1/Source/SP2.cpp</label>
-        <link refid="SP2_8cpp"/>
-      </node>
-      <node id="3201">
-        <label>LiZhaoyuan1/Source/include/ik_IAudioRecorder.h</label>
-        <link refid="ik__IAudioRecorder_8h"/>
-        <childnode refid="3178" relation="include">
-        </childnode>
-      </node>
-      <node id="3202">
-        <label>LiZhaoyuan1/Source/include/ik_ISoundEffectControl.h</label>
-        <link refid="ik__ISoundEffectControl_8h"/>
-        <childnode refid="3203" relation="include">
-        </childnode>
-        <childnode refid="3178" relation="include">
-        </childnode>
-      </node>
-      <node id="3193">
-        <label>LiZhaoyuan1/Source/SceneSoraJewel.h</label>
-        <link refid="SceneSoraJewel_8h"/>
-        <childnode refid="3181" relation="include">
-        </childnode>
-        <childnode refid="3194" relation="include">
-        </childnode>
-      </node>
-      <node id="3203">
-        <label>LiZhaoyuan1/Source/include/ik_ISound.h</label>
-        <link refid="ik__ISound_8h"/>
-        <childnode refid="3199" relation="include">
-        </childnode>
-        <childnode refid="3178" relation="include">
-        </childnode>
-      </node>
-      <node id="3177">
-        <label>LiZhaoyuan1/Source/include/ik_vec3d.h</label>
-        <link refid="ik_vec3d.h"/>
-        <childnode refid="3178" relation="include">
-        </childnode>
-        <childnode refid="3199" relation="include">
-        </childnode>
-        <childnode refid="3200" relation="include">
-        </childnode>
-        <childnode refid="3202" relation="include">
-        </childnode>
-        <childnode refid="3203" relation="include">
-        </childnode>
-      </node>
       <node id="3180">
         <label>LiZhaoyuan1/Source/Application.h</label>
         <link refid="Application_8h"/>
@@ -234,9 +56,187 @@
         <childnode refid="3186" relation="include">
         </childnode>
       </node>
+      <node id="3186">
+        <label>LiZhaoyuan1/Source/SP2.cpp</label>
+        <link refid="SP2_8cpp"/>
+      </node>
+      <node id="3197">
+        <label>LiZhaoyuan1/Source/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="3198">
+        <label>LiZhaoyuan1/Source/Music.cpp</label>
+        <link refid="Music_8cpp"/>
+      </node>
+      <node id="3202">
+        <label>LiZhaoyuan1/Source/include/ik_ISoundEffectControl.h</label>
+        <link refid="ik__ISoundEffectControl_8h"/>
+        <childnode refid="3203" relation="include">
+        </childnode>
+        <childnode refid="3178" relation="include">
+        </childnode>
+      </node>
+      <node id="3195">
+        <label>LiZhaoyuan1/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="3187">
+        <label>LiZhaoyuan1/Source/LoadingScreen.h</label>
+        <link refid="LoadingScreen_8h"/>
+        <childnode refid="3181" relation="include">
+        </childnode>
+        <childnode refid="3188" relation="include">
+        </childnode>
+      </node>
+      <node id="3182">
+        <label>LiZhaoyuan1/Source/Camera3.h</label>
+        <link refid="Camera3_8h"/>
+        <childnode refid="3183" relation="include">
+        </childnode>
+        <childnode refid="3187" relation="include">
+        </childnode>
+        <childnode refid="3189" relation="include">
+        </childnode>
+        <childnode refid="3184" relation="include">
+        </childnode>
+        <childnode refid="3191" relation="include">
+        </childnode>
+        <childnode refid="3193" relation="include">
+        </childnode>
+        <childnode refid="3195" relation="include">
+        </childnode>
+      </node>
+      <node id="3185">
+        <label>LiZhaoyuan1/Source/SceneGalaxy.cpp</label>
+        <link refid="SceneGalaxy_8cpp"/>
+      </node>
+      <node id="3200">
+        <label>LiZhaoyuan1/Source/include/ik_ISoundSource.h</label>
+        <link refid="ik__ISoundSource_8h"/>
+        <childnode refid="3199" relation="include">
+        </childnode>
+        <childnode refid="3178" relation="include">
+        </childnode>
+        <childnode refid="3201" relation="include">
+        </childnode>
+      </node>
+      <node id="3196">
+        <label>LiZhaoyuan1/Source/Camera.cpp</label>
+        <link refid="Camera_8cpp"/>
+      </node>
+      <node id="3192">
+        <label>LiZhaoyuan1/Source/Missile.cpp</label>
+        <link refid="Missile_8cpp"/>
+      </node>
+      <node id="3184">
+        <label>LiZhaoyuan1/Source/SceneGalaxy.h</label>
+        <link refid="SceneGalaxy_8h"/>
+        <childnode refid="3181" relation="include">
+        </childnode>
+        <childnode refid="3185" relation="include">
+        </childnode>
+      </node>
       <node id="3194">
         <label>LiZhaoyuan1/Source/SceneSoraJewel.cpp</label>
         <link refid="SceneSoraJewel_8cpp"/>
+      </node>
+      <node id="3203">
+        <label>LiZhaoyuan1/Source/include/ik_ISound.h</label>
+        <link refid="ik__ISound_8h"/>
+        <childnode refid="3199" relation="include">
+        </childnode>
+        <childnode refid="3178" relation="include">
+        </childnode>
+      </node>
+      <node id="3181">
+        <label>LiZhaoyuan1/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="3201">
+        <label>LiZhaoyuan1/Source/include/ik_IAudioRecorder.h</label>
+        <link refid="ik__IAudioRecorder_8h"/>
+        <childnode refid="3178" relation="include">
+        </childnode>
+      </node>
+      <node id="3179">
+        <label>LiZhaoyuan1/Source/Music.h</label>
+        <link refid="Music_8h"/>
+        <childnode refid="3180" relation="include">
+        </childnode>
+        <childnode refid="3193" relation="include">
+        </childnode>
+        <childnode refid="3181" relation="include">
+        </childnode>
+        <childnode refid="3198" relation="include">
+        </childnode>
+      </node>
+      <node id="3190">
+        <label>LiZhaoyuan1/Source/SceneMun.cpp</label>
+        <link refid="SceneMun_8cpp"/>
+      </node>
+      <node id="3188">
+        <label>LiZhaoyuan1/Source/LoadingScreen.cpp</label>
+        <link refid="LoadingScreen_8cpp"/>
+      </node>
+      <node id="3199">
+        <label>LiZhaoyuan1/Source/include/ik_ISoundEngine.h</label>
+        <link refid="ik__ISoundEngine_8h"/>
+        <childnode refid="3178" relation="include">
+        </childnode>
+      </node>
+      <node id="3193">
+        <label>LiZhaoyuan1/Source/SceneSoraJewel.h</label>
+        <link refid="SceneSoraJewel_8h"/>
+        <childnode refid="3181" relation="include">
+        </childnode>
+        <childnode refid="3194" relation="include">
+        </childnode>
+      </node>
+      <node id="3191">
+        <label>LiZhaoyuan1/Source/Missile.h</label>
+        <link refid="Missile_8h"/>
+        <childnode refid="3184" relation="include">
+        </childnode>
+        <childnode refid="3192" relation="include">
+        </childnode>
+      </node>
+      <node id="3177">
+        <label>LiZhaoyuan1/Source/include/ik_vec3d.h</label>
+        <link refid="ik_vec3d.h"/>
+        <childnode refid="3178" relation="include">
+        </childnode>
+        <childnode refid="3199" relation="include">
+        </childnode>
+        <childnode refid="3200" relation="include">
+        </childnode>
+        <childnode refid="3202" relation="include">
+        </childnode>
+        <childnode refid="3203" relation="include">
+        </childnode>
+      </node>
+      <node id="3183">
+        <label>LiZhaoyuan1/Source/SP2.h</label>
+        <link refid="SP2_8h"/>
+        <childnode refid="3181" relation="include">
+        </childnode>
+        <childnode refid="3184" relation="include">
+        </childnode>
+        <childnode refid="3186" relation="include">
+        </childnode>
+      </node>
+      <node id="3189">
+        <label>LiZhaoyuan1/Source/SceneMun.h</label>
+        <link refid="SceneMun_8h"/>
+        <childnode refid="3181" relation="include">
+        </childnode>
+        <childnode refid="3190" relation="include">
+        </childnode>
+      </node>
+      <node id="3178">
+        <label>LiZhaoyuan1/Source/include/irrKlang.h</label>
+        <link refid="irrKlang_8h"/>
+        <childnode refid="3179" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="classirrklang_1_1vec3d" prot="public">irrklang::vec3d</innerclass>

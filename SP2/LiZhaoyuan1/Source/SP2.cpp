@@ -103,7 +103,6 @@ void SP2::Init()
 	meshList[GEO_CUBE] = MeshBuilder::GenerateCube("reference", Color(0,0,0));
 
 	meshList[GEO_QUAD] = MeshBuilder::GenerateQuad("quad", Color(0, 0, 0));
-	meshList[GEO_QUAD]->textureID = LoadTGA("Image//Pikachu2.tga");
 
 	meshList[GEO_CUBE2] = MeshBuilder::GenerateCube("Cube", Color(0,0,0));
 	

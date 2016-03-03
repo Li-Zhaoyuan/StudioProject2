@@ -1,0 +1,6 @@
+<map id="music" name="music">
+<area shape="rect" id="node2" href="$classirrklang_1_1ISoundEngine.html" title="Interface to the sound engine, for playing 3d and 2d sound and music. " alt="" coords="5,171,157,197"/>
+<area shape="rect" id="node3" href="$classirrklang_1_1IRefCounted.html" title="Base class of most objects of the irrKlang. " alt="" coords="7,95,150,121"/>
+<area shape="rect" id="node5" href="$classirrklang_1_1ISoundSource.html" title="A sound source describes an input file (.ogg, .mp3, .wav or similar) and its default settings..." alt="" coords="186,171,339,197"/>
+<area shape="rect" id="node6" href="$classirrklang_1_1IVirtualRefCounted.html" title="Reference counting base class for objects in the Irrlicht Engine similar to IRefCounted. " alt="" coords="175,95,353,121"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="SceneGalaxy::CheckLargeAsteroid" name="SceneGalaxy::CheckLargeAsteroid">
+<area shape="rect" id="node2" href="$classSceneGalaxy.html#a6423b415bf29060d3be4598d74f7335f" title="SceneGalaxy CutScene function. " alt="" coords="294,5,459,32"/>
+<area shape="rect" id="node4" href="$classSceneGalaxy.html#a554bb441fbb4af66f813b1e890badc68" title="SceneGalaxy MovingAsteroid function. " alt="" coords="279,56,475,83"/>
+<area shape="rect" id="node3" href="$classSceneGalaxy.html#a20f9275f7788921a7cd843219b9bdeff" title="SceneGalaxy main update function. " alt="" coords="523,31,672,57"/>
+</map>

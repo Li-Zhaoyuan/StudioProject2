@@ -1,0 +1,8 @@
+<map id="SceneSoraJewel::renderMesh" name="SceneSoraJewel::renderMesh">
+<area shape="rect" id="node2" href="$classSceneSoraJewel.html#a5609b1a03e5d60a01ac655e2f10bcfc9" title="This function is the main and is responsible for getting the OBJ and or mesh to the sccene..." alt="" coords="557,121,724,147"/>
+<area shape="rect" id="node3" href="$classSceneSoraJewel.html#a6ad88963e5a112a0b76a8fef584498fa" title="Renders engineer, this function is placed in the Render() " alt="" coords="267,45,490,71"/>
+<area shape="rect" id="node4" href="$classSceneSoraJewel.html#af5fa247ec16f76ecd7b0ced03709a8e5" title="This function is placed in the Render() near the end so that we can avoid depth problems. " alt="" coords="285,95,472,122"/>
+<area shape="rect" id="node5" href="$classSceneSoraJewel.html#a09e3c2a9ccddfd4990ec6f4756165835" title="Renders minimap to the top right of screen. " alt="" coords="248,146,509,173"/>
+<area shape="rect" id="node6" href="$classSceneSoraJewel.html#ae79e80f601a34fb22b0fc26eef81a832" title="Renders skybox and is placed separately to prevent confusion. " alt="" coords="273,197,484,223"/>
+<area shape="rect" id="node7" href="$classSceneSoraJewel.html#ac312f866a381cefeb0459b514a09af31" title="This function renders the textbox and the chat. " alt="" coords="285,247,472,274"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="SceneMun::RenderTextOnScreen" name="SceneMun::RenderTextOnScreen">
+<area shape="rect" id="node2" href="$classSceneMun.html#aad2e9cc76f3cf7ae6c8c54288177b798" title="Function that allows the extraction of NPCs from the map, sending them into the air. " alt="" coords="277,5,460,32"/>
+<area shape="rect" id="node3" href="$classSceneMun.html#aa953e0eaad928335a38aefe9df1021a6" title="SceneMun&#39;s main render function. " alt="" coords="516,115,649,141"/>
+<area shape="rect" id="node4" href="$classSceneMun.html#a44fda537867e6ffe37a62e3c376dcaca" title="Function that renders some texts when certain interactions are done. " alt="" coords="273,107,465,149"/>
+<area shape="rect" id="node5" href="$classSceneMun.html#aa829350a783d56e436ccc3bd6354637d" title="Function that renders the letter on screen when the interaction of recieving a letter. " alt="" coords="277,173,460,214"/>
+<area shape="rect" id="node6" href="$classSceneMun.html#a39f4e2b8b18cd27b652e194e62a2e813" title="Function that renders the textbox around the Texts. " alt="" coords="269,238,468,279"/>
+</map>

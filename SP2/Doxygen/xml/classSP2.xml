@@ -209,8 +209,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/SP2.h" line="72" column="1" bodyfile="LiZhaoyuan1/Source/SP2.h" bodystart="72" bodyend="-1"/>
-        <referencedby refid="classSP2_1a90159ea511cadcc99364c6f75d108a71" compoundref="SP2_8cpp" startline="356" endline="403">Render</referencedby>
-        <referencedby refid="classSP2_1a075edf39d3102610bf7f404ae3b8d38c" compoundref="SP2_8cpp" startline="127" endline="172">Update</referencedby>
+        <referencedby refid="classSP2_1a90159ea511cadcc99364c6f75d108a71" compoundref="SP2_8cpp" startline="355" endline="402">Render</referencedby>
+        <referencedby refid="classSP2_1a075edf39d3102610bf7f404ae3b8d38c" compoundref="SP2_8cpp" startline="126" endline="171">Update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classSP2_1a22bbbfd0af7f0001df52c8369f11c7a2" prot="private" static="no" mutable="no">
         <type>unsigned</type>
@@ -224,8 +224,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/SP2.h" line="81" column="1" bodyfile="LiZhaoyuan1/Source/SP2.h" bodystart="81" bodyend="-1"/>
-        <referencedby refid="classSP2_1a5b606cdfc77b243631fc130483527333" compoundref="SP2_8cpp" startline="409" endline="413">Exit</referencedby>
-        <referencedby refid="classSP2_1a8669c489b6a968f367a4610b254ac992" compoundref="SP2_8cpp" startline="49" endline="118">Init</referencedby>
+        <referencedby refid="classSP2_1a5b606cdfc77b243631fc130483527333" compoundref="SP2_8cpp" startline="408" endline="412">Exit</referencedby>
+        <referencedby refid="classSP2_1a8669c489b6a968f367a4610b254ac992" compoundref="SP2_8cpp" startline="49" endline="117">Init</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classSP2_1ad1c6c281399472f9b8dcf5b0815e8672" prot="private" static="no" mutable="no">
         <type><ref refid="classMesh" kindref="compound">Mesh</ref> *</type>
@@ -239,9 +239,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/SP2.h" line="82" column="1" bodyfile="LiZhaoyuan1/Source/SP2.h" bodystart="82" bodyend="-1"/>
-        <referencedby refid="classSP2_1a8669c489b6a968f367a4610b254ac992" compoundref="SP2_8cpp" startline="49" endline="118">Init</referencedby>
-        <referencedby refid="classSP2_1a90159ea511cadcc99364c6f75d108a71" compoundref="SP2_8cpp" startline="356" endline="403">Render</referencedby>
-        <referencedby refid="classSP2_1aac535f04258e670dde533f1f1b43ac11" compoundref="SP2_8cpp" startline="270" endline="289">Rendermainmenutoscreen</referencedby>
+        <referencedby refid="classSP2_1a8669c489b6a968f367a4610b254ac992" compoundref="SP2_8cpp" startline="49" endline="117">Init</referencedby>
+        <referencedby refid="classSP2_1a90159ea511cadcc99364c6f75d108a71" compoundref="SP2_8cpp" startline="355" endline="402">Render</referencedby>
+        <referencedby refid="classSP2_1aac535f04258e670dde533f1f1b43ac11" compoundref="SP2_8cpp" startline="269" endline="288">Rendermainmenutoscreen</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classSP2_1a0a0cb5aefe439099be749ad709a07827" prot="private" static="no" mutable="no">
         <type>unsigned</type>
@@ -255,8 +255,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/SP2.h" line="84" column="1" bodyfile="LiZhaoyuan1/Source/SP2.h" bodystart="84" bodyend="-1"/>
-        <referencedby refid="classSP2_1a5b606cdfc77b243631fc130483527333" compoundref="SP2_8cpp" startline="409" endline="413">Exit</referencedby>
-        <referencedby refid="classSP2_1a8669c489b6a968f367a4610b254ac992" compoundref="SP2_8cpp" startline="49" endline="118">Init</referencedby>
+        <referencedby refid="classSP2_1a5b606cdfc77b243631fc130483527333" compoundref="SP2_8cpp" startline="408" endline="412">Exit</referencedby>
+        <referencedby refid="classSP2_1a8669c489b6a968f367a4610b254ac992" compoundref="SP2_8cpp" startline="49" endline="117">Init</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classSP2_1a72cfa58a88b48d0ba77757a1268d03b0" prot="private" static="no" mutable="no">
         <type>unsigned</type>
@@ -270,10 +270,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/SP2.h" line="85" column="1" bodyfile="LiZhaoyuan1/Source/SP2.h" bodystart="85" bodyend="-1"/>
-        <referencedby refid="classSP2_1a8669c489b6a968f367a4610b254ac992" compoundref="SP2_8cpp" startline="49" endline="118">Init</referencedby>
-        <referencedby refid="classSP2_1acf9cd6642d16e15f0ca2e43e9d266070" compoundref="SP2_8cpp" startline="183" endline="226">renderMesh</referencedby>
-        <referencedby refid="classSP2_1ab49c40d25cc25c6272e7943708a1867e" compoundref="SP2_8cpp" startline="239" endline="264">RenderText</referencedby>
-        <referencedby refid="classSP2_1ab642469a9e89925dafd3055a79b65cda" compoundref="SP2_8cpp" startline="308" endline="349">RenderTextOnScreen</referencedby>
+        <referencedby refid="classSP2_1a8669c489b6a968f367a4610b254ac992" compoundref="SP2_8cpp" startline="49" endline="117">Init</referencedby>
+        <referencedby refid="classSP2_1acf9cd6642d16e15f0ca2e43e9d266070" compoundref="SP2_8cpp" startline="182" endline="225">renderMesh</referencedby>
+        <referencedby refid="classSP2_1ab49c40d25cc25c6272e7943708a1867e" compoundref="SP2_8cpp" startline="238" endline="263">RenderText</referencedby>
+        <referencedby refid="classSP2_1ab642469a9e89925dafd3055a79b65cda" compoundref="SP2_8cpp" startline="307" endline="348">RenderTextOnScreen</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classSP2_1a1361c13eb209c4034417f6b5e0cfb316" prot="private" static="no" mutable="no">
         <type><ref refid="classCamera3" kindref="compound">Camera3</ref></type>
@@ -287,9 +287,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/SP2.h" line="88" column="1" bodyfile="LiZhaoyuan1/Source/SP2.h" bodystart="88" bodyend="-1"/>
-        <referencedby refid="classSP2_1a8669c489b6a968f367a4610b254ac992" compoundref="SP2_8cpp" startline="49" endline="118">Init</referencedby>
-        <referencedby refid="classSP2_1a90159ea511cadcc99364c6f75d108a71" compoundref="SP2_8cpp" startline="356" endline="403">Render</referencedby>
-        <referencedby refid="classSP2_1a075edf39d3102610bf7f404ae3b8d38c" compoundref="SP2_8cpp" startline="127" endline="172">Update</referencedby>
+        <referencedby refid="classSP2_1a8669c489b6a968f367a4610b254ac992" compoundref="SP2_8cpp" startline="49" endline="117">Init</referencedby>
+        <referencedby refid="classSP2_1a90159ea511cadcc99364c6f75d108a71" compoundref="SP2_8cpp" startline="355" endline="402">Render</referencedby>
+        <referencedby refid="classSP2_1a075edf39d3102610bf7f404ae3b8d38c" compoundref="SP2_8cpp" startline="126" endline="171">Update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classSP2_1a1a73481349180c97834e92aeafaaf8d6" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -332,7 +332,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/SP2.h" line="92" column="1" bodyfile="LiZhaoyuan1/Source/SP2.h" bodystart="92" bodyend="-1"/>
-        <referencedby refid="classSP2_1a075edf39d3102610bf7f404ae3b8d38c" compoundref="SP2_8cpp" startline="127" endline="172">Update</referencedby>
+        <referencedby refid="classSP2_1a075edf39d3102610bf7f404ae3b8d38c" compoundref="SP2_8cpp" startline="126" endline="171">Update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classSP2_1ae44599c3321ef9eabc5869ed9185362d" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -347,7 +347,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/SP2.h" line="93" column="1" bodyfile="LiZhaoyuan1/Source/SP2.h" bodystart="93" bodyend="-1"/>
-        <referencedby refid="classSP2_1a075edf39d3102610bf7f404ae3b8d38c" compoundref="SP2_8cpp" startline="127" endline="172">Update</referencedby>
+        <referencedby refid="classSP2_1a075edf39d3102610bf7f404ae3b8d38c" compoundref="SP2_8cpp" startline="126" endline="171">Update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classSP2_1a569ae5e70b45395a6d7661c7cfd656ed" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -362,7 +362,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/SP2.h" line="94" column="1" bodyfile="LiZhaoyuan1/Source/SP2.h" bodystart="94" bodyend="-1"/>
-        <referencedby refid="classSP2_1a075edf39d3102610bf7f404ae3b8d38c" compoundref="SP2_8cpp" startline="127" endline="172">Update</referencedby>
+        <referencedby refid="classSP2_1a075edf39d3102610bf7f404ae3b8d38c" compoundref="SP2_8cpp" startline="126" endline="171">Update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classSP2_1abafedd6dff40be29472afbc9c9e702d0" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -376,9 +376,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/SP2.h" line="100" column="1" bodyfile="LiZhaoyuan1/Source/SP2.h" bodystart="100" bodyend="-1"/>
-        <referencedby refid="classSP2_1a8669c489b6a968f367a4610b254ac992" compoundref="SP2_8cpp" startline="49" endline="118">Init</referencedby>
-        <referencedby refid="classSP2_1a90159ea511cadcc99364c6f75d108a71" compoundref="SP2_8cpp" startline="356" endline="403">Render</referencedby>
-        <referencedby refid="classSP2_1a075edf39d3102610bf7f404ae3b8d38c" compoundref="SP2_8cpp" startline="127" endline="172">Update</referencedby>
+        <referencedby refid="classSP2_1a8669c489b6a968f367a4610b254ac992" compoundref="SP2_8cpp" startline="49" endline="117">Init</referencedby>
+        <referencedby refid="classSP2_1a90159ea511cadcc99364c6f75d108a71" compoundref="SP2_8cpp" startline="355" endline="402">Render</referencedby>
+        <referencedby refid="classSP2_1a075edf39d3102610bf7f404ae3b8d38c" compoundref="SP2_8cpp" startline="126" endline="171">Update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classSP2_1a7e88ffdd87bd1c8393c377d03951408b" prot="private" static="no" mutable="no">
         <type><ref refid="classApplication" kindref="compound">Application</ref></type>
@@ -392,7 +392,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/SP2.h" line="101" column="1" bodyfile="LiZhaoyuan1/Source/SP2.h" bodystart="101" bodyend="-1"/>
-        <referencedby refid="classSP2_1a075edf39d3102610bf7f404ae3b8d38c" compoundref="SP2_8cpp" startline="127" endline="172">Update</referencedby>
+        <referencedby refid="classSP2_1a075edf39d3102610bf7f404ae3b8d38c" compoundref="SP2_8cpp" startline="126" endline="171">Update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classSP2_1a040bdcc2c0b5dc0719b5eaa448852756" prot="private" static="no" mutable="no">
         <type><ref refid="classMS" kindref="compound">MS</ref></type>
@@ -406,11 +406,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/SP2.h" line="103" column="1" bodyfile="LiZhaoyuan1/Source/SP2.h" bodystart="103" bodyend="-1"/>
-        <referencedby refid="classSP2_1a90159ea511cadcc99364c6f75d108a71" compoundref="SP2_8cpp" startline="356" endline="403">Render</referencedby>
-        <referencedby refid="classSP2_1aac535f04258e670dde533f1f1b43ac11" compoundref="SP2_8cpp" startline="270" endline="289">Rendermainmenutoscreen</referencedby>
-        <referencedby refid="classSP2_1acf9cd6642d16e15f0ca2e43e9d266070" compoundref="SP2_8cpp" startline="183" endline="226">renderMesh</referencedby>
-        <referencedby refid="classSP2_1ab49c40d25cc25c6272e7943708a1867e" compoundref="SP2_8cpp" startline="239" endline="264">RenderText</referencedby>
-        <referencedby refid="classSP2_1ab642469a9e89925dafd3055a79b65cda" compoundref="SP2_8cpp" startline="308" endline="349">RenderTextOnScreen</referencedby>
+        <referencedby refid="classSP2_1a90159ea511cadcc99364c6f75d108a71" compoundref="SP2_8cpp" startline="355" endline="402">Render</referencedby>
+        <referencedby refid="classSP2_1aac535f04258e670dde533f1f1b43ac11" compoundref="SP2_8cpp" startline="269" endline="288">Rendermainmenutoscreen</referencedby>
+        <referencedby refid="classSP2_1acf9cd6642d16e15f0ca2e43e9d266070" compoundref="SP2_8cpp" startline="182" endline="225">renderMesh</referencedby>
+        <referencedby refid="classSP2_1ab49c40d25cc25c6272e7943708a1867e" compoundref="SP2_8cpp" startline="238" endline="263">RenderText</referencedby>
+        <referencedby refid="classSP2_1ab642469a9e89925dafd3055a79b65cda" compoundref="SP2_8cpp" startline="307" endline="348">RenderTextOnScreen</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classSP2_1a276c1c207dcf8e4da5a195c631872a18" prot="private" static="no" mutable="no">
         <type><ref refid="classMS" kindref="compound">MS</ref></type>
@@ -424,11 +424,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/SP2.h" line="103" column="1" bodyfile="LiZhaoyuan1/Source/SP2.h" bodystart="103" bodyend="-1"/>
-        <referencedby refid="classSP2_1a90159ea511cadcc99364c6f75d108a71" compoundref="SP2_8cpp" startline="356" endline="403">Render</referencedby>
-        <referencedby refid="classSP2_1aac535f04258e670dde533f1f1b43ac11" compoundref="SP2_8cpp" startline="270" endline="289">Rendermainmenutoscreen</referencedby>
-        <referencedby refid="classSP2_1acf9cd6642d16e15f0ca2e43e9d266070" compoundref="SP2_8cpp" startline="183" endline="226">renderMesh</referencedby>
-        <referencedby refid="classSP2_1ab49c40d25cc25c6272e7943708a1867e" compoundref="SP2_8cpp" startline="239" endline="264">RenderText</referencedby>
-        <referencedby refid="classSP2_1ab642469a9e89925dafd3055a79b65cda" compoundref="SP2_8cpp" startline="308" endline="349">RenderTextOnScreen</referencedby>
+        <referencedby refid="classSP2_1a90159ea511cadcc99364c6f75d108a71" compoundref="SP2_8cpp" startline="355" endline="402">Render</referencedby>
+        <referencedby refid="classSP2_1aac535f04258e670dde533f1f1b43ac11" compoundref="SP2_8cpp" startline="269" endline="288">Rendermainmenutoscreen</referencedby>
+        <referencedby refid="classSP2_1acf9cd6642d16e15f0ca2e43e9d266070" compoundref="SP2_8cpp" startline="182" endline="225">renderMesh</referencedby>
+        <referencedby refid="classSP2_1ab49c40d25cc25c6272e7943708a1867e" compoundref="SP2_8cpp" startline="238" endline="263">RenderText</referencedby>
+        <referencedby refid="classSP2_1ab642469a9e89925dafd3055a79b65cda" compoundref="SP2_8cpp" startline="307" endline="348">RenderTextOnScreen</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classSP2_1a4857b8805da062f4e22600cbe8f130f2" prot="private" static="no" mutable="no">
         <type><ref refid="classMS" kindref="compound">MS</ref></type>
@@ -442,11 +442,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/SP2.h" line="103" column="1" bodyfile="LiZhaoyuan1/Source/SP2.h" bodystart="103" bodyend="-1"/>
-        <referencedby refid="classSP2_1a8669c489b6a968f367a4610b254ac992" compoundref="SP2_8cpp" startline="49" endline="118">Init</referencedby>
-        <referencedby refid="classSP2_1aac535f04258e670dde533f1f1b43ac11" compoundref="SP2_8cpp" startline="270" endline="289">Rendermainmenutoscreen</referencedby>
-        <referencedby refid="classSP2_1acf9cd6642d16e15f0ca2e43e9d266070" compoundref="SP2_8cpp" startline="183" endline="226">renderMesh</referencedby>
-        <referencedby refid="classSP2_1ab49c40d25cc25c6272e7943708a1867e" compoundref="SP2_8cpp" startline="239" endline="264">RenderText</referencedby>
-        <referencedby refid="classSP2_1ab642469a9e89925dafd3055a79b65cda" compoundref="SP2_8cpp" startline="308" endline="349">RenderTextOnScreen</referencedby>
+        <referencedby refid="classSP2_1a8669c489b6a968f367a4610b254ac992" compoundref="SP2_8cpp" startline="49" endline="117">Init</referencedby>
+        <referencedby refid="classSP2_1aac535f04258e670dde533f1f1b43ac11" compoundref="SP2_8cpp" startline="269" endline="288">Rendermainmenutoscreen</referencedby>
+        <referencedby refid="classSP2_1acf9cd6642d16e15f0ca2e43e9d266070" compoundref="SP2_8cpp" startline="182" endline="225">renderMesh</referencedby>
+        <referencedby refid="classSP2_1ab49c40d25cc25c6272e7943708a1867e" compoundref="SP2_8cpp" startline="238" endline="263">RenderText</referencedby>
+        <referencedby refid="classSP2_1ab642469a9e89925dafd3055a79b65cda" compoundref="SP2_8cpp" startline="307" endline="348">RenderTextOnScreen</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -501,7 +501,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="LiZhaoyuan1/Source/SP2.h" line="64" column="1" bodyfile="LiZhaoyuan1/Source/SP2.cpp" bodystart="49" bodyend="118"/>
+        <location file="LiZhaoyuan1/Source/SP2.h" line="64" column="1" bodyfile="LiZhaoyuan1/Source/SP2.cpp" bodystart="49" bodyend="117"/>
         <references refid="classSP2_1abafedd6dff40be29472afbc9c9e702d0" compoundref="SP2_8h" startline="100">arrowpositiony</references>
         <references refid="classSP2_1a1361c13eb209c4034417f6b5e0cfb316" compoundref="SP2_8h" startline="88">camera</references>
         <references refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="21" endline="52">MeshBuilder::GenerateAxes</references>
@@ -561,7 +561,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="LiZhaoyuan1/Source/SP2.h" line="65" column="1" bodyfile="LiZhaoyuan1/Source/SP2.cpp" bodystart="127" bodyend="172"/>
+        <location file="LiZhaoyuan1/Source/SP2.h" line="65" column="1" bodyfile="LiZhaoyuan1/Source/SP2.cpp" bodystart="126" bodyend="171"/>
         <references refid="classSP2_1a7e88ffdd87bd1c8393c377d03951408b" compoundref="SP2_8h" startline="101">application</references>
         <references refid="classSP2_1abafedd6dff40be29472afbc9c9e702d0" compoundref="SP2_8h" startline="100">arrowpositiony</references>
         <references refid="classSP2_1a1361c13eb209c4034417f6b5e0cfb316" compoundref="SP2_8h" startline="88">camera</references>
@@ -590,7 +590,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="LiZhaoyuan1/Source/SP2.h" line="66" column="1" bodyfile="LiZhaoyuan1/Source/SP2.cpp" bodystart="356" bodyend="403"/>
+        <location file="LiZhaoyuan1/Source/SP2.h" line="66" column="1" bodyfile="LiZhaoyuan1/Source/SP2.cpp" bodystart="355" bodyend="402"/>
         <references refid="classSP2_1abafedd6dff40be29472afbc9c9e702d0" compoundref="SP2_8h" startline="100">arrowpositiony</references>
         <references refid="classSP2_1a1361c13eb209c4034417f6b5e0cfb316" compoundref="SP2_8h" startline="88">camera</references>
         <references refid="classSP2_1a9141517dfe1346da813f2ea89a28f8c9" compoundref="SP2_8h" startline="72">fps</references>
@@ -602,8 +602,8 @@
         <references refid="classMS_1aac22e39d0ac437fcb85403a9f0a7a25f" compoundref="MatrixStack_8cpp" startline="52" endline="54">MS::PopMatrix</references>
         <references refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" compoundref="Camera_8h" startline="9">Camera::position</references>
         <references refid="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" compoundref="MatrixStack_8cpp" startline="62" endline="64">MS::PushMatrix</references>
-        <references refid="classSP2_1aac535f04258e670dde533f1f1b43ac11" compoundref="SP2_8cpp" startline="270" endline="289">Rendermainmenutoscreen</references>
-        <references refid="classSP2_1ab642469a9e89925dafd3055a79b65cda" compoundref="SP2_8cpp" startline="308" endline="349">RenderTextOnScreen</references>
+        <references refid="classSP2_1aac535f04258e670dde533f1f1b43ac11" compoundref="SP2_8cpp" startline="269" endline="288">Rendermainmenutoscreen</references>
+        <references refid="classSP2_1ab642469a9e89925dafd3055a79b65cda" compoundref="SP2_8cpp" startline="307" endline="348">RenderTextOnScreen</references>
         <references refid="classMtx44_1a3ac8a0afd66412e15e4246474b893da2" compoundref="Mtx44_8cpp" startline="74" endline="77">Mtx44::SetToIdentity</references>
         <references refid="classMtx44_1ac6e6521111d78ff36d539bf111a902c6" compoundref="Mtx44_8cpp" startline="467" endline="473">Mtx44::SetToPerspective</references>
         <references refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" compoundref="Camera_8h" startline="10">Camera::target</references>
@@ -625,7 +625,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="LiZhaoyuan1/Source/SP2.h" line="67" column="1" bodyfile="LiZhaoyuan1/Source/SP2.cpp" bodystart="409" bodyend="413"/>
+        <location file="LiZhaoyuan1/Source/SP2.h" line="67" column="1" bodyfile="LiZhaoyuan1/Source/SP2.cpp" bodystart="408" bodyend="412"/>
         <references refid="classSP2_1a0a0cb5aefe439099be749ad709a07827" compoundref="SP2_8h" startline="84">m_programID</references>
         <references refid="classSP2_1a22bbbfd0af7f0001df52c8369f11c7a2" compoundref="SP2_8h" startline="81">m_vertexArrayID</references>
       </memberdef>
@@ -665,7 +665,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="LiZhaoyuan1/Source/SP2.h" line="74" column="1" bodyfile="LiZhaoyuan1/Source/SP2.cpp" bodystart="183" bodyend="226"/>
+        <location file="LiZhaoyuan1/Source/SP2.h" line="74" column="1" bodyfile="LiZhaoyuan1/Source/SP2.cpp" bodystart="182" bodyend="225"/>
         <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">Mtx44::a</references>
         <references refid="classMtx44_1aac1ba21ddfc5f3c24baa4f58d9c5c256" compoundref="Mtx44_8cpp" startline="139" endline="196">Mtx44::GetInverse</references>
         <references refid="classMtx44_1aebb16a0329c5237e314af0d75d8081fd" compoundref="Mtx44_8cpp" startline="123" endline="127">Mtx44::GetTranspose</references>
@@ -692,7 +692,7 @@
         <references refid="classSP2_1ac3feab54d671016fbd83505de999eeceae4eb0f8e52caf7994c98b99ec4acf796" compoundref="SP2_8h" startline="45">U_MODELVIEW_INVERSE_TRANSPOSE</references>
         <references refid="classSP2_1ac3feab54d671016fbd83505de999eeceae3c314a935d2dad845d6d2ae9ac0f6b3" compoundref="SP2_8h" startline="43">U_MVP</references>
         <references refid="classSP2_1a276c1c207dcf8e4da5a195c631872a18" compoundref="SP2_8h" startline="103">viewStack</references>
-        <referencedby refid="classSP2_1aac535f04258e670dde533f1f1b43ac11" compoundref="SP2_8cpp" startline="270" endline="289">Rendermainmenutoscreen</referencedby>
+        <referencedby refid="classSP2_1aac535f04258e670dde533f1f1b43ac11" compoundref="SP2_8cpp" startline="269" endline="288">Rendermainmenutoscreen</referencedby>
       </memberdef>
       <memberdef kind="function" id="classSP2_1aac535f04258e670dde533f1f1b43ac11" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -705,7 +705,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="LiZhaoyuan1/Source/SP2.h" line="75" column="1" bodyfile="LiZhaoyuan1/Source/SP2.cpp" bodystart="270" bodyend="289"/>
+        <location file="LiZhaoyuan1/Source/SP2.h" line="75" column="1" bodyfile="LiZhaoyuan1/Source/SP2.cpp" bodystart="269" bodyend="288"/>
         <references refid="classSP2_1ad60364d83f44504a7e99b5c28db91f0ca2ba1b893751de68c5fea854fc420aa55" compoundref="SP2_8h" startline="34">GEO_CUBE2</references>
         <references refid="classMS_1a77c5f7e4a21ea48dcf902a7ff6824a11" compoundref="MatrixStack_8cpp" startline="83" endline="87">MS::LoadIdentity</references>
         <references refid="classMS_1a86606fe9f575ccb747d77195c8aefdaf" compoundref="MatrixStack_8cpp" startline="98" endline="100">MS::LoadMatrix</references>
@@ -714,13 +714,13 @@
         <references refid="classMS_1aac22e39d0ac437fcb85403a9f0a7a25f" compoundref="MatrixStack_8cpp" startline="52" endline="54">MS::PopMatrix</references>
         <references refid="classSP2_1a4857b8805da062f4e22600cbe8f130f2" compoundref="SP2_8h" startline="103">projectionStack</references>
         <references refid="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" compoundref="MatrixStack_8cpp" startline="62" endline="64">MS::PushMatrix</references>
-        <references refid="classSP2_1acf9cd6642d16e15f0ca2e43e9d266070" compoundref="SP2_8cpp" startline="183" endline="226">renderMesh</references>
+        <references refid="classSP2_1acf9cd6642d16e15f0ca2e43e9d266070" compoundref="SP2_8cpp" startline="182" endline="225">renderMesh</references>
         <references refid="classMS_1a6ce592114042b920b648bca5519690cd" compoundref="MatrixStack_8cpp" startline="130" endline="134">MS::Rotate</references>
         <references refid="classMS_1a52109795de960e24663b315e9128533f" compoundref="MatrixStack_8cpp" startline="149" endline="153">MS::Scale</references>
         <references refid="classMtx44_1a0a4c7818be7c1aeb0601ad069c1a591d" compoundref="Mtx44_8cpp" startline="493" endline="498">Mtx44::SetToOrtho</references>
         <references refid="classMS_1a7e94a35ce566fe3ec49c92b6c4bb663a" compoundref="MatrixStack_8cpp" startline="169" endline="173">MS::Translate</references>
         <references refid="classSP2_1a276c1c207dcf8e4da5a195c631872a18" compoundref="SP2_8h" startline="103">viewStack</references>
-        <referencedby refid="classSP2_1a90159ea511cadcc99364c6f75d108a71" compoundref="SP2_8cpp" startline="356" endline="403">Render</referencedby>
+        <referencedby refid="classSP2_1a90159ea511cadcc99364c6f75d108a71" compoundref="SP2_8cpp" startline="355" endline="402">Render</referencedby>
       </memberdef>
       <memberdef kind="function" id="classSP2_1a0feb39cda53bae80e375bee90f187423" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -793,7 +793,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="LiZhaoyuan1/Source/SP2.h" line="78" column="1" bodyfile="LiZhaoyuan1/Source/SP2.cpp" bodystart="239" bodyend="264"/>
+        <location file="LiZhaoyuan1/Source/SP2.h" line="78" column="1" bodyfile="LiZhaoyuan1/Source/SP2.cpp" bodystart="238" bodyend="263"/>
         <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">Mtx44::a</references>
         <references refid="classSP2_1a72cfa58a88b48d0ba77757a1268d03b0" compoundref="SP2_8h" startline="85">m_parameters</references>
         <references refid="classSP2_1a040bdcc2c0b5dc0719b5eaa448852756" compoundref="SP2_8h" startline="103">modelStack</references>
@@ -889,7 +889,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="LiZhaoyuan1/Source/SP2.h" line="79" column="1" bodyfile="LiZhaoyuan1/Source/SP2.cpp" bodystart="308" bodyend="349"/>
+        <location file="LiZhaoyuan1/Source/SP2.h" line="79" column="1" bodyfile="LiZhaoyuan1/Source/SP2.cpp" bodystart="307" bodyend="348"/>
         <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">Mtx44::a</references>
         <references refid="classMS_1a77c5f7e4a21ea48dcf902a7ff6824a11" compoundref="MatrixStack_8cpp" startline="83" endline="87">MS::LoadIdentity</references>
         <references refid="classMS_1a86606fe9f575ccb747d77195c8aefdaf" compoundref="MatrixStack_8cpp" startline="98" endline="100">MS::LoadMatrix</references>
@@ -913,7 +913,7 @@
         <references refid="classSP2_1ac3feab54d671016fbd83505de999eeceacef240215149972b316e36239acc2309" compoundref="SP2_8h" startline="53">U_TEXT_COLOR</references>
         <references refid="classSP2_1ac3feab54d671016fbd83505de999eecea2054b79e1a8f4c9fa775e78b7aafa08a" compoundref="SP2_8h" startline="52">U_TEXT_ENABLED</references>
         <references refid="classSP2_1a276c1c207dcf8e4da5a195c631872a18" compoundref="SP2_8h" startline="103">viewStack</references>
-        <referencedby refid="classSP2_1a90159ea511cadcc99364c6f75d108a71" compoundref="SP2_8cpp" startline="356" endline="403">Render</referencedby>
+        <referencedby refid="classSP2_1a90159ea511cadcc99364c6f75d108a71" compoundref="SP2_8cpp" startline="355" endline="402">Render</referencedby>
       </memberdef>
       <memberdef kind="function" id="classSP2_1ad75a82ae232c252ceb10cc86580c7c88" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>

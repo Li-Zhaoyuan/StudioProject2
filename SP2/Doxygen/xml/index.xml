@@ -623,6 +623,7 @@
     <member refid="classSceneMun_1a005cfaea5ef904549b8e12a0f3b18bc7" kind="enum"><name>GEOMETRY_TYPE</name></member>
     <member refid="classSceneMun_1a005cfaea5ef904549b8e12a0f3b18bc7a2f30883f9c08d9c3a64a7040e060f7c4" kind="enumvalue"><name>GEO_AXES</name></member>
     <member refid="classSceneMun_1a005cfaea5ef904549b8e12a0f3b18bc7a903dbb797c5148fcffb09015e30f4fed" kind="enumvalue"><name>GEO_QUAD</name></member>
+    <member refid="classSceneMun_1a005cfaea5ef904549b8e12a0f3b18bc7adc968e5ed85e7ae1b5789354f0d33df4" kind="enumvalue"><name>GEO_QUAD2</name></member>
     <member refid="classSceneMun_1a005cfaea5ef904549b8e12a0f3b18bc7a353408e56f046eb9005d51144f91d12f" kind="enumvalue"><name>GEO_CUBE</name></member>
     <member refid="classSceneMun_1a005cfaea5ef904549b8e12a0f3b18bc7a15a94d7269619cc22df1741aec05689f" kind="enumvalue"><name>GEO_SPHERE</name></member>
     <member refid="classSceneMun_1a005cfaea5ef904549b8e12a0f3b18bc7a1d64b7c1104ebe5589924afff6621d0f" kind="enumvalue"><name>GEO_LIGHTBALL</name></member>
@@ -723,6 +724,7 @@
     <member refid="classSceneMun_1ad0bf076fb9f9da16b849a66a5aaa9648" kind="variable"><name>camPosY</name></member>
     <member refid="classSceneMun_1a9f2f8db1efda21078769fb41729fc587" kind="variable"><name>camPosz</name></member>
     <member refid="classSceneMun_1a7b8aaff6026ba893af78357be80bacc4" kind="variable"><name>interact</name></member>
+    <member refid="classSceneMun_1af4e4e3bd602c5bf4bdb4947d011c8709" kind="variable"><name>initstringonce</name></member>
     <member refid="classSceneMun_1afd84aafea6a2685b7879c3654390d388" kind="variable"><name>fultonleft</name></member>
     <member refid="classSceneMun_1a682f7467f5df25ef06d368e537b380c6" kind="variable"><name>timing</name></member>
     <member refid="classSceneMun_1a12c5c5b6e63b1c44134e82718cd49bf3" kind="variable"><name>textWL</name></member>

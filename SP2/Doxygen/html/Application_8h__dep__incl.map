@@ -1,0 +1,19 @@
+<map id="LiZhaoyuan1/Source/Application.h" name="LiZhaoyuan1/Source/Application.h">
+<area shape="rect" id="node2" href="$Application_8cpp.html" title="LiZhaoyuan1/Source\l/Application.cpp" alt="" coords="485,363,625,404"/>
+<area shape="rect" id="node3" href="$Camera3_8h.html" title="class for the camera used in the various scenes " alt="" coords="675,95,815,136"/>
+<area shape="rect" id="node6" href="$SceneGalaxy_8cpp.html" title="SceneGalaxy cpp file, everything needed inside the scene, found here. " alt="" coords="944,363,1084,404"/>
+<area shape="rect" id="node7" href="$SP2_8cpp.html" title="class for the Main Menu " alt="" coords="837,273,977,315"/>
+<area shape="rect" id="node9" href="$LoadingScreen_8cpp.html" title="class for the scene while Loading " alt="" coords="25,273,165,315"/>
+<area shape="rect" id="node11" href="$SceneMun_8cpp.html" title="LiZhaoyuan1/Source\l/SceneMun.cpp" alt="" coords="241,273,381,315"/>
+<area shape="rect" id="node15" href="$SceneSoraJewel_8cpp.html" title="LiZhaoyuan1/Source\l/SceneSoraJewel.cpp" alt="" coords="1103,273,1250,315"/>
+<area shape="rect" id="node16" href="$Camera3_8cpp.html" title="Camera. " alt="" coords="1057,184,1197,225"/>
+<area shape="rect" id="node17" href="$Camera_8cpp.html" title="LiZhaoyuan1/Source\l/Camera.cpp" alt="" coords="1375,95,1515,136"/>
+<area shape="rect" id="node18" href="$main_8cpp.html" title="LiZhaoyuan1/Source\l/main.cpp" alt="" coords="1539,95,1679,136"/>
+<area shape="rect" id="node4" href="$SP2_8h.html" title="class for the Main Menu " alt="" coords="729,184,869,225"/>
+<area shape="rect" id="node5" href="$SceneGalaxy_8h.html" title="class for the scene at Galaxy " alt="" coords="621,273,761,315"/>
+<area shape="rect" id="node8" href="$LoadingScreen_8h.html" title="Class of the Gamestates of the game. " alt="" coords="133,184,273,225"/>
+<area shape="rect" id="node10" href="$SceneMun_8h.html" title="class for the scene at Mun " alt="" coords="349,184,489,225"/>
+<area shape="rect" id="node12" href="$Missile_8h.html" title="class for the shooting of missile " alt="" coords="513,184,653,225"/>
+<area shape="rect" id="node14" href="$SceneSoraJewel_8h.html" title="class for the scene at SoraJewel " alt="" coords="893,184,1033,225"/>
+<area shape="rect" id="node13" href="$Missile_8cpp.html" title="SceneGalaxy cpp file, everything needed inside the scene, found here. " alt="" coords="457,273,597,315"/>
+</map>

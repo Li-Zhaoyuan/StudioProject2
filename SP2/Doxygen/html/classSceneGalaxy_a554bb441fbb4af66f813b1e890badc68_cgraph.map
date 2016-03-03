@@ -1,0 +1,8 @@
+<map id="SceneGalaxy::MovingAsteroid" name="SceneGalaxy::MovingAsteroid">
+<area shape="rect" id="node2" href="$classSceneGalaxy.html#acccf25e9e8694ba361761418f88b0a7f" title="SceneGalaxy CheckAsteroidStartWave function. " alt="" coords="265,5,459,47"/>
+<area shape="rect" id="node3" href="$classSceneGalaxy.html#a5f461f562535453e8b3fe9fc7b62b906" title="SceneGalaxy CheckAsteroidWave1 function. " alt="" coords="265,71,459,112"/>
+<area shape="rect" id="node4" href="$classSceneGalaxy.html#af90d3d15c34567313a7d26ba2ef5a228" title="SceneGalaxy CheckAsteoidWave2 function. " alt="" coords="265,136,459,177"/>
+<area shape="rect" id="node5" href="$classSceneGalaxy.html#af259ddd2c3243975ce403588062fa363" title="SceneGalaxy CheckCollision function. " alt="" coords="265,202,459,229"/>
+<area shape="rect" id="node6" href="$classSceneGalaxy.html#a8a4b54b6e1d6cecd7f5872bd817e95ae" title="SceneGalaxy CheckLargeAsteroid function. " alt="" coords="249,253,475,279"/>
+<area shape="rect" id="node7" href="$classSceneGalaxy.html#ac010581c63e5fe8110702052132d7d58" title="SceneGalaxy getMagnitude function. " alt="" coords="269,303,455,330"/>
+</map>

@@ -186,6 +186,8 @@ void SceneMun::Init()
 
 	meshList[GEO_QUAD] = MeshBuilder::GenerateQuad("quad", Color(1, 0, 1));
 	meshList[GEO_QUAD]->textureID = LoadTGA("Image//Textbox.tga");
+
+	meshList[GEO_QUAD2] = MeshBuilder::GenerateQuad("quad2", Color(1, 1, 1));
 	//Skybox
 	meshList[GEO_MUNFRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
 	meshList[GEO_MUNFRONT]->textureID = LoadTGA("Image//MunFront.tga");
@@ -399,9 +401,16 @@ void SceneMun::Init()
 	hoverheight = 0;
 	rotateplane = 0;
 	translateplane = 0;
-	thisisastring << "fulton left: ";
+	LadyCaptured = false, VillageChiefCaptured = false, MinerCaptured = false;
+	CalefareACaptured = false, CalefareBCaptured = false, CalefareCCaptured = false;
+	fultonreceived = false;
 	fultonleft = 6;
-	thisisastring << fultonleft;
+	if (initstringonce == 0)
+	{
+		thisisastring << "fulton left: ";
+		thisisastring << fultonleft;
+		initstringonce += 1;
+	}
 }
 /****************************************************************************/
 /*!
@@ -417,6 +426,12 @@ void SceneMun::Init()
 /****************************************************************************/
 void SceneMun::Update(double dt)
 {
+	if (fultonreceived == false)
+	{
+		fultonleft = 6;
+		thisisastring.seekp(-1, thisisastring.cur);
+		thisisastring << fultonleft;
+	}
 	if ((((interact >> REPAIRED) & 1) < 1))
 	{
 		camera.Update(dt, 50);
@@ -1413,7 +1428,7 @@ void SceneMun::interactions()
 	RadiusFromCalafareB = (viewatCalefareB - tempview).Length();
 	RadiusFromCalafareC = (viewatCalefareC - tempview).Length();
 	if ((RadiusFromOre < 2.5f && (((interact >> MINED) & 1) < 1) && (((interact >> PLAYER_GET_PICKAXE) & 1) > 0))
-		|| (RadiusFromCrashedPlane < 7.5f && (((interact >> REPAIRED) & 1) < 1))
+		|| (RadiusFromCrashedPlane < 7.5f && (((interact >> REPAIRED) & 1) < 1) && (((interact >> MINED) & 1) > 0))
 		|| RadiusFromLady < 6.0f
 		|| RadiusFromDude < 6.0f
 		|| RadiusFromSnake < 6.0f
@@ -1455,7 +1470,6 @@ void SceneMun::interactions()
 	{
 		interact |= 1 << TALKING_TO_LADY;
 		textWL = true;
-		fultonleft - 1;
 	}
 	else if (RadiusFromLady > 6.0f)
 	{
@@ -1876,7 +1890,7 @@ void SceneMun::RenderLetterOnScreen()
 		modelStack.Scale(6.5, 6.5, 6.5);
 		modelStack.Rotate(90, 1, 0, 0);
 		//modelStack.Rotate(-45, 1, 0, 0);
-		renderMesh(meshList[GEO_QUAD], true);
+		renderMesh(meshList[GEO_QUAD2], false);
 		projectionStack.PopMatrix();
 		viewStack.PopMatrix();
 		modelStack.PopMatrix();

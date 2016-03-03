@@ -7,11 +7,18 @@
     <includes local="no">GL\glew.h</includes>
     <includes refid="LoadTGA_8h" local="yes">LoadTGA.h</includes>
     <incdepgraph>
+      <node id="3411">
+        <label>LoadTGA.h</label>
+        <link refid="LoadTGA_8h"/>
+      </node>
       <node id="3410">
         <label>GL\glew.h</label>
       </node>
       <node id="3409">
         <label>fstream</label>
+      </node>
+      <node id="3408">
+        <label>iostream</label>
       </node>
       <node id="3407">
         <label>LiZhaoyuan1/Source/LoadTGA.cpp</label>
@@ -24,13 +31,6 @@
         </childnode>
         <childnode refid="3411" relation="include">
         </childnode>
-      </node>
-      <node id="3411">
-        <label>LoadTGA.h</label>
-        <link refid="LoadTGA_8h"/>
-      </node>
-      <node id="3408">
-        <label>iostream</label>
       </node>
     </incdepgraph>
       <sectiondef kind="func">
@@ -50,10 +50,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="LiZhaoyuan1/Source/LoadTGA.cpp" line="8" column="1" bodyfile="LiZhaoyuan1/Source/LoadTGA.cpp" bodystart="8" bodyend="62"/>
-        <referencedby refid="classSP2_1a8669c489b6a968f367a4610b254ac992" compoundref="SP2_8cpp" startline="49" endline="118">SP2::Init</referencedby>
+        <referencedby refid="classSP2_1a8669c489b6a968f367a4610b254ac992" compoundref="SP2_8cpp" startline="49" endline="117">SP2::Init</referencedby>
         <referencedby refid="classLoadingScreen_1a7fa77cff0af874a23c6043a80af09da3" compoundref="LoadingScreen_8cpp" startline="45" endline="126">LoadingScreen::Init</referencedby>
         <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
-        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="414">SceneMun::Init</referencedby>
         <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
       </memberdef>
       </sectiondef>

@@ -1,0 +1,5 @@
+<map id="music::musicMun" name="music::musicMun">
+<area shape="rect" id="node2" href="$classirrklang_1_1ISoundEngine.html#a4eed0fa6712872e55003b26462e21005" title="Adds sound source into the sound engine as file. " alt="" coords="179,5,359,47"/>
+<area shape="rect" id="node3" href="$classirrklang_1_1ISoundEngine.html#a25f612fe6479d3b22dc5bab2a2eaa927" title="loads a sound source (if not loaded already) from a file and plays it. " alt="" coords="193,71,345,112"/>
+<area shape="rect" id="node4" href="$classirrklang_1_1ISoundEngine.html#a38dbc2f1d49e3127fc4a81a9c1a2f82d" title="Stops all currently playing sounds. " alt="" coords="193,136,345,177"/>
+</map>
