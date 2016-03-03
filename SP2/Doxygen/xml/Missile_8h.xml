@@ -1,0 +1,392 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="Missile_8h" kind="file" language="C++">
+    <compoundname>Missile.h</compoundname>
+    <includes refid="Vector3_8h" local="yes">Vector3.h</includes>
+    <includes refid="Camera3_8h" local="yes">Camera3.h</includes>
+    <includedby refid="SceneGalaxy_8h" local="yes">LiZhaoyuan1/Source/SceneGalaxy.h</includedby>
+    <includedby refid="Missile_8cpp" local="yes">LiZhaoyuan1/Source/Missile.cpp</includedby>
+    <incdepgraph>
+      <node id="3594">
+        <label>Currentgamestate.h</label>
+        <link refid="CurrentGameState_8h"/>
+      </node>
+      <node id="3615">
+        <label>ik_IAudioStream.h</label>
+        <link refid="ik__IAudioStream_8h"/>
+        <childnode refid="3603" relation="include">
+        </childnode>
+        <childnode refid="3608" relation="include">
+        </childnode>
+      </node>
+      <node id="3593">
+        <label>windows.h</label>
+      </node>
+      <node id="3581">
+        <label>LiZhaoyuan1/Source/Missile.h</label>
+        <link refid="Missile.h"/>
+        <childnode refid="3582" relation="include">
+        </childnode>
+        <childnode refid="3589" relation="include">
+        </childnode>
+      </node>
+      <node id="3597">
+        <label>Windows.h</label>
+      </node>
+      <node id="3584">
+        <label>cmath</label>
+      </node>
+      <node id="3596">
+        <label>string</label>
+      </node>
+      <node id="3589">
+        <label>Camera3.h</label>
+        <link refid="Camera3_8h"/>
+        <childnode refid="3590" relation="include">
+        </childnode>
+        <childnode refid="3591" relation="include">
+        </childnode>
+      </node>
+      <node id="3607">
+        <label>ik_EStreamModes.h</label>
+        <link refid="ik__EStreamModes_8h"/>
+      </node>
+      <node id="3585">
+        <label>exception</label>
+      </node>
+      <node id="3610">
+        <label>ik_ISoundSource.h</label>
+        <link refid="ik__ISoundSource_8h"/>
+        <childnode refid="3604" relation="include">
+        </childnode>
+        <childnode refid="3601" relation="include">
+        </childnode>
+        <childnode refid="3607" relation="include">
+        </childnode>
+        <childnode refid="3608" relation="include">
+        </childnode>
+      </node>
+      <node id="3599">
+        <label>ik_irrKlangTypes.h</label>
+        <link refid="ik__irrKlangTypes_8h"/>
+        <childnode refid="3600" relation="include">
+        </childnode>
+      </node>
+      <node id="3609">
+        <label>ik_ISoundEngine.h</label>
+        <link refid="ik__ISoundEngine_8h"/>
+        <childnode refid="3603" relation="include">
+        </childnode>
+        <childnode refid="3601" relation="include">
+        </childnode>
+        <childnode refid="3610" relation="include">
+        </childnode>
+        <childnode refid="3611" relation="include">
+        </childnode>
+        <childnode refid="3607" relation="include">
+        </childnode>
+        <childnode refid="3613" relation="include">
+        </childnode>
+        <childnode refid="3614" relation="include">
+        </childnode>
+      </node>
+      <node id="3608">
+        <label>ik_SAudioStreamFormat.h</label>
+        <link refid="ik__SAudioStreamFormat_8h"/>
+        <childnode refid="3603" relation="include">
+        </childnode>
+      </node>
+      <node id="3600">
+        <label>wchar.h</label>
+      </node>
+      <node id="3598">
+        <label>include/irrKlang.h</label>
+        <link refid="irrKlang_8h"/>
+        <childnode refid="3599" relation="include">
+        </childnode>
+        <childnode refid="3601" relation="include">
+        </childnode>
+        <childnode refid="3603" relation="include">
+        </childnode>
+        <childnode refid="3604" relation="include">
+        </childnode>
+        <childnode refid="3605" relation="include">
+        </childnode>
+        <childnode refid="3606" relation="include">
+        </childnode>
+        <childnode refid="3607" relation="include">
+        </childnode>
+        <childnode refid="3608" relation="include">
+        </childnode>
+        <childnode refid="3609" relation="include">
+        </childnode>
+        <childnode refid="3610" relation="include">
+        </childnode>
+        <childnode refid="3611" relation="include">
+        </childnode>
+        <childnode refid="3615" relation="include">
+        </childnode>
+        <childnode refid="3616" relation="include">
+        </childnode>
+        <childnode refid="3612" relation="include">
+        </childnode>
+        <childnode refid="3618" relation="include">
+        </childnode>
+        <childnode refid="3613" relation="include">
+        </childnode>
+        <childnode refid="3617" relation="include">
+        </childnode>
+        <childnode refid="3619" relation="include">
+        </childnode>
+        <childnode refid="3620" relation="include">
+        </childnode>
+        <childnode refid="3614" relation="include">
+        </childnode>
+      </node>
+      <node id="3606">
+        <label>ik_ESoundEngineOptions.h</label>
+        <link refid="ik__ESoundEngineOptions_8h"/>
+      </node>
+      <node id="3618">
+        <label>ik_ISoundStopEventReceiver.h</label>
+        <link refid="ik__ISoundStopEventReceiver_8h"/>
+        <childnode refid="3603" relation="include">
+        </childnode>
+        <childnode refid="3608" relation="include">
+        </childnode>
+      </node>
+      <node id="3586">
+        <label>ctime</label>
+      </node>
+      <node id="3595">
+        <label>Music.h</label>
+        <link refid="Music_8h"/>
+        <childnode refid="3588" relation="include">
+        </childnode>
+        <childnode refid="3596" relation="include">
+        </childnode>
+        <childnode refid="3597" relation="include">
+        </childnode>
+        <childnode refid="3598" relation="include">
+        </childnode>
+      </node>
+      <node id="3582">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="3583" relation="include">
+        </childnode>
+        <childnode refid="3588" relation="include">
+        </childnode>
+      </node>
+      <node id="3592">
+        <label>timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="3593" relation="include">
+        </childnode>
+      </node>
+      <node id="3590">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="3582" relation="include">
+        </childnode>
+      </node>
+      <node id="3614">
+        <label>ik_ISoundMixedOutputReceiver.h</label>
+        <link refid="ik__ISoundMixedOutputReceiver_8h"/>
+        <childnode refid="3603" relation="include">
+        </childnode>
+        <childnode refid="3608" relation="include">
+        </childnode>
+      </node>
+      <node id="3602">
+        <label>math.h</label>
+      </node>
+      <node id="3587">
+        <label>cstdlib</label>
+      </node>
+      <node id="3588">
+        <label>iostream</label>
+      </node>
+      <node id="3620">
+        <label>ik_IAudioRecorder.h</label>
+        <link refid="ik__IAudioRecorder_8h"/>
+        <childnode refid="3603" relation="include">
+        </childnode>
+        <childnode refid="3610" relation="include">
+        </childnode>
+      </node>
+      <node id="3612">
+        <label>ik_ISoundEffectControl.h</label>
+        <link refid="ik__ISoundEffectControl_8h"/>
+        <childnode refid="3604" relation="include">
+        </childnode>
+        <childnode refid="3601" relation="include">
+        </childnode>
+      </node>
+      <node id="3583">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="3584" relation="include">
+        </childnode>
+        <childnode refid="3585" relation="include">
+        </childnode>
+        <childnode refid="3586" relation="include">
+        </childnode>
+        <childnode refid="3587" relation="include">
+        </childnode>
+      </node>
+      <node id="3619">
+        <label>ik_ISoundDeviceList.h</label>
+        <link refid="ik__ISoundDeviceList_8h"/>
+        <childnode refid="3603" relation="include">
+        </childnode>
+      </node>
+      <node id="3617">
+        <label>ik_IFileReader.h</label>
+        <link refid="ik__IFileReader_8h"/>
+        <childnode refid="3603" relation="include">
+        </childnode>
+      </node>
+      <node id="3604">
+        <label>ik_IVirtualRefCounted.h</label>
+        <link refid="ik__IVirtualRefCounted_8h"/>
+        <childnode refid="3599" relation="include">
+        </childnode>
+      </node>
+      <node id="3613">
+        <label>ik_IFileFactory.h</label>
+        <link refid="ik__IFileFactory_8h"/>
+        <childnode refid="3603" relation="include">
+        </childnode>
+      </node>
+      <node id="3611">
+        <label>ik_ISound.h</label>
+        <link refid="ik__ISound_8h"/>
+        <childnode refid="3604" relation="include">
+        </childnode>
+        <childnode refid="3612" relation="include">
+        </childnode>
+        <childnode refid="3601" relation="include">
+        </childnode>
+      </node>
+      <node id="3605">
+        <label>ik_ESoundOutputDrivers.h</label>
+        <link refid="ik__ESoundOutputDrivers_8h"/>
+      </node>
+      <node id="3616">
+        <label>ik_IAudioStreamLoader.h</label>
+        <link refid="ik__IAudioStreamLoader_8h"/>
+        <childnode refid="3603" relation="include">
+        </childnode>
+        <childnode refid="3617" relation="include">
+        </childnode>
+      </node>
+      <node id="3603">
+        <label>ik_IRefCounted.h</label>
+        <link refid="ik__IRefCounted_8h"/>
+        <childnode refid="3599" relation="include">
+        </childnode>
+      </node>
+      <node id="3601">
+        <label>ik_vec3d.h</label>
+        <link refid="ik__vec3d_8h"/>
+        <childnode refid="3602" relation="include">
+        </childnode>
+        <childnode refid="3599" relation="include">
+        </childnode>
+      </node>
+      <node id="3591">
+        <label>Application.h</label>
+        <link refid="Application_8h"/>
+        <childnode refid="3592" relation="include">
+        </childnode>
+        <childnode refid="3594" relation="include">
+        </childnode>
+        <childnode refid="3595" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3621">
+        <label>LiZhaoyuan1/Source/Missile.h</label>
+        <link refid="Missile.h"/>
+        <childnode refid="3622" relation="include">
+        </childnode>
+        <childnode refid="3625" relation="include">
+        </childnode>
+      </node>
+      <node id="3623">
+        <label>LiZhaoyuan1/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="3622">
+        <label>LiZhaoyuan1/Source/SceneGalaxy.h</label>
+        <link refid="SceneGalaxy_8h"/>
+        <childnode refid="3623" relation="include">
+        </childnode>
+        <childnode refid="3624" relation="include">
+        </childnode>
+      </node>
+      <node id="3625">
+        <label>LiZhaoyuan1/Source/Missile.cpp</label>
+        <link refid="Missile_8cpp"/>
+      </node>
+      <node id="3624">
+        <label>LiZhaoyuan1/Source/SceneGalaxy.cpp</label>
+        <link refid="SceneGalaxy_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classMissile" prot="public">Missile</innerclass>
+    <briefdescription>
+<para>class for the shooting of missile </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Li Zhaoyuan, Nathan Chia Shi-Lin, Terence Tan Ming Jie, Muhammad Nurhidayat Bin Suderman </para></simplesect>
+<simplesect kind="par"><title>email: lizhaoyuan123.com</title><para></para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MISSILE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MISSILE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Vector3_8h" kindref="compound">Vector3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Camera3_8h" kindref="compound">Camera3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classMissile" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classMissile" kindref="compound">Missile</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMissile_1aa5ce8791a8e7ebd4ea0afab390b73a1a" kindref="member">Missile</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMissile_1aa5ce8791a8e7ebd4ea0afab390b73a1a" kindref="member">Missile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;AmmoInMag);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMissile_1ad42379e48a46ec3556056f98ce8bd912" kindref="member">~Missile</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classMissile_1a0c22c399884f55d2110c2c65c96f9963" kindref="member">getPositionOfMissile</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMissile_1a1027d18cbf316fc3af3b0c5cc4bcea91" kindref="member">updatePosition</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/>&amp;pos);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMissile_1aa206c3f11f2baf8c60df1d34125165cb" kindref="member">setView</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/>&amp;<ref refid="classMissile_1a31fbd0cf1ff22f920619f17a49be8abf" kindref="member">view</ref>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classMissile_1a526031c614c9e9b7b468c03e723050a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classMissile_1a526031c614c9e9b7b468c03e723050a4" kindref="member">position</ref>;</highlight></codeline>
+<codeline lineno="34" refid="classMissile_1a3675a09a5ba0bc748140fd64c1e9e4f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classMissile_1a3675a09a5ba0bc748140fd64c1e9e4f1" kindref="member">missilePosition</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMissile_1a4792ac160be43b65cc4f598c35431815" kindref="member">Animation</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMissile_1ab8b981d855db52a5b5195387e1aab159" kindref="member">init</ref>(<ref refid="classCamera3" kindref="compound">Camera3</ref><sp/>*target);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMissile_1a552d9709b8149b33be43dbebbf754674" kindref="member">Firing</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMissile_1a81e0e5ddb4f60ee988c97ec5518b9bfa" kindref="member">update</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="classMissile_1a895f62306ed21f8f5659b1430dcfdb14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classMissile_1a895f62306ed21f8f5659b1430dcfdb14" kindref="member">Missiles</ref>;</highlight></codeline>
+<codeline lineno="42" refid="classMissile_1a1d6ace8655c8366c10c82355fc80adc3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classMissile_1a1d6ace8655c8366c10c82355fc80adc3" kindref="member">MissileUsed</ref><sp/>=<sp/>100;</highlight></codeline>
+<codeline lineno="43" refid="classMissile_1ae216d96286954831ac23b4827b950280" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classMissile_1ae216d96286954831ac23b4827b950280" kindref="member">delay</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="44" refid="classMissile_1a96e9652c6a71e8f419cd927447d071dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMissile" kindref="compound">Missile</ref>*<sp/><ref refid="classMissile_1a96e9652c6a71e8f419cd927447d071dc" kindref="member">Capacity</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48" refid="classMissile_1a31fbd0cf1ff22f920619f17a49be8abf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classMissile_1a31fbd0cf1ff22f920619f17a49be8abf" kindref="member">view</ref>;</highlight></codeline>
+<codeline lineno="49" refid="classMissile_1a870f6b4cb1a68e92b058ce0f2a3d9f2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCamera3" kindref="compound">Camera3</ref><sp/>*<ref refid="classMissile_1a870f6b4cb1a68e92b058ce0f2a3d9f2e" kindref="member">camera</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="LiZhaoyuan1/Source/Missile.h"/>
+  </compounddef>
+</doxygen>

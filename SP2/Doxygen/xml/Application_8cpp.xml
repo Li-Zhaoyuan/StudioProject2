@@ -1,0 +1,922 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="Application_8cpp" kind="file" language="C++">
+    <compoundname>Application.cpp</compoundname>
+    <includes refid="Application_8h" local="yes">Application.h</includes>
+    <includes local="no">GL/glew.h</includes>
+    <includes local="no">GLFW/glfw3.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="SP2_8h" local="yes">SP2.h</includes>
+    <includes refid="LoadingScreen_8h" local="yes">LoadingScreen.h</includes>
+    <includes refid="SceneMun_8h" local="yes">SceneMun.h</includes>
+    <includes refid="SceneGalaxy_8h" local="yes">SceneGalaxy.h</includes>
+    <includes refid="SceneSoraJewel_8h" local="yes">SceneSoraJewel.h</includes>
+    <includes refid="Music_8h" local="yes">Music.h</includes>
+    <incdepgraph>
+      <node id="2372">
+        <label>LoadingScreen.h</label>
+        <link refid="LoadingScreen_8h"/>
+        <childnode refid="2356" relation="include">
+        </childnode>
+        <childnode refid="2357" relation="include">
+        </childnode>
+        <childnode refid="2359" relation="include">
+        </childnode>
+        <childnode refid="2367" relation="include">
+        </childnode>
+        <childnode refid="2368" relation="include">
+        </childnode>
+        <childnode refid="2369" relation="include">
+        </childnode>
+      </node>
+      <node id="2323">
+        <label>Currentgamestate.h</label>
+        <link refid="CurrentGameState_8h"/>
+      </node>
+      <node id="2369">
+        <label>MatrixStack.h</label>
+        <link refid="MatrixStack_8h"/>
+        <childnode refid="2370" relation="include">
+        </childnode>
+        <childnode refid="2371" relation="include">
+        </childnode>
+      </node>
+      <node id="2345">
+        <label>ik_IAudioStream.h</label>
+        <link refid="ik__IAudioStream_8h"/>
+        <childnode refid="2333" relation="include">
+        </childnode>
+        <childnode refid="2338" relation="include">
+        </childnode>
+      </node>
+      <node id="2322">
+        <label>windows.h</label>
+      </node>
+      <node id="2360">
+        <label>Vertex.h</label>
+        <link refid="Vertex_8h"/>
+        <childnode refid="2361" relation="include">
+        </childnode>
+      </node>
+      <node id="2356">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+      </node>
+      <node id="2355">
+        <label>SP2.h</label>
+        <link refid="SP2_8h"/>
+        <childnode refid="2356" relation="include">
+        </childnode>
+        <childnode refid="2357" relation="include">
+        </childnode>
+        <childnode refid="2359" relation="include">
+        </childnode>
+        <childnode refid="2367" relation="include">
+        </childnode>
+        <childnode refid="2368" relation="include">
+        </childnode>
+        <childnode refid="2369" relation="include">
+        </childnode>
+      </node>
+      <node id="2379">
+        <label>Missile.h</label>
+        <link refid="Missile_8h"/>
+        <childnode refid="2361" relation="include">
+        </childnode>
+        <childnode refid="2368" relation="include">
+        </childnode>
+      </node>
+      <node id="2354">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2327">
+        <label>Windows.h</label>
+      </node>
+      <node id="2319">
+        <label>LiZhaoyuan1/Source/Application.cpp</label>
+        <link refid="Application.cpp"/>
+        <childnode refid="2320" relation="include">
+        </childnode>
+        <childnode refid="2351" relation="include">
+        </childnode>
+        <childnode refid="2352" relation="include">
+        </childnode>
+        <childnode refid="2353" relation="include">
+        </childnode>
+        <childnode refid="2354" relation="include">
+        </childnode>
+        <childnode refid="2355" relation="include">
+        </childnode>
+        <childnode refid="2372" relation="include">
+        </childnode>
+        <childnode refid="2373" relation="include">
+        </childnode>
+        <childnode refid="2378" relation="include">
+        </childnode>
+        <childnode refid="2380" relation="include">
+        </childnode>
+        <childnode refid="2324" relation="include">
+        </childnode>
+      </node>
+      <node id="2363">
+        <label>cmath</label>
+      </node>
+      <node id="2326">
+        <label>string</label>
+      </node>
+      <node id="2368">
+        <label>Camera3.h</label>
+        <link refid="Camera3_8h"/>
+        <childnode refid="2367" relation="include">
+        </childnode>
+        <childnode refid="2320" relation="include">
+        </childnode>
+      </node>
+      <node id="2351">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="2352">
+        <label>GLFW/glfw3.h</label>
+      </node>
+      <node id="2337">
+        <label>ik_EStreamModes.h</label>
+        <link refid="ik__EStreamModes_8h"/>
+      </node>
+      <node id="2364">
+        <label>exception</label>
+      </node>
+      <node id="2378">
+        <label>SceneGalaxy.h</label>
+        <link refid="SceneGalaxy_8h"/>
+        <childnode refid="2356" relation="include">
+        </childnode>
+        <childnode refid="2357" relation="include">
+        </childnode>
+        <childnode refid="2359" relation="include">
+        </childnode>
+        <childnode refid="2367" relation="include">
+        </childnode>
+        <childnode refid="2368" relation="include">
+        </childnode>
+        <childnode refid="2369" relation="include">
+        </childnode>
+        <childnode refid="2376" relation="include">
+        </childnode>
+        <childnode refid="2379" relation="include">
+        </childnode>
+        <childnode refid="2363" relation="include">
+        </childnode>
+        <childnode refid="2355" relation="include">
+        </childnode>
+        <childnode refid="2323" relation="include">
+        </childnode>
+      </node>
+      <node id="2375">
+        <label>fstream</label>
+      </node>
+      <node id="2340">
+        <label>ik_ISoundSource.h</label>
+        <link refid="ik__ISoundSource_8h"/>
+        <childnode refid="2334" relation="include">
+        </childnode>
+        <childnode refid="2331" relation="include">
+        </childnode>
+        <childnode refid="2337" relation="include">
+        </childnode>
+        <childnode refid="2338" relation="include">
+        </childnode>
+      </node>
+      <node id="2374">
+        <label>ReadTextFile.h</label>
+        <link refid="ReadTextFile_8h"/>
+        <childnode refid="2375" relation="include">
+        </childnode>
+        <childnode refid="2376" relation="include">
+        </childnode>
+        <childnode refid="2326" relation="include">
+        </childnode>
+        <childnode refid="2325" relation="include">
+        </childnode>
+      </node>
+      <node id="2329">
+        <label>ik_irrKlangTypes.h</label>
+        <link refid="ik__irrKlangTypes_8h"/>
+        <childnode refid="2330" relation="include">
+        </childnode>
+      </node>
+      <node id="2359">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2339">
+        <label>ik_ISoundEngine.h</label>
+        <link refid="ik__ISoundEngine_8h"/>
+        <childnode refid="2333" relation="include">
+        </childnode>
+        <childnode refid="2331" relation="include">
+        </childnode>
+        <childnode refid="2340" relation="include">
+        </childnode>
+        <childnode refid="2341" relation="include">
+        </childnode>
+        <childnode refid="2337" relation="include">
+        </childnode>
+        <childnode refid="2343" relation="include">
+        </childnode>
+        <childnode refid="2344" relation="include">
+        </childnode>
+      </node>
+      <node id="2371">
+        <label>Mtx44.h</label>
+        <link refid="Mtx44_8h"/>
+        <childnode refid="2362" relation="include">
+        </childnode>
+        <childnode refid="2361" relation="include">
+        </childnode>
+      </node>
+      <node id="2338">
+        <label>ik_SAudioStreamFormat.h</label>
+        <link refid="ik__SAudioStreamFormat_8h"/>
+        <childnode refid="2333" relation="include">
+        </childnode>
+      </node>
+      <node id="2330">
+        <label>wchar.h</label>
+      </node>
+      <node id="2328">
+        <label>include/irrKlang.h</label>
+        <link refid="irrKlang_8h"/>
+        <childnode refid="2329" relation="include">
+        </childnode>
+        <childnode refid="2331" relation="include">
+        </childnode>
+        <childnode refid="2333" relation="include">
+        </childnode>
+        <childnode refid="2334" relation="include">
+        </childnode>
+        <childnode refid="2335" relation="include">
+        </childnode>
+        <childnode refid="2336" relation="include">
+        </childnode>
+        <childnode refid="2337" relation="include">
+        </childnode>
+        <childnode refid="2338" relation="include">
+        </childnode>
+        <childnode refid="2339" relation="include">
+        </childnode>
+        <childnode refid="2340" relation="include">
+        </childnode>
+        <childnode refid="2341" relation="include">
+        </childnode>
+        <childnode refid="2345" relation="include">
+        </childnode>
+        <childnode refid="2346" relation="include">
+        </childnode>
+        <childnode refid="2342" relation="include">
+        </childnode>
+        <childnode refid="2348" relation="include">
+        </childnode>
+        <childnode refid="2343" relation="include">
+        </childnode>
+        <childnode refid="2347" relation="include">
+        </childnode>
+        <childnode refid="2349" relation="include">
+        </childnode>
+        <childnode refid="2350" relation="include">
+        </childnode>
+        <childnode refid="2344" relation="include">
+        </childnode>
+      </node>
+      <node id="2373">
+        <label>SceneMun.h</label>
+        <link refid="SceneMun_8h"/>
+        <childnode refid="2356" relation="include">
+        </childnode>
+        <childnode refid="2357" relation="include">
+        </childnode>
+        <childnode refid="2359" relation="include">
+        </childnode>
+        <childnode refid="2367" relation="include">
+        </childnode>
+        <childnode refid="2368" relation="include">
+        </childnode>
+        <childnode refid="2369" relation="include">
+        </childnode>
+        <childnode refid="2323" relation="include">
+        </childnode>
+        <childnode refid="2374" relation="include">
+        </childnode>
+        <childnode refid="2377" relation="include">
+        </childnode>
+      </node>
+      <node id="2336">
+        <label>ik_ESoundEngineOptions.h</label>
+        <link refid="ik__ESoundEngineOptions_8h"/>
+      </node>
+      <node id="2348">
+        <label>ik_ISoundStopEventReceiver.h</label>
+        <link refid="ik__ISoundStopEventReceiver_8h"/>
+        <childnode refid="2333" relation="include">
+        </childnode>
+        <childnode refid="2338" relation="include">
+        </childnode>
+      </node>
+      <node id="2365">
+        <label>ctime</label>
+      </node>
+      <node id="2324">
+        <label>Music.h</label>
+        <link refid="Music_8h"/>
+        <childnode refid="2325" relation="include">
+        </childnode>
+        <childnode refid="2326" relation="include">
+        </childnode>
+        <childnode refid="2327" relation="include">
+        </childnode>
+        <childnode refid="2328" relation="include">
+        </childnode>
+      </node>
+      <node id="2361">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="2362" relation="include">
+        </childnode>
+        <childnode refid="2325" relation="include">
+        </childnode>
+      </node>
+      <node id="2376">
+        <label>vector</label>
+      </node>
+      <node id="2370">
+        <label>stack</label>
+      </node>
+      <node id="2357">
+        <label>Mesh.h</label>
+        <link refid="Mesh_8h"/>
+        <childnode refid="2326" relation="include">
+        </childnode>
+        <childnode refid="2358" relation="include">
+        </childnode>
+      </node>
+      <node id="2321">
+        <label>timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="2322" relation="include">
+        </childnode>
+      </node>
+      <node id="2367">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="2361" relation="include">
+        </childnode>
+      </node>
+      <node id="2377">
+        <label>sstream</label>
+      </node>
+      <node id="2344">
+        <label>ik_ISoundMixedOutputReceiver.h</label>
+        <link refid="ik__ISoundMixedOutputReceiver_8h"/>
+        <childnode refid="2333" relation="include">
+        </childnode>
+        <childnode refid="2338" relation="include">
+        </childnode>
+      </node>
+      <node id="2332">
+        <label>math.h</label>
+      </node>
+      <node id="2366">
+        <label>cstdlib</label>
+      </node>
+      <node id="2325">
+        <label>iostream</label>
+      </node>
+      <node id="2350">
+        <label>ik_IAudioRecorder.h</label>
+        <link refid="ik__IAudioRecorder_8h"/>
+        <childnode refid="2333" relation="include">
+        </childnode>
+        <childnode refid="2340" relation="include">
+        </childnode>
+      </node>
+      <node id="2342">
+        <label>ik_ISoundEffectControl.h</label>
+        <link refid="ik__ISoundEffectControl_8h"/>
+        <childnode refid="2334" relation="include">
+        </childnode>
+        <childnode refid="2331" relation="include">
+        </childnode>
+      </node>
+      <node id="2362">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="2363" relation="include">
+        </childnode>
+        <childnode refid="2364" relation="include">
+        </childnode>
+        <childnode refid="2365" relation="include">
+        </childnode>
+        <childnode refid="2366" relation="include">
+        </childnode>
+      </node>
+      <node id="2349">
+        <label>ik_ISoundDeviceList.h</label>
+        <link refid="ik__ISoundDeviceList_8h"/>
+        <childnode refid="2333" relation="include">
+        </childnode>
+      </node>
+      <node id="2380">
+        <label>SceneSoraJewel.h</label>
+        <link refid="SceneSoraJewel_8h"/>
+        <childnode refid="2356" relation="include">
+        </childnode>
+        <childnode refid="2357" relation="include">
+        </childnode>
+        <childnode refid="2359" relation="include">
+        </childnode>
+        <childnode refid="2367" relation="include">
+        </childnode>
+        <childnode refid="2368" relation="include">
+        </childnode>
+        <childnode refid="2369" relation="include">
+        </childnode>
+        <childnode refid="2374" relation="include">
+        </childnode>
+        <childnode refid="2377" relation="include">
+        </childnode>
+        <childnode refid="2324" relation="include">
+        </childnode>
+      </node>
+      <node id="2347">
+        <label>ik_IFileReader.h</label>
+        <link refid="ik__IFileReader_8h"/>
+        <childnode refid="2333" relation="include">
+        </childnode>
+      </node>
+      <node id="2358">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+      </node>
+      <node id="2334">
+        <label>ik_IVirtualRefCounted.h</label>
+        <link refid="ik__IVirtualRefCounted_8h"/>
+        <childnode refid="2329" relation="include">
+        </childnode>
+      </node>
+      <node id="2343">
+        <label>ik_IFileFactory.h</label>
+        <link refid="ik__IFileFactory_8h"/>
+        <childnode refid="2333" relation="include">
+        </childnode>
+      </node>
+      <node id="2341">
+        <label>ik_ISound.h</label>
+        <link refid="ik__ISound_8h"/>
+        <childnode refid="2334" relation="include">
+        </childnode>
+        <childnode refid="2342" relation="include">
+        </childnode>
+        <childnode refid="2331" relation="include">
+        </childnode>
+      </node>
+      <node id="2335">
+        <label>ik_ESoundOutputDrivers.h</label>
+        <link refid="ik__ESoundOutputDrivers_8h"/>
+      </node>
+      <node id="2353">
+        <label>stdio.h</label>
+      </node>
+      <node id="2346">
+        <label>ik_IAudioStreamLoader.h</label>
+        <link refid="ik__IAudioStreamLoader_8h"/>
+        <childnode refid="2333" relation="include">
+        </childnode>
+        <childnode refid="2347" relation="include">
+        </childnode>
+      </node>
+      <node id="2333">
+        <label>ik_IRefCounted.h</label>
+        <link refid="ik__IRefCounted_8h"/>
+        <childnode refid="2329" relation="include">
+        </childnode>
+      </node>
+      <node id="2331">
+        <label>ik_vec3d.h</label>
+        <link refid="ik__vec3d_8h"/>
+        <childnode refid="2332" relation="include">
+        </childnode>
+        <childnode refid="2329" relation="include">
+        </childnode>
+      </node>
+      <node id="2320">
+        <label>Application.h</label>
+        <link refid="Application_8h"/>
+        <childnode refid="2321" relation="include">
+        </childnode>
+        <childnode refid="2323" relation="include">
+        </childnode>
+        <childnode refid="2324" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" prot="public" static="no" mutable="no">
+        <type>GLFWwindow *</type>
+        <definition>GLFWwindow* m_window</definition>
+        <argsstring></argsstring>
+        <name>m_window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Application.cpp" line="21" column="1" bodyfile="LiZhaoyuan1/Source/Application.cpp" bodystart="21" bodyend="-1"/>
+        <referencedby refid="classApplication_1a9d410604b39b8374a884b1f2a1f2a5ba" compoundref="Application_8cpp" startline="239" endline="245">Application::Exit</referencedby>
+        <referencedby refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" compoundref="Application_8cpp" startline="58" endline="110">Application::Init</referencedby>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="112" endline="237">Application::Run</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="Application_8cpp_1a920edc284eb96e60ae1494dfd1d3fea2" prot="public" static="no" mutable="no">
+        <type>GLFWmonitor *</type>
+        <definition>GLFWmonitor* primary</definition>
+        <argsstring></argsstring>
+        <name>primary</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Application.cpp" line="22" column="1" bodyfile="LiZhaoyuan1/Source/Application.cpp" bodystart="22" bodyend="-1"/>
+        <referencedby refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" compoundref="Application_8cpp" startline="58" endline="110">Application::Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="Application_8cpp_1a677c5ab1ba0f5747ef76b40a17b6f803" prot="public" static="no" mutable="no">
+        <type>const unsigned char</type>
+        <definition>const unsigned char FPS</definition>
+        <argsstring></argsstring>
+        <name>FPS</name>
+        <initializer>= 60</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Application.cpp" line="23" column="1" bodyfile="LiZhaoyuan1/Source/Application.cpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="Application_8cpp_1ae228418b33873657fa31313fb4189a8f" prot="public" static="no" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int frameTime</definition>
+        <argsstring></argsstring>
+        <name>frameTime</name>
+        <initializer>= 1000 / <ref refid="Application_8cpp_1a677c5ab1ba0f5747ef76b40a17b6f803" kindref="member">FPS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Application.cpp" line="24" column="1" bodyfile="LiZhaoyuan1/Source/Application.cpp" bodystart="24" bodyend="-1"/>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="112" endline="237">Application::Run</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="Application_8cpp_1a6e6d1771a9242858811be0a3569838fa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void error_callback</definition>
+        <argsstring>(int error, const char *description)</argsstring>
+        <name>error_callback</name>
+        <param>
+          <type>int</type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Application.cpp" line="27" column="1" bodyfile="LiZhaoyuan1/Source/Application.cpp" bodystart="27" bodyend="31"/>
+        <referencedby refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" compoundref="Application_8cpp" startline="58" endline="110">Application::Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="Application_8cpp_1a6d1a8981b70f74fc60c1428f080da820" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void key_callback</definition>
+        <argsstring>(GLFWwindow *window, int key, int scancode, int action, int mods)</argsstring>
+        <name>key_callback</name>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>scancode</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mods</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Application.cpp" line="34" column="1" bodyfile="LiZhaoyuan1/Source/Application.cpp" bodystart="34" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="Application_8cpp_1aadcee9765075e232ca0720f80a76ad37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void resize_callback</definition>
+        <argsstring>(GLFWwindow *window, int w, int h)</argsstring>
+        <name>resize_callback</name>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Application.cpp" line="53" column="1" bodyfile="LiZhaoyuan1/Source/Application.cpp" bodystart="53" bodyend="56"/>
+        <referencedby refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" compoundref="Application_8cpp" startline="58" endline="110">Application::Init</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Application_8h" kindref="compound">Application.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//Include<sp/>GLEW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GL/glew.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//Include<sp/>GLFW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GLFW/glfw3.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//Include<sp/>the<sp/>standard<sp/>C++<sp/>headers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SP2_8h" kindref="compound">SP2.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="LoadingScreen_8h" kindref="compound">LoadingScreen.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SceneMun_8h" kindref="compound">SceneMun.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SceneGalaxy_8h" kindref="compound">SceneGalaxy.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SceneSoraJewel_8h" kindref="compound">SceneSoraJewel.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Music_8h" kindref="compound">Music.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" refkind="member"><highlight class="normal">GLFWwindow*<sp/><ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>;</highlight></codeline>
+<codeline lineno="22" refid="Application_8cpp_1a920edc284eb96e60ae1494dfd1d3fea2" refkind="member"><highlight class="normal">GLFWmonitor*<sp/><ref refid="Application_8cpp_1a920edc284eb96e60ae1494dfd1d3fea2" kindref="member">primary</ref>;</highlight></codeline>
+<codeline lineno="23" refid="Application_8cpp_1a677c5ab1ba0f5747ef76b40a17b6f803" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="Application_8cpp_1a677c5ab1ba0f5747ef76b40a17b6f803" kindref="member">FPS</ref><sp/>=<sp/>60;<sp/></highlight><highlight class="comment">//<sp/>FPS<sp/>of<sp/>this<sp/>game</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="Application_8cpp_1ae228418b33873657fa31313fb4189a8f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="Application_8cpp_1ae228418b33873657fa31313fb4189a8f" kindref="member">frameTime</ref><sp/>=<sp/>1000<sp/>/<sp/><ref refid="Application_8cpp_1a677c5ab1ba0f5747ef76b40a17b6f803" kindref="member">FPS</ref>;<sp/></highlight><highlight class="comment">//<sp/>time<sp/>for<sp/>each<sp/>frame</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//Define<sp/>an<sp/>error<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="Application_8cpp_1a6e6d1771a9242858811be0a3569838fa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Application_8cpp_1a6e6d1771a9242858811be0a3569838fa" kindref="member">error_callback</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>error,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>description)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fputs(description,<sp/>stderr);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_fgetchar();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//Define<sp/>the<sp/>key<sp/>input<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="Application_8cpp_1a6d1a8981b70f74fc60c1428f080da820" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Application_8cpp_1a6d1a8981b70f74fc60c1428f080da820" kindref="member">key_callback</ref>(GLFWwindow*<sp/>window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scancode,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>action,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mods)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(key<sp/>==<sp/>GLFW_KEY_ESCAPE<sp/>&amp;&amp;<sp/>action<sp/>==<sp/>GLFW_PRESS)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwSetWindowShouldClose(window,<sp/>GL_TRUE);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" kindref="member">Application::IsKeyPressed</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>key)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((GetAsyncKeyState(key)<sp/>&amp;<sp/>0x8001)<sp/>!=<sp/>0);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classApplication_1afa8cc05ce6b6092be5ecdfdae44e05f8" refkind="member"><highlight class="normal"><ref refid="classApplication_1afa8cc05ce6b6092be5ecdfdae44e05f8" kindref="member">Application::Application</ref>()</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classApplication_1a748bca84fefb9c12661cfaa2f623748d" refkind="member"><highlight class="normal"><ref refid="classApplication_1a748bca84fefb9c12661cfaa2f623748d" kindref="member">Application::~Application</ref>()</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="Application_8cpp_1aadcee9765075e232ca0720f80a76ad37" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Application_8cpp_1aadcee9765075e232ca0720f80a76ad37" kindref="member">resize_callback</ref>(GLFWwindow*<sp/>window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>w,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>h)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glViewport(0,<sp/>0,<sp/>w,<sp/>h);<sp/></highlight><highlight class="comment">//update<sp/>opengl<sp/>the<sp/>new<sp/>window<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" kindref="member">Application::Init</ref>()</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Set<sp/>the<sp/>error<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwSetErrorCallback(<ref refid="Application_8cpp_1a6e6d1771a9242858811be0a3569838fa" kindref="member">error_callback</ref>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Initialize<sp/>GLFW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!glfwInit())</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Set<sp/>the<sp/>GLFW<sp/>window<sp/>creation<sp/>hints<sp/>-<sp/>these<sp/>are<sp/>optional</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwWindowHint(GLFW_SAMPLES,<sp/>4);<sp/></highlight><highlight class="comment">//Request<sp/>4x<sp/>antialiasing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR,<sp/>3);<sp/></highlight><highlight class="comment">//Request<sp/>a<sp/>specific<sp/>OpenGL<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR,<sp/>3);<sp/></highlight><highlight class="comment">//Request<sp/>a<sp/>specific<sp/>OpenGL<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT,<sp/>GL_TRUE);<sp/>//<sp/>To<sp/>make<sp/>MacOS<sp/>happy;<sp/>should<sp/>not<sp/>be<sp/>needed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwWindowHint(GLFW_OPENGL_PROFILE,<sp/>GLFW_OPENGL_CORE_PROFILE);<sp/></highlight><highlight class="comment">//We<sp/>don&apos;t<sp/>want<sp/>the<sp/>old<sp/>OpenGL<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Application_8cpp_1a920edc284eb96e60ae1494dfd1d3fea2" kindref="member">primary</ref><sp/>=<sp/>glfwGetPrimaryMonitor();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GLFWvidmode*<sp/>mode<sp/>=<sp/>glfwGetVideoMode(<ref refid="Application_8cpp_1a920edc284eb96e60ae1494dfd1d3fea2" kindref="member">primary</ref>);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Create<sp/>a<sp/>window<sp/>and<sp/>create<sp/>its<sp/>OpenGL<sp/>context</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref><sp/>=<sp/>glfwCreateWindow(mode-&gt;width,<sp/>mode-&gt;height,<sp/></highlight><highlight class="stringliteral">&quot;Computer<sp/>Graphics&quot;</highlight><highlight class="normal">,<sp/>NULL,<sp/>NULL);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*glfwSetCursorPos(m_window,<sp/>800<sp/>/<sp/>2,<sp/>600<sp/>/<sp/>2);*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwSetInputMode(<ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>,<sp/>GLFW_CURSOR,<sp/>GLFW_CURSOR_HIDDEN);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwSetWindowSizeCallback(<ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>,<sp/><ref refid="Application_8cpp_1aadcee9765075e232ca0720f80a76ad37" kindref="member">resize_callback</ref>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//If<sp/>the<sp/>window<sp/>couldn&apos;t<sp/>be<sp/>created</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(<sp/>stderr,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>open<sp/>GLFW<sp/>window.\n&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwTerminate();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//This<sp/>function<sp/>makes<sp/>the<sp/>context<sp/>of<sp/>the<sp/>specified<sp/>window<sp/>current<sp/>on<sp/>the<sp/>calling<sp/>thread.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwMakeContextCurrent(<ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Sets<sp/>the<sp/>key<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//glfwSetKeyCallback(m_window,<sp/>key_callback);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glewExperimental<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Needed<sp/>for<sp/>core<sp/>profile</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Initialize<sp/>GLEW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLenum<sp/>err<sp/>=<sp/>glewInit();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//If<sp/>GLEW<sp/>hasn&apos;t<sp/>initialized</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err<sp/>!=<sp/>GLEW_OK)<sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>glewGetErrorString(err));</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//return<sp/>-1;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" kindref="member">Application::Run</ref>()</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>loadingitonceSoraJewel=1;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>loadingitonceGalaxy<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>loadingitonceMun<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Main<sp/>Loop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene" kindref="compound">Scene</ref><sp/>*currscene<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classSP2" kindref="compound">SP2</ref>();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene" kindref="compound">Scene</ref><sp/>*scenestart<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classSP2" kindref="compound">SP2</ref>();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene" kindref="compound">Scene</ref><sp/>*scene1<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel" kindref="compound">SceneSoraJewel</ref>();</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene" kindref="compound">Scene</ref><sp/>*scene2<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classSceneGalaxy" kindref="compound">SceneGalaxy</ref>();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene" kindref="compound">Scene</ref><sp/>*scene3<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classSceneMun" kindref="compound">SceneMun</ref>();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene" kindref="compound">Scene</ref><sp/>*loading<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classLoadingScreen" kindref="compound">LoadingScreen</ref>();</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene-&gt;<ref refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*scene1-&gt;Init();</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene2-&gt;Init();</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene3-&gt;Init();*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1ac81ea1396dc69c6d48b9a701954f53fe" kindref="member">m_timer</ref>.<ref refid="classStopWatch_1a23301f735a2e3190435e39c9fd70cdf2" kindref="member">startTimer</ref>();<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>timer<sp/>to<sp/>calculate<sp/>how<sp/>long<sp/>it<sp/>takes<sp/>to<sp/>render<sp/>this<sp/>fr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!glfwWindowShouldClose(<ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>)<sp/>&amp;&amp;<sp/>!<ref refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" kindref="member">IsKeyPressed</ref>(VK_ESCAPE))</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" kindref="member">IsKeyPressed</ref>(</highlight><highlight class="charliteral">&apos;I&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene-&gt;<ref refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" kindref="member">IsKeyPressed</ref>(</highlight><highlight class="charliteral">&apos;O&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loadingitonceSoraJewel<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loadingitonceGalaxy<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loadingitonceMun<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" kindref="member">IsKeyPressed</ref>(</highlight><highlight class="charliteral">&apos;Z&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene<sp/>=<sp/>scene1;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//currscene-&gt;Init();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1a25861747ff2a86fefec4b4fec74d52a3" kindref="member">sceneischanged</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1a8b83d4608b51762d3dc504898147ffab" kindref="member">playmusic</ref>.<ref refid="classmusic_1a42a802fd796b8556d64225aa9abd55d3" kindref="member">musicSoraJewel</ref>();</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" kindref="member">IsKeyPressed</ref>(</highlight><highlight class="charliteral">&apos;X&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene<sp/>=<sp/>scene2;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene-&gt;<ref refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1a8b83d4608b51762d3dc504898147ffab" kindref="member">playmusic</ref>.<ref refid="classmusic_1a980e490547c2f6a7a7875e58548fce5b" kindref="member">musicGalaxy</ref>();</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" kindref="member">IsKeyPressed</ref>(</highlight><highlight class="charliteral">&apos;C&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene<sp/>=<sp/>scene3;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//currscene-&gt;Init();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1a25861747ff2a86fefec4b4fec74d52a3" kindref="member">sceneischanged</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1a8b83d4608b51762d3dc504898147ffab" kindref="member">playmusic</ref>.<ref refid="classmusic_1a3d999425453d51069667bb0be1471e83" kindref="member">musicMun</ref>();</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classGamemode_1af47c19fec76ecf68cf2b13933572ec19" kindref="member">Gamemode::getinstance</ref>()-&gt;currentgamestate<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classSP2" kindref="compound">SP2</ref>();</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loadingitonceSoraJewel<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loadingitonceGalaxy<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loadingitonceMun<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene-&gt;<ref refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1a8b83d4608b51762d3dc504898147ffab" kindref="member">playmusic</ref>.<ref refid="classmusic_1a2a0b59c8aef55331ccc449f3eb31f1a9" kindref="member">musicMainMenu</ref>();</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classGamemode_1af47c19fec76ecf68cf2b13933572ec19" kindref="member">Gamemode::getinstance</ref>()-&gt;currentgamestate<sp/>==<sp/>2<sp/>&amp;&amp;<sp/>loadingitonceSoraJewel<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene<sp/>=<sp/>loading;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene-&gt;<ref refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1a25861747ff2a86fefec4b4fec74d52a3" kindref="member">sceneischanged</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classGamemode_1af47c19fec76ecf68cf2b13933572ec19" kindref="member">Gamemode::getinstance</ref>()-&gt;currentgamestate<sp/>==<sp/>3<sp/>&amp;&amp;<sp/>loadingitonceSoraJewel<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene<sp/>=<sp/>scene1;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//currscene-&gt;Init();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1a25861747ff2a86fefec4b4fec74d52a3" kindref="member">sceneischanged</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1a8b83d4608b51762d3dc504898147ffab" kindref="member">playmusic</ref>.<ref refid="classmusic_1a42a802fd796b8556d64225aa9abd55d3" kindref="member">musicSoraJewel</ref>();</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loadingitonceSoraJewel<sp/>+=<sp/>1;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classGamemode_1af47c19fec76ecf68cf2b13933572ec19" kindref="member">Gamemode::getinstance</ref>()-&gt;currentgamestate<sp/>==<sp/>4<sp/>&amp;&amp;<sp/>loadingitonceSoraJewel<sp/>==<sp/>2)</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene<sp/>=<sp/>loading;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene-&gt;<ref refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1a25861747ff2a86fefec4b4fec74d52a3" kindref="member">sceneischanged</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classGamemode_1af47c19fec76ecf68cf2b13933572ec19" kindref="member">Gamemode::getinstance</ref>()-&gt;currentgamestate<sp/>==<sp/>4<sp/>&amp;&amp;<sp/>loadingitonceSoraJewel<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene<sp/>=<sp/>loading;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene-&gt;<ref refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1a25861747ff2a86fefec4b4fec74d52a3" kindref="member">sceneischanged</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classGamemode_1af47c19fec76ecf68cf2b13933572ec19" kindref="member">Gamemode::getinstance</ref>()-&gt;currentgamestate<sp/>==<sp/>5<sp/>&amp;&amp;<sp/>loadingitonceGalaxy<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene<sp/>=<sp/>scene2;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//currscene-&gt;Init();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1a25861747ff2a86fefec4b4fec74d52a3" kindref="member">sceneischanged</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1a8b83d4608b51762d3dc504898147ffab" kindref="member">playmusic</ref>.<ref refid="classmusic_1a980e490547c2f6a7a7875e58548fce5b" kindref="member">musicGalaxy</ref>();</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loadingitonceGalaxy<sp/>+=<sp/>1;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classGamemode_1af47c19fec76ecf68cf2b13933572ec19" kindref="member">Gamemode::getinstance</ref>()-&gt;currentgamestate<sp/>==<sp/>6<sp/>&amp;&amp;<sp/>loadingitonceMun<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene<sp/>=<sp/>loading;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene-&gt;<ref refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1a25861747ff2a86fefec4b4fec74d52a3" kindref="member">sceneischanged</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classGamemode_1af47c19fec76ecf68cf2b13933572ec19" kindref="member">Gamemode::getinstance</ref>()-&gt;currentgamestate<sp/>==<sp/>7<sp/>&amp;&amp;<sp/>loadingitonceMun==1)</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene<sp/>=<sp/>scene3;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//currscene-&gt;Init();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1a25861747ff2a86fefec4b4fec74d52a3" kindref="member">sceneischanged</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1a8b83d4608b51762d3dc504898147ffab" kindref="member">playmusic</ref>.<ref refid="classmusic_1a3d999425453d51069667bb0be1471e83" kindref="member">musicMun</ref>();</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loadingitonceMun<sp/>+=<sp/>1;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classApplication_1a25861747ff2a86fefec4b4fec74d52a3" kindref="member">sceneischanged</ref><sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene-&gt;<ref refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1a25861747ff2a86fefec4b4fec74d52a3" kindref="member">sceneischanged</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene-&gt;<ref refid="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91" kindref="member">Update</ref>(<ref refid="classApplication_1ac81ea1396dc69c6d48b9a701954f53fe" kindref="member">m_timer</ref>.<ref refid="classStopWatch_1ac8be1626396d1a5ca414f74349d59eb2" kindref="member">getElapsedTime</ref>());</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene-&gt;<ref refid="classScene_1ae24d21e12b34839994ad265662ea24d7" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Swap<sp/>buffers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwSwapBuffers(<ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Get<sp/>and<sp/>organize<sp/>events,<sp/>like<sp/>keyboard<sp/>and<sp/>mouse<sp/>input,<sp/>window<sp/>resizing,<sp/>etc...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwPollEvents();</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1ac81ea1396dc69c6d48b9a701954f53fe" kindref="member">m_timer</ref>.<ref refid="classStopWatch_1a2cd0856fc87a40038edfd66d784be8b4" kindref="member">waitUntil</ref>(<ref refid="Application_8cpp_1ae228418b33873657fa31313fb4189a8f" kindref="member">frameTime</ref>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Frame<sp/>rate<sp/>limiter.<sp/>Limits<sp/>each<sp/>frame<sp/>to<sp/>a<sp/>specified<sp/>time<sp/>in<sp/>ms.<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//Check<sp/>if<sp/>the<sp/>ESC<sp/>key<sp/>had<sp/>been<sp/>pressed<sp/>or<sp/>if<sp/>the<sp/>window<sp/>had<sp/>been<sp/>closed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currscene-&gt;<ref refid="classScene_1aae8e24654ef98c79961c2b804b12852c" kindref="member">Exit</ref>();</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>currscene;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="237"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239" refid="classApplication_1a9d410604b39b8374a884b1f2a1f2a5ba" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1a9d410604b39b8374a884b1f2a1f2a5ba" kindref="member">Application::Exit</ref>()</highlight></codeline>
+<codeline lineno="240"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Close<sp/>OpenGL<sp/>window<sp/>and<sp/>terminate<sp/>GLFW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwDestroyWindow(<ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Finalize<sp/>and<sp/>clean<sp/>up<sp/>GLFW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwTerminate();</highlight></codeline>
+<codeline lineno="245"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="LiZhaoyuan1/Source/Application.cpp"/>
+  </compounddef>
+</doxygen>

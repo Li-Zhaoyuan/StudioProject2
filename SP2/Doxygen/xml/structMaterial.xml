@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structMaterial" kind="struct" language="C++" prot="public">
+    <compoundname>Material</compoundname>
+    <includes refid="Material_8h" local="no">Material.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structMaterial_1ab3819b3151cbf3ac1892195ab091e3b8" prot="public" static="no" mutable="no">
+        <type><ref refid="structComponent" kindref="compound">Component</ref></type>
+        <definition>Component Material::kAmbient</definition>
+        <argsstring></argsstring>
+        <name>kAmbient</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Material.h" line="13" column="1" bodyfile="LiZhaoyuan1/Source/Material.h" bodystart="13" bodyend="-1"/>
+        <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
+        <referencedby refid="classSP2_1acf9cd6642d16e15f0ca2e43e9d266070" compoundref="SP2_8cpp" startline="183" endline="226">SP2::renderMesh</referencedby>
+        <referencedby refid="classLoadingScreen_1a8249bb27253ebc256119a0e22a141e3d" compoundref="LoadingScreen_8cpp" startline="181" endline="220">LoadingScreen::renderMesh</referencedby>
+        <referencedby refid="classSceneMun_1a11909a41ec144a7765752429a8a4552c" compoundref="SceneMun_8cpp" startline="869" endline="912">SceneMun::renderMesh</referencedby>
+        <referencedby refid="classSceneSoraJewel_1adfb31a31ca298111a9792551c242d25f" compoundref="SceneSoraJewel_8cpp" startline="903" endline="941">SceneSoraJewel::renderMesh</referencedby>
+        <referencedby refid="classSceneGalaxy_1a987d0a5971bb07f2b8770ef11147dfd8" compoundref="SceneGalaxy_8cpp" startline="635" endline="678">SceneGalaxy::renderMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMaterial_1aa88dd619cacf46e2f26ddd23fe032898" prot="public" static="no" mutable="no">
+        <type><ref refid="structComponent" kindref="compound">Component</ref></type>
+        <definition>Component Material::kDiffuse</definition>
+        <argsstring></argsstring>
+        <name>kDiffuse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Material.h" line="14" column="1" bodyfile="LiZhaoyuan1/Source/Material.h" bodystart="14" bodyend="-1"/>
+        <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
+        <referencedby refid="classSP2_1acf9cd6642d16e15f0ca2e43e9d266070" compoundref="SP2_8cpp" startline="183" endline="226">SP2::renderMesh</referencedby>
+        <referencedby refid="classLoadingScreen_1a8249bb27253ebc256119a0e22a141e3d" compoundref="LoadingScreen_8cpp" startline="181" endline="220">LoadingScreen::renderMesh</referencedby>
+        <referencedby refid="classSceneMun_1a11909a41ec144a7765752429a8a4552c" compoundref="SceneMun_8cpp" startline="869" endline="912">SceneMun::renderMesh</referencedby>
+        <referencedby refid="classSceneSoraJewel_1adfb31a31ca298111a9792551c242d25f" compoundref="SceneSoraJewel_8cpp" startline="903" endline="941">SceneSoraJewel::renderMesh</referencedby>
+        <referencedby refid="classSceneGalaxy_1a987d0a5971bb07f2b8770ef11147dfd8" compoundref="SceneGalaxy_8cpp" startline="635" endline="678">SceneGalaxy::renderMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMaterial_1a97cc0bf34b02c758b198d12dd24e96e2" prot="public" static="no" mutable="no">
+        <type><ref refid="structComponent" kindref="compound">Component</ref></type>
+        <definition>Component Material::kSpecular</definition>
+        <argsstring></argsstring>
+        <name>kSpecular</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Material.h" line="15" column="1" bodyfile="LiZhaoyuan1/Source/Material.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
+        <referencedby refid="classSP2_1acf9cd6642d16e15f0ca2e43e9d266070" compoundref="SP2_8cpp" startline="183" endline="226">SP2::renderMesh</referencedby>
+        <referencedby refid="classLoadingScreen_1a8249bb27253ebc256119a0e22a141e3d" compoundref="LoadingScreen_8cpp" startline="181" endline="220">LoadingScreen::renderMesh</referencedby>
+        <referencedby refid="classSceneMun_1a11909a41ec144a7765752429a8a4552c" compoundref="SceneMun_8cpp" startline="869" endline="912">SceneMun::renderMesh</referencedby>
+        <referencedby refid="classSceneSoraJewel_1adfb31a31ca298111a9792551c242d25f" compoundref="SceneSoraJewel_8cpp" startline="903" endline="941">SceneSoraJewel::renderMesh</referencedby>
+        <referencedby refid="classSceneGalaxy_1a987d0a5971bb07f2b8770ef11147dfd8" compoundref="SceneGalaxy_8cpp" startline="635" endline="678">SceneGalaxy::renderMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMaterial_1a07cec8956c43f81adeb6ba7aea104915" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Material::kShininess</definition>
+        <argsstring></argsstring>
+        <name>kShininess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Material.h" line="16" column="1" bodyfile="LiZhaoyuan1/Source/Material.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
+        <referencedby refid="classSP2_1acf9cd6642d16e15f0ca2e43e9d266070" compoundref="SP2_8cpp" startline="183" endline="226">SP2::renderMesh</referencedby>
+        <referencedby refid="classLoadingScreen_1a8249bb27253ebc256119a0e22a141e3d" compoundref="LoadingScreen_8cpp" startline="181" endline="220">LoadingScreen::renderMesh</referencedby>
+        <referencedby refid="classSceneMun_1a11909a41ec144a7765752429a8a4552c" compoundref="SceneMun_8cpp" startline="869" endline="912">SceneMun::renderMesh</referencedby>
+        <referencedby refid="classSceneSoraJewel_1adfb31a31ca298111a9792551c242d25f" compoundref="SceneSoraJewel_8cpp" startline="903" endline="941">SceneSoraJewel::renderMesh</referencedby>
+        <referencedby refid="classSceneGalaxy_1a987d0a5971bb07f2b8770ef11147dfd8" compoundref="SceneGalaxy_8cpp" startline="635" endline="678">SceneGalaxy::renderMesh</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Material::Material</definition>
+        <argsstring>()</argsstring>
+        <name>Material</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Material.h" line="17" column="1" bodyfile="LiZhaoyuan1/Source/Material.h" bodystart="17" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="446">
+        <label>Component</label>
+        <link refid="structComponent"/>
+        <childnode refid="445" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="444">
+        <label>Material</label>
+        <link refid="structMaterial"/>
+        <childnode refid="445" relation="usage">
+          <edgelabel>kShininess</edgelabel>
+        </childnode>
+        <childnode refid="446" relation="usage">
+          <edgelabel>kDiffuse</edgelabel>
+          <edgelabel>kAmbient</edgelabel>
+          <edgelabel>kSpecular</edgelabel>
+        </childnode>
+      </node>
+      <node id="445">
+        <label>float</label>
+      </node>
+    </collaborationgraph>
+    <location file="LiZhaoyuan1/Source/Material.h" line="12" column="1" bodyfile="LiZhaoyuan1/Source/Material.h" bodystart="11" bodyend="21"/>
+    <listofallmembers>
+      <member refid="structMaterial_1ab3819b3151cbf3ac1892195ab091e3b8" prot="public" virt="non-virtual"><scope>Material</scope><name>kAmbient</name></member>
+      <member refid="structMaterial_1aa88dd619cacf46e2f26ddd23fe032898" prot="public" virt="non-virtual"><scope>Material</scope><name>kDiffuse</name></member>
+      <member refid="structMaterial_1a07cec8956c43f81adeb6ba7aea104915" prot="public" virt="non-virtual"><scope>Material</scope><name>kShininess</name></member>
+      <member refid="structMaterial_1a97cc0bf34b02c758b198d12dd24e96e2" prot="public" virt="non-virtual"><scope>Material</scope><name>kSpecular</name></member>
+      <member refid="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" prot="public" virt="non-virtual"><scope>Material</scope><name>Material</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

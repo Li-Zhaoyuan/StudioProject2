@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="Vertex_8h" kind="file" language="C++">
+    <compoundname>Vertex.h</compoundname>
+    <includes refid="Vector3_8h" local="yes">Vector3.h</includes>
+    <includedby refid="Light_8h" local="yes">LiZhaoyuan1/Source/Light.h</includedby>
+    <includedby refid="MeshBuilder_8h" local="yes">LiZhaoyuan1/Source/MeshBuilder.h</includedby>
+    <includedby refid="Utility_8h" local="yes">LiZhaoyuan1/Source/Utility.h</includedby>
+    <includedby refid="LoadOBJ_8h" local="yes">LiZhaoyuan1/Source/LoadOBJ.h</includedby>
+    <includedby refid="Mesh_8cpp" local="yes">LiZhaoyuan1/Source/Mesh.cpp</includedby>
+    <incdepgraph>
+      <node id="4242">
+        <label>LiZhaoyuan1/Source/Vertex.h</label>
+        <link refid="Vertex.h"/>
+        <childnode refid="4243" relation="include">
+        </childnode>
+      </node>
+      <node id="4245">
+        <label>cmath</label>
+      </node>
+      <node id="4246">
+        <label>exception</label>
+      </node>
+      <node id="4247">
+        <label>ctime</label>
+      </node>
+      <node id="4243">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="4244" relation="include">
+        </childnode>
+        <childnode refid="4249" relation="include">
+        </childnode>
+      </node>
+      <node id="4248">
+        <label>cstdlib</label>
+      </node>
+      <node id="4249">
+        <label>iostream</label>
+      </node>
+      <node id="4244">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="4245" relation="include">
+        </childnode>
+        <childnode refid="4246" relation="include">
+        </childnode>
+        <childnode refid="4247" relation="include">
+        </childnode>
+        <childnode refid="4248" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4257">
+        <label>LiZhaoyuan1/Source/LoadingScreen.h</label>
+        <link refid="LoadingScreen_8h"/>
+        <childnode refid="4253" relation="include">
+        </childnode>
+        <childnode refid="4258" relation="include">
+        </childnode>
+      </node>
+      <node id="4250">
+        <label>LiZhaoyuan1/Source/Vertex.h</label>
+        <link refid="Vertex.h"/>
+        <childnode refid="4251" relation="include">
+        </childnode>
+        <childnode refid="4263" relation="include">
+        </childnode>
+        <childnode refid="4265" relation="include">
+        </childnode>
+        <childnode refid="4267" relation="include">
+        </childnode>
+        <childnode refid="4269" relation="include">
+        </childnode>
+      </node>
+      <node id="4264">
+        <label>LiZhaoyuan1/Source/MeshBuilder.cpp</label>
+        <link refid="MeshBuilder_8cpp"/>
+      </node>
+      <node id="4252">
+        <label>LiZhaoyuan1/Source/SP2.h</label>
+        <link refid="SP2_8h"/>
+        <childnode refid="4253" relation="include">
+        </childnode>
+        <childnode refid="4254" relation="include">
+        </childnode>
+        <childnode refid="4256" relation="include">
+        </childnode>
+      </node>
+      <node id="4266">
+        <label>LiZhaoyuan1/Source/Utility.cpp</label>
+        <link refid="Utility_8cpp"/>
+      </node>
+      <node id="4253">
+        <label>LiZhaoyuan1/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="4260">
+        <label>LiZhaoyuan1/Source/SceneMun.cpp</label>
+        <link refid="SceneMun_8cpp"/>
+      </node>
+      <node id="4258">
+        <label>LiZhaoyuan1/Source/LoadingScreen.cpp</label>
+        <link refid="LoadingScreen_8cpp"/>
+      </node>
+      <node id="4265">
+        <label>LiZhaoyuan1/Source/Utility.h</label>
+        <link refid="Utility_8h"/>
+        <childnode refid="4258" relation="include">
+        </childnode>
+        <childnode refid="4255" relation="include">
+        </childnode>
+        <childnode refid="4260" relation="include">
+        </childnode>
+        <childnode refid="4262" relation="include">
+        </childnode>
+        <childnode refid="4256" relation="include">
+        </childnode>
+        <childnode refid="4266" relation="include">
+        </childnode>
+      </node>
+      <node id="4254">
+        <label>LiZhaoyuan1/Source/SceneGalaxy.h</label>
+        <link refid="SceneGalaxy_8h"/>
+        <childnode refid="4253" relation="include">
+        </childnode>
+        <childnode refid="4255" relation="include">
+        </childnode>
+      </node>
+      <node id="4268">
+        <label>LiZhaoyuan1/Source/LoadOBJ.cpp</label>
+        <link refid="LoadOBJ_8cpp"/>
+      </node>
+      <node id="4251">
+        <label>LiZhaoyuan1/Source/Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="4252" relation="include">
+        </childnode>
+        <childnode refid="4257" relation="include">
+        </childnode>
+        <childnode refid="4259" relation="include">
+        </childnode>
+        <childnode refid="4254" relation="include">
+        </childnode>
+        <childnode refid="4261" relation="include">
+        </childnode>
+        <childnode refid="4258" relation="include">
+        </childnode>
+        <childnode refid="4255" relation="include">
+        </childnode>
+        <childnode refid="4260" relation="include">
+        </childnode>
+        <childnode refid="4262" relation="include">
+        </childnode>
+        <childnode refid="4256" relation="include">
+        </childnode>
+      </node>
+      <node id="4269">
+        <label>LiZhaoyuan1/Source/Mesh.cpp</label>
+        <link refid="Mesh_8cpp"/>
+      </node>
+      <node id="4259">
+        <label>LiZhaoyuan1/Source/SceneMun.h</label>
+        <link refid="SceneMun_8h"/>
+        <childnode refid="4253" relation="include">
+        </childnode>
+        <childnode refid="4260" relation="include">
+        </childnode>
+      </node>
+      <node id="4255">
+        <label>LiZhaoyuan1/Source/SceneGalaxy.cpp</label>
+        <link refid="SceneGalaxy_8cpp"/>
+      </node>
+      <node id="4256">
+        <label>LiZhaoyuan1/Source/SP2.cpp</label>
+        <link refid="SP2_8cpp"/>
+      </node>
+      <node id="4267">
+        <label>LiZhaoyuan1/Source/LoadOBJ.h</label>
+        <link refid="LoadOBJ_8h"/>
+        <childnode refid="4268" relation="include">
+        </childnode>
+        <childnode refid="4264" relation="include">
+        </childnode>
+      </node>
+      <node id="4261">
+        <label>LiZhaoyuan1/Source/SceneSoraJewel.h</label>
+        <link refid="SceneSoraJewel_8h"/>
+        <childnode refid="4253" relation="include">
+        </childnode>
+        <childnode refid="4262" relation="include">
+        </childnode>
+      </node>
+      <node id="4263">
+        <label>LiZhaoyuan1/Source/MeshBuilder.h</label>
+        <link refid="MeshBuilder_8h"/>
+        <childnode refid="4258" relation="include">
+        </childnode>
+        <childnode refid="4264" relation="include">
+        </childnode>
+        <childnode refid="4255" relation="include">
+        </childnode>
+        <childnode refid="4260" relation="include">
+        </childnode>
+        <childnode refid="4262" relation="include">
+        </childnode>
+        <childnode refid="4256" relation="include">
+        </childnode>
+      </node>
+      <node id="4262">
+        <label>LiZhaoyuan1/Source/SceneSoraJewel.cpp</label>
+        <link refid="SceneSoraJewel_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structPosition" prot="public">Position</innerclass>
+    <innerclass refid="structColor" prot="public">Color</innerclass>
+    <innerclass refid="structTexCoord" prot="public">TexCoord</innerclass>
+    <innerclass refid="structVertex" prot="public">Vertex</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>VERTEX_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VERTEX_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Vector3_8h" kindref="compound">Vector3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="structPosition" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structPosition" kindref="compound">Position</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8" refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" kindref="member">x</ref>,<sp/><ref refid="structPosition_1a54a6182b5f7539295b32255808897d3f" kindref="member">y</ref>,<sp/><ref refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="9" refid="structPosition_1ab73d81912c4ead48cee5342d7cf5a33b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structPosition_1ab73d81912c4ead48cee5342d7cf5a33b" kindref="member">Position</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z<sp/>=<sp/>0)<sp/>{<sp/><ref refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" kindref="member">Set</ref>(x,<sp/>y,<sp/>z);<sp/>}</highlight></codeline>
+<codeline lineno="10" refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" kindref="member">Set</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z)<sp/>{<sp/>this-&gt;x<sp/>=<sp/><ref refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" kindref="member">x</ref>;<sp/>this-&gt;y<sp/>=<sp/><ref refid="structPosition_1a54a6182b5f7539295b32255808897d3f" kindref="member">y</ref>;<sp/>this-&gt;z<sp/>=<sp/><ref refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" kindref="member">z</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="12" refid="structColor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structColor" kindref="compound">Color</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14" refid="structColor_1a3958a556b47d2de3dd45c75aac833c20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structColor_1a3958a556b47d2de3dd45c75aac833c20" kindref="member">r</ref>,<sp/><ref refid="structColor_1a5defbb21620e480e556181772d665f34" kindref="member">g</ref>,<sp/><ref refid="structColor_1a33e482be18d6ea31d2b403bee13683b7" kindref="member">b</ref>;</highlight></codeline>
+<codeline lineno="15" refid="structColor_1aa2ccdb977158b64bf8ad9000f443b09c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structColor_1aa2ccdb977158b64bf8ad9000f443b09c" kindref="member">Color</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>1,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>g<sp/>=<sp/>1,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>1)<sp/>{<sp/><ref refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" kindref="member">Set</ref>(r,<sp/>g,<sp/>b);<sp/>}</highlight></codeline>
+<codeline lineno="16" refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" kindref="member">Set</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>g,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>b)<sp/>{<sp/>this-&gt;r<sp/>=<sp/><ref refid="structColor_1a3958a556b47d2de3dd45c75aac833c20" kindref="member">r</ref>;<sp/>this-&gt;g<sp/>=<sp/><ref refid="structColor_1a5defbb21620e480e556181772d665f34" kindref="member">g</ref>;<sp/>this-&gt;b<sp/>=<sp/><ref refid="structColor_1a33e482be18d6ea31d2b403bee13683b7" kindref="member">b</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="structTexCoord" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structTexCoord" kindref="compound">TexCoord</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21" refid="structTexCoord_1ad525bc2c53d6402267c51022db33f85e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structTexCoord_1a3be8371ac57f9ddc6ff5853e4bb58190" kindref="member">u</ref>,<sp/><ref refid="structTexCoord_1ad525bc2c53d6402267c51022db33f85e" kindref="member">v</ref>;</highlight></codeline>
+<codeline lineno="22" refid="structTexCoord_1adec9b45bb816162fe2f22a677ebfc11c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTexCoord_1adec9b45bb816162fe2f22a677ebfc11c" kindref="member">TexCoord</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>u<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>v<sp/>=<sp/>0)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" kindref="member">Set</ref>(u,<sp/>v);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26" refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" kindref="member">Set</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>u,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>v)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;u<sp/>=<sp/><ref refid="structTexCoord_1a3be8371ac57f9ddc6ff5853e4bb58190" kindref="member">u</ref>;<sp/>this-&gt;v<sp/>=<sp/><ref refid="structTexCoord_1ad525bc2c53d6402267c51022db33f85e" kindref="member">v</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="structVertex" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structVertex" kindref="compound">Vertex</ref></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35" refid="structVertex_1a8791e77df49f6996a19a8dd17cee8d5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="structVertex_1a8791e77df49f6996a19a8dd17cee8d5c" kindref="member">pos</ref>;</highlight></codeline>
+<codeline lineno="36" refid="structVertex_1a3a3ff3f6cf46b1848795991e8159b922" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structColor" kindref="compound">Color</ref><sp/><ref refid="structVertex_1a3a3ff3f6cf46b1848795991e8159b922" kindref="member">color</ref>;</highlight></codeline>
+<codeline lineno="37" refid="structVertex_1adce2d4b3d1191c69328519bdf231c344" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="structVertex_1adce2d4b3d1191c69328519bdf231c344" kindref="member">normal</ref>;</highlight></codeline>
+<codeline lineno="38" refid="structVertex_1a717d827da388b9c4847d1f5343959c78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTexCoord" kindref="compound">TexCoord</ref><sp/><ref refid="structVertex_1a717d827da388b9c4847d1f5343959c78" kindref="member">texCoord</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="LiZhaoyuan1/Source/Vertex.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,430 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="Application_8h" kind="file" language="C++">
+    <compoundname>Application.h</compoundname>
+    <includes refid="timer_8h" local="yes">timer.h</includes>
+    <includes refid="CurrentGameState_8h" local="yes">Currentgamestate.h</includes>
+    <includes refid="Music_8h" local="yes">Music.h</includes>
+    <includedby refid="Application_8cpp" local="yes">LiZhaoyuan1/Source/Application.cpp</includedby>
+    <includedby refid="Camera3_8h" local="yes">LiZhaoyuan1/Source/Camera3.h</includedby>
+    <includedby refid="Camera_8cpp" local="yes">LiZhaoyuan1/Source/Camera.cpp</includedby>
+    <includedby refid="Camera3_8cpp" local="yes">LiZhaoyuan1/Source/Camera3.cpp</includedby>
+    <includedby refid="LoadingScreen_8cpp" local="yes">LiZhaoyuan1/Source/LoadingScreen.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">LiZhaoyuan1/Source/main.cpp</includedby>
+    <includedby refid="SceneGalaxy_8cpp" local="yes">LiZhaoyuan1/Source/SceneGalaxy.cpp</includedby>
+    <includedby refid="SceneMun_8cpp" local="yes">LiZhaoyuan1/Source/SceneMun.cpp</includedby>
+    <includedby refid="SceneSoraJewel_8cpp" local="yes">LiZhaoyuan1/Source/SceneSoraJewel.cpp</includedby>
+    <includedby refid="SP2_8cpp" local="yes">LiZhaoyuan1/Source/SP2.cpp</includedby>
+    <incdepgraph>
+      <node id="2385">
+        <label>Currentgamestate.h</label>
+        <link refid="CurrentGameState_8h"/>
+      </node>
+      <node id="2407">
+        <label>ik_IAudioStream.h</label>
+        <link refid="ik__IAudioStream_8h"/>
+        <childnode refid="2395" relation="include">
+        </childnode>
+        <childnode refid="2400" relation="include">
+        </childnode>
+      </node>
+      <node id="2384">
+        <label>windows.h</label>
+      </node>
+      <node id="2389">
+        <label>Windows.h</label>
+      </node>
+      <node id="2388">
+        <label>string</label>
+      </node>
+      <node id="2399">
+        <label>ik_EStreamModes.h</label>
+        <link refid="ik__EStreamModes_8h"/>
+      </node>
+      <node id="2402">
+        <label>ik_ISoundSource.h</label>
+        <link refid="ik__ISoundSource_8h"/>
+        <childnode refid="2396" relation="include">
+        </childnode>
+        <childnode refid="2393" relation="include">
+        </childnode>
+        <childnode refid="2399" relation="include">
+        </childnode>
+        <childnode refid="2400" relation="include">
+        </childnode>
+      </node>
+      <node id="2391">
+        <label>ik_irrKlangTypes.h</label>
+        <link refid="ik__irrKlangTypes_8h"/>
+        <childnode refid="2392" relation="include">
+        </childnode>
+      </node>
+      <node id="2401">
+        <label>ik_ISoundEngine.h</label>
+        <link refid="ik__ISoundEngine_8h"/>
+        <childnode refid="2395" relation="include">
+        </childnode>
+        <childnode refid="2393" relation="include">
+        </childnode>
+        <childnode refid="2402" relation="include">
+        </childnode>
+        <childnode refid="2403" relation="include">
+        </childnode>
+        <childnode refid="2399" relation="include">
+        </childnode>
+        <childnode refid="2405" relation="include">
+        </childnode>
+        <childnode refid="2406" relation="include">
+        </childnode>
+      </node>
+      <node id="2400">
+        <label>ik_SAudioStreamFormat.h</label>
+        <link refid="ik__SAudioStreamFormat_8h"/>
+        <childnode refid="2395" relation="include">
+        </childnode>
+      </node>
+      <node id="2392">
+        <label>wchar.h</label>
+      </node>
+      <node id="2390">
+        <label>include/irrKlang.h</label>
+        <link refid="irrKlang_8h"/>
+        <childnode refid="2391" relation="include">
+        </childnode>
+        <childnode refid="2393" relation="include">
+        </childnode>
+        <childnode refid="2395" relation="include">
+        </childnode>
+        <childnode refid="2396" relation="include">
+        </childnode>
+        <childnode refid="2397" relation="include">
+        </childnode>
+        <childnode refid="2398" relation="include">
+        </childnode>
+        <childnode refid="2399" relation="include">
+        </childnode>
+        <childnode refid="2400" relation="include">
+        </childnode>
+        <childnode refid="2401" relation="include">
+        </childnode>
+        <childnode refid="2402" relation="include">
+        </childnode>
+        <childnode refid="2403" relation="include">
+        </childnode>
+        <childnode refid="2407" relation="include">
+        </childnode>
+        <childnode refid="2408" relation="include">
+        </childnode>
+        <childnode refid="2404" relation="include">
+        </childnode>
+        <childnode refid="2410" relation="include">
+        </childnode>
+        <childnode refid="2405" relation="include">
+        </childnode>
+        <childnode refid="2409" relation="include">
+        </childnode>
+        <childnode refid="2411" relation="include">
+        </childnode>
+        <childnode refid="2412" relation="include">
+        </childnode>
+        <childnode refid="2406" relation="include">
+        </childnode>
+      </node>
+      <node id="2398">
+        <label>ik_ESoundEngineOptions.h</label>
+        <link refid="ik__ESoundEngineOptions_8h"/>
+      </node>
+      <node id="2410">
+        <label>ik_ISoundStopEventReceiver.h</label>
+        <link refid="ik__ISoundStopEventReceiver_8h"/>
+        <childnode refid="2395" relation="include">
+        </childnode>
+        <childnode refid="2400" relation="include">
+        </childnode>
+      </node>
+      <node id="2386">
+        <label>Music.h</label>
+        <link refid="Music_8h"/>
+        <childnode refid="2387" relation="include">
+        </childnode>
+        <childnode refid="2388" relation="include">
+        </childnode>
+        <childnode refid="2389" relation="include">
+        </childnode>
+        <childnode refid="2390" relation="include">
+        </childnode>
+      </node>
+      <node id="2383">
+        <label>timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="2384" relation="include">
+        </childnode>
+      </node>
+      <node id="2406">
+        <label>ik_ISoundMixedOutputReceiver.h</label>
+        <link refid="ik__ISoundMixedOutputReceiver_8h"/>
+        <childnode refid="2395" relation="include">
+        </childnode>
+        <childnode refid="2400" relation="include">
+        </childnode>
+      </node>
+      <node id="2394">
+        <label>math.h</label>
+      </node>
+      <node id="2387">
+        <label>iostream</label>
+      </node>
+      <node id="2412">
+        <label>ik_IAudioRecorder.h</label>
+        <link refid="ik__IAudioRecorder_8h"/>
+        <childnode refid="2395" relation="include">
+        </childnode>
+        <childnode refid="2402" relation="include">
+        </childnode>
+      </node>
+      <node id="2404">
+        <label>ik_ISoundEffectControl.h</label>
+        <link refid="ik__ISoundEffectControl_8h"/>
+        <childnode refid="2396" relation="include">
+        </childnode>
+        <childnode refid="2393" relation="include">
+        </childnode>
+      </node>
+      <node id="2411">
+        <label>ik_ISoundDeviceList.h</label>
+        <link refid="ik__ISoundDeviceList_8h"/>
+        <childnode refid="2395" relation="include">
+        </childnode>
+      </node>
+      <node id="2409">
+        <label>ik_IFileReader.h</label>
+        <link refid="ik__IFileReader_8h"/>
+        <childnode refid="2395" relation="include">
+        </childnode>
+      </node>
+      <node id="2396">
+        <label>ik_IVirtualRefCounted.h</label>
+        <link refid="ik__IVirtualRefCounted_8h"/>
+        <childnode refid="2391" relation="include">
+        </childnode>
+      </node>
+      <node id="2405">
+        <label>ik_IFileFactory.h</label>
+        <link refid="ik__IFileFactory_8h"/>
+        <childnode refid="2395" relation="include">
+        </childnode>
+      </node>
+      <node id="2403">
+        <label>ik_ISound.h</label>
+        <link refid="ik__ISound_8h"/>
+        <childnode refid="2396" relation="include">
+        </childnode>
+        <childnode refid="2404" relation="include">
+        </childnode>
+        <childnode refid="2393" relation="include">
+        </childnode>
+      </node>
+      <node id="2397">
+        <label>ik_ESoundOutputDrivers.h</label>
+        <link refid="ik__ESoundOutputDrivers_8h"/>
+      </node>
+      <node id="2408">
+        <label>ik_IAudioStreamLoader.h</label>
+        <link refid="ik__IAudioStreamLoader_8h"/>
+        <childnode refid="2395" relation="include">
+        </childnode>
+        <childnode refid="2409" relation="include">
+        </childnode>
+      </node>
+      <node id="2395">
+        <label>ik_IRefCounted.h</label>
+        <link refid="ik__IRefCounted_8h"/>
+        <childnode refid="2391" relation="include">
+        </childnode>
+      </node>
+      <node id="2393">
+        <label>ik_vec3d.h</label>
+        <link refid="ik__vec3d_8h"/>
+        <childnode refid="2394" relation="include">
+        </childnode>
+        <childnode refid="2391" relation="include">
+        </childnode>
+      </node>
+      <node id="2382">
+        <label>LiZhaoyuan1/Source/Application.h</label>
+        <link refid="Application.h"/>
+        <childnode refid="2383" relation="include">
+        </childnode>
+        <childnode refid="2385" relation="include">
+        </childnode>
+        <childnode refid="2386" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2420">
+        <label>LiZhaoyuan1/Source/LoadingScreen.h</label>
+        <link refid="LoadingScreen_8h"/>
+        <childnode refid="2414" relation="include">
+        </childnode>
+        <childnode refid="2421" relation="include">
+        </childnode>
+      </node>
+      <node id="2416">
+        <label>LiZhaoyuan1/Source/SP2.h</label>
+        <link refid="SP2_8h"/>
+        <childnode refid="2414" relation="include">
+        </childnode>
+        <childnode refid="2417" relation="include">
+        </childnode>
+        <childnode refid="2419" relation="include">
+        </childnode>
+      </node>
+      <node id="2424">
+        <label>LiZhaoyuan1/Source/Missile.h</label>
+        <link refid="Missile_8h"/>
+        <childnode refid="2417" relation="include">
+        </childnode>
+        <childnode refid="2425" relation="include">
+        </childnode>
+      </node>
+      <node id="2414">
+        <label>LiZhaoyuan1/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="2415">
+        <label>LiZhaoyuan1/Source/Camera3.h</label>
+        <link refid="Camera3_8h"/>
+        <childnode refid="2416" relation="include">
+        </childnode>
+        <childnode refid="2420" relation="include">
+        </childnode>
+        <childnode refid="2422" relation="include">
+        </childnode>
+        <childnode refid="2417" relation="include">
+        </childnode>
+        <childnode refid="2424" relation="include">
+        </childnode>
+        <childnode refid="2426" relation="include">
+        </childnode>
+        <childnode refid="2428" relation="include">
+        </childnode>
+      </node>
+      <node id="2423">
+        <label>LiZhaoyuan1/Source/SceneMun.cpp</label>
+        <link refid="SceneMun_8cpp"/>
+      </node>
+      <node id="2421">
+        <label>LiZhaoyuan1/Source/LoadingScreen.cpp</label>
+        <link refid="LoadingScreen_8cpp"/>
+      </node>
+      <node id="2430">
+        <label>LiZhaoyuan1/Source/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="2417">
+        <label>LiZhaoyuan1/Source/SceneGalaxy.h</label>
+        <link refid="SceneGalaxy_8h"/>
+        <childnode refid="2414" relation="include">
+        </childnode>
+        <childnode refid="2418" relation="include">
+        </childnode>
+      </node>
+      <node id="2429">
+        <label>LiZhaoyuan1/Source/Camera.cpp</label>
+        <link refid="Camera_8cpp"/>
+      </node>
+      <node id="2425">
+        <label>LiZhaoyuan1/Source/Missile.cpp</label>
+        <link refid="Missile_8cpp"/>
+      </node>
+      <node id="2428">
+        <label>LiZhaoyuan1/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="2422">
+        <label>LiZhaoyuan1/Source/SceneMun.h</label>
+        <link refid="SceneMun_8h"/>
+        <childnode refid="2414" relation="include">
+        </childnode>
+        <childnode refid="2423" relation="include">
+        </childnode>
+      </node>
+      <node id="2418">
+        <label>LiZhaoyuan1/Source/SceneGalaxy.cpp</label>
+        <link refid="SceneGalaxy_8cpp"/>
+      </node>
+      <node id="2419">
+        <label>LiZhaoyuan1/Source/SP2.cpp</label>
+        <link refid="SP2_8cpp"/>
+      </node>
+      <node id="2426">
+        <label>LiZhaoyuan1/Source/SceneSoraJewel.h</label>
+        <link refid="SceneSoraJewel_8h"/>
+        <childnode refid="2414" relation="include">
+        </childnode>
+        <childnode refid="2427" relation="include">
+        </childnode>
+      </node>
+      <node id="2413">
+        <label>LiZhaoyuan1/Source/Application.h</label>
+        <link refid="Application.h"/>
+        <childnode refid="2414" relation="include">
+        </childnode>
+        <childnode refid="2415" relation="include">
+        </childnode>
+        <childnode refid="2429" relation="include">
+        </childnode>
+        <childnode refid="2428" relation="include">
+        </childnode>
+        <childnode refid="2421" relation="include">
+        </childnode>
+        <childnode refid="2430" relation="include">
+        </childnode>
+        <childnode refid="2418" relation="include">
+        </childnode>
+        <childnode refid="2423" relation="include">
+        </childnode>
+        <childnode refid="2427" relation="include">
+        </childnode>
+        <childnode refid="2419" relation="include">
+        </childnode>
+      </node>
+      <node id="2427">
+        <label>LiZhaoyuan1/Source/SceneSoraJewel.cpp</label>
+        <link refid="SceneSoraJewel_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classApplication" prot="public">Application</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>APPLICATION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>APPLICATION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="timer_8h" kindref="compound">timer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="CurrentGameState_8h" kindref="compound">Currentgamestate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Music_8h" kindref="compound">Music.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="classApplication" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classApplication" kindref="compound">Application</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1afa8cc05ce6b6092be5ecdfdae44e05f8" kindref="member">Application</ref>();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1a748bca84fefb9c12661cfaa2f623748d" kindref="member">~Application</ref>();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" kindref="member">Run</ref>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1a9d410604b39b8374a884b1f2a1f2a5ba" kindref="member">Exit</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" kindref="member">IsKeyPressed</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>key);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1a18497f66d98aa2d67807619d2c91a186" kindref="member">changescenes</ref>();</highlight></codeline>
+<codeline lineno="17" refid="classApplication_1a25861747ff2a86fefec4b4fec74d52a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classApplication_1a25861747ff2a86fefec4b4fec74d52a3" kindref="member">sceneischanged</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Declare<sp/>a<sp/>window<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classApplication_1ac81ea1396dc69c6d48b9a701954f53fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStopWatch" kindref="compound">StopWatch</ref><sp/><ref refid="classApplication_1ac81ea1396dc69c6d48b9a701954f53fe" kindref="member">m_timer</ref>;</highlight></codeline>
+<codeline lineno="21" refid="classApplication_1a8b83d4608b51762d3dc504898147ffab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmusic" kindref="compound">music</ref><sp/><ref refid="classApplication_1a8b83d4608b51762d3dc504898147ffab" kindref="member">playmusic</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="LiZhaoyuan1/Source/Application.h"/>
+  </compounddef>
+</doxygen>

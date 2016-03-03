@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ReadTextFile_8h" kind="file" language="C++">
+    <compoundname>ReadTextFile.h</compoundname>
+    <includes local="no">fstream</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">string</includes>
+    <includes local="no">iostream</includes>
+    <includedby refid="SceneMun_8h" local="yes">LiZhaoyuan1/Source/SceneMun.h</includedby>
+    <includedby refid="SceneSoraJewel_8h" local="yes">LiZhaoyuan1/Source/SceneSoraJewel.h</includedby>
+    <includedby refid="LoadingScreen_8cpp" local="yes">LiZhaoyuan1/Source/LoadingScreen.cpp</includedby>
+    <includedby refid="ReadTextFiles_8cpp" local="yes">LiZhaoyuan1/Source/ReadTextFiles.cpp</includedby>
+    <includedby refid="SceneMun_8cpp" local="yes">LiZhaoyuan1/Source/SceneMun.cpp</includedby>
+    <includedby refid="SceneSoraJewel_8cpp" local="yes">LiZhaoyuan1/Source/SceneSoraJewel.cpp</includedby>
+    <includedby refid="SP2_8cpp" local="yes">LiZhaoyuan1/Source/SP2.cpp</includedby>
+    <incdepgraph>
+      <node id="3705">
+        <label>string</label>
+      </node>
+      <node id="3703">
+        <label>fstream</label>
+      </node>
+      <node id="3702">
+        <label>LiZhaoyuan1/Source/ReadTextFile.h</label>
+        <link refid="ReadTextFile.h"/>
+        <childnode refid="3703" relation="include">
+        </childnode>
+        <childnode refid="3704" relation="include">
+        </childnode>
+        <childnode refid="3705" relation="include">
+        </childnode>
+        <childnode refid="3706" relation="include">
+        </childnode>
+      </node>
+      <node id="3704">
+        <label>vector</label>
+      </node>
+      <node id="3706">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3709">
+        <label>LiZhaoyuan1/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="3713">
+        <label>LiZhaoyuan1/Source/LoadingScreen.cpp</label>
+        <link refid="LoadingScreen_8cpp"/>
+      </node>
+      <node id="3710">
+        <label>LiZhaoyuan1/Source/SceneMun.cpp</label>
+        <link refid="SceneMun_8cpp"/>
+      </node>
+      <node id="3707">
+        <label>LiZhaoyuan1/Source/ReadTextFile.h</label>
+        <link refid="ReadTextFile.h"/>
+        <childnode refid="3708" relation="include">
+        </childnode>
+        <childnode refid="3711" relation="include">
+        </childnode>
+        <childnode refid="3713" relation="include">
+        </childnode>
+        <childnode refid="3714" relation="include">
+        </childnode>
+        <childnode refid="3710" relation="include">
+        </childnode>
+        <childnode refid="3712" relation="include">
+        </childnode>
+        <childnode refid="3715" relation="include">
+        </childnode>
+      </node>
+      <node id="3708">
+        <label>LiZhaoyuan1/Source/SceneMun.h</label>
+        <link refid="SceneMun_8h"/>
+        <childnode refid="3709" relation="include">
+        </childnode>
+        <childnode refid="3710" relation="include">
+        </childnode>
+      </node>
+      <node id="3715">
+        <label>LiZhaoyuan1/Source/SP2.cpp</label>
+        <link refid="SP2_8cpp"/>
+      </node>
+      <node id="3711">
+        <label>LiZhaoyuan1/Source/SceneSoraJewel.h</label>
+        <link refid="SceneSoraJewel_8h"/>
+        <childnode refid="3709" relation="include">
+        </childnode>
+        <childnode refid="3712" relation="include">
+        </childnode>
+      </node>
+      <node id="3714">
+        <label>LiZhaoyuan1/Source/ReadTextFiles.cpp</label>
+        <link refid="ReadTextFiles_8cpp"/>
+      </node>
+      <node id="3712">
+        <label>LiZhaoyuan1/Source/SceneSoraJewel.cpp</label>
+        <link refid="SceneSoraJewel_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ReadTextFile_8h_1a2b6a90ea34417018e854f9c3b535fce4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ReadFromTxt</definition>
+        <argsstring>(const char *file_path, std::vector&lt; std::string &gt; &amp;Text)</argsstring>
+        <name>ReadFromTxt</name>
+        <param>
+          <type>const char *</type>
+          <declname>file_path</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::string &gt; &amp;</type>
+          <declname>Text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/ReadTextFile.h" line="9" column="1" bodyfile="LiZhaoyuan1/Source/ReadTextFiles.cpp" bodystart="3" bodyend="22"/>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>READ_TEXT_FILE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>READ_TEXT_FILE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="ReadTextFile_8h_1a2b6a90ea34417018e854f9c3b535fce4" kindref="member">ReadFromTxt</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file_path,<sp/>std::vector&lt;std::string&gt;<sp/>&amp;Text);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="LiZhaoyuan1/Source/ReadTextFile.h"/>
+  </compounddef>
+</doxygen>

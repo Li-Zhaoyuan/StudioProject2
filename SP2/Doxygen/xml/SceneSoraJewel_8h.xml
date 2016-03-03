@@ -1,0 +1,701 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="SceneSoraJewel_8h" kind="file" language="C++">
+    <compoundname>SceneSoraJewel.h</compoundname>
+    <includes refid="Scene_8h" local="yes">Scene.h</includes>
+    <includes refid="Mesh_8h" local="yes">Mesh.h</includes>
+    <includes refid="Light_8h" local="yes">Light.h</includes>
+    <includes refid="Camera_8h" local="yes">Camera.h</includes>
+    <includes refid="Camera3_8h" local="yes">Camera3.h</includes>
+    <includes refid="MatrixStack_8h" local="yes">MatrixStack.h</includes>
+    <includes refid="ReadTextFile_8h" local="yes">ReadTextFile.h</includes>
+    <includes local="no">sstream</includes>
+    <includes refid="Music_8h" local="yes">Music.h</includes>
+    <includedby refid="Application_8cpp" local="yes">LiZhaoyuan1/Source/Application.cpp</includedby>
+    <includedby refid="SceneSoraJewel_8cpp" local="yes">LiZhaoyuan1/Source/SceneSoraJewel.cpp</includedby>
+    <incdepgraph>
+      <node id="4044">
+        <label>Currentgamestate.h</label>
+        <link refid="CurrentGameState_8h"/>
+      </node>
+      <node id="4070">
+        <label>MatrixStack.h</label>
+        <link refid="MatrixStack_8h"/>
+        <childnode refid="4071" relation="include">
+        </childnode>
+        <childnode refid="4072" relation="include">
+        </childnode>
+      </node>
+      <node id="4064">
+        <label>ik_IAudioStream.h</label>
+        <link refid="ik__IAudioStream_8h"/>
+        <childnode refid="4052" relation="include">
+        </childnode>
+        <childnode refid="4057" relation="include">
+        </childnode>
+      </node>
+      <node id="4043">
+        <label>windows.h</label>
+      </node>
+      <node id="4031">
+        <label>Vertex.h</label>
+        <link refid="Vertex_8h"/>
+        <childnode refid="4032" relation="include">
+        </childnode>
+      </node>
+      <node id="4026">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+      </node>
+      <node id="4046">
+        <label>Windows.h</label>
+      </node>
+      <node id="4034">
+        <label>cmath</label>
+      </node>
+      <node id="4028">
+        <label>string</label>
+      </node>
+      <node id="4040">
+        <label>Camera3.h</label>
+        <link refid="Camera3_8h"/>
+        <childnode refid="4039" relation="include">
+        </childnode>
+        <childnode refid="4041" relation="include">
+        </childnode>
+      </node>
+      <node id="4056">
+        <label>ik_EStreamModes.h</label>
+        <link refid="ik__EStreamModes_8h"/>
+      </node>
+      <node id="4035">
+        <label>exception</label>
+      </node>
+      <node id="4074">
+        <label>fstream</label>
+      </node>
+      <node id="4059">
+        <label>ik_ISoundSource.h</label>
+        <link refid="ik__ISoundSource_8h"/>
+        <childnode refid="4053" relation="include">
+        </childnode>
+        <childnode refid="4050" relation="include">
+        </childnode>
+        <childnode refid="4056" relation="include">
+        </childnode>
+        <childnode refid="4057" relation="include">
+        </childnode>
+      </node>
+      <node id="4073">
+        <label>ReadTextFile.h</label>
+        <link refid="ReadTextFile_8h"/>
+        <childnode refid="4074" relation="include">
+        </childnode>
+        <childnode refid="4075" relation="include">
+        </childnode>
+        <childnode refid="4028" relation="include">
+        </childnode>
+        <childnode refid="4038" relation="include">
+        </childnode>
+      </node>
+      <node id="4048">
+        <label>ik_irrKlangTypes.h</label>
+        <link refid="ik__irrKlangTypes_8h"/>
+        <childnode refid="4049" relation="include">
+        </childnode>
+      </node>
+      <node id="4030">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="4031" relation="include">
+        </childnode>
+      </node>
+      <node id="4058">
+        <label>ik_ISoundEngine.h</label>
+        <link refid="ik__ISoundEngine_8h"/>
+        <childnode refid="4052" relation="include">
+        </childnode>
+        <childnode refid="4050" relation="include">
+        </childnode>
+        <childnode refid="4059" relation="include">
+        </childnode>
+        <childnode refid="4060" relation="include">
+        </childnode>
+        <childnode refid="4056" relation="include">
+        </childnode>
+        <childnode refid="4062" relation="include">
+        </childnode>
+        <childnode refid="4063" relation="include">
+        </childnode>
+      </node>
+      <node id="4072">
+        <label>Mtx44.h</label>
+        <link refid="Mtx44_8h"/>
+        <childnode refid="4033" relation="include">
+        </childnode>
+        <childnode refid="4032" relation="include">
+        </childnode>
+      </node>
+      <node id="4057">
+        <label>ik_SAudioStreamFormat.h</label>
+        <link refid="ik__SAudioStreamFormat_8h"/>
+        <childnode refid="4052" relation="include">
+        </childnode>
+      </node>
+      <node id="4049">
+        <label>wchar.h</label>
+      </node>
+      <node id="4047">
+        <label>include/irrKlang.h</label>
+        <link refid="irrKlang_8h"/>
+        <childnode refid="4048" relation="include">
+        </childnode>
+        <childnode refid="4050" relation="include">
+        </childnode>
+        <childnode refid="4052" relation="include">
+        </childnode>
+        <childnode refid="4053" relation="include">
+        </childnode>
+        <childnode refid="4054" relation="include">
+        </childnode>
+        <childnode refid="4055" relation="include">
+        </childnode>
+        <childnode refid="4056" relation="include">
+        </childnode>
+        <childnode refid="4057" relation="include">
+        </childnode>
+        <childnode refid="4058" relation="include">
+        </childnode>
+        <childnode refid="4059" relation="include">
+        </childnode>
+        <childnode refid="4060" relation="include">
+        </childnode>
+        <childnode refid="4064" relation="include">
+        </childnode>
+        <childnode refid="4065" relation="include">
+        </childnode>
+        <childnode refid="4061" relation="include">
+        </childnode>
+        <childnode refid="4067" relation="include">
+        </childnode>
+        <childnode refid="4062" relation="include">
+        </childnode>
+        <childnode refid="4066" relation="include">
+        </childnode>
+        <childnode refid="4068" relation="include">
+        </childnode>
+        <childnode refid="4069" relation="include">
+        </childnode>
+        <childnode refid="4063" relation="include">
+        </childnode>
+      </node>
+      <node id="4055">
+        <label>ik_ESoundEngineOptions.h</label>
+        <link refid="ik__ESoundEngineOptions_8h"/>
+      </node>
+      <node id="4067">
+        <label>ik_ISoundStopEventReceiver.h</label>
+        <link refid="ik__ISoundStopEventReceiver_8h"/>
+        <childnode refid="4052" relation="include">
+        </childnode>
+        <childnode refid="4057" relation="include">
+        </childnode>
+      </node>
+      <node id="4036">
+        <label>ctime</label>
+      </node>
+      <node id="4045">
+        <label>Music.h</label>
+        <link refid="Music_8h"/>
+        <childnode refid="4038" relation="include">
+        </childnode>
+        <childnode refid="4028" relation="include">
+        </childnode>
+        <childnode refid="4046" relation="include">
+        </childnode>
+        <childnode refid="4047" relation="include">
+        </childnode>
+      </node>
+      <node id="4032">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="4033" relation="include">
+        </childnode>
+        <childnode refid="4038" relation="include">
+        </childnode>
+      </node>
+      <node id="4075">
+        <label>vector</label>
+      </node>
+      <node id="4071">
+        <label>stack</label>
+      </node>
+      <node id="4027">
+        <label>Mesh.h</label>
+        <link refid="Mesh_8h"/>
+        <childnode refid="4028" relation="include">
+        </childnode>
+        <childnode refid="4029" relation="include">
+        </childnode>
+      </node>
+      <node id="4042">
+        <label>timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="4043" relation="include">
+        </childnode>
+      </node>
+      <node id="4039">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="4032" relation="include">
+        </childnode>
+      </node>
+      <node id="4076">
+        <label>sstream</label>
+      </node>
+      <node id="4063">
+        <label>ik_ISoundMixedOutputReceiver.h</label>
+        <link refid="ik__ISoundMixedOutputReceiver_8h"/>
+        <childnode refid="4052" relation="include">
+        </childnode>
+        <childnode refid="4057" relation="include">
+        </childnode>
+      </node>
+      <node id="4051">
+        <label>math.h</label>
+      </node>
+      <node id="4037">
+        <label>cstdlib</label>
+      </node>
+      <node id="4038">
+        <label>iostream</label>
+      </node>
+      <node id="4069">
+        <label>ik_IAudioRecorder.h</label>
+        <link refid="ik__IAudioRecorder_8h"/>
+        <childnode refid="4052" relation="include">
+        </childnode>
+        <childnode refid="4059" relation="include">
+        </childnode>
+      </node>
+      <node id="4061">
+        <label>ik_ISoundEffectControl.h</label>
+        <link refid="ik__ISoundEffectControl_8h"/>
+        <childnode refid="4053" relation="include">
+        </childnode>
+        <childnode refid="4050" relation="include">
+        </childnode>
+      </node>
+      <node id="4033">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="4034" relation="include">
+        </childnode>
+        <childnode refid="4035" relation="include">
+        </childnode>
+        <childnode refid="4036" relation="include">
+        </childnode>
+        <childnode refid="4037" relation="include">
+        </childnode>
+      </node>
+      <node id="4068">
+        <label>ik_ISoundDeviceList.h</label>
+        <link refid="ik__ISoundDeviceList_8h"/>
+        <childnode refid="4052" relation="include">
+        </childnode>
+      </node>
+      <node id="4066">
+        <label>ik_IFileReader.h</label>
+        <link refid="ik__IFileReader_8h"/>
+        <childnode refid="4052" relation="include">
+        </childnode>
+      </node>
+      <node id="4025">
+        <label>LiZhaoyuan1/Source/SceneSoraJewel.h</label>
+        <link refid="SceneSoraJewel.h"/>
+        <childnode refid="4026" relation="include">
+        </childnode>
+        <childnode refid="4027" relation="include">
+        </childnode>
+        <childnode refid="4030" relation="include">
+        </childnode>
+        <childnode refid="4039" relation="include">
+        </childnode>
+        <childnode refid="4040" relation="include">
+        </childnode>
+        <childnode refid="4070" relation="include">
+        </childnode>
+        <childnode refid="4073" relation="include">
+        </childnode>
+        <childnode refid="4076" relation="include">
+        </childnode>
+        <childnode refid="4045" relation="include">
+        </childnode>
+      </node>
+      <node id="4029">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+      </node>
+      <node id="4053">
+        <label>ik_IVirtualRefCounted.h</label>
+        <link refid="ik__IVirtualRefCounted_8h"/>
+        <childnode refid="4048" relation="include">
+        </childnode>
+      </node>
+      <node id="4062">
+        <label>ik_IFileFactory.h</label>
+        <link refid="ik__IFileFactory_8h"/>
+        <childnode refid="4052" relation="include">
+        </childnode>
+      </node>
+      <node id="4060">
+        <label>ik_ISound.h</label>
+        <link refid="ik__ISound_8h"/>
+        <childnode refid="4053" relation="include">
+        </childnode>
+        <childnode refid="4061" relation="include">
+        </childnode>
+        <childnode refid="4050" relation="include">
+        </childnode>
+      </node>
+      <node id="4054">
+        <label>ik_ESoundOutputDrivers.h</label>
+        <link refid="ik__ESoundOutputDrivers_8h"/>
+      </node>
+      <node id="4065">
+        <label>ik_IAudioStreamLoader.h</label>
+        <link refid="ik__IAudioStreamLoader_8h"/>
+        <childnode refid="4052" relation="include">
+        </childnode>
+        <childnode refid="4066" relation="include">
+        </childnode>
+      </node>
+      <node id="4052">
+        <label>ik_IRefCounted.h</label>
+        <link refid="ik__IRefCounted_8h"/>
+        <childnode refid="4048" relation="include">
+        </childnode>
+      </node>
+      <node id="4050">
+        <label>ik_vec3d.h</label>
+        <link refid="ik__vec3d_8h"/>
+        <childnode refid="4051" relation="include">
+        </childnode>
+        <childnode refid="4048" relation="include">
+        </childnode>
+      </node>
+      <node id="4041">
+        <label>Application.h</label>
+        <link refid="Application_8h"/>
+        <childnode refid="4042" relation="include">
+        </childnode>
+        <childnode refid="4044" relation="include">
+        </childnode>
+        <childnode refid="4045" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4078">
+        <label>LiZhaoyuan1/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="4077">
+        <label>LiZhaoyuan1/Source/SceneSoraJewel.h</label>
+        <link refid="SceneSoraJewel.h"/>
+        <childnode refid="4078" relation="include">
+        </childnode>
+        <childnode refid="4079" relation="include">
+        </childnode>
+      </node>
+      <node id="4079">
+        <label>LiZhaoyuan1/Source/SceneSoraJewel.cpp</label>
+        <link refid="SceneSoraJewel_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classSceneSoraJewel" prot="public">SceneSoraJewel</innerclass>
+    <briefdescription>
+<para>class for the scene at SoraJewel </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Li Zhaoyuan, Nathan Chia Shi-Lin, Terence Tan Ming Jie, Muhammad Nurhidayat Bin Suderman </para></simplesect>
+<simplesect kind="par"><title>email: lizhaoyuan123.com</title><para></para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SCENESORAJEWEL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCENESORAJEWEL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Scene_8h" kindref="compound">Scene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Mesh_8h" kindref="compound">Mesh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Light_8h" kindref="compound">Light.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Camera_8h" kindref="compound">Camera.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Camera3_8h" kindref="compound">Camera3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MatrixStack_8h" kindref="compound">MatrixStack.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ReadTextFile_8h" kindref="compound">ReadTextFile.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Music_8h" kindref="compound">Music.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="classSceneSoraJewel" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSceneSoraJewel" kindref="compound">SceneSoraJewel</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classScene" kindref="compound">Scene</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73" kindref="member">GEOMETRY_TYPE</ref></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73aeb278af1dac756002cf347d0b7370d0a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73aeb278af1dac756002cf347d0b7370d0a" kindref="member">GEO_AXES</ref>,</highlight></codeline>
+<codeline lineno="35" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a55277ca5717bb6359354ce95c18dcd9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a55277ca5717bb6359354ce95c18dcd9f" kindref="member">GEO_QUAD</ref>,</highlight></codeline>
+<codeline lineno="36" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a2a7624582c7824b07b382f4637617dd1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a2a7624582c7824b07b382f4637617dd1" kindref="member">GEO_LIGHTBALL</ref>,</highlight></codeline>
+<codeline lineno="37" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a9a6e5bcac97c484275ed3777e3f5936c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a9a6e5bcac97c484275ed3777e3f5936c" kindref="member">GEO_TEXT</ref>,</highlight></codeline>
+<codeline lineno="38" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73ab11f4e5f948ccf34ba5422f9af029a21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73ab11f4e5f948ccf34ba5422f9af029a21" kindref="member">GEO_SORAJEWELLEFT</ref>,</highlight></codeline>
+<codeline lineno="39" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a6ae166815de74d4709c26355f26b2b7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a6ae166815de74d4709c26355f26b2b7a" kindref="member">GEO_SORAJEWELRIGHT</ref>,</highlight></codeline>
+<codeline lineno="40" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a37fdec788f7af99e35c1eb2ba93e7943" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a37fdec788f7af99e35c1eb2ba93e7943" kindref="member">GEO_SORAJEWELTOP</ref>,</highlight></codeline>
+<codeline lineno="41" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a9245455cd34f08dd3853397fcaeb4853" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a9245455cd34f08dd3853397fcaeb4853" kindref="member">GEO_SORAJEWELBOTTOM</ref>,</highlight></codeline>
+<codeline lineno="42" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a9bbf4886e717632022ab8e33b5edcf44" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a9bbf4886e717632022ab8e33b5edcf44" kindref="member">GEO_SORAJEWELFRONT</ref>,</highlight></codeline>
+<codeline lineno="43" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a3e3c0068a72bb7a68723b9e2f8e45af7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a3e3c0068a72bb7a68723b9e2f8e45af7" kindref="member">GEO_SORAJEWELBACK</ref>,</highlight></codeline>
+<codeline lineno="44" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73ab29a2576783580b09f6a4c7b2520a18e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73ab29a2576783580b09f6a4c7b2520a18e" kindref="member">GEO_SORAJEWEL</ref>,</highlight></codeline>
+<codeline lineno="45" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73ad3e14db3bd36c1ad2a954b8d673dbedf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73ad3e14db3bd36c1ad2a954b8d673dbedf" kindref="member">GEO_XWING</ref>,</highlight></codeline>
+<codeline lineno="46" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a4331fe0433209f2e89e54c7a89942c98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a4331fe0433209f2e89e54c7a89942c98" kindref="member">GEO_XWINGFLY</ref>,</highlight></codeline>
+<codeline lineno="47" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a36b3d8440b30e71aeaf3ebc3541e0bb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a36b3d8440b30e71aeaf3ebc3541e0bb9" kindref="member">GEO_GLASS</ref>,</highlight></codeline>
+<codeline lineno="48" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a4d73a6504d8082f696785d58a01667c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a4d73a6504d8082f696785d58a01667c9" kindref="member">GEO_GLOBE</ref>,</highlight></codeline>
+<codeline lineno="49" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73abc95f2f71905dcf7d12fbfd066e5672f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73abc95f2f71905dcf7d12fbfd066e5672f" kindref="member">GEO_PROJECTOR</ref>,</highlight></codeline>
+<codeline lineno="50" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73ac19b1024abeb9a398be03e57089eb1c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73ac19b1024abeb9a398be03e57089eb1c9" kindref="member">GEO_COUNTER</ref>,</highlight></codeline>
+<codeline lineno="51" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a5d40864db798df35161bd3d4b257d9db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a5d40864db798df35161bd3d4b257d9db" kindref="member">GEO_SOFA</ref>,</highlight></codeline>
+<codeline lineno="52" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a0e7e03c3fd9f9a69cbf7ea128a7db617" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a0e7e03c3fd9f9a69cbf7ea128a7db617" kindref="member">GEO_QUESTLADY</ref>,</highlight></codeline>
+<codeline lineno="53" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a76031e1e86664161d912b1b323205559" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a76031e1e86664161d912b1b323205559" kindref="member">GEO_ENGINEER</ref>,</highlight></codeline>
+<codeline lineno="54" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a98fa74761aeb1a861c7e4f17794fb5bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a98fa74761aeb1a861c7e4f17794fb5bd" kindref="member">GEO_ENGINEER_LEGLEFT</ref>,</highlight></codeline>
+<codeline lineno="55" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a4295dff2347ca0f35785ca58f16ac6c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a4295dff2347ca0f35785ca58f16ac6c2" kindref="member">GEO_ENGINEER_LEGRIGHT</ref>,</highlight></codeline>
+<codeline lineno="56" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a83a30ca113fb4bb28e66d9f49041cc65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a83a30ca113fb4bb28e66d9f49041cc65" kindref="member">GEO_ENGINEER_ARMLEFT</ref>,</highlight></codeline>
+<codeline lineno="57" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a6cde63c7aeb3d1582800d8efcad7f6e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a6cde63c7aeb3d1582800d8efcad7f6e3" kindref="member">GEO_ENGINEER_ARMRIGHT</ref>,</highlight></codeline>
+<codeline lineno="58" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a948e703ca1ecb3e6b58f11040ff9ea5b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a948e703ca1ecb3e6b58f11040ff9ea5b" kindref="member">GEO_ENGINEER_BODY</ref>,</highlight></codeline>
+<codeline lineno="59" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73af00ee17d16b988bf6b7796f0e5eb7c81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73af00ee17d16b988bf6b7796f0e5eb7c81" kindref="member">GEO_COMMANDER</ref>,</highlight></codeline>
+<codeline lineno="60" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73ab29b35637d701f39d5eda060ac547479" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73ab29b35637d701f39d5eda060ac547479" kindref="member">GEO_NORMALDUDE</ref>,</highlight></codeline>
+<codeline lineno="61" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73ae513a5ca3bdbec54c7a43cfb166bc93d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73ae513a5ca3bdbec54c7a43cfb166bc93d" kindref="member">GEO_KEG</ref>,</highlight></codeline>
+<codeline lineno="62" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73ad1e9b34b7f6d6374d3c8cbe0138a88b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73ad1e9b34b7f6d6374d3c8cbe0138a88b1" kindref="member">GEO_BEERFULL</ref>,</highlight></codeline>
+<codeline lineno="63" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a92d049c266183be5bac28451f1ba9d87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a92d049c266183be5bac28451f1ba9d87" kindref="member">GEO_BEEREMPTY</ref>,</highlight></codeline>
+<codeline lineno="64" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a33c3edea582320832a1d5cd4cf4bfdfb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a33c3edea582320832a1d5cd4cf4bfdfb" kindref="member">GEO_MAINICONSJ</ref>,</highlight></codeline>
+<codeline lineno="65" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73adb6a38baa64e67c6a3bb88ede46e2cdd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73adb6a38baa64e67c6a3bb88ede46e2cdd" kindref="member">GEO_MINIMAPSJ</ref>,</highlight></codeline>
+<codeline lineno="66" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a49a120e2753a461cea5f476ba6d62d1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a49a120e2753a461cea5f476ba6d62d1f" kindref="member">GEO_XWINGBODY</ref>,</highlight></codeline>
+<codeline lineno="67" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73aaad8487a448c32fe2b549f51329061ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73aaad8487a448c32fe2b549f51329061ba" kindref="member">GEO_XWING1</ref>,</highlight></codeline>
+<codeline lineno="68" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a40f1abbc8d1b4070f4b0f6bbe64b6817" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a40f1abbc8d1b4070f4b0f6bbe64b6817" kindref="member">GEO_XWING2</ref>,</highlight></codeline>
+<codeline lineno="69" refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a0e29501d335049d3be47776e91c2d86e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a0e29501d335049d3be47776e91c2d86e" kindref="member">NUM_GEOMETRY</ref>,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4" kindref="member">UNIFORM_TYPE</ref></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4abda5bac64bbd7037225e27bc14cdcd2d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4abda5bac64bbd7037225e27bc14cdcd2d" kindref="member">U_MVP</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="75" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4aacb0119f2aa577ba807fb2aecafc875f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4aacb0119f2aa577ba807fb2aecafc875f" kindref="member">U_MODELVIEW</ref>,</highlight></codeline>
+<codeline lineno="76" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a00bfbe3bbf179d727e4f6d8bf79d7525" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a00bfbe3bbf179d727e4f6d8bf79d7525" kindref="member">U_MODELVIEW_INVERSE_TRANSPOSE</ref>,</highlight></codeline>
+<codeline lineno="77" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ad1931bffe4d4551cf381a90ba3247dea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ad1931bffe4d4551cf381a90ba3247dea" kindref="member">U_MATERIAL_AMBIENT</ref>,</highlight></codeline>
+<codeline lineno="78" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a9c99e21e3bb66e560ca3436a054e42da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a9c99e21e3bb66e560ca3436a054e42da" kindref="member">U_MATERIAL_DIFFUSE</ref>,</highlight></codeline>
+<codeline lineno="79" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a6824e4909af8b66455b2db0ddff8a159" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a6824e4909af8b66455b2db0ddff8a159" kindref="member">U_MATERIAL_SPECULAR</ref>,</highlight></codeline>
+<codeline lineno="80" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a6987ad1c6c824e099da390f5f4a254d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a6987ad1c6c824e099da390f5f4a254d6" kindref="member">U_MATERIAL_SHININESS</ref>,</highlight></codeline>
+<codeline lineno="81" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a50c0a7c3398fc04c2934471985d5c1eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a50c0a7c3398fc04c2934471985d5c1eb" kindref="member">U_LIGHT0_POSITION</ref>,</highlight></codeline>
+<codeline lineno="82" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a47447f9890d48b01b58aa4ab3238b61f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a47447f9890d48b01b58aa4ab3238b61f" kindref="member">U_LIGHT0_COLOR</ref>,</highlight></codeline>
+<codeline lineno="83" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a66996866c83fcc3eafd0275fe5f47f4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a66996866c83fcc3eafd0275fe5f47f4b" kindref="member">U_LIGHT0_POWER</ref>,</highlight></codeline>
+<codeline lineno="84" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ae211623f70e489473d3d0e66afa3bc97" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ae211623f70e489473d3d0e66afa3bc97" kindref="member">U_LIGHT0_KC</ref>,</highlight></codeline>
+<codeline lineno="85" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4af4fb67b5543ee9bf25efdcd8d558cb15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4af4fb67b5543ee9bf25efdcd8d558cb15" kindref="member">U_LIGHT0_KL</ref>,</highlight></codeline>
+<codeline lineno="86" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a37025019d0136a7d6a88530d1eaec75b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a37025019d0136a7d6a88530d1eaec75b" kindref="member">U_LIGHT0_KQ</ref>,</highlight></codeline>
+<codeline lineno="87" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a1371fe0b1186298f6cdcc311064dc427" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a1371fe0b1186298f6cdcc311064dc427" kindref="member">U_LIGHTENABLED</ref>,</highlight></codeline>
+<codeline lineno="88" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a79bc6eb19e104d93edb65f6dd1eaf0d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a79bc6eb19e104d93edb65f6dd1eaf0d2" kindref="member">U_LIGHT0_TYPE</ref>,</highlight></codeline>
+<codeline lineno="89" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a81276fe67c759ea7b8d141dc12744ea9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a81276fe67c759ea7b8d141dc12744ea9" kindref="member">U_LIGHT0_SPOTDIRECTION</ref>,</highlight></codeline>
+<codeline lineno="90" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a3bbf3370fbde79ad78a5b453ffa2f4f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a3bbf3370fbde79ad78a5b453ffa2f4f9" kindref="member">U_LIGHT0_COSCUTOFF</ref>,</highlight></codeline>
+<codeline lineno="91" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ab5111e64a4b9723ca44715a9b7c5eb3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ab5111e64a4b9723ca44715a9b7c5eb3a" kindref="member">U_LIGHT0_COSINNER</ref>,</highlight></codeline>
+<codeline lineno="92" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a1b8ab5ad0583572cde310b21247d043f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a1b8ab5ad0583572cde310b21247d043f" kindref="member">U_LIGHT0_EXPONENT</ref>,</highlight></codeline>
+<codeline lineno="93" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a906628b20039ca68b59e4f6a531d0569" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a906628b20039ca68b59e4f6a531d0569" kindref="member">U_LIGHT1_POSITION</ref>,</highlight></codeline>
+<codeline lineno="94" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a96bee8ed979d86e2ec9d031c54690ed9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a96bee8ed979d86e2ec9d031c54690ed9" kindref="member">U_LIGHT1_COLOR</ref>,</highlight></codeline>
+<codeline lineno="95" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ad867f7a7fb0af23bb0ab24f4657385e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ad867f7a7fb0af23bb0ab24f4657385e2" kindref="member">U_LIGHT1_POWER</ref>,</highlight></codeline>
+<codeline lineno="96" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a0250a96e8e2e9e3291d79f0a40685e47" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a0250a96e8e2e9e3291d79f0a40685e47" kindref="member">U_LIGHT1_KC</ref>,</highlight></codeline>
+<codeline lineno="97" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ad76790f7d1af1957503f2255726af866" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ad76790f7d1af1957503f2255726af866" kindref="member">U_LIGHT1_KL</ref>,</highlight></codeline>
+<codeline lineno="98" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a17f11a660d3e78d6ba2d1862e5cb8e5b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a17f11a660d3e78d6ba2d1862e5cb8e5b" kindref="member">U_LIGHT1_KQ</ref>,</highlight></codeline>
+<codeline lineno="99" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a6ce034581eb9b4ea8dd56feb1ed248ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a6ce034581eb9b4ea8dd56feb1ed248ee" kindref="member">U_LIGHT1_TYPE</ref>,</highlight></codeline>
+<codeline lineno="100" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a6b626de047c2efbbe154803a0562e410" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a6b626de047c2efbbe154803a0562e410" kindref="member">U_LIGHT1_SPOTDIRECTION</ref>,</highlight></codeline>
+<codeline lineno="101" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ad7beebea094586688a79b74aa2669944" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ad7beebea094586688a79b74aa2669944" kindref="member">U_LIGHT1_COSCUTOFF</ref>,</highlight></codeline>
+<codeline lineno="102" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4afcb4f8ac57067d5dcacfdb4397cbae57" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4afcb4f8ac57067d5dcacfdb4397cbae57" kindref="member">U_LIGHT1_COSINNER</ref>,</highlight></codeline>
+<codeline lineno="103" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4af83a79f019b282afcbebf32e2cae14f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4af83a79f019b282afcbebf32e2cae14f0" kindref="member">U_LIGHT1_EXPONENT</ref>,</highlight></codeline>
+<codeline lineno="104" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ac107ade3d0dc9da9b85f3459fcbd57f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ac107ade3d0dc9da9b85f3459fcbd57f2" kindref="member">U_LIGHT2_POSITION</ref>,</highlight></codeline>
+<codeline lineno="105" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ad64012d8f269c8e48a6fdf5d6ab0dc2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ad64012d8f269c8e48a6fdf5d6ab0dc2e" kindref="member">U_LIGHT2_COLOR</ref>,</highlight></codeline>
+<codeline lineno="106" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4adc0b804ee11ba50e2498b6c71acbcea7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4adc0b804ee11ba50e2498b6c71acbcea7" kindref="member">U_LIGHT2_POWER</ref>,</highlight></codeline>
+<codeline lineno="107" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ab00f2b99f87126ea90b637cc12839913" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ab00f2b99f87126ea90b637cc12839913" kindref="member">U_LIGHT2_KC</ref>,</highlight></codeline>
+<codeline lineno="108" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a6c38441828bbe43da101d1777d6bb2fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a6c38441828bbe43da101d1777d6bb2fc" kindref="member">U_LIGHT2_KL</ref>,</highlight></codeline>
+<codeline lineno="109" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a58b3eec9bf707beb15d01ae5bf88975b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a58b3eec9bf707beb15d01ae5bf88975b" kindref="member">U_LIGHT2_KQ</ref>,</highlight></codeline>
+<codeline lineno="110" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ad9023be281186b142e85e644b0e18a0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ad9023be281186b142e85e644b0e18a0c" kindref="member">U_LIGHT2_TYPE</ref>,</highlight></codeline>
+<codeline lineno="111" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a82e15991f1cf5bc18389d9d1150e6dbf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a82e15991f1cf5bc18389d9d1150e6dbf" kindref="member">U_LIGHT2_SPOTDIRECTION</ref>,</highlight></codeline>
+<codeline lineno="112" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ae1d61d8415cc1232be27e635b78f2280" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ae1d61d8415cc1232be27e635b78f2280" kindref="member">U_LIGHT2_COSCUTOFF</ref>,</highlight></codeline>
+<codeline lineno="113" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a8e0f0455dd4b9422c7bf6145cd63e019" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a8e0f0455dd4b9422c7bf6145cd63e019" kindref="member">U_LIGHT2_COSINNER</ref>,</highlight></codeline>
+<codeline lineno="114" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4acdd2deb5dc3cc54d4267f8d363f79643" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4acdd2deb5dc3cc54d4267f8d363f79643" kindref="member">U_LIGHT2_EXPONENT</ref>,</highlight></codeline>
+<codeline lineno="115" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a8ffc3fba19be1823e5c32fd666de2a1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a8ffc3fba19be1823e5c32fd666de2a1e" kindref="member">U_NUMLIGHTS</ref>,</highlight></codeline>
+<codeline lineno="116" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4aa64f4804eb058ddd913c4ab8f14be151" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4aa64f4804eb058ddd913c4ab8f14be151" kindref="member">U_COLOR_TEXTURE_ENABLED</ref>,</highlight></codeline>
+<codeline lineno="117" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a08cf01cd3bd7a63be41808c9ee9fb03f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4a08cf01cd3bd7a63be41808c9ee9fb03f" kindref="member">U_COLOR_TEXTURE</ref>,</highlight></codeline>
+<codeline lineno="118" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4abfe954c1adacef586a7c44b5244774a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4abfe954c1adacef586a7c44b5244774a6" kindref="member">U_TEXT_ENABLED</ref>,</highlight></codeline>
+<codeline lineno="119" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4aae2f84ae1dd14bb21854a27e03bb85ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4aae2f84ae1dd14bb21854a27e03bb85ef" kindref="member">U_TEXT_COLOR</ref>,</highlight></codeline>
+<codeline lineno="120" refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ac6188b9ce55922fe35869f8a4abb3da4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ac6188b9ce55922fe35869f8a4abb3da4" kindref="member">U_TOTAL</ref>,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="classSceneSoraJewel_1a2fc937ea9549ac73aee9cefa29fbf981" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a2fc937ea9549ac73aee9cefa29fbf981" kindref="member">Interactions</ref></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="125" refid="classSceneSoraJewel_1a2fc937ea9549ac73aee9cefa29fbf981aab234f0307a5495f309d94c33361ac32" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a2fc937ea9549ac73aee9cefa29fbf981aab234f0307a5495f309d94c33361ac32" kindref="member">INTERACT_QUESTLADY</ref>,</highlight></codeline>
+<codeline lineno="126" refid="classSceneSoraJewel_1a2fc937ea9549ac73aee9cefa29fbf981aca254a032a41bfd3725fd2db303446d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a2fc937ea9549ac73aee9cefa29fbf981aca254a032a41bfd3725fd2db303446d5" kindref="member">INTERACT_ENGINEER1</ref>,</highlight></codeline>
+<codeline lineno="127" refid="classSceneSoraJewel_1a2fc937ea9549ac73aee9cefa29fbf981a2190510022c607270c6bce218fd8f9c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a2fc937ea9549ac73aee9cefa29fbf981a2190510022c607270c6bce218fd8f9c2" kindref="member">INTERACT_ENGINEER2</ref>,</highlight></codeline>
+<codeline lineno="128" refid="classSceneSoraJewel_1a2fc937ea9549ac73aee9cefa29fbf981aa86ba4ff877af3cb50e12c52711e44b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a2fc937ea9549ac73aee9cefa29fbf981aa86ba4ff877af3cb50e12c52711e44b2" kindref="member">INTERACT_COMMANDO</ref>,</highlight></codeline>
+<codeline lineno="129" refid="classSceneSoraJewel_1a2fc937ea9549ac73aee9cefa29fbf981a3475cf9a0330df78de72bdd97e1dda51" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a2fc937ea9549ac73aee9cefa29fbf981a3475cf9a0330df78de72bdd97e1dda51" kindref="member">INTERACT_KEG</ref>,</highlight></codeline>
+<codeline lineno="130" refid="classSceneSoraJewel_1a2fc937ea9549ac73aee9cefa29fbf981aed99e26cff0d267d4fe31d02dd6266f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a2fc937ea9549ac73aee9cefa29fbf981aed99e26cff0d267d4fe31d02dd6266f8" kindref="member">INTERACT_XWING</ref>,</highlight></codeline>
+<codeline lineno="131" refid="classSceneSoraJewel_1a2fc937ea9549ac73aee9cefa29fbf981a29d5152e42b229ce06798d961cf36d50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1a2fc937ea9549ac73aee9cefa29fbf981a29d5152e42b229ce06798d961cf36d50" kindref="member">INTERACT_BEER</ref>,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1aa9828486b42ee68394acf47ba336df37" kindref="member">SceneSoraJewel</ref>();</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSoraJewel_1aa5da02c60eaecdc3b271f4de68084693" kindref="member">~SceneSoraJewel</ref>();</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a67d455d90de76ffb4853bf37bd6319af" kindref="member">skybox</ref>();</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1af5fa247ec16f76ecd7b0ced03709a8e5" kindref="member">renderLast</ref>();</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1ac312f866a381cefeb0459b514a09af31" kindref="member">renderText</ref>();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1aeeb8b569ea2cdf3b90050d2114aa073b" kindref="member">renderNPCAnimations</ref>();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a3764e7474c9f2d36bc654c5942fc3cc3" kindref="member">interactions</ref>();</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a581a47998e6133291289306656463cb6" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a5609b1a03e5d60a01ac655e2f10bcfc9" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a8a199545b949b789f0746a0e732d589c" kindref="member">Exit</ref>();</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="149" refid="classSceneSoraJewel_1a67bed83e5d59ea73f1e5dc08fdb97379" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structLight" kindref="compound">Light</ref><sp/><ref refid="classSceneSoraJewel_1a67bed83e5d59ea73f1e5dc08fdb97379" kindref="member">light</ref>[2];</highlight></codeline>
+<codeline lineno="150" refid="classSceneSoraJewel_1a22903943e1106991dd23cb5e0f7f197f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a22903943e1106991dd23cb5e0f7f197f" kindref="member">enableLight</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="151" refid="classSceneSoraJewel_1af918fb848bd414cadac6ce8b311b30f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1af918fb848bd414cadac6ce8b311b30f3" kindref="member">LSPEED</ref><sp/>=<sp/>10.f;</highlight></codeline>
+<codeline lineno="152" refid="classSceneSoraJewel_1a7617f45d8cb548f17c021eceb6261090" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a7617f45d8cb548f17c021eceb6261090" kindref="member">fps</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1adfb31a31ca298111a9792551c242d25f" kindref="member">renderMesh</ref>(<ref refid="classMesh" kindref="compound">Mesh</ref><sp/>*mesh,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enableLight);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1ac5c92f43b536aa0497507e13d0a56c96" kindref="member">lighting</ref>();</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a418548255e756309d8d2c4dfdec40233" kindref="member">lighting2</ref>();</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1ae79e80f601a34fb22b0fc26eef81a832" kindref="member">RenderSkybox</ref>();</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1aa2fff408d71b1367a1a40577b379b48e" kindref="member">RenderText</ref>(<ref refid="classMesh" kindref="compound">Mesh</ref>*<sp/>mesh,<sp/>std::string<sp/>text,<sp/><ref refid="structColor" kindref="compound">Color</ref><sp/>color);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1adc10e31e9c3c6c2c1861c1ee9a0757a7" kindref="member">RenderTextOnScreen</ref>(<ref refid="classMesh" kindref="compound">Mesh</ref>*<sp/>mesh,<sp/>std::string<sp/>text,<sp/><ref refid="structColor" kindref="compound">Color</ref><sp/>color,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/>TextForInteractions();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a09e3c2a9ccddfd4990ec6f4756165835" kindref="member">renderminimaptoscreen</ref>();</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="classSceneSoraJewel_1ad847ff0cd187b70a5295ad363e302493" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1ad847ff0cd187b70a5295ad363e302493" kindref="member">m_vertexArrayID</ref>;</highlight></codeline>
+<codeline lineno="164" refid="classSceneSoraJewel_1a8cc46b03abc4537ff9cf6d7913d4c337" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMesh" kindref="compound">Mesh</ref><sp/>*<ref refid="classSceneSoraJewel_1a8cc46b03abc4537ff9cf6d7913d4c337" kindref="member">meshList</ref>[<ref refid="classSceneSoraJewel_1a5fa5b19b1c826942dfb7537dd2b06c73a0e29501d335049d3be47776e91c2d86e" kindref="member">NUM_GEOMETRY</ref>];</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="classSceneSoraJewel_1a1eedefa969a6a034ae9715d7899ceae2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a1eedefa969a6a034ae9715d7899ceae2" kindref="member">m_programID</ref>;</highlight></codeline>
+<codeline lineno="167" refid="classSceneSoraJewel_1ae8d46276a9765831476aea33f68a86d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1ae8d46276a9765831476aea33f68a86d3" kindref="member">m_parameters</ref>[<ref refid="classSceneSoraJewel_1a18e98f436ba40abdf087db36954a91e4ac6188b9ce55922fe35869f8a4abb3da4" kindref="member">U_TOTAL</ref>];</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="classSceneSoraJewel_1a47060f2473583e166a4ed58e36e9ff46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCamera3" kindref="compound">Camera3</ref><sp/><ref refid="classSceneSoraJewel_1a47060f2473583e166a4ed58e36e9ff46" kindref="member">camera</ref>;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="171" refid="classSceneSoraJewel_1a8821908114ca556f539b597ced3d9b97" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::stringstream<sp/><ref refid="classSceneSoraJewel_1a8821908114ca556f539b597ced3d9b97" kindref="member">ssDialogue</ref>;</highlight></codeline>
+<codeline lineno="172" refid="classSceneSoraJewel_1ad084982aff7c3dd3ff6a4561f59c33dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::stringstream<sp/><ref refid="classSceneSoraJewel_1ad084982aff7c3dd3ff6a4561f59c33dd" kindref="member">ssEngiDialogue</ref>;</highlight></codeline>
+<codeline lineno="173" refid="classSceneSoraJewel_1a7ca61fce0bb1ed67626e4a4648b585ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::stringstream<sp/><ref refid="classSceneSoraJewel_1a7ca61fce0bb1ed67626e4a4648b585ba" kindref="member">ssEngiDialogue2</ref>;</highlight></codeline>
+<codeline lineno="174" refid="classSceneSoraJewel_1a5a809e0b3ebd54ca52860885f7ac1b40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::stringstream<sp/><ref refid="classSceneSoraJewel_1a5a809e0b3ebd54ca52860885f7ac1b40" kindref="member">ssCommandoDialogue</ref>;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="176" refid="classSceneSoraJewel_1a529d394b657f19090c7dae4dde3f7bbe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classSceneSoraJewel_1a529d394b657f19090c7dae4dde3f7bbe" kindref="member">sDialogue</ref>;</highlight></codeline>
+<codeline lineno="177" refid="classSceneSoraJewel_1a2022e3f27bc32e978b6d67d94bd36bdf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classSceneSoraJewel_1a2022e3f27bc32e978b6d67d94bd36bdf" kindref="member">sEngiDialogue</ref>;</highlight></codeline>
+<codeline lineno="178" refid="classSceneSoraJewel_1adc735d8e6c68eff38e1bfce67380bd06" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classSceneSoraJewel_1adc735d8e6c68eff38e1bfce67380bd06" kindref="member">sEngiDialogue2</ref>;</highlight></codeline>
+<codeline lineno="179" refid="classSceneSoraJewel_1ae243a00a47607fe2c90403054bf6c92c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classSceneSoraJewel_1ae243a00a47607fe2c90403054bf6c92c" kindref="member">sCommandoDialogue</ref>;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="181" refid="classSceneSoraJewel_1a9881e5b0ee77053b07f914a8e5a7936c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="classSceneSoraJewel_1a9881e5b0ee77053b07f914a8e5a7936c" kindref="member">Textstuffs</ref>;</highlight></codeline>
+<codeline lineno="182" refid="classSceneSoraJewel_1ae4cff05a2994638e56722ee04b966204" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="classSceneSoraJewel_1ae4cff05a2994638e56722ee04b966204" kindref="member">TextEngi</ref>;</highlight></codeline>
+<codeline lineno="183" refid="classSceneSoraJewel_1adbd00a08a17f20d5564a990a5d9c2a81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="classSceneSoraJewel_1adbd00a08a17f20d5564a990a5d9c2a81" kindref="member">TextEngi2</ref>;</highlight></codeline>
+<codeline lineno="184" refid="classSceneSoraJewel_1a4150943ae74a3805af7ec4b8cd51659f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="classSceneSoraJewel_1a4150943ae74a3805af7ec4b8cd51659f" kindref="member">TextCommando</ref>;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186" refid="classSceneSoraJewel_1a87f034e36bb11cc07b8328a234e1873c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;::iterator<sp/><ref refid="classSceneSoraJewel_1a87f034e36bb11cc07b8328a234e1873c" kindref="member">position</ref>;</highlight></codeline>
+<codeline lineno="187" refid="classSceneSoraJewel_1a98c58d71213f8eba51526444d90ffbd6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;::iterator<sp/><ref refid="classSceneSoraJewel_1a98c58d71213f8eba51526444d90ffbd6" kindref="member">Engipos</ref>;</highlight></codeline>
+<codeline lineno="188" refid="classSceneSoraJewel_1a3f2c71c33554e9fc43fff15dcc6c3274" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;::iterator<sp/><ref refid="classSceneSoraJewel_1a3f2c71c33554e9fc43fff15dcc6c3274" kindref="member">Engi2pos</ref>;</highlight></codeline>
+<codeline lineno="189" refid="classSceneSoraJewel_1a06c1494d85bd1526523b4dd4904e66b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;::iterator<sp/><ref refid="classSceneSoraJewel_1a06c1494d85bd1526523b4dd4904e66b3" kindref="member">Commandopos</ref>;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="classSceneSoraJewel_1a0418ed71219fc6dd36e9b4030719ea9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a0418ed71219fc6dd36e9b4030719ea9c" kindref="member">pressE</ref>;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="classSceneSoraJewel_1a6c10344b1582f5cf666bbaede5ba8f56" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a6c10344b1582f5cf666bbaede5ba8f56" kindref="member">talkwithQL</ref>;</highlight></codeline>
+<codeline lineno="194" refid="classSceneSoraJewel_1ae9597d7202d30f70e8209f9026815fe9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1ae9597d7202d30f70e8209f9026815fe9" kindref="member">talkwithEngi1</ref>;</highlight></codeline>
+<codeline lineno="195" refid="classSceneSoraJewel_1abe3f4212f97b0ce0c3579968d3cbfead" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1abe3f4212f97b0ce0c3579968d3cbfead" kindref="member">talkwithEngi2</ref>;</highlight></codeline>
+<codeline lineno="196" refid="classSceneSoraJewel_1a5a781e8368b10885bb2e0784b5f38b25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a5a781e8368b10885bb2e0784b5f38b25" kindref="member">talkwithCommando</ref>;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198" refid="classSceneSoraJewel_1a2fea978777cd0dee1ca78f429110dfff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a2fea978777cd0dee1ca78f429110dfff" kindref="member">i</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="199" refid="classSceneSoraJewel_1aa357689f65815b983b2251eed07afdfe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1aa357689f65815b983b2251eed07afdfe" kindref="member">j</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="200" refid="classSceneSoraJewel_1a02033abbfae0747c8bca1e32899ba208" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a02033abbfae0747c8bca1e32899ba208" kindref="member">k</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="201" refid="classSceneSoraJewel_1a0aff6f683d622a3e1f3493081539a7e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a0aff6f683d622a3e1f3493081539a7e7" kindref="member">l</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="classSceneSoraJewel_1aefce06d556d9fdb254a00882c4791df0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1aefce06d556d9fdb254a00882c4791df0" kindref="member">timer</ref><sp/>=<sp/>0.f;</highlight></codeline>
+<codeline lineno="204" refid="classSceneSoraJewel_1a9a3520a0b5e468f023249d5b614f4a61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a9a3520a0b5e468f023249d5b614f4a61" kindref="member">cutscene</ref>;</highlight></codeline>
+<codeline lineno="205" refid="classSceneSoraJewel_1aaf1cf5542b039df0a80ef4b4e4aac4e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1aaf1cf5542b039df0a80ef4b4e4aac4e8" kindref="member">timercheck</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207" refid="classSceneSoraJewel_1ab1e3b3a51b99e4783a3126a4bcc1670e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1ab1e3b3a51b99e4783a3126a4bcc1670e" kindref="member">boxX</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="208" refid="classSceneSoraJewel_1a464c4fe9c18c22dff4d275c5660bbab6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a464c4fe9c18c22dff4d275c5660bbab6" kindref="member">boxZ</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="209" refid="classSceneSoraJewel_1aa6c96f6802edc78f6c94d0a7517aec71" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1aa6c96f6802edc78f6c94d0a7517aec71" kindref="member">camPosX</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="210" refid="classSceneSoraJewel_1a473312a09b69cb86f26bf7bd765bcc66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a473312a09b69cb86f26bf7bd765bcc66" kindref="member">camPosY</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="211" refid="classSceneSoraJewel_1a95974d396142bb92212714fa26edde3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a95974d396142bb92212714fa26edde3f" kindref="member">camPosZ</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213" refid="classSceneSoraJewel_1a472825aa108e2e90630cb2c26318951f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a472825aa108e2e90630cb2c26318951f" kindref="member">rotateGlobeY</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1ae0b9d92e064f528f6eeb89bf8f8fd46a" kindref="member">MunInit</ref>();</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1ae3ce5f2cd4be18a3bbc498547caa8c15" kindref="member">MunRender</ref>();</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a4c6f2354f09737a6e4d2d6715470e6f3" kindref="member">GalaxyInit</ref>();</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1ab8243eb47b69db905ce48c87d6a9c5fc" kindref="member">GalaxyRender</ref>();</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a4f501cf0f051cccf870ae75540cb34f3" kindref="member">SoraJewelInit</ref>();</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a3becc216d01674bf8f424e0dc9c6a3e4" kindref="member">SoraJewelRender</ref>();</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a6ad88963e5a112a0b76a8fef584498fa" kindref="member">Renderengineers</ref>();</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1ade1c66efbf4d09b53de380245e5fb864" kindref="member">Engineeranimation</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228" refid="classSceneSoraJewel_1ab911045e19d8d825c5c19b1ab8f3ad5b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1ab911045e19d8d825c5c19b1ab8f3ad5b" kindref="member">Quest1</ref>;</highlight></codeline>
+<codeline lineno="229" refid="classSceneSoraJewel_1ac134f413bb04621b666b7315349af714" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1ac134f413bb04621b666b7315349af714" kindref="member">Quest1Done</ref>;</highlight></codeline>
+<codeline lineno="230" refid="classSceneSoraJewel_1a4045d430c996e5131b5667541c72a53c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a4045d430c996e5131b5667541c72a53c" kindref="member">Quest2</ref>;</highlight></codeline>
+<codeline lineno="231" refid="classSceneSoraJewel_1ae9f4065450f2f3b5287352bb9c42b448" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1ae9f4065450f2f3b5287352bb9c42b448" kindref="member">Quest2Done</ref>;</highlight></codeline>
+<codeline lineno="232" refid="classSceneSoraJewel_1a8d8b83d0cb5d475da6505c6e2257adf6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a8d8b83d0cb5d475da6505c6e2257adf6" kindref="member">QuestsDone</ref>;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="classSceneSoraJewel_1a171bff1f19a161d06162e74ab82afab6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a171bff1f19a161d06162e74ab82afab6" kindref="member">TextQ1Activated</ref>;</highlight></codeline>
+<codeline lineno="235" refid="classSceneSoraJewel_1aa6ffdae592004565d75619fec366dba3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1aa6ffdae592004565d75619fec366dba3" kindref="member">TextQ2Activated</ref>;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="237" refid="classSceneSoraJewel_1ac67dcfc0bb42ec737352329a6e54d2c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1ac67dcfc0bb42ec737352329a6e54d2c7" kindref="member">givenBeer</ref>;</highlight></codeline>
+<codeline lineno="238" refid="classSceneSoraJewel_1aae0d1be27d4c0095e649743ac049386e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1aae0d1be27d4c0095e649743ac049386e" kindref="member">EmptyinHand</ref>;</highlight></codeline>
+<codeline lineno="239" refid="classSceneSoraJewel_1a0b18695903c98f047b518fae597085a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a0b18695903c98f047b518fae597085a7" kindref="member">BeerinHand</ref>;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241" refid="classSceneSoraJewel_1a76f5311f1ed5c0234938c62cc4bd2ac1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1aa12ef7f72383c11e36f7718d89a9d576" kindref="member">Engineerpositionx</ref>,<sp/><ref refid="classSceneSoraJewel_1a3e79988159012f4ab5c9f44f8c885f6b" kindref="member">Engineerpositiony</ref>,<sp/><ref refid="classSceneSoraJewel_1a76f5311f1ed5c0234938c62cc4bd2ac1" kindref="member">Engineerpositionz</ref>;</highlight></codeline>
+<codeline lineno="242" refid="classSceneSoraJewel_1a5e6c7dff1ebedf69f5755e41879ed4f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1af529ccbb7479e2dc640f491a022ceacc" kindref="member">characterismoving</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/><ref refid="classSceneSoraJewel_1a5e6c7dff1ebedf69f5755e41879ed4f5" kindref="member">rotationarmmax</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="243" refid="classSceneSoraJewel_1a3c6a8d6933d59ea68f7409c8e9ccaac7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1adb5a21a11962536b29397e34d3217668" kindref="member">rotationarmmax2</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/><ref refid="classSceneSoraJewel_1a09d51413ac9ec0237eea47eddf81ba6a" kindref="member">rotationlegmaxleft</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/><ref refid="classSceneSoraJewel_1a3c6a8d6933d59ea68f7409c8e9ccaac7" kindref="member">rotationlegmaxright</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="244" refid="classSceneSoraJewel_1a6ee6ae65a9d9319726ab98ca9669ac32" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a6ee6ae65a9d9319726ab98ca9669ac32" kindref="member">engineer1maxy</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="245" refid="classSceneSoraJewel_1ab0cd7e652fb6b6d32817b6c1b8a8378a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a92d1799bd2af13669e51fd665812fe39" kindref="member">Engineerrotationarmleft</ref>,<sp/><ref refid="classSceneSoraJewel_1ae2a1e72e9a6d042efeb9bd76de8f2027" kindref="member">Engineerrotationarmright</ref>,<sp/><ref refid="classSceneSoraJewel_1aad5f5415fc6956b872d75d5dcaa52b2c" kindref="member">Engineerrotationlegleft</ref>,<sp/><ref refid="classSceneSoraJewel_1ae01f4c11352dcdede78cac593e4d643e" kindref="member">Engineerrotationlegright</ref>,<sp/><ref refid="classSceneSoraJewel_1ab0cd7e652fb6b6d32817b6c1b8a8378a" kindref="member">Engineerrotationy</ref>;</highlight></codeline>
+<codeline lineno="246" refid="classSceneSoraJewel_1a44aac9c27000a1365951b5af8d18a8ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a49242e9d23107aaf60bef6b4bf41cc93" kindref="member">Engineerpositionx2</ref>,<sp/><ref refid="classSceneSoraJewel_1a0e4d3a1b5ba991e6e68ca642e690d0fd" kindref="member">Engineerpositiony2</ref>,<sp/><ref refid="classSceneSoraJewel_1afacb987514589ffdbcda9ac7d0fcb9c2" kindref="member">Engineerpositionz2</ref>,<sp/><ref refid="classSceneSoraJewel_1a44aac9c27000a1365951b5af8d18a8ee" kindref="member">Engineerrotationy2</ref>;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248" refid="classSceneSoraJewel_1a8700e458e3174febe8d3c68f4268666e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a8700e458e3174febe8d3c68f4268666e" kindref="member">interact</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250" refid="classSceneSoraJewel_1afa758aa962b96b1f66cfe0a85205fad5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classSceneSoraJewel_1afa758aa962b96b1f66cfe0a85205fad5" kindref="member">tempview</ref>;</highlight></codeline>
+<codeline lineno="251" refid="classSceneSoraJewel_1a53a9a33c580faa7210f490db244dc495" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classSceneSoraJewel_1a53a9a33c580faa7210f490db244dc495" kindref="member">viewAtQuestLady</ref>;</highlight></codeline>
+<codeline lineno="252" refid="classSceneSoraJewel_1a0527bf5e2521f1f469b8d7faecb6208e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classSceneSoraJewel_1a0527bf5e2521f1f469b8d7faecb6208e" kindref="member">viewAtEngineer</ref>;</highlight></codeline>
+<codeline lineno="253" refid="classSceneSoraJewel_1a8cac736d35741c0c4aaef5b5540afafb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classSceneSoraJewel_1a8cac736d35741c0c4aaef5b5540afafb" kindref="member">viewAtCommando</ref>;</highlight></codeline>
+<codeline lineno="254" refid="classSceneSoraJewel_1a71f11cfaf94ac357970df8c6fa61177c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classSceneSoraJewel_1a71f11cfaf94ac357970df8c6fa61177c" kindref="member">viewAtKeg</ref>;</highlight></codeline>
+<codeline lineno="255" refid="classSceneSoraJewel_1a5554590917bb164a245f98338e41b868" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classSceneSoraJewel_1a5554590917bb164a245f98338e41b868" kindref="member">viewAtXwing</ref>;</highlight></codeline>
+<codeline lineno="256" refid="classSceneSoraJewel_1a182d1c323d6294ca2ba7ea1011337fb4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classSceneSoraJewel_1a182d1c323d6294ca2ba7ea1011337fb4" kindref="member">viewAtBeer</ref>;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258" refid="classSceneSoraJewel_1a99af0e2a5fa811d3c254e10203de1121" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a99af0e2a5fa811d3c254e10203de1121" kindref="member">RadiusFromQuestLady</ref>;</highlight></codeline>
+<codeline lineno="259" refid="classSceneSoraJewel_1adb1f9e586db3f908b1636345b5a5b069" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1adb1f9e586db3f908b1636345b5a5b069" kindref="member">RadiusFromEngineer</ref>;</highlight></codeline>
+<codeline lineno="260" refid="classSceneSoraJewel_1a55c19b9f48339b48990dfd8cb6283f38" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a55c19b9f48339b48990dfd8cb6283f38" kindref="member">RadiusFromCommando</ref>;</highlight></codeline>
+<codeline lineno="261" refid="classSceneSoraJewel_1ac65156bcf338908e9c19670aec57483a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1ac65156bcf338908e9c19670aec57483a" kindref="member">RadiusFromKeg</ref>;</highlight></codeline>
+<codeline lineno="262" refid="classSceneSoraJewel_1a71965e19071e0eb867c2d7e9d8d885af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a71965e19071e0eb867c2d7e9d8d885af" kindref="member">RadiusFromXwing</ref>;</highlight></codeline>
+<codeline lineno="263" refid="classSceneSoraJewel_1af436748e20295f392a5c0f4f2869dc6a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1af436748e20295f392a5c0f4f2869dc6a" kindref="member">RadiusFromBeer</ref>;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265" refid="classSceneSoraJewel_1a3ab732ded453302698e3bd6d9acc79eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a3ab732ded453302698e3bd6d9acc79eb" kindref="member">RotationWings1</ref>;</highlight></codeline>
+<codeline lineno="266" refid="classSceneSoraJewel_1a1f876189004d688cf95f91788b260744" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSoraJewel_1a1f876189004d688cf95f91788b260744" kindref="member">RotationWings2</ref>;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Vector3<sp/>viewAtOre;</highlight></codeline>
+<codeline lineno="270"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector3<sp/>viewAtLady;</highlight></codeline>
+<codeline lineno="271"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector3<sp/>viewAtDude;</highlight></codeline>
+<codeline lineno="272"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector3<sp/>viewAtMiner;</highlight></codeline>
+<codeline lineno="273"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector3<sp/>viewAtCrashedPlane;*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275" refid="classSceneSoraJewel_1a586de6cf4e1033d15950c24a7087bb13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMS" kindref="compound">MS</ref><sp/><ref refid="classSceneSoraJewel_1a4f38f69e80110f7741fb8a2ce6e297d6" kindref="member">modelStack</ref>,<sp/><ref refid="classSceneSoraJewel_1a586de6cf4e1033d15950c24a7087bb13" kindref="member">viewStack</ref>,<sp/><ref refid="classSceneSoraJewel_1ae149b83da476ba731413a9d637f033e6" kindref="member">projectionStack</ref>;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277" refid="classSceneSoraJewel_1a78a4d605788fe9e895a99b6c5f11fb66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classSceneSoraJewel_1a78a4d605788fe9e895a99b6c5f11fb66" kindref="member">QuestLady</ref><sp/>=<sp/><ref refid="structVector3" kindref="compound">Vector3</ref>(13,<sp/>-1,<sp/>-53);</highlight></codeline>
+<codeline lineno="278" refid="classSceneSoraJewel_1afb7c75ad597c81b96804bdf4bcd8e689" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classSceneSoraJewel_1afb7c75ad597c81b96804bdf4bcd8e689" kindref="member">Engineer</ref><sp/>=<sp/><ref refid="structVector3" kindref="compound">Vector3</ref>(-96,<sp/>5,<sp/>-40);</highlight></codeline>
+<codeline lineno="279" refid="classSceneSoraJewel_1a4937ec1dcc5ce05214f6e0ff41844059" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classSceneSoraJewel_1a4937ec1dcc5ce05214f6e0ff41844059" kindref="member">Commando</ref><sp/>=<sp/><ref refid="structVector3" kindref="compound">Vector3</ref>(-93,<sp/>13,<sp/>41);</highlight></codeline>
+<codeline lineno="280" refid="classSceneSoraJewel_1a17c79331a34b9bf74e046018a7e6bb64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classSceneSoraJewel_1a17c79331a34b9bf74e046018a7e6bb64" kindref="member">Keg</ref><sp/>=<sp/><ref refid="structVector3" kindref="compound">Vector3</ref>(-50,<sp/>0,<sp/>-104);</highlight></codeline>
+<codeline lineno="281" refid="classSceneSoraJewel_1a02488a876f4d60a50fff95ec4c6653fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classSceneSoraJewel_1a02488a876f4d60a50fff95ec4c6653fb" kindref="member">Xwing</ref><sp/>=<sp/><ref refid="structVector3" kindref="compound">Vector3</ref>(-85,<sp/>19,<sp/>65);</highlight></codeline>
+<codeline lineno="282" refid="classSceneSoraJewel_1a652b9d322990a5bc5e42d8043621e0d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classSceneSoraJewel_1a652b9d322990a5bc5e42d8043621e0d1" kindref="member">Beer</ref><sp/>=<sp/><ref refid="structVector3" kindref="compound">Vector3</ref>(18,<sp/>8,<sp/>-33);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="LiZhaoyuan1/Source/SceneSoraJewel.h"/>
+  </compounddef>
+</doxygen>

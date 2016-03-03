@@ -1,0 +1,19 @@
+digraph "LiZhaoyuan1/Source/Utility.h"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="LiZhaoyuan1/Source\l/Utility.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="LiZhaoyuan1/Source\l/LoadingScreen.cpp",height=0.2,width=0.4,color="black",URL="$LoadingScreen_8cpp.html",tooltip="class for the scene while Loading "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="LiZhaoyuan1/Source\l/SceneGalaxy.cpp",height=0.2,width=0.4,color="black",URL="$SceneGalaxy_8cpp.html",tooltip="SceneGalaxy cpp file, everything needed inside the scene, found here. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="LiZhaoyuan1/Source\l/SceneMun.cpp",height=0.2,width=0.4,color="black",URL="$SceneMun_8cpp.html"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="LiZhaoyuan1/Source\l/SceneSoraJewel.cpp",height=0.2,width=0.4,color="black",URL="$SceneSoraJewel_8cpp.html"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="LiZhaoyuan1/Source\l/SP2.cpp",height=0.2,width=0.4,color="black",URL="$SP2_8cpp.html",tooltip="class for the Main Menu "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="LiZhaoyuan1/Source\l/Utility.cpp",height=0.2,width=0.4,color="black",URL="$Utility_8cpp.html"];
+}

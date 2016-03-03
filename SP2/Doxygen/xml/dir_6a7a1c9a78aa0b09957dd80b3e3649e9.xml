@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="dir_6a7a1c9a78aa0b09957dd80b3e3649e9" kind="dir">
+    <compoundname>LiZhaoyuan1</compoundname>
+    <innerdir refid="dir_4c8573a83f728eacb45f1c9397594f2d">LiZhaoyuan1/Source</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="LiZhaoyuan1/"/>
+  </compounddef>
+</doxygen>

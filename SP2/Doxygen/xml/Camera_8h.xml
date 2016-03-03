@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="Camera_8h" kind="file" language="C++">
+    <compoundname>Camera.h</compoundname>
+    <includes refid="Vector3_8h" local="yes">Vector3.h</includes>
+    <includedby refid="SP2_8h" local="yes">LiZhaoyuan1/Source/SP2.h</includedby>
+    <includedby refid="Camera3_8h" local="yes">LiZhaoyuan1/Source/Camera3.h</includedby>
+    <includedby refid="LoadingScreen_8h" local="yes">LiZhaoyuan1/Source/LoadingScreen.h</includedby>
+    <includedby refid="SceneMun_8h" local="yes">LiZhaoyuan1/Source/SceneMun.h</includedby>
+    <includedby refid="SceneGalaxy_8h" local="yes">LiZhaoyuan1/Source/SceneGalaxy.h</includedby>
+    <includedby refid="SceneSoraJewel_8h" local="yes">LiZhaoyuan1/Source/SceneSoraJewel.h</includedby>
+    <includedby refid="Camera_8cpp" local="yes">LiZhaoyuan1/Source/Camera.cpp</includedby>
+    <incdepgraph>
+      <node id="2475">
+        <label>cmath</label>
+      </node>
+      <node id="2476">
+        <label>exception</label>
+      </node>
+      <node id="2477">
+        <label>ctime</label>
+      </node>
+      <node id="2473">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="2474" relation="include">
+        </childnode>
+        <childnode refid="2479" relation="include">
+        </childnode>
+      </node>
+      <node id="2472">
+        <label>LiZhaoyuan1/Source/Camera.h</label>
+        <link refid="Camera.h"/>
+        <childnode refid="2473" relation="include">
+        </childnode>
+      </node>
+      <node id="2478">
+        <label>cstdlib</label>
+      </node>
+      <node id="2479">
+        <label>iostream</label>
+      </node>
+      <node id="2474">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="2475" relation="include">
+        </childnode>
+        <childnode refid="2476" relation="include">
+        </childnode>
+        <childnode refid="2477" relation="include">
+        </childnode>
+        <childnode refid="2478" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2487">
+        <label>LiZhaoyuan1/Source/LoadingScreen.h</label>
+        <link refid="LoadingScreen_8h"/>
+        <childnode refid="2482" relation="include">
+        </childnode>
+        <childnode refid="2488" relation="include">
+        </childnode>
+      </node>
+      <node id="2481">
+        <label>LiZhaoyuan1/Source/SP2.h</label>
+        <link refid="SP2_8h"/>
+        <childnode refid="2482" relation="include">
+        </childnode>
+        <childnode refid="2483" relation="include">
+        </childnode>
+        <childnode refid="2485" relation="include">
+        </childnode>
+      </node>
+      <node id="2491">
+        <label>LiZhaoyuan1/Source/Missile.h</label>
+        <link refid="Missile_8h"/>
+        <childnode refid="2483" relation="include">
+        </childnode>
+        <childnode refid="2492" relation="include">
+        </childnode>
+      </node>
+      <node id="2482">
+        <label>LiZhaoyuan1/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="2486">
+        <label>LiZhaoyuan1/Source/Camera3.h</label>
+        <link refid="Camera3_8h"/>
+        <childnode refid="2481" relation="include">
+        </childnode>
+        <childnode refid="2487" relation="include">
+        </childnode>
+        <childnode refid="2489" relation="include">
+        </childnode>
+        <childnode refid="2483" relation="include">
+        </childnode>
+        <childnode refid="2491" relation="include">
+        </childnode>
+        <childnode refid="2493" relation="include">
+        </childnode>
+        <childnode refid="2495" relation="include">
+        </childnode>
+      </node>
+      <node id="2490">
+        <label>LiZhaoyuan1/Source/SceneMun.cpp</label>
+        <link refid="SceneMun_8cpp"/>
+      </node>
+      <node id="2488">
+        <label>LiZhaoyuan1/Source/LoadingScreen.cpp</label>
+        <link refid="LoadingScreen_8cpp"/>
+      </node>
+      <node id="2483">
+        <label>LiZhaoyuan1/Source/SceneGalaxy.h</label>
+        <link refid="SceneGalaxy_8h"/>
+        <childnode refid="2482" relation="include">
+        </childnode>
+        <childnode refid="2484" relation="include">
+        </childnode>
+      </node>
+      <node id="2496">
+        <label>LiZhaoyuan1/Source/Camera.cpp</label>
+        <link refid="Camera_8cpp"/>
+      </node>
+      <node id="2492">
+        <label>LiZhaoyuan1/Source/Missile.cpp</label>
+        <link refid="Missile_8cpp"/>
+      </node>
+      <node id="2495">
+        <label>LiZhaoyuan1/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="2489">
+        <label>LiZhaoyuan1/Source/SceneMun.h</label>
+        <link refid="SceneMun_8h"/>
+        <childnode refid="2482" relation="include">
+        </childnode>
+        <childnode refid="2490" relation="include">
+        </childnode>
+      </node>
+      <node id="2484">
+        <label>LiZhaoyuan1/Source/SceneGalaxy.cpp</label>
+        <link refid="SceneGalaxy_8cpp"/>
+      </node>
+      <node id="2480">
+        <label>LiZhaoyuan1/Source/Camera.h</label>
+        <link refid="Camera.h"/>
+        <childnode refid="2481" relation="include">
+        </childnode>
+        <childnode refid="2486" relation="include">
+        </childnode>
+        <childnode refid="2487" relation="include">
+        </childnode>
+        <childnode refid="2489" relation="include">
+        </childnode>
+        <childnode refid="2483" relation="include">
+        </childnode>
+        <childnode refid="2493" relation="include">
+        </childnode>
+        <childnode refid="2496" relation="include">
+        </childnode>
+      </node>
+      <node id="2485">
+        <label>LiZhaoyuan1/Source/SP2.cpp</label>
+        <link refid="SP2_8cpp"/>
+      </node>
+      <node id="2493">
+        <label>LiZhaoyuan1/Source/SceneSoraJewel.h</label>
+        <link refid="SceneSoraJewel_8h"/>
+        <childnode refid="2482" relation="include">
+        </childnode>
+        <childnode refid="2494" relation="include">
+        </childnode>
+      </node>
+      <node id="2494">
+        <label>LiZhaoyuan1/Source/SceneSoraJewel.cpp</label>
+        <link refid="SceneSoraJewel_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classCamera" prot="public">Camera</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CAMERA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAMERA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Vector3_8h" kindref="compound">Vector3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="classCamera" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classCamera" kindref="compound">Camera</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="9" refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" kindref="member">position</ref>;</highlight></codeline>
+<codeline lineno="10" refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" kindref="member">target</ref>;</highlight></codeline>
+<codeline lineno="11" refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" kindref="member">up</ref>;</highlight></codeline>
+<codeline lineno="12" refid="classCamera_1a6af395199ecb1db9e1083d542b4fb013" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classCamera_1a6af395199ecb1db9e1083d542b4fb013" kindref="member">view</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCamera_1a01f94c3543f56ede7af49dc778f19331" kindref="member">Camera</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCamera_1ad1897942d0ccf91052386388a497349f" kindref="member">~Camera</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCamera_1a609775f7ec4cd936ad7add808cd7354c" kindref="member">Init</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/>pos,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/>target,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/>up);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCamera_1aa46f58b32270a571ab56dde4caca46db" kindref="member">Reset</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCamera_1acc1741feb6d9da849ea4b6c12e0711e6" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="LiZhaoyuan1/Source/Camera.h"/>
+  </compounddef>
+</doxygen>

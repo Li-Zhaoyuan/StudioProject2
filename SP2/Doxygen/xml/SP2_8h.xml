@@ -1,0 +1,507 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="SP2_8h" kind="file" language="C++">
+    <compoundname>SP2.h</compoundname>
+    <includes refid="Scene_8h" local="yes">Scene.h</includes>
+    <includes refid="Mesh_8h" local="yes">Mesh.h</includes>
+    <includes refid="Light_8h" local="yes">Light.h</includes>
+    <includes refid="Camera_8h" local="yes">Camera.h</includes>
+    <includes refid="Camera3_8h" local="yes">Camera3.h</includes>
+    <includes refid="MatrixStack_8h" local="yes">MatrixStack.h</includes>
+    <includedby refid="Application_8cpp" local="yes">LiZhaoyuan1/Source/Application.cpp</includedby>
+    <includedby refid="SceneGalaxy_8h" local="yes">LiZhaoyuan1/Source/SceneGalaxy.h</includedby>
+    <includedby refid="SP2_8cpp" local="yes">LiZhaoyuan1/Source/SP2.cpp</includedby>
+    <incdepgraph>
+      <node id="4179">
+        <label>Currentgamestate.h</label>
+        <link refid="CurrentGameState_8h"/>
+      </node>
+      <node id="4205">
+        <label>MatrixStack.h</label>
+        <link refid="MatrixStack_8h"/>
+        <childnode refid="4206" relation="include">
+        </childnode>
+        <childnode refid="4207" relation="include">
+        </childnode>
+      </node>
+      <node id="4199">
+        <label>ik_IAudioStream.h</label>
+        <link refid="ik__IAudioStream_8h"/>
+        <childnode refid="4187" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+      </node>
+      <node id="4178">
+        <label>windows.h</label>
+      </node>
+      <node id="4166">
+        <label>Vertex.h</label>
+        <link refid="Vertex_8h"/>
+        <childnode refid="4167" relation="include">
+        </childnode>
+      </node>
+      <node id="4161">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+      </node>
+      <node id="4160">
+        <label>LiZhaoyuan1/Source/SP2.h</label>
+        <link refid="SP2.h"/>
+        <childnode refid="4161" relation="include">
+        </childnode>
+        <childnode refid="4162" relation="include">
+        </childnode>
+        <childnode refid="4165" relation="include">
+        </childnode>
+        <childnode refid="4174" relation="include">
+        </childnode>
+        <childnode refid="4175" relation="include">
+        </childnode>
+        <childnode refid="4205" relation="include">
+        </childnode>
+      </node>
+      <node id="4181">
+        <label>Windows.h</label>
+      </node>
+      <node id="4169">
+        <label>cmath</label>
+      </node>
+      <node id="4163">
+        <label>string</label>
+      </node>
+      <node id="4175">
+        <label>Camera3.h</label>
+        <link refid="Camera3_8h"/>
+        <childnode refid="4174" relation="include">
+        </childnode>
+        <childnode refid="4176" relation="include">
+        </childnode>
+      </node>
+      <node id="4191">
+        <label>ik_EStreamModes.h</label>
+        <link refid="ik__EStreamModes_8h"/>
+      </node>
+      <node id="4170">
+        <label>exception</label>
+      </node>
+      <node id="4194">
+        <label>ik_ISoundSource.h</label>
+        <link refid="ik__ISoundSource_8h"/>
+        <childnode refid="4188" relation="include">
+        </childnode>
+        <childnode refid="4185" relation="include">
+        </childnode>
+        <childnode refid="4191" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+      </node>
+      <node id="4183">
+        <label>ik_irrKlangTypes.h</label>
+        <link refid="ik__irrKlangTypes_8h"/>
+        <childnode refid="4184" relation="include">
+        </childnode>
+      </node>
+      <node id="4165">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="4166" relation="include">
+        </childnode>
+      </node>
+      <node id="4193">
+        <label>ik_ISoundEngine.h</label>
+        <link refid="ik__ISoundEngine_8h"/>
+        <childnode refid="4187" relation="include">
+        </childnode>
+        <childnode refid="4185" relation="include">
+        </childnode>
+        <childnode refid="4194" relation="include">
+        </childnode>
+        <childnode refid="4195" relation="include">
+        </childnode>
+        <childnode refid="4191" relation="include">
+        </childnode>
+        <childnode refid="4197" relation="include">
+        </childnode>
+        <childnode refid="4198" relation="include">
+        </childnode>
+      </node>
+      <node id="4207">
+        <label>Mtx44.h</label>
+        <link refid="Mtx44_8h"/>
+        <childnode refid="4168" relation="include">
+        </childnode>
+        <childnode refid="4167" relation="include">
+        </childnode>
+      </node>
+      <node id="4192">
+        <label>ik_SAudioStreamFormat.h</label>
+        <link refid="ik__SAudioStreamFormat_8h"/>
+        <childnode refid="4187" relation="include">
+        </childnode>
+      </node>
+      <node id="4184">
+        <label>wchar.h</label>
+      </node>
+      <node id="4182">
+        <label>include/irrKlang.h</label>
+        <link refid="irrKlang_8h"/>
+        <childnode refid="4183" relation="include">
+        </childnode>
+        <childnode refid="4185" relation="include">
+        </childnode>
+        <childnode refid="4187" relation="include">
+        </childnode>
+        <childnode refid="4188" relation="include">
+        </childnode>
+        <childnode refid="4189" relation="include">
+        </childnode>
+        <childnode refid="4190" relation="include">
+        </childnode>
+        <childnode refid="4191" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+        <childnode refid="4193" relation="include">
+        </childnode>
+        <childnode refid="4194" relation="include">
+        </childnode>
+        <childnode refid="4195" relation="include">
+        </childnode>
+        <childnode refid="4199" relation="include">
+        </childnode>
+        <childnode refid="4200" relation="include">
+        </childnode>
+        <childnode refid="4196" relation="include">
+        </childnode>
+        <childnode refid="4202" relation="include">
+        </childnode>
+        <childnode refid="4197" relation="include">
+        </childnode>
+        <childnode refid="4201" relation="include">
+        </childnode>
+        <childnode refid="4203" relation="include">
+        </childnode>
+        <childnode refid="4204" relation="include">
+        </childnode>
+        <childnode refid="4198" relation="include">
+        </childnode>
+      </node>
+      <node id="4190">
+        <label>ik_ESoundEngineOptions.h</label>
+        <link refid="ik__ESoundEngineOptions_8h"/>
+      </node>
+      <node id="4202">
+        <label>ik_ISoundStopEventReceiver.h</label>
+        <link refid="ik__ISoundStopEventReceiver_8h"/>
+        <childnode refid="4187" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+      </node>
+      <node id="4171">
+        <label>ctime</label>
+      </node>
+      <node id="4180">
+        <label>Music.h</label>
+        <link refid="Music_8h"/>
+        <childnode refid="4173" relation="include">
+        </childnode>
+        <childnode refid="4163" relation="include">
+        </childnode>
+        <childnode refid="4181" relation="include">
+        </childnode>
+        <childnode refid="4182" relation="include">
+        </childnode>
+      </node>
+      <node id="4167">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="4168" relation="include">
+        </childnode>
+        <childnode refid="4173" relation="include">
+        </childnode>
+      </node>
+      <node id="4206">
+        <label>stack</label>
+      </node>
+      <node id="4162">
+        <label>Mesh.h</label>
+        <link refid="Mesh_8h"/>
+        <childnode refid="4163" relation="include">
+        </childnode>
+        <childnode refid="4164" relation="include">
+        </childnode>
+      </node>
+      <node id="4177">
+        <label>timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="4178" relation="include">
+        </childnode>
+      </node>
+      <node id="4174">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="4167" relation="include">
+        </childnode>
+      </node>
+      <node id="4198">
+        <label>ik_ISoundMixedOutputReceiver.h</label>
+        <link refid="ik__ISoundMixedOutputReceiver_8h"/>
+        <childnode refid="4187" relation="include">
+        </childnode>
+        <childnode refid="4192" relation="include">
+        </childnode>
+      </node>
+      <node id="4186">
+        <label>math.h</label>
+      </node>
+      <node id="4172">
+        <label>cstdlib</label>
+      </node>
+      <node id="4173">
+        <label>iostream</label>
+      </node>
+      <node id="4204">
+        <label>ik_IAudioRecorder.h</label>
+        <link refid="ik__IAudioRecorder_8h"/>
+        <childnode refid="4187" relation="include">
+        </childnode>
+        <childnode refid="4194" relation="include">
+        </childnode>
+      </node>
+      <node id="4196">
+        <label>ik_ISoundEffectControl.h</label>
+        <link refid="ik__ISoundEffectControl_8h"/>
+        <childnode refid="4188" relation="include">
+        </childnode>
+        <childnode refid="4185" relation="include">
+        </childnode>
+      </node>
+      <node id="4168">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="4169" relation="include">
+        </childnode>
+        <childnode refid="4170" relation="include">
+        </childnode>
+        <childnode refid="4171" relation="include">
+        </childnode>
+        <childnode refid="4172" relation="include">
+        </childnode>
+      </node>
+      <node id="4203">
+        <label>ik_ISoundDeviceList.h</label>
+        <link refid="ik__ISoundDeviceList_8h"/>
+        <childnode refid="4187" relation="include">
+        </childnode>
+      </node>
+      <node id="4201">
+        <label>ik_IFileReader.h</label>
+        <link refid="ik__IFileReader_8h"/>
+        <childnode refid="4187" relation="include">
+        </childnode>
+      </node>
+      <node id="4164">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+      </node>
+      <node id="4188">
+        <label>ik_IVirtualRefCounted.h</label>
+        <link refid="ik__IVirtualRefCounted_8h"/>
+        <childnode refid="4183" relation="include">
+        </childnode>
+      </node>
+      <node id="4197">
+        <label>ik_IFileFactory.h</label>
+        <link refid="ik__IFileFactory_8h"/>
+        <childnode refid="4187" relation="include">
+        </childnode>
+      </node>
+      <node id="4195">
+        <label>ik_ISound.h</label>
+        <link refid="ik__ISound_8h"/>
+        <childnode refid="4188" relation="include">
+        </childnode>
+        <childnode refid="4196" relation="include">
+        </childnode>
+        <childnode refid="4185" relation="include">
+        </childnode>
+      </node>
+      <node id="4189">
+        <label>ik_ESoundOutputDrivers.h</label>
+        <link refid="ik__ESoundOutputDrivers_8h"/>
+      </node>
+      <node id="4200">
+        <label>ik_IAudioStreamLoader.h</label>
+        <link refid="ik__IAudioStreamLoader_8h"/>
+        <childnode refid="4187" relation="include">
+        </childnode>
+        <childnode refid="4201" relation="include">
+        </childnode>
+      </node>
+      <node id="4187">
+        <label>ik_IRefCounted.h</label>
+        <link refid="ik__IRefCounted_8h"/>
+        <childnode refid="4183" relation="include">
+        </childnode>
+      </node>
+      <node id="4185">
+        <label>ik_vec3d.h</label>
+        <link refid="ik__vec3d_8h"/>
+        <childnode refid="4186" relation="include">
+        </childnode>
+        <childnode refid="4183" relation="include">
+        </childnode>
+      </node>
+      <node id="4176">
+        <label>Application.h</label>
+        <link refid="Application_8h"/>
+        <childnode refid="4177" relation="include">
+        </childnode>
+        <childnode refid="4179" relation="include">
+        </childnode>
+        <childnode refid="4180" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4208">
+        <label>LiZhaoyuan1/Source/SP2.h</label>
+        <link refid="SP2.h"/>
+        <childnode refid="4209" relation="include">
+        </childnode>
+        <childnode refid="4210" relation="include">
+        </childnode>
+        <childnode refid="4212" relation="include">
+        </childnode>
+      </node>
+      <node id="4209">
+        <label>LiZhaoyuan1/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="4210">
+        <label>LiZhaoyuan1/Source/SceneGalaxy.h</label>
+        <link refid="SceneGalaxy_8h"/>
+        <childnode refid="4209" relation="include">
+        </childnode>
+        <childnode refid="4211" relation="include">
+        </childnode>
+      </node>
+      <node id="4211">
+        <label>LiZhaoyuan1/Source/SceneGalaxy.cpp</label>
+        <link refid="SceneGalaxy_8cpp"/>
+      </node>
+      <node id="4212">
+        <label>LiZhaoyuan1/Source/SP2.cpp</label>
+        <link refid="SP2_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classSP2" prot="public">SP2</innerclass>
+    <briefdescription>
+<para>class for the Main Menu </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Li Zhaoyuan, Nathan Chia Shi-Lin, Terence Tan Ming Jie, Muhammad Nurhidayat Bin Suderman </para></simplesect>
+<simplesect kind="par"><title>email: lizhaoyuan123.com</title><para></para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SP2_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SP2_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Scene_8h" kindref="compound">Scene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Mesh_8h" kindref="compound">Mesh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Light_8h" kindref="compound">Light.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Camera_8h" kindref="compound">Camera.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Camera3_8h" kindref="compound">Camera3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MatrixStack_8h" kindref="compound">MatrixStack.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classSP2" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSP2" kindref="compound">SP2</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classScene" kindref="compound">Scene</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="classSP2_1ad60364d83f44504a7e99b5c28db91f0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classSP2_1ad60364d83f44504a7e99b5c28db91f0c" kindref="member">GEOMETRY_TYPE</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32" refid="classSP2_1ad60364d83f44504a7e99b5c28db91f0caece0879caf5b4a278f506f974a7a827c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSP2_1ad60364d83f44504a7e99b5c28db91f0caece0879caf5b4a278f506f974a7a827c" kindref="member">GEO_AXES</ref>,</highlight></codeline>
+<codeline lineno="33" refid="classSP2_1ad60364d83f44504a7e99b5c28db91f0ca6fe96666fbf4c8d73f59399ab1542ccc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSP2_1ad60364d83f44504a7e99b5c28db91f0ca6fe96666fbf4c8d73f59399ab1542ccc" kindref="member">GEO_QUAD</ref>,</highlight></codeline>
+<codeline lineno="34" refid="classSP2_1ad60364d83f44504a7e99b5c28db91f0ca2ba1b893751de68c5fea854fc420aa55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSP2_1ad60364d83f44504a7e99b5c28db91f0ca2ba1b893751de68c5fea854fc420aa55" kindref="member">GEO_CUBE2</ref>,</highlight></codeline>
+<codeline lineno="35" refid="classSP2_1ad60364d83f44504a7e99b5c28db91f0cab2c684350a00fc455aa5cc93038fa681" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSP2_1ad60364d83f44504a7e99b5c28db91f0cab2c684350a00fc455aa5cc93038fa681" kindref="member">GEO_CUBE</ref>,</highlight></codeline>
+<codeline lineno="36" refid="classSP2_1ad60364d83f44504a7e99b5c28db91f0cae1b56823aca98184746c02c606457216" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSP2_1ad60364d83f44504a7e99b5c28db91f0cae1b56823aca98184746c02c606457216" kindref="member">GEO_SPHERE</ref>,</highlight></codeline>
+<codeline lineno="37" refid="classSP2_1ad60364d83f44504a7e99b5c28db91f0ca2254f990348048bddacca8f919b36606" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSP2_1ad60364d83f44504a7e99b5c28db91f0ca2254f990348048bddacca8f919b36606" kindref="member">GEO_TEXT</ref>,</highlight></codeline>
+<codeline lineno="38" refid="classSP2_1ad60364d83f44504a7e99b5c28db91f0ca2f6cfbdc0991ea648eb85566a38c4c01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSP2_1ad60364d83f44504a7e99b5c28db91f0ca2f6cfbdc0991ea648eb85566a38c4c01" kindref="member">NUM_GEOMETRY</ref>,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="classSP2_1ac3feab54d671016fbd83505de999eece" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classSP2_1ac3feab54d671016fbd83505de999eece" kindref="member">UNIFORM_TYPE</ref></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43" refid="classSP2_1ac3feab54d671016fbd83505de999eeceae3c314a935d2dad845d6d2ae9ac0f6b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSP2_1ac3feab54d671016fbd83505de999eeceae3c314a935d2dad845d6d2ae9ac0f6b3" kindref="member">U_MVP</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="44" refid="classSP2_1ac3feab54d671016fbd83505de999eeceab8c6104c22dec5ef1fff70fbddf3758b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSP2_1ac3feab54d671016fbd83505de999eeceab8c6104c22dec5ef1fff70fbddf3758b" kindref="member">U_MODELVIEW</ref>,</highlight></codeline>
+<codeline lineno="45" refid="classSP2_1ac3feab54d671016fbd83505de999eeceae4eb0f8e52caf7994c98b99ec4acf796" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSP2_1ac3feab54d671016fbd83505de999eeceae4eb0f8e52caf7994c98b99ec4acf796" kindref="member">U_MODELVIEW_INVERSE_TRANSPOSE</ref>,</highlight></codeline>
+<codeline lineno="46" refid="classSP2_1ac3feab54d671016fbd83505de999eeceaeb11d7635458acc8b32eab48914e94b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSP2_1ac3feab54d671016fbd83505de999eeceaeb11d7635458acc8b32eab48914e94b4" kindref="member">U_MATERIAL_AMBIENT</ref>,</highlight></codeline>
+<codeline lineno="47" refid="classSP2_1ac3feab54d671016fbd83505de999eecead0ca6d74d892a899b26a4ddbe4d01c79" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSP2_1ac3feab54d671016fbd83505de999eecead0ca6d74d892a899b26a4ddbe4d01c79" kindref="member">U_MATERIAL_DIFFUSE</ref>,</highlight></codeline>
+<codeline lineno="48" refid="classSP2_1ac3feab54d671016fbd83505de999eecea2b85620f30e2babb3945efc4c43058d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSP2_1ac3feab54d671016fbd83505de999eecea2b85620f30e2babb3945efc4c43058d9" kindref="member">U_MATERIAL_SPECULAR</ref>,</highlight></codeline>
+<codeline lineno="49" refid="classSP2_1ac3feab54d671016fbd83505de999eecea1cadc365ec7603ca7da7436028cd3fd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSP2_1ac3feab54d671016fbd83505de999eecea1cadc365ec7603ca7da7436028cd3fd3" kindref="member">U_MATERIAL_SHININESS</ref>,</highlight></codeline>
+<codeline lineno="50" refid="classSP2_1ac3feab54d671016fbd83505de999eecea7daf4f9934db2b1c6e0503dbee99acaa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSP2_1ac3feab54d671016fbd83505de999eecea7daf4f9934db2b1c6e0503dbee99acaa" kindref="member">U_COLOR_TEXTURE_ENABLED</ref>,</highlight></codeline>
+<codeline lineno="51" refid="classSP2_1ac3feab54d671016fbd83505de999eeceaff927f43d450ef079079d28816f26057" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSP2_1ac3feab54d671016fbd83505de999eeceaff927f43d450ef079079d28816f26057" kindref="member">U_COLOR_TEXTURE</ref>,</highlight></codeline>
+<codeline lineno="52" refid="classSP2_1ac3feab54d671016fbd83505de999eecea2054b79e1a8f4c9fa775e78b7aafa08a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSP2_1ac3feab54d671016fbd83505de999eecea2054b79e1a8f4c9fa775e78b7aafa08a" kindref="member">U_TEXT_ENABLED</ref>,</highlight></codeline>
+<codeline lineno="53" refid="classSP2_1ac3feab54d671016fbd83505de999eeceacef240215149972b316e36239acc2309" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSP2_1ac3feab54d671016fbd83505de999eeceacef240215149972b316e36239acc2309" kindref="member">U_TEXT_COLOR</ref>,</highlight></codeline>
+<codeline lineno="54" refid="classSP2_1ac3feab54d671016fbd83505de999eecea4b1161a4a8bfd11f641b7964947eb382" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSP2_1ac3feab54d671016fbd83505de999eecea4b1161a4a8bfd11f641b7964947eb382" kindref="member">U_LIGHTENABLED</ref>,</highlight></codeline>
+<codeline lineno="55" refid="classSP2_1ac3feab54d671016fbd83505de999eeceaf3656d468e7eedfe9195e0040dc42897" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSP2_1ac3feab54d671016fbd83505de999eeceaf3656d468e7eedfe9195e0040dc42897" kindref="member">U_TOTAL</ref>,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSP2_1abcda6828c7a4c529b07a6c5bedb655bc" kindref="member">SP2</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSP2_1abb7f637d9a5de7ead9ee5bfca966dada" kindref="member">~SP2</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSP2_1a80069964212dbe8235a68695546e6701" kindref="member">skybox</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSP2_1a8669c489b6a968f367a4610b254ac992" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSP2_1a075edf39d3102610bf7f404ae3b8d38c" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSP2_1a90159ea511cadcc99364c6f75d108a71" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSP2_1a5b606cdfc77b243631fc130483527333" kindref="member">Exit</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="70" refid="classSP2_1a3b667a6202769654fbe44f505443524a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSP2_1a3b667a6202769654fbe44f505443524a" kindref="member">enableLight</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71" refid="classSP2_1af72583593d7cc5cf569d0d86be438429" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSP2_1af72583593d7cc5cf569d0d86be438429" kindref="member">LSPEED</ref><sp/>=<sp/>10.f;</highlight></codeline>
+<codeline lineno="72" refid="classSP2_1a9141517dfe1346da813f2ea89a28f8c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classSP2_1a9141517dfe1346da813f2ea89a28f8c9" kindref="member">fps</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSP2_1acf9cd6642d16e15f0ca2e43e9d266070" kindref="member">renderMesh</ref>(<ref refid="classMesh" kindref="compound">Mesh</ref><sp/>*mesh,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enableLight);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSP2_1aac535f04258e670dde533f1f1b43ac11" kindref="member">Rendermainmenutoscreen</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSP2_1a0feb39cda53bae80e375bee90f187423" kindref="member">interactionWithRobby</ref>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSP2_1a30f7a589114d31893b217c18c7c1518a" kindref="member">interactionWithSnowBalls</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSP2_1ab49c40d25cc25c6272e7943708a1867e" kindref="member">RenderText</ref>(<ref refid="classMesh" kindref="compound">Mesh</ref>*<sp/>mesh,<sp/>std::string<sp/>text,<sp/><ref refid="structColor" kindref="compound">Color</ref><sp/>color);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSP2_1ab642469a9e89925dafd3055a79b65cda" kindref="member">RenderTextOnScreen</ref>(<ref refid="classMesh" kindref="compound">Mesh</ref>*<sp/>mesh,<sp/>std::string<sp/>text,<sp/><ref refid="structColor" kindref="compound">Color</ref><sp/>color,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="classSP2_1a22bbbfd0af7f0001df52c8369f11c7a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classSP2_1a22bbbfd0af7f0001df52c8369f11c7a2" kindref="member">m_vertexArrayID</ref>;</highlight></codeline>
+<codeline lineno="82" refid="classSP2_1ad1c6c281399472f9b8dcf5b0815e8672" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMesh" kindref="compound">Mesh</ref><sp/>*<ref refid="classSP2_1ad1c6c281399472f9b8dcf5b0815e8672" kindref="member">meshList</ref>[<ref refid="classSP2_1ad60364d83f44504a7e99b5c28db91f0ca2f6cfbdc0991ea648eb85566a38c4c01" kindref="member">NUM_GEOMETRY</ref>];</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classSP2_1a0a0cb5aefe439099be749ad709a07827" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classSP2_1a0a0cb5aefe439099be749ad709a07827" kindref="member">m_programID</ref>;</highlight></codeline>
+<codeline lineno="85" refid="classSP2_1a72cfa58a88b48d0ba77757a1268d03b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classSP2_1a72cfa58a88b48d0ba77757a1268d03b0" kindref="member">m_parameters</ref>[<ref refid="classSP2_1ac3feab54d671016fbd83505de999eeceaf3656d468e7eedfe9195e0040dc42897" kindref="member">U_TOTAL</ref>];</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classSP2_1a1361c13eb209c4034417f6b5e0cfb316" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCamera3" kindref="compound">Camera3</ref><sp/><ref refid="classSP2_1a1361c13eb209c4034417f6b5e0cfb316" kindref="member">camera</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="classSP2_1a1a73481349180c97834e92aeafaaf8d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSP2_1a1a73481349180c97834e92aeafaaf8d6" kindref="member">boxX</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="91" refid="classSP2_1ad5ff15c7fb442c2f5f11107cde9181b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSP2_1ad5ff15c7fb442c2f5f11107cde9181b8" kindref="member">boxZ</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="92" refid="classSP2_1a0b9d719f5565067f63540146171ad166" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSP2_1a0b9d719f5565067f63540146171ad166" kindref="member">camPosX</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="93" refid="classSP2_1ae44599c3321ef9eabc5869ed9185362d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSP2_1ae44599c3321ef9eabc5869ed9185362d" kindref="member">camPosY</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="94" refid="classSP2_1a569ae5e70b45395a6d7661c7cfd656ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSP2_1a569ae5e70b45395a6d7661c7cfd656ed" kindref="member">camPosz</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSP2_1ad75a82ae232c252ceb10cc86580c7c88" kindref="member">MunInit</ref>();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSP2_1a7b0355f6e8928b8050ed4985c2e62222" kindref="member">MunRender</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="classSP2_1abafedd6dff40be29472afbc9c9e702d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSP2_1abafedd6dff40be29472afbc9c9e702d0" kindref="member">arrowpositiony</ref>;</highlight></codeline>
+<codeline lineno="101" refid="classSP2_1a7e88ffdd87bd1c8393c377d03951408b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication" kindref="compound">Application</ref><sp/><ref refid="classSP2_1a7e88ffdd87bd1c8393c377d03951408b" kindref="member">application</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="classSP2_1a276c1c207dcf8e4da5a195c631872a18" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMS" kindref="compound">MS</ref><sp/><ref refid="classSP2_1a040bdcc2c0b5dc0719b5eaa448852756" kindref="member">modelStack</ref>,<sp/><ref refid="classSP2_1a276c1c207dcf8e4da5a195c631872a18" kindref="member">viewStack</ref>,<sp/><ref refid="classSP2_1a4857b8805da062f4e22600cbe8f130f2" kindref="member">projectionStack</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="LiZhaoyuan1/Source/SP2.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structPosition" kind="struct" language="C++" prot="public">
+    <compoundname>Position</compoundname>
+    <includes refid="Vertex_8h" local="no">Vertex.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structPosition_1af684446cbf0f6d53386686283da6dcc6" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Position::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Vertex.h" line="8" column="1" bodyfile="LiZhaoyuan1/Source/Vertex.h" bodystart="8" bodyend="-1"/>
+        <referencedby refid="classSceneMun_1aaec7e417376eacf289ee2501d1ac9c71" compoundref="SceneMun_8cpp" startline="796" endline="817">SceneMun::lighting</referencedby>
+        <referencedby refid="classSceneSoraJewel_1ac5c92f43b536aa0497507e13d0a56c96" compoundref="SceneSoraJewel_8cpp" startline="834" endline="855">SceneSoraJewel::lighting</referencedby>
+        <referencedby refid="classSceneMun_1abf01514b7e53fbf6ba1d96b42644a1d9" compoundref="SceneMun_8cpp" startline="831" endline="853">SceneMun::lighting2</referencedby>
+        <referencedby refid="classSceneSoraJewel_1a418548255e756309d8d2c4dfdec40233" compoundref="SceneSoraJewel_8cpp" startline="868" endline="889">SceneSoraJewel::lighting2</referencedby>
+        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="7" endline="121">LoadOBJ</referencedby>
+        <referencedby refid="Utility_8h_1adfba271c0b8f223d01dd4f35e62e27af" compoundref="Utility_8cpp" startline="3" endline="9">operator*</referencedby>
+        <referencedby refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" compoundref="Vertex_8h" startline="10" endline="10">Set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structPosition_1a54a6182b5f7539295b32255808897d3f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Position::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Vertex.h" line="8" column="1" bodyfile="LiZhaoyuan1/Source/Vertex.h" bodystart="8" bodyend="-1"/>
+        <referencedby refid="classSceneMun_1aaec7e417376eacf289ee2501d1ac9c71" compoundref="SceneMun_8cpp" startline="796" endline="817">SceneMun::lighting</referencedby>
+        <referencedby refid="classSceneSoraJewel_1ac5c92f43b536aa0497507e13d0a56c96" compoundref="SceneSoraJewel_8cpp" startline="834" endline="855">SceneSoraJewel::lighting</referencedby>
+        <referencedby refid="classSceneMun_1abf01514b7e53fbf6ba1d96b42644a1d9" compoundref="SceneMun_8cpp" startline="831" endline="853">SceneMun::lighting2</referencedby>
+        <referencedby refid="classSceneSoraJewel_1a418548255e756309d8d2c4dfdec40233" compoundref="SceneSoraJewel_8cpp" startline="868" endline="889">SceneSoraJewel::lighting2</referencedby>
+        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="7" endline="121">LoadOBJ</referencedby>
+        <referencedby refid="Utility_8h_1adfba271c0b8f223d01dd4f35e62e27af" compoundref="Utility_8cpp" startline="3" endline="9">operator*</referencedby>
+        <referencedby refid="classSceneGalaxy_1a08eb5a414e64d7dca3a14f1d6d48855a" compoundref="SceneGalaxy_8cpp" startline="776" endline="835">SceneGalaxy::Render</referencedby>
+        <referencedby refid="classSceneSoraJewel_1a5609b1a03e5d60a01ac655e2f10bcfc9" compoundref="SceneSoraJewel_8cpp" startline="1052" endline="1229">SceneSoraJewel::Render</referencedby>
+        <referencedby refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" compoundref="Vertex_8h" startline="10" endline="10">Set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Position::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Vertex.h" line="8" column="1" bodyfile="LiZhaoyuan1/Source/Vertex.h" bodystart="8" bodyend="-1"/>
+        <referencedby refid="classSceneMun_1aaec7e417376eacf289ee2501d1ac9c71" compoundref="SceneMun_8cpp" startline="796" endline="817">SceneMun::lighting</referencedby>
+        <referencedby refid="classSceneSoraJewel_1ac5c92f43b536aa0497507e13d0a56c96" compoundref="SceneSoraJewel_8cpp" startline="834" endline="855">SceneSoraJewel::lighting</referencedby>
+        <referencedby refid="classSceneMun_1abf01514b7e53fbf6ba1d96b42644a1d9" compoundref="SceneMun_8cpp" startline="831" endline="853">SceneMun::lighting2</referencedby>
+        <referencedby refid="classSceneSoraJewel_1a418548255e756309d8d2c4dfdec40233" compoundref="SceneSoraJewel_8cpp" startline="868" endline="889">SceneSoraJewel::lighting2</referencedby>
+        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="7" endline="121">LoadOBJ</referencedby>
+        <referencedby refid="Utility_8h_1adfba271c0b8f223d01dd4f35e62e27af" compoundref="Utility_8cpp" startline="3" endline="9">operator*</referencedby>
+        <referencedby refid="classSceneGalaxy_1a08eb5a414e64d7dca3a14f1d6d48855a" compoundref="SceneGalaxy_8cpp" startline="776" endline="835">SceneGalaxy::Render</referencedby>
+        <referencedby refid="classSceneSoraJewel_1a5609b1a03e5d60a01ac655e2f10bcfc9" compoundref="SceneSoraJewel_8cpp" startline="1052" endline="1229">SceneSoraJewel::Render</referencedby>
+        <referencedby refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" compoundref="Vertex_8h" startline="10" endline="10">Set</referencedby>
+        <referencedby refid="classSceneGalaxy_1a20f9275f7788921a7cd843219b9bdeff" compoundref="SceneGalaxy_8cpp" startline="542" endline="623">SceneGalaxy::Update</referencedby>
+        <referencedby refid="classSceneSoraJewel_1a581a47998e6133291289306656463cb6" compoundref="SceneSoraJewel_8cpp" startline="454" endline="698">SceneSoraJewel::Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structPosition_1ab73d81912c4ead48cee5342d7cf5a33b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Position::Position</definition>
+        <argsstring>(float x=0, float y=0, float z=0)</argsstring>
+        <name>Position</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Vertex.h" line="9" column="1" bodyfile="LiZhaoyuan1/Source/Vertex.h" bodystart="9" bodyend="9"/>
+        <references refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" compoundref="Vertex_8h" startline="10" endline="10">Set</references>
+      </memberdef>
+      <memberdef kind="function" id="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Position::Set</definition>
+        <argsstring>(float x, float y, float z)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LiZhaoyuan1/Source/Vertex.h" line="10" column="1" bodyfile="LiZhaoyuan1/Source/Vertex.h" bodystart="10" bodyend="10"/>
+        <references refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" compoundref="Vertex_8h" startline="8">x</references>
+        <references refid="structPosition_1a54a6182b5f7539295b32255808897d3f" compoundref="Vertex_8h" startline="8">y</references>
+        <references refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" compoundref="Vertex_8h" startline="8">z</references>
+        <referencedby refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="21" endline="52">MeshBuilder::GenerateAxes</referencedby>
+        <referencedby refid="classMeshBuilder_1a68d491a27ed57b66b7a8161a2b230951" compoundref="MeshBuilder_8cpp" startline="239" endline="276">MeshBuilder::GenerateCircle</referencedby>
+        <referencedby refid="classMeshBuilder_1a5875cdc09cd9c12daf84655c9806f591" compoundref="MeshBuilder_8cpp" startline="481" endline="534">MeshBuilder::GenerateCone</referencedby>
+        <referencedby refid="classMeshBuilder_1a5e777328dc946f483beb5645d8f24c4a" compoundref="MeshBuilder_8cpp" startline="163" endline="227">MeshBuilder::GenerateCube</referencedby>
+        <referencedby refid="classMeshBuilder_1ac931cf94491b65f8da92a25986bdd08a" compoundref="MeshBuilder_8cpp" startline="415" endline="477">MeshBuilder::GenerateCylinder</referencedby>
+        <referencedby refid="classMeshBuilder_1a5fef815cfebe98c1e2b077fa66209b8c" compoundref="MeshBuilder_8cpp" startline="536" endline="578">MeshBuilder::GenerateHemiSphere</referencedby>
+        <referencedby refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="67" endline="97">MeshBuilder::GenerateQuad</referencedby>
+        <referencedby refid="classMeshBuilder_1a44a784dbd2cee7b6adc21c697a945501" compoundref="MeshBuilder_8cpp" startline="278" endline="316">MeshBuilder::GenerateRing</referencedby>
+        <referencedby refid="classMeshBuilder_1a30a1368cb5deb84777a1f6fbfbca110e" compoundref="MeshBuilder_8cpp" startline="333" endline="375">MeshBuilder::GenerateSphere</referencedby>
+        <referencedby refid="classMeshBuilder_1aac7c87881dbc08f8d41f2068e0f40c76" compoundref="MeshBuilder_8cpp" startline="99" endline="147">MeshBuilder::GenerateText</referencedby>
+        <referencedby refid="LoadOBJ_8h_1aa99ef9426a57205ed8acb8f7d41f3bae" compoundref="LoadOBJ_8cpp" startline="149" endline="189">IndexVBO</referencedby>
+        <referencedby refid="classSceneGalaxy_1aee7f7c80c0fcc156b5b6790822cb67e8" compoundref="SceneGalaxy_8cpp" startline="54" endline="232">SceneGalaxy::Init</referencedby>
+        <referencedby refid="classSceneMun_1a5eec44c082c3ce5c0aa99c16edebaca2" compoundref="SceneMun_8cpp" startline="60" endline="405">SceneMun::Init</referencedby>
+        <referencedby refid="classSceneSoraJewel_1abbbb6e7033bb2bac25db0d27738cbc2c" compoundref="SceneSoraJewel_8cpp" startline="49" endline="441">SceneSoraJewel::Init</referencedby>
+        <referencedby refid="structLight_1aeb5df09a25a32f19fdffa761268ba24f" compoundref="Light_8h" startline="12" endline="18">Light::Light</referencedby>
+        <referencedby refid="structPosition_1ab73d81912c4ead48cee5342d7cf5a33b" compoundref="Vertex_8h" startline="9" endline="9">Position</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="485">
+        <label>Position</label>
+        <link refid="structPosition"/>
+        <childnode refid="486" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+      <node id="486">
+        <label>float</label>
+      </node>
+    </collaborationgraph>
+    <location file="LiZhaoyuan1/Source/Vertex.h" line="7" column="1" bodyfile="LiZhaoyuan1/Source/Vertex.h" bodystart="6" bodyend="11"/>
+    <listofallmembers>
+      <member refid="structPosition_1ab73d81912c4ead48cee5342d7cf5a33b" prot="public" virt="non-virtual"><scope>Position</scope><name>Position</name></member>
+      <member refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" prot="public" virt="non-virtual"><scope>Position</scope><name>Set</name></member>
+      <member refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" prot="public" virt="non-virtual"><scope>Position</scope><name>x</name></member>
+      <member refid="structPosition_1a54a6182b5f7539295b32255808897d3f" prot="public" virt="non-virtual"><scope>Position</scope><name>y</name></member>
+      <member refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" prot="public" virt="non-virtual"><scope>Position</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
